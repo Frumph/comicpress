@@ -1,0 +1,2278 @@
+# Translation of the WordPress theme ComicPress 2.9.2.13 by Philip M. Hofer.
+# Copyright (C) 2010 Philip M. Hofer
+# This file is distributed under the same license as the ComicPress package.
+# FIRST AUTHOR <philip@frumph.net>, 2010.
+#
+#: options/generaloptions.php:47
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ComicPress 2.9.2.13\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/comicpress\n"
+"POT-Creation-Date: 2010-08-14 21:02+0800\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: 404.php:6
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:7
+msgid "Click here to return to the home page"
+msgstr ""
+
+#: 404.php:7
+msgid "or try a search:"
+msgstr ""
+
+#: addons/membersonly.php:48 addons/membersonly.php:125
+msgid ""
+"There is Members Only content here.<br />To view this content you need to be "
+"a member of this site."
+msgstr ""
+
+#: addons/membersonly.php:65
+msgid "Member of"
+msgstr ""
+
+#: addons/membersonly.php:68
+msgid "Member?"
+msgstr ""
+
+#: archive-comic-calendar.php:61
+msgid "January"
+msgstr ""
+
+#: archive-comic-calendar.php:62
+msgid "February"
+msgstr ""
+
+#: archive-comic-calendar.php:63
+msgid "March"
+msgstr ""
+
+#: archive-comic-calendar.php:64
+msgid "April"
+msgstr ""
+
+#: archive-comic-calendar.php:65
+msgid "May"
+msgstr ""
+
+#: archive-comic-calendar.php:66
+msgid "June"
+msgstr ""
+
+#: archive-comic-calendar.php:67
+msgid "July"
+msgstr ""
+
+#: archive-comic-calendar.php:68
+msgid "August"
+msgstr ""
+
+#: archive-comic-calendar.php:69
+msgid "September"
+msgstr ""
+
+#: archive-comic-calendar.php:70
+msgid "October"
+msgstr ""
+
+#: archive-comic-calendar.php:71
+msgid "November"
+msgstr ""
+
+#: archive-comic-calendar.php:72
+msgid "December"
+msgstr ""
+
+#: archive-comic-storyline.php:46
+msgid "Begins with &ldquo;"
+msgstr ""
+
+#: archive-comic-storyline.php:46
+msgid "&rdquo;"
+msgstr ""
+
+#: archive-comic-storyline.php:59
+msgid "Storyline Support is not currently enabled on this site."
+msgstr ""
+
+#: archive-comic-storyline.php:59
+msgid "Note to the Administrator:"
+msgstr ""
+
+#: archive-comic-storyline.php:59
+msgid ""
+"To enable storyline support and manage storyline categories make sure you "
+"are running the latest version of the "
+msgstr ""
+
+#: archive-comic-storyline.php:59
+msgid "plugin and check your storyline settings from it's administration menu."
+msgstr ""
+
+#: archive-comic-year.php:45 archive-comic.php:33
+msgid "Permanent Link:"
+msgstr ""
+
+#: archive.php:26
+msgid "Archive for &#8216;"
+msgstr ""
+
+#: archive.php:28
+msgid "Posts Tagged &#8216;"
+msgstr ""
+
+#: archive.php:30 archive.php:32 archive.php:34 archive.php:41 archive.php:43
+msgid "Archive for"
+msgstr ""
+
+#: archive.php:36
+msgid "Author Archive"
+msgstr ""
+
+#: archive.php:38 widgets/comic-navigation.php:339
+msgid "Archives"
+msgstr ""
+
+#: archive.php:48 search.php:11
+#, php-format
+msgid "%d item."
+msgid_plural "%d items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: archive.php:96 search.php:35
+msgid "No entries found."
+msgstr ""
+
+#: archive.php:97 search.php:36
+msgid "Try another search?"
+msgstr ""
+
+#: archives.php:17
+msgid "Archives by Month:"
+msgstr ""
+
+#: archives.php:29
+msgid "Archives by Subject:"
+msgstr ""
+
+#: author.php:10
+msgid "No such author."
+msgstr ""
+
+#: author.php:31
+msgid "Registered on"
+msgstr ""
+
+#: author.php:33
+msgid "Website:"
+msgstr ""
+
+#: author.php:34
+msgid "AIM:"
+msgstr ""
+
+#: author.php:35
+msgid "Jabber/Google Talk:"
+msgstr ""
+
+#: author.php:36
+msgid "Yahoo IM:"
+msgstr ""
+
+#: author.php:47
+msgid "Posts by"
+msgstr ""
+
+#: buystrip.php:58
+msgid "Comic ID"
+msgstr ""
+
+#: buystrip.php:59
+msgid "Title: "
+msgstr ""
+
+#: buystrip.php:60
+msgid "Print Status: "
+msgstr ""
+
+#: buystrip.php:62
+msgid "Original Status: "
+msgstr ""
+
+#: buystrip.php:81
+msgid "Print"
+msgstr ""
+
+#: buystrip.php:86 buystrip.php:121
+msgid "Make payments with PayPal - it is fast, free and secure!"
+msgstr ""
+
+#: buystrip.php:117
+msgid "Original"
+msgstr ""
+
+#: buystrip.php:166 functions/displaypost.php:229 page.php:23
+msgid "Edit this page."
+msgstr ""
+
+#: comicpress-admin.php:6 comicpress-admin.php:42
+msgid "ComicPress Options"
+msgstr ""
+
+#: comicpress-admin.php:243
+msgid "ComicPress Settings SAVED!"
+msgstr ""
+
+#: comicpress-admin.php:251
+msgid "ComicPress Settings RESET!"
+msgstr ""
+
+#: comicpress-admin.php:259 options/themestyle.php:20
+msgid "Layout"
+msgstr ""
+
+#: comicpress-admin.php:260
+msgid "General"
+msgstr ""
+
+#: comicpress-admin.php:261
+msgid "Home Page"
+msgstr ""
+
+#: comicpress-admin.php:262
+msgid "Posts &amp; Pages"
+msgstr ""
+
+#: comicpress-admin.php:263
+msgid "Archive &amp; Templates"
+msgstr ""
+
+#: comicpress-admin.php:264 functions.php:87 functions.php:111
+#: options/menubaroptions.php:11 widgets/menubar.php:61
+msgid "Menubar"
+msgstr ""
+
+#: comicpress-admin.php:265
+msgid "Add Ons"
+msgstr ""
+
+#: comicpress-admin.php:267 options/generaloptions.php:237
+msgid "Debug"
+msgstr ""
+
+#: comicpress-debug.php:12
+msgid "Congratulations!  A new install of ComicPress!"
+msgstr ""
+
+#: comicpress-debug.php:14
+msgid ""
+"<i>Now that ComicPress is installed on your machine, make sure you follow "
+"these installation directions.</i>"
+msgstr ""
+
+#: comicpress-debug.php:15
+msgid "<h2>New Install</h2>"
+msgstr ""
+
+#: comicpress-debug.php:16
+msgid ""
+"<ul><ol><li><strong>Create two categories in the (DASHBOARD) -> Posts -> "
+"Categories</strong><br />The two categories you are going to create is a "
+"primary WebComic and Blog category.  Do NOT rename the uncategorized "
+"category, just add 2 more categories.    Once those categories are created "
+"this message will no longer be displayed on the dashboard.</li>"
+msgstr ""
+
+#: comicpress-debug.php:17
+msgid ""
+"<li>Make sure ComicPress Manager is installed and set the categories in the "
+"ComicPress Manager -> ComicPress Config</li>"
+msgstr ""
+
+#: comicpress-debug.php:18
+msgid ""
+"<li>ComicPress Manager -> Manager Config, click the create directories "
+"button, then verify the directories are created in the ComicPress Config</li>"
+msgstr ""
+
+#: comicpress-debug.php:19
+msgid "</ol></ul>"
+msgstr ""
+
+#: comicpress-debug.php:24
+msgid "You are using PHP version: "
+msgstr ""
+
+#: comicpress-debug.php:25
+msgid ""
+"Version 5 or higher is required for this theme to work correctly.  Please "
+"check with your host about upgrading to a newer version."
+msgstr ""
+
+#: comicpress-debug.php:33
+msgid "Primary Comic and Blog categories are not configured properly."
+msgstr ""
+
+#: comicpress-debug.php:34
+msgid "ComicPress requires 2 categories to be added to the "
+msgstr ""
+
+#: comicpress-debug.php:34
+msgid "post categories."
+msgstr ""
+
+#: comicpress-debug.php:35
+msgid ""
+" It is necessary to have 2 more categories in addition to the uncategorized "
+"category, a Blog and Comic primary categories.  These two additional "
+"categories will be the root categories that seperate the difference between "
+"the comic and blog posts.  When you post a new comic you will be posting it "
+"into the comic category or heirarchal children of the comic category.   When "
+"posting a new blog post you need to set it into the blog category or child "
+"of the blog category.   Uncategorized will act as a blog post category (do "
+"not rename uncategorized).  You can configure the categories to set as the "
+"primary blog and comic category from within the ComicPress Manager plugin."
+msgstr ""
+
+#: comicpress-debug.php:42
+msgid "Comics Folder is not configured and is unable to be found."
+msgstr ""
+
+#: comicpress-debug.php:43
+msgid ""
+"ComicPress stores the files it uses inside a specific directory and that "
+"directory is set from within ComicPress Manager.  When this error is present "
+"it means that the theme is unable to find the appropriate directory to read "
+"the comics from."
+msgstr ""
+
+#: comicpress-debug.php:44
+msgid ""
+"ComicPress Manager - Manager Config will allow you to create the directories "
+"needed."
+msgstr ""
+
+#: comicpress-debug.php:51
+msgid "ComicPress theme is not installed into the correct folder."
+msgstr ""
+
+#: comicpress-debug.php:52
+msgid ""
+"As of version 2.9, the ComicPress main core theme is required to be "
+"installed into the wp-content/themes/comicpress directory.  It is currently "
+"not installed into that directory."
+msgstr ""
+
+#: comicpress-debug.php:71
+msgid "Post's are in both a comic category and blog category."
+msgstr ""
+
+#: comicpress-debug.php:72
+msgid ""
+"The following posts are set both in a comic category and a blog category, "
+"with ComicPress the designations of categories is very important.  The rule "
+"of thumb is to make sure that all posts are only in a single category.   If "
+"a post is in both the comic category and blog category there will be issues "
+"with both navigation and execution of the ComicPress code."
+msgstr ""
+
+#: comicpress-debug.php:90
+msgid "Post's slug is a numeric."
+msgstr ""
+
+#: comicpress-debug.php:91
+msgid ""
+"The following posts have a post slug (permalink) that is numeric.  This will "
+"cause problems with permalinks.   Post slugs must have at least one "
+"alphabetic character in them for Wordpress to handle correctly."
+msgstr ""
+
+#: comments.php:3
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: comments.php:6
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:19
+msgid "Discussion &not;"
+msgstr ""
+
+#: comments.php:19
+msgid "Discussion (%) &not;"
+msgstr ""
+
+#: comments.php:25
+#, php-format
+msgid "Reply to %s&not;"
+msgstr ""
+
+#: comments.php:40
+msgid "Pings &amp; Trackbacks &not;"
+msgstr ""
+
+#: comments.php:72
+msgid "Comment Pages"
+msgstr ""
+
+#: comments.php:80
+msgid "Next Comments &uarr;"
+msgstr ""
+
+#: comments.php:81
+msgid "&darr; Previous Comments"
+msgstr ""
+
+#: comments.php:94
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:113
+msgid "NAME &mdash;"
+msgstr ""
+
+#: comments.php:113
+msgid "Get a Gravatar"
+msgstr ""
+
+#: comments.php:115
+msgid "EMAIL"
+msgstr ""
+
+#: comments.php:117
+msgid "Website URL"
+msgstr ""
+
+#: comments.php:126 comments.php:137
+msgid "Comment &not;<br />"
+msgstr ""
+
+#: comments.php:127 comments.php:138
+#, php-format
+msgid "Reply to %s &not;<br />"
+msgstr ""
+
+#: comments.php:128 comments.php:139
+msgid "<small>Cancel reply</small>"
+msgstr ""
+
+#: comments.php:129 comments.php:140
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:136
+msgid "NOTE - You can use these "
+msgstr ""
+
+#: functions.php:83
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions.php:84
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:85
+msgid "Above Header"
+msgstr ""
+
+#: functions.php:86
+msgid "Header"
+msgstr ""
+
+#: functions.php:88
+msgid "Over Comic"
+msgstr ""
+
+#: functions.php:89
+msgid "Left of Comic"
+msgstr ""
+
+#: functions.php:90
+msgid "Right of Comic"
+msgstr ""
+
+#: functions.php:91
+msgid "Under Comic"
+msgstr ""
+
+#: functions.php:92
+msgid "Over Blog"
+msgstr ""
+
+#: functions.php:93 options/indexoptions.php:11
+msgid "Blog"
+msgstr ""
+
+#: functions.php:94
+msgid "Under Blog"
+msgstr ""
+
+#: functions.php:95 options/generaloptions.php:211
+msgid "Footer"
+msgstr ""
+
+#: functions.php:354
+msgid "Storyline"
+msgstr ""
+
+#: functions.php:401
+msgid "Powered by"
+msgstr ""
+
+#: functions.php:401
+msgid "with"
+msgstr ""
+
+#: functions.php:409
+msgid "Back to Top &uarr;"
+msgstr ""
+
+#: functions/buyprint-functions.php:38
+msgid "No prints available for non-comic categories."
+msgstr ""
+
+#: functions/buyprint-functions.php:65
+msgid "Buy Print Information"
+msgstr ""
+
+#: functions/comment-functions.php:121
+msgid "l, F jS, Y, g:i a"
+msgstr ""
+
+#: functions/comment-functions.php:122
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions/comment-functions.php:126
+msgid "Permalink to comment"
+msgstr ""
+
+#: functions/comment-functions.php:126
+msgid "#"
+msgstr ""
+
+#: functions/comment-functions.php:132
+msgid "Reply"
+msgstr ""
+
+#: functions/comment-functions.php:133
+msgid "Login to Reply"
+msgstr ""
+
+#: functions/comment-functions.php:141 functions/displaypost.php:203
+msgid "Edit"
+msgstr ""
+
+#: functions/comment-functions.php:144
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions/displaycomic.php:346
+#, php-format
+msgid ""
+"Unable to find the file in the <strong>%s</strong> folder that matched the "
+"pattern <strong>%s</strong>. Check your WordPress and ComicPress settings."
+msgstr ""
+
+#: functions/displaypost.php:64
+msgid "by"
+msgstr ""
+
+#: functions/displaypost.php:78 functions/displaypost.php:83
+msgid "Posted In: "
+msgstr ""
+
+#: functions/displaypost.php:93
+msgid "&#9492; Tags: "
+msgstr ""
+
+#: functions/displaypost.php:104
+msgid "Comment "
+msgstr ""
+
+#: functions/displaypost.php:104
+msgid "Comments "
+msgstr ""
+
+#: functions/displaypost.php:128
+msgid " &lsaquo; Previous "
+msgstr ""
+
+#: functions/displaypost.php:129
+msgid "Next &rsaquo; "
+msgstr ""
+
+#: functions/displaypost.php:146
+msgid "&lsaquo;&lsaquo; First"
+msgstr ""
+
+#: functions/displaypost.php:147
+msgid "&lsaquo; Previous"
+msgstr ""
+
+#: functions/displaypost.php:148
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: functions/displaypost.php:149
+msgid "Last &rsaquo;&rsaquo;"
+msgstr ""
+
+#: functions/displaypost.php:168 functions/displaypost.php:174
+msgid "&darr; Read the rest of this entry..."
+msgstr ""
+
+#: functions/moods.php:40
+msgid ""
+"Available Moods, you can set which mood images to use in the comicpress "
+"Options."
+msgstr ""
+
+#: functions/moods.php:47
+msgid "none"
+msgstr ""
+
+#: functions/moods.php:61
+msgid " moods are available."
+msgstr ""
+
+#: functions/moods.php:62
+msgid "Using Moods from directory: "
+msgstr ""
+
+#: functions/moods.php:63
+msgid "Current Mood: "
+msgstr ""
+
+#: functions/moods.php:105
+msgid "Mood For This Post"
+msgstr ""
+
+#: functions/pagination.php:9
+msgid "Newer Entries &uarr;"
+msgstr ""
+
+#: functions/pagination.php:10
+msgid "&darr; Previous Entries"
+msgstr ""
+
+#: functions/syndication.php:11
+#, php-format
+msgid "%s (No Comments)"
+msgstr ""
+
+#: functions/syndication.php:14
+#, php-format
+msgid "%s (1 Comment)"
+msgstr ""
+
+#: functions/syndication.php:17
+#, php-format
+msgid "%%s (%d Comments)"
+msgstr ""
+
+#: functions/wp-pagenavi.php:157
+msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
+msgstr ""
+
+#: functions/wp-pagenavi.php:160
+msgid "&laquo; First"
+msgstr ""
+
+#: functions/wp-pagenavi.php:161
+msgid "Last &raquo;"
+msgstr ""
+
+#: functions/wp-pagenavi.php:162
+msgid "&raquo;"
+msgstr ""
+
+#: functions/wp-pagenavi.php:163
+msgid "&laquo;"
+msgstr ""
+
+#: functions/wp-pagenavi.php:164 functions/wp-pagenavi.php:165
+msgid "..."
+msgstr ""
+
+#: header.php:13
+msgid " search results: "
+msgstr ""
+
+#: image.php:22
+msgid "&larr; Back to Gallery"
+msgstr ""
+
+#: image.php:42
+msgid "Click for full size."
+msgstr ""
+
+#: image.php:59
+msgid "Sorry, no image matched your criteria."
+msgstr ""
+
+#: members-blog.php:24
+msgid "This page is restricted to members only."
+msgstr ""
+
+#: members-blog.php:27
+msgid "Member's Only content is not enabled on this installation."
+msgstr ""
+
+#: options/addonoptions.php:11
+msgid "Custom Header"
+msgstr ""
+
+#: options/addonoptions.php:15
+msgid "Use Custom Header"
+msgstr ""
+
+#: options/addonoptions.php:20
+msgid ""
+"Adds Custom Header option under Dashboard -> Appearance. Allows you to add "
+"your own header image and customize or hide the default text."
+msgstr ""
+
+#: options/addonoptions.php:25
+msgid "Width"
+msgstr ""
+
+#: options/addonoptions.php:30
+msgid ""
+"Sets the width of the image you want to use for Custom Header. Defaults "
+"widths are 780px or 980px depending on the layout. Refer to the width of the "
+"layout you chose and any custom changes you have made to site width in the "
+"CSS."
+msgstr ""
+
+#: options/addonoptions.php:34
+msgid "Height"
+msgstr ""
+
+#: options/addonoptions.php:39
+msgid ""
+"Sets the height of the image you want to use for Custom Header. Recommended "
+"maximum height is 120px, but if your logo/image demands it you can set it "
+"higher."
+msgstr ""
+
+#: options/addonoptions.php:48
+msgid "Related Posts"
+msgstr ""
+
+#: options/addonoptions.php:52
+msgid "Put Related Comics in comic posts"
+msgstr ""
+
+#: options/addonoptions.php:57
+msgid ""
+"Comics will be related by \"tags\" that you create for each comic post.  "
+"When creating tags for your comics, include *only* the subject material and "
+"possibly cast. Do not use tags that can relate to the entire archive or "
+"storyline the post is in."
+msgstr ""
+
+#: options/addonoptions.php:61
+msgid "Put Related Posts in blog posts"
+msgstr ""
+
+#: options/addonoptions.php:66
+msgid ""
+"Blog posts will be related by \"tags\" that you create for each blog post.  "
+"Like the related posts for comics, the related posts for blog post checks "
+"with other blog posts comparing the tags. Try to only use 1-5 tags total; "
+"the less the better."
+msgstr ""
+
+#: options/addonoptions.php:74
+msgid "Members Only Content"
+msgstr ""
+
+#: options/addonoptions.php:78
+msgid "Enable Members Only options?"
+msgstr ""
+
+#: options/addonoptions.php:83
+msgid ""
+"When enabled this will allow all of the members only code to be active and "
+"working."
+msgstr ""
+
+#: options/addonoptions.php:88
+msgid "Disable the homepage/search for finding the members only posts?"
+msgstr ""
+
+#: options/addonoptions.php:93
+msgid ""
+"When enabled the member' only category will not be displayed in the homepage "
+"posts loop."
+msgstr ""
+
+#: options/addonoptions.php:97
+msgid "Enable Members only comment content?"
+msgstr ""
+
+#: options/addonoptions.php:102
+msgid ""
+"When enabled this will make all the content of each of the comments "
+"available to be seen only by users registered and set as members."
+msgstr ""
+
+#: options/addonoptions.php:107
+msgid "Members category"
+msgstr ""
+
+#: options/addonoptions.php:115
+msgid "The category that is designated to show members only content."
+msgstr ""
+
+#: options/addonoptions.php:120
+msgid ""
+"USAGE: Edit the user with <em>Dashboard -> Users -> Authors &amp; Users</em> "
+"and flag the user you want to be a member with the option at the bottom."
+msgstr ""
+
+#: options/addonoptions.php:121
+msgid ""
+"Inside posts, add [members] content you only want members to see [/members]"
+msgstr ""
+
+#: options/addonoptions.php:122
+msgid ""
+"When setting a 'members' category, you *cannot* use an existing comic "
+"category, uncategorized, or blog category!"
+msgstr ""
+
+#: options/addonoptions.php:123
+msgid ""
+"You MUST create a whole new category and called it \"members\", then you "
+"select that category here and create a page called \"Members\" or something "
+"equivelant and associate the Member's Only template to it."
+msgstr ""
+
+#: options/addonoptions.php:124
+msgid ""
+"This will make it so that that category is only seen as blogposts inside "
+"that area and not anywhere else on the site unless the user has the members "
+"flag."
+msgstr ""
+
+#: options/addonoptions.php:133 widgets/comic-navigation.php:352
+msgid "Buy Print"
+msgstr ""
+
+#: options/addonoptions.php:137
+msgid "Use Buy Print?"
+msgstr ""
+
+#: options/addonoptions.php:142
+msgid "Enables the Buy Print widgets, navigation, functions and template."
+msgstr ""
+
+#: options/addonoptions.php:147
+msgid "Enable the by print post to stay with the comic purchase page?"
+msgstr ""
+
+#: options/addonoptions.php:152
+msgid ""
+"Enables the Post that is on the store page to stay with the comic purchase "
+"page."
+msgstr ""
+
+#: options/addonoptions.php:157
+msgid "Paypal email address"
+msgstr ""
+
+#: options/addonoptions.php:161
+msgid ""
+"* This must be correct, you do not want other people getting your money."
+msgstr ""
+
+#: options/addonoptions.php:162
+msgid ""
+"The Email address you registered with Paypal and that your store is "
+"associated with."
+msgstr ""
+
+#: options/addonoptions.php:167
+msgid "URL of the template page"
+msgstr ""
+
+#: options/addonoptions.php:171
+msgid "* This must be correct, the form needs some place to go."
+msgstr ""
+
+#: options/addonoptions.php:172
+msgid "The FULL URL address to which you associated the buy print template."
+msgstr ""
+
+#: options/addonoptions.php:174
+msgid "Examples:"
+msgstr ""
+
+#: options/addonoptions.php:182
+msgid "Print Cost"
+msgstr ""
+
+#: options/addonoptions.php:187
+msgid "How much does a print cost?"
+msgstr ""
+
+#: options/addonoptions.php:191
+msgid "Are you selling the original?"
+msgstr ""
+
+#: options/addonoptions.php:196
+msgid ""
+"<strong>NOTE: If you want to add shipping you will have to do that from your "
+"profile on paypal.</strong>"
+msgstr ""
+
+#: options/addonoptions.php:200
+msgid "Original Cost"
+msgstr ""
+
+#: options/addonoptions.php:205
+msgid "How much are you selling the Original for ?"
+msgstr ""
+
+#: options/addonoptions.php:209
+msgid "Buy Print Text on Template Page"
+msgstr ""
+
+#: options/addonoptions.php:214
+msgid "What text to display to the user on the buyprint template page."
+msgstr ""
+
+#: options/archivesearchoptions.php:11
+msgid "Archive &amp; Search Results"
+msgstr ""
+
+#: options/archivesearchoptions.php:16
+msgid "Archive results post display"
+msgstr ""
+
+#: options/archivesearchoptions.php:18 options/archivesearchoptions.php:30
+msgid "Full Content"
+msgstr ""
+
+#: options/archivesearchoptions.php:19 options/archivesearchoptions.php:31
+msgid "Excerpt"
+msgstr ""
+
+#: options/archivesearchoptions.php:23
+msgid ""
+"Would you like to have users see the full content or just an excerpt when "
+"viewing the archives?"
+msgstr ""
+
+#: options/archivesearchoptions.php:28
+msgid "Search results post display"
+msgstr ""
+
+#: options/archivesearchoptions.php:35
+msgid ""
+"Would you like to have users see the full content or just an excerpt when "
+"searching?"
+msgstr ""
+
+#: options/archivesearchoptions.php:40
+msgid "Archive Display Order"
+msgstr ""
+
+#: options/archivesearchoptions.php:47
+msgid ""
+"Sets the display order of your archives. Newest to Oldest will display your "
+"posts starting with the most recent. Oldest to Newest will start with the "
+"first entry in the category, tag, or date range (e.g., Selecting May 20XX "
+"will start with May 1, not May 31st.)"
+msgstr ""
+
+#: options/archivesearchoptions.php:51
+msgid "Number of archived comics to display"
+msgstr ""
+
+#: options/archivesearchoptions.php:58
+msgid ""
+"How many images in the comic category would you like to see in the archive "
+"page (-1 will display all available)."
+msgstr ""
+
+#: options/archivesearchoptions.php:62
+msgid "Enable comics to be displayed as mini thumbs in order?"
+msgstr ""
+
+#: options/archivesearchoptions.php:67
+msgid ""
+"If this is enabled it will display all of the comics in a comic category as "
+"mini thumbnails instead of listed posts."
+msgstr ""
+
+#: options/archivesearchoptions.php:75
+msgid "Templates"
+msgstr ""
+
+#: options/archivesearchoptions.php:79
+msgid "Enable all categories for archive templates?"
+msgstr ""
+
+#: options/archivesearchoptions.php:84
+msgid ""
+"Setting this on will make it so that all posts, not just comics will display "
+"in the archive templates."
+msgstr ""
+
+#: options/archivesearchoptions.php:88
+msgid "Enable archive templates to start with most current year?"
+msgstr ""
+
+#: options/archivesearchoptions.php:93
+msgid ""
+"Enabling this option will make the archive templates start with the most "
+"current year, instead of the first year."
+msgstr ""
+
+#: options/configoptions.php:11
+msgid "Configuration"
+msgstr ""
+
+#: options/configoptions.php:17
+msgid "Comic Category"
+msgstr ""
+
+#: options/configoptions.php:26
+msgid "The category that is designated for the primary comic category."
+msgstr ""
+
+#: options/configoptions.php:32
+msgid "Blog Category"
+msgstr ""
+
+#: options/configoptions.php:41
+msgid "The primary blog category."
+msgstr ""
+
+#: options/configoptions.php:50
+msgid "Comic Folder"
+msgstr ""
+
+#: options/configoptions.php:65
+msgid "Choose a directory to get the original sized comics from."
+msgstr ""
+
+#: options/configoptions.php:73
+msgid "RSS Thumbnail Folder"
+msgstr ""
+
+#: options/configoptions.php:88
+msgid "Choose a directory to get the RSS thumbnails from."
+msgstr ""
+
+#: options/configoptions.php:96
+msgid "Archive Thumbnail Folder"
+msgstr ""
+
+#: options/configoptions.php:111
+msgid "Choose a directory to get the Archive/Search thumbnails from."
+msgstr ""
+
+#: options/configoptions.php:119
+msgid "Mini Thumbnail Folder"
+msgstr ""
+
+#: options/configoptions.php:134
+msgid ""
+"Choose a directory to get the Mini thumbnails from. (for archive-comic-list, "
+"etc.)"
+msgstr ""
+
+#: options/configoptions.php:139
+msgid "RSS Thumbnail Width"
+msgstr ""
+
+#: options/configoptions.php:146
+msgid "Archive Thumbnail Width"
+msgstr ""
+
+#: options/configoptions.php:153
+msgid "Mini Thumbnail Width"
+msgstr ""
+
+#: options/generaloptions.php:11
+msgid "Main"
+msgstr ""
+
+#: options/generaloptions.php:15
+msgid "Disable page restraints"
+msgstr ""
+
+#: options/generaloptions.php:20
+msgid ""
+"Allows the width of your site to either be Dynamic (fills browser window) or "
+"Fixed (width is specified, e.g., 980px, 780px, etc.)  If Dynamic is enabled "
+"#page and #page-wide will not load. This allow you to use the entire browser "
+"for your canvas instead of the 780px/980px that the two elements limit you "
+"to by default."
+msgstr ""
+
+#: options/generaloptions.php:29 options/indexoptions.php:39
+msgid "Comic"
+msgstr ""
+
+#: options/generaloptions.php:33
+msgid "Enable Rascal the ComicPress Mascot"
+msgstr ""
+
+#: options/generaloptions.php:38
+msgid ""
+"Enable this option to make a comic bubble appear over the comic and write "
+"out what you put in the hovertext, along with a friendly face. You can add "
+"the hovertext when uploading your comic with ComicPress Manager. To change "
+"the graphics for this will need to be well-versed in CSS."
+msgstr ""
+
+#: options/generaloptions.php:42
+msgid "Enable Multi-Comic Jquery navigation?"
+msgstr ""
+
+#: options/generaloptions.php:55 widgets/comic-navigation.php:344
+msgid "Comments"
+msgstr ""
+
+#: options/generaloptions.php:59
+msgid "Disable the comment notes"
+msgstr ""
+
+#: options/generaloptions.php:64
+msgid ""
+"Disabling this will remove the note text that displays with more options for "
+"adding to comments (html)."
+msgstr ""
+
+#: options/generaloptions.php:68
+msgid "Enable Comment Javascript"
+msgstr ""
+
+#: options/generaloptions.php:73
+msgid ""
+"Enable this option if you want the comment form to appear directly under who "
+"is being replied to. (reduces pageview/hit)"
+msgstr ""
+
+#: options/generaloptions.php:81
+msgid "RSS"
+msgstr ""
+
+#: options/generaloptions.php:85
+msgid "Enable the comment count to show in feed title."
+msgstr ""
+
+#: options/generaloptions.php:90
+msgid ""
+"Will show how many comments there are in the title of the post in the feed."
+msgstr ""
+
+#: options/generaloptions.php:94
+msgid "Enable the post thumbnails in the RSS feed?"
+msgstr ""
+
+#: options/generaloptions.php:99
+msgid "If enabled will show the post thumbnail of the post in the RSS feed."
+msgstr ""
+
+#: options/generaloptions.php:107
+msgid "Navigation"
+msgstr ""
+
+#: options/generaloptions.php:111
+msgid "Enable numbered pagination"
+msgstr ""
+
+#: options/generaloptions.php:116
+msgid ""
+"Previous Entries and Next Entries buttons are replaced by a bar of numbered "
+"pages. Numbered pagination appears on the Home page, the author(s) page, the "
+"blog template, and comments/single when there are more then the set number "
+"of comments per page. Uses the same styling as the Menubar."
+msgstr ""
+
+#: options/generaloptions.php:120
+msgid "Click comic to go next"
+msgstr ""
+
+#: options/generaloptions.php:125
+msgid ""
+"Allows users to click the comic itself to go to the next comic (unless on "
+"the latest comic). This allows you to offer a more convenient option for "
+"your archive readers to proceed to the next comic, and the next, etc. Any "
+"enabled hover options will continue to function even with this enabled."
+msgstr ""
+
+#: options/generaloptions.php:129
+msgid "Disable the default comic post navigation"
+msgstr ""
+
+#: options/generaloptions.php:134
+msgid "The default comic post navigation is above each comic blog post."
+msgstr ""
+
+#: options/generaloptions.php:152
+msgid "Graphic Navigation Directory"
+msgstr ""
+
+#: options/generaloptions.php:167
+msgid ""
+"Choose a directory to get the graphic navigation styling from. To create "
+"your own custom graphic navigation menu buttons just create a directory "
+"under <i>images/nav/</i> and place your image files inside of it and create "
+"a navstyle.css file to determine the style of your navigation display."
+msgstr ""
+
+#: options/generaloptions.php:175
+msgid "Sidebars"
+msgstr ""
+
+#: options/generaloptions.php:179
+msgid "Enable main Sidebar CSS for all sidebars"
+msgstr ""
+
+#: options/generaloptions.php:184
+msgid ""
+"Uses default CSS styling of the sidebars for all sidebar areas. If disabled "
+"it will use the .customwidgetarea user-made styling and only Sidebar-left "
+"and Sidebar-right will use sidebar styling."
+msgstr ""
+
+#: options/generaloptions.php:188
+msgid "Disable left and right sidebars"
+msgstr ""
+
+#: options/generaloptions.php:193
+msgid ""
+"Your site will not display the default left/right sidebars. Minimalists "
+"dream. WARNING: Not recommended for use with Graphic Novel layouts."
+msgstr ""
+
+#: options/generaloptions.php:215
+msgid "Disable the default text in the footer"
+msgstr ""
+
+#: options/generaloptions.php:220
+msgid ""
+"Default text in the footer will not display. Enable this if you do not want "
+"any text in the footer. If you wish to add you own custom content, you may "
+"do so via Appearance -> Widgets-> Footer."
+msgstr ""
+
+#: options/generaloptions.php:224
+msgid "Enable the scroll to top link in the footer?"
+msgstr ""
+
+#: options/generaloptions.php:229
+msgid "When this link is clicked on long pages it will scroll back to the top."
+msgstr ""
+
+#: options/generaloptions.php:241
+msgid "Enable the dashboard ComicPress debug?"
+msgstr ""
+
+#: options/generaloptions.php:246
+msgid ""
+"Default enabled, this will do some sanity checks on your ComicPress "
+"installation and report the findings on your dashboard."
+msgstr ""
+
+#: options/generaloptions.php:250
+msgid "Enable checking EVERY post for category problems?"
+msgstr ""
+
+#: options/generaloptions.php:255
+msgid ""
+"Enable this if you would like to check ALL of your posts to see if there are "
+"any category problems and inconsistancies."
+msgstr ""
+
+#: options/generaloptions.php:259
+msgid "Enable the page load info in the footer?"
+msgstr ""
+
+#: options/generaloptions.php:264
+msgid ""
+"Will display information on how many queries and how fast it took to load "
+"the page in the footer."
+msgstr ""
+
+#: options/generaloptions.php:268
+msgid "Enable fix for index paging file not found with permalinks?"
+msgstr ""
+
+#: options/generaloptions.php:273
+msgid ""
+"Enabling this will add a filter to the index page query that will set the "
+"number of posts displayed appropriately for paging if it does not work for "
+"you."
+msgstr ""
+
+#: options/indexoptions.php:15
+msgid "Disable the blog on the Home page"
+msgstr ""
+
+#: options/indexoptions.php:20
+msgid ""
+"Checkmark this and the blog will not display on the Home page of your site. "
+"The features allows to either not have a blog at all, or, if you place a "
+"menu link to your blog page, you can maintain your blog within the same site "
+"without readers having to see it when they are just trying to read your "
+"comic."
+msgstr ""
+
+#: options/indexoptions.php:25
+msgid "Blog Post Count"
+msgstr ""
+
+#: options/indexoptions.php:30
+msgid ""
+"How many blog posts you would like displayed on the index page at one time."
+msgstr ""
+
+#: options/indexoptions.php:43
+msgid "Disable comic on Home page"
+msgstr ""
+
+#: options/indexoptions.php:48
+msgid ""
+"Checkmark this and the comic will not display on the home page of your site. "
+"You can use the Latest Thumbnail widget to display your comic in a sidebar. "
+"Make sure you set the archive-thumbnail size to under 200px. Note: Turning "
+"this off and using the Graphic Novel style turns ComicPress into a blog only."
+msgstr ""
+
+#: options/indexoptions.php:52
+msgid "Disable the comic blog on Home page"
+msgstr ""
+
+#: options/indexoptions.php:57
+msgid ""
+"Checkmark this and the comic blog will not display on the Home Page. "
+"Enabling this allows you to either not have a comic blog at all, or you can "
+"place it where you want using the comic blog post widget. If there is no "
+"content in the post it will not display regardless."
+msgstr ""
+
+#: options/indexoptions.php:61
+msgid "Disable the comic blog on the single pages"
+msgstr ""
+
+#: options/indexoptions.php:66
+msgid ""
+"Checkmark this and the blog portion of the comic will not display on the "
+"single/archive pages of your site."
+msgstr ""
+
+#: options/indexoptions.php:74
+msgid "Blog Header"
+msgstr ""
+
+#: options/indexoptions.php:78
+msgid "Disable blog header"
+msgstr ""
+
+#: options/indexoptions.php:83
+msgid ""
+"Checkmark this and your site will not display the contents of #blogheader."
+msgstr ""
+
+#: options/indexoptions.php:88
+msgid "Text for the blogheader, leave blank for none."
+msgstr ""
+
+#: options/menubaroptions.php:15
+msgid "Disable default Menubar"
+msgstr ""
+
+#: options/menubaroptions.php:20
+msgid "Allows you to customize the location of the Menubar via Widgets."
+msgstr ""
+
+#: options/menubaroptions.php:24
+msgid "Enable Search Form"
+msgstr ""
+
+#: options/menubaroptions.php:29
+msgid "Searchforms can be fun when you have something to search for."
+msgstr ""
+
+#: options/menubaroptions.php:33
+msgid "Enable RSS Link"
+msgstr ""
+
+#: options/menubaroptions.php:38
+msgid "Adds an RSS link icon to your menubar on the right side."
+msgstr ""
+
+#: options/menubaroptions.php:42
+msgid "Enable mini navigation"
+msgstr ""
+
+#: options/menubaroptions.php:47
+msgid ""
+"Mini Navigation adds small previous and next arrows arrow to the right side "
+"of your Menubar."
+msgstr ""
+
+#: options/menubaroptions.php:51
+msgid "Disable the menubar jQuery?"
+msgstr ""
+
+#: options/menubaroptions.php:56
+msgid ""
+"Disable the loading of the menubar jQuery, useful if you use a custom "
+"menubar."
+msgstr ""
+
+#: options/postoptions.php:11
+msgid "Post"
+msgstr ""
+
+#: options/postoptions.php:15
+msgid "Show transcript in post area"
+msgstr ""
+
+#: options/postoptions.php:20
+msgid ""
+"When enabled, if the comic has a transcript, the transcript will be "
+"displayed inside the comic post.  The transcript is text that that you can "
+"have of the dialog in your comic."
+msgstr ""
+
+#: options/postoptions.php:24
+msgid "Disable WordPress default content formatting"
+msgstr ""
+
+#: options/postoptions.php:29
+msgid ""
+"Prevents WordPress from reformatting any specially formatted content you may "
+"add. Generally, you want to leave the WordPress formatting enabled, but it "
+"some special cases you may prefer to preserve non-WP formatting."
+msgstr ""
+
+#: options/postoptions.php:33
+msgid "Disable Post Titles?"
+msgstr ""
+
+#: options/postoptions.php:38
+msgid ""
+"This is useful if you want to use post-thumbnails for the titles of posts "
+"instead of the post text based titles.  This only works for blog posts."
+msgstr ""
+
+#: options/postoptions.php:46
+msgid "Authors/Avatars/Moods"
+msgstr ""
+
+#: options/postoptions.php:50
+msgid "Two author blog"
+msgstr ""
+
+#: options/postoptions.php:55
+msgid ""
+"When enabled, it will make 2 seperate columns to have two seperate columns "
+"available to two different post authors."
+msgstr ""
+
+#: options/postoptions.php:61
+msgid "Author for column one"
+msgstr ""
+
+#: options/postoptions.php:71
+msgid "For two author blogs. Choose the author for the first column."
+msgstr ""
+
+#: options/postoptions.php:76
+msgid "Author for column two"
+msgstr ""
+
+#: options/postoptions.php:85
+msgid "For two author blogs. Choose the author for the second column."
+msgstr ""
+
+#: options/postoptions.php:90
+msgid "Comic post author Gravatar"
+msgstr ""
+
+#: options/postoptions.php:95
+msgid ""
+"Enabling this option will show a gravatar of the comic post author based on "
+"the author email address.  Gravatars are associated by your email address "
+"and you can create them at"
+msgstr ""
+
+#: options/postoptions.php:99
+msgid "Blog post author Gravatar"
+msgstr ""
+
+#: options/postoptions.php:104
+msgid ""
+"Enabling this option will show a gravatar of the post author based on the "
+"author email address.  Gravatars are associated by your email address and "
+"you can create them at"
+msgstr ""
+
+#: options/postoptions.php:123
+msgid "Avatar Directory"
+msgstr ""
+
+#: options/postoptions.php:137
+msgid ""
+"Choose a directory to get the avatars for default gravatars if someone does "
+"not have one.  You will have to make these images yourself, or download them "
+"from avatar providers. Then make a new directory on your site server to "
+"upload them to and select that directory here."
+msgstr ""
+
+#: options/postoptions.php:155
+msgid "Moods Directory"
+msgstr ""
+
+#: options/postoptions.php:169
+msgid ""
+"Choose a directory to get the post moods from.  Set this to \"none\" to turn "
+"off use.  Mood directories are found in your theme directory/images/moods/* "
+"to create your own custom moods just create a directory under images/moods/ "
+"and place ONLY image files inside of it. The name of the image file "
+"represents what the mood is."
+msgstr ""
+
+#: options/postoptions.php:177
+msgid "Calendar"
+msgstr ""
+
+#: options/postoptions.php:195
+msgid "Calendar Directory"
+msgstr ""
+
+#: options/postoptions.php:209
+msgid ""
+"Choose a directory to get the Archive Calendar styling from.  To not have "
+"calendar graphics, select \"none\". Calendar directories are found in your "
+"theme directory/images/cal/* to create your own custom archive calendar "
+"images just create a directory under images/cal/ and place your image files "
+"inside of it."
+msgstr ""
+
+#: options/postoptions.php:213
+msgid "Add graphic calendar to comic posts"
+msgstr ""
+
+#: options/postoptions.php:218
+msgid ""
+"The graphic calendar is an image that has the date of the comic blog post "
+"overlayed on top of it."
+msgstr ""
+
+#: options/postoptions.php:222
+msgid "Add graphic calendar to blog posts"
+msgstr ""
+
+#: options/postoptions.php:227
+msgid ""
+"Enabling this option will display a calendar image on your blog posts. The "
+"graphic calendar is an image that has the date of the blog post overlayed on "
+"top of it."
+msgstr ""
+
+#: options/postoptions.php:235
+msgid "Tags/Categories"
+msgstr ""
+
+#: options/postoptions.php:239
+msgid "Disable display of tags in posts"
+msgstr ""
+
+#: options/postoptions.php:244
+msgid ""
+"Tags != Categories, Tags are \"descriptive keywords\" of content in a post."
+msgstr ""
+
+#: options/postoptions.php:248
+msgid "Disable display of categories in posts"
+msgstr ""
+
+#: options/postoptions.php:253
+msgid ""
+"Categories != Tags, The categories that are shown by default are the ones "
+"the post in set to."
+msgstr ""
+
+#: options/postoptions.php:265
+msgid "Show all blog posts up until the next comic post on single pages"
+msgstr ""
+
+#: options/postoptions.php:270
+msgid ""
+"All the blog posts that are on the same day and greater to the next comic "
+"post on the comic your viewing will appear."
+msgstr ""
+
+#: options/postoptions.php:274
+msgid "Blog loop stays with all the single pages"
+msgstr ""
+
+#: options/postoptions.php:279
+msgid ""
+"Blog will stay with the single pages, this will automatically disable any "
+"commenting ability for comic blog posts. "
+msgstr ""
+
+#: options/postoptions.php:283
+msgid "Disable the titles on pages"
+msgstr ""
+
+#: options/postoptions.php:288
+msgid ""
+"If you disable the titles no pages you can still add a post-image in the "
+"page editor."
+msgstr ""
+
+#: options/themestyle.php:25
+msgid "Choose Your Website Layout"
+msgstr ""
+
+#: options/themestyle.php:28
+msgid "2 Column - Standard"
+msgstr ""
+
+#: options/themestyle.php:31
+msgid "2 Column - Vertical"
+msgstr ""
+
+#: options/themestyle.php:34
+msgid "3 Column - Standard "
+msgstr ""
+
+#: options/themestyle.php:37
+msgid "3 Column - Double Right Sidebar"
+msgstr ""
+
+#: options/themestyle.php:40
+msgid "3 Column - Vertical"
+msgstr ""
+
+#: options/themestyle.php:43
+msgid "3 Column - Vertical Double Right Sidebar"
+msgstr ""
+
+#: options/themestyle.php:46
+msgid "Graphic Novel - Left Sidebar"
+msgstr ""
+
+#: options/themestyle.php:49
+msgid "Graphic Novel - Right Sidebar"
+msgstr ""
+
+#: options/themestyle.php:61
+msgid "2 column layout default width: <strong>780px</strong>."
+msgstr ""
+
+#: options/themestyle.php:63
+msgid ""
+"3 column layout (<em>includes Graphic Novel</em>) default width: <b>980px</"
+"b>."
+msgstr ""
+
+#: options/themestyle.php:89
+msgid "Created by"
+msgstr ""
+
+#: options/themestyle.php:89
+msgid "Developed by"
+msgstr ""
+
+#: options/themestyle.php:90
+msgid ""
+"If you like the ComicPress theme, please donate.  It will help in developing "
+"new features and versions."
+msgstr ""
+
+#: page.php:22
+msgid "Pages:"
+msgstr ""
+
+#: search.php:10
+msgid "Search for &lsquo;"
+msgstr ""
+
+#: search.php:10
+msgid "&rsquo;"
+msgstr ""
+
+#: searchform.php:3
+msgid "Search..."
+msgstr ""
+
+#: single.php:82
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: widgets/archivedropdown.php:17
+msgid "Display a dropdown list of your archives, styled."
+msgstr ""
+
+#: widgets/archivedropdown.php:18
+msgid "Comic Archive Dropdown"
+msgstr ""
+
+#: widgets/archivedropdown.php:31
+msgid "Archives..."
+msgstr ""
+
+#: widgets/archivedropdown.php:148 widgets/classicbookmark.php:141
+#: widgets/classicmenubar.php:124 widgets/controlpanel.php:74
+#: widgets/latestcomiclink.php:41 widgets/latestcomics.php:46
+#: widgets/latestexcerpt.php:56 widgets/latesthumbnail.php:71
+#: widgets/menubar.php:88 widgets/nonmembertext.php:42
+#: widgets/randomcomic.php:42 widgets/randompostlink.php:42
+#: widgets/scheduledposts.php:50 widgets/transcript.php:83
+#: widgets/translator.php:44
+msgid "Title:"
+msgstr ""
+
+#: widgets/archivedropdown.php:151
+msgid "Monthly"
+msgstr ""
+
+#: widgets/archivedropdown.php:152
+msgid "Yearly"
+msgstr ""
+
+#: widgets/archivedropdown.php:154
+msgid "All Posts"
+msgstr ""
+
+#: widgets/archivedropdown.php:155
+msgid "Blog Posts"
+msgstr ""
+
+#: widgets/archivedropdown.php:156
+msgid "Comic Posts"
+msgstr ""
+
+#: widgets/archivedropdown.php:158
+msgid "All Categories"
+msgstr ""
+
+#: widgets/archivedropdown.php:159
+msgid "Blog Categories"
+msgstr ""
+
+#: widgets/archivedropdown.php:160
+msgid "Comic Categories"
+msgstr ""
+
+#: widgets/archivedropdown.php:161
+msgid "Storyline Order"
+msgstr ""
+
+#: widgets/calendar.php:14
+msgid ""
+"Display a calendar showing this months posts. (this calendar does not drop "
+"lines if there is no title given.)"
+msgstr ""
+
+#: widgets/calendar.php:15
+msgid "Comic Calendar"
+msgstr ""
+
+#: widgets/calendar.php:37
+msgid "DOWNLOAD"
+msgstr ""
+
+#: widgets/calendar.php:40
+msgid "Download Small"
+msgstr ""
+
+#: widgets/calendar.php:40
+msgid "S"
+msgstr ""
+
+#: widgets/calendar.php:41
+msgid "Download Medium"
+msgstr ""
+
+#: widgets/calendar.php:41
+msgid "M"
+msgstr ""
+
+#: widgets/calendar.php:42
+msgid "Download Large"
+msgstr ""
+
+#: widgets/calendar.php:42
+msgid "L"
+msgstr ""
+
+#: widgets/calendar.php:80
+msgid "Thumbnail URL (178px by 130px):"
+msgstr ""
+
+#: widgets/calendar.php:81
+msgid "Add link on thumbnails:"
+msgstr ""
+
+#: widgets/calendar.php:82
+msgid "Wallpaper URL (Small):"
+msgstr ""
+
+#: widgets/calendar.php:83
+msgid "Wallpaper URL (Medium):"
+msgstr ""
+
+#: widgets/calendar.php:84
+msgid "Wallpaper URL (Large):"
+msgstr ""
+
+#: widgets/classicbookmark.php:41
+msgid "Tag This Page"
+msgstr ""
+
+#: widgets/classicbookmark.php:113
+msgid ""
+"Creates a set of buttons that let the user return to the page they tagged."
+msgstr ""
+
+#: widgets/classicbookmark.php:114
+msgid "Bookmark - Classic"
+msgstr ""
+
+#: widgets/classicmenubar.php:96
+msgid "Displays the old style menubar that ComicPress used to use."
+msgstr ""
+
+#: widgets/classicmenubar.php:97
+msgid "Classic Menubar"
+msgstr ""
+
+#: widgets/comic-navigation.php:14
+msgid ""
+"Displays Graphical Navigation Buttons. This widget is for when you are not "
+"using the advanced storyline enabled widget."
+msgstr ""
+
+#: widgets/comic-navigation.php:15
+msgid "Comic Navigation"
+msgstr ""
+
+#: widgets/comic-navigation.php:297
+msgid "First"
+msgstr ""
+
+#: widgets/comic-navigation.php:300
+msgid "Last"
+msgstr ""
+
+#: widgets/comic-navigation.php:304
+msgid "Previous"
+msgstr ""
+
+#: widgets/comic-navigation.php:307
+msgid "Next"
+msgstr ""
+
+#: widgets/comic-navigation.php:313
+msgid "Previous Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:316
+msgid "Next Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:320
+msgid "First In Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:323
+msgid "Latest In Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:327
+msgid "Previous In Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:330
+msgid "Next In Chapter"
+msgstr ""
+
+#: widgets/comic-navigation.php:336 widgets/comictitle.php:15
+msgid "Comic Title"
+msgstr ""
+
+#: widgets/comic-navigation.php:348
+msgid "Random"
+msgstr ""
+
+#: widgets/comic-navigation.php:357
+msgid "Share"
+msgstr ""
+
+#: widgets/comic-navigation.php:361
+msgid "Subscribe"
+msgstr ""
+
+#: widgets/comicblogpost.php:14
+msgid "Displays the comic blog post. (used within the comic sidebar areas)"
+msgstr ""
+
+#: widgets/comicblogpost.php:15
+msgid "Comic Blog Post"
+msgstr ""
+
+#: widgets/comicdate.php:14
+msgid "Displays the date of the post of the comic."
+msgstr ""
+
+#: widgets/comicdate.php:15
+msgid "Comic Date"
+msgstr ""
+
+#: widgets/comicdate.php:44
+msgid "Words to use before date:"
+msgstr ""
+
+#: widgets/comicdate.php:45
+msgid "Format of the Time/Date:"
+msgstr ""
+
+#: widgets/comicdate.php:46
+msgid "Date String Examples"
+msgstr ""
+
+#: widgets/comictitle.php:14
+msgid "Displays the title of the comic. (used in comic sidebars)"
+msgstr ""
+
+#: widgets/comments.php:15
+msgid "Displays a comments link. (used in comic sidebars)"
+msgstr ""
+
+#: widgets/comments.php:16
+msgid "Comic Comments Link"
+msgstr ""
+
+#: widgets/comments.php:25 widgets/permalink.php:15
+msgid "Permalink"
+msgstr ""
+
+#: widgets/comments.php:41 widgets/permalink.php:42
+msgid "New Link name:"
+msgstr ""
+
+#: widgets/controlpanel.php:14
+msgid ""
+"Login/Logoff menu with register/lost password links if not logged on. (use "
+"only if registrations are enabled."
+msgstr ""
+
+#: widgets/controlpanel.php:15 widgets/controlpanel.php:57
+msgid "Control Panel"
+msgstr ""
+
+#: widgets/controlpanel.php:22
+msgid "UserName:"
+msgstr ""
+
+#: widgets/controlpanel.php:24
+msgid "Password:"
+msgstr ""
+
+#: widgets/controlpanel.php:28
+msgid "Login"
+msgstr ""
+
+#: widgets/controlpanel.php:34 widgets/controlpanel.php:36
+msgid "Register"
+msgstr ""
+
+#: widgets/controlpanel.php:38
+msgid "Recover password"
+msgstr ""
+
+#: widgets/controlpanel.php:44
+msgid "Logout"
+msgstr ""
+
+#: widgets/controlpanel.php:46
+msgid "Profile"
+msgstr ""
+
+#: widgets/jquerybookmark.php:14
+msgid ""
+"Allow the user to bookmark a page and then jump to it upon return. This "
+"bookmark widget uses jQuery.  WARNING: In Developement."
+msgstr ""
+
+#: widgets/jquerybookmark.php:15
+msgid "Bookmark - jQuery"
+msgstr ""
+
+#: widgets/jquerybookmark.php:20
+msgid "Tag page"
+msgstr ""
+
+#: widgets/jquerybookmark.php:21
+msgid "Bookmark"
+msgstr ""
+
+#: widgets/jquerybookmark.php:24
+msgid "Clear tag off"
+msgstr ""
+
+#: widgets/jquerybookmark.php:28
+msgid "Clear tag on"
+msgstr ""
+
+#: widgets/jquerybookmark.php:29
+msgid "Clear"
+msgstr ""
+
+#: widgets/jquerybookmark.php:32
+msgid "Goto tag off"
+msgstr ""
+
+#: widgets/jquerybookmark.php:36
+msgid "Goto tag on"
+msgstr ""
+
+#: widgets/jquerybookmark.php:37
+msgid "Goto"
+msgstr ""
+
+#: widgets/jquerybookmark.php:42
+msgid "Set bookmark"
+msgstr ""
+
+#: widgets/jquerybookmark.php:43
+msgid "+Bookmark"
+msgstr ""
+
+#: widgets/jquerybookmark.php:46
+msgid "Use bookmark"
+msgstr ""
+
+#: widgets/jquerybookmark.php:47
+msgid "&gt;&gt;Bookmark"
+msgstr ""
+
+#: widgets/jquerybookmark.php:119
+msgid "Title"
+msgstr ""
+
+#: widgets/jquerybookmark.php:122
+msgid "Three-button mode"
+msgstr ""
+
+#: widgets/jquerybookmark.php:123
+msgid "One-button mode"
+msgstr ""
+
+#: widgets/latestcomiclink.php:14
+msgid "Displays a link to click to go to the latest comic."
+msgstr ""
+
+#: widgets/latestcomiclink.php:15
+msgid "Latest Comic Link"
+msgstr ""
+
+#: widgets/latestcomics.php:13
+msgid "Display a list of the latest comics available."
+msgstr ""
+
+#: widgets/latestcomics.php:14 widgets/latestcomics.php:23
+msgid "Latest Comics"
+msgstr ""
+
+#: widgets/latestexcerpt.php:14
+msgid ""
+"Display the excerpt of the latest comic or post, clickable to go to the "
+"comic post."
+msgstr ""
+
+#: widgets/latestexcerpt.php:15
+msgid "Display Latest Excerpt"
+msgstr ""
+
+#: widgets/latestexcerpt.php:57 widgets/latesthumbnail.php:72
+msgid "Which Category?"
+msgstr ""
+
+#: widgets/latesthumbnail.php:14
+msgid ""
+"Display a thumbnail of the latest comic or post, clickable to go to the "
+"comic post."
+msgstr ""
+
+#: widgets/latesthumbnail.php:15
+msgid "Display Latest Thumbnail"
+msgstr ""
+
+#: widgets/latesthumbnail.php:79
+msgid ""
+"*note: If it is a blog category it will search for the latest thumbnail "
+"attached to the image.  If it is a comic it will search for the thumbnail "
+"attached to the post first, then check do the thumbnail for the comic."
+msgstr ""
+
+#: widgets/menubar.php:60
+msgid "Displays a menubar."
+msgstr ""
+
+#: widgets/multisite-list.php:16
+msgid ""
+"Display Site List of all sites that have recently updated on this Multisite."
+msgstr ""
+
+#: widgets/multisite-list.php:26
+msgid "Hosted Site List"
+msgstr ""
+
+#: widgets/nonmembertext.php:14
+msgid "Displays Whatever is in the text box to non-members only."
+msgstr ""
+
+#: widgets/nonmembertext.php:15
+msgid "Text - Non Member"
+msgstr ""
+
+#: widgets/permalink.php:14
+msgid "Displays a permalink. (used in comic sidebars)"
+msgstr ""
+
+#: widgets/randomcomic.php:15
+msgid "Displays a link to click to trigger a random comic."
+msgstr ""
+
+#: widgets/randomcomic.php:16
+msgid "Random Comic Link"
+msgstr ""
+
+#: widgets/randomcomic.php:27
+msgid "Random Comic"
+msgstr ""
+
+#: widgets/randompostlink.php:15
+msgid "Displays a link to click to trigger a random blog post."
+msgstr ""
+
+#: widgets/randompostlink.php:16
+msgid "Random Post Link"
+msgstr ""
+
+#: widgets/randompostlink.php:27
+msgid "Random Post"
+msgstr ""
+
+#: widgets/scheduledposts.php:15
+msgid "Display a list of posts that are scheduled to be published."
+msgstr ""
+
+#: widgets/scheduledposts.php:16 widgets/scheduledposts.php:24
+msgid "Scheduled Posts"
+msgstr ""
+
+#: widgets/social.php:14
+msgid "Display a user defined social button, with translated URL."
+msgstr ""
+
+#: widgets/social.php:15
+msgid "Social Button"
+msgstr ""
+
+#: widgets/social.php:80
+msgid "Title (used as CSS marker too):"
+msgstr ""
+
+#: widgets/social.php:81
+msgid "URL"
+msgstr ""
+
+#: widgets/social.php:82
+msgid "Image"
+msgstr ""
+
+#: widgets/transcript.php:54
+msgid ""
+"Display the transcription of the current post if there is one. (used in "
+"comic sidebars)"
+msgstr ""
+
+#: widgets/transcript.php:55
+msgid "Transcript"
+msgstr ""
+
+#: widgets/transcript.php:85
+msgid "Styled"
+msgstr ""
+
+#: widgets/transcript.php:86
+msgid "Add BR"
+msgstr ""
+
+#: widgets/transcript.php:87
+msgid "Raw Output"
+msgstr ""
+
+#: widgets/translator.php:16
+msgid "Translate your site with google."
+msgstr ""
+
+#: widgets/translator.php:17
+msgid "Google Translator"
+msgstr ""
+
+#: wpmu/comicpress_manager_wpmu.php:64
+msgid ""
+"<strong>You've exceeded your disk space quota!</strong> Either delete files "
+"you don't need, or find out how to get more disk space for your account."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "ComicPress"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://comicpress.org"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Publish a comic with WordPress. <a href=\"http://comicpress.org\">Visit the "
+"ComicPress Website.</a> This is the ComicPress Core Framework.  Requires "
+"WordPress 3.0"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Philip M. Hofer"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://frumph.net"
+msgstr ""
+
+#. Tags of the plugin/theme
+msgid ""
+"White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, "
+"custom-header, theme-options, threaded-comments, sticky-post, translation-"
+"ready"
+msgstr ""

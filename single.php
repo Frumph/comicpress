@@ -1,0 +1,94 @@
+<?php 
+get_header();
+if (have_posts()) : 
+	while (have_posts()) : the_post();
+		if (comicpress_in_comic_category()) {
+			if (!comicpress_themeinfo('disable_comic_blog_single')) {
+				comicpress_display_post();
+				$cur_date = mysql2date('Y-m-j', $post->post_date);
+				$next_comic = comicpress_get_next_comic();
+				if (!empty($next_comic)) {
+					$next_comic = (array)$next_comic;
+					$next_date = mysql2date('Y-m-j', $next_comic['post_date']);
+				}
+				$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&order=asc&cat='.comicpress_exclude_comic_categories();
+			}
+		} else { 
+			comicpress_display_post();
+		}
+		comments_template('', true);
+		
+	endwhile; 
+	
+	if (is_active_sidebar('blog')) get_sidebar('blog');
+	
+	if (comicpress_themeinfo('static_blog') && comicpress_in_comic_category()) {
+		if (!comicpress_themeinfo('split_column_in_two')) {
+			$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&cat='.comicpress_exclude_comic_categories().'&paged='.$paged; 
+			
+			$posts = &query_posts($blog_query);
+		if (have_posts()) { ?>
+		
+			<?php if (!comicpress_themeinfo('disable_blogheader')) { ?>
+				<div id="blogheader"><!-- This area can be used for a heading above your main page blog posts --></div>
+			<?php } ?>
+			
+			<div class="blogindex-head"></div>
+			<div class="blogindex">
+				<?php while (have_posts()) : the_post();
+					
+					comicpress_display_post();	
+				
+			endwhile; ?>
+			</div>
+			<div class="blogindex-foot"></div>
+			<?php }
+			comicpress_pagination();
+		} else {
+			comicpress_dual_columns();
+		}
+	} else {
+		if (comicpress_themeinfo('blogposts_with_comic')) {
+			
+			$temppost = $post;
+			$temp_query = $wp_query;		
+			
+			if (comicpress_in_comic_category()) {
+				function filter_where($where = '') {
+					global $cur_date, $next_date;
+					if (!empty($next_date)) {
+						$where .= " AND post_date >= '".$cur_date."' AND post_date <= '".$next_date."'";
+					} else {
+						$where .= " AND post_date >= '".$cur_date."'";
+					}
+					return $where;
+				}
+				add_filter('posts_where', 'filter_where');
+				$posts = &query_posts($blog_query);
+				if (have_posts()) { while (have_posts()) : the_post();
+						comicpress_display_post();
+						comments_template('', true);
+				endwhile; }
+			} 
+			$post = $temppost; $wp_query = $temp_query; $temppost = null; $temp_query = null;
+		}
+	} 
+else:
+
+?>
+	<div <?php post_class(); ?>>
+		<div class="post-head"></div>
+		<div class="post">
+			<p><?php _e('Sorry, no posts matched your criteria.','comicpress'); ?></p>
+			<div class="clear"></div>
+		</div>
+		<div class="post-foot"></div>
+	</div>
+	<?php
+
+endif;
+	
+if (is_active_sidebar('under-blog')) get_sidebar('underblog');
+
+get_footer();
+?>
