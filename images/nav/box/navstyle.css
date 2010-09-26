@@ -64,23 +64,7 @@ Style: Box
 }
 
 .navi-buyprint {
-	border: none;
-	cursor: pointer;
 	background: url('buyprint.png') no-repeat;
-}
-
-.navi-buyprint:hover, button .navi-buyprint:hover {
-	width: 44px;
-	background: url('buyprint.png') no-repeat;
-	background-position: -44px 0;
-	color: #f00;
-}
-
-.navi-buyprint-form {
-	width: 44px;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
 }
 
 .navi-archive, .navi-archives {
