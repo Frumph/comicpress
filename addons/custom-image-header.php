@@ -1,5 +1,7 @@
 <?php 
 
+add_theme_support( 'custom-header' );
+
 // Custom Image Header Defaults
 // define('HEADER_TEXTCOLOR', '000');
 // define('HEADER_IMAGE', ''); // %s is theme dir
@@ -17,31 +19,33 @@ function theme_admin_header_style() { ?>
 	
 #headimg h1, #headimg .description {
 	text-decoration: none;
-<?php if (get_header_textcolor() == 'blank') { ?>
 	display: none;
-<?php } else { ?>
-	color: #<?php header_textcolor();?>;
-<?php } ?>	
 }
 </style>
+
 	<?php
 }
 	
 function theme_header_style() { 
 	if (get_header_image()) { ?>
 <style type="text/css">
-#header {
-	width: <?php echo HEADER_IMAGE_WIDTH; ?>px; 
-	height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-	background: url(<?php header_image(); ?>) center center no-repeat;
-}
-		<?php if ( 'blank' == get_header_textcolor() ) { ?>
-#header h1, #header .description { display: none; }
-		<?php } else { ?>
-#header * { color: #<?php header_textcolor();?>; }
-		<?php } ?>
-		</style>
-		
+	#header {
+		width: <?php echo HEADER_IMAGE_WIDTH; ?>px; 
+		height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+		background: url(<?php header_image(); ?>) top center no-repeat;
+		overflow: hidden;
+	}
+
+	#header h1 { padding: 0; }
+	#header h1 a { 
+		display: block;
+		width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
+		height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+		text-indent: -9999px;
+	}
+	#header .description { display: none; }
+</style>
+
 	<?php }
 }
 

@@ -16,8 +16,6 @@ add_theme_support( 'post-thumbnails' );
 // Required by the wordpress review theme, it sucks donkey balls but is required.
 add_theme_support( 'automatic-feed-links' );
 
-add_theme_support( 'custom-header' );
-
 // This theme allows users to set a custom background
 add_custom_background();
 add_theme_support( 'custom-background' );
@@ -430,7 +428,7 @@ function comicpress_load_options() {
 			'disable_default_comic_nav' => false,
 			'enable_post_thumbnail_rss' => true,
 
-			'cp_theme_layout' => 'standard',
+			'cp_theme_layout' => '3c',
 			'transcript_in_posts' => false,
 			'enable_widgetarea_use_sidebar_css' => false,
 
@@ -526,7 +524,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.21',
+				'version' => '2.9.2.22',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,
@@ -568,8 +566,6 @@ function comicpress_themeinfo($whichinfo = null) {
 			return false;
 	return $comicpress_themeinfo;
 }
-
-
 
 function comicpress_get_comic_category_objects_by_id() {
 	global $categories_by_id;

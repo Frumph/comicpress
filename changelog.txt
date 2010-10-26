@@ -4,3 +4,5 @@ Added ?latestcomic=# where # = category #
 So you can do ?latestcomic and it will redirect to the latest comic of all categories 
 or latestcomic = 3 will redirect to the latestcomic of category ID #3
 
+custom image header now defaults to click to home
+
