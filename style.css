@@ -815,6 +815,8 @@ textarea#comment {
 	height: 80px;
 }
 
+.bypostauthor {}
+
 .comment {
 	display: block;
 	margin-top: 20px;
@@ -1288,6 +1290,10 @@ table#wp-calendar td {
 	line-height: 11px;
 	font-size: 11px;
 }
+
+.caption-text {}
+
+.sticky {}
 
 .aligncenter {
 	margin: 0 auto;
