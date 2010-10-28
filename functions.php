@@ -114,7 +114,7 @@ if ( function_exists('register_sidebar') ) {
 				__('Over Blog', 'comicpress'),
 				__('Blog', 'comicpress'),
 				__('Under Blog', 'comicpress'),
-				__('The Footer', 'comicpress')
+				__('Footer', 'comicpress')
 				) as $sidebartitle) {
 		register_sidebar(array(
 					'name'=> $sidebartitle,
@@ -524,7 +524,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.22',
+				'version' => '2.9.2.23',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,

@@ -1,5 +1,8 @@
-﻿2.9.2.22
+﻿2.9.2.23
+Adjusted "The Footer" back to just "Footer" the browsers that can't handle it will just have to be SOL
 
+
+2.9.2.22
 Added ?latestcomic=# where # = category #
 So you can do ?latestcomic and it will redirect to the latest comic of all categories 
 or latestcomic = 3 will redirect to the latestcomic of category ID #3
