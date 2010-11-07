@@ -1,6 +1,6 @@
 ﻿2.9.2.23
 Adjusted "The Footer" back to just "Footer" the browsers that can't handle it will just have to be SOL
-
+made the is_cp_theme_layout into a function_exists so that it can be rehandled in the child-functions.php
 
 2.9.2.22
 Added ?latestcomic=# where # = category #

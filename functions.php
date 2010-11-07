@@ -241,14 +241,16 @@ function comicpress_load_config() {
 }
 */
 
-function is_cp_theme_layout($choices) {
-	$choices = explode(",", $choices);
-	foreach ($choices as $choice) {
-		if (comicpress_themeinfo('cp_theme_layout') == $choice) {
-			return true;
+if (!function_exists('is_cp_theme_layout')) {
+	function is_cp_theme_layout($choices) {
+		$choices = explode(",", $choices);
+		foreach ($choices as $choice) {
+			if (comicpress_themeinfo('cp_theme_layout') == $choice) {
+				return true;
+			}
 		}
+		return false;
 	}
-	return false;
 }
 
 function is_cp_layout_avail($layout, $avail_layouts) {
