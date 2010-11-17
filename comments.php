@@ -120,7 +120,7 @@ if ( post_password_required() ) { ?>
 	if (comicpress_themeinfo('disable_comment_note')) {
 		$args = array(
 				'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" id="comment-textarea" tabindex="4"></textarea></p>',
+				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" id="comment-textarea"></textarea></p>',
 				'comment_notes_before' => '',
 				'comment_notes_after'  => '',
 				'title_reply'          => __( 'Comment &not;<br />', 'comicpress' ),
@@ -132,7 +132,7 @@ if ( post_password_required() ) { ?>
 		$args = array(
 				'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
 				'comment_notes_before' => '',
-				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" id="comment-textarea" tabindex="4"></textarea></p>',
+				'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" id="comment-textarea"></textarea></p>',
 				'comment_notes_after'  => '<p class="comment-note">' . __('NOTE - You can use these ','comicpress') . sprintf(('<abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:<br />%s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
 				'title_reply'          => __( 'Comment &not;<br />', 'comicpress'),
 				'title_reply_to'       => __('Reply to %s &not;<br />','comicpress'), 

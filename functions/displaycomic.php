@@ -31,7 +31,7 @@ $comic_filename_filters['default'] = "{date}*.*";
 if (!function_exists('comicpress_display_comic_area')) {
 	function comicpress_display_comic_area() {
 		global $post; ?>
-		<div id="comic-wrap">
+		<div id="comic-wrap" class="comic-id-<?php the_ID(); ?>">
 			<div id="comic-head"><?php if (is_active_sidebar('over-comic')) get_sidebar('over'); ?></div>
 			<div class="clear"></div>
 				<?php if (is_active_sidebar('left-of-comic')) get_sidebar('comicleft'); ?>

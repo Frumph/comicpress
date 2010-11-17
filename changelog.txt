@@ -1,4 +1,8 @@
-﻿2.9.2.23
+﻿2.9.2.24
+Removed the tabindex from the comments.php field for textarea
+adding comic-id-# ($post->id) as a wrap with #comic-wrap so that it can be targeted for the current comic post
+
+2.9.2.23
 Adjusted "The Footer" back to just "Footer" the browsers that can't handle it will just have to be SOL
 made the is_cp_theme_layout into a function_exists so that it can be rehandled in the child-functions.php
 
