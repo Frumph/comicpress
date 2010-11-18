@@ -1,6 +1,9 @@
 ﻿2.9.2.24
 Removed the tabindex from the comments.php field for textarea
 adding comic-id-# ($post->id) as a wrap with #comic-wrap so that it can be targeted for the current comic post
+added check to see if on the comic_next for hovering over to see if its empty or not, if it is do a # instead of empty ""
+Removed comicpress-debug.php, so no debug messages anymore
+Removed copyright.php, it hasnt been in use in a long time
 
 2.9.2.23
 Adjusted "The Footer" back to just "Footer" the browsers that can't handle it will just have to be SOL

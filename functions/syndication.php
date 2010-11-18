@@ -41,25 +41,6 @@ if (!function_exists('comicpress_comic_feed')) {
 	?>
 		<p><a href="<?php the_permalink(); ?>"><?php echo comicpress_display_comic_thumbnail('rss',$post); ?></a></p>
 	<?php
-/*		$this_permalink = get_permalink();
-		$latest_comic = get_permalink( comicpress_get_terminal_post_in_category(comicpress_all_comic_categories_string(), false) );
-		$first = comicpress_get_first_comic_permalink(); 
-		$last = comicpress_get_last_comic_permalink();
-		$prev = comicpress_get_previous_comic_permalink(false);
-		$next = comicpress_get_next_comic_permalink(false);
-
-		if (!empty($first) && ($first != $this_permalink)) { ?>
-			<a href="<?php echo $first; ?>">First</a>
-		<?php }
-		if (!empty($prev)) { ?>
-			<a href="<?php echo $prev; ?>">Previous</a>
-		<?php }
-		if (!empty($next)) { ?>
-			<a href="<?php echo $next; ?>">Next</a>
-		<?php }
-		if (!empty($last) && ($last != $this_permalink)) { ?>
-			<a href="<?php echo $last; ?>">Latest</a>
-		<?php } */
 	}
 }
 

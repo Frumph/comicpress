@@ -31,7 +31,7 @@ $comic_filename_filters['default'] = "{date}*.*";
 if (!function_exists('comicpress_display_comic_area')) {
 	function comicpress_display_comic_area() {
 		global $post; ?>
-		<div id="comic-wrap" class="comic-id-<?php the_ID(); ?>">
+		<div id="comic-wrap" class="comic-id-<?php echo $post->ID; ?>">
 			<div id="comic-head"><?php if (is_active_sidebar('over-comic')) get_sidebar('over'); ?></div>
 			<div class="clear"></div>
 				<?php if (is_active_sidebar('left-of-comic')) get_sidebar('comicleft'); ?>
@@ -246,6 +246,7 @@ function comicpress_rascal_says($output) {
 	}
 	if (comicpress_themeinfo('comic_clicks_next')) {
 		$href_to_use = comicpress_get_next_comic_permalink();
+		if (empty($href_to_use)) $href_to_use = "#";
 		$output = "<a href=\"{$href_to_use}\" class=\"tt\" title=\"".$post->post_title."\">{$output}</a>";
 	} else {
 		$output = "<a class=\"tt\" href=\"{$href_to_use}\" title=\"".$post->post_title."\">{$output}</a>";

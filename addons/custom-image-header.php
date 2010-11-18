@@ -3,7 +3,7 @@
 add_theme_support( 'custom-header' );
 
 // Custom Image Header Defaults
-// define('HEADER_TEXTCOLOR', '000');
+define('HEADER_TEXTCOLOR', '');
 // define('HEADER_IMAGE', ''); // %s is theme dir
 define('HEADER_IMAGE_WIDTH', comicpress_themeinfo('custom_image_header_width'));
 define('HEADER_IMAGE_HEIGHT', comicpress_themeinfo('custom_image_header_height'));

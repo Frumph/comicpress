@@ -95,7 +95,6 @@ if (comicpress_themeinfo('enable_related_posts')) {
 // Dashboard Menu Comicpress Options and ComicPress CSS
 if (is_admin()) {
 	@require_once(get_template_directory() . '/comicpress-admin.php');
-	@require_once(get_template_directory() . '/comicpress-debug.php');
 }
 
 // Register Sidebar and Define Widgets
@@ -201,6 +200,8 @@ function __comicpress_init() {
 	}
 }
 
+add_action('init', '__comicpress_init');
+
 add_action('wp_head','comicpress_add_head');
 
 function comicpress_add_head() {
@@ -213,33 +214,6 @@ function comicpress_add_head() {
 	<?php }
 }
 
-add_action('init', '__comicpress_init');
-
-/*
-function comicpress_load_config() {
-
-	$comicpress_config = get_option('comicpress-config');
-	if (empty($comicpress_config)) {
-		
-		foreach (array(
-				'comiccat' => '2',
-				'blogcat' => '3',
-				'comic_folder' => 'comics',
-				'rss_comic_folder' => 'comics-rss',
-				'archive_comic_folder' => 'comics-archive',
-				'mini_comic_folder' => 'comics-mini',
-				'rss_comic_width' => '400',
-				'archive_comic_width' => '280',
-				'mini_comic_width' => '178'
-		) as $field => $value) {
-			$comicpress_config[$field] = $value;
-		}
-
-		add_option('comicpress-config', $comicpress_config, '', true);
-	}
-	return $comicpress_config;
-}
-*/
 
 if (!function_exists('is_cp_theme_layout')) {
 	function is_cp_theme_layout($choices) {
@@ -330,9 +304,6 @@ function comicpress_in_comic_category($cat = null) {
 function comicpress_create_category_tree() {
 	global $category_tree, $comiccat;
 	if (empty($category_tree)) {
-//		$comicpress_config = comicpress_load_config();
-//		$comiccat = comicpress_themeinfo('comiccat');
-		
 		$categories_by_id = comicpress_get_comic_category_objects_by_id();	
 		if (empty($categories_by_id)) return false;
 		foreach (array_keys($categories_by_id) as $category_id) {
