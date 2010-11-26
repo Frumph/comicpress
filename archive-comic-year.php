@@ -40,6 +40,10 @@ while (have_posts()) : the_post();
 	<div class="post-foot"></div>
 </div>
 
+<?php 
+endwhile;
+?>
+
 <div <?php post_class(); ?>>
 	<div class="post-head"></div>
 	<div class="post-content">
@@ -67,5 +71,4 @@ while (have_posts()) : the_post();
 	</div>
 	<div class="post-foot"></div>
 </div>
-<?php endwhile; ?>
 <?php get_footer() ?>

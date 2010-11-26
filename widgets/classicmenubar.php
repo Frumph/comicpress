@@ -27,7 +27,7 @@ function comicpress_classic_menubar() {
 		<?php if (comicpress_themeinfo('enable_navigation_in_menubar')) { 
 			Protect(); ?>
 			<?php if (is_home() && !comicpress_themeinfo('disable_comic_frontpage')) {
-				$comicMenubar = new WP_Query(); $comicMenubar->query('showposts=1&cat='.comicpress_get_all_comic_categories_as_cat_string());
+				$comicMenubar = new WP_Query(); $comicMenubar->query('showposts=1&cat='.comicpress_all_comic_categories_string());
 				while ($comicMenubar->have_posts()) : $comicMenubar->the_post();
 					global $wp_query; 
 					$temp_query = $wp_query->is_single;

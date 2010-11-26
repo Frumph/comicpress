@@ -34,7 +34,7 @@ if (have_posts()) :
 			<div class="post-content">
 				<h3><?php _e('No entries found.','comicpress'); ?></h3>
 				<p><?php _e('Try another search?','comicpress'); ?></p>
-				<p><?php the_widget('WP_Widget_Search'); ?></p>
+				<p><?php get_search_form(); ?></p>
 			</div>
 			<div class="post-foot"></div>
 		</div>

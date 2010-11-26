@@ -4,15 +4,22 @@ adding comic-id-# ($post->id) as a wrap with #comic-wrap so that it can be targe
 added check to see if on the comic_next for hovering over to see if its empty or not, if it is do a # instead of empty ""
 Removed comicpress-debug.php, so no debug messages anymore
 Removed copyright.php, it hasnt been in use in a long time
+changed the <div for the post title in the comic blog post widget to an h2 so that ttf replacer plugins can handle it
+fixed the /?randomcomic /?randompost to have &nocache=1 on the line so that wp-supercache doesn't cache it
+implemented easel's menubar code which uses less CSS then the new comicpress's /cleaned up code/ no images for down arrow -> right arrow no, is text characters
+fixed classic menubar's error with the comicpress_get_all_comic_categories_as_cat_string() when its supposed to be: comicpress_all_comic_categories_string()
+You can now assign comics to individual posts, which means..  yes.. multiple comics per day with multiple posts.   A little bit extra work than just uploading but works great.
+Still need to make comicpress managers bulk editor recognize which comic is assigned to it and think about making an assign comic box for the post editor.
+Added new widget "Donation" widget which lets you set a 'target' donation amount and then set how much in donations you currently have and it displays a nice little donation image percentile of how far its got to go to get the target mark
+Fixed Notice that appears on 404 and search pages when no results found.
+
 
 2.9.2.23
-Adjusted "The Footer" back to just "Footer" the browsers that can't handle it will just have to be SOL
+Fixed footer - the-footer problem with widgets in the footer area
 made the is_cp_theme_layout into a function_exists so that it can be rehandled in the child-functions.php
 
 2.9.2.22
 Added ?latestcomic=# where # = category #
 So you can do ?latestcomic and it will redirect to the latest comic of all categories 
 or latestcomic = 3 will redirect to the latestcomic of category ID #3
-
 custom image header now defaults to click to home
-

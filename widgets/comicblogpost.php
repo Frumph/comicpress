@@ -33,7 +33,7 @@ class comicpress_comic_blog_post_widget extends WP_Widget {
 						$wp_query->is_single = true;
 						$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
 						if (!empty($title)) { echo "<div class=\"comic-post-widget-header\">".$title."</div>\r\n"; }
-						if ($instance['showtitle']) { echo "<div class=\"comic-post-widget-title\">".get_the_title()."</div>\r\n"; }
+						if ($instance['showtitle']) { echo "<h2 class=\"comic-post-widget-title\">".get_the_title()."</h2>\r\n"; }
 						if ($instance['showdate']) { echo "<div class=\"comic-post-widget-date\">".get_the_time('F jS, Y')."</div>\r\n"; }
 						the_content();
 						if ($instance['showcommentlink']) comicpress_display_comment_link();

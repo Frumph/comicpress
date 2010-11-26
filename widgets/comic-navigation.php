@@ -168,7 +168,7 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 			}			
 			if ($instance['last']) {
 				if (!empty($last_comic) && ($last_comic != $this_permalink)) {
-					if ($instance['lastgohome']) { ?>
+					if (isset($instance['lastgohome']) && $instance['lastgohome']) { ?>
 						<a href="/" class="navi navi-last" title="<?php echo $instance['last_title']; ?>"><?php echo $instance['last_title']; ?></a>
 					<?php } else { ?>
 						<a href="<?php echo $last_comic; ?>" class="navi navi-last" title="<?php echo $instance['last_title']; ?>"><?php echo $instance['last_title']; ?></a>						

@@ -28,8 +28,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php 
-do_action('comicpress-body');
+<?php
 if (is_active_sidebar('above-header')) get_sidebar('above'); 
 ?> 
 <div id="page-head"></div>

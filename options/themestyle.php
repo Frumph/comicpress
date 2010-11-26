@@ -64,7 +64,36 @@
 					</td>
 				</tr>
 			</table>
-
+			<table class="widefat" cellspacing="0">
+				<thead>
+					<tr>
+						<th colspan="4"><?php _e('Child Themes','comicpress'); ?></th>
+					</tr>
+				</thead>
+				<tr>
+					<td colspan="5">
+					These child themes can be downloaded from either <a href="http://comicpress.org/download/" target="_blank">ComicPress.org</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>
+					</td>
+				</tr>
+				<tr>
+				<td>
+				List Child Themes Available Here
+				</td>
+				</tr>
+			</table>
+			
+			<table class="widefat" cellspacing="0">
+				<thead>
+					<tr>
+						<th colspan="4"><?php _e('Color Scheme','comicpress'); ?></th>
+					</tr>
+				</thead>
+				<tr>
+					<td colspan="5">
+					Coming Soon.
+					</td>
+				</tr>
+			</table>			
 			<div class="clear"></div>
 
 		</div>

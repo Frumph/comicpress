@@ -189,74 +189,8 @@ h4, h4 a {
 	clear: both;
 	display: block;
 	margin: 0 auto;
-	background: #000;
-}
-
-/* THIS SECTION LOADS BEFORE THE JAVASCRIPT */
-
-/* This section makes sure the menubar looks good before loading or jquery disabled
--------------------------------------------------------------- */
-
-#menubar-wrapper .menu-header,
-div.menu {
-	font-size: 13px;
-	margin-left: 12px;
-}
-#menubar-wrapper .menu-header ul,
-div.menu ul {
-	list-style: none;
-	margin: 0;
-}
-#menubar-wrapper .menu-header li,
-div.menu li {
-	float: left;
-	position: relative;
-}
-#menubar-wrapper a {
-	display: block;
-	text-decoration: none;
-}
-#menubar-wrapper ul ul {
-/*	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2); */
-	display: none;
-	position: absolute;
-	top: 38px;
-	left: 0;
-	float: left;
-	z-index: 99999;
-}
-#menubar-wrapper ul ul li {
-	min-width: 160px;
-}
-#menubar-wrapper ul ul ul {
-	left: 100%;
-	top: 0;
-}
-#menubar-wrapper ul ul a {
-	height: auto;
-}
-#menubar-wrapper li:hover > a,
-#menubar-wrapper ul ul :hover > a {
-/*	background: #333;
-	color: #fff; */
-}
-#menubar-wrapper ul li:hover > ul {
-	display: block;
-}
-#menubar-wrapper ul li.current_page_item > a,
-#menubar-wrapper ul li.current-menu-ancestor > a,
-#menubar-wrapper ul li.current-menu-item > a,
-#menubar-wrapper ul li.current-menu-parent > a {
-/*	color: #fff; */
-}
-* html #menubar-wrapper ul li.current_page_item a,
-* html #menubar-wrapper ul li.current-menu-ancestor a,
-* html #menubar-wrapper ul li.current-menu-item a,
-* html #menubar-wrapper ul li.current-menu-parent a,
-* html #menubar-wrapper ul li a:hover {
-/*	color: #fff; */
+	text-transform: uppercase;
+	background: #111;
 }
 
 .ie #menubar-wrapper {
@@ -317,13 +251,11 @@ div.menu li {
 	background: #414141;
 }
 
-.menubar {
-/*	font: bold 12px Verdana; */
-/*	background: #414141; background of menu bar (default state)*/
+.menu {
 	float: left;
 }
 
-.menubar ul {
+.menu ul {
 	z-index: 100;
 	margin: 0;
 	padding: 0;
@@ -331,50 +263,57 @@ div.menu li {
 }
 
 /*Top level list items*/
-.menubar ul li {
+.menu ul li {
 	position: relative;
 	display: inline;
 	float: left;
 }
 
 /*Top level menu link items style*/
-.menubar ul li a {
+.menu ul li a {
 	display: block;
 	padding: 5px 10px;
 	text-decoration: none;
 }
 
-.menubar ul li ul li a {
+.menu ul li ul li a {
 	text-align: left;
-	background: #414141; /* background of menu items (default state)*/
+	background: #555; /* background of menu items (default state)*/
 }
 
-* html .menubar ul li a {
+* html .menu ul li a {
 	/*IE6 hack to get sub menu links to behave correctly*/
 	display: inline-block;
 }
 
-.menubar ul li a:link, .menubar ul li a:visited {
+/* this is the color of the non-hovered text in the menubar */
+.menu ul li a:link, .menu ul li a:visited {
 	color: #fff;
 }
 
-.menubar ul li ul li a:link, .menubar ul li ul li a:visited {
+.menu ul li ul li a:link, .menu ul li ul li a:visited {
 	color: #fff;
+	font-size: 12px;
 }
 
-.menubar ul li a.selected {
+.menu ul li a.selected {
 	/*CSS class that's dynamically added to the currently active menu items' LI A element*/
-	background: #000;
+	background: #888;
 	color: #fff;
 }
 
-.menubar ul li a:hover {
+.menu ul li a:hover {
 	color: #fff;
-	background: #132800; /*background of menu items during onmouseover (hover state)*/
+	background: #414141; /*background of menu items during onmouseover (hover state)*/
+}
+
+/* this is the color of the text in the menubar when its on that page */
+.menu .current_page_item a {
+	color: #fcff00 !important;
 }
 
 /*1st sub level menu*/
-.menubar ul li ul {
+.menu ul li ul {
 	position: absolute;
 	left: 0;
 	display: none; /*collapse all sub menus to begin with*/
@@ -382,30 +321,26 @@ div.menu li {
 }
 
 /*Sub level menu list items (undo style from Top level List Items)*/
-.menubar ul li ul li {
+.menu ul li ul li {
 	display: list-item;
 	float: none;
 }
 
 /*All subsequent sub menu levels vertical offset after 1st level sub menu */
-.menubar ul li ul li ul {
+.menu ul li ul li ul {
 	top: 0;
 }
 
 /* Sub level menu links style */
-.menubar ul li ul li a {
+.menu ul li ul li a {
 	font: normal 13px Verdana;
 	width: 160px; /*width of sub menus*/
 	padding: 5px;
 	margin: 0;
 }
 
-.menubar .current_page_item a {
-	color: #f00;
-}
-
 /* Holly Hack for IE \*/
-* html .menubar {
+* html .menu {
 	height: 1%;
 }
 /*Holly Hack for IE7 and below*/
@@ -413,119 +348,11 @@ div.menu li {
 
 /* ######### CSS classes applied to down and right arrow images  ######### */
 
-.downarrowclass {
+.arrowclass {
 	position: absolute;
-	top: 9px;
-	right: 7px;
-}
-
-.rightarrowclass {
-	position: absolute;
-	top: 6px;
-	right: 5px;
-}
-
-/* classic menubar */
-
-/* THE MENU */
-
-#menubar {
-	background: #000;
-	text-align: left;
-	list-style: none;
-}
-
-.ie #menubar {
-	zoom: 1; /* IE fix, allows for variable height menu  */
-}
-
-#menu {
-	text-transform: capitalize;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	float: left;
-	line-height: 25px;
-	font-size: 12px;
-}
-
-#menu a {
-	padding: 0px 10px 0 10px;
-	display: block;
-	color: #fff;
-	text-decoration: none;
-}
-
-#menu li .rss {
-	padding: 5px 0 5px 0;
-}
-
-#menu li {
-	float: left;
-	cursor: pointer;
-}
-
-#menu li:hover a, #menu li.sfhover a {
-	color: #fff; /* Main menu highlighted text color */
-}
-
-#menu li:hover, #menu li.sfhover {
-	background: #f00; /* Main menu highlighted background color */
-}
-
-.sfhover {
-	padding: 0;
-	margin: 0;
-}
-
-/* For submenu dropdowns - this order must be maintained */
-
-#menu ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	position: absolute;
-	left: -9999px;
-	width: 195px;
-	line-height: 1;
-}
-#menu li li {
-	width: 185px;
-	padding: 4px 5px;
-	color: #fff;
-}
-#menu li li a {
-	width: 194px;
-	padding: 0;
-	color: #fff;
-	border: none;
-}
-#menu li ul ul {
-	margin: -16px 0 0 190px;
-}
-#menu li ul li:hover a, #menu li ul li li:hover a, #menu li ul li li li:hover a, #menu li ul li li li:hover a {
-	color: #fff; /*Submenu highlighted text color */
-}
-#menu li:hover li a, #menu li li:hover li a, #menu li li li:hover li a, #menu li li li li:hover li a {
-	color: #fff; /*Submenu text color */
-	border: none;
-	background: none;
-}
-#menu li li:hover {
-	background: #f00; /*Submenu highlighted background color */
-}
-#menu li:hover ul ul, #menu li:hover ul ul ul, #menu li:hover ul ul ul ul, #menu li.sfhover ul ul, #menu li.sfhover ul ul ul, #menu li.sfhover ul ul ul ul {
-	left: -9999px;
-}
-#menu li:hover ul, #menu li li:hover ul, #menu li li li:hover ul, #menu li li li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul, #menu li li li.sfhover ul, #menu li li li li.sfhover ul {
-	left: auto;
-	background: #000; /* Submenu background color */
-	text-transform: none;
-}
-
-#menu .current_page_item a {
-	color: #fff;
-	background: #800;
+	top: 2;
+	margin-left: 2px;
+	font-size: 11px;
 }
 
 /* THE COMIC */

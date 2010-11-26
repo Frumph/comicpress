@@ -14,16 +14,17 @@ function comicpress_menubar() {
 		include(get_stylesheet_directory() . '/custom-menubar.php');
 	} else { ?>
 		<div id="menubar-wrapper">
-		<div class="menunav">
-		<?php if (comicpress_themeinfo('enable_search_in_menubar')) { ?>
-			<div class="menunav-search">
-			<?php get_search_form(); ?>
-			</div>
-		<?php } ?>
-		<?php if (comicpress_themeinfo('enable_rss_in_menubar')) { ?>
-			<a href="<?php bloginfo('rss_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
-		<?php } ?>
-		<?php if (comicpress_themeinfo('enable_navigation_in_menubar')) { ?>
+			<?php do_action('comicpress-menubar-before'); ?>
+			<div class="menunav">
+				<?php if (comicpress_themeinfo('enable_search_in_menubar')) { ?>
+				<div class="menunav-search">
+					<?php get_search_form(); ?>
+				</div>
+				<?php } ?>
+				<?php if (comicpress_themeinfo('enable_rss_in_menubar')) { ?>
+					<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
+				<?php } ?>
+			<?php if (comicpress_themeinfo('enable_navigation_in_menubar')) { ?>
 			<?php if (is_home() && !comicpress_themeinfo('disable_comic_frontpage')) {
 				$comicMenubar = new WP_Query(); $comicMenubar->query('showposts=1&cat='.comicpress_all_comic_categories_string());
 				while ($comicMenubar->have_posts()) : $comicMenubar->the_post();
@@ -47,7 +48,8 @@ function comicpress_menubar() {
 			<?php } ?>
 		<?php } ?>
 			</div>
-			<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menubar', 'theme_location' => 'menubar' ) ); ?>
+			<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu', 'theme_location' => 'menubar' ) ); ?>
+			<?php do_action('comicpress-menubar-after'); ?>
 			<div class="clear"></div>
 		</div>
 	<?php } 

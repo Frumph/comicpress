@@ -1,7 +1,7 @@
 <?php get_template_part('layout', 'foot'); ?>
 <div id="footer">
 <?php
-if (is_active_sidebar('footer')) get_sidebar('footer');
+if (is_active_sidebar('the-footer')) get_sidebar('footer');
 
 if (!comicpress_themeinfo('disable_footer_text')) { 
 	echo comicpress_footer_text();

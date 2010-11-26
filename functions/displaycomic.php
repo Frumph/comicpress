@@ -215,8 +215,6 @@ function comicpress_display_comic() {
 	return $output;
 }
 
-
-
 if (!function_exists('comicpress_comic_clicks_next')) {
 	function comicpress_comic_clicks_next($output) {
 		global $post, $wp_query;

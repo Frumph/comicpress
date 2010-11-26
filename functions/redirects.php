@@ -20,6 +20,7 @@ function comicpress_random_comic() {
 	if ($randomComicQuery->have_posts()) {
 		$randomComicQuery->the_post();
 		$random_comic_id = get_the_ID();
+		define('DONOTCACHEPAGE', true);
 		wp_redirect( get_permalink( $random_comic_id ) );
 	}
 	exit;
@@ -34,6 +35,7 @@ function comicpress_random_post() {
 	while ($randomComicQuery->have_posts()) : $randomComicQuery->the_post();
 		$random_comic_id = get_the_ID();
 	endwhile;
+	define('DONOTCACHEPAGE', true);
 	wp_redirect( get_permalink( $random_comic_id ) );
 	exit;
 }

@@ -113,7 +113,7 @@ if ( function_exists('register_sidebar') ) {
 				__('Over Blog', 'comicpress'),
 				__('Blog', 'comicpress'),
 				__('Under Blog', 'comicpress'),
-				__('Footer', 'comicpress')
+				__('The Footer', 'comicpress')
 				) as $sidebartitle) {
 		register_sidebar(array(
 					'name'=> $sidebartitle,
@@ -127,13 +127,10 @@ if ( function_exists('register_sidebar') ) {
 	}
 }
 
-// This theme uses wp_nav_menu() in 2 locations. (if wp3.0)
-if (function_exists('register_nav_menus')) {
-	register_nav_menus( array(
-				'menubar' => __( 'Menubar', 'comicpress' )
-//				'footer' => __( 'Footer', 'comicpress' )
-				) );
-}
+
+register_nav_menus(array(
+	'menubar' => __( 'Menubar', 'comicpress' )
+));
 
 
 
@@ -253,7 +250,7 @@ if (!function_exists('comicpress_footer_text')) {
 		$output .= __('Powered by','comicpress') . " <a href=\"http://wordpress.org/\">WordPress</a> " . __('with','comicpress'). " <a href=\"http://comicpress.org/\">ComicPress</a>\r\n";
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span>";
-			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss_url') ."\">RSS</a>\r\n";
+			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
 		$output .= "</span>\r\n";
 		if (comicpress_themeinfo('enable_scroll_to_top')) { 
 			$output .= "<span class=\"footer-uptotop\">";
@@ -475,7 +472,8 @@ function comicpress_load_options() {
 			'enable_comment_javascript' => true,
 			'disable_showing_members_category' => true,
 			'enable_multicomic_jquery' => false,
-			'enable_equal_height_sidebars' => false
+			'enable_equal_height_sidebars' => false,
+			'prefab_design' => 'none'
 
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
@@ -518,7 +516,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		if ($comicpress_themeinfo['enable-storyline-support']) {
 			// This is now sep. to make sure that it only loads when it needs to
 			$comicpress_storyline = array(
-						'category_tree' => comicpress_create_comic_category_tree(),
+						'category_tree' => comicpress_create_category_tree(),
 						'storyline-category-order' => get_option('comicpress-storyline-category-order')
 			);
 			$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_storyline);
