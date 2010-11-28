@@ -123,28 +123,30 @@ function comicpress_display_comic_thumbnail($type = 'mini', $override_post = nul
 	}
 	
 	$output = '';
+	$alttext = comicpress_the_hovertext($post_to_use);
 	if (is_array($thumbnail)) {
 		if ($multi) {
 			foreach ($thumbnail as $thumb) {
 				if ($setwidth) {
-					$output .= '<img src="'.$thumb.'" alt="'.get_the_title($post_to_use).'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+					$output .= '<img src="'.$thumb.'" alt="'.$alttext.'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 				} else {
-					$output .= '<img src="'.$thumb.'" alt="'.get_the_title($post_to_use).'" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+					$output .= '<img src="'.$thumb.'" alt="'.$alttext.'" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 				}
 			}
 		} else {
 			$thumb = $thumbnail[0];
+
 			if ($setwidth) {
-				$output .= '<img src="'.$thumb.'" alt="'.get_the_title($post_to_use).'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+				$output .= '<img src="'.$thumb.'" alt="'.$alttext.'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 			} else {
-				$output .= '<img src="'.$thumb.'" alt="'.get_the_title($post_to_use).'" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+				$output .= '<img src="'.$thumb.'" alt="'.$alttext.'" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 			}			
 		}
 	} else {
 		if ($setwidth) {
-			$output = '<img src="'.$thumbnail.'" alt="'.get_the_title($post_to_use).'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+			$output = '<img src="'.$thumbnail.'" alt="'.$alttext.'" style="max-width:'.$setwidth.'px" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 		} else {
-			$output = '<img src="'.$thumbnail.'" alt="'.get_the_title($post_to_use).'" class="comicthumbnail" title="'.get_the_title($post_to_use).'" />'."\r\n";
+			$output = '<img src="'.$thumbnail.'" alt="'.$alttext.'" class="comicthumbnail" title="'.$alttext.'" />'."\r\n";
 		}
 	}
 //	if ($count > 1) $output = $count.' comics attached.<br />'.$output;
@@ -155,11 +157,7 @@ function comicpress_display_comic_thumbnail($type = 'mini', $override_post = nul
 // TODO: Add the hovertext - rascal code and click to next INSIDE this.
 function comicpress_display_comic_image($post, $comic) {
 	$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);
-	if (comicpress_themeinfo('rascal_says')) {
-		$alt_text = get_the_title($post);
-	} else {
-		$alt_text = comicpress_the_hovertext($post);
-	}
+	$alt_text = comicpress_the_hovertext($post);
 	$output = '<img src="'.$file_url.'" alt="'.$alt_text.'" title="'.$alt_text.'" />';
 	return apply_filters('comicpress_display_comic_image',$output);
 }

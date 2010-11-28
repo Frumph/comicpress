@@ -1,4 +1,12 @@
-﻿2.9.2.24
+﻿2.9.2.25
+Styled the #s-search and #searchform button and the forms.
+changed the padding and line-height in the #menubar-wrapper .menu css
+added .post-time / .posted-at new function comicpress_display_post_time() which displays the time the post was made.
+alt-text/hovertext change in the displaypost.php file, it now outputs the hovertext/alt-text on thumbnails and rss feeds 
+and shows the alt-text whether Rascal is active or not
+removed extra id="" in the textarea for the comment form, #comment-textarea no longer exists, its just #comment now
+
+2.9.2.24
 Removed the tabindex from the comments.php field for textarea
 adding comic-id-# ($post->id) as a wrap with #comic-wrap so that it can be targeted for the current comic post
 added check to see if on the comic_next for hovering over to see if its empty or not, if it is do a # instead of empty ""
@@ -10,15 +18,18 @@ implemented easel's menubar code which uses less CSS then the new comicpress's /
 fixed classic menubar's error with the comicpress_get_all_comic_categories_as_cat_string() when its supposed to be: comicpress_all_comic_categories_string()
 You can now assign comics to individual posts, which means..  yes.. multiple comics per day with multiple posts.   A little bit extra work than just uploading but works great.
 Still need to make comicpress managers bulk editor recognize which comic is assigned to it and think about making an assign comic box for the post editor.
-Added new widget "Donation" widget which lets you set a 'target' donation amount and then set how much in donations you currently have and it displays a nice little donation image percentile of how far its got to go to get the target mark
+* Added new widget "Donation" widget which lets you set a 'target' donation amount and then set how much in donations 
+* Added new widget "Incentive" which displays a portion of a thumbnail based on how much has been donated, when 100% links to the donation image.
+you currently have and it displays a nice little donation image percentile of how far its got to go to get the target mark
 Fixed Notice that appears on 404 and search pages when no results found.
+added info about child themes on the layout options page and links to download them
 
 
 2.9.2.23
 Fixed footer - the-footer problem with widgets in the footer area
 made the is_cp_theme_layout into a function_exists so that it can be rehandled in the child-functions.php
 
-2.9.2.22
+2.9.2.22 - Released to WordPress.ORG
 Added ?latestcomic=# where # = category #
 So you can do ?latestcomic and it will redirect to the latest comic of all categories 
 or latestcomic = 3 will redirect to the latestcomic of category ID #3

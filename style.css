@@ -6,7 +6,7 @@ Description: Publish a comic with WordPress. <a href="http://comicpress.org">Vis
 Author: Philip M. Hofer, Tyler Martin
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
-Version: 2.9.2.24
+Version: 2.9.2.25
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 .
@@ -180,6 +180,7 @@ h4, h4 a {
 #header .description {
 	padding: 0 0 10px 0;
 	font-size: 14px;
+	margin-left: 40px;
 }
 
 /* THE MENU */
@@ -208,12 +209,16 @@ h4, h4 a {
 
 .menunav-search {
 	float: left;
-	line-height: 26px;
-	height: 20px;
+	padding: 2px;
 }
 
+.ie .menunav-search {
+	padding-top: 3px;
+}
+
+
 .menunav-rss {
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 26px;
 	padding: 0 5px;
 	float: left;
@@ -223,8 +228,8 @@ h4, h4 a {
 }
 
 .menunav-rss:hover {
-	background: #414141;
-	color: #fff;
+	background: #ff9701;
+	color: #000;
 }
 
 .menunav-prev, .menunav-next {
@@ -233,22 +238,23 @@ h4, h4 a {
 }
 
 .menunav-prev a, .menunav-next a {
-	width: 25px;
-	line-height: 23px;
 	font-size: 24px;
-	padding-bottom: 3px;
-	font-weight: bold;
+	line-height: 25px;
+	padding: 0 5px 1px 5px;
+	float: left;
 	display: inline-block;
 	overflow: hidden;
 	color: #fff;
 }
 
 .menunav-prev a:hover {
-	background: #414141;
+	color: #fcff00;
+	background: #f00;
 }
 
 .menunav-next a:hover {
-	background: #414141;
+	color: #fcff00;
+	background: #f00;
 }
 
 .menu {
@@ -291,6 +297,7 @@ h4, h4 a {
 	color: #fff;
 }
 
+/* color of the sub level non-hovered text */
 .menu ul li ul li a:link, .menu ul li ul li a:visited {
 	color: #fff;
 	font-size: 12px;
@@ -303,13 +310,8 @@ h4, h4 a {
 }
 
 .menu ul li a:hover {
-	color: #fff;
+	color: #fcff00;
 	background: #414141; /*background of menu items during onmouseover (hover state)*/
-}
-
-/* this is the color of the text in the menubar when its on that page */
-.menu .current_page_item a {
-	color: #fcff00 !important;
 }
 
 /*1st sub level menu*/
@@ -337,6 +339,16 @@ h4, h4 a {
 	width: 160px; /*width of sub menus*/
 	padding: 5px;
 	margin: 0;
+}
+
+/* sub level menu hover color */
+.menu ul li ul li a:hover {
+	color: #fcff00;
+}
+
+/* this is the color of the text in the menubar when its on that page */
+.menu .current_page_item a {
+	color: #fcff00 !important;
 }
 
 /* Holly Hack for IE \*/
@@ -1007,13 +1019,70 @@ table#wp-calendar td {
 /* SEARCH */
 
 #s-search, #s-transcript {
-	height: 15px;
-	width: 140px;
+	height: 16px;
+	width: 120px;
+}
+
+.ie #s-search {
+	height: 14px;
 }
 
 .searchresults {
 	padding: 0 0 30px 10px;
 	font-style: italic;
+}
+
+/* comment form */
+
+#comment, #author, #email, #url, #s-search {
+	padding: 2px;
+	color: #000;
+	font-family: 'Verdana' , sans-serif;
+	font-size: 12px;
+	background: #eee;
+	border: 1px solid #888;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#comment:focus, #comment:hover, #author:hover, #email:hover, #url:hover, #author:focus, #email:focus, #url:focus {
+	background: #fff;
+}
+
+#submit, #searchform button {
+	background: #111;
+	color: #000;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background:-moz-linear-gradient(100% 100% 90deg,#aaa, #ccc, #ddd 100%);
+    /* IE8 uses -ms-filter for whatever reason... */
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(
+        gradientType=1, startColor=0, endColoStr=#FFFFFF
+	);
+        background-image: -webkit-gradient(
+          linear, left top, left bottom, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(170, 170, 170, 3.0))
+        );
+}
+
+#submit {
+	padding: 2px 5px;
+	font-weight: 700;
+}
+
+#submit:hover, #searchform button:hover {
+	color: #f00;
+}
+
+.ie #searchform button, .ie #submit {
+	height: 21px;
+	line-height: 9px;
+	background: #ccc;
+	color: #000;
 }
 
 /* GALLERY */
@@ -1562,3 +1631,19 @@ textarea {
 	margin: 2px 0px 2px 5px;
 }
 
+.donatebox-wrap, .donatebox, .donateunderbox {
+	height: 100px;
+	width: 100px;
+	float: right;
+	overflow: hidden;
+}
+
+.donateunderbox {
+	background: url('images/donatebox-amount.png') top center no-repeat;
+}
+
+.donate-message {
+	padding: 2px;
+	font-size: 10px;
+	color: #333;
+}

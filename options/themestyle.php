@@ -14,7 +14,7 @@
 
 		<div class="comicpress-options">
 
-			<table class="widefat" cellspacing="0">
+			<table class="widefat nolowermargin" cellspacing="0">
 				<thead>
 					<tr>
 						<th colspan="4"><?php _e('Layout','comicpress'); ?></th>
@@ -64,40 +64,6 @@
 					</td>
 				</tr>
 			</table>
-			<table class="widefat" cellspacing="0">
-				<thead>
-					<tr>
-						<th colspan="4"><?php _e('Child Themes','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr>
-					<td colspan="5">
-					These child themes can be downloaded from either <a href="http://comicpress.org/download/" target="_blank">ComicPress.org</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>
-					</td>
-				</tr>
-				<tr>
-				<td>
-				List Child Themes Available Here
-				</td>
-				</tr>
-			</table>
-			
-			<table class="widefat" cellspacing="0">
-				<thead>
-					<tr>
-						<th colspan="4"><?php _e('Color Scheme','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr>
-					<td colspan="5">
-					Coming Soon.
-					</td>
-				</tr>
-			</table>			
-			<div class="clear"></div>
-
-		</div>
-
 		<div class="comicpress-options-save">
 			<div class="comicpress-major-publishing-actions">
 				<div class="comicpress-publishing-action">
@@ -107,7 +73,39 @@
 				<div class="clear"></div>
 			</div>
 		</div>
+		
+			<table class="widefat" cellspacing="0">
+				<thead>
+					<tr>
+						<th colspan="4"><?php _e('Child Themes','comicpress'); ?></th>
+					</tr>
+				</thead>
+				<tr>
+					<td colspan="5">
+					These child themes can be downloaded from either <a href="http://comicpress.org/download/" target="_blank">ComicPress.org</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>, child themes are like regular themes but they only contain the "look" of your site.  It is best if you use a child theme so that when you upgrade ComicPress you do not lose any of your site's design.  Child themes are also 'base' designs, where you can modify them to look as you wish; they're created to give you a place to start with your own site design.
+					You install child themes just like the regular ComicPress theme, into the wp-content/themes/ directory, then activate it and it will use the design from the chlid theme and the code from the main ComicPress theme.   Most people use the child-theme as a central location for their site design images since it does not disappear or change if you upgrade the main ComicPress theme.
+					</td>
+				</tr>
+				<tr>
+				<td>
+				<table>
+				<tr>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-silver.jpg" alt="ComicPress Silver" /></td>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-boxed.jpg" alt="ComicPress Silver" /></td>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-foreboding.jpg" alt="ComicPress Silver" /></td>
+				</tr>
+				<tr>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-red.jpg" alt="ComicPress Silver" /></td>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-sandy.jpg" alt="ComicPress Silver" /></td>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-greymatter.jpg" alt="ComicPress Silver" /></td>
+				</tr>
+				</table>
+				</td>
+				</tr>
+			</table>		
+			<div class="clear"></div>
 
+		</div>
 	</form>
 
 	<div class="clear"></div>

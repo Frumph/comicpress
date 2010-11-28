@@ -236,6 +236,7 @@
 						<th colspan="3"><?php _e('Debug','comicpress'); ?></th>
 					</tr>
 				</thead>
+<!--
 				<tr class="alternate">
 					<th scope="row"><label for="enable_comicpress_debug"><?php _e('Enable the dashboard ComicPress debug?','comicpress'); ?></label></th>
 					<td>
@@ -254,6 +255,7 @@
 						<?php _e('Enable this if you would like to check ALL of your posts to see if there are any category problems and inconsistancies.', 'comicpress'); ?>
 					</td>
 				</tr>
+// -->
 				<tr class="alternate">
 					<th scope="row"><label for="enable_page_load_info"><?php _e('Enable the page load info in the footer?','comicpress'); ?></label></th>
 					<td>

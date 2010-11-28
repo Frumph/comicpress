@@ -18,10 +18,7 @@
 			<strong>Upload Path Base Dir</strong>:(basedir) <?php echo comicpress_themeinfo('basedir'); ?><br />
 			<strong>Upload Base URL</strong>:(baseurl) <?php echo comicpress_themeinfo('baseurl'); ?><br />
 			<br />
-			<strong>Category Tree 1:</strong><br />
-			<?php var_dump(comicpress_themeinfo('diff_category_tree')); ?><br />
-			<br />
-			<strong>Category Tree 2:</strong><br />
+			<strong>Category Tree:</strong><br />
 			<?php var_dump(comicpress_themeinfo('category_tree')); ?><br />
 			<br />
 			<?php var_dump(comicpress_themeinfo()); ?>

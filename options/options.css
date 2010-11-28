@@ -153,6 +153,10 @@ div.show img {
 	border-bottom: none;
 }
 
+.comicpress-options table.nolowermargin {
+	margin-bottom: 0;
+}
+
 .comicpress-options table.widefat th {
 	width: 200px;
 }
