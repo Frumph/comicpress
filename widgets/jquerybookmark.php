@@ -80,7 +80,7 @@ class comicpress_jquery_bookmark_widget extends WP_Widget {
 
 		$mode = !isset($this->text_fields[$instance['mode']]) ? array_shift(array_keys($this->text_fields)) : $instance['mode'];
 
-		$link = is_home() ? get_bloginfo('url') : get_permalink($post);
+		$link = is_home() ? home_url() : get_permalink($post);
 
 		$id = 'comic-bookmark-' . md5(rand());
 		$elements = array();

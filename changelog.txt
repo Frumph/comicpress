@@ -1,4 +1,8 @@
-﻿2.9.2.25
+﻿2.9.2.26
+changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()
+changed in the membersonly.php get_usermeta to get_user_meta - same parameters
+
+2.9.2.25
 Styled the #s-search and #searchform button and the forms.
 changed the padding and line-height in the #menubar-wrapper .menu css
 added .post-time / .posted-at new function comicpress_display_post_time() which displays the time the post was made.
@@ -6,7 +10,6 @@ alt-text/hovertext change in the displaypost.php file, it now outputs the hovert
 and shows the alt-text whether Rascal is active or not
 removed extra id="" in the textarea for the comment form, #comment-textarea no longer exists, its just #comment now
 set $outputscript = ''; in the displaycomic.php so it doesn't give notice if it doesn't exist, which it doesn't anyways but oh well; future endeavors.
-
 
 2.9.2.24
 Removed the tabindex from the comments.php field for textarea

@@ -1,7 +1,5 @@
 <?php 
 
-add_theme_support( 'custom-header' );
-
 // Custom Image Header Defaults
 define('HEADER_TEXTCOLOR', '');
 // define('HEADER_IMAGE', ''); // %s is theme dir
@@ -9,7 +7,7 @@ define('HEADER_IMAGE_WIDTH', comicpress_themeinfo('custom_image_header_width'));
 define('HEADER_IMAGE_HEIGHT', comicpress_themeinfo('custom_image_header_height'));
 define( 'NO_HEADER_TEXT', true );
 
-function theme_admin_header_style() { ?>
+function comicpress_admin_header_style() { ?>
 <style type="text/css">
 #headimg {
 	width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
@@ -26,7 +24,7 @@ function theme_admin_header_style() { ?>
 	<?php
 }
 	
-function theme_header_style() { 
+function comicpress_header_style() { 
 	if (get_header_image()) { ?>
 <style type="text/css">
 	#header {
@@ -49,6 +47,6 @@ function theme_header_style() {
 	<?php }
 }
 
-add_custom_image_header('theme_header_style', 'theme_admin_header_style');
+add_custom_image_header('comicpress_header_style', 'comicpress_admin_header_style');
 
 ?>

@@ -83,12 +83,11 @@ function comicpress_profile_members_only() {
 	</table>
 <?php }
 
-
 function comicpress_profile_members_only_save() { 
 	$id = (int)$_POST['user_id'];
 	$is_member = (int)$_POST['comicpress-is-member'];
 	$comicpress_is_member = (bool)( $is_member == 1 ? 1 : 0 );
-	update_usermeta($id, 'comicpress-is-member', $comicpress_is_member);
+	update_user_meta($id, 'comicpress-is-member', $comicpress_is_member);
 }
 
 /**

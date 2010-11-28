@@ -44,7 +44,7 @@ if (is_active_sidebar('above-header')) get_sidebar('above');
 
 <div id="header">
 	<?php do_action('comicpress-header'); ?>
-	<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ?></a></h1>
+	<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
 	<div class="description"><?php bloginfo('description') ?></div>
 	<?php if (is_active_sidebar('header')) get_sidebar('header'); ?>
 	<div class="clear"></div>

@@ -17,12 +17,12 @@ global $post, $wp_query; ?>
 				/* Bookmark Config Settings */
 
 				var cl = 31;
-				var imgTag = '<?php bloginfo('template_directory'); ?>/images/1.gif';		//add tag image.
-				var imgClearOff = '<?php bloginfo('template_directory'); ?>/images/3a.gif';	//no comic tagged, clear not possible
-				var imgGotoOff = '<?php bloginfo('template_directory'); ?>/images/2a.gif';	//no comic tagged, goto not possible
-				var imgClearOn = '<?php bloginfo('template_directory'); ?>/images/3.gif';	//clear a tag, shows when comic previously tagged
-				var imgGotoOn = '<?php bloginfo('template_directory'); ?>/images/2.gif';	//shows when a comic is tagged  
-				var imgInfo = '<?php bloginfo('template_directory'); ?>/images/4.gif';  	//img that displays the help
+				var imgTag = '<?php echo get_template_directory_uri(); ?>/images/1.gif';		//add tag image.
+				var imgClearOff = '<?php echo get_template_directory_uri(); ?>/images/3a.gif';	//no comic tagged, clear not possible
+				var imgGotoOff = '<?php echo get_template_directory_uri(); ?>/images/2a.gif';	//no comic tagged, goto not possible
+				var imgClearOn = '<?php echo get_template_directory_uri(); ?>/images/3.gif';	//clear a tag, shows when comic previously tagged
+				var imgGotoOn = '<?php echo get_template_directory_uri(); ?>/images/2.gif';	//shows when a comic is tagged  
+				var imgInfo = '<?php echo get_template_directory_uri(); ?>/images/4.gif';  	//img that displays the help
 				var comicDir = '/'; 		//alter this if you run multiple comics in different directories on your site.
 
 				/* Now write out the applicable links */
@@ -52,7 +52,7 @@ global $post, $wp_query; ?>
 							document.getElementById('rmc').src = imgClearOn;
 						}
 						<?php if (is_home()) { ?>
-							createCookie("bm", "<?php bloginfo('wpurl'); ?>", cl);
+							createCookie("bm", "<?php echo site_url(); ?>", cl);
 						<?php } else { ?>
 							createCookie("bm", "<?php the_permalink(); ?>", cl);
 						<?php } ?>

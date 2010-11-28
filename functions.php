@@ -18,7 +18,6 @@ add_theme_support( 'automatic-feed-links' );
 
 // This theme allows users to set a custom background
 add_custom_background();
-add_theme_support( 'custom-background' );
 
 if (!isset($content_width)) $content_width = 520;
 
@@ -495,7 +494,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.25',
+				'version' => '2.9.2.26',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,
