@@ -43,7 +43,9 @@
 					<td>
 						<input id="enable_multicomic_jquery" name="enable_multicomic_jquery" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_multicomic_jquery')); ?> />
 					</td>
-					<td></td>
+					<td>
+						<?php _e('This is if you have uploaded multiple comics on the same date, it puts button navigation under the comic so you can navigate the comics that are on the same date.','comicpress'); ?>
+					</td>
 				</tr>				
 			</table>
 			

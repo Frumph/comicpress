@@ -387,6 +387,15 @@ h4, h4 a {
 	text-align: center;
 }
 
+/* the style of this is further down */
+#comic button {
+	float: left;
+}
+
+.ie #comic button {
+	color: #fff;
+}
+
 /* THE FOOTER */
 
 #footer {
@@ -1051,7 +1060,7 @@ table#wp-calendar td {
 	background: #fff;
 }
 
-#submit, #searchform button {
+#submit, #searchform button, #comic button {
 	background: #111;
 	color: #000;
 	-moz-border-radius: 10px;
@@ -1624,26 +1633,13 @@ textarea {
 	overflow: auto;
 }
 
-#comic button {
-	background: #efefef;
-	color: #000;
-	float: left;
-	margin: 2px 0px 2px 5px;
-}
-
-.donatebox-wrap, .donatebox, .donateunderbox {
-	height: 100px;
-	width: 100px;
+.tipjar-wrap, .tipjarbox, .tipjarunderbox {
+	height: 200px;
+	width: 200px;
 	float: right;
 	overflow: hidden;
 }
 
-.donateunderbox {
-	background: url('images/donatebox-amount.png') top center no-repeat;
-}
-
-.donate-message {
-	padding: 2px;
-	font-size: 10px;
-	color: #333;
+.tipjarunderbox {
+	background: url('images/gauge.png') top center no-repeat;
 }

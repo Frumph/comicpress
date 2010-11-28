@@ -171,6 +171,7 @@ function comicpress_display_comic() {
 	if (is_array($comics)) {
 		$count = 1;
 		$outputlist = '';
+		$outputscript = '';
 		foreach ($comics as $comic) {
 			$comicsplit = explode(".", $comic); 
 			switch (strtolower($comicsplit[1])) {
