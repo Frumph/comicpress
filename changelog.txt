@@ -1,4 +1,8 @@
-﻿2.9.2.26
+﻿2.9.2.27
+Stylized the control panel and dropdown archive boxes
+fixed notice in control panel widget
+
+2.9.2.26
 changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()
 changed in the membersonly.php update_usermeta to update_user_meta - same parameters
 

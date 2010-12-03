@@ -16,7 +16,9 @@ class comicpress_control_panel_widget extends WP_Widget {
 		}
 	}
 	
-	function comicpress_show_control_panel() { ?>
+	function comicpress_show_control_panel() { 
+		global $user_login;
+	?>
 		<?php if (!is_user_logged_in()) { ?>
 			<form action="<?php echo home_url(); ?>/wp-login.php" method="post">
 			<?php _e('UserName:','comicpress'); ?><br />
