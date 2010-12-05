@@ -6,7 +6,7 @@ Description: Publish a comic with WordPress. <a href="http://comicpress.org">Vis
 Author: Philip M. Hofer, Tyler Martin
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
-Version: 2.9.2.26
+Version: 2.9.2.27
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 .
@@ -23,10 +23,6 @@ body {
 	font-family: 'Arial' , sans-serif;
 	font-size: 14px;
 	color: #000;
-}
-
-body.admin-bar {
-	margin-top: 28px;
 }
 
 a {
@@ -178,7 +174,6 @@ h4, h4 a {
 
 #header {
 	text-align: left;
-	height: 100px;
 }
 
 #header .description {
@@ -251,12 +246,7 @@ h4, h4 a {
 	color: #fff;
 }
 
-.menunav-prev a:hover {
-	color: #fcff00;
-	background: #f00;
-}
-
-.menunav-next a:hover {
+.menunav-prev a:hover, .menunav-next a:hover {
 	color: #fcff00;
 	background: #f00;
 }
@@ -379,6 +369,7 @@ h4, h4 a {
 
 #comic {
 	text-align: center;
+	max-width: 100%;
 }
 
 #comic ul {
@@ -394,10 +385,6 @@ h4, h4 a {
 /* the style of this is further down */
 #comic button {
 	float: left;
-}
-
-.ie #comic button {
-	color: #fff;
 }
 
 /* THE FOOTER */
@@ -516,7 +503,6 @@ h4, h4 a {
 
 /* add 10px to smaller width layouts */
 .layout-standard .narrowcolumn, .layout-v .narrowcolumn {
-	width: 550px;
 }
 
 .widecolumn {
@@ -1067,7 +1053,7 @@ table#wp-calendar td {
 }
 
 #submit, #searchform button, #comic button, .comicpress_control_panel_widget button {
-	background: #555;
+	background: #ccc;
 	color: #000;
 	-moz-border-radius: 10px;
 	-khtml-border-radius: 10px;

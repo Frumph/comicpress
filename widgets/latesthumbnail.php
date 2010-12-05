@@ -36,7 +36,7 @@ class comicpress_latest_thumbnail_widget extends WP_Widget {
 				echo $before_widget;
 				$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 				if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-				echo "<a href=\"".get_permalink($post->ID)."\" title=\"".$post->post_title."\">".comicpress_display_comic_thumbnail('mini',$post, $true, 0, false)."</a>\r\n";
+				echo "<a href=\"".get_permalink($post->ID)."\" title=\"".$post->post_title."\">".comicpress_display_comic_thumbnail('mini',$post, true, 0, false)."</a>\r\n";
 				echo $after_widget;
 			} else {
 				if (function_exists('has_post_thumbnail')) {

@@ -1,6 +1,12 @@
 ﻿2.9.2.27
 Stylized the control panel and dropdown archive boxes
 fixed notice in control panel widget
+sharethis_title, subscribe_title were missing from defaults being set in the comic-navigation.php, set em
+accidently left in the #height - 100px; .. removed it so its now auto again
+fixed a variable being passed in the latesthumbnail widget that was sending $true and not true ;/ its not a php var heh
+adding <div class="clear"></div> to the tipjar.php widget so it clears the internal floats properly
+fixed the themestyle.php to handle the vertical double right sidebar properly
+removed .ie #comic button {} from the css, it was hardsetting it to white text
 
 2.9.2.26
 changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()

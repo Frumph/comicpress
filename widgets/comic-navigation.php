@@ -289,7 +289,9 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 			'comictitle' => false,
 			'sharethis' => 'Share',
 			'subscribe' => 'Subscribe',
-			'subscribe_path' => ''
+			'subscribe_path' => '',
+			'sharethis_title' => 'Share',
+			'subscribe_title' => 'SubScribe'
 		 ) );
 		
 		?>

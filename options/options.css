@@ -78,18 +78,13 @@ div.show img {
 }
 
 .cpadmin-footer {
-	padding: 10px;
-	margin: 10px 0 0 0;
+	margin: 0;
 	color: #777;
 	text-align: center;
 	background: #fff;
-	border: 1px solid #dfdfdf;
 	font-family: 'Arial', sans-serif;
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-khtml-border-radius: 6px;
 }
+
 .cpadmin-donate {
 	float: right;
 }

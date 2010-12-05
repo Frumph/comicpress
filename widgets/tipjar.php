@@ -48,6 +48,7 @@ class comicpress_tipjar_widget extends WP_Widget {
 				<div class="tipjarbox" style="background: url('<?php echo $tipjarimage; ?>') top center no-repeat;"></div>
 			</div>
 		</div>
+		<div class="clear"></div>
 		<?php
 		echo $after_widget;
 	}

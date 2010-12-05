@@ -36,14 +36,14 @@ if (!is_paged()) {
 	}
 }
 
-if (is_cp_theme_layout('3c,standard,3c2r')) {  ?>
+if (is_cp_theme_layout('3c,standard,3c2r,v3c,rgn')) {  ?>
 <div id="subcontent-wrapper-head"></div>
 	<div id="subcontent-wrapper">
 <?php }
 
 if (is_cp_theme_layout('3c,rgn') && !comicpress_is_signup()) get_sidebar('left');
 
-if (is_cp_theme_layout('v3cr')) { ?>
+if (is_cp_theme_layout('v3cr,gn')) { ?>
 <div id="subcontent-wrapper-head"></div>
 	<div id="subcontent-wrapper">
 <?php }
@@ -56,4 +56,9 @@ if (!is_cp_theme_layout('v3c,v')) {
 	<?php }
 	if (is_active_sidebar('over-blog')) get_sidebar('overblog');
 } 
+
+if (is_cp_theme_layout('v')) { ?>
+<div id="subcontent-wrapper-head"></div>
+	<div id="subcontent-wrapper">
+<?php }
 ?>
