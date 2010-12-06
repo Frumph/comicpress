@@ -230,6 +230,22 @@
 						<?php _e('When this link is clicked on long pages it will scroll back to the top.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="copyright_name"><?php _e('&copy; Copyright Name','comicpress'); ?></label>
+						<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo comicpress_themeinfo('copyright_name'); ?>" /><br />
+					</th>
+					<td colspan="2">
+						<?php _e('Set the name to which this site is &copy; Copyright to, leave blank to have the site name.','comicpress'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="copyright_url"><?php _e('Copyright Holder URL','comicpress'); ?></label>
+						<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo comicpress_themeinfo('copyright_url'); ?>" /><br />
+					</th>
+					<td colspan="2">
+						<?php _e('Set the URL to the owner of the &copy; Copyright if different then this website, leave blank for sites link.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 
 			<table class="widefat">

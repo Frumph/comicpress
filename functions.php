@@ -57,6 +57,26 @@ foreach (glob(get_template_directory() . "/functions/*.php") as $funcfile) {
 	@require_once($funcfile);
 }
 
+function comicpress_config() {
+	global $comicpress_config;
+	if (empty($comicpress_config)) {
+		$comicpress_config = get_option('comicpress-config');
+		if (empty($comicpress_config)) {
+			
+			foreach (array(
+				'enable_equal_height_sidebars' => false,
+				'prefab_design' => 'none'
+
+			) as $field => $value) {
+				$comicpress_config[$field] = $value;
+			}
+
+			add_option('comicpress-config', $comicpress_config, '', true);
+		}
+	}
+	return $comicpress_config;
+}
+
 // Load all the widgets.
 foreach (glob(get_template_directory()  . '/widgets/*.php') as $widgefile) {
 	@require_once($widgefile);
@@ -240,25 +260,6 @@ if (!function_exists('storyline_category_list')) {
 		$listcats = wp_list_categories('echo=0&title_li=&include='.comicpress_all_comic_categories_string());
 		$listcats = str_replace("<ul class='children'>", "<ul class='children'> &raquo; ", $listcats);
 		echo $listcats;
-	}
-}
-
-if (!function_exists('comicpress_footer_text')) {
-	function comicpress_footer_text() {
-		$output = "<p>\r\n";
-		$output .= __('Powered by','comicpress') . " <a href=\"http://wordpress.org/\">WordPress</a> " . __('with','comicpress'). " <a href=\"http://comicpress.org/\">ComicPress</a>\r\n";
-		$output .= "<span class=\"footer-subscribe\">";
-			$output .= "<span class=\"footer-pipe\">|</span>";
-			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
-		$output .= "</span>\r\n";
-		if (comicpress_themeinfo('enable_scroll_to_top')) { 
-			$output .= "<span class=\"footer-uptotop\">";
-				$output .= "<span class=\"footer-pipe\">|</span>";
-				$output .= "<a href=\"#outside\" onclick=\"scrollup(); return false;\">".__('Back to Top &uarr;','comicpress')."</a>";
-			$output .="</span>\r\n";
-		}
-		$output .= "</p>\r\n";
-		return apply_filters('comicpress_footer_text',$output);
 	}
 }
 
@@ -472,7 +473,9 @@ function comicpress_load_options() {
 			'disable_showing_members_category' => true,
 			'enable_multicomic_jquery' => false,
 			'enable_equal_height_sidebars' => false,
-			'prefab_design' => 'none'
+			'prefab_design' => 'none',
+			'copyright_name' => '',
+			'copyright_url' => ''
 
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;

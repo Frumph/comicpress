@@ -80,7 +80,9 @@ function comicpress_admin_options() {
 			}
 
 			foreach (array(
-				'graphicnav_directory'
+				'graphicnav_directory',
+				'copyright_name',
+				'copyright_url'
 						) as $key) {
 							if (isset($_REQUEST[$key])) 
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);

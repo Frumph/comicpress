@@ -7,6 +7,10 @@ fixed a variable being passed in the latesthumbnail widget that was sending $tru
 adding <div class="clear"></div> to the tipjar.php widget so it clears the internal floats properly
 fixed the themestyle.php to handle the vertical double right sidebar properly
 removed .ie #comic button {} from the css, it was hardsetting it to white text
+added the easel footer_text functionality and a new option in comicpress options to set the copyright name w/ modifiable information including URL to copyright holder (w/defaults)
+subcontent-wrapper is now available on *all* layout styles
+font-size for .footer-text is now 12px; as default (the generated info at the bottom)
+latest thumbnail widget you can now choose to show the first in the category as well as a random comic from that category, it will not display the same comic as the current comic thats being viewed.
 
 2.9.2.26
 changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()

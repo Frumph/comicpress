@@ -2,7 +2,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="subcontent-wrapper-foot"></div>
-	</div>
 <?php } ?>
 </div>
 <?php if (is_cp_theme_layout('v3cr')) { ?>
