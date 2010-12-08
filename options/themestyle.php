@@ -15,7 +15,7 @@
 		<div class="comicpress-options">
 		
 	<div class="cpadmin-footer">
-		<div id="comicpress-version-title"><a href="http://comicpress.org/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
+		<div id="comicpress-version-title"><a href="http://comicpress.net/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small>, <?php _e('Originally created by','comicpress'); ?> <a href="http://mindfaucet.com/">Tyler Martin</a><br />
 		<?php _e('If you like the ComicPress theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>
@@ -30,7 +30,7 @@
 					</form>
 				</td>
 				<td style="width:200px;">
-					<a href="http://comicpress.org/"><img src="<?php echo get_template_directory_uri(); ?>/images/cal/default.png" /></a>
+					<a href="http://comicpress.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/cal/default.png" /></a>
 				</td>
 				<td style="width:200px;">
 					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
@@ -111,7 +111,7 @@
 				</thead>
 				<tr>
 					<td colspan="5">
-					These child themes can be downloaded from either <a href="http://comicpress.org/download/" target="_blank">ComicPress.org</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>, child themes are like regular themes but they only contain the "look" of your site.  It is best if you use a child theme so that when you upgrade ComicPress you do not lose any of your site's design.  Child themes are also 'base' designs, where you can modify them to look as you wish; they're created to give you a place to start with your own site design.
+					These child themes can be downloaded from either <a href="http://comicpress.net/download/" target="_blank">ComicPress.net</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>, child themes are like regular themes but they only contain the "look" of your site.  It is best if you use a child theme so that when you upgrade ComicPress you do not lose any of your site's design.  Child themes are also 'base' designs, where you can modify them to look as you wish; they're created to give you a place to start with your own site design.
 					You install child themes just like the regular ComicPress theme, into the wp-content/themes/ directory, then activate it and it will use the design from the chlid theme and the code from the main ComicPress theme.   Most people use the child-theme as a central location for their site design images since it does not disappear or change if you upgrade the main ComicPress theme.
 					</td>
 				</tr>

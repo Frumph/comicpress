@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Graphical Navigation
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: You can place graphical navigation buttons on your comic.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: comicpress archive dropdown
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: 
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Scheduled Posts
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a list of posts that are due to be scheduled.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

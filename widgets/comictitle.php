@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Comic Title Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a Title of the Comic that can be used in any area around the comic.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

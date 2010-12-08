@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: ComicPress Social
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Translates a user's URL line into a social widget, associating it to images.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

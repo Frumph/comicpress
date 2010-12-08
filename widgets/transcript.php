@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Transcript Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Show the stylized transcription in a widget area.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

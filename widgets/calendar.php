@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: ComicPress Calendar
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a calendar of this months posts.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

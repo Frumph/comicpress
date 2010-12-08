@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Comic Comments Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a comments link to put inside the comic area.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

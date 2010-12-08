@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Go Latest Comic
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Creates a link to the latest Comic
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

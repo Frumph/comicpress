@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Latest Thumbnail
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a thumbnail of the latest comic.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Comic Date
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display's the date of post of the comic.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

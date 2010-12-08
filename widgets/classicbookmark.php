@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: (classic) Bookmark
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Adds a bookmark set of icons to save the page your own.
 Author: Tyler Martin
 Author URI: http://mindfaucet.com/

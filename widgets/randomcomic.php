@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Random Comic
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a link to click on to go to a random comic.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

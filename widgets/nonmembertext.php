@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Non-Member text widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Displays whatever inside to non-members.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

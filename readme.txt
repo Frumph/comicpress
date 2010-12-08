@@ -1,6 +1,6 @@
 ﻿ComicPress 2.9*
 based on ComicPress by Tyler Martin, developed by Philip M. Hofer (Frumph)
-Contact Email: philip@frumph.net, tyler@mindfaucet.com
+Contact Email: philip@frumph.net
 
 ComicPress 2.9* is released under GNU General Public License, v3 (or newer)
 Information on the GNU General Public License can be found here: http://www.opensource.org/licenses/gpl-3.0.html

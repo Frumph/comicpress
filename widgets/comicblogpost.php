@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Comic Blog Post Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display's the comic's blog post.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

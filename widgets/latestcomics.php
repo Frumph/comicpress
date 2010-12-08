@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Latest Comics Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a list of links of the latest comics.
 Author: Philip M. Hofer (Frumph)
 Version: 1.02

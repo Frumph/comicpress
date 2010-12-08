@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Control Panel
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display an area for login and logout, forgot password and register.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/

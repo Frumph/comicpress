@@ -2252,12 +2252,12 @@ msgid "ComicPress"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://comicpress.org"
+msgid "http://comicpress.net"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Publish a comic with WordPress. <a href=\"http://comicpress.org\">Visit the "
+"Publish a comic with WordPress. <a href=\"http://comicpress.net\">Visit the "
 "ComicPress Website.</a> This is the ComicPress Core Framework.  Requires "
 "WordPress 3.0"
 msgstr ""

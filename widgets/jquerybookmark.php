@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: jQuery BookMark
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a bookmarking with jQuery controls
 Author: John Bintz
 Version: 1.03

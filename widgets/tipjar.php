@@ -1,7 +1,7 @@
 <?php
 /*
 Widget Name: Tip Jar Widget
-Widget URI: http://comicpress.org/
+Widget URI: http://comicpress.net/
 Description: Display a Tip Jar that has gauge to goal.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
