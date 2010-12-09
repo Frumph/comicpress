@@ -31,6 +31,14 @@ a {
 	text-decoration: none;
 }
 
+a:link {
+	color: #115294;
+}
+
+a:visited {
+	color: #0a2d51;
+}
+
 a:hover {
 	color: #f00;
 }

@@ -12,6 +12,8 @@ subcontent-wrapper is now available on *all* layout styles
 font-size for .footer-text is now 12px; as default (the generated info at the bottom)
 latest thumbnail widget you can now choose to show the first in the category as well as a random comic from that category, it will not display the same comic as the current comic thats being viewed.
 removing association to comicpress.org and now using comicpress.net
+changed base coloration of links from #f00 to color: #012876;  with an a:visited color that i'm still working out, so that if someone visited a link it will differ slightly in color.
+^ ie moved from red links to blue links to denote the change to comicpress.net
 
 2.9.2.26
 changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()
