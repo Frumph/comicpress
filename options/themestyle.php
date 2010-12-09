@@ -8,13 +8,10 @@
 
 <div id="comicpress-themestyle">
 
-	<form method="post" id="myForm-themestyle" enctype="multipart/form-data" action="?page=comicpress-options">
-
-	<?php wp_nonce_field('update-options') ?>
-
-		<div class="comicpress-options">
+	<div class="comicpress-options">
 		
 	<div class="cpadmin-footer">
+		<div class="comicpress-forum">Forums are now at <a href="http://forum.frumph.net/">http://forum.frumph.net/</a> for Technical Assistance</div>
 		<div id="comicpress-version-title"><a href="http://comicpress.net/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small>, <?php _e('Originally created by','comicpress'); ?> <a href="http://mindfaucet.com/">Tyler Martin</a><br />
@@ -22,12 +19,12 @@
 		<table style="margin:0 auto;">
 			<tr>
 				<td style="width:200px;">
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_s-xclick" />
-						<input type="hidden" name="hosted_button_id" value="46RNWXBE7467Q" />
-						<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-						<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-					</form>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick" />
+	<input type="hidden" name="hosted_button_id" value="46RNWXBE7467Q" />
+	<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+	<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
 				</td>
 				<td style="width:200px;">
 					<a href="http://comicpress.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/cal/default.png" /></a>
@@ -43,6 +40,10 @@
 		</table>
 	</div>
 
+	<form method="post" id="myForm-themestyle" enctype="multipart/form-data" action="?page=comicpress-options">
+
+	<?php wp_nonce_field('update-options') ?>
+	
 			<table class="widefat nolowermargin" cellspacing="0">
 				<thead>
 					<tr>
@@ -111,7 +112,7 @@
 				</thead>
 				<tr>
 					<td colspan="5">
-					These child themes can be downloaded from either <a href="http://comicpress.net/download/" target="_blank">ComicPress.net</a> or <a href="http://frumph.net/downloads/comicpress-child-themes/" target="_blank">Frumph.NET</a>, child themes are like regular themes but they only contain the "look" of your site.  It is best if you use a child theme so that when you upgrade ComicPress you do not lose any of your site's design.  Child themes are also 'base' designs, where you can modify them to look as you wish; they're created to give you a place to start with your own site design.
+					These child themes can be downloaded at <a href="http://comicpress.net/downloads/comicpress-child-themes/" target="_blank">ComicPress.net</a>, child themes are like regular themes but they only contain the "look" of your site.  It is best if you use a child theme so that when you upgrade ComicPress you do not lose any of your site's design.  Child themes are also 'base' designs, where you can modify them to look as you wish; they're created to give you a place to start with your own site design.
 					You install child themes just like the regular ComicPress theme, into the wp-content/themes/ directory, then activate it and it will use the design from the chlid theme and the code from the main ComicPress theme.   Most people use the child-theme as a central location for their site design images since it does not disappear or change if you upgrade the main ComicPress theme.
 					</td>
 				</tr>

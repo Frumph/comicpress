@@ -242,7 +242,7 @@ function comicpress_admin_options() {
 			}
 		}
 		if ($tab) { ?>
-			<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings SAVED!','comicpress'); ?></strong></p></div>
+			<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings MODIFIED.','comicpress'); ?></strong></p></div>
 			<script>function hidemessage() { document.getElementById('message').style.display = 'none'; }</script>
 		<?php }
 		$comicpress_themeinfo = comicpress_themeinfo('reset');
