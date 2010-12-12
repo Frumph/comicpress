@@ -1,4 +1,7 @@
-﻿2.9.2.27
+﻿2.9.2.28
+change the forum url to http://comicpress.net/forum/ bbpress wasnt working out, so switched to simple:press
+
+2.9.2.27
 Stylized the control panel and dropdown archive boxes
 fixed notice in control panel widget
 sharethis_title, subscribe_title were missing from defaults being set in the comic-navigation.php, set em
@@ -12,8 +15,9 @@ subcontent-wrapper is now available on *all* layout styles
 font-size for .footer-text is now 12px; as default (the generated info at the bottom)
 latest thumbnail widget you can now choose to show the first in the category as well as a random comic from that category, it will not display the same comic as the current comic thats being viewed.
 removing association to comicpress.org and now using comicpress.net
-changed base coloration of links from #f00 to color: #012876;  with an a:visited color that i'm still working out, so that if someone visited a link it will differ slightly in color.
+changed base coloration of links from red to a blue color with an a:visited color, so that if someone visited a link it will differ slightly in color.
 ^ ie moved from red links to blue links to denote the change to comicpress.net
+added link to the tech support forums in the comicpress options http://forum.frumph.net/
 
 2.9.2.26
 changed all the bloginfo()'s to appropriate home_url() site_url() get_template_directory_uri()
