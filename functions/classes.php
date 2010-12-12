@@ -98,9 +98,12 @@ function comicpress_post_class($classes = '') {
 
 	$is_comic = comicpress_in_comic_category();
 
+// This used to do something, it no longer does
+/*
 	$args = array(
 		'entry_tax' => array( 'category', 'post_tag' )
 	);
+*/
 
 	/* Microformats. */
 	$classes[] = 'uentry';
@@ -127,13 +130,14 @@ function comicpress_post_class($classes = '') {
 	if ( !is_attachment() )
 		$classes[] = 'post-author-' . sanitize_html_class( get_the_author_meta( 'user_nicename' ), get_the_author_meta( 'ID' ) );
 	
-	/* User-created classes. */
+	/* User-created classes. This serves no purpose anymore */
+/*
 	if ( !empty( $class ) ) :
 		if ( !is_array( $class ) )
 			$class = preg_split( '#\s+#', $class );
 		$classes = array_merge( $classes, $class );
 	endif;
-
+*/
 	/* Password-protected posts. */
 	if ( post_password_required() )
 		$classes[] = 'protected';

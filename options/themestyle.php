@@ -11,7 +11,7 @@
 	<div class="comicpress-options">
 		
 	<div class="cpadmin-footer">
-		<div class="comicpress-forum">Forums are now at <a href="http://comicpress.net/forum/">http://comicpress.net/forum/</a> for Technical Assistance</div>
+		<div class="comicpress-forum">Forums are at <a href="http://comicpress.net/forum/">http://comicpress.net/forum/</a> for Technical Assistance</div>
 		<div id="comicpress-version-title"><a href="http://comicpress.net/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small>, <?php _e('Originally created by','comicpress'); ?> <a href="http://mindfaucet.com/">Tyler Martin</a><br />

@@ -2,7 +2,7 @@
 Theme Name: ComicPress
 Contributors: Frumph
 Theme URI: http://comicpress.net
-Description: Publish a comic with WordPress. <a href="http://comicpress.net">Visit the ComicPress Website.</a> This is the ComicPress Core Framework.  Requires WordPress 3.0
+Description: Publish a comic with WordPress. Visit the ComicPress Website (<a href="http://comicpress.net">comicpress.net</a>). This is the ComicPress Core Framework.  Requires WordPress 3.0
 Author: Philip M. Hofer
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
@@ -1664,6 +1664,7 @@ textarea {
 	overflow: hidden;
 }
 
-.tipjarunderbox {
-	background: url('images/gauge.png') top center no-repeat;
+.post-extras .facebook_like {
+	clear: both;
+	padding-top: 10px;
 }

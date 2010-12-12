@@ -475,7 +475,9 @@ function comicpress_load_options() {
 			'enable_equal_height_sidebars' => false,
 			'prefab_design' => 'none',
 			'copyright_name' => '',
-			'copyright_url' => ''
+			'copyright_url' => '',
+			'facebook_like_blog_post' => false,
+			'facebook_like_comic_post' => false
 
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;

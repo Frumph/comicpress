@@ -1,5 +1,9 @@
 ﻿2.9.2.28
 change the forum url to http://comicpress.net/forum/ bbpress wasnt working out, so switched to simple:press
+added 2 new options on the comicpress-options post&pages tab,  enable facebook like 
+added new widget, facebook like, that goes in any of the comic sidebars for better control where you might the like button to be
+dual blog posts and checkmarked blog post stays with comic now works as properly designed
+single blog posts and checkmarked blog posts stays with comic as well is now fixed (needs testing)
 
 2.9.2.27
 Stylized the control panel and dropdown archive boxes

@@ -1,23 +1,32 @@
 <?php 
 get_header();
+if (comicpress_themeinfo('blogposts_with_comic')) {
+	Protect();
+	global $cur_date, $next_date, $prev_date;
+	$cur_date = $next_date = $prev_date = null;
+	
+	$cur_date = mysql2date('Y-m-j', $post->post_date);
+	$next_comic = comicpress_get_next_comic();
+	$prev_comic = comicpress_get_previous_comic();
+	if (!empty($next_comic)) {
+		$next_comic = (array)$next_comic;
+		$next_date = mysql2date('Y-m-j', $next_comic['post_date']);
+	}
+	if (!empty($prev_comic)) {
+		$prev_comic = (array)$prev_comic;
+		$prev_date = mysql2date('Y-m-j', $prev_comic['post_date']);
+	}
+	UnProtect();
+}
+
 if (have_posts()) : 
 	while (have_posts()) : the_post();
-		if (comicpress_in_comic_category()) {
-			if (!comicpress_themeinfo('disable_comic_blog_single')) {
-				comicpress_display_post();
-				$cur_date = mysql2date('Y-m-j', $post->post_date);
-				$next_comic = comicpress_get_next_comic();
-				if (!empty($next_comic)) {
-					$next_comic = (array)$next_comic;
-					$next_date = mysql2date('Y-m-j', $next_comic['post_date']);
-				}
-				$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&order=asc&cat='.comicpress_exclude_comic_categories();
-			}
-		} else { 
+		$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&order=asc&cat='.comicpress_exclude_comic_categories();
+		if (!comicpress_in_comic_category() || (comicpress_in_comic_category() && !comicpress_themeinfo('disable_comic_blog_single'))) {
 			comicpress_display_post();
+			comments_template('', true);
+			$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&order=asc&cat='.comicpress_exclude_comic_categories();
 		}
-		comments_template('', true);
-		
 	endwhile; 
 	
 	if (is_active_sidebar('blog')) get_sidebar('blog');
@@ -49,28 +58,31 @@ if (have_posts()) :
 		}
 	} else {
 		if (comicpress_themeinfo('blogposts_with_comic')) {
-			
-			$temppost = $post;
-			$temp_query = $wp_query;		
-			
-			if (comicpress_in_comic_category()) {
-				function filter_where($where = '') {
-					global $cur_date, $next_date;
-					if (!empty($next_date)) {
-						$where .= " AND post_date >= '".$cur_date."' AND post_date <= '".$next_date."'";
-					} else {
-						$where .= " AND post_date >= '".$cur_date."'";
+			if (!comicpress_themeinfo('split_column_in_two')) {
+				
+				Protect();		
+				
+				if (comicpress_in_comic_category()) {
+					function filter_where($where = '') {
+						global $cur_date, $next_date;
+						if (!empty($next_date)) {
+							$where .= " AND post_date >= '".$cur_date."' AND post_date <= '".$next_date."'";
+						} else {
+							$where .= " AND post_date >= '".$cur_date."'";
+						}
+						return $where;
 					}
-					return $where;
-				}
-				add_filter('posts_where', 'filter_where');
-				$posts = &query_posts($blog_query);
-				if (have_posts()) { while (have_posts()) : the_post();
-						comicpress_display_post();
-						comments_template('', true);
-				endwhile; }
-			} 
-			$post = $temppost; $wp_query = $temp_query; $temppost = null; $temp_query = null;
+					add_filter('posts_where', 'filter_where');
+					$posts = &query_posts($blog_query);
+					if (have_posts()) { while (have_posts()) : the_post();
+							comicpress_display_post();
+							comments_template('', true);
+					endwhile; }
+				} 
+				UnProtect();
+			} else {
+				comicpress_dual_columns(true);
+			}
 		}
 	} 
 else:

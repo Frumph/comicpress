@@ -127,7 +127,9 @@ function comicpress_admin_options() {
 				'blogposts_with_comic',
 				'static_blog',
 				'disable_page_titles',
-				'disable_post_titles'
+				'disable_post_titles',
+				'facebook_like_blog_post',
+				'facebook_like_comic_post'
 						) as $key) {
 							if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 							$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

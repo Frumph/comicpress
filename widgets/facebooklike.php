@@ -23,9 +23,9 @@ class comicpress_facebook_like_widget extends WP_Widget {
 		
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
-		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; }; ?>
-			<h2 class="randomcomic"><a href="/?randomcomic&nocache=1"><span class="random-comic-icon">?</span> <?php _e('Random Comic','comicpress'); ?></a></h2>
-		<?php
+		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
+		// This only works in comic sidebar widgets, declare it to pass it as a comic.
+		comicpress_display_facebook_like(true, true); // 2nd param is to bypass the check for $is_comic
 		echo $after_widget;
 	}
 	
