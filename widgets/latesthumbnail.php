@@ -28,7 +28,7 @@ class comicpress_latest_thumbnail_widget extends WP_Widget {
 		if ($instance['first']) { $order = 'ASC'; } else { $order = 'DESC'; }
 		$comic_query = 'showposts=1&order='.$order.'&cat='.$instance['thumbcat'];
 		if ($instance['random']) $comic_query .= '&orderby=rand';
-		if (!empty($post)) $comic_query .= '&exclude='.$post->ID;
+		if (!empty($post) && $instance['random']) $comic_query .= '&exclude='.$post->ID;
 		
 		$found_posts = &get_posts($comic_query);
 		$archive_image = null;
