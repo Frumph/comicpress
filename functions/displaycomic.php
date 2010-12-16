@@ -155,13 +155,49 @@ function comicpress_display_comic_thumbnail($type = 'mini', $override_post = nul
 }
 
 // TODO: Add the hovertext - rascal code and click to next INSIDE this.
-function comicpress_display_comic_image($post, $comic) {
-	$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);
-	$alt_text = comicpress_the_hovertext($post);
-	$output = '<img src="'.$file_url.'" alt="'.$alt_text.'" title="'.$alt_text.'" />';
-	return apply_filters('comicpress_display_comic_image',$output);
+if (!function_exists('comicpress_display_comic_image')) {
+	function comicpress_display_comic_image($post, $comic) {
+		global $wp_query;
+		$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);
+		$alt_text = comicpress_the_hovertext($post);
+		if (!is_search() && !is_archive() && !is_feed()) {
+			$ok = $oktoo = true;;
+			$href_to_use = $before_output = $add_href = $after_output = $add_tt_class = '';
+			if (comicpress_themeinfo('enable_comic_lightbox')) {
+				$tags = wp_get_post_tags($post->ID);
+				$tagsarray = array();
+				if (is_array($tags) && !empty($tags)) {
+					foreach ($tags as $tag) {
+						$tagsarray[] = $tag->slug;
+					}
+					if (in_array('fullpage', $tagsarray)) {
+						$add_href = '<a href="'.$file_url.'" title="'.$alt_text.'" rel="lightbox">';
+						$after_output = '</a>';
+						$ok = false;
+					}
+				}
+			}
+			if (comicpress_themeinfo('rascal_says') && !empty($alt_text) && $ok) {
+				$hovertext = get_post_meta( $post->ID, "hovertext", true );
+				$href_to_use = "#";
+				if (!empty($hovertext)) {
+					$before_output = '<span class="tooltip"><span class="top">&nbsp;</span><span class="middle">'.$alt_text.'</span><span class="bottom">&nbsp;</span></span>';
+					$add_href = '<a href="'.$href_to_use.'" class="tt" title="'.$post->post_title.'">';
+					$add_tt_class = ' class="tt"';
+					$after_output = '</a>';
+					$oktoo = false;
+				}
+			}
+			if (comicpress_themeinfo('comic_clicks_next') && $ok) {
+				$href_to_use = comicpress_get_next_comic_permalink();
+				$add_href = '<a href="'.$href_to_use.'" title="'.$alt_text.'"'.$add_tt_class.'>';
+				$after_output = '</a>';
+			}
+		}
+		$output = $add_href . $before_output . '<img src="'.$file_url.'" alt="'.$alt_text.'" title="'.$alt_text.'"/>' . $after_output;
+		return apply_filters('comicpress_display_comic_image', $output);
+	}
 }
-
 
 // jquery code image swap by @brianarn
 function comicpress_display_comic() {
@@ -251,6 +287,8 @@ function comicpress_rascal_says($output) {
 	return apply_filters('comicpress_rascal_says',$output);
 }
 
+/*
+Old Method
 if (comicpress_themeinfo('rascal_says')) {
 	add_filter('comicpress_display_comic_image', 'comicpress_rascal_says');
 }
@@ -258,6 +296,8 @@ if (comicpress_themeinfo('rascal_says')) {
 if (comicpress_themeinfo('comic_clicks_next') && !comicpress_themeinfo('rascal_says')) { 
 	add_filter('comicpress_display_comic_image', 'comicpress_comic_clicks_next'); 
 }
+*/
+
 
 /**
 * Find a comic file in the filesystem.

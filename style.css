@@ -1564,8 +1564,8 @@ a.tt:hover span.top {
 	display: block;
 	width: 200px;
 	height: 35px;
-	padding-top: 10px;
-	margin-top: 59px;
+	padding-top: 2px;
+	margin-top: 25px;
 	margin-left: 25px;
 	background: url('images/bubble.png') 0 0 no-repeat;
 	z-index: 1000;
@@ -1574,7 +1574,7 @@ a.tt:hover span.middle {
 	/* different middle bg for stretch */
 	display: block;
 	width: 180px;
-	margin-left: 25px;
+	margin: 0 0 0 25px;
 	padding: 0 10px;
 	background: url('images/bubble.png') -200px 0 repeat-y;
 	z-index: 1000;

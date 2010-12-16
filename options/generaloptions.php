@@ -46,6 +46,15 @@
 					<td>
 						<?php _e('This is if you have uploaded multiple comics on the same date, it puts button navigation under the comic so you can navigate the comics that are on the same date.','comicpress'); ?>
 					</td>
+				</tr>
+				<tr class="alternate">
+					<th scope="row"><label for="enable_comic_lightbox"><?php _e('Enable lightbox support for the comic image.','comicpress'); ?></label></th>
+					<td>
+						<input id="enable_comic_lightbox" name="enable_comic_lightbox" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comic_lightbox')); ?> />
+					</td>
+					<td>
+						<?php _e('This will allow you to use lightbox with the comic so the comic expands when clicked.  Will *not* work with rascal or comic clicks next options.','comicpress'); ?>
+					</td>
 				</tr>				
 			</table>
 			
@@ -230,7 +239,7 @@
 						<?php _e('When this link is clicked on long pages it will scroll back to the top.','comicpress'); ?>
 					</td>
 				</tr>
-				<tr>
+				<tr class="alternate">
 					<th scope="row"><label for="copyright_name"><?php _e('&copy; Copyright Name','comicpress'); ?></label>
 						<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo comicpress_themeinfo('copyright_name'); ?>" /><br />
 					</th>

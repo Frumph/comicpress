@@ -73,7 +73,8 @@ function comicpress_admin_options() {
 				'enable_scroll_to_top',
 				'enable_page_load_info',
 				'fix_for_index_paging',
-				'enable_multicomic_jquery'
+				'enable_multicomic_jquery',
+				'enable_comic_lightbox'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

@@ -222,7 +222,7 @@
 	<div class="comicpress-options-save">
 			<div class="comicpress-major-publishing-actions">
 				<div class="comicpress-publishing-action">
-					<input name="comicpress_save_customheader" type="submit" class="button-primary" value="Save Settings" />
+					<input name="comicpress_save_addons" type="submit" class="button-primary" value="Save Settings" />
 					<input type="hidden" name="action" value="comicpress_save_addons" />
 				</div>
 				<div class="clear"></div>

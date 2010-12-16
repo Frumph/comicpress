@@ -5,6 +5,7 @@ added new widget, facebook like, that goes in any of the comic sidebars for bett
 dual blog posts and checkmarked blog post stays with comic now works as properly designed
 single blog posts and checkmarked blog posts stays with comic as well is now fixed (needs testing)
 fixed thumbnail widget to *not* exclude the current page if its not set to random
+adjusting the option pages input button to hit the right location properly
 
 2.9.2.27
 Stylized the control panel and dropdown archive boxes
