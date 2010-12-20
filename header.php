@@ -18,9 +18,7 @@
   ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
-	<?php if ( is_singular() && comicpress_themeinfo('enable_comment_javascript') && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-<!-- Last Update: <?php the_time('M jS, Y'); ?> // -->
+	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />	
 <!--[if lt IE 7]>
    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/ie6submenus.js"></script>
 <![endif]-->

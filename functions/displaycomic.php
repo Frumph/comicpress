@@ -37,6 +37,7 @@ if (!function_exists('comicpress_display_comic_area')) {
 				<?php if (is_active_sidebar('left-of-comic')) get_sidebar('comicleft'); ?>
 			<div id="comic">
 				<?php echo comicpress_display_comic(); ?>
+				<!-- Last Update: <?php the_time('M jS, Y'); ?> // -->
 			</div>
 				<?php if (is_active_sidebar('right-of-comic')) get_sidebar('comicright'); ?>
 			<div class="clear"></div>

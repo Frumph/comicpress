@@ -162,7 +162,8 @@ function comicpress_admin_options() {
 			foreach (array(
 				'archive_display_comic_thumbs_in_order',
 				'template-comic-year-all-cats',
-				'archive_start_latest_year'
+				'archive_start_latest_year',
+				'display_comic_archive_as_text_links'
 						) as $key) {
 							if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 								$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

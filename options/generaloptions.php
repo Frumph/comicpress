@@ -256,33 +256,13 @@
 					</td>
 				</tr>
 			</table>
-
+			
 			<table class="widefat">
 				<thead>
 					<tr>
 						<th colspan="3"><?php _e('Debug','comicpress'); ?></th>
 					</tr>
 				</thead>
-<!--
-				<tr class="alternate">
-					<th scope="row"><label for="enable_comicpress_debug"><?php _e('Enable the dashboard ComicPress debug?','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_comicpress_debug" name="enable_comicpress_debug" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comicpress_debug')); ?> />
-					</td>
-					<td>
-						<?php _e('Default enabled, this will do some sanity checks on your ComicPress installation and report the findings on your dashboard.', 'comicpress'); ?>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label for="enable_full_post_check"><?php _e('Enable checking EVERY post for category problems?','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_full_post_check" name="enable_full_post_check" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_full_post_check')); ?> />
-					</td>
-					<td>
-						<?php _e('Enable this if you would like to check ALL of your posts to see if there are any category problems and inconsistancies.', 'comicpress'); ?>
-					</td>
-				</tr>
-// -->
 				<tr class="alternate">
 					<th scope="row"><label for="enable_page_load_info"><?php _e('Enable the page load info in the footer?','comicpress'); ?></label></th>
 					<td>

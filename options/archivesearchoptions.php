@@ -67,6 +67,15 @@
 						<?php _e('If this is enabled it will display all of the comics in a comic category as mini thumbnails instead of listed posts.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="display_comic_archive_as_text_links"><?php _e('Archive Text Links instead of Images','comicpress'); ?></label></th>
+					<td>
+						<input id="display_comic_archive_as_text_links" name="display_comic_archive_as_text_links" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('display_comic_archive_as_text_links')); ?> />
+					</td>
+					<td>
+						<?php _e('If this is set, it disables the above mini thumbs and just displays text links in the set order.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			<table class="widefat">

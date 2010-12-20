@@ -98,7 +98,7 @@ if (!function_exists('comicpress_display_post_category')) {
 				} else {
 					$post_category = "<div class=\"post-cat\">". __('Posted In: ','comicpress') .get_the_category_list(', ', 'multiple')."</div>\r\n";
 				}
-				echo apply_filters('comicpress_display_post_category',$post_category);
+				echo apply_filters('comicpress_display_post_category', $post_category);
 			}
 		} else {
 			$post_category = "<div class=\"post-type-cat\">". __('Posted In: ','comicpress') .$post->post_type."</div>\r\n";

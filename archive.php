@@ -1,23 +1,36 @@
 <?php
-get_header(); 
+get_header();
+
+// Set them as empty for right now
+$order = $post_count = $theCatID = '';
+
+if (is_category()) {
+	$theCatID = get_term_by( 'slug', $wp_query->query_vars['category_name'], 'category' );
+	if (!empty($theCatID))
+		$theCatID = $theCatID->term_id;
+}
+
 $category_thumbnail_postcount = comicpress_themeinfo('category_thumbnail_postcount');
+
+
+if (is_category() && (!empty($theCatID) && comicpress_in_comic_category($theCatID))) $is_comic = true;
+
+if ($is_comic && comicpress_themeinfo('display_comic_archive_as_text_links')) $category_thumbnail_postcount = '-1';
+
 $archive_display_order = comicpress_themeinfo('archive_display_order');
 
+$order = '&order='.$archive_display_order;
+
+if ($is_comic) $post_count = '&showposts='.$category_thumbnail_postcount.'&posts_per_page='.$category_thumbnail_postcount;
+
 // Get the total count no matter what type of archive
-$tmp_search = new WP_Query($query_string.'&show_posts=-1&posts_per_page=-1');
+$tmp_search = new WP_Query($query_string.'&showposts=-1&posts_per_page=-1');
 $count = $tmp_search->post_count;
 if (!$count) $count = "no";
 
-if (is_category()) {
-	$theCatId = get_term_by( 'slug', $wp_query->query_vars['category_name'], 'category' );
-	$theCatId = $theCatId->term_id;
-}
+$args = $query_string . $post_count . $order;
 
-if (is_category() && comicpress_in_comic_category($theCatId) && comicpress_themeinfo('archive_display_comic_thumbs_in_order')) {
-	$posts = &query_posts($query_string.'&showposts='.$category_thumbnail_postcount.'&order='.$archive_display_order);
-} else {
-	$posts = &query_posts($query_string.'&order='.$archive_display_order);
-}
+$posts = &query_posts($args);
 	
 if (have_posts()) :
 ?>
@@ -48,8 +61,8 @@ if (have_posts()) :
 	<div class="searchresults"><?php printf(_n("%d item.", "%d items.", $count,'comicpress'),$count); ?></div>
 	<div class="clear"></div>
 
-	<?php if (comicpress_themeinfo('archive_display_comic_thumbs_in_order')) { ?>
-		<?php if (is_category() && comicpress_in_comic_category($theCatId)) { ?>
+	<?php if (comicpress_themeinfo('archive_display_comic_thumbs_in_order') && !comicpress_themeinfo('display_comic_archive_as_text_links')) { ?>
+		<?php if ($is_comic) { ?>
 
 		<div <?php post_class(); ?>>
 			<div class="post-head"></div>
@@ -58,7 +71,7 @@ if (have_posts()) :
 		
 		<?php while (have_posts()) : the_post();
 			
-			if (is_category() && comicpress_in_comic_category($theCatId)) { ?>
+			if ($is_comic) { ?>
 				<div class="comicthumbwrap">
 					<?php global $mini_comic_width; ?>
 					<div class="comicthumbdate"><?php echo get_the_time('M jS, Y'); ?></div>
@@ -72,20 +85,28 @@ if (have_posts()) :
 		
 			endwhile;
 		
-			if (is_category() && comicpress_in_comic_category($theCatId)) { ?>
+			if ($is_comic) { ?>
 				<div class="clear"></div>
 			</div>
 			<div class="post-foot"></div>
 		</div>	
 	
-		<?php } ?>
-	<?php } else { ?>
-		<?php 
+		<?php } 
+		} else { 
+			if ($is_comic) { ?>
+			<table class="month-table">
+		<?php }
 		while (have_posts()) : the_post();
-			comicpress_display_post(); 
-			endwhile;
-		?>
-	<?php } ?>
+			if ($is_comic) { ?>
+				<tr><td class="archive-date"><?php the_time('M j') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','comicpress'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>				
+			<?php } else {
+				comicpress_display_post(); 
+			}
+		endwhile;
+		if ($is_comic) { ?>
+			</table>
+	<?php } 
+	}?>
 	<div class="clear"></div>
 	<?php comicpress_pagination(); ?>
 	

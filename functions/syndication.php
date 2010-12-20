@@ -37,10 +37,11 @@ if (comicpress_themeinfo('enable_comment_count_in_rss')) {
 //Insert the comic image into the RSS feed
 if (!function_exists('comicpress_comic_feed')) {
 	function comicpress_comic_feed() { 
-		global $post; 
-	?>
+	global $post; ?>
 		<p><a href="<?php the_permalink(); ?>"><?php echo comicpress_display_comic_thumbnail('rss',$post); ?></a></p>
-	<?php
+		<?php if (comicpress_themeinfo('comic_rank_id')) { ?>
+				<p><a href="http://comicrank.com/<?php echo comicpress_themeinfo('comic_rank_id'); ?>/in" target="_blank"><img src="http://view.comicrank.com/<?php echo comicpress_themeinfo('comic_rank_id'); ?>/1.png" alt="Comic Rank" title="Comic Rank - Webcomic toplist" style="border:none 0px;" /></a></p>
+		<?php }
 	}
 }
 
