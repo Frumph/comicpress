@@ -88,7 +88,7 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 				<a href="<?php echo $instance['archive_path']; ?>" class="navi navi-archives navi-archive" title="<?php echo $instance['archives_title']; ?>"><?php echo $instance['archives_title']; ?></a>
 			<?php } 
 			if ($instance['random']) { ?>
-				<a href="<?php echo home_url(); ?>/?randomcomic" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?></a>
+				<a href="<?php echo home_url(); ?>/?randomcomic&nocache=1" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?></a>
 			<?php }
 			if ($instance['comictitle']) { ?>
 				<span class="navi-comictitle"><a href="<?php the_permalink(); ?>">"<?php the_title(); ?>"</a></span>

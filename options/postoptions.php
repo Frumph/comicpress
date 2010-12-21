@@ -43,37 +43,6 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Facebook Like','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr>
-					<td colspan="5">
-						*Note: There is a Facebook Like Widget that you can place in any of the comic sidebars.
-					</td>
-				</tr>
-				<tr class="alternate">
-					<th scope="row"><label for="facebook_like_blog_post"><?php _e('Enable the Facebook Like button in Blog Posts?','comicpress'); ?></label></th>
-					<td>
-						<input id="facebook_like_blog_post" name="facebook_like_blog_post" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_like_blog_post')); ?> />
-					</td>
-					<td>
-						<?php _e('When enabled this option will allow the Facebook like button to appear at the bottom of regular blog posts.','comicpress'); ?>
-					</td>
-				</tr>
-				<tr class="alternate">
-					<th scope="row"><label for="facebook_like_comic_post"><?php _e('Enable the Facebook Like button in Comic Posts?','comicpress'); ?></label></th>
-					<td>
-						<input id="facebook_like_comic_post" name="facebook_like_comic_post" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_like_comic_post')); ?> />
-					</td>
-					<td>
-						<?php _e('Enabling this option will allow the Facebook like button to appear at the bottom of comic posts.','comicpress'); ?>
-					</td>
-				</tr>
-			</table>
-
-			<table class="widefat">
-				<thead>
-					<tr>
 						<th colspan="3"><?php _e('Authors/Avatars/Moods','comicpress'); ?></th>
 					</tr>
 				</thead>

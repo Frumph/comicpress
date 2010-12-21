@@ -16,7 +16,7 @@
 				<td>
 					<?php _e('Width:','easel'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo comicpress_themeinfo('custom_image_header_width'); ?>" />px &nbsp;
 					<?php _e('Height:','easel'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo comicpress_themeinfo('custom_image_header_height'); ?>" />px<br />
-					<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header','easel'); ?>
+					<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header - 780px is for standard and v layouts, the rest are wide at 980px.','easel'); ?>
 				</td>
 			</tr>
 		</table>
@@ -194,6 +194,52 @@
 				</td>
 			</tr>
 			<?php } ?>
+		</table>
+		
+		<table class="widefat">
+			<thead>
+				<tr>
+					<th colspan="3"><?php _e('Facebook Like','comicpress'); ?></th>
+				</tr>
+			</thead>
+			<tr>
+				<td colspan="5">
+					*Note: There is a Facebook Like Widget that you can place in any of the comic sidebars.
+				</td>
+			</tr>
+			<tr class="alternate">
+				<th scope="row"><label for="facebook_like_blog_post"><?php _e('Enable the Facebook Like button in Blog Posts?','comicpress'); ?></label></th>
+				<td>
+					<input id="facebook_like_blog_post" name="facebook_like_blog_post" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_like_blog_post')); ?> />
+				</td>
+				<td>
+					<?php _e('When enabled this option will allow the Facebook like button to appear at the bottom of regular blog posts.','comicpress'); ?>
+				</td>
+			</tr>
+			<tr class="alternate">
+				<th scope="row"><label for="facebook_like_comic_post"><?php _e('Enable the Facebook Like button in Comic Posts?','comicpress'); ?></label></th>
+				<td>
+					<input id="facebook_like_comic_post" name="facebook_like_comic_post" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_like_comic_post')); ?> />
+				</td>
+				<td>
+					<?php _e('Enabling this option will allow the Facebook like button to appear at the bottom of comic posts.','comicpress'); ?>
+				</td>
+			</tr>
+		</table>
+		
+		<table class="widefat">
+			<thead>
+				<tr>
+					<th colspan="5"><?php _e('CDN (Content Delivery Network)','easel'); ?></th>
+				</tr>
+			</thead>
+			<tr class="alternate">
+				<th scope="row"><label for="cdn_url"><?php _e('CDN URL','easel'); ?></label></th>
+				<td>
+					<?php _e('URL:','easel'); ?> <input type="text" size="40" name="cdn_url" id="cdn_url" value="<?php echo comicpress_themeinfo('cdn_url'); ?>" /><br />
+					<?php _e('If you are using a content delivery network, put the URL to where the comics are stored here.  This will replace the url used in the img tag when outputting the comic.','easel'); ?>
+				</td>
+			</tr>
 		</table>
 
 	</div>

@@ -159,7 +159,12 @@ function comicpress_display_comic_thumbnail($type = 'mini', $override_post = nul
 if (!function_exists('comicpress_display_comic_image')) {
 	function comicpress_display_comic_image($post, $comic) {
 		global $wp_query;
-		$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);
+		$cdn_url = comicpress_themeinfo('cdn_url');
+		if (!empty($cdn_url)) {
+			$file_url = trailingslashit($cdn_url) . comicpress_clean_filename($comic);
+		} else {
+			$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);		
+		}	
 		$alt_text = comicpress_the_hovertext($post);
 		if (!is_search() && !is_archive() && !is_feed()) {
 			$ok = $oktoo = true;;
