@@ -8,38 +8,17 @@
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="3"><?php _e('Custom Header','comicpress'); ?></th>
+					<th colspan="5"><?php _e('Custom Header','easel'); ?></th>
 				</tr>
 			</thead>
 			<tr class="alternate">
-				<th scope="row"><label for="enable_custom_image_header"><?php _e('Use Custom Header','comicpress'); ?></label></th>
+				<th scope="row"><label for="custom_image_header_width"><?php _e('Custom Header Values','easel'); ?></label></th>
 				<td>
-					<input id="enable_custom_image_header" name="enable_custom_image_header" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_custom_image_header')); ?> />
-				</td>
-				<td>
-					<?php _e('Adds Custom Header option under Dashboard -> Appearance. Allows you to add your own header image and customize or hide the default text.','comicpress'); ?>
-				</td>
-			</tr>
-			<?php if (comicpress_themeinfo('enable_custom_image_header')) { ?>
-			<tr>
-				<th scope="row"><label for="custom_image_header_width"><?php _e('Width','comicpress'); ?></label></th>
-				<td>
-					<input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo comicpress_themeinfo('custom_image_header_width'); ?>" /><br />
-				</td>
-				<td>
-					<?php _e('Sets the width of the image you want to use for Custom Header. Defaults widths are 780px or 980px depending on the layout. Refer to the width of the layout you chose and any custom changes you have made to site width in the CSS.','comicpress'); ?>
+					<?php _e('Width:','easel'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo comicpress_themeinfo('custom_image_header_width'); ?>" />px &nbsp;
+					<?php _e('Height:','easel'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo comicpress_themeinfo('custom_image_header_height'); ?>" />px<br />
+					<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header','easel'); ?>
 				</td>
 			</tr>
-			<tr class="alternate">
-				<th scope="row"><label for="custom_image_header_height"><?php _e('Height','comicpress'); ?></label></th>
-				<td>
-					<input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo comicpress_themeinfo('custom_image_header_height'); ?>" />
-				</td>
-				<td>
-					<?php _e('Sets the height of the image you want to use for Custom Header. Recommended maximum height is 120px, but if your logo/image demands it you can set it higher.','comicpress'); ?>
-				</td>
-			</tr>
-			<?php } ?>
 		</table>
 
 		<table class="widefat">

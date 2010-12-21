@@ -94,11 +94,6 @@ if (is_child_theme()) {
 	}
 }
 
-// Only load these if they are actually enabled
-if (comicpress_themeinfo('enable_custom_image_header')) {
-	@require_once(get_template_directory() . '/addons/custom-image-header.php');
-}
-	
 if (comicpress_themeinfo('enable_members_only')) {
 	@require_once(get_template_directory() . '/addons/membersonly.php');
 }
@@ -403,7 +398,6 @@ function comicpress_load_options() {
 			'transcript_in_posts' => false,
 			'enable_widgetarea_use_sidebar_css' => false,
 
-			'enable_custom_image_header' => false,
 			'custom_image_header_width' => '980',
 			'custom_image_header_height' => '120',
 
