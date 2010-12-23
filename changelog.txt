@@ -6,6 +6,14 @@ dual blog posts and checkmarked blog post stays with comic now works as properly
 single blog posts and checkmarked blog posts stays with comic as well is now fixed (needs testing)
 fixed thumbnail widget to *not* exclude the current page if its not set to random
 adjusting the option pages input button to hit the right location properly
+added CDN URL ability for content delivery networks storing the comics
+fixed the missing nocache=1 in the comic-navigation widget
+comic blog post widget has a new option whether to disable the displaying of the widget if there's no content or not
+fixed the h2 in the comic blog post widget for single pages
+added a clear:both; to .comment-link css element
+modified the facebook like button widget to have 3 different options for display
+the facebook like button now uses a script load and the facebook fb:code 
+added facebook meta information toggle, will be on if any facebook option is on
 
 2.9.2.27
 Stylized the control panel and dropdown archive boxes
@@ -13,7 +21,7 @@ fixed notice in control panel widget
 sharethis_title, subscribe_title were missing from defaults being set in the comic-navigation.php, set em
 accidently left in the #height - 100px; .. removed it so its now auto again
 fixed a variable being passed in the latesthumbnail widget that was sending $true and not true ;/ its not a php var heh
-adding <div class="clear"></div> to the tipjar.php widget so it clears the internal floats properly
+adding div class="clear" /div to the tipjar.php widget so it clears the internal floats properly
 fixed the themestyle.php to handle the vertical double right sidebar properly
 removed .ie #comic button {} from the css, it was hardsetting it to white text
 added the easel footer_text functionality and a new option in comicpress options to set the copyright name w/ modifiable information including URL to copyright holder (w/defaults)
@@ -46,7 +54,7 @@ adding comic-id-# ($post->id) as a wrap with #comic-wrap so that it can be targe
 added check to see if on the comic_next for hovering over to see if its empty or not, if it is do a # instead of empty ""
 Removed comicpress-debug.php, so no debug messages anymore
 Removed copyright.php, it hasnt been in use in a long time
-changed the <div for the post title in the comic blog post widget to an h2 so that ttf replacer plugins can handle it
+changed the div for the post title in the comic blog post widget to an h2 so that ttf replacer plugins can handle it
 fixed the /?randomcomic /?randompost to have &nocache=1 on the line so that wp-supercache doesn't cache it
 implemented easel's menubar code which uses less CSS then the new comicpress's /cleaned up code/ no images for down arrow -> right arrow no, is text characters
 fixed classic menubar's error with the comicpress_get_all_comic_categories_as_cat_string() when its supposed to be: comicpress_all_comic_categories_string()

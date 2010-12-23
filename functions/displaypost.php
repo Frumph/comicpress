@@ -141,20 +141,6 @@ if (!function_exists('comicpress_display_related_posts')) {
 	}
 }
 
-if (!function_exists('comicpress_display_facebook_like')) {
-	function comicpress_display_facebook_like($is_comic = false, $bypass = false) {
-		global $post, $wp_query;
-		if (!is_page()) {
-			if ($bypass || (($is_comic && comicpress_themeinfo('facebook_like_comic_post')) || (!$is_comic && comicpress_themeinfo('facebook_like_blog_post')))) {
-				$the_perma	= rawurlencode(get_permalink());
-				$the_iframe	= '<div class="facebook_like"><iframe src="http://www.facebook.com/plugins/like.php?href='.$the_perma.'&amp;layout=standard&amp;show_faces=true&amp;width=500&amp;action=like&amp;font=segoe+ui&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:80px;" allowTransparency="true"></iframe></div>';
-				echo apply_filters('comicpress_display_facebook_like', $the_iframe);
-			}
-		}
-		echo apply_filters('comicpress_display_facebook_like', '');
-	}
-}
-
 if (!function_exists('comicpress_display_blog_navigation')) {
 	function comicpress_display_blog_navigation($is_comic = false) {
 		global $post, $wp_query;
@@ -251,7 +237,6 @@ if (!function_exists('comicpress_display_post')) {
 				<?php if (!is_page()) { ?>
 				<div class="post-extras">
 					<?php comicpress_display_post_tags(); ?>
-					<?php comicpress_display_facebook_like($is_comic); ?>
 					<?php comicpress_display_comment_link(); ?>
 					<?php
 						if ($is_comic) { 

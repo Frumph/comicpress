@@ -94,17 +94,15 @@ if (is_child_theme()) {
 	}
 }
 
-if (comicpress_themeinfo('enable_members_only')) {
+// Addons
+if (comicpress_themeinfo('enable_members_only'))
 	@require_once(get_template_directory() . '/addons/membersonly.php');
-}
-
-if (comicpress_themeinfo('enable_related_comics')) {
+if (comicpress_themeinfo('enable_related_comics'))
 	@require_once(get_template_directory() . '/addons/relatedcomics.php');
-}
-
-if (comicpress_themeinfo('enable_related_posts')) {
+if (comicpress_themeinfo('enable_related_posts'))
 	@require_once(get_template_directory() . '/addons/relatedposts.php');
-}
+if (comicpress_themeinfo('facebook_meta') || comicpress_themeinfo('facebook_like_comic_post') || comicpress_themeinfo('facebook_like_comic_post'))
+	@require_once(get_template_directory() . '/addons/facebook.php');
 
 // Dashboard Menu Comicpress Options and ComicPress CSS
 if (is_admin()) {
@@ -183,6 +181,8 @@ function __comicpress_init() {
 			wp_enqueue_script('cookiejar', get_template_directory_uri() . '/js/cookiejar.js', array('prototype'));
 			wp_enqueue_script('bookmark', get_template_directory_uri() . '/js/bookmark.js', array('prototype', 'cookiejar'));
 		}
+		if (comicpress_themeinfo('facebook_like_blog_post') || comicpress_themeinfo('facebook_like_comic_post'))
+			wp_enqueue_script('facebook', 'http://connect.facebook.net/en_US/all.js#xfbml=1', array(), false, true);
 	}
 	
 	do_action('comicpress_init');
@@ -474,6 +474,7 @@ function comicpress_load_options() {
 			'copyright_url' => '',
 			'facebook_like_blog_post' => false,
 			'facebook_like_comic_post' => false,
+			'facebook_meta' => false,
 			'enable_comic_lightbox' => false,
 			'cdn_url' => ''
 		) as $field => $value) {

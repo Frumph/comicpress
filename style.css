@@ -648,6 +648,7 @@ h4, h4 a {
 /* COMMENT LINK */
 
 .comment-link {
+	clear: both;
 	font-weight: bold;
 	text-align: right;
 }
@@ -1664,7 +1665,9 @@ textarea {
 	overflow: hidden;
 }
 
-.post-extras .facebook_like {
-	clear: both;
-	padding-top: 10px;
+.facebook_like {
+	float:right;
+	width: 55px;
+	height: 60px;
+	text-align: center;
 }

@@ -25,21 +25,36 @@ class comicpress_facebook_like_widget extends WP_Widget {
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
 		// This only works in comic sidebar widgets, declare it to pass it as a comic.
-		comicpress_display_facebook_like(true, true); // 2nd param is to bypass the check for $is_comic
+		switch ($instance['style']) {
+			case 1:
+				echo '<fb:like layout="box_count" show_faces="false" width="55" href="'.get_permalink().'"></fb:like>';
+				break;
+			case 2:
+				echo '<fb:like layout="button_count" show_faces="false" width="94" href="'.get_permalink().'"></fb:like>';
+				break;
+			case 3:
+				echo '<fb:like show_faces="false" width="260" href="'.get_permalink().'"></fb:like>';
+				break;
+		}
 		echo $after_widget;
 	}
 	
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['style'] = (int)$new_instance['style'];
 		return $instance;
 	}
 	
 	function form($instance) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'style' => 1 ) );
 		$title = strip_tags($instance['title']);
+		$style = (int)$instance['style'];
 		?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('style'); ?>"><input id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>" type="radio" value="1" <?php checked(1, $style); ?> /> Box Count</label></p>
+		<p><label for="<?php echo $this->get_field_id('style'); ?>"><input id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>" type="radio" value="2" <?php checked(2, $style); ?> /> Button Count</label></p>			
+		<p><label for="<?php echo $this->get_field_id('style'); ?>"><input id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>" type="radio" value="3" <?php checked(3, $style); ?> /> Standard</label></p>			
 		<?php
 	}
 }

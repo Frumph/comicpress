@@ -197,7 +197,8 @@ function comicpress_admin_options() {
 				'enable_buystrip_post',
 				'disable_showing_members_category',
 				'facebook_like_blog_post',
-				'facebook_like_comic_post'
+				'facebook_like_comic_post',
+				'facebook_meta'
 						) as $key) {
 				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

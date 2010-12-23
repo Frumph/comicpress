@@ -199,7 +199,7 @@
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="3"><?php _e('Facebook Like','comicpress'); ?></th>
+					<th colspan="3"><?php _e('Facebook','comicpress'); ?></th>
 				</tr>
 			</thead>
 			<tr>
@@ -216,13 +216,22 @@
 					<?php _e('When enabled this option will allow the Facebook like button to appear at the bottom of regular blog posts.','comicpress'); ?>
 				</td>
 			</tr>
-			<tr class="alternate">
+			<tr>
 				<th scope="row"><label for="facebook_like_comic_post"><?php _e('Enable the Facebook Like button in Comic Posts?','comicpress'); ?></label></th>
 				<td>
 					<input id="facebook_like_comic_post" name="facebook_like_comic_post" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_like_comic_post')); ?> />
 				</td>
 				<td>
 					<?php _e('Enabling this option will allow the Facebook like button to appear at the bottom of comic posts.','comicpress'); ?>
+				</td>
+			</tr>
+			<tr class="alternate">
+				<th scope="row"><label for="facebook_meta"><?php _e('Enable the Facebook Meta?','comicpress'); ?></label></th>
+				<td>
+					<input id="facebook_meta" name="facebook_meta" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('facebook_meta')); ?> />
+				</td>
+				<td>
+					<?php _e('When setting this option ComicPress will add meta information to the head area of each page so that facebook will recognize the content within.','comicpress'); ?>
 				</td>
 			</tr>
 		</table>
