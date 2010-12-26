@@ -14,6 +14,10 @@ added a clear:both; to .comment-link css element
 modified the facebook like button widget to have 3 different options for display
 the facebook like button now uses a script load and the facebook fb:code 
 added facebook meta information toggle, will be on if any facebook option is on
+Added new action area in the menubar to allow for custom coding of social icons in the menubar.
+fixed the rascal hovertext padding so it doesnt look out of place.
+custom-header has been revamped, is now a regular constant - will appear in the wp-admin - appearance all the time now
+
 
 2.9.2.27
 Stylized the control panel and dropdown archive boxes

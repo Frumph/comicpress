@@ -21,6 +21,7 @@ function comicpress_menubar() {
 					<?php get_search_form(); ?>
 				</div>
 				<?php } ?>
+				<?php do_action('comicpress-menubar-menunav'); ?>
 				<?php if (comicpress_themeinfo('enable_rss_in_menubar')) { ?>
 					<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
 				<?php } ?>
