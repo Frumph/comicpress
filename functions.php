@@ -385,6 +385,7 @@ function comicpress_load_options() {
 			'disable_comic_frontpage' => false,
 			'disable_comic_blog_frontpage' => false,
 			'disable_comic_blog_single' => false,
+			'enable_comments_when_comic_blog_disabled' => false,
 			'disable_blog_frontpage' => false,
 			'disable_lrsidebars' => false,
 			'disable_footer_text' => false,

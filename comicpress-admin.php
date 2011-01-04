@@ -97,6 +97,7 @@ function comicpress_admin_options() {
 				'disable_comic_frontpage',
 				'disable_comic_blog_frontpage',
 				'disable_comic_blog_single',
+				'enable_comments_when_comic_blog_disabled',
 				'disable_blog_frontpage',
 				'disable_blogheader'
 				) as $key) {

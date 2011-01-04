@@ -66,6 +66,15 @@
 						<?php _e('Checkmark this and the blog portion of the comic will not display on the single/archive pages of your site.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="enable_comments_when_comic_blog_disabled"><?php _e('Enable comments when comic blog on single pages is disabled','comicpress'); ?></label></th>
+					<td>
+						<input id="enable_comments_when_comic_blog_disabled" name="enable_comments_when_comic_blog_disabled" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comments_when_comic_blog_disabled')); ?> />
+					</td>
+					<td>
+						<?php _e('When you have the comic blog disabled on single pages, if you have this checkmarked, the comments will still appear.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			<table class="widefat">

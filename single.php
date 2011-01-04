@@ -19,7 +19,7 @@ if (comicpress_themeinfo('blogposts_with_comic')) {
 	UnProtect();
 }
 
-if (have_posts()) : 
+if (have_posts()) {
 	while (have_posts()) : the_post();
 		$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount').'&order=asc&cat='.comicpress_exclude_comic_categories();
 		if (!comicpress_in_comic_category() || (comicpress_in_comic_category() && !comicpress_themeinfo('disable_comic_blog_single'))) {
@@ -84,9 +84,9 @@ if (have_posts()) :
 				comicpress_dual_columns(true);
 			}
 		}
-	} 
-else:
-
+	}
+	if (comicpress_in_comic_category() && comicpress_themeinfo('enable_comments_when_comic_blog_disabled') && comicpress_themeinfo('disable_comic_blog_single')) comments_template('', true);
+} else {
 ?>
 	<div <?php post_class(); ?>>
 		<div class="post-head"></div>
@@ -97,8 +97,7 @@ else:
 		<div class="post-foot"></div>
 	</div>
 	<?php
-
-endif;
+}
 	
 if (is_active_sidebar('under-blog')) get_sidebar('underblog');
 

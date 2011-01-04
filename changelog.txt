@@ -3,6 +3,7 @@ revamped the syndication comic into the rss to allow for a filter that can be us
 added extra profile options for MSN, Twitter and Facebook fields - functions/profile-options.php
 total rewrite of archive.php - fixed bug with text-links for the archive.php
 added new widget "reference" documentation is inside the widget and will be on comicpress.net
+new option on the home tab to keep comments when the single page's comic blog post is disabled
 
 2.9.2.28
 change the forum url to http://comicpress.net/forum/ bbpress wasnt working out, so switched to simple:press
