@@ -366,8 +366,12 @@ function get_comic_path($folder = 'comic', $override_post = null, $filter = 'def
 		
 		if (count($results = glob("${folder_to_use}/${filter_with_date}")) > 0) {
 			$newresults = array();
-			foreach ($results as $result) {
-				// Strip the base directory off.
+			if (is_array($results)) {
+				foreach ($results as $result) {
+					// Strip the base directory off.
+					$newresults[] = str_replace(comicpress_themeinfo('basedir'), '', $result);
+				}
+			} else {
 				$newresults[] = str_replace(comicpress_themeinfo('basedir'), '', $result);
 			}
 			return $newresults;

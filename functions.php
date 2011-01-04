@@ -436,7 +436,7 @@ function comicpress_load_options() {
 			'excerpt_or_content_search' => 'excerpt',
 			'category_thumbnail_postcount' => '-1',
 			'archive_display_comic_thumbs_in_order' => false,
-			'display_comic_archive_as_text_links' => false,
+			'display_archive_as_text_links' => false,
 
 			'members_post_category' => '',
 
@@ -497,7 +497,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.28',
+				'version' => '2.9.2.29',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,
@@ -621,5 +621,6 @@ function comicpress_get_string_to_exclude_all_but_provided_categories($category)
 	if (!is_array($category)) { $category = array($category); }
 	return implode(" and ", array_diff($category_ids, $category));
 }
+
 
 ?>

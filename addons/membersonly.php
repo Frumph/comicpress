@@ -15,7 +15,9 @@ add_shortcode( 'members', 'shortcode_for_comicpress_members_only' );
 add_shortcode( 'member', 'shortcode_for_comicpress_members_only' );
 add_action('show_user_profile', 'comicpress_profile_members_only');
 add_action('edit_user_profile', 'comicpress_profile_members_only');
-add_action('profile_update', 'comicpress_profile_members_only_save');
+
+add_action( 'personal_options_update', 'comicpress_profile_members_only_save' );
+add_action( 'edit_user_profile_update', 'comicpress_profile_members_only_save' );
 
 if (comicpress_themeinfo('members_post_category') && comicpress_themeinfo('disable_showing_members_category'))
 	add_filter('pre_get_posts','comicpress_members_filter');
@@ -58,18 +60,25 @@ function shortcode_for_comicpress_members_only( $atts, $content = null ) {
 }
 
 function comicpress_profile_members_only() { 
-	global $profileuser, $current_user, $errormsg; 
+	global $profileuser, $errormsg;
 	$comicpress_is_member = get_user_meta($profileuser->ID,'comicpress-is-member', true);
 	if (empty($comicpress_is_member)) $comicpress_is_member = 0;
+	$current_site = get_current_site();
+	if (!isset($current_site->site_name)) {
+		$site_name = ucfirst( $current_site->domain );
+	} else {
+		$site_name = $current_site->site_name;
+	}
 	?>
-	<h3><?php _e('Member of','comicpress'); ?> <?php bloginfo('name'); ?></h3>
+	<div style="border: solid 1px #aaa; background: #eee; padding: 0 10px 10px;">
+	<h3><?php _e('Member of','comicpress'); ?> <?php echo $site_name; ?></h3>
 	<table class="form-table">
 	<tr>
-	<th><label for="Memberflag"><?php _e('Member?','comicpress'); ?></label></th>
-	<td> 
+		<th><label for="Memberflag"><?php _e('Member?','comicpress'); ?></label></th>
+		<td> 
 	<?php 
-	if (current_user_can('manage_options')) { ?>
-		<input id="comicpress-is-member" name="comicpress-is-member" type="checkbox" value="1" <?php checked(true, get_user_meta($profileuser->ID,'comicpress-is-member', true)); ?> />		
+	if (current_user_can('edit_users') || is_super_admin()) { ?>
+			<input id="comicpress-is-member" name="comicpress-is-member" type="checkbox" value="1" <?php checked(true, $comicpress_is_member); ?> />		
 	<?php } else {
 		if ($comicpress_is_member) { 
 			echo 'Is Member';
@@ -78,16 +87,23 @@ function comicpress_profile_members_only() {
 		}
 	}
 	?>
-	</td>
+		</td>
 	</tr>
 	</table>
+	</div>
+	<br />
+	<br />
 <?php }
 
-function comicpress_profile_members_only_save() { 
-	$id = (int)$_POST['user_id'];
-	$is_member = (int)$_POST['comicpress-is-member'];
-	$comicpress_is_member = (bool)( $is_member == 1 ? 1 : 0 );
-	update_user_meta($id, 'comicpress-is-member', $comicpress_is_member);
+function comicpress_profile_members_only_save($this_id) {
+	if (current_user_can('edit_users', $this_id)) {
+		if (isset($_POST['comicpress-is-member'])) {
+			$comicpress_is_member = (bool)($_POST['comicpress-is-member'] == 1 ? 1 : 0 );
+		} else {
+			$comicpress_is_member = 0;
+		}
+		update_user_meta($this_id, 'comicpress-is-member', $comicpress_is_member);
+	}
 }
 
 /**
@@ -105,14 +121,16 @@ function in_members_category() {
 }
 
 function comicpress_is_member() {
-	global $user_ID;
-	if (!empty($user_ID)) {
-		$is_member = get_user_meta($user_ID,'comicpress-is-member', true);
+	if (is_super_admin()) return true;
+	$this_ID = get_current_user_id();
+	if (!empty($this_ID)) {
+		$is_member = get_user_meta($this_ID, 'comicpress-is-member', true);
+		if (empty($is_member)) $is_member = false;
 		if ($is_member || current_user_can('manage_options')) {
 			return true;
 		}
 	}
-	return false;	
+	return false;
 }
 
 function comicpress_members_comment_filter($content) {

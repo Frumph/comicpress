@@ -78,7 +78,7 @@ function comicpress_classic_menubar() {
 		$listpages .= $menulinks;
 		?>
 		<ul id="menu">
-		<li class="page_item page-item-home<?php if (is_home()) { ?> current_page_item<?php } ?>"><a href="<?php echo home_url(); ?>">Home</a></li>
+		<li class="<?php if (is_home()) { ?>current_page_item <?php } ?>page_item page-item-home"><a href="<?php echo home_url(); ?>">Home</a></li>
 		<?php echo $listpages; ?>
 		<?php if ($comicpress_options['contact_in_menubar']) { ?>
 			<li class="page_item page-item-contact"><a href="mailto:<?php bloginfo('admin_email'); ?>">Contact</a></li>

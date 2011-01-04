@@ -37,11 +37,11 @@ if (comicpress_themeinfo('enable_comment_count_in_rss')) {
 //Insert the comic image into the RSS feed
 if (!function_exists('comicpress_comic_feed')) {
 	function comicpress_comic_feed() { 
-	global $post; ?>
-		<p><a href="<?php the_permalink(); ?>"><?php echo comicpress_display_comic_thumbnail('rss',$post); ?></a></p>
-		<?php if (comicpress_themeinfo('comic_rank_id')) { ?>
-				<p><a href="http://comicrank.com/<?php echo comicpress_themeinfo('comic_rank_id'); ?>/in" target="_blank"><img src="http://view.comicrank.com/<?php echo comicpress_themeinfo('comic_rank_id'); ?>/1.png" alt="Comic Rank" title="Comic Rank - Webcomic toplist" style="border:none 0px;" /></a></p>
-		<?php }
+		global $post;
+		$output = '<p>';
+		$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post).'</a>';
+		$output .= '</p>';
+		return apply_filters('comicpress_comic_feed', $output);
 	}
 }
 
@@ -49,11 +49,11 @@ if (!function_exists('comicpress_comic_feed')) {
 if (!function_exists('comicpress_insert_comic_feed')) {
 	function comicpress_insert_comic_feed($content) {
 		global $wp_query, $post;
-		if (is_feed() && comicpress_in_comic_category()) {
-			return comicpress_comic_feed() . $content;
-		} else {
-			return $content;
+		$category = get_the_category($post->ID);
+		if (is_feed() && comicpress_in_comic_category($category[0]->cat_ID)) {
+			echo comicpress_comic_feed();
 		}
+		return apply_filters('comicpress_insert_comic_feed', $content);
 	}
 }
 
@@ -61,5 +61,23 @@ add_filter('the_content','comicpress_insert_comic_feed');
 add_filter('the_excerpt','comicpress_insert_comic_feed');
 
 // Using the_content and the_excerpt instead of the_content_rss cause it doesn't work properly otherwise
+/*
+add_filter('comicpress_comic_feed', 'comicpress_test_feed');
+
+function comicpress_test_feed($output) {
+	$output .= '<table width="500" style="border: none;" cellpadding="0" cellpadding="0">';
+	$output .= '<tr>';
+	$output .= '<td style="border: none;"><img src="http://www.zfcomics.com/graphics/footer/top.jpg" alt="" style="width: 500px; height:72px; border: none;" /></td>';
+	$output .= '</tr>';
+	$output .= '<tr>';
+	$output .= '<td><img src="http://www.zfcomics.com/graphics/footer/1.jpg" alt="" style="height:39px; width:25px; border: none;" /><a href="http://www.zfcomics.com"><img src="http://www.zfcomics.com/graphics/footer/read.jpg" alt="" height="39" width="113" padding="0" border="0" /></a><a href="http://www.zfcomics.com/store"><img src="http://www.zfcomics.com/graphics/footer/store.jpg" alt="" width="57" height="39" padding="0" border="0" /></a><a href="http://www.facebook.com/dgriff13"><img src="http://www.zfcomics.com/graphics/footer/fb.jpg" alt="" width="85" height="39" padding="0" border="0" /></a><a href="http://www.twitter.com/dgriff13"><img src="http://www.zfcomics.com/graphics/footer/twitter.jpg" alt="" width="67" height="39"padding="0" border="0" /></a><img src="http://www.zfcomics.com/graphics/footer/2.jpg" alt="" width="61" height="39" padding="0" border="0" /><a href="http://www.facebook.com/dgriff13"><img src="http://www.zfcomics.com/graphics/footer/FBicon.jpg" alt="" width="36" height="39" padding="0" border="0" /></a><a href="http://www.twitter.com/dgriff13"><img src="http://www.zfcomics.com/graphics/footer/twittericon.jpg" alt="" width="37" height="39" padding="0" border="0" /></a><img src="http://www.zfcomics.com/graphics/footer/3.jpg" alt="" style="width: 18px; height:39px; border: none;" /></td>';
+	$output .= '</tr>';
+	$output .= '<tr>';
+	$output .= '<td><img src="http://www.zfcomics.com/graphics/footer/4.jpg" alt="" width="280" height="156" padding="0" border="0" /><a href="http://www.zfcomics.com/store"><img src="http://www.zfcomics.com/graphics/footer/book.jpg" alt="" width="220" height="156" padding="0" border="0" /></a></td>';
+	$output .= '</tr>';
+	$output .= '</table>';
+	return $output;
+}
+*/
 
 ?>

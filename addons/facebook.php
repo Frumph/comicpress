@@ -25,7 +25,7 @@ if (!function_exists('comicpress_display_facebook_like')) {
 		global $post, $wp_query;
 		if (!is_page()) {
 			if ((comicpress_in_comic_category() && comicpress_themeinfo('facebook_like_comic_post')) || (!comicpress_in_comic_category() && comicpress_themeinfo('facebook_like_blog_post'))) {
-				$content .= '<span class="facebook_like"><fb:like layout="box_count" show_faces="false" width="55" href="'.get_permalink().'"></fb:like></span>';
+				$content .= '<span class="facebook-like"><fb:like layout="box_count" show_faces="false" width="255" href="'.get_permalink().'"></fb:like></span>';
 			}
 		}
 		return $content;

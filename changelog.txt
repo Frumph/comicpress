@@ -1,4 +1,10 @@
-﻿2.9.2.28
+﻿2.9.2.29
+revamped the syndication comic into the rss to allow for a filter that can be used to add info to the syndication
+added extra profile options for MSN, Twitter and Facebook fields - functions/profile-options.php
+total rewrite of archive.php - fixed bug with text-links for the archive.php
+added new widget "reference" documentation is inside the widget and will be on comicpress.net
+
+2.9.2.28
 change the forum url to http://comicpress.net/forum/ bbpress wasnt working out, so switched to simple:press
 added 2 new options on the comicpress-options post&pages tab,  enable facebook like 
 added new widget, facebook like, that goes in any of the comic sidebars for better control where you might the like button to be
