@@ -11,7 +11,7 @@ if (!function_exists('comicpress_footer_text')) {
 			$output .= "<span class=\"footer-pipe\">|</span> ";
 			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
 		$output .= "</span>\r\n";
-		if (!comicpress_themeinfo('disable_scroll_to_top')) { 
+		if (!comicpress_themeinfo('enable_scroll_to_top"')) { 
 			$output .= "<span class=\"footer-uptotop\">";
 				$output .= "<span class=\"footer-pipe\">|</span> ";
 				$output .= "<a href=\"#outside\" onclick=\"scrollup(); return false;\">".__('Back to Top &uarr;','comicpress')."</a>";

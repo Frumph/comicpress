@@ -2,11 +2,12 @@
 get_header();
 
 // set to empty
-$order = $post_count = $theCatID = '';
+$order = $post_count = $theCatID = $is_comic = '';
 if (is_category()) {
 	$theCatID = get_term_by( 'slug', $wp_query->query_vars['category_name'], 'category' );
 	if (!empty($theCatID))
 		$theCatID = $theCatID->term_id;
+	if (isset($wp_query->query_vars['cat'])) $theCatID = (int)$wp_query->query_vars['cat'];
 }
 
 $category_thumbnail_postcount = comicpress_themeinfo('category_thumbnail_postcount');
