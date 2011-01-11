@@ -41,7 +41,6 @@
 						<?php _e('The primary blog category.','comicpress'); ?>
 					</td>
 				</tr>
-
 				<?php
 					$directories = glob(comicpress_themeinfo('basedir').'/*');
 					$current_directory = comicpress_themeinfo('comic_folder');
@@ -65,7 +64,11 @@
 						<?php _e('Choose a directory to get the original sized comics from.','comicpress'); ?>
 					</td>
 				</tr>
-
+				<tr>
+					<th scope="row" colspan="3">
+						<?php _e('If you set the directory for the rss, mini and archive to the base comic folder, it will utilize the original as images and not look for a thumbnail.  Alternatively if it does not find a thumbnail it will fallback to the original as well.','comicpress'); ?>
+					</th>
+				</tr>
 				<?php
 					$current_directory = comicpress_themeinfo('rss_comic_folder');
 				?>

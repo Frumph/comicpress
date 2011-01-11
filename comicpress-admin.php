@@ -4,13 +4,7 @@ add_action('admin_menu', 'comicpress_options_setup');
 
 function comicpress_options_setup() {
 	$options_title = __('ComicPress Options','comicpress');
-/*	if (!function_exists('ceo_pluginfo')) {
-		$admin_title = __("Comic Easel Manager", 'comicpress');
-		$pagehook = add_menu_page($admin_title, __('ComicPress', 'comicpress'), 10, 'comicpress-options', 'comicpress_admin_options', get_template_directory_uri() . '/images/comicpress-icon.png', 9);
-		$pagehook = add_submenu_page('comicpress-options', $admin_title, $options_title, 10, 'comicpress-options', 'comicpress_admin_options');
-	} else { */
 	$pagehook = add_submenu_page('themes.php', $options_title, $options_title, 'edit_themes', 'comicpress-options', 'comicpress_admin_options');
-//	}
 	add_action('admin_head-' . $pagehook, 'comicpress_admin_page_head');
 	add_action('admin_print_scripts-' . $pagehook, 'comicpress_admin_print_scripts');
 	add_action('admin_print_styles-' . $pagehook, 'comicpress_admin_print_styles');

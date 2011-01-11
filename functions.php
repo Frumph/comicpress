@@ -477,7 +477,16 @@ function comicpress_load_options() {
 			'facebook_like_comic_post' => false,
 			'facebook_meta' => false,
 			'enable_comic_lightbox' => false,
-			'cdn_url' => ''
+			'cdn_url' => '',
+			'comiccat' => '1',
+			'blogcat' => '3',
+			'comic_folder' => 'comics',
+			'rss_comic_folder' => 'comics-rss',
+			'archive_comic_folder' => 'comics-archive',
+			'mini_comic_folder' => 'comics-mini',
+			'rss_comic_width' => '240',
+			'archive_comic_width' => '420',
+			'mini_comic_width' => '198'
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
