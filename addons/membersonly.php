@@ -63,11 +63,14 @@ function comicpress_profile_members_only() {
 	global $profileuser, $errormsg;
 	$comicpress_is_member = get_user_meta($profileuser->ID,'comicpress-is-member', true);
 	if (empty($comicpress_is_member)) $comicpress_is_member = 0;
-	$current_site = get_current_site();
-	if (!isset($current_site->site_name)) {
-		$site_name = ucfirst( $current_site->domain );
-	} else {
-		$site_name = $current_site->site_name;
+	$site_name = get_option('blogname');
+	if (is_multisite()) {
+		$current_site = get_current_site();
+		if (!isset($current_site->site_name)) {
+			$site_name = ucfirst( $current_site->domain );
+		} else {
+			$site_name = $current_site->site_name;
+		}
 	}
 	?>
 	<div style="border: solid 1px #aaa; background: #eee; padding: 0 10px 10px;">

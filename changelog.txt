@@ -3,6 +3,7 @@ $is_comic needed to be set in the archive.php before hand, was giving notice
 thanks to @generaltekno for finding bug with footer-text.php with the scroll to top, adjusted it to be enable_scroll_to_top
 again thanks to @generaltekno for finding the facebook like widget needing one of the facebook likes active, now changed to check if the widget is active as well
 fixed the archive.php to check for non-permalinked cat= properly
+change to wp_login_form in the control panel widget
 
 2.9.2.29
 revamped the syndication comic into the rss to allow for a filter that can be used to add info to the syndication
