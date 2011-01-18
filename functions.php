@@ -111,7 +111,10 @@ if (is_admin()) {
 
 // Register Sidebar and Define Widgets
 
-if ( function_exists('register_sidebar') ) {
+add_action( 'widgets_init', 'comicpress_sidebar_init' );
+
+if (!function_exists('comicpress_sidebar_init')) {
+function comicpress_sidebar_init() {
 	foreach (array(
 				__('Left Sidebar', 'comicpress'),
 				__('Right Sidebar', 'comicpress'),
@@ -136,6 +139,7 @@ if ( function_exists('register_sidebar') ) {
 					'before_title'  => "<h2 class=\"widgettitle\">",
 					'after_title'   => "</h2>\r\n"
 					));
+		}
 	}
 }
 
@@ -160,7 +164,7 @@ function __comicpress_init() {
 			wp_enqueue_script('menubar_js', get_template_directory_uri() . '/js/menubar.js');
 		}
 		if (comicpress_themeinfo('enable_scroll_to_top')) {
-			wp_enqueue_script('comicpress_scroll', get_template_directory_uri() . '/js/scroll.js', array(), false, true);
+			wp_enqueue_script('comicpress_scroll', get_template_directory_uri() . '/js/scroll.js', null, null, true);
 		}
 		if (comicpress_themeinfo('enable_multicomic_jquery')) {
 			wp_enqueue_script('multicomic', get_template_directory_uri() . '/js/multicomic.js');
@@ -173,7 +177,7 @@ function __comicpress_init() {
 			wp_enqueue_style('navstyle',get_template_directory_uri() . '/images/nav/default/navstyle.css');
 		}
 		if (is_active_widget('comicpress_google_translate_widget', false, 'comicpress_google_translate_widget', true)) {
-			wp_enqueue_script('google-translate', 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', array(), false, true);
+			wp_enqueue_script('google-translate', 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', null, null, true);
 			wp_enqueue_script('google-translate-settings', get_template_directory_uri() . '/js/googletranslate.js');
 		}
 		if (is_active_widget('comicpress_jquery_bookmark_widget', false, 'comicpress_jquery_bookmark_widget', true)) {
@@ -182,7 +186,7 @@ function __comicpress_init() {
 			wp_enqueue_script('bookmark', get_template_directory_uri() . '/js/bookmark.js', array('prototype', 'cookiejar'));
 		}
 		if (is_active_widget('comicpress_facebook_like_widget', false, 'comicpress_facebook_like_widget', true) || comicpress_themeinfo('facebook_like_blog_post') || comicpress_themeinfo('facebook_like_comic_post'))
-			wp_enqueue_script('facebook', 'http://connect.facebook.net/en_US/all.js#xfbml=1', array(), false, true);
+			wp_enqueue_script('easel-facebook', 'http://connect.facebook.net/en_US/all.js#xfbml=1');	// force to the header instead of footer
 	}
 	
 	do_action('comicpress_init');
@@ -298,7 +302,7 @@ function comicpress_create_category_tree() {
 	global $category_tree, $comiccat;
 	if (empty($category_tree)) {
 		$categories_by_id = comicpress_get_comic_category_objects_by_id();	
-		if (empty($categories_by_id)) return false;
+		if (empty($categories_by_id) || !is_array($categories_by_id)) return false;
 		foreach (array_keys($categories_by_id) as $category_id) {
 			$category_tree[] = $categories_by_id[$category_id]->parent . '/' . $category_id;
 		}
@@ -507,7 +511,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.29.1',
+				'version' => '2.9.2.29.2',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,

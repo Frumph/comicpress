@@ -235,25 +235,25 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 				$instance[$key] = (bool)( $new_instance[$key] == 1 ? true : false );
 		}
 		
-		$instance['archive_path'] = strip_tags($new_instance['archive_path']);		
-		$instance['first_title'] = strip_tags($new_instance['first_title']);
-		$instance['last_title'] = strip_tags($new_instance['last_title']);
-		$instance['story_prev_title'] = strip_tags($new_instance['story_prev_title']);
-		$instance['story_next_title'] = strip_tags($new_instance['story_next_title']);
-		$instance['prev_in_title'] = strip_tags($new_instance['prev_in_title']);
-		$instance['next_in_title'] = strip_tags($new_instance['next_in_title']);
-		$instance['first_in_title'] = strip_tags($new_instance['first_in_title']);
-		$instance['last_in_title'] = strip_tags($new_instance['last_in_title']);		
-		$instance['previous_title'] = strip_tags($new_instance['previous_title']);
-		$instance['random_title'] = strip_tags($new_instance['random_title']);
-		$instance['archives_title'] = strip_tags($new_instance['archives_title']);
-		$instance['comments_title'] = strip_tags($new_instance['comments_title']);
-		$instance['next_title'] = strip_tags($new_instance['next_title']);
+		$instance['archive_path'] = wp_filter_nohtml_kses($new_instance['archive_path']);		
+		$instance['first_title'] = wp_filter_nohtml_kses($new_instance['first_title']);
+		$instance['last_title'] = wp_filter_nohtml_kses($new_instance['last_title']);
+		$instance['story_prev_title'] = wp_filter_nohtml_kses($new_instance['story_prev_title']);
+		$instance['story_next_title'] = wp_filter_nohtml_kses($new_instance['story_next_title']);
+		$instance['prev_in_title'] = wp_filter_nohtml_kses($new_instance['prev_in_title']);
+		$instance['next_in_title'] = wp_filter_nohtml_kses($new_instance['next_in_title']);
+		$instance['first_in_title'] = wp_filter_nohtml_kses($new_instance['first_in_title']);
+		$instance['last_in_title'] = wp_filter_nohtml_kses($new_instance['last_in_title']);		
+		$instance['previous_title'] = wp_filter_nohtml_kses($new_instance['previous_title']);
+		$instance['random_title'] = wp_filter_nohtml_kses($new_instance['random_title']);
+		$instance['archives_title'] = wp_filter_nohtml_kses($new_instance['archives_title']);
+		$instance['comments_title'] = wp_filter_nohtml_kses($new_instance['comments_title']);
+		$instance['next_title'] = wp_filter_nohtml_kses($new_instance['next_title']);
 		if (comicpress_themeinfo('enable_buy_print')) {
-			$instance['buyprint_title'] = strip_tags($new_instance['buyprint_title']);
+			$instance['buyprint_title'] = wp_filter_nohtml_kses($new_instance['buyprint_title']);
 		}
-		$instance['sharethis_title'] = strip_tags($new_instance['sharethis_title']);
-		$instance['subscribe_title'] = strip_tags($new_instance['subscribe_title']);
+		$instance['sharethis_title'] = wp_filter_nohtml_kses($new_instance['sharethis_title']);
+		$instance['subscribe_title'] = wp_filter_nohtml_kses($new_instance['subscribe_title']);
 		return $instance;
 	}
 	
@@ -297,40 +297,40 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 		?>
 	
 		<input id="<?php echo $this->get_field_id('first'); ?>" name="<?php echo $this->get_field_name('first'); ?>" type="checkbox" value="1" <?php checked(true, $instance['first']); ?> /> <label for="<?php echo $this->get_field_id('first'); ?>"><strong><?php _e('First','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('first_title'); ?>" name="<?php echo $this->get_field_name('first_title'); ?>" type="text" value="<?php echo esc_attr($instance['first_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('first_title'); ?>" name="<?php echo $this->get_field_name('first_title'); ?>" type="text" value="<?php echo stripcslashes($instance['first_title']); ?>" /></label><br />	
 		<br />
 		<input id="<?php echo $this->get_field_id('last'); ?>" name="<?php echo $this->get_field_name('last'); ?>" type="checkbox" value="1" <?php checked(true, $instance['last']); ?> /> <label for="<?php echo $this->get_field_id('last'); ?>"><strong><?php _e('Last','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('last_title'); ?>" name="<?php echo $this->get_field_name('last_title'); ?>" type="text" value="<?php echo esc_attr($instance['last_title']); ?>" /></label><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('last_title'); ?>" name="<?php echo $this->get_field_name('last_title'); ?>" type="text" value="<?php echo stripcslashes($instance['last_title']); ?>" /></label><br />
 		<br />
 		
 		<input id="<?php echo $this->get_field_id('previous'); ?>" name="<?php echo $this->get_field_name('previous'); ?>" type="checkbox" value="1" <?php checked(true, $instance['previous']); ?> /> <label for="<?php echo $this->get_field_id('previous'); ?>"><strong><?php _e('Previous','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('first_title'); ?>" name="<?php echo $this->get_field_name('previous_title'); ?>" type="text" value="<?php echo esc_attr($instance['previous_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('first_title'); ?>" name="<?php echo $this->get_field_name('previous_title'); ?>" type="text" value="<?php echo stripcslashes($instance['previous_title']); ?>" /></label><br />	
 		<br />
 		<input id="<?php echo $this->get_field_id('next'); ?>" name="<?php echo $this->get_field_name('next'); ?>" type="checkbox" value="1" <?php checked(true, $instance['next']); ?> /> <label for="<?php echo $this->get_field_id('next'); ?>"><strong><?php _e('Next','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('next_title'); ?>" name="<?php echo $this->get_field_name('next_title'); ?>" type="text" value="<?php echo esc_attr($instance['next_title']); ?>" /></label><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('next_title'); ?>" name="<?php echo $this->get_field_name('next_title'); ?>" type="text" value="<?php echo stripcslashes($instance['next_title']); ?>" /></label><br />
 		<br />
 
 <?php if (comicpress_themeinfo('enable-storyline-support') == 1) { ?>
 
 		<input id="<?php echo $this->get_field_id('story_prev'); ?>" name="<?php echo $this->get_field_name('story_prev'); ?>" type="checkbox" value="1" <?php checked(true, $instance['story_prev']); ?> /> <label for="<?php echo $this->get_field_id('story_prev'); ?>"><strong><?php _e('Previous Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('story_prev_title'); ?>" name="<?php echo $this->get_field_name('story_prev_title'); ?>" type="text" value="<?php echo esc_attr($instance['story_prev_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('story_prev_title'); ?>" name="<?php echo $this->get_field_name('story_prev_title'); ?>" type="text" value="<?php echo stripcslashes($instance['story_prev_title']); ?>" /></label><br />	
 		<br />
 		<input id="<?php echo $this->get_field_id('story_next'); ?>" name="<?php echo $this->get_field_name('story_next'); ?>" type="checkbox" value="1" <?php checked(true, $instance['story_next']); ?> /> <label for="<?php echo $this->get_field_id('story_next'); ?>"><strong><?php _e('Next Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('story_next_title'); ?>" name="<?php echo $this->get_field_name('story_next_title'); ?>" type="text" value="<?php echo esc_attr($instance['story_next_title']); ?>" /></label><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('story_next_title'); ?>" name="<?php echo $this->get_field_name('story_next_title'); ?>" type="text" value="<?php echo stripcslashes($instance['story_next_title']); ?>" /></label><br />
 		<br />
 		
 		<input id="<?php echo $this->get_field_id('first_in'); ?>" name="<?php echo $this->get_field_name('first_in'); ?>" type="checkbox" value="1" <?php checked(true, $instance['first_in']); ?> /> <label for="<?php echo $this->get_field_id('first_in'); ?>"><strong><?php _e('First In Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('first_in_title'); ?>" name="<?php echo $this->get_field_name('first_in_title'); ?>" type="text" value="<?php echo esc_attr($instance['first_in_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('first_in_title'); ?>" name="<?php echo $this->get_field_name('first_in_title'); ?>" type="text" value="<?php echo stripcslashes($instance['first_in_title']); ?>" /></label><br />	
 		<br />
 		<input id="<?php echo $this->get_field_id('last_in'); ?>" name="<?php echo $this->get_field_name('last_in'); ?>" type="checkbox" value="1" <?php checked(true, $instance['last_in']); ?> /> <label for="<?php echo $this->get_field_id('story_next'); ?>"><strong><?php _e('Latest In Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('last_in_title'); ?>" name="<?php echo $this->get_field_name('last_in_title'); ?>" type="text" value="<?php echo esc_attr($instance['last_in_title']); ?>" /></label><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('last_in_title'); ?>" name="<?php echo $this->get_field_name('last_in_title'); ?>" type="text" value="<?php echo stripcslashes($instance['last_in_title']); ?>" /></label><br />
 		<br />
 		
 		<input id="<?php echo $this->get_field_id('prev_in'); ?>" name="<?php echo $this->get_field_name('prev_in'); ?>" type="checkbox" value="1" <?php checked(true, $instance['prev_in']); ?> /> <label for="<?php echo $this->get_field_id('prev_in'); ?>"><strong><?php _e('Previous In Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('prev_in_title'); ?>" name="<?php echo $this->get_field_name('prev_in_title'); ?>" type="text" value="<?php echo esc_attr($instance['prev_in_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('prev_in_title'); ?>" name="<?php echo $this->get_field_name('prev_in_title'); ?>" type="text" value="<?php echo stripcslashes($instance['prev_in_title']); ?>" /></label><br />	
 		<br />
 		<input id="<?php echo $this->get_field_id('next_in'); ?>" name="<?php echo $this->get_field_name('next_in'); ?>" type="checkbox" value="1" <?php checked(true, $instance['next_in']); ?> /> <label for="<?php echo $this->get_field_id('next_in'); ?>"><strong><?php _e('Next In Chapter','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('next_in_title'); ?>" name="<?php echo $this->get_field_name('next_in_title'); ?>" type="text" value="<?php echo esc_attr($instance['next_in_title']); ?>" /></label><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('next_in_title'); ?>" name="<?php echo $this->get_field_name('next_in_title'); ?>" type="text" value="<?php echo stripcslashes($instance['next_in_title']); ?>" /></label><br />
 		<br />
 		
 <?php } ?>
@@ -339,29 +339,29 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 		<br />
 		
 		<input id="<?php echo $this->get_field_id('archives'); ?>" name="<?php echo $this->get_field_name('archives'); ?>" type="checkbox" value="1" <?php checked(true, $instance['archives']); ?> /> <label for="<?php echo $this->get_field_id('archives'); ?>"><strong><?php _e('Archives','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('archives_title'); ?>" name="<?php echo $this->get_field_name('archives_title'); ?>" type="text" value="<?php echo esc_attr($instance['archives_title']); ?>" /><br />	
-		Archive URL: <input class="widefat" id="<?php echo $this->get_field_id('archive_path'); ?>" name="<?php echo $this->get_field_name('archive_path'); ?>" type="text" value="<?php echo esc_attr($instance['archive_path']); ?>" /><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('archives_title'); ?>" name="<?php echo $this->get_field_name('archives_title'); ?>" type="text" value="<?php echo stripcslashes($instance['archives_title']); ?>" /><br />	
+		Archive URL: <input class="widefat" id="<?php echo $this->get_field_id('archive_path'); ?>" name="<?php echo $this->get_field_name('archive_path'); ?>" type="text" value="<?php echo stripcslashes($instance['archive_path']); ?>" /><br />
 		<br />
 
 		<input id="<?php echo $this->get_field_id('comments'); ?>" name="<?php echo $this->get_field_name('comments'); ?>" type="checkbox" value="1" <?php checked(true, $instance['comments']); ?> /> <label for="<?php echo $this->get_field_id('comments'); ?>"><strong><?php _e('Comments','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('comments_title'); ?>" name="<?php echo $this->get_field_name('comments_title'); ?>" type="text" value="<?php echo esc_attr($instance['comments_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('comments_title'); ?>" name="<?php echo $this->get_field_name('comments_title'); ?>" type="text" value="<?php echo stripcslashes($instance['comments_title']); ?>" /></label><br />	
 		<br />
 
 		<input id="<?php echo $this->get_field_id('random'); ?>" name="<?php echo $this->get_field_name('random'); ?>" type="checkbox" value="1" <?php checked(true, $instance['random']); ?> /> <label for="<?php echo $this->get_field_id('random'); ?>"><strong><?php _e('Random','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('random_title'); ?>" name="<?php echo $this->get_field_name('random_title'); ?>" type="text" value="<?php echo esc_attr($instance['random_title']); ?>" /></label><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('random_title'); ?>" name="<?php echo $this->get_field_name('random_title'); ?>" type="text" value="<?php echo stripcslashes($instance['random_title']); ?>" /></label><br />	
 		<br />
 		<?php if (comicpress_themeinfo('enable_buy_print')) { ?>
 			<input id="<?php echo $this->get_field_id('buyprint'); ?>" name="<?php echo $this->get_field_name('buyprint'); ?>" type="checkbox" value="1" <?php checked(true, $instance['buyprint']); ?> /> <label for="<?php echo $this->get_field_id('buyprint'); ?>"><strong><?php _e('Buy Print','comicpress'); ?></strong></label>
-			<input class="widefat" id="<?php echo $this->get_field_id('buyprint_title'); ?>" name="<?php echo $this->get_field_name('buyprint_title'); ?>" type="text" value="<?php echo esc_attr($instance['buyprint_title']); ?>" /></label><br />	
+			<input class="widefat" id="<?php echo $this->get_field_id('buyprint_title'); ?>" name="<?php echo $this->get_field_name('buyprint_title'); ?>" type="text" value="<?php echo stripcslashes($instance['buyprint_title']); ?>" /></label><br />	
 			<br />
 		<?php } ?>
 
 		<input id="<?php echo $this->get_field_id('sharethis'); ?>" name="<?php echo $this->get_field_name('sharethis'); ?>" type="checkbox" value="1" <?php checked(true, $instance['sharethis']); ?> /> <label for="<?php echo $this->get_field_id('sharethis'); ?>"><strong><?php _e('Share','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('sharethis_title'); ?>" name="<?php echo $this->get_field_name('sharethis_title'); ?>" type="text" value="<?php echo esc_attr($instance['sharethis_title']); ?>" /><br />
+		<input class="widefat" id="<?php echo $this->get_field_id('sharethis_title'); ?>" name="<?php echo $this->get_field_name('sharethis_title'); ?>" type="text" value="<?php echo stripcslashes($instance['sharethis_title']); ?>" /><br />
 		<br />
 
 		<input id="<?php echo $this->get_field_id('subscribe'); ?>" name="<?php echo $this->get_field_name('subscribe'); ?>" type="checkbox" value="1" <?php checked(true, $instance['subscribe']); ?> /> <label for="<?php echo $this->get_field_id('subscribe'); ?>"><strong><?php _e('Subscribe','comicpress'); ?></strong></label>
-		<input class="widefat" id="<?php echo $this->get_field_id('subscribe_title'); ?>" name="<?php echo $this->get_field_name('subscribe_title'); ?>" type="text" value="<?php echo esc_attr($instance['subscribe_title']); ?>" /><br />	
+		<input class="widefat" id="<?php echo $this->get_field_id('subscribe_title'); ?>" name="<?php echo $this->get_field_name('subscribe_title'); ?>" type="text" value="<?php echo stripcslashes($instance['subscribe_title']); ?>" /><br />	
 		<br />
 		
 		<hr>

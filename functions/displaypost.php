@@ -87,7 +87,6 @@ if (!function_exists('comicpress_display_post_time')) {
 	}
 }
 
-
 if (!function_exists('comicpress_display_post_category')) {
 	function comicpress_display_post_category($is_comic = false) {
 		global $post, $wp_query;
