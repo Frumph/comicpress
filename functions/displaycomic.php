@@ -347,7 +347,7 @@ function get_comic_path($folder = 'comic', $override_post = null, $filter = 'def
 		foreach ($comicfile as $comic) {
 			if (!file_exists($folder_to_use . '/' . $comic) && $folder !== 'comic') 
 				$subfolder_to_use = comicpress_themeinfo('comic_folder'); 
-			$newresults[] = trailingslashit($subfolder_to_use) . trailingslashit($comic);
+			$newresults[] = trailingslashit($subfolder_to_use) . $comic;
 		}
 		return $newresults;
 		

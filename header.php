@@ -18,10 +18,7 @@
   ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />	
-<!--[if lt IE 7]>
-   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/ie6submenus.js"></script>
-<![endif]-->
+	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
 <?php wp_head(); ?>
 </head>
 

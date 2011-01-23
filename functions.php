@@ -158,7 +158,7 @@ function __comicpress_init() {
 	// initiate the scripts
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
-		if ( is_singular() && comicpress_themeinfo('enable_comment_javascript') && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
+		if ( comicpress_themeinfo('enable_comment_javascript') ) wp_enqueue_script( 'comment-reply' );
 		if (!comicpress_themeinfo('disable_jquery_menu_code')) {
 			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri() . '/js/ddsmoothmenu.js'); 
 			wp_enqueue_script('menubar_js', get_template_directory_uri() . '/js/menubar.js');

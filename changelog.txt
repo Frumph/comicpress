@@ -1,6 +1,9 @@
 ﻿2.9.2.29.2
 Fixed the issue with the comic navigation widget text boxes not properly escaping and unescapping strings
 moved the facebook like script to load in the header to avoid a script error
+fixed the reply to javascript to show apparently it doesnt like is_singular, go figure
+displaying category list properly now, instead of multiple
+removed trailingslashit from around $comic in displaycomic.php line #350, thanks @nismorack
 
 2.9.2.29.1
 $is_comic needed to be set in the archive.php before hand, was giving notice

@@ -93,9 +93,9 @@ if (!function_exists('comicpress_display_post_category')) {
 		if ($post->post_type == 'post') {
 			if (!comicpress_themeinfo('disable_categories_in_posts')) {
 				if (comicpress_themeinfo('enable-storyline-support') == 1 && $is_comic) {
-					$post_category = "<ul class=\"storyline-cats\"><li class=\"storyline-root\">". get_the_category_list(' &raquo; </li><li>', 'multiple')."</li></ul>\r\n";
+					$post_category = "<ul class=\"storyline-cats\"><li class=\"storyline-root\">". get_the_category_list(' &raquo; </li><li>')."</li></ul>\r\n";
 				} else {
-					$post_category = "<div class=\"post-cat\">". __('Posted In: ','comicpress') .get_the_category_list(', ', 'multiple')."</div>\r\n";
+					$post_category = "<div class=\"post-cat\">". __('Posted In: ','comicpress') .get_the_category_list(', ')."</div>\r\n";
 				}
 				echo apply_filters('comicpress_display_post_category', $post_category);
 			}
