@@ -19,7 +19,7 @@ class comicpress_archive_dropdown_widget extends WP_Widget {
 	}
 	
 	function widget($args, $instance) {
-		global $comiccat, $wp_query, $post;
+		global $wp_query, $post;
 		Protect();
 		extract($args, EXTR_SKIP); 
 		echo $before_widget;

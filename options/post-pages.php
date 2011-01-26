@@ -288,6 +288,15 @@
 						<?php _e('If you disable the titles no pages you can still add a post-image in the page editor.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="enable_page_options"><?php _e('Enable Additional Page Options','comicpress'); ?></label></th>
+					<td>
+						<input id="enable_page_options" name="enable_page_options" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_page_options')); ?> />
+					</td>
+					<td>
+						<?php _e('Extra Options when editing a page, like disable sidebars on that page only.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 
 		</div>

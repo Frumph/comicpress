@@ -16,8 +16,7 @@
 					<th scope="row">
 						<label for="comiccat"><?php _e('Comic Category','comicpress'); ?></label>
 						<?php
-							$comiccat = comicpress_themeinfo('comiccat');
-							$select = wp_dropdown_categories('show_option_all=Select category&hide_empty=0&show_count=0&orderby=name&echo=0&selected='.$comiccat);
+							$select = wp_dropdown_categories('show_option_all=Select category&hide_empty=0&show_count=0&orderby=name&echo=0&selected='.comicpress_themeinfo('comiccat'));
 							$select = preg_replace('#<select([^>]*)>#', '<select name="comiccat" id="comicccat">', $select);
 							echo $select;
 						?>

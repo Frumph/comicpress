@@ -84,6 +84,8 @@ function comicpress_body_class($classes = '') {
 			$classes[] = 'attachment-' . $type;
 		endforeach;
 	}
+	
+	if (comicpress_disable_sidebars()) $classes[] = 'wide';
 
 	$classes[] = 'layout-'.comicpress_themeinfo('cp_theme_layout');
 

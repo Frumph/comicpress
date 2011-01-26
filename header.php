@@ -28,7 +28,7 @@ if (is_active_sidebar('above-header')) get_sidebar('above');
 ?> 
 <div id="page-head"></div>
 <?php if (!comicpress_themeinfo('disable_page_restraints')) {
-	if (is_cp_theme_layout('standard,v')) { ?>
+	if (is_cp_theme_layout('2cr,2cl,2cvr,2cvl')) { ?>
 <div id="page-wrap"><!-- Wraps outside the site width -->
 	<div id="page"><!-- Defines entire site width - Ends in Footer -->
 <?php } else { ?>

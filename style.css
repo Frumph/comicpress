@@ -6,7 +6,7 @@ Description: Publish a comic with WordPress. Visit the ComicPress Website (<a hr
 Author: Philip M. Hofer
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
-Version: 2.9.2.29.2
+Version: 2.9.2.30
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 .
@@ -372,6 +372,15 @@ h4, h4 a {
 
 /* THE COMIC */
 
+#comic-wrap {
+	width: auto;
+}
+
+.layout-lgn #comic-wrap {
+	width: 770px;
+	float: left;
+}
+
 #comic-head {
 	clear: both;
 }
@@ -486,7 +495,7 @@ h4, h4 a {
 
 /* POSTS - PAGES */
 
-#pagewrap-right {
+.gn-wrap {
 	width: 770px;
 	padding: 0;
 	margin: 0;
@@ -494,10 +503,8 @@ h4, h4 a {
 	overflow: hidden;
 }
 
-#pagewrap-left {
-	width: 560px;
-	float: left;
-	overflow: hidden;
+.wide .gn-wrap {
+	width: 100%;
 }
 
 #subcontent-wrapper {
@@ -509,14 +516,20 @@ h4, h4 a {
 }
 
 .narrowcolumn {
-	width: 550px;
-	padding: 0 5px;
+	width: 560px;
 	overflow: hidden;
 }
 
 /* add 10px to smaller width layouts */
-.layout-standard .narrowcolumn, .layout-v .narrowcolumn {
-	width: 560px;
+.layout-2cr .narrowcolumn, 
+.layout-2cl .narrowcolumn,
+.layout-2cvr .narrowcolumn, 
+.layout-2cvl .narrowcolumn {
+	width: 570px;
+}
+
+.wide .narrowcolumn {
+	width: 100%;
 }
 
 .widecolumn {
@@ -536,7 +549,8 @@ h4, h4 a {
 	padding: 1%;
 }
 
-.post {
+.post, #comment-wrapper {
+	padding: 0 5px;
 }
 
 .post-type-cat {
@@ -739,7 +753,7 @@ textarea#comment {
 }
 
 .form-submit {
-	float: right;
+	float: left;
 	display: inline-block
  }
 
@@ -864,17 +878,10 @@ ul.children {
 /* SIDEBAR */
 
 /* Left Sidebar Themes */
-#sidebar-left {
+#sidebar-left, #sidebar-right {
 	float: left;
-	width: 200px;
-	padding: 5px;
-}
-
-/* Right Sidebar Themes */
-#sidebar-right {
-	float: right;
-	width: 200px;
-	padding: 5px;
+	width: 206px;
+	padding: 2px;
 }
 
 #sidebar-overcomic {

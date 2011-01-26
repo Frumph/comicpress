@@ -20,8 +20,8 @@ class comicpress_control_panel_widget extends WP_Widget {
 		global $user_login;
 		if (!is_user_logged_in()) {
 			$args = array(
-					'label_username' => __('Username', 'easel'),
-					'label_password' => __('Password', 'easel')
+					'label_username' => __('Username', 'comicpress'),
+					'label_password' => __('Password', 'comicpress')
 					);
 				wp_login_form($args); 
 			?>

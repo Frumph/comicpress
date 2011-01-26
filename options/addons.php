@@ -8,15 +8,15 @@
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="5"><?php _e('Custom Header','easel'); ?></th>
+					<th colspan="5"><?php _e('Custom Header','comicpress'); ?></th>
 				</tr>
 			</thead>
 			<tr class="alternate">
-				<th scope="row"><label for="custom_image_header_width"><?php _e('Custom Header Values','easel'); ?></label></th>
+				<th scope="row"><label for="custom_image_header_width"><?php _e('Custom Header Values','comicpress'); ?></label></th>
 				<td>
-					<?php _e('Width:','easel'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo comicpress_themeinfo('custom_image_header_width'); ?>" />px &nbsp;
-					<?php _e('Height:','easel'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo comicpress_themeinfo('custom_image_header_height'); ?>" />px<br />
-					<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header - 780px is for standard and v layouts, the rest are wide at 980px.','easel'); ?>
+					<?php _e('Width:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo comicpress_themeinfo('custom_image_header_width'); ?>" />px &nbsp;
+					<?php _e('Height:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo comicpress_themeinfo('custom_image_header_height'); ?>" />px<br />
+					<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header - 780px is for standard and v layouts, the rest are wide at 980px.','comicpress'); ?>
 				</td>
 			</tr>
 		</table>
@@ -239,14 +239,14 @@
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th colspan="5"><?php _e('CDN (Content Delivery Network)','easel'); ?></th>
+					<th colspan="5"><?php _e('CDN (Content Delivery Network)','comicpress'); ?></th>
 				</tr>
 			</thead>
 			<tr class="alternate">
-				<th scope="row"><label for="cdn_url"><?php _e('CDN URL','easel'); ?></label></th>
+				<th scope="row"><label for="cdn_url"><?php _e('CDN URL','comicpress'); ?></label></th>
 				<td>
-					<?php _e('URL:','easel'); ?> <input type="text" size="40" name="cdn_url" id="cdn_url" value="<?php echo comicpress_themeinfo('cdn_url'); ?>" /><br />
-					<?php _e('If you are using a content delivery network, put the URL to where the comics are stored here.  This will replace the url used in the img tag when outputting the comic.','easel'); ?>
+					<?php _e('URL:','comicpress'); ?> <input type="text" size="40" name="cdn_url" id="cdn_url" value="<?php echo comicpress_themeinfo('cdn_url'); ?>" /><br />
+					<?php _e('If you are using a content delivery network, put the URL to where the comics are stored here.  This will replace the url used in the img tag when outputting the comic.','comicpress'); ?>
 				</td>
 			</tr>
 		</table>

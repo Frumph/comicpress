@@ -197,8 +197,7 @@ function comicpress_get_next_storyline_start_permalink() {
 }
 
 function comicpress_get_adjacent_storyline_category_id($next = false) {
-	global $post;
-	$category_tree = comicpress_themeinfo('category_tree');
+	global $post, $category_tree;
 	$categories = get_the_category($post->ID);
 	if (is_array($categories)) {
 		$category_id = $categories[0]->cat_ID;

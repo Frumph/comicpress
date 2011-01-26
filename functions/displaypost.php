@@ -12,7 +12,10 @@ if (!function_exists('comicpress_display_post_title')) {
 		}
 		
 		if (is_home() || is_search() || is_archive() || $is_comic && !is_page()) $post_title .= "<a href=\"".get_permalink()."\">";
-		$post_title .= get_the_title();
+		$the_post_title = get_the_title();
+		if (empty($the_post_title)) $the_post_title = __('No Post Title','comicpress');
+		$post_title .= $the_post_title;
+		
 		if (is_home() || is_search() || is_archive() || $is_comic && !is_page()) $post_title .= "</a>";
 		$post_title .= "</h2>\r\n";
 		echo apply_filters('comicpress_display_post_title',$post_title);

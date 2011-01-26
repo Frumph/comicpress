@@ -47,7 +47,7 @@ if (!function_exists('comicpress_display_comic_area')) {
 }
 
 function comicpress_display_comic_swf($post, $comic) {
-	$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);
+	$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_url($comic);
 	$height = get_post_meta( $post->ID, "fheight", true );
 	$width = get_post_meta( $post->ID, "fwidth", true );
 	if (empty($height)) $height = '300';
@@ -112,7 +112,7 @@ function comicpress_display_comic_thumbnail($type = 'mini', $override_post = nul
 		$thumbnail = array();
 		if (!empty($thumb_found)) {
 			foreach ($thumb_found as $thumb) {
-				$thumbnail[] = comicpress_themeinfo('baseurl') . comicpress_clean_filename($thumb);
+				$thumbnail[] = comicpress_themeinfo('baseurl') . comicpress_clean_url($thumb);
 			}
 		}
 	}
@@ -161,9 +161,9 @@ if (!function_exists('comicpress_display_comic_image')) {
 		global $wp_query;
 		$cdn_url = comicpress_themeinfo('cdn_url');
 		if (!empty($cdn_url)) {
-			$file_url = trailingslashit($cdn_url) . comicpress_clean_filename($comic);
+			$file_url = trailingslashit($cdn_url) . comicpress_clean_url($comic);
 		} else {
-			$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_filename($comic);		
+			$file_url = comicpress_themeinfo('baseurl') . comicpress_clean_url($comic);		
 		}	
 		$alt_text = comicpress_the_hovertext($post);
 		if (!is_search() && !is_archive() && !is_feed()) {
@@ -413,5 +413,21 @@ function get_comic_url($folder = 'comic', $override_post = null, $filter = 'defa
 	return false;
 }
 
+add_action('comic-area', 'comicpress_inject_comic_home');
 
+function comicpress_inject_comic_home() {
+	global $wp_query;
+	if (!is_paged() && is_home()) {
+		if (!comicpress_themeinfo('disable_comic_frontpage')) {
+			$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); $comicFrontpage->query('showposts=1&cat='.comicpress_all_comic_categories_string());
+			while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
+				comicpress_display_comic_area();
+			endwhile;
+		}
+	} else {
+		if (is_single() && comicpress_in_comic_category()) {
+			comicpress_display_comic_area();
+		}
+	}
+}
 ?>

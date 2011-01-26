@@ -1,64 +1,12 @@
 <div id="content-wrapper-head"></div>
 	<div id="content-wrapper">
-
-	<?php 
-if (is_cp_theme_layout('gn,v3c') && !comicpress_is_signup()) get_sidebar('left'); 
-
-	if (is_cp_theme_layout('gn,rgn')) { ?>
-		<div id="pagewrap-right">
-	<?php }
-	
-	if (is_cp_theme_layout('v3cr')) { ?>
-		<div id="pagewrap-left">
-	<?php }
-
-if (is_cp_theme_layout('v,v3c')) { 
-	if (is_page('chat') || is_page('forum') && !comicpress_is_signup()) { ?>
-			<div id="content" class="widecolumn">
-	<?php } elseif (!comicpress_is_signup()) { ?>
+		<?php if (is_cp_theme_layout('2cr,2cl,3c,3c2l,3c2r')) do_action('comic-area'); ?>
+		<div id="subcontent-wrapper-head"></div>
+		<div id="subcontent-wrapper">
+			<?php if (is_cp_theme_layout('2cl,2cvl,3c,3c2l,v3c,v3cl,lgn') && !comicpress_disable_sidebars()) get_sidebar('left'); ?>
+			<?php if (is_cp_theme_layout('3c2l,v3cl') && !comicpress_disable_sidebars()) get_sidebar('right'); ?>
+			<?php if (is_cp_theme_layout('lgn,rgn')) { ?><div class="gn-wrap"><?php do_action('comic-area'); } ?>
+			<?php if (is_cp_theme_layout('rgn') && !comicpress_disable_sidebars()) get_sidebar('left'); ?>
 			<div id="content" class="narrowcolumn">
-	<?php } 
-	if (is_active_sidebar('over-blog')) get_sidebar('overblog');
-}
-
-if (!is_paged()) {
-	if (is_home()) {
-		if (!comicpress_themeinfo('disable_comic_frontpage')) {
-			$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); $comicFrontpage->query('showposts=1&cat='.comicpress_all_comic_categories_string());
-			while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
-				comicpress_display_comic_area();
-			endwhile;
-		}
-	} else {
-		if (is_single() && comicpress_in_comic_category()) {
-			comicpress_display_comic_area();
-		}
-	}
-}
-
-if (is_cp_theme_layout('3c,standard,3c2r,v3c,rgn')) {  ?>
-<div id="subcontent-wrapper-head"></div>
-	<div id="subcontent-wrapper">
-<?php }
-
-if (is_cp_theme_layout('3c,rgn') && !comicpress_is_signup()) get_sidebar('left');
-
-if (is_cp_theme_layout('v3cr,gn')) { ?>
-<div id="subcontent-wrapper-head"></div>
-	<div id="subcontent-wrapper">
-<?php }
-
-if (!is_cp_theme_layout('v3c,v')) {
-	if (is_page('chat') || is_page('forum') && !comicpress_is_signup()) { ?>
-			<div id="content" class="widecolumn">
-	<?php } elseif (!comicpress_is_signup()) { ?>
-			<div id="content" class="narrowcolumn">
-	<?php }
-	if (is_active_sidebar('over-blog')) get_sidebar('overblog');
-} 
-
-if (is_cp_theme_layout('v')) { ?>
-<div id="subcontent-wrapper-head"></div>
-	<div id="subcontent-wrapper">
-<?php }
-?>
+				<?php if (is_cp_theme_layout('2cvr,2cvl,v3c,v3cr,v3cl')) do_action('comic-area'); ?>
+				<?php if (is_active_sidebar('over-blog')) get_sidebar('overblog'); ?>

@@ -3,7 +3,7 @@
 Template Name: Comic Year Archive
 */
 get_header(); 
-
+Protect();
 if (isset($_GET['archive_year'])) { 
 	$archive_year = (int)$_GET['archive_year']; 
 } else { 
@@ -71,4 +71,7 @@ endwhile;
 	</div>
 	<div class="post-foot"></div>
 </div>
-<?php get_footer() ?>
+<?php 
+UnProtect();
+get_footer();
+?>
