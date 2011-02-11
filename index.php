@@ -1,7 +1,10 @@
 <?php 
 get_header();
 if (!comicpress_themeinfo('disable_comic_frontpage') && !comicpress_themeinfo('disable_comic_blog_frontpage') && !is_paged() )  {
-	$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); $comicFrontpage->query('showposts=1&cat='.comicpress_all_comic_categories_string());
+	$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); 
+	$order = 'DESC';
+	if (comicpress_themeinfo('display_first_comic_on_home')) $order = 'ASC';
+	$comicFrontpage->query('showposts=1&order='.$order.'&cat='.comicpress_all_comic_categories_string());
 	while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
 		comicpress_display_post();
 	endwhile;

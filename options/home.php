@@ -75,6 +75,15 @@
 						<?php _e('When you have the comic blog disabled on single pages, if you have this checkmarked, the comments will still appear.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr class="alternate">
+					<th scope="row"><label for="display_first_comic_on_home"><?php _e('Display the first comic on the home page instead of latest?','comicpress'); ?></label></th>
+					<td>
+						<input id="display_first_comic_on_home" name="display_first_comic_on_home" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('display_first_comic_on_home')); ?> />
+					</td>
+					<td>
+						<?php _e('Enabling this option will make it so that the first comic in the entire series is displayed on the home page.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			<table class="widefat">

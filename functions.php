@@ -466,7 +466,8 @@ function comicpress_load_options() {
 			'archive_comic_width' => '420',
 			'mini_comic_width' => '198' */
 			'enable_page_options' => true,
-			'enable_caps' => false
+			'enable_caps' => false,
+			'display_first_comic_on_home' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
