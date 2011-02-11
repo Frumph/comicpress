@@ -105,6 +105,15 @@
 						<?php _e('3 column layout (<em>includes Graphic Novel</em>) default width: <b>980px</b>.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<th scope="row"><label for="enable_caps"><?php _e('Enable -head and -foot caps?','comicpress'); ?></label></th>
+					<td>
+						<input id="enable_caps" name="enable_caps" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_caps')); ?> />
+					</td>
+					<td>
+						<?php _e('Enabling this option will create post-head widget-head and various other div alignments increasing the amount of dom elements available to use in designing your site, however will reduce the speed in which the page is shown on the end users browser.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 		<div class="comicpress-options-save">
 			<div class="comicpress-major-publishing-actions">
@@ -132,7 +141,7 @@
 				<td>
 				<table>
 				<tr>
-					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-silver.jpg" alt="ComicPress Silver" /></td>
+					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-silverii.jpg" alt="ComicPress Silver II" /></td>
 					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-boxed.jpg" alt="ComicPress Silver" /></td>
 					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-foreboding.jpg" alt="ComicPress Silver" /></td>
 				</tr>
@@ -140,9 +149,6 @@
 					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-red.jpg" alt="ComicPress Silver" /></td>
 					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-sandy.jpg" alt="ComicPress Silver" /></td>
 					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-greymatter.jpg" alt="ComicPress Silver" /></td>
-				</tr>
-				<tr>
-					<td><img src="<?php echo get_template_directory_uri(); ?>/images/screenshots/comicpress-silverii.jpg" alt="ComicPress Silver II" /></td>
 				</tr>
 				</table>
 				</td>

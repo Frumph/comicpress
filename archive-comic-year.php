@@ -22,7 +22,7 @@ while (have_posts()) : the_post();
 
 <div <?php post_class(); ?>>
 	<?php comicpress_display_post_thumbnail($is_comic); ?>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div class="post-info">
 			<div class="post-text">
@@ -37,7 +37,7 @@ while (have_posts()) : the_post();
 		<?php wp_link_pages(array('before' => '<div class="linkpages"><span class="linkpages-pagetext">'.__('Pages:','comicpress').'</span> ', 'after' => '</div>', 'next_or_number' => 'number'));  ?>
 		<?php edit_post_link(__('Edit this page.','comicpress'), '', ''); ?>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 
 <?php 
@@ -45,7 +45,7 @@ endwhile;
 ?>
 
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 
 		<div class="archive-yearlist">| 
@@ -69,7 +69,7 @@ endwhile;
 		</table>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 <?php 
 UnProtect();

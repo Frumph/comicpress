@@ -88,6 +88,13 @@ add_action( 'widgets_init', 'comicpress_sidebar_init' );
 
 if (!function_exists('comicpress_sidebar_init')) {
 function comicpress_sidebar_init() {
+	if (comicpress_themeinfo('enable_caps')) {
+		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-head\"></div>\r\n<div class=\"widget-content\">\r\n";
+		$after_widget = "</div>\r\n<div class=\"widget-foot\"></div>\r\n</div>\r\n";
+	} else {
+		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-content\">\r\n";
+		$after_widget = "</div>\r\n</div>\r\n";
+	}
 	foreach (array(
 				__('Left Sidebar', 'comicpress'),
 				__('Right Sidebar', 'comicpress'),
@@ -103,12 +110,13 @@ function comicpress_sidebar_init() {
 				__('Under Blog', 'comicpress'),
 				__('The Footer', 'comicpress')
 				) as $sidebartitle) {
+					
 		register_sidebar(array(
 					'name'=> $sidebartitle,
 					'id' => sanitize_title($sidebartitle),
-//					'description' => $sidebartitle,
-					'before_widget' => "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-head\"></div>\r\n<div class=\"widget-content\">\r\n",
-					'after_widget'  => "</div>\r\n<div class=\"widget-foot\"></div>\r\n</div>\r\n",
+//					'description' => $sidebartitle, 
+					'before_widget' => $before_widget,
+					'after_widget'  => $after_widget,
 					'before_title'  => "<h2 class=\"widgettitle\">",
 					'after_title'   => "</h2>\r\n"
 					));
@@ -116,12 +124,9 @@ function comicpress_sidebar_init() {
 	}
 }
 
-
 register_nav_menus(array(
 	'menubar' => __( 'Menubar', 'comicpress' )
 ));
-
-
 
 // put things in here that need to go into the init ONLY
 function __comicpress_init() {
@@ -132,14 +137,14 @@ function __comicpress_init() {
 		wp_enqueue_script('jquery');
 		if ( comicpress_themeinfo('enable_comment_javascript') ) wp_enqueue_script( 'comment-reply' );
 		if (!comicpress_themeinfo('disable_jquery_menu_code')) {
-			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri() . '/js/ddsmoothmenu.js'); 
-			wp_enqueue_script('menubar_js', get_template_directory_uri() . '/js/menubar.js');
+			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri() . '/js/ddsmoothmenu.js', null, null, true); 
+			wp_enqueue_script('menubar_js', get_template_directory_uri() . '/js/menubar.js', null, null, true);
 		}
 		if (comicpress_themeinfo('enable_scroll_to_top')) {
 			wp_enqueue_script('comicpress_scroll', get_template_directory_uri() . '/js/scroll.js', null, null, true);
 		}
 		if (comicpress_themeinfo('enable_multicomic_jquery')) {
-			wp_enqueue_script('multicomic', get_template_directory_uri() . '/js/multicomic.js');
+			wp_enqueue_script('multicomic', get_template_directory_uri() . '/js/multicomic.js', null, null, true);
 		}
 		if (is_child_theme() && file_exists(get_stylesheet_directory() . '/images/nav/' . comicpress_themeinfo('graphicnav_directory') . '/navstyle.css')) {
 			wp_enqueue_style('navstyle',get_stylesheet_directory_uri() . '/images/nav/' . comicpress_themeinfo('graphicnav_directory') . '/navstyle.css');
@@ -378,7 +383,6 @@ function comicpress_load_options() {
 			'custom_image_header_height' => '120',
 
 			'enable_numbered_pagination' => true,
-			'disable_page_restraints' => false,
 
 			'enable_related_comics' => false,
 			'enable_related_posts' => false,
@@ -410,9 +414,8 @@ function comicpress_load_options() {
 			'archive_display_order' => 'desc',
 			'excerpt_or_content_archive' => 'content',
 			'excerpt_or_content_search' => 'excerpt',
-			'category_thumbnail_postcount' => '-1',
 			'archive_display_comic_thumbs_in_order' => false,
-			'display_archive_as_text_links' => false,
+			'display_archive_as_text_links' => true,
 
 			'members_post_category' => '',
 
@@ -462,7 +465,8 @@ function comicpress_load_options() {
 			'rss_comic_width' => '240',
 			'archive_comic_width' => '420',
 			'mini_comic_width' => '198' */
-			'enable_page_options' => true
+			'enable_page_options' => true,
+			'enable_caps' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
@@ -475,7 +479,7 @@ function comicpress_load_options() {
 function comicpress_themeinfo($whichinfo = null) {
 	global $comicpress_themeinfo;
 	
-	if (empty($comicpress_themeinfo) || $whichinfo == 'reset') {
+	if (empty($comicpress_themeinfo) || ($whichinfo == 'reset')) {
 				
 		if (is_multisite()) {
 			// This section keeps it compatible with comicpress manager's options

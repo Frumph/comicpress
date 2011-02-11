@@ -64,7 +64,7 @@ if (!function_exists('comicpress_display_post_author')) {
 	function comicpress_display_post_author() {
 		global $post,$authordata;
 		if ($post->post_type == 'post') {
-			$post_author = "<span class=\"post-author\">".__('by','comicpress')." <a href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a></span>\r\n";
+			$post_author = '<span class="post-author">'.__('by','comicpress').' <a href="'.get_author_posts_url( $authordata->ID, $authordata->user_nicename ).'">'.get_the_author()."</a></span>\r\n";
 			echo apply_filters('comicpress_display_post_author',$post_author);
 		}
 	}
@@ -212,7 +212,7 @@ if (!function_exists('comicpress_display_post')) {
 		<?php comicpress_display_comic_navigation($is_comic); ?>
 		<div <?php post_class(); ?>>
 			<?php comicpress_display_post_thumbnail($is_comic); ?>
-			<div class="post-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 			<div class="post-content">
 				<div class="post-info">
 					<?php comicpress_display_author_gravatar($is_comic); ?>
@@ -252,7 +252,7 @@ if (!function_exists('comicpress_display_post')) {
 				<?php } ?>
 				<?php if (is_page()) { edit_post_link(__('Edit this page.','comicpress'), '', ''); } ?>
 			</div>
-			<div class="post-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 		</div>
 		<?php
 	}

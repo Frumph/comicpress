@@ -20,7 +20,7 @@ $archiveQuery->query('show_posts=-1&posts_per_page=-1&cat='.comicpress_all_comic
 
 ?>
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div class="post-info">
 			<div class="post-text">
@@ -38,7 +38,7 @@ $archiveQuery->query('show_posts=-1&posts_per_page=-1&cat='.comicpress_all_comic
 <?php endwhile; endif; ?>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 
 <?php get_footer() ?>

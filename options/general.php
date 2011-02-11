@@ -8,19 +8,18 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Main','comicpress'); ?></th>
+						<th colspan="3"><?php _e('Design','comicpress'); ?></th>
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_page_restraints"><?php _e('Disable page restraints','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_caps"><?php _e('Enable -head and -foot caps?','comicpress'); ?></label></th>
 					<td>
-						<input id="disable_page_restraints" name="disable_page_restraints" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('disable_page_restraints')); ?> />
+						<input id="enable_caps" name="enable_caps" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_caps')); ?> />
 					</td>
 					<td>
-						<?php _e('Allows the width of your site to either be Dynamic (fills browser window) or Fixed (width is specified, e.g., 980px, 780px, etc.)  If Dynamic is enabled #page and #page-wide will not load. This allow you to use the entire browser for your canvas instead of the 780px/980px that the two elements limit you to by default.','comicpress'); ?>
+						<?php _e('Enabling this option will create post-head widget-head and various other div alignments increasing the amount of dom elements available to use in designing your site, however will reduce the speed in which the page is shown on the end users browser.','comicpress'); ?>
 					</td>
 				</tr>
-
 			</table>
 			
 			<table class="widefat">

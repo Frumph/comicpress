@@ -49,7 +49,7 @@ if (isset($comicnum)) {
 ?>
 	<div <?php post_class(); ?>>
 		<?php comicpress_display_post_thumbnail(); ?>
-		<div class="post-head"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 		<div class="post-content">
 			<div class="post-url-back">
 				<a href="<?php echo $post->guid; ?>">&lt;-- Return to Comic</a>
@@ -142,7 +142,7 @@ if (isset($comicnum)) {
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="post-foot"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 	</div>
 	
 <?php 
@@ -154,7 +154,7 @@ if (comicpress_themeinfo('enable_buystrip_post') || empty($comicnum)) {
 
 <div <?php post_class(); ?>>
 	<?php comicpress_display_post_thumbnail(); ?>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<?php if (!comicpress_themeinfo('disable_page_titles')) { ?>
 			<h2 class="pagetitle"><?php the_title() ?></h2>
@@ -165,7 +165,7 @@ if (comicpress_themeinfo('enable_buystrip_post') || empty($comicnum)) {
 		<div class="clear"></div>
 		<?php edit_post_link(__('Edit this page.','comicpress'), '', '') ?>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 
 <?php 

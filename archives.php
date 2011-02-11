@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div class="post-info">
 			<div class="post-text">
@@ -19,11 +19,11 @@ get_header();
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div id="archivepage">
 			<h2><?php _e('Archives by Subject:','comicpress'); ?></h2>
@@ -31,7 +31,7 @@ get_header();
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 
 <?php get_footer() ?>

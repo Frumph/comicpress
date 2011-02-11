@@ -10,23 +10,12 @@ if (is_category()) {
 	if (isset($wp_query->query_vars['cat'])) $theCatID = (int)$wp_query->query_vars['cat'];
 }
 
-$category_thumbnail_postcount = comicpress_themeinfo('category_thumbnail_postcount');
 $archive_display_order = comicpress_themeinfo('archive_display_order');
 if (empty($archive_display_order)) $archive_display_order = 'DESC';
 
 if (!empty($theCatID) && comicpress_in_comic_category($theCatID)) $is_comic = true;
 
-if ($is_comic && comicpress_themeinfo('display_archive_as_text_links')) $category_thumbnail_postcount = '-1';
-
 $order = '&order='.$archive_display_order;
-
-if (comicpress_themeinfo('display_archive_as_links')) {
-	$post_count = '&showposts=-1&posts_per_page=-1';
-}
-
-$order = '&order='.$archive_display_order;
-
-if ($is_comic) $post_count = '&showposts='.$category_thumbnail_postcount.'&posts_per_page='.$category_thumbnail_postcount;
 
 Protect();
 $tmp_search = new WP_Query($query_string.'&showposts=-1&posts_per_page=-1');
@@ -77,7 +66,7 @@ if (have_posts()) :
 	<?php 
 	if (comicpress_themeinfo('display_archive_as_text_links') && !($is_comic && comicpress_themeinfo('archive_display_comic_thumbs_in_order'))) { ?>
 	<div <?php post_class(); ?>>
-		<div class="post-head"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 		<div class="entry">
 		<table class="archive-table">
 			<?php while (have_posts()) : the_post(); ?>
@@ -85,11 +74,11 @@ if (have_posts()) :
 			<?php endwhile; ?>
 		</table>
 		</div>
-		<div class="post-foot"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 	</div>
 	<?php } elseif (comicpress_themeinfo('archive_display_comic_thumbs_in_order') && ($is_comic)) { ?>
 		<div <?php post_class(); ?>>
-			<div class="post-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 			<div class="post-content">	
 				<?php while (have_posts()) : the_post(); ?>
 				<div class="comicthumbwrap">
@@ -102,7 +91,7 @@ if (have_posts()) :
 				<?php endwhile; ?>
 				<div class="clear"></div>
 			</div>
-			<div class="post-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 		</div>	
 		<?php } else {
 		while (have_posts()) : the_post();

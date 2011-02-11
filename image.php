@@ -3,7 +3,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post() ?>
 	<div <?php post_class(); ?>>
 		<?php comicpress_display_post_thumbnail(); ?>
-		<div class="post-head"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 		<div class="post-content" id="post-<?php the_ID() ?>">
 			<div class="imagenav-wrap">
 				<div class="imagenav">
@@ -35,7 +35,7 @@
 				<div class="clear"></div>
 			</div>
 			<?php if (!comicpress_themeinfo('disable_page_titles')) { ?>
-				<h2 class="pagetitle"><?php the_title() ?></h2>
+				<h2 class="page-title"><?php the_title() ?></h2>
 			<?php } ?>
 			<div class="clear"></div>
 			<div class="gallery-image">
@@ -50,16 +50,16 @@
 			<?php if ('open' == $post->comment_status) { comments_template('', true); } ?>
 			<div class="clear"></div>
 		</div>
-		<div class="post-foot"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 	</div>
 	<?php endwhile; else: ?>
 	<div <?php post_class(); ?>>
-		<div class="post-head"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 		<div class="post-content">
 			<p><?php _e('Sorry, no image matched your criteria.','comicpress'); ?></p>
 			<div class="clear"></div>
 		</div>
-		<div class="post-foot"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 	</div>
 	<?php endif; ?>
 	

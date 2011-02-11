@@ -10,7 +10,7 @@
 			<h2><?php _e('No such author.','comicpress'); ?></h2>
 		<?php } else { ?>
 		<div <?php post_class(); ?>>
-			<div class="post-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 			<div class="post-content">
 					<div class="userpage-avatar">
 						<?php echo str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($curauth->user_email, 64, comicpress_random_default_avatar($curauth->user_email), esc_attr($curauth->display_name, 1))); ?>
@@ -60,7 +60,7 @@
 						<?php } ?>
 					</div>
 				</div>
-				<div class="post-foot"></div>
+				<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 			</div>
 		<?php } ?>
 

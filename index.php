@@ -21,13 +21,13 @@ if (!comicpress_themeinfo('disable_blog_frontpage')) {
 		$blog_query = 'showposts='.comicpress_themeinfo('blog_postcount') .'&cat='.comicpress_exclude_comic_categories().'&paged='.$paged;
 		$posts = &query_posts($blog_query);
 		if (have_posts()) { ?>
-			<div class="blogindex-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="blogindex-head"></div><?php } ?>
 			<div class="blogindex">
 			<?php while (have_posts()) : the_post();
 				comicpress_display_post();
 			endwhile; ?>
 			</div>
-			<div class="blogindex-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="blogindex-foot"></div><?php } ?>
 		<?php }
 		comicpress_pagination();
 	} else {

@@ -6,7 +6,7 @@ Description: Publish a comic with WordPress. Visit the ComicPress Website (<a hr
 Author: Philip M. Hofer
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
-Version: 2.9.2.30
+Version: 2.9.2.29.1
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 .
@@ -51,10 +51,7 @@ a img {
 	border: none;
 }
 
-p {
-	padding: 3px 0;
-	margin: 0;
-}
+p {}
 
 img {
 	max-width: 100%;
@@ -212,7 +209,7 @@ h4, h4 a {
 	text-align: center;
 }
 
-.menunav a:link, .menunav a:visited {
+.menunav a {
 	color: #fff;
 }
 
@@ -373,15 +370,6 @@ h4, h4 a {
 
 /* THE COMIC */
 
-#comic-wrap {
-	width: auto;
-}
-
-.layout-lgn #comic-wrap {
-	width: 770px;
-	float: left;
-}
-
 #comic-head {
 	clear: both;
 }
@@ -496,7 +484,7 @@ h4, h4 a {
 
 /* POSTS - PAGES */
 
-.gn-wrap {
+#section-wrap {
 	width: 770px;
 	padding: 0;
 	margin: 0;
@@ -504,8 +492,15 @@ h4, h4 a {
 	overflow: hidden;
 }
 
-.wide .gn-wrap {
-	width: 100%;
+.layout-2cvr #section-wrap,
+.layout-2cvl #section-wrap {
+	width: 570px;
+}
+
+.layout-v3c  #section-wrap,
+.layout-v3cr #section-wrap,
+.layout-v3cl #section-wrap {
+	width: 560px;
 }
 
 #subcontent-wrapper {
@@ -517,24 +512,18 @@ h4, h4 a {
 }
 
 .narrowcolumn {
-	width: 560px;
+	width: 550px;
+	padding: 0 5px;
 	overflow: hidden;
 }
 
-/* add 10px to smaller width layouts */
-.layout-2cr .narrowcolumn, 
-.layout-2cl .narrowcolumn,
-.layout-2cvr .narrowcolumn, 
-.layout-2cvl .narrowcolumn {
-	width: 570px;
+.layout-2cl .narrowcolumn, .layout-2cr .narrowcolumn,
+.layout-2cvr .narrowcolumn, .layout-2cvl .narrowcolumn {
+	width: 560px;
 }
 
 .wide .narrowcolumn {
-	width: 100%;
-}
-
-.widecolumn {
-	width: 980px;
+	width: auto !important;
 	overflow: hidden;
 }
 
@@ -550,8 +539,7 @@ h4, h4 a {
 	padding: 1%;
 }
 
-.post, #comment-wrapper {
-	padding: 0 5px;
+.post {
 }
 
 .post-type-cat {
@@ -679,7 +667,7 @@ h4, h4 a {
 /* COMMENTS */
 
 textarea#comment {
-	width: 90%;
+	width: 480px;
 	height: 80px;
 }
 
@@ -748,7 +736,10 @@ textarea#comment {
 
 .comment-note {
 	width: 420px;
+	text-align: left;
+	display: inline-block;
 	font-size: 11px;
+	padding: 5px;
 }
 
 .form-submit {
@@ -879,8 +870,8 @@ ul.children {
 /* Left Sidebar Themes */
 #sidebar-left, #sidebar-right {
 	float: left;
-	width: 206px;
-	padding: 2px;
+	width: 200px;
+	padding: 5px;
 }
 
 #sidebar-overcomic {

@@ -1,5 +1,5 @@
 <div id="sidebar-left">
-	<div class="sidebar-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="sidebar-head"></div><?php } ?>
 		<div class="sidebar">
 		<?php 
 			if ( !dynamic_sidebar('left-sidebar') ) {
@@ -10,5 +10,5 @@
 			}
 		?>
 		</div>
-	<div class="sidebar-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="sidebar-foot"></div><?php } ?>
 </div>

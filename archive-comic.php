@@ -5,7 +5,7 @@ Template Name: Comic Archive
 get_header();  
 ?>
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div class="post-info">
 			<div class="post-text">
@@ -13,6 +13,7 @@ get_header();
 			</div>
 		</div>
 	</div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 <?php 
 $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' ORDER BY post_date DESC");
@@ -20,7 +21,7 @@ foreach ( $years as $year ) {
 	if ($year != (0) ) {
 ?>
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div class="post-info">
 			<div class="post-text">
@@ -35,7 +36,7 @@ foreach ( $years as $year ) {
 		</table>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 	<?php } 
 } ?>

@@ -42,6 +42,14 @@ function comicpress_admin_options() {
 
 		if ($_REQUEST['action'] == 'comicpress_save_layout') {
 			$comicpress_options['cp_theme_layout'] = wp_filter_nohtml_kses($_REQUEST['cp_theme_layout']);
+			
+			foreach (array(
+				'enable_caps'
+				) as $key) {
+					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
+					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+			}
+			
 			$tab = 'themestyle';
 			update_option('comicpress-options',$comicpress_options);
 		}
@@ -49,7 +57,6 @@ function comicpress_admin_options() {
 		if ($_REQUEST['action'] == 'comicpress_save_general') {
 
 			foreach (array(
-				'disable_page_restraints',
 				'rascal_says',
 				'disable_comment_note',
 				'enable_comment_javascript',
@@ -147,8 +154,7 @@ function comicpress_admin_options() {
 			foreach (array(
 				'archive_display_order',
 				'excerpt_or_content_archive',
-				'excerpt_or_content_search',
-				'category_thumbnail_postcount'
+				'excerpt_or_content_search'
 						) as $key) {
 							if (isset($_REQUEST[$key])) 
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);

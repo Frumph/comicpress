@@ -42,7 +42,7 @@ if (have_posts()) {
 				<div id="blogheader"><!-- This area can be used for a heading above your main page blog posts --></div>
 			<?php } ?>
 			
-			<div class="blogindex-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="blogindex-head"></div><?php } ?>
 			<div class="blogindex">
 				<?php while (have_posts()) : the_post();
 					
@@ -50,7 +50,7 @@ if (have_posts()) {
 				
 			endwhile; ?>
 			</div>
-			<div class="blogindex-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="blogindex-foot"></div><?php } ?>
 			<?php }
 			comicpress_pagination();
 		} else {
@@ -89,12 +89,12 @@ if (have_posts()) {
 } else {
 ?>
 	<div <?php post_class(); ?>>
-		<div class="post-head"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 		<div class="post">
 			<p><?php _e('Sorry, no posts matched your criteria.','comicpress'); ?></p>
 			<div class="clear"></div>
 		</div>
-		<div class="post-foot"></div>
+		<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 	</div>
 	<?php
 }

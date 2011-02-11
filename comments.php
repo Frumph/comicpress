@@ -9,7 +9,7 @@ if ( post_password_required() ) { ?>
 }
 ?>
 
-<div id="comment-wrapper-head"></div>
+<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="comment-wrapper-head"></div><?php } ?>
 <div id="comment-wrapper">
 
 <?php if ( have_comments() ) : ?>
@@ -147,5 +147,4 @@ if ( post_password_required() ) { ?>
 
 <?php endif; ?>
 </div>
-
-<div id="comment-wrapper-foot"></div>
+<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="comment-wrapper-foot"></div><?php } ?>

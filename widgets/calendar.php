@@ -23,7 +23,7 @@ class comicpress_calendar_widget extends WP_Widget {
 		echo $before_widget;
 
 		if (!empty($instance)) { extract($instance); } ?>
-			<div id="wp-calendar-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="wp-calendar-head"></div><?php } ?>
 			<div id="wp-calendar-wrap">
 				<?php if (!empty($thumbnail)) { ?>
 					<div class="wp-calendar-download">
@@ -51,7 +51,7 @@ class comicpress_calendar_widget extends WP_Widget {
 				<?php } ?>
 			<?php get_calendar(); ?>
 			</div>
-			<div id="wp-calendar-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="wp-calendar-foot"></div><?php } ?>
 		<?php
 
 		echo $after_widget;

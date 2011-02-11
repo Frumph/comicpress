@@ -30,13 +30,13 @@ if (have_posts()) :
     
 	else : ?>
 		<div <?php post_class(); ?>>
-			<div class="post-head"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 			<div class="post-content">
 				<h3><?php _e('No entries found.','comicpress'); ?></h3>
 				<p><?php _e('Try another search?','comicpress'); ?></p>
 				<p><?php get_search_form(); ?></p>
 			</div>
-			<div class="post-foot"></div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 		</div>
 <?php
 	endif;

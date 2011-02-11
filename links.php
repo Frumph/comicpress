@@ -12,7 +12,7 @@ $bookmarks = preg_replace('#<ul ([^>]*)>#', '<ul>', $bookmarks);
 ?>
 
 <div <?php post_class(); ?>>
-	<div class="post-head"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
 	<div class="post-content">
 		<div id="linkspage">
 		<ul>
@@ -21,7 +21,7 @@ $bookmarks = preg_replace('#<ul ([^>]*)>#', '<ul>', $bookmarks);
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div class="post-foot"></div>
+	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
 </div>
 	
 <?php get_footer() ?>

@@ -48,14 +48,8 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="category_thumbnail_postcount"><?php _e('Number of archived comics to display','comicpress'); ?></label></th>
-					<td>
-						<label>
-						<input type="text" size="3" name="category_thumbnail_postcount" id="category_thumbnail_postcount" value="<?php echo comicpress_themeinfo('category_thumbnail_postcount'); ?>" /><br />
-						</label>
-					</td>
-					<td>
-						<?php _e('How many images in the comic category would you like to see in the archive page (-1 will display all available).','comicpress'); ?>
+					<td colspan="5">
+						<?php _e('The amount of archive posts/links/search results to display is exclusively handled by wp-admin - settings - reading.','comicpress'); ?>
 					</td>
 				</tr>
 				<tr class="alternate">

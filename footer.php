@@ -1,5 +1,5 @@
 <?php get_template_part('layout', 'foot'); ?>
-<div id="footer">
+		<div id="footer">
 <?php
 if (is_active_sidebar('the-footer')) get_sidebar('footer');
 
@@ -12,14 +12,10 @@ if (comicpress_themeinfo('enable_page_load_info')) { ?>
 <?php } else { ?>
 	<!-- <?php echo get_num_queries() ?> queries. <?php timer_stop(1) ?> seconds. //-->
 <?php } ?>
-</div>
-<?php 
-
-if (!comicpress_themeinfo('disable_page_restraints')) { ?>
+		</div><!-- Ends #footer -->
 	</div><!-- Ends "page/page-wide" -->
 </div><!-- Ends "page-wrap" -->
-<?php } ?>
-<div id="page-foot"></div>
+<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="page-foot"></div><?php } ?>
 
 <?php wp_footer(); ?>
 </body>

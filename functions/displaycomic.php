@@ -415,18 +415,20 @@ function get_comic_url($folder = 'comic', $override_post = null, $filter = 'defa
 
 add_action('comic-area', 'comicpress_inject_comic_home');
 
-function comicpress_inject_comic_home() {
-	global $wp_query;
-	if (!is_paged() && is_home()) {
-		if (!comicpress_themeinfo('disable_comic_frontpage')) {
-			$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); $comicFrontpage->query('showposts=1&cat='.comicpress_all_comic_categories_string());
-			while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
+if (!function_exists('comicpress_inject_comic_home')) {
+	function comicpress_inject_comic_home() {
+		global $wp_query;
+		if (!is_paged() && is_home()) {
+			if (!comicpress_themeinfo('disable_comic_frontpage')) {
+				$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); $comicFrontpage->query('showposts=1&cat='.comicpress_all_comic_categories_string());
+				while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
+					comicpress_display_comic_area();
+				endwhile;
+			}
+		} else {
+			if (is_single() && comicpress_in_comic_category()) {
 				comicpress_display_comic_area();
-			endwhile;
-		}
-	} else {
-		if (is_single() && comicpress_in_comic_category()) {
-			comicpress_display_comic_area();
+			}
 		}
 	}
 }

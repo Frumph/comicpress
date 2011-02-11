@@ -39,7 +39,7 @@ if (!function_exists('comicpress_comic_feed')) {
 	function comicpress_comic_feed() { 
 		global $post;
 		$output = '<p>';
-		$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post).'</a>';
+		$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post,true).'</a>';
 		$output .= '</p>';
 		return apply_filters('comicpress_comic_feed', $output);
 	}
