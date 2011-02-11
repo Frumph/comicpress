@@ -3,8 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<title><?php 
-	bloginfo('name'); 
-	if (is_home () ) {
+	bloginfo('name');
+	$bloginfo_description = get_bloginfo('description');
+	if (is_home () && !empty($bloginfo_description)) {
 		echo ' - '; bloginfo('description');
 	} elseif (is_category() ) {
 		echo ' - '; single_cat_title();

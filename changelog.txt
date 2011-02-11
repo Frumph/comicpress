@@ -9,6 +9,7 @@ moved some data placement around to try to optimize usage
 archive/search display count is now exclusively handled by wp-admin - settings - reading now because of wordpress limitations with paging
 removed page restraint removal option, better done with CSS via  #page, #page-wide - width: auto;  instead
 added new option to enable the -foot and -head elements instead of having them always active for those who don't use them
+dont display the extra dash if the bloginfo description is empty
 
 2.9.2.29.1
 $is_comic needed to be set in the archive.php before hand, was giving notice
