@@ -19,11 +19,12 @@ class comicpress_comments_widget extends WP_Widget {
 	
 	function widget($args, $instance) {
 		global $post;
+		setup_postdata($post);
 		extract($args, EXTR_SKIP); 
 		
 		echo $before_widget;
 		$title = empty($instance['title']) ? __('Permalink','comicpress') : apply_filters('widget_title', $instance['title']); ?>
-		<?php if ('open' == $post->comment_status) { ?><div class="comment-link"><?php comments_popup_link('<span class="comment-balloon comment-balloon-empty"> </span> Comment ', '<span class="comment-balloon">1</span> Comment ', '<span class="comment-balloon">%</span> Comment '); ?></div><?php } ?>
+		<?php if ('open' == $post->comment_status) { ?><div class="comment-link"><?php comments_popup_link('<span class="comment-balloon comment-balloon-empty"> </span> Comment ', '<span class="comment-balloon">1</span> Comment ', '<span class="comment-balloon">%</span> Comments '); ?></div><?php } ?>
 		<?php
 		echo $after_widget;
 	}
