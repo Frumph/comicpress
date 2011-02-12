@@ -14,6 +14,7 @@ started creating a proper readme.txt file
 added option to show first comic on the home page
 added s at the end of comments for multiple comics in the comments widget
 added setup_postdata in the comments widget to properly access data
+if disable_blog_frontpage is enabled, allow comments to be displayed on comic posts on home page if comic post is shown
 
 2.9.2.29.1
 $is_comic needed to be set in the archive.php before hand, was giving notice

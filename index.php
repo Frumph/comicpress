@@ -7,6 +7,10 @@ if (!comicpress_themeinfo('disable_comic_frontpage') && !comicpress_themeinfo('d
 	$comicFrontpage->query('showposts=1&order='.$order.'&cat='.comicpress_all_comic_categories_string());
 	while ($comicFrontpage->have_posts()) : $comicFrontpage->the_post();
 		comicpress_display_post();
+		if (comicpress_themeinfo('disable_blog_frontpage')) {
+			$withcomments = 1;
+			comments_template('', true);
+		}
 	endwhile;
 }
 
