@@ -4,7 +4,8 @@ add_action('admin_menu', 'comicpress_options_setup');
 
 function comicpress_options_setup() {
 	$options_title = __('ComicPress Options','comicpress');
-	$pagehook = add_submenu_page('themes.php', $options_title, $options_title, 'edit_themes', 'comicpress-options', 'comicpress_admin_options');
+	$admin_title = __('ComicPress Options', 'comicpress');
+	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'comicpress-options', 'comicpress_admin_options');
 	add_action('admin_head-' . $pagehook, 'comicpress_admin_page_head');
 	add_action('admin_print_scripts-' . $pagehook, 'comicpress_admin_print_scripts');
 	add_action('admin_print_styles-' . $pagehook, 'comicpress_admin_print_styles');
