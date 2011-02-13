@@ -17,6 +17,7 @@ added setup_postdata in the comments widget to properly access data
 if disable_blog_frontpage is enabled, allow comments to be displayed on comic posts on home page if comic post is shown
 wp-pagenavi.php internalization fix w/removal of usage of an option
 moved to using add_theme_page()
+added proper default.mo and default.po files for proper language translation
 
 2.9.2.29.1
 $is_comic needed to be set in the archive.php before hand, was giving notice

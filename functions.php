@@ -221,9 +221,6 @@ if (!function_exists('is_cp_theme_layout')) {
 
 function is_cp_layout_avail($layout, $avail_layouts) {
 	if (empty($layout)) return false;
-	if ($layout == 'gn') $layout = 'lgn';
-	if ($layout == 'standard') $layout = '3c';
-	if ($layout == 'v') $layout = '2cvl';
 	if (empty($avail_layouts)) $avail_layouts = '2cr,2cl,2cvr,2cvl,3c,3c2r,3c2l,v3c,v3cr,v3cl,lgn,rgn';
 	$avail_layouts = explode(",",$avail_layouts);
 	foreach ($avail_layouts as $able_layout) {
@@ -550,6 +547,9 @@ function comicpress_themeinfo($whichinfo = null) {
 			$comicpress_themeinfo['basedir'] = ABSPATH;
 			$comicpress_themeinfo['baseurl'] = trailingslashit($comicpress_themeinfo['siteurl']);
 		}
+		if ($comicpress_themeinfo['layout'] == 'standard') $comicpress_themeinfo['layout'] = '2cr';
+		if ($comicpress_themeinfo['layout'] == 'gn') $comicpress_themeinfo['layout'] = 'lgn';
+		if ($comicpress_themeinfo['layout'] == 'v') $comicpress_themeinfo['layout'] = '2cvl';		
 	}
 	if ($whichinfo && $whichinfo !== 'reset')
 		if (isset($comicpress_themeinfo[$whichinfo])) 
