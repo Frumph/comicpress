@@ -1,4 +1,7 @@
-﻿2.9.2.30.1
+﻿2.9.2.30.2
+Fix for linkpages class not having a clear:both; on it
+
+2.9.2.30.1
 Made the comments on home page when blog disabled an option on the home tab instead
 found the bug with layouts being set inappropriately - fixed
 

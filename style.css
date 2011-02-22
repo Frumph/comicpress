@@ -6,7 +6,7 @@ Description: Publish a comic with WordPress. Visit the ComicPress Website (<a hr
 Author: Philip M. Hofer
 Author URI: http://frumph.net
 Tags: White, Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
-Version: 2.9.2.30.1
+Version: 2.9.2.30.2
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 .
@@ -645,6 +645,7 @@ h4, h4 a {
 }
 
 .linkpages {
+	clear: both;
 	float: right;
 	margin: 5px;
 }
