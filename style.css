@@ -63,6 +63,7 @@ img {
 	text-align: center;
 	border: solid 1px #ccc;
 	background: #ccc;
+	padding: 2px;
 }
 
 .post-author-gravatar img {

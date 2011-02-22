@@ -102,7 +102,8 @@ function comicpress_admin_options() {
 				'enable_comments_when_comic_blog_disabled',
 				'disable_blog_frontpage',
 				'disable_blogheader',
-				'display_first_comic_on_home'
+				'display_first_comic_on_home',
+				'display_comments_on_home'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 						$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

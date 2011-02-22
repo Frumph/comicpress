@@ -1,4 +1,8 @@
-﻿2.9.2.30
+﻿2.9.2.30.1
+Made the comments on home page when blog disabled an option on the home tab instead
+found the bug with layouts being set inappropriately - fixed
+
+2.9.2.30
 Fixed the issue with the comic navigation widget text boxes not properly escaping and unescapping strings
 moved the facebook like script to load in the header to avoid a script error
 fixed the reply to javascript to show apparently it doesnt like is_singular, go figure
@@ -18,6 +22,7 @@ if disable_blog_frontpage is enabled, allow comments to be displayed on comic po
 wp-pagenavi.php internalization fix w/removal of usage of an option
 moved to using add_theme_page()
 added proper default.mo and default.po files for proper language translation
+adjusted the disable_sidebarslr option to fit in with the new function that works in the layout-head/foot.php
 
 2.9.2.29.1
 $is_comic needed to be set in the archive.php before hand, was giving notice

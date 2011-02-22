@@ -20,6 +20,32 @@ add_custom_background();
 
 if (!isset($content_width)) $content_width = 520;
 
+global $comiccat, $blogcat, 
+$comic_folder, $rss_comic_folder, $mini_comic_folder, 
+$archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;
+
+if (is_multisite()) {
+	// This section keeps it compatible with comicpress manager's options
+	$variables_to_extract = array();
+	
+	foreach (array(
+			'comiccat'            => 'comiccat',
+			'blogcat'             => 'blogcat',
+			'comics_path'         => 'comic_folder',
+			'comicsrss_path'      => 'rss_comic_folder',
+			'comicsarchive_path'  => 'archive_comic_folder',
+			'comicsmini_path'     => 'mini_comic_folder',
+			'archive_comic_width' => 'archive_comic_width',
+			'rss_comic_width'     => 'rss_comic_width',
+			'mini_comic_width'    => 'mini_comic_width',
+			'blog_postcount'      => 'blog_postcount') as $options => $variable_name) {
+		$variables_to_extract[$variable_name] = get_option("comicpress-${options}");
+	}
+	extract($variables_to_extract);			
+} else {
+	@require_once( get_template_directory() . '/comicpress-config.php');
+}
+
 /* child-functions.php / child-widgets.php - in the child theme */
 get_template_part('child', 'functions');
 get_template_part('child', 'widgets');
@@ -467,7 +493,8 @@ function comicpress_load_options() {
 			'mini_comic_width' => '198' */
 			'enable_page_options' => true,
 			'enable_caps' => false,
-			'display_first_comic_on_home' => false
+			'display_first_comic_on_home' => false,
+			'display_comments_on_home' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
@@ -481,31 +508,8 @@ function comicpress_themeinfo($whichinfo = null) {
 	global $comicpress_themeinfo;
 	
 	if (empty($comicpress_themeinfo) || ($whichinfo == 'reset')) {
-				
-		if (is_multisite()) {
-			// This section keeps it compatible with comicpress manager's options
-			$variables_to_extract = array();
-			
-			foreach (array(
-					'comiccat'            => 'comiccat',
-					'blogcat'             => 'blogcat',
-					'comics_path'         => 'comic_folder',
-					'comicsrss_path'      => 'rss_comic_folder',
-					'comicsarchive_path'  => 'archive_comic_folder',
-					'comicsmini_path'     => 'mini_comic_folder',
-					'archive_comic_width' => 'archive_comic_width',
-					'rss_comic_width'     => 'rss_comic_width',
-					'mini_comic_width'    => 'mini_comic_width',
-					'blog_postcount'      => 'blog_postcount') as $options => $variable_name) {
-				$variables_to_extract[$variable_name] = get_option("comicpress-${options}");
-			}
-					
-			extract($variables_to_extract);
-			
-		} else {
-			@require_once( get_template_directory() . '/comicpress-config.php');
-		}
-
+		global $comiccat, $blogcat, $comic_folder, $rss_comic_folder, $mini_comic_folder, 
+		$archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;				
 		$comicpress_themeinfo = '';
 //		$comicpress_config = comicpress_load_config();
 		$comicpress_options = comicpress_load_options();
@@ -547,9 +551,9 @@ function comicpress_themeinfo($whichinfo = null) {
 			$comicpress_themeinfo['basedir'] = ABSPATH;
 			$comicpress_themeinfo['baseurl'] = trailingslashit($comicpress_themeinfo['siteurl']);
 		}
-		if ($comicpress_themeinfo['layout'] == 'standard') $comicpress_themeinfo['layout'] = '2cr';
-		if ($comicpress_themeinfo['layout'] == 'gn') $comicpress_themeinfo['layout'] = 'lgn';
-		if ($comicpress_themeinfo['layout'] == 'v') $comicpress_themeinfo['layout'] = '2cvl';		
+		if ($comicpress_themeinfo['cp_theme_layout'] == 'standard') $comicpress_themeinfo['cp_theme_layout'] = '2cr';
+		if ($comicpress_themeinfo['cp_theme_layout'] == 'gn') $comicpress_themeinfo['cp_theme_layout'] = 'lgn';
+		if ($comicpress_themeinfo['cp_theme_layout'] == 'v') $comicpress_themeinfo['cp_theme_layout'] = '2cvl';		
 	}
 	if ($whichinfo && $whichinfo !== 'reset')
 		if (isset($comicpress_themeinfo[$whichinfo])) 
@@ -642,7 +646,7 @@ function comicpress_get_string_to_exclude_all_but_provided_categories($category)
 
 function comicpress_disable_sidebars() {
 	global $post;
-	if (comicpress_is_signup()) return true;
+	if (comicpress_is_signup() || comicpress_themeinfo('disable_lrsidebars')) return true;
 	if (is_page() && !empty($post)) {
 		$sidebars_disabled = get_post_meta($post->ID, 'disable-sidebars', true);
 		if ($sidebars_disabled) return true;

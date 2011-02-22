@@ -76,6 +76,15 @@
 					</td>
 				</tr>
 				<tr class="alternate">
+					<th scope="row"><label for="display_comments_on_home"><?php _e('Display comments on the home page when the blog on home is disabled?','comicpress'); ?></label></th>
+					<td>
+						<input id="display_comments_on_home" name="display_comments_on_home" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('display_comments_on_home')); ?> />
+					</td>
+					<td>
+						<?php _e('When you have the blog on the home page disabled, this option will allow comments on the home page to appear.','comicpress'); ?>
+					</td>
+				</tr>
+				<tr>
 					<th scope="row"><label for="display_first_comic_on_home"><?php _e('Display the first comic on the home page instead of latest?','comicpress'); ?></label></th>
 					<td>
 						<input id="display_first_comic_on_home" name="display_first_comic_on_home" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('display_first_comic_on_home')); ?> />

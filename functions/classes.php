@@ -86,7 +86,11 @@ function comicpress_body_class($classes = '') {
 	}
 	
 	if (comicpress_disable_sidebars()) $classes[] = 'wide';
-
+	
+	if ( comicpress_themeinfo('cp_theme_layout') == '2cr' )  $classes[] = 'layout-standard';
+	if ( comicpress_themeinfo('cp_theme_layout') == 'lgn' ) $classes[] = 'layout-gn';
+	if ( comicpress_themeinfo('cp_theme_layout') == '2cvl' ) $classes[] = 'layout-v';
+	
 	$classes[] = 'layout-'.comicpress_themeinfo('cp_theme_layout');
 
 	return $classes;
