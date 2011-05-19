@@ -336,6 +336,12 @@ function get_comic_path($folder = 'comic', $override_post = null, $filter = 'def
 		case "comic": default: $subfolder_to_use = comicpress_themeinfo('comic_folder'); break;
 	}
 	
+// comic-en comic-esp etc.. language directories
+	if (function_exists('qtrans_getLanguage')) {
+		$language_to_use = qtrans_getLanguage();
+		$subfolder_to_use = $subfolder_to_use . '-' . $language_to_use;
+	}
+	
 	$folder_to_use = comicpress_themeinfo('basedir') . $subfolder_to_use;
 
 //	if (!file_exists($folder_to_use . '/' . $comicfile) && $folder !== 'comic') 

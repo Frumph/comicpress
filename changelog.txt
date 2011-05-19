@@ -1,4 +1,12 @@
-﻿2.9.2.30.2
+﻿2.9.3
+Adjusted how the search and archive pages work to reduce memory load & count
+fixed the language textdomain lines
+
+
+2.9.2.30.3
+$archive_comic_folder was missing as a global, fixed thanks Lilana
+
+2.9.2.30.2
 Fix for linkpages class not having a clear:both; on it
 
 2.9.2.30.1

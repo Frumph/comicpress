@@ -10,27 +10,12 @@ if (is_category()) {
 	if (isset($wp_query->query_vars['cat'])) $theCatID = (int)$wp_query->query_vars['cat'];
 }
 
-$archive_display_order = comicpress_themeinfo('archive_display_order');
-if (empty($archive_display_order)) $archive_display_order = 'DESC';
-
 if (!empty($theCatID) && comicpress_in_comic_category($theCatID)) $is_comic = true;
 
-$order = '&order='.$archive_display_order;
-
-Protect();
-$tmp_search = new WP_Query($query_string.'&showposts=-1&posts_per_page=-1');
-if (isset($tmp_search->post_count)) {
-	$count = $tmp_search->post_count;
-} else {
-	$count = "No";
-}
-UnProtect();
-
-$args = $query_string . $post_count . $order;
-$posts = &query_posts($args);
+$count = "No";
 
 if (have_posts()) :
-
+	$count = $wp_query->found_posts;
 	$post = $posts[0]; // Hack. Set $post so that the_date() works
 	$post_title_type = $title_string = '';
 	if ($post->post_type !== 'post') $post_title_type = $post->post_type.'-'; // extra space at the end for visual

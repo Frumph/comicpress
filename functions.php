@@ -1,13 +1,7 @@
 <?php
-/* DEFINES */
 
-// xili-language plugin check
-if (class_exists('xili_language')) {
-	define('THEME_TEXTDOMAIN','comicpress');
-	define('THEME_LANGS_FOLDER', get_template_directory() . '/lang');
-} else {
-	load_theme_textdomain( 'comicpress', get_template_directory() . '/lang' );
-}
+// Text domain - Languages location
+load_theme_textdomain( 'comicpress', get_template_directory() . '/lang' );
 
 // the_post_thumbnail('thumbnail/medium/full');
 add_theme_support( 'post-thumbnails' );
@@ -21,7 +15,7 @@ add_custom_background();
 if (!isset($content_width)) $content_width = 520;
 
 global $comiccat, $blogcat, 
-$comic_folder, $rss_comic_folder, $mini_comic_folder, 
+$comic_folder, $rss_comic_folder, $mini_comic_folder, $archive_comic_folder,
 $archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;
 
 if (is_multisite()) {
@@ -211,6 +205,18 @@ function __comicpress_init() {
 			
 		function comicpress_remove_blogpostcount_filter() {
 			remove_filter('pre_get_posts','comicpress_blogpostcount_filter');
+		}
+	}
+	
+	add_filter('pre_get_posts', 'comicpress_archive_query');
+	// Set the 'order' of the archive and search
+	function comicpress_archive_query($query) {
+		if (is_archive() || is_search()) {
+			$archive_display_order = comicpress_themeinfo('archive_display_order');
+			if (empty($archive_display_order)) $archive_display_order = 'DESC';
+			$order = '&order='.$archive_display_order;
+			$query->set('order', $archive_display_order);
+			return $query;
 		}
 	}
 	
@@ -508,7 +514,7 @@ function comicpress_themeinfo($whichinfo = null) {
 	global $comicpress_themeinfo;
 	
 	if (empty($comicpress_themeinfo) || ($whichinfo == 'reset')) {
-		global $comiccat, $blogcat, $comic_folder, $rss_comic_folder, $mini_comic_folder, 
+		global $comiccat, $blogcat, $comic_folder, $rss_comic_folder, $mini_comic_folder, $archive_comic_folder, 
 		$archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;				
 		$comicpress_themeinfo = '';
 //		$comicpress_config = comicpress_load_config();
@@ -516,7 +522,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.2.30.2',
+				'version' => '2.9.3',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,

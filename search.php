@@ -1,10 +1,8 @@
 <?php 
 get_header();
 remove_filter('pre_get_posts','comicpress_members_filter');
-$archive_display_order = comicpress_themeinfo('archive_display_order');
-$tmp_search = new WP_Query($query_string.'&order=ASC&show_posts=-1&posts_per_page=-1');
-$count = $tmp_search->post_count;
 
+$count = $wp_query->found_posts;
 if (!$count) $count = "no";
 ?>
 	<h2 class="pagetitle"><?php _e('Search for &lsquo;','comicpress'); the_search_query(); _e('&rsquo;','comicpress'); ?></h2>
@@ -12,7 +10,6 @@ if (!$count) $count = "no";
 
 <?php
 if (have_posts()) :
-	$posts = &query_posts($query_string.'&order='.$archive_display_order);
 	while (have_posts()) : the_post();
 
 		if (is_category() && comicpress_in_comic_category()) { ?>
