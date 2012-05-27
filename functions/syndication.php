@@ -37,9 +37,13 @@ if (comicpress_themeinfo('enable_comment_count_in_rss')) {
 //Insert the comic image into the RSS feed
 if (!function_exists('comicpress_comic_feed')) {
 	function comicpress_comic_feed() { 
-		global $post;
+		global $wp_query, $post, $comiccat;
 		$output = '<p>';
-		$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post,true).'</a>';
+		if ($wp_query->query_vars['cat'] == $comiccat ) {
+			$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('comic',$post,true).'</a>';
+		} else {
+			$output .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post,true).'</a>';			
+		}
 		$output .= '</p>';
 		return apply_filters('comicpress_comic_feed', $output);
 	}

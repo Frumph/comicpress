@@ -81,8 +81,9 @@ function comicpress_init_comic_swf() {
 
 // This function will let authors who want to use comicpress as a way to output their books/text in a comic area as a page.
 function comicpress_display_comic_text($comic) {
+	$output = '';
 	if (file_exists(comicpress_themeinfo('basedir') . '/' .$comic)) {
-		$output = file_get_contents(comicpress_themeinfo('basedir') . '/' .$comic);
+		$output = implode('', file(comicpress_themeinfo('basedir') . '/' .$comic));
 	}
 	return apply_filters('comicpress_display_comic_text', $output);
 }

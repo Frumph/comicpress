@@ -6,7 +6,6 @@ Description: Display a calendar of this months posts.
 Author: Philip M. Hofer (Frumph)
 Version: 1.07
 Author URI: http://frumph.net/
-
 */
 
 function comicpress_menubar() {
@@ -21,7 +20,7 @@ function comicpress_menubar() {
 					<?php get_search_form(); ?>
 				</div>
 				<?php } ?>
-				<?php do_action('comicpress-menubar-menunav'); ?>
+				<?php do_action('comic-mini-navigation'); ?>
 				<?php if (comicpress_themeinfo('enable_rss_in_menubar')) { ?>
 					<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
 				<?php } ?>
@@ -60,19 +59,19 @@ function comicpress_menubar() {
 }
 
 class comicpress_menubar_widget extends WP_Widget {
-	
+
 	function comicpress_menubar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Displays a menubar.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Menubar','comicpress'), $widget_ops);
 		}
 	}
-	
+
+
 	function widget($args, $instance) {
 		global $post;
 		Protect();
 		extract($args, EXTR_SKIP); 
-		
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
@@ -80,7 +79,7 @@ class comicpress_menubar_widget extends WP_Widget {
 		echo $after_widget;
 		UnProtect();
 	}
-	
+
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
@@ -97,6 +96,5 @@ class comicpress_menubar_widget extends WP_Widget {
 }
 
 register_widget('comicpress_menubar_widget');
-
 
 ?>

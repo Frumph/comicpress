@@ -12,3 +12,4 @@
 		<?php if (is_cp_theme_layout('rgn') && !comicpress_disable_sidebars()) get_sidebar('left'); ?>
 		<div id="content" class="narrowcolumn">
 			<?php if (is_active_sidebar('over-blog')) get_sidebar('overblog'); ?>
+			<?php do_action('comic-blog-area'); ?>

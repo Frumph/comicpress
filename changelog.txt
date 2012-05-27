@@ -1,6 +1,24 @@
-﻿2.9.3
+2.9.4
+Commented out padding: 10px 0 0 0; in the #header {} css.
+Changed to new code for custom-background and custom-header
+changed css for padding in style.css: #comment, #author, #email, #url, #s-search, .comicpress_control_panel_widget input { padding: 2px 0 3px 0; }
+changed css for padding in .menunav-rss
+changed css for the "current_page_item" in the menubar from a change of color to just being "bold"
+changed css for .menunav search adjusting the width with CSS of the search input box in the menubar. (fixed)
+removed extra wp_link_pages from the page.php file
+Template files were moved from the root into their own directory /templates/ if you have a template associated with a page you will have to re-associate it.
+Adjusted some parts of displaypost.php where it shows for custom post-types or not.
+
+
+
+2.9.3.1 
+removed the stray project wonderful ad from the bottom in the footer.php file
+
+2.9.3
 Adjusted how the search and archive pages work to reduce memory load & count
 fixed the language textdomain lines
+changed how the .txt and .htm files are read in to pass the theme review
+renamed functions/ipn.php to functions/ipn.txt, change it back to functions/ipn.php in order to utilize the IPN from paypal
 
 
 2.9.2.30.3

@@ -11,11 +11,12 @@
 	<div class="comicpress-options">
 		
 	<div class="cpadmin-footer">
-		<div class="comicpress-forum">Forums are at <a href="http://comicpress.net/forum/">http://comicpress.net/forum/</a> for Technical Assistance</div>
+		<div class="comicpress-forum">Forums are at <a href="http://forum.comicpress.org/">http://forum.comicpress.org/</a> for Technical Assistance</div>
 		<div id="comicpress-version-title"><a href="http://comicpress.net/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small>, <?php _e('Originally created by','comicpress'); ?> <a href="http://mindfaucet.com/">Tyler Martin</a><br />
-		<?php _e('If you like the ComicPress theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>
+		<?php _e('If you like the ComicPress theme, please donate.  It will help in developing new features and versions.','comicpress'); ?><br />
+		Romanian <img src="http://mobirout.com/uploads/ro.gif" alt="Romanian translation" /> translation, Provided by: Web Geek Science (webhostinggeeks.com)
 		<table style="margin:0 auto;">
 			<tr>
 				<td style="width:200px;">
@@ -37,6 +38,7 @@
 					</form>
 				</td>
 			</tr>
+
 		</table>
 	</div>
 

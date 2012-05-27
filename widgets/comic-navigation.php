@@ -182,29 +182,29 @@ class comicpress_comic_navigation_widget extends WP_Widget {
 	</table>
 		<?php if ($instance['sharethis']) { ?>
 			<div id="navi-share-box">
-				<a href="http://reddit.com/submit?url=<?php echo $url; ?>&amp;title=<?php echo comicpress_clean_url($title); ?>" title="Reddit">Reddit</a>
-				<a href="http://digg.com/submit?phase=2&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Digg">Digg</a>
-				<a href="http://www.facebook.com/share.php?u=<?php echo $url; ?>" title="Facebook">Facebook</a>
-				<a href="http://www.myspace.com/Modules/PostTo/Pages/?l=3&amp;u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>&amp;c=" title="MySpace">MySpace</a>
-				<a href="http://del.icio.us/post?url=<?php echo $url; ?>" title="Delicious">Delicious</a>
-				
-				<a href="http://www.stumbleupon.com/submit?url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Stumbleupon">Stumbleupon</a>
-				<a href="http://buzz.yahoo.com/submit/?submitUrl=<?php echo $url; ?>&amp;submitHeadline=<?php echo $title; ?>" title="Buzz Up!">Buzz Up!</a>
-				<a href="http://www.mixx.com/submit?page_url=<?php echo $url; ?>" title="Mixx">Mixx</a>
-				<a href="http://www.technorati.com/faves?add=<?php echo $url; ?>" title="Technorati">Technorati</a>
-				<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Google Bookmarks">Google Bookmarks</a>
-				<a href="http://bookmarks.yahoo.com/toolbar/savebm?opener=tb&amp;u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>" title="Yahoo Bookmarks">Yahoo Bookmarks</a>
-				
-				<a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>" title="Yahoo MyWeb">Yahoo MyWeb</a>
-				<a href="https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Windows Live">Windows Live</a>
-				<a href="http://www.propeller.com/submit/?U=<?php echo $url; ?>&amp;T=<?php echo $title; ?>" title="Propeller">Propeller</a>
-				<a href="http://friendfeed.com/share?url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="FriendFeed">FriendFeed</a>
-				<a href="http://www.newsvine.com/_tools/seed&amp;save?popoff=0&amp;u=<?php echo $url; ?>&amp;h=<?php echo $title; ?>" title="Newsvine">Newsvine</a>
-				<a href="http://www.xanga.com/private/editorx.aspx?t=<?php echo $title; ?>&amp;u=<?php echo $url; ?>&amp;s=" title="Xanga">Xanga</a>
-				
-				<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>&amp;summary=<?php echo $excerpt; ?>&amp;source=" title="LinkedIn">LinkedIn</a>
-				<a href="http://blinklist.com/index.php?Action=Blink/addblink.php&amp;Url=<?php echo $url; ?>&amp;Title=<?php echo $title; ?>" title="Blinklist">Blinklist</a>
-				<a href="http://furl.net/storeIt.jsp?u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>" title="Furl">Furl</a>
+			<a href="http://reddit.com/submit?url=<?php echo $url; ?>&amp;title=<?php echo comicpress_clean_url($title); ?>" title="Reddit">Reddit</a>
+			<a href="http://digg.com/submit?phase=2&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Digg">Digg</a>
+			<a href="http://www.facebook.com/share.php?u=<?php echo $url; ?>" title="Facebook">Facebook</a>
+			<a href="http://www.myspace.com/Modules/PostTo/Pages/?l=3&amp;u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>&amp;c=" title="MySpace">MySpace</a>
+			<a href="http://del.icio.us/post?url=<?php echo $url; ?>" title="Delicious">Delicious</a>
+			
+			<a href="http://www.stumbleupon.com/submit?url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Stumbleupon">Stumbleupon</a>
+			<a href="http://buzz.yahoo.com/submit/?submitUrl=<?php echo $url; ?>&amp;submitHeadline=<?php echo $title; ?>" title="Buzz Up!">Buzz Up!</a>
+			<a href="http://www.mixx.com/submit?page_url=<?php echo $url; ?>" title="Mixx">Mixx</a>
+			<a href="http://www.technorati.com/faves?add=<?php echo $url; ?>" title="Technorati">Technorati</a>
+			<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Google Bookmarks">Google Bookmarks</a>
+			<a href="http://bookmarks.yahoo.com/toolbar/savebm?opener=tb&amp;u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>" title="Yahoo Bookmarks">Yahoo Bookmarks</a>
+			
+			<a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=<?php echo $url; ?>&amp;t=<?php echo $title; ?>" title="Yahoo MyWeb">Yahoo MyWeb</a>
+			<a href="https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="Windows Live">Windows Live</a>
+			<a href="http://www.propeller.com/submit/?U=<?php echo $url; ?>&amp;T=<?php echo $title; ?>" title="Propeller">Propeller</a>
+			<a href="http://friendfeed.com/share?url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>" title="FriendFeed">FriendFeed</a>
+			<a href="http://www.newsvine.com/_tools/seed&amp;save?popoff=0&amp;u=<?php echo $url; ?>&amp;h=<?php echo $title; ?>" title="Newsvine">Newsvine</a>
+			<a href="http://www.xanga.com/private/editorx.aspx?t=<?php echo $title; ?>&amp;u=<?php echo $url; ?>&amp;s=" title="Xanga">Xanga</a>
+			
+			<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>&amp;summary=<?php echo $excerpt; ?>&amp;source=" title="LinkedIn">LinkedIn</a>
+			<a href="http://blinklist.com/index.php?Action=Blink/addblink.php&amp;Url=<?php echo $url; ?>&amp;Title=<?php echo $title; ?>" title="Blinklist">Blinklist</a>
+			<a href="http://twitter.com/intent/tweet?original_referer=<?php echo $url; ?>&amp;source=tweetbutton&amp;text=<?php echo $title; ?>&amp;url=<?php echo $url; ?>" title="Twitter">Twitter</a>
 			</div>
 		<?php } ?>
 </div>

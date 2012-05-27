@@ -18,7 +18,7 @@ if (have_posts()) :
 	$count = $wp_query->found_posts;
 	$post = $posts[0]; // Hack. Set $post so that the_date() works
 	$post_title_type = $title_string = '';
-	if ($post->post_type !== 'post') $post_title_type = $post->post_type.'-'; // extra space at the end for visual
+//	if ($post->post_type !== 'post') $post_title_type = $post->post_type.'-'; // extra space at the end for visual
 	if (is_category()) { /* Category */
 		$title_string = __('Archive for &#8216;','comicpress').$post_title_type.single_cat_title('',false).__('&#8217;', 'comicpress');
 	} elseif(is_tag()) { /* Tag */

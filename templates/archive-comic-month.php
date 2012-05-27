@@ -31,7 +31,7 @@ $archiveQuery->query('show_posts=-1&posts_per_page=-1&cat='.comicpress_all_comic
 
 				<div class="comicthumbwrap">
 					<div class="comicarchiveframe">
-						<a href="<?php the_permalink() ?>"><img src="<?php the_comic_mini() ?>" alt="<?php the_title() ?>" title="<?php the_title() ?>" style="width: <?php echo $mini_comic_width; ?>px" /></a><br />
+						<a href="<?php the_permalink() ?>"><?php comicpress_display_comic_thumbnail($type = 'mini', $post, true); ?></a><br />
 					</div>
 				</div>
 				

@@ -1,48 +1,48 @@
-<?php
+<?php 
 
+if ( ! function_exists( 'comicpress_enqueue_comment_reply' ) ) {
+    function comicpress_enqueue_comment_reply() {
+            if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+                wp_enqueue_script( 'comment-reply' );
+            }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'comicpress_enqueue_comment_reply' );
 // Text domain - Languages location
 load_theme_textdomain( 'comicpress', get_template_directory() . '/lang' );
-
 // the_post_thumbnail('thumbnail/medium/full');
 add_theme_support( 'post-thumbnails' );
-
-// Required by the wordpress review theme, it sucks donkey balls but is required.
 add_theme_support( 'automatic-feed-links' );
-
-// This theme allows users to set a custom background
-add_custom_background();
+add_editor_style();
 
 if (!isset($content_width)) $content_width = 520;
 
-global $comiccat, $blogcat, 
-$comic_folder, $rss_comic_folder, $mini_comic_folder, $archive_comic_folder,
-$archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;
+global $comiccat, $blogcat, $comic_folder, $rss_comic_folder, $mini_comic_folder, $archive_comic_folder,$archive_comic_width, $rss_comic_width, $mini_comic_width, $blog_postcount;
 
 if (is_multisite()) {
 	// This section keeps it compatible with comicpress manager's options
 	$variables_to_extract = array();
-	
-	foreach (array(
-			'comiccat'            => 'comiccat',
-			'blogcat'             => 'blogcat',
-			'comics_path'         => 'comic_folder',
-			'comicsrss_path'      => 'rss_comic_folder',
-			'comicsarchive_path'  => 'archive_comic_folder',
-			'comicsmini_path'     => 'mini_comic_folder',
-			'archive_comic_width' => 'archive_comic_width',
-			'rss_comic_width'     => 'rss_comic_width',
-			'mini_comic_width'    => 'mini_comic_width',
-			'blog_postcount'      => 'blog_postcount') as $options => $variable_name) {
+	foreach (array('comiccat' => 'comiccat','blogcat'=> 'blogcat','comics_path' => 'comic_folder','comicsrss_path' => 'rss_comic_folder','comicsarchive_path'  => 'archive_comic_folder','comicsmini_path' => 'mini_comic_folder','archive_comic_width' => 'archive_comic_width',			'rss_comic_width'     => 'rss_comic_width',			'mini_comic_width'    => 'mini_comic_width','blog_postcount' => 'blog_postcount') as $options => $variable_name) {		
 		$variables_to_extract[$variable_name] = get_option("comicpress-${options}");
 	}
 	extract($variables_to_extract);			
-} else {
+} else {	
 	@require_once( get_template_directory() . '/comicpress-config.php');
 }
 
 /* child-functions.php / child-widgets.php - in the child theme */
 get_template_part('child', 'functions');
 get_template_part('child', 'widgets');
+
+// This theme allows users to set a custom background
+// the global if has anything in it from the child theme, use it.
+$comicpress_background_array = array();
+if (function_exists('comicpress_child_theme_background_array'))
+	$comicpress_background_array = comicpress_child_theme_background_array();
+// Set defaults if it doesn't exit from the global
+if (!isset($comicpress_background_array)) $comicpress_background_array = array('default-color' => 'fff', 'default-image' => '');
+add_theme_support( 'custom-background', $comicpress_background_array );
+
 
 // These autoload
 foreach (glob(get_template_directory() . "/functions/*.php") as $funcfile) {
@@ -155,7 +155,6 @@ function __comicpress_init() {
 	// initiate the scripts
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
-		if ( comicpress_themeinfo('enable_comment_javascript') ) wp_enqueue_script( 'comment-reply' );
 		if (!comicpress_themeinfo('disable_jquery_menu_code')) {
 			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri() . '/js/ddsmoothmenu.js', null, null, true); 
 			wp_enqueue_script('menubar_js', get_template_directory_uri() . '/js/menubar.js', null, null, true);
@@ -236,7 +235,7 @@ function comicpress_add_head() {
 	var image_root = '<?php echo get_template_directory_uri(); ?>/images/';
 	var permalink = '<?php the_permalink() ?>';
 </script>
-	<?php }
+<?php }
 }
 
 if (!function_exists('is_cp_theme_layout')) {
@@ -522,7 +521,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 				'upload_path' => get_option('upload_path'),
-				'version' => '2.9.3',
+				'version' => '2.9.4',
 				'siteurl' => trailingslashit(get_option('siteurl')),
 				'home' => trailingslashit(home_url()),
 				'comiccat' => $comiccat,
