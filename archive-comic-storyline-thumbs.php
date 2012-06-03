@@ -2,16 +2,23 @@
 /*
 Template Name: Comic Storyline with Thumbs
 */
-get_header(); 
+get_header();
+$is_comic = false;
+while (have_posts()) : the_post();
+	
 ?>
-<div <?php post_class(); ?>>
-	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
-	<div class="post-content">
-		<div class="post-info">
-			<div class="post-text">
-				<h2 class="page-title"><?php the_title(); ?></h2>
-			</div>
-		</div>
+		<div <?php post_class(); ?>>
+			<?php comicpress_display_post_thumbnail($is_comic); ?>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
+			<div class="post-content">
+				<div class="post-info">
+					<div class="post-text">
+						<?php comicpress_display_post_title($is_comic); ?>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="entry">
+					<?php comicpress_display_the_content($is_comic); ?>
 		<ul id="storyline" class="level-0">
 <?php if (comicpress_themeinfo('enable-storyline-support') == 1) {
 	if (($result = comicpress_themeinfo('storyline-category-order')) !== false) {
@@ -59,10 +66,21 @@ get_header();
 			} else { ?>
 				<li><h3>Storyline Support is not currently enabled on this site.</h3><br /><br /><strong>Note to the Administrator:</strong><br /> To enable storyline support and manage storyline categories make sure you are running the latest version of the <a href="http://wordpress.org/extend/plugins/comicpress-manager/">ComicPress Manager</a> plugin and check your storyline settings from it's administration menu.</h3></li>
 			<?php } ?>
-		</ul>
-		<div class="clear"></div>
-	</div>
-	<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
-</div>
+			</ul>
+					<div class="clear"></div>
+				</div>
+				<?php edit_post_link(__('Edit this page.','comicpress'), '', ''); ?>
+			</div>
+			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
+		</div>
+	<?php 
 
-<?php get_footer() ?>
+endwhile;
+?>
+
+<?php 
+if ('open' == $post->comment_status) {
+		comments_template('', true);
+}
+get_footer();
+ ?>

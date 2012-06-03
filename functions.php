@@ -34,15 +34,18 @@ if (is_multisite()) {
 get_template_part('child', 'functions');
 get_template_part('child', 'widgets');
 
-// This theme allows users to set a custom background
-// the global if has anything in it from the child theme, use it.
-$comicpress_background_array = array();
-if (function_exists('comicpress_child_theme_background_array'))
-	$comicpress_background_array = comicpress_child_theme_background_array();
-// Set defaults if it doesn't exit from the global
-if (!isset($comicpress_background_array)) $comicpress_background_array = array('default-color' => 'fff', 'default-image' => '');
-add_theme_support( 'custom-background', $comicpress_background_array );
 
+if ( version_compare( $wp_version, "3.3.999", ">" ) ) {
+	// This theme allows users to set a custom background
+	// the global if has anything in it from the child theme, use it.
+	$comicpress_background_array = array();
+	if (function_exists('comicpress_child_theme_background_array')) $comicpress_background_array = comicpress_child_theme_background_array();
+// Set defaults if it doesn't exit from the global
+	if (!isset($comicpress_background_array)) $comicpress_background_array = array('default-color' => 'fff', 'default-image' => '');
+	add_theme_support( 'custom-background', $comicpress_background_array );
+} else {
+	add_custom_background();
+}
 
 // These autoload
 foreach (glob(get_template_directory() . "/functions/*.php") as $funcfile) {
@@ -657,6 +660,19 @@ function comicpress_disable_sidebars() {
 		if ($sidebars_disabled) return true;
 	}
 	return false;
+}
+
+add_filter('previous_post_rel_link', 'comicpress_rel_link_removal'); 
+add_filter('next_post_rel_link', 'comicpress_rel_link_removal');
+
+if (!function_exists('comicpress_rel_link_removal')) {
+	function comicpress_rel_link_removal($link) {
+		global $post, $wp_query;
+		if (is_single() && !is_attachment()) {
+			if (comicpress_in_comic_category()) $link=false;
+		}
+		return $link;
+	}
 }
 
 ?>

@@ -99,20 +99,23 @@ class comicpress_archive_dropdown_widget extends WP_Widget {
 							$category_id = end($parts);
 							$category = $categories_by_id[$category_id];
 							$description = $category->description;
-							$first_comic_in_category = comicpress_get_terminal_post_in_category($category_id);
-							$first_comic_permalink = get_permalink($first_comic_in_category->ID);
-							$padding = str_repeat("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", $target_depth-1);
-							
-							$option = '<option value="'.get_category_link($category_id).'">';
-							$option .= $padding.$category->name;
-							if ($category->count > 0) $option .= ' ('.$category->count.')';
-							$option .= '</option>'."\r\n";
-							$comicpress_storyline_dropdown_archive .= $option;		
-							
+							$the_posts = get_posts('post_status=publish&numberposts=-1&cat='.$category->term_id);
+							if (is_array($the_posts) && !empty($the_posts)) {
+								$first_comic_in_category = comicpress_get_terminal_post_in_category($category_id);
+								$first_comic_permalink = get_permalink($first_comic_in_category->ID);
+								$padding = str_repeat("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", $target_depth-1);
+								
+								$option = '<option value="'.get_category_link($category_id).'">';
+								$option .= $padding.$category->name;
+								if ($category->count > 0) $option .= ' ('.$category->count.')';
+								$option .= '</option>'."\r\n";
+								$comicpress_storyline_dropdown_archive .= $option;		
+							}
 							$current_depth = $target_depth;
 						}
 						wp_cache_set( 'comicpress', $comicpress_storyline_dropdown_archive, 'archivedropdown', 7200 );
 					}
+					wp_reset_query();
 					echo $comicpress_storyline_dropdown_archive;
 				}
 				break;

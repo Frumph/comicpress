@@ -619,6 +619,7 @@ h4, h4 a {
 .entry {
 	line-height: 18px;
 	padding: 3px 0;
+	overflow: hidden;
 }
 
 .more-link {
@@ -742,6 +743,10 @@ textarea#comment {
 	display: inline-block;
 	font-size: 11px;
 	padding: 5px;
+}
+
+p.nocomments {
+	text-align: center;
 }
 
 .form-submit {
@@ -1497,6 +1502,7 @@ li.storyline-root {
 
 #wp-paginav {
 	text-align: left;
+	margin: 10px 0;
 }
 
 #paginav {

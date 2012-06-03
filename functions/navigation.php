@@ -36,14 +36,14 @@ function comicpress_get_last_comic_permalink() {
  * Get the link to the previous comic from the current one.
  */
 function comicpress_previous_comic_link($format, $link) {
-	previous_post_link($format, $link, false, comicpress_all_blog_categories_array_and());
+	previous_post_link($format, $link, false, comicpress_all_blog_categories_string());
 }
 
 /**
  * Get the link to the next comic from the current one.
  */
 function comicpress_next_comic_link($format, $link) {
-	next_post_link($format, $link, false, comicpress_all_blog_categories_array_and());
+	next_post_link($format, $link, false, comicpress_all_blog_categories_string());
 }
 
 /**
@@ -88,7 +88,7 @@ function comicpress_get_adjacent_comic($category, $previous = false, $in_same_ca
 	if (!empty($category)) {
 		$categories_to_exclude = comicpress_get_string_to_exclude_all_but_provided_categories($category);
 	} else {
-		$categories_to_exclude = comicpress_all_blog_categories_array_and();
+		$categories_to_exclude = comicpress_all_blog_categories_string();
 	}
 	return get_adjacent_post($in_same_category, $categories_to_exclude, $previous);
 }
