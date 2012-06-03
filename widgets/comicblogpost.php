@@ -42,7 +42,7 @@ class comicpress_comic_blog_post_widget extends WP_Widget {
 					}
 				endwhile;
 			}
-			wp_reset_query();
+//			wp_reset_query();
 		} else {
 			setup_postdata($post);
 			if (!(empty($post->post_content) && $instance['hidecontent']) && comicpress_in_comic_category()) {

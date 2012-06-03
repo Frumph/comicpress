@@ -115,7 +115,7 @@ class comicpress_archive_dropdown_widget extends WP_Widget {
 						}
 						wp_cache_set( 'comicpress', $comicpress_storyline_dropdown_archive, 'archivedropdown', 7200 );
 					}
-					wp_reset_query();
+//					wp_reset_query();
 					echo $comicpress_storyline_dropdown_archive;
 				}
 				break;
