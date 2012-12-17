@@ -309,7 +309,7 @@ function comicpress_in_comic_category($cat = null) {
  * Parse all categories and sort them into comics and non-comics categories.
  */
 function comicpress_create_category_tree() {
-	global $category_tree;
+	global $category_tree, $comiccat;
 	if (empty($category_tree)) {
 		$categories_by_id = comicpress_get_comic_category_objects_by_id();	
 		if (empty($categories_by_id) || !is_array($categories_by_id)) return false;
@@ -345,7 +345,7 @@ function comicpress_create_category_tree() {
 			$new_category_tree = array();
 			foreach ($category_tree as $node) {
 				$parts = explode("/", $node);
-				if ($parts[1] == comicpress_themeinfo('comiccat')) {
+				if ($parts[1] == $comiccat) {
 					$new_category_tree[] = $node;
 				} 
 			}
@@ -586,11 +586,11 @@ function comicpress_get_comic_category_objects_by_id() {
 
 // This uses the comicpress_load_config() because it's not yet triggered in themeinfo
 function comicpress_all_comic_categories_array() {
-	global $comicpress_all_comic_categories_array;
+	global $comiccat, $comicpress_all_comic_categories_array;
 	if (empty($comicpress_all_comic_categories_array)) {
-		$comicpress_all_comic_categories_array[] = comicpress_themeinfo('comiccat');
+		$comicpress_all_comic_categories_array[] = $comiccat;
 		foreach (get_all_category_ids() as $cats) {
-			if (cat_is_ancestor_of(comicpress_themeinfo('comiccat'), $cats)) {
+			if (cat_is_ancestor_of($comiccat, $cats)) {
 				$comicpress_all_comic_categories_array[] = $cats;
 			}
 		}
