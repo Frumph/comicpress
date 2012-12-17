@@ -1,6 +1,6 @@
 <?php 
 get_header();
-if (!comicpress_themeinfo('disable_comic_frontpage') && !comicpress_themeinfo('disable_comic_blog_frontpage') && !is_paged() )  {
+if (!comicpress_themeinfo('disable_comic_blog_frontpage') && !is_paged() )  {
 	$wp_query->in_the_loop = true; $comicFrontpage = new WP_Query(); 
 	$order = 'DESC';
 	if (comicpress_themeinfo('display_first_comic_on_home')) $order = 'ASC';

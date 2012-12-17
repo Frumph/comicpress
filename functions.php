@@ -113,10 +113,10 @@ if (!function_exists('comicpress_sidebar_init')) {
 function comicpress_sidebar_init() {
 	if (comicpress_themeinfo('enable_caps')) {
 		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-head\"></div>\r\n<div class=\"widget-content\">\r\n";
-		$after_widget = "</div>\r\n<div class=\"widget-foot\"></div>\r\n</div>\r\n";
+		$after_widget = "</div>\r\n<div class=\"clear\"></div>\r\n<div class=\"widget-foot\"></div>\r\n</div>\r\n";
 	} else {
 		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-content\">\r\n";
-		$after_widget = "</div>\r\n</div>\r\n";
+		$after_widget = "</div>\r\n<div class=\"clear\"></div>\r\n</div>\r\n";
 	}
 	foreach (array(
 				__('Left Sidebar', 'comicpress'),
