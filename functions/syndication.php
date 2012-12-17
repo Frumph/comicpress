@@ -6,19 +6,21 @@
  */
 
 function comicpress_the_title_rss($title = '') {
-	switch ($count = get_comments_number()) {
-		case 0:
-			$title_pattern = __('%s (No Comments)', 'comicpress');
-			break;
-		case 1:
-			$title_pattern = __('%s (1 Comment)', 'comicpress');
-			break;
-		default:
-			$title_pattern = sprintf(__('%%s (%d Comments)', 'comicpress'), $count);
-			break;
+	global $post;
+	if (!empty($post)) {
+		switch ($count = get_comments_number()) {
+			case 0:
+				$title_pattern = __('%s (No Comments)', 'comicpress');
+				break;
+			case 1:
+				$title_pattern = __('%s (1 Comment)', 'comicpress');
+				break;
+			default:
+				$title_pattern = sprintf(__('%%s (%d Comments)', 'comicpress'), $count);
+				break;
+		}
+		return sprintf($title_pattern, $title);
 	}
-	
-	return sprintf($title_pattern, $title);
 }
 
 /**
@@ -38,13 +40,11 @@ if (comicpress_themeinfo('enable_comment_count_in_rss')) {
 if (!function_exists('comicpress_comic_feed')) {
 	function comicpress_comic_feed($content = '') { 
 		global $wp_query, $post, $comiccat;
-		$content .= '<p>';
 		if ($wp_query->query_vars['cat'] == $comiccat ) {
-			$content .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('comic',$post,true).'</a>';
+			$content .= '<p><a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('comic',$post,true).'</a></p>';
 		} else {
-			$content .= '<a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post,true).'</a>';			
+			$content .= '<p><a href="'.get_permalink().'" title="'.comicpress_the_hovertext($post).'">'.comicpress_display_comic_thumbnail('rss',$post,true).'</a></p>';
 		}
-		$content .= '</p>';
 		return apply_filters('comicpress_comic_feed', $content);
 	}
 }
@@ -52,19 +52,14 @@ if (!function_exists('comicpress_comic_feed')) {
 // removed the comicpress_in_comic_category so that if it has a post-image it will add it to the rss feed (else rss comic thumb)
 if (!function_exists('comicpress_insert_comic_feed')) {
 	function comicpress_insert_comic_feed($content = '') {
-		global $wp_query, $post;
+		global $post;
 		$category = get_the_category($post->ID);
-		if (is_feed() && comicpress_in_comic_category($category[0]->cat_ID)) {
+		if (comicpress_in_comic_category($category[0]->cat_ID)) {
 			$content = comicpress_comic_feed().$content;
 		}
 		return apply_filters('comicpress_insert_comic_feed', $content);
 	}
 }
 
-add_filter('the_content','comicpress_insert_comic_feed');
-add_filter('the_excerpt','comicpress_insert_comic_feed');
-
-// Using the_content and the_excerpt instead of the_content_rss cause it doesn't work properly because it places it *out* of the <description>
-
-
-?>
+add_filter('the_content_feed','comicpress_insert_comic_feed');
+add_filter('the_excerpt_rss','comicpress_insert_comic_feed');
