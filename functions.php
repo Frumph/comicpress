@@ -203,6 +203,8 @@ function __comicpress_init() {
 	// Set the posts per page on the home page
 	function comicpress_blogpostcount_filter($query) {
 		if ( $query->is_home() && $query->is_main_query() ) {
+			$blog_cats = comicpress_all_blog_categories_array();
+			if (!empty($blog_cats)) $query->set('category__in', $blog_cats);
 			$query->set('posts_per_page', comicpress_themeinfo('blog_postcount'));
 		}
 		return $query;
