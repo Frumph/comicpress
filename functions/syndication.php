@@ -5,8 +5,8 @@ function comicpress_add_count_to_title_rss($title = '') {
 	if (!empty($post)) {
 		$count = get_comments_number();
 		$count == 0 ? $title = $title.' '.__('(No Comments)','comicpress') : $title = $title.' '.sprintf(_n('(%s Comment)','(%s Comments)', $count, 'comicpress'),$count);
-		return apply_filters('comicpress_add_count_to_title_rss', $title);
 	}
+	return apply_filters('comicpress_add_count_to_title_rss', $title);
 }
 
 /**
