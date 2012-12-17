@@ -109,7 +109,6 @@ if (is_admin()) {
 
 add_action( 'widgets_init', 'comicpress_sidebar_init' );
 
-if (!function_exists('comicpress_sidebar_init')) {
 function comicpress_sidebar_init() {
 	if (comicpress_themeinfo('enable_caps')) {
 		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-head\"></div>\r\n<div class=\"widget-content\">\r\n";
@@ -118,33 +117,43 @@ function comicpress_sidebar_init() {
 		$before_widget = "<div id=\"".'%1$s'."\" class=\"widget ".'%2$s'."\">\r\n<div class=\"widget-content\">\r\n";
 		$after_widget = "</div>\r\n<div class=\"clear\"></div>\r\n</div>\r\n";
 	}
-	foreach (array(
-				__('Left Sidebar', 'comicpress'),
-				__('Right Sidebar', 'comicpress'),
-				__('Above Header', 'comicpress'),
-				__('Header', 'comicpress'),
-				__('Menubar', 'comicpress'),
-				__('Over Comic', 'comicpress'),
-				__('Left of Comic', 'comicpress'),
-				__('Right of Comic', 'comicpress'),
-				__('Under Comic', 'comicpress'),
-				__('Over Blog', 'comicpress'),
-				__('Blog', 'comicpress'),
-				__('Under Blog', 'comicpress'),
-				__('The Footer', 'comicpress')
-				) as $sidebartitle) {
-					
+	$widgets_list = array(
+			array('id' => 'left-sidebar', 'name' => __('Left Sidebar', 'comicpress'), 'description' => __('The sidebar that appears to the left of the content.','comicpress')),
+			array('id' => 'right-sidebar', 'name' => __('Right Sidebar', 'comicpress'), 'description' => __('The sidebar that appears to the right of the content.','comicpress')),
+			array('id' => 'above-header', 'name' => __('Above Header', 'comicpress'), 'description' => __('This sidebar appears to above all of the site information.  This sidebar is not encased in CSS, you will need to create CSS for it.','comicpress')),
+			array('id' => 'header', 'name' => __('Header', 'comicpress'), 'description' => __('This sidebar appears inside the #header block.','comicpress')),
+			array('id' => 'menubar', 'name' => __('Menubar', 'comicpress'), 'description' => __('This sidebar is under the header and above the content-wrapper block','comicpress')),
+			array('id' => 'over-comic', 'name' => __('Over Comic', 'comicpress'), 'description' => __('This sidebar appears over the comic section right after the #comic-wrap','comicpress')),
+			array('id' => 'left-of-comic', 'name' => __('Left of Comic', 'comicpress'), 'description' => __('This sidebar appears before #comic, it has no CSS so you need to define it yourself.','comicpress')),
+			array('id' => 'right-of-comic', 'name' => __('Right of Comic', 'comicpress'), 'description' => __('This sidebar appears after #comic, it has no CSS so you need to define it yourself.','comicpress')),
+			array('id' => 'under-comic', 'name' => __('Under Comic', 'comicpress'), 'description' => __('This sidebar appears after #sidebar-right-of-comic, below the rest of the comic sidebars','comicpress')),
+			array('id' => 'over-blog', 'name' => __('Over Blog', 'comicpress'), 'description' => __('This sidebar appears over the blog within the #column .narrowcolumn','comicpress')),
+			array('id' => 'under-blog', 'name' => __('Under Blog', 'comicpress'), 'description' => __('This sidebar appears under the blog within the #column .narrowcolumn','comicpress')),
+			array('id' => 'the-footer', 'name' => __('Footer', 'comicpress'), 'description' => __('This sidebar is below the #content-wrapper block at the bottom of the page','comicpress')),
+	);
+	foreach ($widgets_list as $widget_info) {
 		register_sidebar(array(
-					'name'=> $sidebartitle,
-					'id' => sanitize_title($sidebartitle),
-//					'description' => $sidebartitle, 
+					'name'=> $widget_info['name'],
+					'id' => 'sidebar-'.sanitize_title($widget_info['id']),
+					'description' => $widget_info['description'],
 					'before_widget' => $before_widget,
 					'after_widget'  => $after_widget,
 					'before_title'  => "<h2 class=\"widgettitle\">",
 					'after_title'   => "</h2>\r\n"
-					));
-		}
+		));
 	}
+}
+
+function comicpress_get_sidebar($location = '') {
+	if (empty($location)) { get_sidebar(); return; }
+	if (file_exists(get_template_directory().'/sidebar-'.$location.'.php') || file_exists(get_stylesheet_directory().'/sidebar-'.$location.'.php')) {
+		get_sidebar($location);
+	} elseif (is_active_sidebar('sidebar-'.$location)) { ?>
+		<div id="sidebar-<?php echo $location; ?>" class="sidebar">
+			<?php dynamic_sidebar('sidebar-'.$location); ?>
+			<div class="clear"></div>
+		</div>
+	<?php }
 }
 
 register_nav_menus(array(
@@ -189,37 +198,26 @@ function __comicpress_init() {
 	}
 	
 	do_action('comicpress_init');
-
-	// This is to fix the post_count on the front page blog, cause some sites it doesnt send the right info to the core.
-
-	if (comicpress_themeinfo('fix_for_index_paging')) {
 		
-		add_filter('pre_get_posts', 'comicpress_blogpostcount_filter');
-		
-		function comicpress_blogpostcount_filter($query) {
-			if (is_home()) {
-				$query->set('posts_per_page', comicpress_themeinfo('blog_postcount'));
-			}
-			return $query;
+	add_filter('pre_get_posts', 'comicpress_blogpostcount_filter');
+	// Set the posts per page on the home page
+	function comicpress_blogpostcount_filter($query) {
+		if ( $query->is_home() && $query->is_main_query() ) {
+			$query->set('posts_per_page', comicpress_themeinfo('blog_postcount'));
 		}
-		
-		add_action('get_sidebar','comicpress_remove_blogpostcount_filter');
-			
-		function comicpress_remove_blogpostcount_filter() {
-			remove_filter('pre_get_posts','comicpress_blogpostcount_filter');
-		}
+		return $query;
 	}
 	
 	add_filter('pre_get_posts', 'comicpress_archive_query');
 	// Set the 'order' of the archive and search
 	function comicpress_archive_query($query) {
-		if (is_archive() || is_search()) {
+		if ($query->is_archive() || $query->is_search()) {
 			$archive_display_order = comicpress_themeinfo('archive_display_order');
 			if (empty($archive_display_order)) $archive_display_order = 'DESC';
 			$order = '&order='.$archive_display_order;
 			$query->set('order', $archive_display_order);
-			return $query;
 		}
+		return $query;		
 	}
 	
 	if (comicpress_themeinfo('remove_wptexturize')) {
