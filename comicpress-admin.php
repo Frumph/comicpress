@@ -74,7 +74,6 @@ function comicpress_admin_options() {
 				'enable_full_post_check',
 				'enable_scroll_to_top',
 				'enable_page_load_info',
-				'fix_for_index_paging',
 				'enable_multicomic_jquery',
 				'enable_comic_lightbox'
 				) as $key) {

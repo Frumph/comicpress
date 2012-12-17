@@ -271,15 +271,6 @@
 						<?php _e('Will display information on how many queries and how fast it took to load the page in the footer.', 'comicpress'); ?>
 					</td>
 				</tr>
-				<tr>
-					<th scope="row"><label for="fix_for_index_paging"><?php _e('Enable fix for index paging file not found with permalinks?','comicpress'); ?></label></th>
-					<td>
-						<input id="fix_for_index_paging" name="fix_for_index_paging" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('fix_for_index_paging')); ?> />
-					</td>
-					<td>
-						<?php _e('Enabling this will add a filter to the index page query that will set the number of posts displayed appropriately for paging if it does not work for you.', 'comicpress'); ?>
-					</td>
-				</tr>
 			</table>
 
 		</div>
