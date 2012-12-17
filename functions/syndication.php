@@ -1,39 +1,25 @@
 <?php
-/**
- * Syndication - Feed Count Capturing & adding comic to feed.
- * Author: Philip M. Hofer (Frumph)
- * In Testing
- */
 
-function comicpress_the_title_rss($title = '') {
+function comicpress_add_count_to_title_rss($title = '') {
 	global $post;
 	if (!empty($post)) {
-		switch ($count = get_comments_number()) {
-			case 0:
-				$title_pattern = __('%s (No Comments)', 'comicpress');
-				break;
-			case 1:
-				$title_pattern = __('%s (1 Comment)', 'comicpress');
-				break;
-			default:
-				$title_pattern = sprintf(__('%%s (%d Comments)', 'comicpress'), $count);
-				break;
-		}
-		return sprintf($title_pattern, $title);
+		$count = get_comments_number();
+		$count == 0 ? $title = $title.' '.__('(No Comments)','comicpress') : $title = $title.' '.sprintf(_n('(%s Comment)','(%s Comments)', $count, 'comicpress'),$count);
+		return apply_filters('comicpress_add_count_to_title_rss', $title);
 	}
 }
 
 /**
  * Handle making changes to ComicPress before the export process starts.
  */
-function comicpress_export_wp() {
-	remove_filter('the_title_rss', 'comicpress_the_title_rss');
+function comicpress_remove_count_export_wp() {
+	remove_filter('the_title_rss', 'comicpress_add_count_to_title_rss');
 }
 
 if (comicpress_themeinfo('enable_comment_count_in_rss')) {
-	add_filter('the_title_rss', 'comicpress_the_title_rss');
+	add_filter('the_title_rss', 'comicpress_add_count_to_title_rss');
 	// Remove the title count from being in the export.
-	add_action('export_wp', 'comicpress_export_wp');
+	add_action('export_wp', 'comicpress_remove_count_export_wp');
 }
 
 //Insert the comic image into the RSS feed
