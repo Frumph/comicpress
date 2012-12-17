@@ -55,7 +55,7 @@ if (!function_exists('comicpress_insert_comic_feed')) {
 		global $wp_query, $post;
 		$category = get_the_category($post->ID);
 		if (is_feed() && comicpress_in_comic_category($category[0]->cat_ID)) {
-			$content .= comicpress_comic_feed();
+			$content = comicpress_comic_feed().$content;
 		}
 		return apply_filters('comicpress_insert_comic_feed', $content);
 	}
