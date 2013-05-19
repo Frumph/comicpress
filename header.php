@@ -2,25 +2,11 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<title><?php 
-	bloginfo('name');
-	$bloginfo_description = get_bloginfo('description');
-	if (is_home () && !empty($bloginfo_description)) {
-		echo ' - '; bloginfo('description');
-	} elseif (is_category() ) {
-		echo ' - '; single_cat_title();
-	} elseif (is_single() || is_page() ) { 
-		echo ' - '; single_post_title();
-	} elseif (is_search() ) { 
-		echo __(' search results: ','comicpress'); echo esc_html($s);
-	} else { 
-		echo ' - '; wp_title('',true);
-	}
-  ?></title>
+	<title><?php wp_title(); ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php
