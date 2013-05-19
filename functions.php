@@ -1,5 +1,6 @@
 <?php 
 
+add_action( 'widgets_init', 'comicpress_sidebar_init' );
 add_filter('wp_title', 'comicpress_filter_wp_title');
 
 if ( ! function_exists( 'comicpress_enqueue_comment_reply' ) ) {
@@ -109,7 +110,7 @@ if (is_admin()) {
 
 // Register Sidebar and Define Widgets
 
-add_action( 'widgets_init', 'comicpress_sidebar_init' );
+
 
 function comicpress_sidebar_init() {
 	if (comicpress_themeinfo('enable_caps')) {
@@ -230,18 +231,6 @@ function __comicpress_init() {
 }
 
 add_action('init', '__comicpress_init');
-
-add_action('wp_head','comicpress_add_head');
-
-function comicpress_add_head() {
-	if (is_active_widget('comicpress_jquery_bookmark_widget', false, 'comicpress_jquery_bookmark_widget', true)) { ?>
-
-<script type="text/javascript">
-	var image_root = '<?php echo get_template_directory_uri(); ?>/images/';
-	var permalink = '<?php the_permalink() ?>';
-</script>
-<?php }
-}
 
 if (!function_exists('is_cp_theme_layout')) {
 	function is_cp_theme_layout($choices) {

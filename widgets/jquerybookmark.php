@@ -6,6 +6,20 @@ Description: Display a bookmarking with jQuery controls
 Author: John Bintz
 Version: 1.03
 */
+
+
+add_action('wp_head', 'comicpress_add_bookmark_widget_script');
+
+function comicpress_add_bookmark_widget_script() {
+	if (is_active_widget(false, false, 'comicpress_jquery_bookmark_widget', true)) {
+		$output = '<script type="text/javascript">'."\r\n";
+		$output = "		var image_root = '".get_template_directory_uri()."/images/'\r\n";
+		$output = "		var permalink = '".get_permalink()."'\r\n";
+		$output = "</script>\r\n";
+		echo apply_filters('comicpress_add_bookmark_widget_script', $output);
+	}
+}
+
 class comicpress_jquery_bookmark_widget extends WP_Widget {
 	var $text_fields;
 
@@ -114,7 +128,9 @@ class comicpress_jquery_bookmark_widget extends WP_Widget {
 		echo $after_widget;
 	}
 	
-	function form($instance) { ?>
+	function form($instance) { 
+		$instance = wp_parse_args( (array) $instance, array( 'mode' => 'one-button', 'title' => '' ) );
+	?>
 	<div id="<?php echo $this->get_field_id('wrapper') ?>">
 		<p><label><?php _e('Title', 'comicpress') ?><br /><input class="widefat" type="text" name="<?php echo $this->get_field_name('title') ?>" value="<?php echo esc_attr($instance['title']) ?>" /></label></p>
 	<?php
