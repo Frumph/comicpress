@@ -1,9 +1,9 @@
-﻿=== Easel ===
+=== Easel ===
 Contributors: frumph
 Donate Link: http://frumph.net
 Requires at least: 3.4
-Tested up to: 3.4
-Stable tag: 2.9.4
+Tested up to: 3.6
+Stable tag: 2.9.5
 Contact Email: philip@frumph.net
 
 ComicPress 2.9* is released under GNU General Public License, v3 (or newer)
