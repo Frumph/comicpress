@@ -302,7 +302,7 @@ function comicpress_in_comic_category($cat = null) {
 function comicpress_create_category_tree() {
 	global $category_tree, $comiccat;
 	$comiccat_check = get_category($comiccat);
-    if (is_null($comiccat_check) || $comiccat_check->category_parent > 0) return array(); // Return empty array if the comiccat isn't a parent.
+    if (is_null($comiccat_check) || is_wp_error($comiccat_check)) return array(); // Return empty array if the comiccat isn't a parent.
 	if (empty($category_tree)) {
 		$categories_by_id = comicpress_get_comic_category_objects_by_id();	
 		if (empty($categories_by_id) || !is_array($categories_by_id)) return false;
@@ -572,7 +572,7 @@ function comicpress_get_comic_category_objects_by_id() {
 function comicpress_all_comic_categories_array() {
 	global $comiccat, $comicpress_all_comic_categories_array;
 	$comiccat_check = get_category($comiccat);
-    if (is_null($comiccat_check) || $comiccat_check->category_parent > 0) return array(); // Return if the comiccat isn't a parent.
+    if (is_null($comiccat_check) || is_wp_error($comiccat_check)) return array(); // Return if the comiccat isn't a parent.
 	if (empty($comicpress_all_comic_categories_array)) {
 		$comicpress_all_comic_categories_array[] = $comiccat;
 		foreach (get_all_category_ids() as $cats) {
