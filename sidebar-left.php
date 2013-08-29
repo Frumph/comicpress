@@ -1,7 +1,7 @@
 <div id="sidebar-left">
 	<div class="sidebar">
 	<?php 
-		do_action('easel-sidebar-left');
+		do_action('comicpress-sidebar-left');
 		if ( !dynamic_sidebar('sidebar-left-sidebar') ) { ?>
 		<div class="sidebar-no-widgets">
 			<?php _e('There are currently no widgets assigned to the left-sidebar, place some!','comicpress'); ?><br />

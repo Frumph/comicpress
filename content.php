@@ -19,7 +19,7 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 				comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
 				comicpress_display_post_category();
 				if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
-				do_action('easel-post-info');
+				do_action('comicpress-post-info');
 				wp_link_pages(array('before' => '<div class="linkpages"><span class="linkpages-pagetext">Pages:</span> ', 'after' => '</div>', 'next_or_number' => 'number'));
 				?>
 			</div>
@@ -33,7 +33,7 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 		<div class="post-extras">
 			<?php 
 				comicpress_display_post_tags();
-				do_action('easel-post-extras');
+				do_action('comicpress-post-extras');
 				comicpress_display_comment_link(); 
 			?>
 			<div class="clear"></div>

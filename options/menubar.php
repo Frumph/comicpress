@@ -1,8 +1,8 @@
-<div id="easel-menubar">
-	<form method="post" id="myForm-menubar" enctype="multipart/form-data" action="?page=easel-options">
+<div id="comicpress-menubar">
+	<form method="post" id="myForm-menubar" enctype="multipart/form-data" action="?page=comicpress-options">
 	<?php wp_nonce_field('update-options') ?>
 
-		<div class="easel-options">
+		<div class="comicpress-options">
 
 			<table class="widefat">
 				<thead>
@@ -108,9 +108,9 @@
 			</table>
 		</div>
 
-		<div class="easel-options-save">
-			<div class="easel-major-publishing-actions">
-				<div class="easel-publishing-action">
+		<div class="comicpress-options-save">
+			<div class="comicpress-major-publishing-actions">
+				<div class="comicpress-publishing-action">
 					<input name="comicpress_save_menubar" type="submit" class="button-primary" value="Save Settings" />
 					<input type="hidden" name="action" value="comicpress_save_menubar" />
 				</div>

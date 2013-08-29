@@ -97,7 +97,7 @@ div.show img {
 	text-decoration: none;
 }
 
-.easel-options {
+.comicpress-options {
 	padding: 10px 10px 1px 10px;
 	background: #fff;
 	border-width: 1px 1px 1px 1px;
@@ -116,7 +116,7 @@ div.show img {
 	-khtml-border-top-right-radius: 6px;
 }
 
-.easel-options-save {
+.comicpress-options-save {
 	margin-bottom: 15px;
 	border-width: 0 1px 1px 1px;
 	border-style: solid;
@@ -131,61 +131,61 @@ div.show img {
 	-khtml-border-bottom-right-radius: 6px;
 }
 
-.easel-options  table.widefat thead tr th {
+.comicpress-options  table.widefat thead tr th {
 	font-size: 14px;
 }
 
-.easel-options  table.widefat label {
+.comicpress-options  table.widefat label {
 	display: block;
 	text-align: right;
 }
 
-.easel-options  table.widefat label.inline-label {
+.comicpress-options  table.widefat label.inline-label {
 	display: inline;
 }
 
-.easel-options  table.widefat select {
+.comicpress-options  table.widefat select {
 	width: 100%;
 }
 
-.easel-options table.widefat {
+.comicpress-options table.widefat {
 /*	margin-bottom: 10px; */
 	border-bottom: none;
 }
 
-#easel-general .easel-options table.widefat, #easel-addons .easel-options table.widefat  {
+#comicpress-general .comicpress-options table.widefat, #comicpress-addons .comicpress-options table.widefat  {
 	margin-bottom: 10px;
 }
 
-.easel-options table.widefat th {
+.comicpress-options table.widefat th {
 	width: 200px;
 }
 
-.easel-options table.widefat th input{
+.comicpress-options table.widefat th input{
 margin: 1px;
 padding: 3px;
 width: 100%;
 }
 
-.easel-options table.widefat th .radio input{
+.comicpress-options table.widefat th .radio input{
 margin: 0;
 padding: 0;
 width: auto;
 }
 
-.easel-options table.widefat th label {
+.comicpress-options table.widefat th label {
 	color: #21759b;
 	text-align: left;
 }
 
-.easel-options table.widefat th label:hover {
+.comicpress-options table.widefat th label:hover {
 	color: #d54e21;
 }
 
-.easel-options table.widefat th, .easel-options table.widefat td {
+.comicpress-options table.widefat th, .comicpress-options table.widefat td {
 	vertical-align: middle;
 }
-#easel-version-title {
+#comicpress-version-title {
 	font-family: 'Georgia', serif;
 	font-size: 48px;
 	letter-spacing: -2px;
@@ -194,17 +194,17 @@ width: auto;
 	font-variant: small-caps;
 }
 
-	#easel-version-title  a {
+	#comicpress-version-title  a {
 		color: #333;
 	}
 
-#easel-version-number {
+#comicpress-version-number {
 	font-family: monospace;
 	font-size: 16px;
 	letter-spacing: 8px;
 }
 
-.easel-options .radio {
+.comicpress-options .radio {
 	padding-top: 5px;
 	text-align: right;
 }
@@ -213,14 +213,14 @@ div.show .eadmin-footer img{
 	float: none;
 }
 
-.easel-major-publishing-actions {
+.comicpress-major-publishing-actions {
 	padding: 6px;
 	clear: both;
 	border-top: none;
 	background: #eaf2fa;
 }
 
-.easel-major-publishing-actions input {
+.comicpress-major-publishing-actions input {
 	float: right;
 	min-width: 80px;
 	text-align: center;
@@ -228,18 +228,18 @@ div.show .eadmin-footer img{
 
 /** Comic Filters **/
 
-#easel-comic-filename-filters-holder div {
+#comicpress-comic-filename-filters-holder div {
 	border: solid #ddd 1px;
 	padding: 3px;
 	overflow: hidden;
 }
 
-#easel-comic-filename-filters-holder label {
+#comicpress-comic-filename-filters-holder label {
 	float: left;
 	display: inline;
 }
 
-#easel-comic-filename-filters-holder input {
+#comicpress-comic-filename-filters-holder input {
 	margin: 0 10px;
 }
 

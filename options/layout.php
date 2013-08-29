@@ -10,11 +10,11 @@
 	document.getElementById(pic).src = '<?php echo get_template_directory_uri(); ?>/images/schemes/'+sel.options[sel.selectedIndex].value+'.jpg'
 	}
 </script>
-<div id="easel-layout">
-	<form method="post" id="myForm-layout" enctype="multipart/form-data" action="?page=easel-options">
+<div id="comicpress-layout">
+	<form method="post" id="myForm-layout" enctype="multipart/form-data" action="?page=comicpress-options">
 	<?php wp_nonce_field('update-options') ?>
 
-		<div class="easel-options">
+		<div class="comicpress-options">
 
 			<table class="widefat" cellspacing="0">
 				<thead>
@@ -47,9 +47,9 @@
 			<strong><?php _e('Schemes and customization can be modified in the appearance - customize section of the wp-admin','comicpress'); ?></strong>
 			<br />
 		</div>
-		<div class="easel-options-save">
-			<div class="easel-major-publishing-actions">
-				<div class="easel-publishing-action">
+		<div class="comicpress-options-save">
+			<div class="comicpress-major-publishing-actions">
+				<div class="comicpress-publishing-action">
 					<input name="comicpress_save_layout" type="submit" class="button-primary" value="Save Settings" />
 					<input type="hidden" name="action" value="comicpress_save_layout" />
 				</div>

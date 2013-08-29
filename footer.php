@@ -1,6 +1,6 @@
 		<?php get_template_part('layout', 'foot'); ?>
 		<div id="footer">
-			<?php do_action('easel-footer'); ?>
+			<?php do_action('comicpress-footer'); ?>
 			<div id="footer-sidebar-wrapper">
 			<?php 
 				comicpress_get_sidebar('footer-left');

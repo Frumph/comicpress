@@ -1,7 +1,7 @@
 <div id="content-wrapper">
 	
-	<?php do_action('easel-content-area'); ?>
-	<?php if (!get_theme_mod('easel-customize-comic-in-column', false)) do_action('comic-area'); ?>
+	<?php do_action('comicpress-content-area'); ?>
+	<?php if (!get_theme_mod('comicpress-customize-comic-in-column', false)) do_action('comic-area'); ?>
 	
 	<div id="subcontent-wrapper">
 <?php
@@ -11,8 +11,8 @@ if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 }
 ?>
 		<div id="content-column">
-			<?php if (get_theme_mod('easel-customize-comic-in-column', false)) do_action('comic-area'); ?>
+			<?php if (get_theme_mod('comicpress-customize-comic-in-column', false)) do_action('comic-area'); ?>
 			<div id="content" class="narrowcolumn">
 				<?php do_action('comic-blog-area'); ?>
-				<?php do_action('easel-narrowcolumn-area'); ?>
+				<?php do_action('comicpress-narrowcolumn-area'); ?>
 				<?php if (is_home() && !comicpress_sidebars_disabled()) comicpress_get_sidebar('over-blog'); ?>

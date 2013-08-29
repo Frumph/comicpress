@@ -5,7 +5,7 @@ add_action('admin_menu', 'comicpress_options_setup');
 function comicpress_options_setup() {
 	$options_title = __('Options','comicpress');
 	$admin_title = __('Easel Options', 'comicpress');
-	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'easel-options', 'comicpress_admin_options');
+	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'comicpress-options', 'comicpress_admin_options');
 	add_action('admin_head-' . $pagehook, 'comicpress_admin_page_head');
 	add_action('admin_print_scripts-' . $pagehook, 'comicpress_admin_print_scripts');
 	add_action('admin_print_styles-' . $pagehook, 'comicpress_admin_print_styles');
@@ -20,7 +20,7 @@ function comicpress_admin_print_styles() {
 	wp_admin_css('css/global');
 	wp_admin_css('css/colors');
 	wp_admin_css('css/ie');
-	wp_enqueue_style('easel-options-style', comicpress_themeinfo('themeurl') . '/options/options.css');
+	wp_enqueue_style('comicpress-options-style', comicpress_themeinfo('themeurl') . '/options/options.css');
 }
 
 function comicpress_admin_page_head() { ?>
@@ -42,13 +42,13 @@ function comicpress_admin_options() { ?>
 	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
-		delete_option('easel-options');
+		delete_option('comicpress-options');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('Easel Settings RESET!','comicpress'); ?></strong></p></div>
 	<?php } 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset_customize') {
-		remove_theme_mod('easel-customize');
+		remove_theme_mod('comicpress-customize');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('Easel Customizer Colors RESET!','comicpress'); ?></strong></p></div>
@@ -56,7 +56,7 @@ function comicpress_admin_options() { ?>
 	if (empty($comicpress_options)) { 
 		comicpress_themeinfo('reset');
 	}
-	$comicpress_options = get_option('easel-options');
+	$comicpress_options = get_option('comicpress-options');
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
 		if ($_REQUEST['action'] == 'comicpress_save_layout') {
@@ -76,7 +76,7 @@ function comicpress_admin_options() { ?>
 			}
 			
 			$tab = 'layout';
-			update_option('easel-options', $comicpress_options);
+			update_option('comicpress-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_debug') {
@@ -88,7 +88,7 @@ function comicpress_admin_options() { ?>
 				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 			$tab = 'debug';
-			update_option('easel-options', $comicpress_options);
+			update_option('comicpress-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_menubar') {
@@ -126,7 +126,7 @@ function comicpress_admin_options() { ?>
 							}
 			}
 			$tab = 'menubar';
-			update_option('easel-options', $comicpress_options);
+			update_option('comicpress-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_general') {
@@ -174,7 +174,7 @@ function comicpress_admin_options() { ?>
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'general';
-			update_option('easel-options', $comicpress_options);
+			update_option('comicpress-options', $comicpress_options);
 		}
 		if ($tab) { ?>
 			<div id="message" class="updated"><p><strong><?php _e('Easel Settings SAVED!','comicpress'); ?></strong></p></div>
@@ -182,7 +182,7 @@ function comicpress_admin_options() { ?>
 		<?php }
 	} 
 	$version = comicpress_themeinfo('version');
-	$comicpress_options = get_option('easel-options');
+	$comicpress_options = get_option('comicpress-options');
 	?>
 	<div id="poststuff" class="metabox-holder">
 		<div id="eadmin">
@@ -197,29 +197,29 @@ function comicpress_admin_options() { ?>
 		  	if (empty($tab)) { $tab = array_shift(array_keys($tab_info)); }
 
 		  	foreach($tab_info as $tab_id => $label) { ?>
-		  		<div id="easel-tab-<?php echo $tab_id ?>" class="easel-tab <?php echo ($tab == $tab_id) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
+		  		<div id="comicpress-tab-<?php echo $tab_id ?>" class="comicpress-tab <?php echo ($tab == $tab_id) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
 		  	<?php }
 		  ?>
 		</div>
 
-		<div id="easel-options-pages">
+		<div id="comicpress-options-pages">
 		  <?php	foreach (glob(comicpress_themeinfo('themepath') . '/options/*.php') as $file) { include($file); } ?>
 		</div>
 	</div>
 	<script type="text/javascript">
 		(function($) {
 			var showPage = function(which) {
-				$('#easel-options-pages > div').each(function(i) {
-					$(this)[(this.id == 'easel-' + which) ? 'show' : 'hide']();
+				$('#comicpress-options-pages > div').each(function(i) {
+					$(this)[(this.id == 'comicpress-' + which) ? 'show' : 'hide']();
 				});
 			};
 
-			$('.easel-tab').click(function() {
+			$('.comicpress-tab').click(function() {
 				$('#message').animate({height:"0", opacity:0, margin: 0}, 100, 'swing', function() { $(this).remove() });
 
-				showPage(this.id.replace('easel-tab-', ''));
+				showPage(this.id.replace('comicpress-tab-', ''));
 				var myThis = this;
-				$('.easel-tab').each(function() {
+				$('.comicpress-tab').each(function() {
 					var isSame = (this == myThis);
 					$(this).toggleClass('on', isSame).toggleClass('off', !isSame);
 				});
@@ -231,7 +231,7 @@ function comicpress_admin_options() { ?>
 	</script>
 </div>
 	<div class="eadmin-footer">
-		<div id="easel-version-title"><a href="http://frumph.net/">Easel <?php echo comicpress_themeinfo('version'); ?></a></div>
+		<div id="comicpress-version-title"><a href="http://frumph.net/">Easel <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Created, Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small><br />
 		<?php _e('If you like the Easel theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>

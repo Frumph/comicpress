@@ -1,8 +1,8 @@
-<div id="easel-debug">
+<div id="comicpress-debug">
 
-	<div class="easel-options">
+	<div class="comicpress-options">
 	
-		<form method="post" id="myForm-debug" enctype="multipart/form-data" action="?page=easel-options">
+		<form method="post" id="myForm-debug" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field('update-options') ?>
 		<table class="widefat">
 			<thead>
@@ -30,9 +30,9 @@
 			</tr>
 		</table>
 
-		<div class="easel-options-save">
-			<div class="easel-major-publishing-actions">
-				<div class="easel-publishing-action">
+		<div class="comicpress-options-save">
+			<div class="comicpress-major-publishing-actions">
+				<div class="comicpress-publishing-action">
 					<input name="comicpress_save_debug" type="submit" class="button-primary" value="Save Settings" />
 					<input type="hidden" name="action" value="comicpress_save_debug" />
 				</div>

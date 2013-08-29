@@ -203,14 +203,14 @@ if (!function_exists('comicpress_display_the_content')) {
 	function comicpress_display_the_content() {
 		global $post, $wp_query;
 		if ((is_archive() || is_search()) && (comicpress_themeinfo('excerpt_or_content_in_archive') == 'excerpt') && !comicpress_is_bbpress()) {
-			do_action('easel-display-the-content-before');
+			do_action('comicpress-display-the-content-before');
 			the_excerpt();
-			do_action('easel-display-the-content-after');
+			do_action('comicpress-display-the-content-after');
 		} else {
 			if (!is_single()) { global $more; $more = 0; } 
-			do_action('easel-display-the-content-before');
+			do_action('comicpress-display-the-content-before');
 			the_content(__('&darr; Read the rest of this entry...','comicpress'));
-			do_action('easel-display-the-content-after');
+			do_action('comicpress-display-the-content-after');
 		}
 	}
 }
@@ -221,7 +221,7 @@ if (!function_exists('comicpress_display_post')) {
 		if (!comicpress_is_bbpress()) comicpress_display_blog_navigation(); ?>
 		<div <?php post_class(); ?>>
 			<?php comicpress_display_post_thumbnail(); ?>
-			<div class="post-head"><?php do_action('easel-post-head'); ?></div>
+			<div class="post-head"><?php do_action('comicpress-post-head'); ?></div>
 			<div class="post-content">
 				<div class="post-info">
 					<?php 
@@ -239,7 +239,7 @@ if (!function_exists('comicpress_display_post')) {
 							if ($post->post_type == 'post') { edit_post_link(__('Edit','comicpress'), ' <span class="post-edit">', '</span>'); }
 							comicpress_display_post_category();
 							if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
-							do_action('easel-post-info');
+							do_action('comicpress-post-info');
 							do_action('comic-post-info');
 						} ?>
 					</div>
@@ -256,7 +256,7 @@ if (!function_exists('comicpress_display_post')) {
 				<div class="post-extras">
 					<?php 
 						comicpress_display_post_tags();
-						do_action('easel-post-extras');
+						do_action('comicpress-post-extras');
 						comicpress_display_comment_link(); 
 					?>
 					<div class="clear"></div>
@@ -264,7 +264,7 @@ if (!function_exists('comicpress_display_post')) {
 				<?php } else
 					edit_post_link(__('Edit this page.','comicpress'), '', ''); ?>
 			</div>
-			<div class="post-foot"><?php do_action('comic-post-foot'); ?><?php do_action('easel-post-foot'); ?></div>
+			<div class="post-foot"><?php do_action('comic-post-foot'); ?><?php do_action('comicpress-post-foot'); ?></div>
 		</div>
 		<?php 
 			do_action('comic-post-extras');

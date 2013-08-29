@@ -15,11 +15,11 @@ function comicpress_menubar() {
 	} else { ?>
 		<div id="menubar-wrapper">
 			<div class="menu-container">
-				<?php do_action('easel-menubar-before'); ?>
+				<?php do_action('comicpress-menubar-before'); ?>
 				<?php
 					// dont mess with the pre_get_posts for the wp_nav_menu()
 					wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu', 'theme_location' => 'Primary' ) );
-					do_action('easel-menubar-after');
+					do_action('comicpress-menubar-after');
 					do_action('comic-mini-navigation');
 				?>
 				<div class="menunav">
@@ -28,11 +28,11 @@ function comicpress_menubar() {
 						<?php get_search_form(); ?>
 					</div>
 					<?php } ?>
-					<?php do_action('easel-menubar-menunav'); ?>
+					<?php do_action('comicpress-menubar-menunav'); ?>
 					<?php if (comicpress_themeinfo('enable_rss_in_menubar') && !comicpress_themeinfo('menubar_social_icons')) { ?>
 						<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
 					<?php } ?>
-					<?php do_action('easel-menubar-mini-navigation'); ?>
+					<?php do_action('comicpress-menubar-mini-navigation'); ?>
 				</div>
 				<div class="clear"></div>
 			</div>

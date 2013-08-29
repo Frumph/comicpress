@@ -5,7 +5,7 @@ function comicpress_page_editor_options($post) {
 ?>
 <div class="inside" style="overflow: hidden">
 	<?php 
-		wp_nonce_field( 'comicpress_post_options-'.$post->ID, 'easel-update-page-options' ); 
+		wp_nonce_field( 'comicpress_post_options-'.$post->ID, 'comicpress-update-page-options' ); 
 		$disable_sidebars = get_post_meta($post->ID, 'disable-sidebars', true);
 	?>
 	<table>
@@ -20,11 +20,11 @@ function comicpress_page_editor_options($post) {
 add_action('add_meta_boxes', 'comicpress_add_page_editor_meta_box');
 
 function comicpress_add_page_editor_meta_box() {
-	add_meta_box('easel-page-options', __('Easel Page Options', 'comicpress'), 'comicpress_page_editor_options', 'page', 'side', 'high');
+	add_meta_box('comicpress-page-options', __('Easel Page Options', 'comicpress'), 'comicpress_page_editor_options', 'page', 'side', 'high');
 }
 
 function comicpress_save_page_editor_options($post_id) {
-	if (isset($_POST['easel-update-page-options']) && !wp_verify_nonce( $_POST['easel-update-page-options'], 'comicpress_post_options-'.$post_id )) {
+	if (isset($_POST['comicpress-update-page-options']) && !wp_verify_nonce( $_POST['comicpress-update-page-options'], 'comicpress_post_options-'.$post_id )) {
 		return $post_id;
 	} 
 	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
