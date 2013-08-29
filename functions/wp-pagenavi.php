@@ -26,12 +26,12 @@ Author URI: http://lesterchan.net
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-if (comicpress_themeinfo('enable_numbered_pagination')) {
+if (easel_themeinfo('enable_numbered_pagination')) {
 	
 	### Function: Page Navigation: Boxed Style Paging
-	function comicpress_wp_pagenavi($before = '', $after = '') {
+	function easel_wp_pagenavi($before = '', $after = '') {
 		global $wpdb, $wp_query;
-		$pagenavi_options = comicpress_pagenavi_init(); //Calling the pagenavi_init() function
+		$pagenavi_options = easel_pagenavi_init();
 		if (!is_single()) {
 			$request = $wp_query->request;
 			$posts_per_page = intval(get_query_var('posts_per_page'));
@@ -142,31 +142,35 @@ if (comicpress_themeinfo('enable_numbered_pagination')) {
 						echo "</form>\n";
 						break;
 				}
-				echo '</ul></div>'.$after."\n";
+				echo '</ul></div>';
+				echo '<div class="pagejumper-wrap">';
+				echo '<form id="pagejumper" action="" method="get">';
+				echo '<input type="text" size="2" name="paged" id="paged" />';
+				echo '<input type="submit" value="Go" />';
+				echo '</form>';
+				echo '</div>';
+				echo $after."\n";
 			}
 		}
 	}
 	
-	
-	### Function: Page Navigation Options
-	add_action('activate_wp-pagenavi/wp-pagenavi.php', 'comicpress_pagenavi_init');
-	function comicpress_pagenavi_init() {
+	function easel_pagenavi_init() {
 		// Add Options
 		$pagenavi_options = array();
-		$pagenavi_options['pages_text'] = __('Page %CURRENT_PAGE% of %TOTAL_PAGES%','comicpress');
+		$pagenavi_options['pages_text'] = __('Page %CURRENT_PAGE% of %TOTAL_PAGES%','easel');
 		$pagenavi_options['current_text'] = '%PAGE_NUMBER%';
 		$pagenavi_options['page_text'] = '%PAGE_NUMBER%';
-		$pagenavi_options['first_text'] = __('&laquo; First','comicpress');
-		$pagenavi_options['last_text'] = __('Last &raquo;','comicpress');
-		$pagenavi_options['next_text'] = __('&raquo;','comicpress');
-		$pagenavi_options['prev_text'] = __('&laquo;','comicpress');
-		$pagenavi_options['dotright_text'] = __('...','comicpress');
-		$pagenavi_options['dotleft_text'] = __('...','comicpress');
+		$pagenavi_options['first_text'] = __('&laquo; First','easel');
+		$pagenavi_options['last_text'] = __('Last &raquo;','easel');
+		$pagenavi_options['next_text'] = __('&raquo;','easel');
+		$pagenavi_options['prev_text'] = __('&laquo;','easel');
+		$pagenavi_options['dotright_text'] = __('...','easel');
+		$pagenavi_options['dotleft_text'] = __('...','easel');
 		$pagenavi_options['style'] = 1;
 		$pagenavi_options['num_pages'] = 5;
 		$pagenavi_options['always_show'] = 0;
 		return $pagenavi_options;
 	}
-	
+
 }
 ?>

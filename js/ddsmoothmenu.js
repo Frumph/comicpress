@@ -16,7 +16,7 @@
 var ddsmoothmenu = {
 
 	//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
-	arrowimages: { down: ['downarrowclass', '/wp-content/themes/comicpress/images/down.gif', 23], right: ['rightarrowclass', '/wp-content/themes/comicpress/images/right.gif'] },
+	arrowimages: { down: ['downarrowclass', '/wp-content/themes/easel/images/down.gif', 15], right: ['rightarrowclass', '/wp-content/themes/easel/images/right.gif'] },
 	transition: { overtime: 200, outtime: 200 }, //duration of slide in/ out animation, in milliseconds
 	shadow: { enable: false, offsetx: 2, offsety: 2 }, //enable shadow?
 	showhidedelay: { showdelay: 100, hidedelay: 200 }, //set delay in milliseconds before sub menus appear and disappear, respectively

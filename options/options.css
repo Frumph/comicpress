@@ -1,11 +1,11 @@
-#cpadmin-headericon {
-	height: 36px;
-	width: 36px;
+#eadmin-headericon {
+	height: 100px;
+	width: 100px;
 	margin: 14px 6px 0 0;
 	float: left;
 }
 
-#cpadmin {
+#eadmin {
 	font-family: 'Verdana', sans-serif;
 	font-size: 11px;
 	padding: 5px 0 0 0;
@@ -14,7 +14,7 @@
 	overflow: hidden
 }
 
-#cpadmin div {
+#eadmin div {
 	border-top-left-radius: 3px;
 	-moz-border-radius-topleft: 3px;
 	-webkit-border-top-left-radius: 3px;
@@ -25,7 +25,7 @@
 	-khtml-border-top-right-radius: 3px;
 }
 
-#cpadmin div.off {
+#eadmin div.off {
 	color: #999;
 	height: 23px;
 	margin: 0 0 0 5px;
@@ -40,7 +40,7 @@
 	cursor: pointer;
 	z-index: 20;
 }
-#cpadmin div.on {
+#eadmin div.on {
 	color: #333;
 	padding: 0 7px;
 	margin: 0 0 0 5px;
@@ -77,22 +77,27 @@ div.show img {
 	clear: both;
 }
 
-.cpadmin-footer {
-	margin: 0;
+.eadmin-footer {
+	padding: 10px;
+	margin: 10px 0 0 0;
 	color: #777;
 	text-align: center;
 	background: #fff;
+	border: 1px solid #dfdfdf;
 	font-family: 'Arial', sans-serif;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
 }
-
-.cpadmin-donate {
+.eadmin-donate {
 	float: right;
 }
-.cpadmin-footer a {
+.eadmin-footer a {
 	text-decoration: none;
 }
 
-.comicpress-options {
+.easel-options {
 	padding: 10px 10px 1px 10px;
 	background: #fff;
 	border-width: 1px 1px 1px 1px;
@@ -111,7 +116,7 @@ div.show img {
 	-khtml-border-top-right-radius: 6px;
 }
 
-.comicpress-options-save {
+.easel-options-save {
 	margin-bottom: 15px;
 	border-width: 0 1px 1px 1px;
 	border-style: solid;
@@ -126,61 +131,61 @@ div.show img {
 	-khtml-border-bottom-right-radius: 6px;
 }
 
-.comicpress-options  table.widefat thead tr th {
+.easel-options  table.widefat thead tr th {
 	font-size: 14px;
 }
 
-.comicpress-options  table.widefat label {
+.easel-options  table.widefat label {
 	display: block;
 	text-align: right;
 }
 
-.comicpress-options  table.widefat label.inline-label {
+.easel-options  table.widefat label.inline-label {
 	display: inline;
 }
 
-.comicpress-options  table.widefat select {
+.easel-options  table.widefat select {
 	width: 100%;
 }
 
-.comicpress-options table.widefat {
-	margin-bottom: 10px;
+.easel-options table.widefat {
+/*	margin-bottom: 10px; */
 	border-bottom: none;
 }
 
-.comicpress-options table.nolowermargin {
-	margin-bottom: 0;
+#easel-general .easel-options table.widefat, #easel-addons .easel-options table.widefat  {
+	margin-bottom: 10px;
 }
 
-.comicpress-options table.widefat th {
+.easel-options table.widefat th {
 	width: 200px;
 }
 
-.comicpress-options table.widefat th input{
+.easel-options table.widefat th input{
 margin: 1px;
 padding: 3px;
 width: 100%;
 }
 
-.comicpress-options table.widefat th .radio input{
+.easel-options table.widefat th .radio input{
 margin: 0;
 padding: 0;
 width: auto;
 }
 
-.comicpress-options table.widefat th label {
+.easel-options table.widefat th label {
 	color: #21759b;
 	text-align: left;
 }
 
-.comicpress-options table.widefat th label:hover {
+.easel-options table.widefat th label:hover {
 	color: #d54e21;
 }
 
-.comicpress-options table.widefat th, .comicpress-options table.widefat td {
+.easel-options table.widefat th, .easel-options table.widefat td {
 	vertical-align: middle;
 }
-#comicpress-version-title {
+#easel-version-title {
 	font-family: 'Georgia', serif;
 	font-size: 48px;
 	letter-spacing: -2px;
@@ -189,33 +194,33 @@ width: auto;
 	font-variant: small-caps;
 }
 
-	#comicpress-version-title  a {
+	#easel-version-title  a {
 		color: #333;
 	}
 
-#comicpress-version-number {
+#easel-version-number {
 	font-family: monospace;
 	font-size: 16px;
 	letter-spacing: 8px;
 }
 
-.comicpress-options .radio {
+.easel-options .radio {
 	padding-top: 5px;
 	text-align: right;
 }
 
-div.show .cpadmin-footer img{
+div.show .eadmin-footer img{
 	float: none;
 }
 
-.comicpress-major-publishing-actions {
+.easel-major-publishing-actions {
 	padding: 6px;
 	clear: both;
 	border-top: none;
 	background: #eaf2fa;
 }
 
-.comicpress-major-publishing-actions input {
+.easel-major-publishing-actions input {
 	float: right;
 	min-width: 80px;
 	text-align: center;
@@ -223,17 +228,22 @@ div.show .cpadmin-footer img{
 
 /** Comic Filters **/
 
-#comicpress-comic-filename-filters-holder div {
+#easel-comic-filename-filters-holder div {
 	border: solid #ddd 1px;
 	padding: 3px;
 	overflow: hidden;
 }
 
-#comicpress-comic-filename-filters-holder label {
+#easel-comic-filename-filters-holder label {
 	float: left;
 	display: inline;
 }
 
-#comicpress-comic-filename-filters-holder input {
+#easel-comic-filename-filters-holder input {
 	margin: 0 10px;
+}
+
+.easelscheme {
+	height: 180px;
+	width: 240px;
 }

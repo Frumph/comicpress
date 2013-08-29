@@ -14,7 +14,7 @@
 * @since 0.2
 * @filter
 */
-function comicpress_avatar() {
+function easel_avatar() {
 	global $comment;
 
 	$url = get_comment_author_url();
@@ -28,7 +28,7 @@ function comicpress_avatar() {
 			echo '<a href="' . $url . '" rel="external nofollow" title="' . esc_html(get_comment_author(), 1) . '">';
 		$id_or_email = get_comment_author_email();
 		if (empty($id_or_email)) $id_or_email = get_comment_author();
-			$return_str = str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($id_or_email, 64, comicpress_random_default_avatar($id_or_email), esc_html(get_comment_author(), 1)));
+			$return_str = str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($id_or_email, 64, easel_random_default_avatar($id_or_email), esc_html(get_comment_author(), 1)));
 			echo $return_str;
 		if($url == true && $url != 'http://')
 			echo '</a>';
@@ -45,7 +45,7 @@ function comicpress_avatar() {
 *
 * @since 0.2.2
 */
-function comicpress_comment_author() {
+function easel_comment_author() {
 	global $comment;
 
 	$author = get_comment_author();
@@ -102,35 +102,35 @@ function comicpress_comment_author() {
 * @param $args Array of arguments passed from wp_list_comments
 * @param $depth What level the particular comment is
 */
-function comicpress_comments_callback($comment, $args, $depth) {
+function easel_comments_callback($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	$GLOBALS['comment_depth'] = $depth;
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 	
-		<?php comicpress_avatar(); // Avatar filter ?>
+		<?php easel_avatar(); // Avatar filter ?>
 		
 		<div class="comment-content">
 		
 			<div class="comment-author vcard">
-				<?php comicpress_comment_author(); ?>
+				<?php easel_comment_author(); ?>
 			</div>
 	
 			<div class="comment-meta-data">
 						
-				<span class="comment-time" title="<?php comment_date(__('l, F jS, Y, g:i a','comicpress')); ?>">
-					<?php printf(__('%1$s at %2$s','comicpress'), get_comment_date(), get_comment_time()); ?>
+				<span class="comment-time" title="<?php comment_date(__('l, F jS Y, g:ia','easel')); ?>">
+					<?php printf(__('%1$s, %2$s','easel'), get_comment_date(), get_comment_time()); ?>
 				</span> 
 		
 				<span class="comment-permalink">
-					<span class="separator">|</span> <a href="#comment-<?php echo str_replace('&', '&amp;', get_comment_ID()); ?>" title="<?php _e('Permalink to comment','comicpress'); ?>"><?php _e('#','comicpress'); ?></a>
+					<span class="separator">|</span> <a href="#comment-<?php echo str_replace('&', '&amp;', get_comment_ID()); ?>" title="<?php _e('Permalink to comment','easel'); ?>"><?php _e('#','easel'); ?></a>
 				</span>
 				
 				<?php if((get_option('thread_comments')) && ($args['type'] == 'all' || get_comment_type() == 'comment')) :
 					$max_depth = get_option('thread_comments_depth');
 					echo comment_reply_link(array(
-						'reply_text' => __('Reply','comicpress'), 
-						'login_text' => __('Login to Reply','comicpress'),
+						'reply_text' => __('Reply','easel'), 
+						'login_text' => __('Login to Reply','easel'),
 						'depth' => $depth,
 						'max_depth' => $max_depth, 
 						'before' => '<span class="comment-reply-link"><span class="separator">|</span> ', 
@@ -138,10 +138,10 @@ function comicpress_comments_callback($comment, $args, $depth) {
 					));
 				endif; ?>
 					
-				<?php edit_comment_link('<span class="edit">'.__('Edit','comicpress').'</span>',' <span class="separator">|</span> ',''); ?> 
+				<?php edit_comment_link('<span class="comment-edit">'.__('Edit','easel').'</span>',' <span class="separator">|</span> ',''); ?> 
 				
 				<?php if($comment->comment_approved == '0') : ?>
-				<div class="comment-moderated"><?php _e('Your comment is awaiting moderation.','comicpress'); ?></div>
+				<div class="comment-moderated"><?php _e('Your comment is awaiting moderation.','easel'); ?></div>
 				<?php endif; ?>
 			
 			</div>
@@ -161,19 +161,19 @@ function comicpress_comments_callback($comment, $args, $depth) {
 /**
 * Ends the display of individual comments
 * Uses the callback parameter for wp_list_comments
-* Needs to be used in conjunction with comicpress_comments_callback
+* Needs to be used in conjunction with easel_comments_callback
 * Not needed but used just in case something is changed
 *
 * @since 0.2.3
 */
-function comicpress_comments_end_callback() {
+function easel_comments_end_callback() {
 	echo '</li>';
 }
 
 function list_pings($comment, $args, $depth) {       
 	$GLOBALS['comment'] = $comment; ?>
 		<li id="comment-<?php comment_ID(); ?>">
-		<?php comicpress_comment_author(); ?></li>
+		<?php easel_comment_author(); ?></li>
 <?php } 
 
 ?>

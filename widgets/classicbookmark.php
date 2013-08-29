@@ -1,16 +1,15 @@
 <?php
 /*
 Widget Name: (classic) Bookmark
-Widget URI: http://comicpress.net/
 Description: Adds a bookmark set of icons to save the page your own.
-Author: Tyler Martin
-Author URI: http://mindfaucet.com/
-Version: 1.01
+Author: Tyler Martin, Philip M. Hofer (Frumph)
+Author URI: http://frumph.net
+Version: 1.02
 */
 
-function comicpress_classic_bookmark() { 
+function easel_classic_bookmark() { 
 global $post, $wp_query; ?>
-	<div class="comic-bookmark">
+	<div class="classic-bookmark">
 		<script language="javascript" type="text/javascript">
 			<!--
 
@@ -38,7 +37,7 @@ global $post, $wp_query; ?>
 						ct = imgClearOn;
 					}
 					document.write('<div id="bmh" style="width: 173px; margin: 15px 0 0 0; padding: 5px; position: absolute; color: #eee; font-size: 11px; background-color:#222; border: 1px solid #ccc; visibility: hidden;"><strong>BOOKMARK<\/strong><br />Click "Tag Page" to bookmark a page. When you return to the site, click "Goto Tag" to continue where you left off.<\/div>');
-					document.write('<a href="#" onClick="bmhome();return false;"><img src="'+imgTag+'" alt="<?php __('Tag This Page','comicpress'); ?>" border="0"><\/a>');
+					document.write('<a href="#" onClick="bmhome();return false;"><img src="'+imgTag+'" alt="<?php __('Tag This Page','easel'); ?>" border="0"><\/a>');
 					document.write('<a href="#" onClick="gto();return false;"><img src="'+gt+'" alt="Goto Tag" border="0" id="gtc"><\/a>');
 					document.write('<a href="#" onClick="bmc();return false;"><img src="'+ct+'" alt="Clear Tag" border="0" id="rmc"><\/a>');
 					document.write('<a href="#" onMouseOver="document.getElementById(\'bmh\').style.visibility=\'visible\';" onMouseOut="document.getElementById(\'bmh\').style.visibility=\'hidden\';" onClick="return false;"><img src="'+imgInfo+'" alt="" border="0" \/><\/a>');
@@ -107,25 +106,21 @@ global $post, $wp_query; ?>
 <?php
 }	
 
-class widget_comicpress_classic_bookmark extends WP_Widget {
+class widget_easel_classic_bookmark extends WP_Widget {
 	
-	function widget_comicpress_classic_bookmark() {
-		$widget_ops = array('classname' => 'widget_comicpress_classic_bookmark', 'description' => __('Creates a set of buttons that let the user return to the page they tagged.','comicpress') );
-		$this->WP_Widget('comicpress_classic_bookmark', __('Bookmark - Classic','comicpress'), $widget_ops);
+	function widget_easel_classic_bookmark() {
+		$widget_ops = array('classname' => __CLASS__, 'description' => __('Creates a set of buttons that let the user return to the page they tagged.','easel') );
+		$this->WP_Widget(__CLASS__, __('Classic Bookmark','easel'), $widget_ops);
 	}
 	
 	function widget($args, $instance) {
 		global $post, $wp_query;
-		if (is_home() || is_single()) { 
-			Protect();
-			extract($args, EXTR_SKIP);
-			echo $before_widget;
-			$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
-			if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-			comicpress_classic_bookmark();
-			echo $after_widget;
-			UnProtect();
-		}
+		extract($args, EXTR_SKIP);
+		echo $before_widget;
+		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
+		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
+		easel_classic_bookmark();
+		echo $after_widget;
 	}
 	
 	function update($new_instance, $old_instance) {
@@ -138,10 +133,10 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','easel'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 		<?php
 	}
 }
-register_widget('widget_comicpress_classic_bookmark');
+register_widget('widget_easel_classic_bookmark');
 
 ?>

@@ -1,14 +1,12 @@
-		</div>
-		<?php if (is_cp_theme_layout('2cvr,2cvl,v3c,v3cr,v3cl,lgn,rgn')) { ?>
-			<?php if (is_cp_theme_layout('lgn') && !comicpress_disable_sidebars()) get_sidebar('right');  ?>
-				<div class="clear"></div>
+				<?php if (!easel_sidebars_disabled()) easel_get_sidebar('under-blog'); ?>
 			</div>
-			<?php } ?>
-		<?php if (is_cp_theme_layout('3c2r,v3cr') && !comicpress_disable_sidebars()) get_sidebar('left'); ?>
-		<?php if (is_cp_theme_layout('2cr,2cvr,3c,3c2r,v3c,v3cr,rgn') && !comicpress_disable_sidebars()) get_sidebar('right');  ?>
-		<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="subcontent-wrapper-foot"></div><?php } ?>
+		</div>			
+<?php 
+if (!easel_is_signup() && !easel_sidebars_disabled()) {
+	if (easel_is_layout('3cl,3cr')) easel_get_sidebar('left');
+	if (easel_is_layout('2cr,2crw,3c,3cr')) easel_get_sidebar('right');
+}
+?>
 		<div class="clear"></div>
 	</div>
-	<div class="clear"></div>
 </div>
-<?php if (comicpress_themeinfo('enable_caps')) { ?><div id="content-wrapper-foot"></div><?php } ?>

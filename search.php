@@ -1,44 +1,48 @@
 <?php 
 get_header();
-remove_filter('pre_get_posts','comicpress_members_filter');
 
-$count = $wp_query->found_posts;
-if (!$count) $count = "no";
-?>
-	<h2 class="pagetitle"><?php _e('Search for &lsquo;','comicpress'); the_search_query(); _e('&rsquo;','comicpress'); ?></h2>
-	<div class="searchresults"><?php printf(_n("%d item.", "%d items.", $count,'comicpress'),$count); ?></div>
-
-<?php
+$count = 'No';
 if (have_posts()) :
-	while (have_posts()) : the_post();
-
-		if (is_category() && comicpress_in_comic_category()) { ?>
-
-				<div class="comicthumbwrap">
-					<div class="comicarchiveframe" style="width: <?php echo $mini_comic_width; ?>px">
-						<a href="<?php the_permalink() ?>"><img src="<?php echo comicpress_display_comic_thumbnail('archive', $post, true); ?>" alt="<?php the_title() ?>" title="<?php the_title() ?>"  /></a>
-					</div>
-				</div>
-				
-		<?php } else {
-			comicpress_display_post();
-		}
-	endwhile;
-    
+	$count = $wp_query->found_posts;
+?>
+	<h2 class="page-title"><?php _e('Search for &lsquo;','easel'); the_search_query(); _e('&rsquo;','easel'); ?></h2>
+	<div class="searchresults"><?php printf(_n("%d result.", "%d results.", $count,'easel'),$count); ?></div>
+	<div class="clear"></div>
+<?php 
+	if (easel_themeinfo('display_archive_as_links')) { ?>
+	<div <?php post_class(); ?>>
+		<div class="post-head"></div>
+		<div class="entry">
+		<table class="archive-table">
+			<?php while (have_posts()) : the_post(); ?>
+			<tr><td class="archive-date"><?php the_time('M d, Y') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','easel'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
+			<?php endwhile; ?>
+		</table>
+		</div>
+		<div class="post-foot"></div>
+	</div>
+	<?php } else {
+		while (have_posts()) : the_post();
+			$post_format = ($post->post_type !== 'post') ? $post->post_type : get_post_format();
+			get_template_part( 'content', $post_format );
+		endwhile;
+	} ?>
+	<div class="clear"></div>
+	<?php easel_pagination();
 	else : ?>
-		<div <?php post_class(); ?>>
-			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-head"></div><?php } ?>
+		<div class="post post-search type-page">
+			<div class="post-head"></div>
 			<div class="post-content">
-				<h3><?php _e('No entries found.','comicpress'); ?></h3>
-				<p><?php _e('Try another search?','comicpress'); ?></p>
-				<p><?php get_search_form(); ?></p>
+				<div class="entry">
+					<h3><?php _e('No results found.','easel'); ?></h3>
+					<p><?php _e('Try another search?','easel'); ?></p>
+					<p><?php get_search_form(); ?></p>
+				</div>
 			</div>
-			<?php if (comicpress_themeinfo('enable_caps')) { ?><div class="post-foot"></div><?php } ?>
+			<div class="post-foot"></div>
 		</div>
 <?php
 	endif;
 	
-comicpress_pagination();
-
 get_footer();
 ?>

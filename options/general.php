@@ -1,257 +1,250 @@
-<div id="comicpress-general">
-
-	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
+<div id="easel-general">
+	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=easel-options">
 	<?php wp_nonce_field('update-options') ?>
 
-		<div class="comicpress-options">
+		<div class="easel-options">
 
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Design','comicpress'); ?></th>
+						<th colspan="3"><?php _e('General','easel'); ?></th>
 					</tr>
 				</thead>
-				<tr class="alternate">
-					<th scope="row"><label for="enable_caps"><?php _e('Enable -head and -foot caps?','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_caps" name="enable_caps" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_caps')); ?> />
-					</td>
-					<td>
-						<?php _e('Enabling this option will create post-head widget-head and various other div alignments increasing the amount of dom elements available to use in designing your site, however will reduce the speed in which the page is shown on the end users browser.','comicpress'); ?>
-					</td>
-				</tr>
-			</table>
-			
-			<table class="widefat">
-				<thead>
-					<tr>
-						<th colspan="3"><?php _e('Comic','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr class="alternate">
-					<th scope="row"><label for="rascal_says"><?php _e('Enable Rascal the ComicPress Mascot','comicpress'); ?></label></th>
-					<td>
-						<input id="rascal_says" name="rascal_says" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('rascal_says')); ?> />
-					</td>
-					<td>
-						<?php _e('Enable this option to make a comic bubble appear over the comic and write out what you put in the hovertext, along with a friendly face. You can add the hovertext when uploading your comic with ComicPress Manager. To change the graphics for this will need to be well-versed in CSS.','comicpress'); ?>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label for="enable_multicomic_jquery"><?php _e('Enable Multi-Comic Jquery navigation?','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_multicomic_jquery" name="enable_multicomic_jquery" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_multicomic_jquery')); ?> />
-					</td>
-					<td>
-						<?php _e('This is if you have uploaded multiple comics on the same date, it puts button navigation under the comic so you can navigate the comics that are on the same date.','comicpress'); ?>
-					</td>
-				</tr>
-				<tr class="alternate">
-					<th scope="row"><label for="enable_comic_lightbox"><?php _e('Enable lightbox support for the comic image.','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_comic_lightbox" name="enable_comic_lightbox" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comic_lightbox')); ?> />
-					</td>
-					<td>
-						<?php _e('This will allow you to use lightbox with the comic so the comic expands when clicked.  Will *not* work with rascal or comic clicks next options.','comicpress'); ?>
-					</td>
-				</tr>				
-			</table>
-			
-			<table class="widefat">
-				<thead>
-					<tr>
-						<th colspan="3"><?php _e('Comments','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr class="alternate">
-					<th scope="row"><label for="disable_comment_note"><?php _e('Disable the comment notes','comicpress'); ?></label></th>
-					<td>
-						<input id="disable_comment_note" name="disable_comment_note" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('disable_comment_note')); ?> />
-					</td>
-					<td>
-						<?php _e('Disabling this will remove the note text that displays with more options for adding to comments (html).','comicpress'); ?>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label for="enable_comment_javascript"><?php _e('Enable Comment Javascript','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_comment_javascript" name="enable_comment_javascript" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comment_javascript')); ?> />
-					</td>
-					<td>
-						<?php _e('Enable this option if you want the comment form to appear directly under who is being replied to. (reduces pageview/hit)','comicpress'); ?>
-					</td>
-				</tr>
-			</table>
-			
-			<table class="widefat">
-				<thead>
-					<tr>
-						<th colspan="3"><?php _e('RSS','comicpress'); ?></th>
-					</tr>
-				</thead>			
-				<tr class="alternate">
-					<th scope="row"><label for="enable_comment_count_in_rss"><?php _e('Enable the comment count to show in feed title.','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_comment_count_in_rss" name="enable_comment_count_in_rss" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_comment_count_in_rss')); ?> />
-					</td>
-					<td>
-						<?php _e('Will show how many comments there are in the title of the post in the feed.','comicpress'); ?>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label for="enable_post_thumbnail_rss"><?php _e('Enable the post thumbnails in the RSS feed?','comicpress'); ?></label></th>
-					<td>
-						<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_post_thumbnail_rss')); ?> />		
-					</td>
-					<td>
-						<?php _e('If enabled will show the post thumbnail of the post in the RSS feed.','comicpress'); ?>
-					</td>
-				</tr>
-			</table>
 
+				<tr>
+					<th scope="row"><label for="home_post_count"><?php _e('How many blog posts would you like to display on the home page?','easel'); ?></label></th>
+					<td>
+						<input type="text" size="2" name="home_post_count" id="home_post_count" value="<?php echo $easel_options['home_post_count']; ?>" />
+					</td>
+					<td>
+						<?php _e('How many blog posts you would like displayed on the index page at one time.  This is different then the one in the wp-admin - settings, the one in the settings will control how many show up on search and archive pages.','easel'); ?>
+					</td>
+				</tr>
+				<tr class="alternate">
+					<th scope="row"><label for="disable_blog_on_homepage"><?php _e('Disable Blog Loop','easel'); ?></label></th>
+					<td>
+						<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked(true, $easel_options['disable_blog_on_homepage']); ?> />
+					</td>
+					<td>
+						<?php _e('Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings - reading.','easel'); ?>
+					</td>
+				</tr>
+			</table>
+			
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Navigation','comicpress'); ?></th>
+						<th colspan="5"><?php _e('Custom Header','easel'); ?></th>
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_numbered_pagination"><?php _e('Enable numbered pagination','comicpress'); ?></label></th>
+					<th scope="row"><label for="custom_image_header_width"><?php _e('Custom Header Values','easel'); ?></label></th>
 					<td>
-						<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_numbered_pagination')); ?> />
+						<?php _e('Width:','easel'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo $easel_options['custom_image_header_width']; ?>" />px &nbsp;
+						<?php _e('Height:','easel'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo $easel_options['custom_image_header_height']; ?>" />px<br />
+						<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header','easel'); ?><br />
+						<?php _e('3 Column Layouts are 980px width while 2 Column Layouts are 780px width as default.','easel'); ?><br />
+						<strong><?php _e('NOTE: This is no longer necessary since Easel 3.1.1, flexible headers will determine your height and width of your image, the available space per layout for width still applies.', 'easel'); ?></strong>
+					</td>
+				</tr>
+			</table>
+			
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Pages','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="disable_page_titles"><?php _e('Disable the titles on pages','easel'); ?></label></th>
+					<td>
+						<input id="disable_page_titles" name="disable_page_titles" type="checkbox" value="1" <?php checked(true, $easel_options['disable_page_titles']); ?> />
 					</td>
 					<td>
-						<?php _e('Previous Entries and Next Entries buttons are replaced by a bar of numbered pages. Numbered pagination appears on the Home page, the author(s) page, the blog template, and comments/single when there are more then the set number of comments per page. Uses the same styling as the Menubar.','comicpress'); ?>
+						<?php _e('Page titles will be turned off.  If you disable the titles no pages you can still add a post-image in the page editor.','easel'); ?>
+					</td>
+				</tr>			
+			</table>
+			
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Posts','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="disable_post_titles"><?php _e('Disable the titles on posts','easel'); ?></label></th>
+					<td>
+						<input id="disable_post_titles" name="disable_post_titles" type="checkbox" value="1" <?php checked(true, $easel_options['disable_post_titles']); ?> />
+					</td>
+					<td>
+						<?php _e('Post titles will be turned off.  If you disable the titles on posts can still add a post-image in the post editor.','easel'); ?>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="comic_clicks_next"><?php _e('Click comic to go next','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_post_calendar"><?php _e('Add graphic calendar to blog posts','easel'); ?></label></th>
 					<td>
-						<input id="comic_clicks_next" name="comic_clicks_next" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('comic_clicks_next')); ?> />
+						<input id="enable_post_calendar" name="enable_post_calendar" type="checkbox" value="1" <?php checked(true, $easel_options['enable_post_calendar']); ?> />
 					</td>
 					<td>
-						<?php _e('Allows users to click the comic itself to go to the next comic (unless on the latest comic). This allows you to offer a more convenient option for your archive readers to proceed to the next comic, and the next, etc. Any enabled hover options will continue to function even with this enabled.','comicpress'); ?>
+						<?php _e('Enabling this option will display a calendar image on your blog posts. The graphic calendar is an image that has the date of the blog post overlayed on top of it.','easel'); ?>
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_default_comic_nav"><?php _e('Disable the default comic post navigation','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_post_author_gravatar"><?php _e('Enable Author Gravatar','easel'); ?></label></th>
 					<td>
-						<input id="disable_default_comic_nav" name="disable_default_comic_nav" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('disable_default_comic_nav')); ?> />
+						<input id="enable_post_author_gravatar" name="enable_post_author_gravatar" type="checkbox" value="1" <?php checked(true, $easel_options['enable_post_author_gravatar']); ?> />
 					</td>
 					<td>
-						<?php _e('The default comic post navigation is above each comic blog post.','comicpress'); ?>
+						<?php _e('Enabling this option will show a gravatar of the post author based on the author email address.  Gravatars are associated by your email address and you can create them at','easel'); ?> <a href="http://gravatar.com/">http://gravatar.com</a>.
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="enable_avatar_trick"><?php _e('Enable Avatar Mod','easel'); ?></label></th>
+					<td>
+						<input id="enable_avatar_trick" name="enable_avatar_trick" type="checkbox" value="1" <?php checked(true, $easel_options['enable_avatar_trick']); ?> />
+					</td>
+					<td>
+						<?php _e('With this enabled, the avatar\'s that are displayed will be jquery modified to look like polaroids randomly tilted.','easel'); ?>
 					</td>
 				</tr>
 				<?php
-					$current_gnav_directory = comicpress_themeinfo('graphicnav_directory');
-					if (empty($current_gnav_directory)) $current_gnav_directory = 'default';
-					$dirs_to_search = array_unique(array(get_template_directory(),get_stylesheet_directory()));
-					$gnav_directories = array();
-					foreach ($dirs_to_search as $gnav_dir) {
-						if (is_dir($gnav_dir . '/images/nav')) {
+					$current_avatar_directory = $easel_options['avatar_directory'];
+					if (empty($current_avatar_directory)) $current_avatar_directory = 'default';
+					$avatar_directories = array();
+					$dirs_to_search = array_unique(array(easel_themeinfo('themepath'), easel_themeinfo('stylepath')));
+					foreach ($dirs_to_search as $avdir) { 
+						if (is_dir($avdir . '/images/avatars')) {
 							$thisdir = null;
 							$thisdir = array();
-							$thisdir = glob($gnav_dir. '/images/nav/*');
-							$gnav_directories = array_merge($gnav_directories, $thisdir); 		
+							$thisdir = glob($avdir. '/images/avatars/*');
+							$avatar_directories = array_merge($avatar_directories, $thisdir); 		
 						}
 					}
 				?>
 				<tr>
-					<th scope="row" colspan="2"><label for="graphicnav_directory"><?php _e('Graphic Navigation Directory','comicpress'); ?></label>
-
-							<select name="graphicnav_directory" id="graphicnav_directory">
-								<?php
-									foreach ($gnav_directories as $gnav_dirs) {
-										if (is_dir($gnav_dirs)) {
-											$gnav_dir_name = basename($gnav_dirs); ?>
-											<option class="level-0" value="<?php echo $gnav_dir_name; ?>" <?php if ($current_gnav_directory == $gnav_dir_name) { ?>selected="selected"<?php } ?>><?php echo $gnav_dir_name; ?></option>
-									<?php }
-									}
-								?>
-							</select>
-
+					<th scope="row" colspan="2">
+						<label for="avatar_directory"><?php _e('Avatar Directory','easel'); ?></label>
+						<select name="avatar_directory" id="avatar_directory">
+							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
+							<?php
+								foreach ($avatar_directories as $avatar_dirs) {
+									if (is_dir($avatar_dirs)) {
+										$avatar_dir_name = basename($avatar_dirs); ?>
+										<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
+								<?php }
+								}
+							?>
+						</select>
 					</th>
 					<td>
-						<?php _e('Choose a directory to get the graphic navigation styling from. To create your own custom graphic navigation menu buttons just create a directory under <i>images/nav/</i> and place your image files inside of it and create a navstyle.css file to determine the style of your navigation display.','comicpress'); ?>
+						<?php _e('Choose a directory to get the avatars for default gravatars if someone does not have one.  You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. <strong>Setting this to \'none\' will disable it from using any special avatar sets.</strong>','easel'); ?><br />
 					</td>
 				</tr>
-			</table>
-
-			<table class="widefat">
-				<thead>
-					<tr>
-						<th colspan="3"><?php _e('Sidebars','comicpress'); ?></th>
-					</tr>
-				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_widgetarea_use_sidebar_css"><?php _e('Enable main Sidebar CSS for all sidebars','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_tags_in_posts"><?php _e('Disable display of <strong>tags</strong> in posts','easel'); ?></label></th>
 					<td>
-						<input id="enable_widgetarea_use_sidebar_css" name="enable_widgetarea_use_sidebar_css" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_widgetarea_use_sidebar_css')); ?> />
+						<input id="disable_tags_in_posts" name="disable_tags_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['disable_tags_in_posts']); ?> />
 					</td>
 					<td>
-						<?php _e('Uses default CSS styling of the sidebars for all sidebar areas. If disabled it will use the .customwidgetarea user-made styling and only Sidebar-left and Sidebar-right will use sidebar styling.','comicpress'); ?><br />
+						<?php _e('Checkmarking this will make it so that tags will not appear in posts.','easel'); ?>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="disable_lrsidebars"><?php _e('Disable left and right sidebars','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_categories_in_posts"><?php _e('Disable display of <strong>categories</strong> in posts','easel'); ?></label></th>
 					<td>
-						<input id="disable_lrsidebars" name="disable_lrsidebars" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('disable_lrsidebars')); ?> />
+						<input id="disable_categories_in_posts" name="disable_categories_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['disable_categories_in_posts']); ?> />
 					</td>
 					<td>
-						<?php _e('Your site will not display the default left/right sidebars. Minimalists dream. WARNING: Not recommended for use with Graphic Novel layouts.','comicpress'); ?>
+						<?php _e('Checkmarking this will make it so that categories will not appear in posts.','easel'); ?>
 					</td>
 				</tr>
-<?php /*
 				<tr class="alternate">
-					<th scope="row"><label for="enable_equal_height_sidebars"><?php _e('Enable jQuery that will make the sidebars equal length?','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_author_info_in_posts"><?php _e('Disable display of <strong>by Author</strong> in post information.','easel'); ?></label></th>
 					<td>
-						<input id="enable_equal_height_sidebars" name="enable_equal_height_sidebars" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_equal_height_sidebars')); ?> />
+						<input id="disable_author_info_in_posts" name="disable_author_info_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['disable_author_info_in_posts']); ?> />
 					</td>
 					<td>
-						<?php _e('Enabling this will enable jQuery code to make the sidebars equal length.','comicpress'); ?><br />
+						<?php _e('Checkmarking this will make it so that the by Author information will not appear in posts.','easel'); ?>
 					</td>
 				</tr>
-*/ ?>
+				<tr>
+					<th scope="row"><label for="disable_date_info_in_posts"><?php _e('Disable display of the posted on date in posts','easel'); ?></label></th>
+					<td>
+						<input id="disable_date_info_in_posts" name="disable_date_info_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['disable_date_info_in_posts']); ?> />
+					</td>
+					<td>
+						<?php _e('Checkmarking this will make it so that posted on date information will not appear in posts.','easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="disable_posted_at_time_in_posts"><?php _e('Disable the display of the posted at time in posts','easel'); ?></label></th>
+					<td>
+						<input id="disable_posted_at_time_in_posts" name="disable_posted_at_time_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['disable_posted_at_time_in_posts']); ?> />
+					</td>
+					<td>
+						<?php _e('Checkmarking this will make it so that the information about what time the post was made will not show.','easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="enable_last_modified_in_posts"><?php _e('Enable the display of last modified information in posts.','easel'); ?></label></th>
+					<td>
+						<input id="enable_last_modified_in_posts" name="enable_last_modified_in_posts" type="checkbox" value="1" <?php checked(true, $easel_options['enable_last_modified_in_posts']); ?> />
+					</td>
+					<td>
+						<?php _e('Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information.','easel'); ?>
+					</td>
+				</tr>								
 			</table>
 			
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Footer','comicpress'); ?></th>
+						<th colspan="3"><?php _e('Comments','easel'); ?></th>
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_footer_text"><?php _e('Disable the default text in the footer','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_comment_note"><?php _e('Disable the comment notes','easel'); ?></label></th>
 					<td>
-						<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('disable_footer_text')); ?> />
+						<input id="disable_comment_note" name="disable_comment_note" type="checkbox" value="1" <?php checked(true, $easel_options['disable_comment_note']); ?> />
 					</td>
 					<td>
-						<?php _e('Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance -> Widgets-> Footer.', 'comicpress'); ?>
+						<?php _e('Disabling this will remove the note text that displays with more options for adding to comments (html).','easel'); ?>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="enable_scroll_to_top"><?php _e('Enable the scroll to top link in the footer?','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_comment_javascript"><?php _e('Disable Comment Javascript','easel'); ?></label></th>
 					<td>
-						<input id="enable_scroll_to_top" name="enable_scroll_to_top" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_scroll_to_top')); ?> />
+						<input id="disable_comment_javascript" name="disable_comment_javascript" type="checkbox" value="1" <?php checked(true, $easel_options['disable_comment_javascript']); ?> />
 					</td>
 					<td>
-						<?php _e('When this link is clicked on long pages it will scroll back to the top.','comicpress'); ?>
+						<?php _e('Checkmark this if you want the comment form to not use javascript to appear directly under who is being replied to. (increases pageviews/hits)','easel'); ?>
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="copyright_name"><?php _e('&copy; Copyright Name','comicpress'); ?></label>
-						<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo comicpress_themeinfo('copyright_name'); ?>" /><br />
-					</th>
-					<td colspan="2">
-						<?php _e('Set the name to which this site is &copy; Copyright to, leave blank to have the site name.','comicpress'); ?>
+					<th scope="row"><label for="enable_comments_on_homepage"><?php _e('Enable Comments on Home Page','easel'); ?></label></th>
+					<td>
+						<input id="enable_comments_on_homepage" name="enable_comments_on_homepage" type="checkbox" value="1" <?php checked(true, $easel_options['enable_comments_on_homepage']); ?> />
+					</td>
+					<td>
+						<?php _e('Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them, This will ONLY work if you have it set to only display 1 post on the home page.  The post count and this must be set to work.','easel'); ?>
 					</td>
 				</tr>
-				<tr>
-					<th scope="row"><label for="copyright_url"><?php _e('Copyright Holder URL','comicpress'); ?></label>
-						<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo comicpress_themeinfo('copyright_url'); ?>" /><br />
-					</th>
-					<td colspan="2">
-						<?php _e('Set the URL to the owner of the &copy; Copyright if different then this website, leave blank for sites link.','comicpress'); ?>
+			</table>
+
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Navigation','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="enable_numbered_pagination"><?php _e('Enable numbered pagination','easel'); ?></label></th>
+					<td>
+						<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked(true, $easel_options['enable_numbered_pagination']); ?> />
+					</td>
+					<td>
+						<?php _e('Previous Entries and Next Entries buttons are replaced by a bar of numbered pages. Numbered pagination appears on the Home page, the author(s) page, the blog template, and comments/single when there are more then the set number of comments per page. Uses the same styling as the Menubar.','easel'); ?>
 					</td>
 				</tr>
 			</table>
@@ -259,27 +252,136 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e('Debug','comicpress'); ?></th>
+						<th colspan="3"><?php _e('Footer','easel'); ?></th>
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_page_load_info"><?php _e('Enable the page load info in the footer?','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_footer_text"><?php _e('Disable the default text in the footer','easel'); ?></label></th>
 					<td>
-						<input id="enable_page_load_info" name="enable_page_load_info" type="checkbox" value="1" <?php checked(true, comicpress_themeinfo('enable_page_load_info')); ?> />
+						<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $easel_options['disable_footer_text']); ?> />
 					</td>
 					<td>
-						<?php _e('Will display information on how many queries and how fast it took to load the page in the footer.', 'comicpress'); ?>
+						<?php _e('Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance -> Widgets-> Footer.', 'easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="disable_scroll_to_top"><?php _e('Disable the scroll to top link in the footer?','easel'); ?></label></th>
+					<td>
+						<input id="disable_scroll_to_top" name="disable_scroll_to_top" type="checkbox" value="1" <?php checked(true, $easel_options['disable_scroll_to_top']); ?> />
+					</td>
+					<td>
+						<?php _e('When this link is clicked on long pages it will scroll back to the top.','easel'); ?>
+					</td>
+				</tr>
+				<tr class="alternate">
+					<th scope="row"><label for="copyright_name"><?php _e('&copy; Copyright Name','easel'); ?></label>
+						<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo  stripcslashes($easel_options['copyright_name']); ?>" /><br />
+					</th>
+					<td colspan="2">
+						<?php _e('Set the name to which this site is &copy; Copyright to, leave blank to have the site name.','easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="copyright_url"><?php _e('Copyright Holder URL','easel'); ?></label>
+						<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo  stripcslashes($easel_options['copyright_url']); ?>" /><br />
+					</th>
+					<td colspan="2">
+						<?php _e('Set the URL to the owner of the &copy; Copyright if different then this website, leave blank for sites link.','easel'); ?>
 					</td>
 				</tr>
 			</table>
-
+			
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('RSS','easel'); ?></th>
+					</tr>
+				</thead>			
+				<tr class="alternate">
+					<th scope="row"><label for="enable_post_thumbnail_rss"><?php _e('Enable the post thumbnails in the RSS feed?','easel'); ?></label></th>
+					<td>
+						<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked(true, $easel_options['enable_post_thumbnail_rss']); ?> />		
+					</td>
+					<td>
+						<?php _e('If enabled will show the post thumbnail of the post in the RSS feed.','easel'); ?>
+					</td>
+				</tr>
+			</table>
+		
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Facebook','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="facebook_like_blog_post"><?php _e('Enable the Facebook Like button in Blog Posts?','easel'); ?></label></th>
+					<td>
+						<input id="facebook_like_blog_post" name="facebook_like_blog_post" type="checkbox" value="1" <?php checked(true, $easel_options['facebook_like_blog_post']); ?> />
+					</td>
+					<td>
+						<?php _e('When enabled this option will allow the Facebook like button to appear at the bottom of regular blog posts.','easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="facebook_meta"><?php _e('Enable the Facebook Meta?','easel'); ?></label></th>
+					<td>
+						<input id="facebook_meta" name="facebook_meta" type="checkbox" value="1" <?php checked(true, $easel_options['facebook_meta']); ?> />
+					</td>
+					<td>
+						<?php _e('When setting this option, Easel will add meta information to the head area of each page so that facebook will recognize the content within.','easel'); ?>
+					</td>
+				</tr>
+			</table>
+			
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Archive & Search','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="display_archive_as_links"><?php _e('Display archive results as a list of links?','easel'); ?></label></th>
+					<td>
+						<input id="display_archive_as_links" name="display_archive_as_links" type="checkbox" value="1" <?php checked(true, $easel_options['display_archive_as_links']); ?> />
+					</td>
+					<td>
+						<?php _e('Enabling this will make the archive pages by date/category/term display as a list of links instead of full posts.','easel'); ?>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" colspan="2">
+						<label for="excerpt_or_content_in_archive"><?php _e('Excerpt or Full Content in archive and search.','easel'); ?></label>
+						<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
+							<option class="level-0" value="excerpt" <?php selected($easel_options['excerpt_or_content_in_archive'], 'excerpt'); ?>>Excerpt</option>
+							<option class="level-0" value="content" <?php selected($easel_options['excerpt_or_content_in_archive'], 'content'); ?>>Full Content</option>
+						</select>
+					</th>
+					<td>
+						<?php _e('If Display archives results as list is disabled, decide how much is seen in the archive display. ','easel'); ?>
+					</td>
+				</tr>				
+				<tr class="alternate">
+					<th scope="row" colspan="2">
+						<label for="archive_display_order"><?php _e('Archive Display Order','easel'); ?></label>
+						<select name="archive_display_order" id="archive_display_order">
+							<option class="level-0" value="asc" <?php if ($easel_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>>Oldest to Newest - Ascending</option>
+							<option class="level-0" value="desc" <?php if ($easel_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>>Newest to Oldest - Descending</option>
+						</select>
+					</th>
+					<td>
+						<?php _e('Sets the display order of your archives. Newest to Oldest will display your posts starting with the most recent. Oldest to Newest will start with the first entry in the category, tag, or date range (e.g., Selecting May 20XX will start with May 1, not May 31st.)','easel'); ?>
+					</td>
+				</tr>
+			</table>
+				
 		</div>
 
-		<div class="comicpress-options-save">
-			<div class="comicpress-major-publishing-actions">
-				<div class="comicpress-publishing-action">
-					<input name="comicpress_save_general" type="submit" class="button-primary" value="Save Settings" />
-					<input type="hidden" name="action" value="comicpress_save_general" />
+		<div class="easel-options-save">
+			<div class="easel-major-publishing-actions">
+				<div class="easel-publishing-action">
+					<input name="easel_save_general" type="submit" class="button-primary" value="Save Settings" />
+					<input type="hidden" name="action" value="easel_save_general" />
 				</div>
 				<div class="clear"></div>
 			</div>

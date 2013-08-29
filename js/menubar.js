@@ -1,4 +1,4 @@
-﻿ddsmoothmenu.init({
+ddsmoothmenu.init({
 	mainmenuid: "menubar-wrapper", //menu DIV id
 	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
 	classname: 'menu', //class added to menu's outer DIV
