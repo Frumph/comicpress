@@ -18,7 +18,7 @@ Version: 1.04
  * @param bool $initial Optional, default is true. Use initial calendar names.
  * @param bool $echo Optional, default is true. Set to false for return.
  */
-function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
+function comicpress_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 	global $wpdb, $m, $monthnum, $year, $wp_locale, $posts;
 
 	if (empty($taxonomy)) $taxonomy = 'post';
@@ -26,13 +26,13 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 	
 	$cache = array();
 	$key = md5( $m . $monthnum . $year );
-	if ( $cache = wp_cache_get( 'get_easel_calendar', 'calendar' ) ) {
+	if ( $cache = wp_cache_get( 'get_comicpress_calendar', 'calendar' ) ) {
 		if ( is_array($cache) && isset( $cache[ $key ] ) ) {
 			if ( $echo ) {
-				echo apply_filters( 'get_easel_calendar',  $cache[$key] );
+				echo apply_filters( 'get_comicpress_calendar',  $cache[$key] );
 				return;
 			} else {
-				return apply_filters( 'get_easel_calendar',  $cache[$key] );
+				return apply_filters( 'get_comicpress_calendar',  $cache[$key] );
 			}
 		}
 	}
@@ -45,7 +45,7 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 		$gotsome = $wpdb->get_var("SELECT 1 as test FROM $wpdb->posts WHERE post_type = '${taxonomy}' AND post_status = 'publish' LIMIT 1");
 		if ( !$gotsome ) {
 			$cache[ $key ] = '';
-			wp_cache_set( 'get_easel_calendar', $cache, 'calendar' );
+			wp_cache_set( 'get_comicpress_calendar', $cache, 'calendar' );
 			return;
 		}
 	}
@@ -216,12 +216,12 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 
 	$cache[ $key ] = $calendar_output;
 
-	wp_cache_set( 'get_easel_calendar', $cache, 'calendar' );
+	wp_cache_set( 'get_comicpress_calendar', $cache, 'calendar' );
 
 	if ( $echo )
-		echo apply_filters( 'get_easel_calendar',  $calendar_output );
+		echo apply_filters( 'get_comicpress_calendar',  $calendar_output );
 	else
-		return apply_filters( 'get_easel_calendar',  $calendar_output );
+		return apply_filters( 'get_comicpress_calendar',  $calendar_output );
 
 }
 
@@ -231,18 +231,18 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
  * @see get_calendar
  * @since 2.1.0
  */
-function easel_delete_get_calendar_cache() {
-	wp_cache_delete( 'get_easel_calendar', 'calendar' );
+function comicpress_delete_get_calendar_cache() {
+	wp_cache_delete( 'get_comicpress_calendar', 'calendar' );
 }
-add_action( 'save_post', 'easel_delete_get_calendar_cache' );
-add_action( 'delete_post', 'easel_delete_get_calendar_cache' );
-add_action( 'update_option_start_of_week', 'easel_delete_get_calendar_cache' );
-add_action( 'update_option_gmt_offset', 'easel_delete_get_calendar_cache' );
+add_action( 'save_post', 'comicpress_delete_get_calendar_cache' );
+add_action( 'delete_post', 'comicpress_delete_get_calendar_cache' );
+add_action( 'update_option_start_of_week', 'comicpress_delete_get_calendar_cache' );
+add_action( 'update_option_gmt_offset', 'comicpress_delete_get_calendar_cache' );
 
 
-class easel_calendar_widget extends WP_Widget {
+class comicpress_calendar_widget extends WP_Widget {
 	
-	function easel_calendar_widget($skip_widget_init = false) {
+	function comicpress_calendar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Easel Calendar','comicpress'), $widget_ops);
@@ -283,7 +283,7 @@ class easel_calendar_widget extends WP_Widget {
 					</div>
 				<?php } ?>
 			<?php
-				easel_get_calendar(true, true, 'post'); 
+				comicpress_get_calendar(true, true, 'post'); 
 			?>
 			</div>
 			<div id="wp-calendar-foot"></div>
@@ -333,6 +333,6 @@ class easel_calendar_widget extends WP_Widget {
 		}
 	}
 }
-register_widget('easel_calendar_widget');
+register_widget('comicpress_calendar_widget');
 
 ?>

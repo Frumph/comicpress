@@ -7,7 +7,7 @@ Author URI: http://frumph.net
 Version: 1.02
 */
 
-function easel_classic_bookmark() { 
+function comicpress_classic_bookmark() { 
 global $post, $wp_query; ?>
 	<div class="classic-bookmark">
 		<script language="javascript" type="text/javascript">
@@ -106,9 +106,9 @@ global $post, $wp_query; ?>
 <?php
 }	
 
-class widget_easel_classic_bookmark extends WP_Widget {
+class widget_comicpress_classic_bookmark extends WP_Widget {
 	
-	function widget_easel_classic_bookmark() {
+	function widget_comicpress_classic_bookmark() {
 		$widget_ops = array('classname' => __CLASS__, 'description' => __('Creates a set of buttons that let the user return to the page they tagged.','comicpress') );
 		$this->WP_Widget(__CLASS__, __('Classic Bookmark','comicpress'), $widget_ops);
 	}
@@ -119,7 +119,7 @@ class widget_easel_classic_bookmark extends WP_Widget {
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-		easel_classic_bookmark();
+		comicpress_classic_bookmark();
 		echo $after_widget;
 	}
 	
@@ -137,6 +137,6 @@ class widget_easel_classic_bookmark extends WP_Widget {
 		<?php
 	}
 }
-register_widget('widget_easel_classic_bookmark');
+register_widget('widget_comicpress_classic_bookmark');
 
 ?>

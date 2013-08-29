@@ -9,9 +9,9 @@ Version: 1.1
 
 */
 
-class easel_google_translate_widget extends WP_Widget {
+class comicpress_google_translate_widget extends WP_Widget {
 
-	function easel_google_translate_widget($skip_widget_init = false) {
+	function comicpress_google_translate_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Translate your site with Google.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Google Translator','comicpress'), $widget_ops);
@@ -45,7 +45,7 @@ class easel_google_translate_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('easel_google_translate_widget');
+register_widget('comicpress_google_translate_widget');
 
 
 ?>

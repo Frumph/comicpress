@@ -9,9 +9,9 @@ Author URI: http://frumph.net/
 
 */
 
-function easel_menubar() {
-	if (file_exists(easel_themeinfo('stylepath') . '/custom-menubar.php')) {
-		include(easel_themeinfo('stylepath') . '/custom-menubar.php');
+function comicpress_menubar() {
+	if (file_exists(comicpress_themeinfo('stylepath') . '/custom-menubar.php')) {
+		include(comicpress_themeinfo('stylepath') . '/custom-menubar.php');
 	} else { ?>
 		<div id="menubar-wrapper">
 			<div class="menu-container">
@@ -23,13 +23,13 @@ function easel_menubar() {
 					do_action('comic-mini-navigation');
 				?>
 				<div class="menunav">
-					<?php if (easel_themeinfo('enable_search_in_menubar')) { ?>
+					<?php if (comicpress_themeinfo('enable_search_in_menubar')) { ?>
 					<div class="menunav-search">
 						<?php get_search_form(); ?>
 					</div>
 					<?php } ?>
 					<?php do_action('easel-menubar-menunav'); ?>
-					<?php if (easel_themeinfo('enable_rss_in_menubar') && !easel_themeinfo('menubar_social_icons')) { ?>
+					<?php if (comicpress_themeinfo('enable_rss_in_menubar') && !comicpress_themeinfo('menubar_social_icons')) { ?>
 						<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
 					<?php } ?>
 					<?php do_action('easel-menubar-mini-navigation'); ?>
@@ -41,9 +41,9 @@ function easel_menubar() {
 	<?php } 
 }
 
-class easel_menubar_widget extends WP_Widget {
+class comicpress_menubar_widget extends WP_Widget {
 	
-	function easel_menubar_widget($skip_widget_init = false) {
+	function comicpress_menubar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Displays a menubar.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Easel Menubar','comicpress'), $widget_ops);
@@ -57,7 +57,7 @@ class easel_menubar_widget extends WP_Widget {
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-		easel_menubar();
+		comicpress_menubar();
 		echo $after_widget;
 	}
 	
@@ -76,7 +76,7 @@ class easel_menubar_widget extends WP_Widget {
 	}
 }
 
-register_widget('easel_menubar_widget');
+register_widget('comicpress_menubar_widget');
 
 
 ?>

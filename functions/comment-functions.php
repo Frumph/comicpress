@@ -14,7 +14,7 @@
 * @since 0.2
 * @filter
 */
-function easel_avatar() {
+function comicpress_avatar() {
 	global $comment;
 
 	$url = get_comment_author_url();
@@ -28,7 +28,7 @@ function easel_avatar() {
 			echo '<a href="' . $url . '" rel="external nofollow" title="' . esc_html(get_comment_author(), 1) . '">';
 		$id_or_email = get_comment_author_email();
 		if (empty($id_or_email)) $id_or_email = get_comment_author();
-			$return_str = str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($id_or_email, 64, easel_random_default_avatar($id_or_email), esc_html(get_comment_author(), 1)));
+			$return_str = str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($id_or_email, 64, comicpress_random_default_avatar($id_or_email), esc_html(get_comment_author(), 1)));
 			echo $return_str;
 		if($url == true && $url != 'http://')
 			echo '</a>';
@@ -45,7 +45,7 @@ function easel_avatar() {
 *
 * @since 0.2.2
 */
-function easel_comment_author() {
+function comicpress_comment_author() {
 	global $comment;
 
 	$author = get_comment_author();
@@ -102,18 +102,18 @@ function easel_comment_author() {
 * @param $args Array of arguments passed from wp_list_comments
 * @param $depth What level the particular comment is
 */
-function easel_comments_callback($comment, $args, $depth) {
+function comicpress_comments_callback($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	$GLOBALS['comment_depth'] = $depth;
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 	
-		<?php easel_avatar(); // Avatar filter ?>
+		<?php comicpress_avatar(); // Avatar filter ?>
 		
 		<div class="comment-content">
 		
 			<div class="comment-author vcard">
-				<?php easel_comment_author(); ?>
+				<?php comicpress_comment_author(); ?>
 			</div>
 	
 			<div class="comment-meta-data">
@@ -161,19 +161,19 @@ function easel_comments_callback($comment, $args, $depth) {
 /**
 * Ends the display of individual comments
 * Uses the callback parameter for wp_list_comments
-* Needs to be used in conjunction with easel_comments_callback
+* Needs to be used in conjunction with comicpress_comments_callback
 * Not needed but used just in case something is changed
 *
 * @since 0.2.3
 */
-function easel_comments_end_callback() {
+function comicpress_comments_end_callback() {
 	echo '</li>';
 }
 
 function list_pings($comment, $args, $depth) {       
 	$GLOBALS['comment'] = $comment; ?>
 		<li id="comment-<?php comment_ID(); ?>">
-		<?php easel_comment_author(); ?></li>
+		<?php comicpress_comment_author(); ?></li>
 <?php } 
 
 ?>

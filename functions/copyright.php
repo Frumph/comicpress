@@ -1,29 +1,29 @@
 <?php
 
-if (!function_exists('easel_copyright_text')) {
-	function easel_copyright_text() {
+if (!function_exists('comicpress_copyright_text')) {
+	function comicpress_copyright_text() {
 		$output = "<p class=\"copyright-info\">\r\n";
-		$output .= easel_copyright_info();
+		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
 		$output .= __('Powered by','comicpress') . " <a href=\"http://wordpress.org/\">WordPress</a> " . __('with','comicpress'). " <a href=\"http://frumph.net\">Easel</a>\r\n";
-		$output .= easel_hosted_on();
+		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span> ";
 			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
 		$output .= "</span>\r\n";
-		if (!easel_themeinfo('disable_scroll_to_top')) { 
+		if (!comicpress_themeinfo('disable_scroll_to_top')) { 
 			$output .= "<span class=\"footer-uptotop\">";
 				$output .= "<span class=\"footer-pipe\">|</span> ";
 				$output .= "<a href=\"#outside\" onclick=\"scrollup(); return false;\">".__('Back to Top &uarr;','comicpress')."</a>";
 			$output .="</span>\r\n";
 		}
 		$output .= "</p>\r\n";
-		echo apply_filters('easel_copyright_text', $output);
+		echo apply_filters('comicpress_copyright_text', $output);
 	}
 }
 
-if (!function_exists('easel_hosted_on')) {
-	function easel_hosted_on() {
+if (!function_exists('comicpress_hosted_on')) {
+	function comicpress_hosted_on() {
 		if (is_multisite()) {
 			$current_site = get_current_site();
 			if (!isset($current_site->site_name)) {
@@ -33,24 +33,24 @@ if (!function_exists('easel_hosted_on')) {
 			}
 			$output = "<span class=\"copyright-pipe\">|</span> ";
 			$output .= __('Hosted on','comicpress') . ' <a href="http://'. $current_site->domain. $current_site->path. '">'. $site_name. '</a> ';
-			return apply_filters('easel_hosted_on', $output);
+			return apply_filters('comicpress_hosted_on', $output);
 		}
 	}
 }
 
-if (!function_exists('easel_copyright_info')) {
-	function easel_copyright_info() {
-		$copyright_name = easel_themeinfo('copyright_name');
+if (!function_exists('comicpress_copyright_info')) {
+	function comicpress_copyright_info() {
+		$copyright_name = comicpress_themeinfo('copyright_name');
 		if (empty($copyright_name)) $copyright_name = get_bloginfo('name');
-		$copyright_url = easel_themeinfo('copyright_url');
+		$copyright_url = comicpress_themeinfo('copyright_url');
 		if (empty($copyright_url)) $copyright_url = home_url();
-		$copyright = __('&copy;', 'comicpress'). easel_copyright_dates() . ' ' . apply_filters('easel_copyright_info_name', '<a href="'.$copyright_url.'">' . $copyright_name . '</a>') . ' ';
-		return apply_filters('easel_copyright_info', $copyright);
+		$copyright = __('&copy;', 'comicpress'). comicpress_copyright_dates() . ' ' . apply_filters('comicpress_copyright_info_name', '<a href="'.$copyright_url.'">' . $copyright_name . '</a>') . ' ';
+		return apply_filters('comicpress_copyright_info', $copyright);
 	}
 }
 
-if (!function_exists('easel_copyright_dates')) {
-	function easel_copyright_dates() {
+if (!function_exists('comicpress_copyright_dates')) {
+	function comicpress_copyright_dates() {
 		global $wpdb;
 		$copyright_dates = $wpdb->get_results("
 					SELECT
@@ -69,7 +69,7 @@ if (!function_exists('easel_copyright_dates')) {
 			}
 			$output =  $copyright;
 		}
-		return apply_filters('easel_copyright_dates', $output);
+		return apply_filters('comicpress_copyright_dates', $output);
 	}
 }
 

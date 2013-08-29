@@ -19,11 +19,11 @@ if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']
 			<ol class="commentlist">
 			<li>
 				<ul>
-					<?php if (function_exists('easel_comments_callback')) { 
+					<?php if (function_exists('comicpress_comments_callback')) { 
 						wp_list_comments(array(
 									'type' => 'pings',
-									'callback' => 'easel_comments_callback',
-									'end-callback' => 'easel_comments_end_callback',
+									'callback' => 'comicpress_comments_callback',
+									'end-callback' => 'comicpress_comments_end_callback',
 									'avatar_size'=>32
 									)
 								); 
@@ -38,12 +38,12 @@ if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']
 }
 	if ( !empty($comments_by_type['comment']) ) { ?>
 		<ol class="commentlist">
-		<?php if (function_exists('easel_comments_callback')) { 
+		<?php if (function_exists('comicpress_comments_callback')) { 
 			wp_list_comments(array(
 						'type' => 'comment',
 						'reply_text' => __('Reply &not;','comicpress'),
-						'callback' => 'easel_comments_callback',
-						'end-callback' => 'easel_comments_end_callback',
+						'callback' => 'comicpress_comments_callback',
+						'end-callback' => 'comicpress_comments_end_callback',
 						'avatar_size'=>64
 						)
 					); 
@@ -53,7 +53,7 @@ if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']
 		</ol>
 	<?php 
 	if (get_comment_pages_count() > 1 && get_option( 'page_comments' )) {
-		if (easel_themeinfo('enable_numbered_pagination')) {
+		if (comicpress_themeinfo('enable_numbered_pagination')) {
 			$pagelinks = paginate_comments_links(array('echo' => 0)); 
 			if (!empty($pagelinks)) {
 				$pagelinks = str_replace('<a', '<li><a', $pagelinks);
@@ -92,7 +92,7 @@ if (comments_open()) { ?>
 	$args = array(
 			'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
 			'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" class="comment-textarea"></textarea></p>', 
-			'comment_notes_after'  => easel_themeinfo('disable_comment_note') ? '' : '<p class="comment-note"><strong><small>' . __('NOTE - You can use these HTML tags and attributes: ', 'comicpress') . '</small></strong><br /><small><code>' . allowed_tags() . '</code></small></p>',
+			'comment_notes_after'  => comicpress_themeinfo('disable_comment_note') ? '' : '<p class="comment-note"><strong><small>' . __('NOTE - You can use these HTML tags and attributes: ', 'comicpress') . '</small></strong><br /><small><code>' . allowed_tags() . '</code></small></p>',
 			'title_reply'          => __( 'Comment &not;', 'comicpress' ),
 			'title_reply_to'       => __( 'Reply to %s &not;','comicpress' ), 
 			'cancel_reply_link'    => __( 'Cancel reply', 'comicpress' ),

@@ -45,7 +45,7 @@ if (have_posts()) { ?>
 	<div class="archiveresults"><?php printf(_n("%d result.", "%d results.", $count,'comicpress'),$count); ?></div>
 	<div class="clear"></div>
 	<?php 
-	if (easel_themeinfo('display_archive_as_links') || easel_is_bbpress()) { ?>
+	if (comicpress_themeinfo('display_archive_as_links') || comicpress_is_bbpress()) { ?>
 	<div <?php post_class(); ?>>
 		<div class="post-head"></div>
 		<div class="entry">
@@ -65,7 +65,7 @@ if (have_posts()) { ?>
 	}
 	?>
 	<div class="clear"></div>
-	<?php easel_pagination(); ?>
+	<?php comicpress_pagination(); ?>
 	
 <?php } else { ?>
 	<h2 class="page-title"><?php echo $title_string; ?></h2>

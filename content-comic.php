@@ -1,18 +1,18 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
-		<?php if (!easel_is_bbpress()) easel_display_author_gravatar(); ?>
+		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
 		<div class="post-info">
 			<?php 
-				easel_display_post_title();
-				if (!easel_is_bbpress()) easel_display_post_calendar();
+				comicpress_display_post_title();
+				if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 				if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
-				if (function_exists('easel_show_mood_in_post')) easel_show_mood_in_post(); 
+				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
 			?>
 			<div class="post-text">
 				<?php 
-				easel_display_post_author();
-				easel_display_post_date();	easel_display_post_time(); easel_display_modified_date_time();
-				easel_display_post_category();
+				comicpress_display_post_author();
+				comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
+				comicpress_display_post_category();
 				if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
 				do_action('easel-post-info');
 				do_action('comic-post-info');
@@ -23,15 +23,15 @@
 		</div>
 		<div class="clear"></div>
 		<div class="entry">
-			<?php easel_display_the_content(); ?>
+			<?php comicpress_display_the_content(); ?>
 			<div class="clear"></div>
 		</div>
 		<div class="post-extras">
 			<?php 
-				easel_display_post_tags();
+				comicpress_display_post_tags();
 				do_action('easel-post-extras');
 				do_action('comic-post-extras');
-				easel_display_comment_link(); 
+				comicpress_display_comment_link(); 
 			?>
 			<div class="clear"></div>
 		</div>

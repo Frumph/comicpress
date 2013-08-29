@@ -7,10 +7,10 @@
  * 
  */
 
-add_filter('body_class','easel_body_class');
+add_filter('body_class','comicpress_body_class');
 
-function easel_body_class($classes = array()) {
-	global  $current_user, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $easel_is_signup;
+function comicpress_body_class($classes = array()) {
+	global  $current_user, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
 	
 	get_currentuserinfo();
 	
@@ -21,7 +21,7 @@ function easel_body_class($classes = array()) {
 		$classes[] = 'user-guest';
 	}
 	
-	if (easel_is_signup()) $classes[] = 'signup';
+	if (comicpress_is_signup()) $classes[] = 'signup';
 
 	if($is_lynx) $classes[] = 'lynx';
 	elseif($is_gecko) $classes[] = 'gecko';
@@ -76,18 +76,18 @@ function easel_body_class($classes = array()) {
 		endforeach;
 	}
 	
-	if (easel_sidebars_disabled()) $classes[] = 'wide';
+	if (comicpress_sidebars_disabled()) $classes[] = 'wide';
 	
-	$layout = easel_themeinfo('layout');
+	$layout = comicpress_themeinfo('layout');
 	if (empty($layout)) $layout = '3c';
 	$classes[] = 'layout-'.$layout;
 
 	return $classes;
 }
 
-add_filter('post_class','easel_post_class');
+add_filter('post_class','comicpress_post_class');
 
-function easel_post_class($classes = '') {
+function comicpress_post_class($classes = '') {
 	global $post;
 	static $post_alt;
 
@@ -128,9 +128,9 @@ function easel_post_class($classes = '') {
 	return $classes;
 }
 
-add_filter('comment_class','easel_comment_class');
+add_filter('comment_class','comicpress_comment_class');
 
-function easel_comment_class($classes = '') {
+function comicpress_comment_class($classes = '') {
 	global $current_user;
 	/*
 	* http://microid.org

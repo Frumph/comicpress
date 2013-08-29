@@ -22,22 +22,22 @@
 						<th colspan="4"><?php _e('Layout','comicpress'); ?></th>
 					</tr>
 				</thead>
-				<?php if (!isset($easel_options['layout']) || empty($easel_options['layout'])) $easel_options['layout'] = '3c'; ?>
+				<?php if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout'])) $comicpress_options['layout'] = '3c'; ?>
 				<tr class="alternate">
 					<th scope="row" style="width:250px"><label for="layout" style="text-align:left"><?php _e('Choose Your Website Layout','comicpress'); ?></label>
 						<select name="layout" id="layout" onchange="lshowimage(this,'easellayout')">
-							<option class="level-0" value="3c" <?php if ($easel_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Standard','comicpress'); ?></option>
-							<option class="level-0" value="3cl" <?php if ($easel_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Left','comicpress'); ?></option>
-							<option class="level-0" value="3cr" <?php if ($easel_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Right','comicpress'); ?></option>
-							<option class="level-0" value="2cl" <?php if ($easel_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Left (780px)','comicpress'); ?></option>
-							<option class="level-0" value="2cr" <?php if ($easel_options['layout'] == '2cr') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Right (780px)','comicpress'); ?></option>
-							<option class="level-0" value="2clw" <?php if ($easel_options['layout'] == '2clw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide, Sidebar on Left (980px)', 'comicpress'); ?></option>
-							<option class="level-0" value="2crw" <?php if ($easel_options['layout'] == '2crw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide - Sidebar on Right (980px)','comicpress'); ?></option>
+							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Standard','comicpress'); ?></option>
+							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Left','comicpress'); ?></option>
+							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Right','comicpress'); ?></option>
+							<option class="level-0" value="2cl" <?php if ($comicpress_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Left (780px)','comicpress'); ?></option>
+							<option class="level-0" value="2cr" <?php if ($comicpress_options['layout'] == '2cr') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Right (780px)','comicpress'); ?></option>
+							<option class="level-0" value="2clw" <?php if ($comicpress_options['layout'] == '2clw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide, Sidebar on Left (980px)', 'comicpress'); ?></option>
+							<option class="level-0" value="2crw" <?php if ($comicpress_options['layout'] == '2crw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide - Sidebar on Right (980px)','comicpress'); ?></option>
 						</select>
 						<br />
 					</th>
 					<td>
-						<img id="easellayout" src="<?php echo get_template_directory_uri(); ?>/images/options/<?php echo $easel_options['layout']; ?>.png" alt="Layout" />
+						<img id="easellayout" src="<?php echo get_template_directory_uri(); ?>/images/options/<?php echo $comicpress_options['layout']; ?>.png" alt="Layout" />
 					</td>
 					<td style="vertical-align:middle">
 					</td>
@@ -50,8 +50,8 @@
 		<div class="easel-options-save">
 			<div class="easel-major-publishing-actions">
 				<div class="easel-publishing-action">
-					<input name="easel_save_layout" type="submit" class="button-primary" value="Save Settings" />
-					<input type="hidden" name="action" value="easel_save_layout" />
+					<input name="comicpress_save_layout" type="submit" class="button-primary" value="Save Settings" />
+					<input type="hidden" name="action" value="comicpress_save_layout" />
 				</div>
 				<div class="clear"></div>
 			</div>

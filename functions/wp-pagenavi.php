@@ -26,12 +26,12 @@ Author URI: http://lesterchan.net
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
-if (easel_themeinfo('enable_numbered_pagination')) {
+if (comicpress_themeinfo('enable_numbered_pagination')) {
 	
 	### Function: Page Navigation: Boxed Style Paging
-	function easel_wp_pagenavi($before = '', $after = '') {
+	function comicpress_wp_pagenavi($before = '', $after = '') {
 		global $wpdb, $wp_query;
-		$pagenavi_options = easel_pagenavi_init();
+		$pagenavi_options = comicpress_pagenavi_init();
 		if (!is_single()) {
 			$request = $wp_query->request;
 			$posts_per_page = intval(get_query_var('posts_per_page'));
@@ -154,7 +154,7 @@ if (easel_themeinfo('enable_numbered_pagination')) {
 		}
 	}
 	
-	function easel_pagenavi_init() {
+	function comicpress_pagenavi_init() {
 		// Add Options
 		$pagenavi_options = array();
 		$pagenavi_options['pages_text'] = __('Page %CURRENT_PAGE% of %TOTAL_PAGES%','comicpress');

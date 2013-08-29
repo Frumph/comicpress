@@ -13,7 +13,7 @@
 			<tr class="alternate">
 				<th scope="row"><label for="enable_debug_footer_code"><?php _e('Enable the debug page load/memory usage at the bottom of each page?','comicpress'); ?></label></th>
 				<td>
-					<input id="enable_debug_footer_code" name="enable_debug_footer_code" type="checkbox" value="1" <?php checked(true, $easel_options['enable_debug_footer_code']); ?> />
+					<input id="enable_debug_footer_code" name="enable_debug_footer_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_debug_footer_code']); ?> />
 				</td>
 				<td>
 					<?php _e('If enabled will show information on how many queries, memory is used as well as how fast the page loads.','comicpress'); ?>
@@ -22,7 +22,7 @@
 			<tr>
 				<th scope="row"><label for="force_active_connection_close"><?php _e('Force MySQL to close the current active connection after page load?','comicpress'); ?></label></th>
 				<td>
-					<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $easel_options['force_active_connection_close']); ?> />		
+					<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $comicpress_options['force_active_connection_close']); ?> />		
 				</td>
 				<td>
 					<?php _e('This option forces mysql to close the connection after each page load - not recommended unless you are requested to enable it.','comicpress'); ?>
@@ -33,8 +33,8 @@
 		<div class="easel-options-save">
 			<div class="easel-major-publishing-actions">
 				<div class="easel-publishing-action">
-					<input name="easel_save_debug" type="submit" class="button-primary" value="Save Settings" />
-					<input type="hidden" name="action" value="easel_save_debug" />
+					<input name="comicpress_save_debug" type="submit" class="button-primary" value="Save Settings" />
+					<input type="hidden" name="action" value="comicpress_save_debug" />
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -49,12 +49,12 @@
 			</td>
 		<tr>
 			<td>
-			<strong>Site URL</strong>:(siteurl) <?php echo easel_themeinfo('siteurl'); ?><br />
-			<strong>Blog URL</strong>:(home) <?php echo easel_themeinfo('home'); ?><br />
+			<strong>Site URL</strong>:(siteurl) <?php echo comicpress_themeinfo('siteurl'); ?><br />
+			<strong>Blog URL</strong>:(home) <?php echo comicpress_themeinfo('home'); ?><br />
 			<br />
 <table class="widefat">
 <?php 
-$variable_dump = easel_themeinfo(); 
+$variable_dump = comicpress_themeinfo(); 
 if (is_array($variable_dump)) {
 	while (list($key, $value) = each($variable_dump)) { ?>
 	<tr>

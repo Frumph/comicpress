@@ -1,36 +1,36 @@
 <?php
 
-add_action('admin_menu', 'easel_options_setup');
+add_action('admin_menu', 'comicpress_options_setup');
 
-function easel_options_setup() {
+function comicpress_options_setup() {
 	$options_title = __('Options','comicpress');
 	$admin_title = __('Easel Options', 'comicpress');
-	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'easel-options', 'easel_admin_options');
-	add_action('admin_head-' . $pagehook, 'easel_admin_page_head');
-	add_action('admin_print_scripts-' . $pagehook, 'easel_admin_print_scripts');
-	add_action('admin_print_styles-' . $pagehook, 'easel_admin_print_styles');
+	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'easel-options', 'comicpress_admin_options');
+	add_action('admin_head-' . $pagehook, 'comicpress_admin_page_head');
+	add_action('admin_print_scripts-' . $pagehook, 'comicpress_admin_print_scripts');
+	add_action('admin_print_styles-' . $pagehook, 'comicpress_admin_print_styles');
 }
 
-function easel_admin_print_scripts() {
+function comicpress_admin_print_scripts() {
 	wp_enqueue_script('utils');
 	wp_enqueue_script('jquery');
 }
 
-function easel_admin_print_styles() {
+function comicpress_admin_print_styles() {
 	wp_admin_css('css/global');
 	wp_admin_css('css/colors');
 	wp_admin_css('css/ie');
-	wp_enqueue_style('easel-options-style', easel_themeinfo('themeurl') . '/options/options.css');
+	wp_enqueue_style('easel-options-style', comicpress_themeinfo('themeurl') . '/options/options.css');
 }
 
-function easel_admin_page_head() { ?>
+function comicpress_admin_page_head() { ?>
 	<!--[if lt ie 8]> <style> div.show { position: static; margin-top: 1px; } #eadmin div.off { height: 22px; } </style> <![endif]-->
 <?php }
 
 
-function easel_admin_options() { ?>
+function comicpress_admin_options() { ?>
 <div class="wrap">
-	<div id="eadmin-headericon" style="background: url('<?php echo easel_themeinfo('themeurl') ?>/images/easel_small.png') no-repeat;"></div>
+	<div id="eadmin-headericon" style="background: url('<?php echo comicpress_themeinfo('themeurl') ?>/images/comicpress_small.png') no-repeat;"></div>
 	<p class="alignleft">
 		<h2><?php _e('Easel Options','comicpress'); ?></h2>
 		<?php _e('Easel is a modular theme that has an abundant of hooks and actions placed in it for additional usability.  Ref: Comic Easel', 'comicpress'); ?><br />
@@ -41,57 +41,57 @@ function easel_admin_options() { ?>
 	$tab = '';
 	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
 
-	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'easel_reset') {
+	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
 		delete_option('easel-options');
-		global $easel_themeinfo; $easel_themeinfo = '';
+		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('Easel Settings RESET!','comicpress'); ?></strong></p></div>
 	<?php } 
-	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'easel_reset_customize') {
+	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset_customize') {
 		remove_theme_mod('easel-customize');
-		global $easel_themeinfo; $easel_themeinfo = '';
+		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('Easel Customizer Colors RESET!','comicpress'); ?></strong></p></div>
 	<?php }
-	if (empty($easel_options)) { 
-		easel_themeinfo('reset');
+	if (empty($comicpress_options)) { 
+		comicpress_themeinfo('reset');
 	}
-	$easel_options = get_option('easel-options');
+	$comicpress_options = get_option('easel-options');
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
-		if ($_REQUEST['action'] == 'easel_save_layout') {
+		if ($_REQUEST['action'] == 'comicpress_save_layout') {
 			foreach (array(
 				'layout',
 				'scheme'
 					) as $key) {
 							if (isset($_REQUEST[$key])) 
-								$easel_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
+								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			
 			foreach (array(
 				'disable_default_design'
 			) as $key) {
 				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-				$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 			
 			$tab = 'layout';
-			update_option('easel-options', $easel_options);
+			update_option('easel-options', $comicpress_options);
 		}
 		
-		if ($_REQUEST['action'] == 'easel_save_debug') {
+		if ($_REQUEST['action'] == 'comicpress_save_debug') {
 			foreach (array(
 				'enable_debug_footer_code',
 				'force_active_connection_close'
 			) as $key) {
 				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-				$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 			$tab = 'debug';
-			update_option('easel-options', $easel_options);
+			update_option('easel-options', $comicpress_options);
 		}
 		
-		if ($_REQUEST['action'] == 'easel_save_menubar') {
+		if ($_REQUEST['action'] == 'comicpress_save_menubar') {
 
 			foreach (array(
 			'disable_jquery_menu_code',
@@ -102,7 +102,7 @@ function easel_admin_options() { ?>
 			'enable_breadcrumbs'			
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-					$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 
 			foreach (array(
@@ -119,17 +119,17 @@ function easel_admin_options() { ?>
 				'menubar_social_email'
 						) as $key) {
 							if (isset($_REQUEST[$key]) && !empty($_REQUEST[$key])) {
-								$easel_options[$key] = esc_url($_REQUEST[$key]);
+								$comicpress_options[$key] = esc_url($_REQUEST[$key]);
 							} else {
 								// set to empty if it's not set
-								$easel_options[$key] = '';
+								$comicpress_options[$key] = '';
 							}
 			}
 			$tab = 'menubar';
-			update_option('easel-options', $easel_options);
+			update_option('easel-options', $comicpress_options);
 		}
 		
-		if ($_REQUEST['action'] == 'easel_save_general') {
+		if ($_REQUEST['action'] == 'comicpress_save_general') {
 
 			foreach (array(
 			'disable_scroll_to_top',
@@ -157,7 +157,7 @@ function easel_admin_options() { ?>
 			'disable_posted_at_time_in_posts'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-					$easel_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 
 			foreach (array(
@@ -171,18 +171,18 @@ function easel_admin_options() { ?>
 				'excerpt_or_content_in_archive'
 						) as $key) {
 							if (isset($_REQUEST[$key])) 
-								$easel_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
+								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'general';
-			update_option('easel-options', $easel_options);
+			update_option('easel-options', $comicpress_options);
 		}
 		if ($tab) { ?>
 			<div id="message" class="updated"><p><strong><?php _e('Easel Settings SAVED!','comicpress'); ?></strong></p></div>
 			<script>function hidemessage() { document.getElementById('message').style.display = 'none'; }</script>
 		<?php }
 	} 
-	$version = easel_themeinfo('version');
-	$easel_options = get_option('easel-options');
+	$version = comicpress_themeinfo('version');
+	$comicpress_options = get_option('easel-options');
 	?>
 	<div id="poststuff" class="metabox-holder">
 		<div id="eadmin">
@@ -203,7 +203,7 @@ function easel_admin_options() { ?>
 		</div>
 
 		<div id="easel-options-pages">
-		  <?php	foreach (glob(easel_themeinfo('themepath') . '/options/*.php') as $file) { include($file); } ?>
+		  <?php	foreach (glob(comicpress_themeinfo('themepath') . '/options/*.php') as $file) { include($file); } ?>
 		</div>
 	</div>
 	<script type="text/javascript">
@@ -231,7 +231,7 @@ function easel_admin_options() { ?>
 	</script>
 </div>
 	<div class="eadmin-footer">
-		<div id="easel-version-title"><a href="http://frumph.net/">Easel <?php echo easel_themeinfo('version'); ?></a></div>
+		<div id="easel-version-title"><a href="http://frumph.net/">Easel <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
 		<?php _e('Created, Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small><br />
 		<?php _e('If you like the Easel theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>
@@ -248,15 +248,15 @@ function easel_admin_options() { ?>
 				<td style="width:200px;">
 					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
 						<?php wp_nonce_field('update-options') ?>
-						<input name="easel_reset" type="submit" class="button" value="Reset All Settings" />
-						<input type="hidden" name="action" value="easel_reset" />
+						<input name="comicpress_reset" type="submit" class="button" value="Reset All Settings" />
+						<input type="hidden" name="action" value="comicpress_reset" />
 					</form>
 				</td>
 				<td style="width:200px;">
 					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
 						<?php wp_nonce_field('update-options') ?>
-						<input name="easel_reset_customize" type="submit" class="button" value="Reset Customizer Colors" />
-						<input type="hidden" name="action" value="easel_reset_customize" />
+						<input name="comicpress_reset_customize" type="submit" class="button" value="Reset Customizer Colors" />
+						<input type="hidden" name="action" value="comicpress_reset_customize" />
 					</form>
 				</td>
 			</tr>

@@ -9,7 +9,7 @@ if (have_posts()) :
 	<div class="searchresults"><?php printf(_n("%d result.", "%d results.", $count,'comicpress'),$count); ?></div>
 	<div class="clear"></div>
 <?php 
-	if (easel_themeinfo('display_archive_as_links')) { ?>
+	if (comicpress_themeinfo('display_archive_as_links')) { ?>
 	<div <?php post_class(); ?>>
 		<div class="post-head"></div>
 		<div class="entry">
@@ -28,7 +28,7 @@ if (have_posts()) :
 		endwhile;
 	} ?>
 	<div class="clear"></div>
-	<?php easel_pagination();
+	<?php comicpress_pagination();
 	else : ?>
 		<div class="post post-search type-page">
 			<div class="post-head"></div>

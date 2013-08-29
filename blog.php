@@ -15,7 +15,7 @@ if ($blogpage->have_posts()) {
 		$withcomment = 0;
 		get_template_part('content', get_post_format());
 	endwhile;
-	easel_pagination();
+	comicpress_pagination();
 }
 
 get_footer();

@@ -12,9 +12,9 @@ function opengraph_make_thumbnail_for_youtube() {
 	}
 }
 
-add_action('wp_head', 'easel_facebook_thumbnail');
+add_action('wp_head', 'comicpress_facebook_thumbnail');
 
-function easel_facebook_thumbnail() {
+function comicpress_facebook_thumbnail() {
 	global $post;
 	if (!empty($post) && $post->post_type == 'post') {
 		$post_image_id = get_post_thumbnail_id($post->ID);
@@ -26,8 +26,8 @@ function easel_facebook_thumbnail() {
 	}	
 }
 
-if (!function_exists('easel_add_facebook_meta')) {
-	function easel_add_facebook_meta() {
+if (!function_exists('comicpress_add_facebook_meta')) {
+	function comicpress_add_facebook_meta() {
 		global $post;
 		if (is_404() || empty($post)) return;
 		if (!is_front_page() && !is_home()) {
@@ -51,11 +51,11 @@ if (!function_exists('easel_add_facebook_meta')) {
 }
 
 
-if (easel_themeinfo('facebook_meta'))
-	add_action('wp_head', 'easel_add_facebook_meta');
+if (comicpress_themeinfo('facebook_meta'))
+	add_action('wp_head', 'comicpress_add_facebook_meta');
 
-if (!function_exists('easel_display_facebook_like')) {
-	function easel_display_facebook_like($content) {
+if (!function_exists('comicpress_display_facebook_like')) {
+	function comicpress_display_facebook_like($content) {
 		global $post, $wp_query;
 		if (!is_page() && (get_post_format() !== 'aside')) {
 			$content .= '<div class="facebook-like"><fb:like layout="standard" show_faces="true" href="'.get_permalink().'"></fb:like></div>';
@@ -64,7 +64,7 @@ if (!function_exists('easel_display_facebook_like')) {
 	}
 }
 
-if (easel_themeinfo('facebook_like_blog_post')) 
-	add_action('the_content', 'easel_display_facebook_like');
+if (comicpress_themeinfo('facebook_like_blog_post')) 
+	add_action('the_content', 'comicpress_display_facebook_like');
 
 ?>

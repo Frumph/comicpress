@@ -711,7 +711,7 @@ textarea#comment {
 }
 
 #comment, #author, #email, #url, .comment-textarea, 
-.easel_control_panel_widget #user_login, .easel_control_panel_widget #user_pass {
+.comicpress_control_panel_widget #user_login, .comicpress_control_panel_widget #user_pass {
 	padding: 2px;
 	color: #000;
 	font-family: 'Verdana' , sans-serif;
@@ -726,7 +726,7 @@ textarea#comment {
 
 #comment-textarea:focus, #comment:hover, #author:hover, #email:hover, 
 #url:hover, #comment:focus, #author:focus, #email:focus, #url:focus,
-.easel_control_panel_widget #user_login:focus, .easel_control_panel_widget #user_pass:focus {
+.comicpress_control_panel_widget #user_login:focus, .comicpress_control_panel_widget #user_pass:focus {
 	background: #fff;
 }
 
@@ -1321,7 +1321,7 @@ span.author-archive-date {
 
 /* comment form */
 
-#comment, #author, #email, #url, .s-search, .easel_control_panel_widget input {
+#comment, #author, #email, #url, .s-search, .comicpress_control_panel_widget input {
 	padding: 2px;
 	color: #000;
 	font-family: 'Verdana' , sans-serif;
@@ -1335,8 +1335,8 @@ span.author-archive-date {
 }
 
 #comment:focus, #comment:hover, #author:hover, #email:hover, #url:hover, #author:focus, #email:focus, #url:focus,
-.easel_control_panel_widget #sname:focus, .easel_control_panel_widget #sname:hover,
-.easel_control_panel_widget #spassword:focus, .easel_control_panel_widget #spassword:hover, .s-search:focus {
+.comicpress_control_panel_widget #sname:focus, .comicpress_control_panel_widget #sname:hover,
+.comicpress_control_panel_widget #spassword:focus, .comicpress_control_panel_widget #spassword:hover, .s-search:focus {
 	background: #fff;
 }
 
@@ -1345,11 +1345,11 @@ span.author-archive-date {
 	margin-left: 2px;
 }
 
-.easel_control_panel_widget #user_login, .easel_control_panel_widget #user_pass {
+.comicpress_control_panel_widget #user_login, .comicpress_control_panel_widget #user_pass {
 	width: 160px;
 }
 
-#submit, .searchform button, #comic button, .easel_control_panel_widget .button-primary {
+#submit, .searchform button, #comic button, .comicpress_control_panel_widget .button-primary {
 	background: #ccc;
 	color: #000;
 	-moz-border-radius: 6px;
@@ -1364,7 +1364,7 @@ span.author-archive-date {
         );
 }
 
-.ceo_comic_archive_dropdown_widget select, .easel_archive_dropdown_widget select, .comic-nav-container select {
+.ceo_comic_archive_dropdown_widget select, .comicpress_archive_dropdown_widget select, .comic-nav-container select {
 	display: block;
 	margin: 0 auto;
 	width: 180px;
@@ -1385,7 +1385,7 @@ span.author-archive-date {
         );
 }
 
-.ceo_comic_archive_dropdown_widget option, .easel_archive_dropdown_widget option, .comic-nav-container option {
+.ceo_comic_archive_dropdown_widget option, .comicpress_archive_dropdown_widget option, .comic-nav-container option {
 	background: #ddd;
 	color: #000;
 }

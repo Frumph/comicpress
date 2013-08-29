@@ -5,9 +5,9 @@
  * 
  */
 
-// add_filter( 'pre_get_posts' , 'easel_include_custom_post_types_in_rss' );
+// add_filter( 'pre_get_posts' , 'comicpress_include_custom_post_types_in_rss' );
 
-function easel_include_custom_post_types_in_rss( $query ) {
+function comicpress_include_custom_post_types_in_rss( $query ) {
 	if ($query->is_feed && !isset($query->post_type) && empty($query->post_type)) {
 		$args = array(
 				'public' => true,

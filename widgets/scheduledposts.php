@@ -7,9 +7,9 @@ Author URI: http://frumph.net/
 Version: 1.1
 */
 
-class easel_scheduled_posts_widget extends WP_Widget {
+class comicpress_scheduled_posts_widget extends WP_Widget {
 	
-	function easel_scheduled_posts_widget($skip_widget_init = false) {
+	function comicpress_scheduled_posts_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a list of posts that are scheduled to be published.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Scheduled Posts','comicpress'), $widget_ops);
@@ -50,6 +50,6 @@ class easel_scheduled_posts_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('easel_scheduled_posts_widget');
+register_widget('comicpress_scheduled_posts_widget');
 
 ?>

@@ -1,9 +1,9 @@
-<?php easel_display_post_thumbnail(); ?>
+<?php comicpress_display_post_thumbnail(); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
 		<div class="post-info">
 			<?php 
-				easel_display_post_title();
+				comicpress_display_post_title();
 			?>
 			<div class="post-text">
 			<?php 
@@ -13,7 +13,7 @@
 			<div class="clear"></div>
 		</div>
 		<div class="entry">
-			<?php easel_display_the_content(); ?>
+			<?php comicpress_display_the_content(); ?>
 			<div class="clear"></div>
 		</div>
 		<div class="clear"></div>

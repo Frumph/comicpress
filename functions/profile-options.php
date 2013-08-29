@@ -9,14 +9,14 @@
  * 
  */
 
-function easel_remove_unwanted_contactmethods( $contactmethods ) {
+function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
 	unset($contactmethods['aim']);
 	unset($contactmethods['jabber']);
 	unset($contactmethods['yim']);
 	return $contactmethods;
 }
 
-// add_filter('user_contactmethods','easel_remove_unwanted_contactmethods',10,1);
+// add_filter('user_contactmethods','comicpress_remove_unwanted_contactmethods',10,1);
 
 
 function add_new_contactmethods($methods){

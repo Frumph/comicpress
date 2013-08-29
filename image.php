@@ -2,7 +2,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post() ?>
 	<div <?php post_class(); ?>>
-		<?php easel_display_post_thumbnail(); ?>
+		<?php comicpress_display_post_thumbnail(); ?>
 		<div class="post-head"></div>
 		<div class="post-content">
 			<div class="imagenav-wrap">

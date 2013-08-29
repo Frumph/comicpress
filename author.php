@@ -15,7 +15,7 @@ get_header();
 			<div class="post-content">
 				<div class="entry">
 					<div class="userpage-avatar">
-						<?php echo str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($curauth->user_email, 64, easel_random_default_avatar($curauth->user_email), esc_attr($curauth->display_name, 1))); ?>
+						<?php echo str_replace('photo', 'photo instant nocorner itxtalt', get_avatar($curauth->user_email, 64, comicpress_random_default_avatar($curauth->user_email), esc_attr($curauth->display_name, 1))); ?>
 					</div>
 					<div class="userpage-info">
 						<div class="userpage-bio">

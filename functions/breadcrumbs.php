@@ -1,7 +1,7 @@
 <?php
 // http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
 
-function easel_breadcrumbs() {
+function comicpress_breadcrumbs() {
 	
 	$delimiter = __('&raquo;','comicpress');
 	$home = __('Home','comicpress'); // text for the 'Home' link

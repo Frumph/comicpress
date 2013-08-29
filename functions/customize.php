@@ -1,20 +1,20 @@
 <?php
 
-if (!function_exists('easel_sandbox_body_class')) {
-	add_action('customize_register', 'easel_customize_register');
-	add_action('customize_preview_init', 'easel_customize_preview_js');
-	add_action('wp_head', 'easel_customize_wp_head');
-	add_filter('body_class', 'easel_customize_body_class');
+if (!function_exists('comicpress_sandbox_body_class')) {
+	add_action('customize_register', 'comicpress_customize_register');
+	add_action('customize_preview_init', 'comicpress_customize_preview_js');
+	add_action('wp_head', 'comicpress_customize_wp_head');
+	add_filter('body_class', 'comicpress_customize_body_class');
 }
 
-function easel_customize_body_class($classes = array()){
+function comicpress_customize_body_class($classes = array()){
 	$classes[] = 'scheme-'.get_theme_mod('easel-customize-select-scheme', 'none');
 	if (get_theme_mod('easel-customize-checkbox-rounded', false)) $classes[] = 'rounded-posts';
 	if (function_exists('ceo_pluginfo') && get_theme_mod('easel-customize-comic-in-column', false)) $classes[] = 'cnc';
 	return $classes;
 }
 
-function easel_customize_register( $wp_customize ) {
+function comicpress_customize_register( $wp_customize ) {
 	$wp_customize->remove_section('colors');
 	$wp_customize->remove_section('title_tagline');
 	$wp_customize->add_section('easel-scheme-options' , array('title' => __('Options','comicpress'), 'priority' => 10));	
@@ -125,11 +125,11 @@ function easel_customize_register( $wp_customize ) {
 	}
 }
 
-function easel_customize_preview_js() {
+function comicpress_customize_preview_js() {
 	//	wp_enqueue_script( 'easel-boxed-customizer', get_stylesheet_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 
-function easel_customize_wp_head() {
+function comicpress_customize_wp_head() {
 	$important = '';
 	$settings_array = array(
 			// background colors

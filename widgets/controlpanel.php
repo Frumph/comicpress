@@ -6,16 +6,16 @@ Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
 Version: 1.04
 */
-class easel_control_panel_widget extends WP_Widget {
+class comicpress_control_panel_widget extends WP_Widget {
 
-	function easel_control_panel_widget($skip_widget_init = false) {
+	function comicpress_control_panel_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Control Panel','comicpress'), $widget_ops);
 		}
 	}
 	
-	function easel_show_control_panel() { 
+	function comicpress_show_control_panel() { 
 		global $user_login;
 		if (!is_user_logged_in()) { ?>
 			<?php 
@@ -50,7 +50,7 @@ class easel_control_panel_widget extends WP_Widget {
 		echo $before_widget;
 		$title = empty($instance['title']) ? __('Control Panel','comicpress') : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-		$this->easel_show_control_panel();
+		$this->comicpress_show_control_panel();
 		echo $after_widget;
 		UnProtect();
 	}
@@ -69,6 +69,6 @@ class easel_control_panel_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('easel_control_panel_widget');
+register_widget('comicpress_control_panel_widget');
 
 ?>

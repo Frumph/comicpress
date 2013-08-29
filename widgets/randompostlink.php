@@ -13,10 +13,10 @@ necessary.
 */
 
 if ( isset( $_GET['randompost'] ) )
-	add_action( 'template_redirect', 'easel_random_post' );
+	add_action( 'template_redirect', 'comicpress_random_post' );
 
 //Generate a random post page - to use simply create a URL link to "/?randompost"
-function easel_random_post() {
+function comicpress_random_post() {
 	$randomPostQuery = new WP_Query(); $randomPostQuery->query('showposts=1&orderby=rand');
 	$random_post_id = '';
 	if ($randomPostQuery->have_posts()) {
@@ -27,9 +27,9 @@ function easel_random_post() {
 	exit;
 }
 	
-class easel_random_post_link_widget extends WP_Widget {
+class comicpress_random_post_link_widget extends WP_Widget {
 
-	function easel_random_post_link_widget($skip_widget_init = false) {
+	function comicpress_random_post_link_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Displays a link to click to trigger a random blog post.','comicpress') );
 			$this->WP_Widget(__CLASS__, __('Random Post Link','comicpress'), $widget_ops);
@@ -62,6 +62,6 @@ class easel_random_post_link_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('easel_random_post_link_widget');
+register_widget('comicpress_random_post_link_widget');
 
 ?>
