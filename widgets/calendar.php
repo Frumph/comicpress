@@ -245,7 +245,7 @@ class comicpress_calendar_widget extends WP_Widget {
 	function comicpress_calendar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)','comicpress') );
-			$this->WP_Widget(__CLASS__, __('Easel Calendar','comicpress'), $widget_ops);
+			$this->WP_Widget(__CLASS__, __('ComicPress Calendar','comicpress'), $widget_ops);
 		}
 	}
 

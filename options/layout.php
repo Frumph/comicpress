@@ -25,7 +25,7 @@
 				<?php if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout'])) $comicpress_options['layout'] = '3c'; ?>
 				<tr class="alternate">
 					<th scope="row" style="width:250px"><label for="layout" style="text-align:left"><?php _e('Choose Your Website Layout','comicpress'); ?></label>
-						<select name="layout" id="layout" onchange="lshowimage(this,'easellayout')">
+						<select name="layout" id="layout" onchange="lshowimage(this,'thelayout')">
 							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Standard','comicpress'); ?></option>
 							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Left','comicpress'); ?></option>
 							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Right','comicpress'); ?></option>
@@ -37,7 +37,7 @@
 						<br />
 					</th>
 					<td>
-						<img id="easellayout" src="<?php echo get_template_directory_uri(); ?>/images/options/<?php echo $comicpress_options['layout']; ?>.png" alt="Layout" />
+						<img id="thelayout" src="<?php echo get_template_directory_uri(); ?>/images/options/<?php echo $comicpress_options['layout']; ?>.png" alt="Layout" />
 					</td>
 					<td style="vertical-align:middle">
 					</td>

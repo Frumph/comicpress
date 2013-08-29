@@ -4,7 +4,7 @@ add_action('admin_menu', 'comicpress_options_setup');
 
 function comicpress_options_setup() {
 	$options_title = __('Options','comicpress');
-	$admin_title = __('Easel Options', 'comicpress');
+	$admin_title = __('ComicPress Options', 'comicpress');
 	$pagehook = add_theme_page($admin_title, $admin_title, 'edit_theme_options', 'comicpress-options', 'comicpress_admin_options');
 	add_action('admin_head-' . $pagehook, 'comicpress_admin_page_head');
 	add_action('admin_print_scripts-' . $pagehook, 'comicpress_admin_print_scripts');
@@ -32,9 +32,9 @@ function comicpress_admin_options() { ?>
 <div class="wrap">
 	<div id="eadmin-headericon" style="background: url('<?php echo comicpress_themeinfo('themeurl') ?>/images/comicpress_small.png') no-repeat;"></div>
 	<p class="alignleft">
-		<h2><?php _e('Easel Options','comicpress'); ?></h2>
-		<?php _e('Easel is a modular theme that has an abundant of hooks and actions placed in it for additional usability.  Ref: Comic Easel', 'comicpress'); ?><br />
-		<?php _e('While Easel is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize it\'s functionality.','comicpress'); ?><br />
+		<h2><?php _e('ComicPress Options','comicpress'); ?></h2>
+		<?php _e('ComicPress is a modular theme that has an abundant of hooks and actions placed in it for additional usability.  Ref: Comic Easel', 'comicpress'); ?><br />
+		<?php _e('While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize it\'s functionality.','comicpress'); ?><br />
 	</p>
 	<div class="clear"></div>
 	<?php
@@ -45,13 +45,13 @@ function comicpress_admin_options() { ?>
 		delete_option('comicpress-options');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
-		<div id="message" class="updated"><p><strong><?php _e('Easel Settings RESET!','comicpress'); ?></strong></p></div>
+		<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings RESET!','comicpress'); ?></strong></p></div>
 	<?php } 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset_customize') {
 		remove_theme_mod('comicpress-customize');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
-		<div id="message" class="updated"><p><strong><?php _e('Easel Customizer Colors RESET!','comicpress'); ?></strong></p></div>
+		<div id="message" class="updated"><p><strong><?php _e('ComicPress Customizer Colors RESET!','comicpress'); ?></strong></p></div>
 	<?php }
 	if (empty($comicpress_options)) { 
 		comicpress_themeinfo('reset');
@@ -177,7 +177,7 @@ function comicpress_admin_options() { ?>
 			update_option('comicpress-options', $comicpress_options);
 		}
 		if ($tab) { ?>
-			<div id="message" class="updated"><p><strong><?php _e('Easel Settings SAVED!','comicpress'); ?></strong></p></div>
+			<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings SAVED!','comicpress'); ?></strong></p></div>
 			<script>function hidemessage() { document.getElementById('message').style.display = 'none'; }</script>
 		<?php }
 	} 
@@ -231,10 +231,10 @@ function comicpress_admin_options() { ?>
 	</script>
 </div>
 	<div class="eadmin-footer">
-		<div id="comicpress-version-title"><a href="http://frumph.net/">Easel <?php echo comicpress_themeinfo('version'); ?></a></div>
+		<div id="comicpress-version-title"><a href="http://frumph.net/">ComicPress <?php echo comicpress_themeinfo('version'); ?></a></div>
 		<br />
-		<?php _e('Created, Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small><br />
-		<?php _e('If you like the Easel theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>
+		<?php _e('Developed and maintained by','comicpress'); ?> <a href="http://frumph.net/">Philip M. Hofer</a> <small>(<a href="http://frumph.net/">Frumph</a>)</small>, <?php _e('Originally created by','comicpress'); ?> <a href="http://mindfaucet.com/">Tyler Martin</a><br />
+		<?php _e('If you like the ComicPress theme, please donate.  It will help in developing new features and versions.','comicpress'); ?>
 		<table style="margin:0 auto;">
 			<tr>
 				<td style="width:200px;">

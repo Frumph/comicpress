@@ -34,7 +34,7 @@ foreach (glob(comicpress_themeinfo('themepath')  . '/widgets/*.php') as $widgefi
 	@require_once($widgefile);
 }
 
-// Dashboard Menu Easel Options
+// Dashboard Menu Options
 if (is_admin()) {
 	@require_once(comicpress_themeinfo('themepath') . '/options.php');
 }

@@ -46,7 +46,7 @@ class comicpress_menubar_widget extends WP_Widget {
 	function comicpress_menubar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
 			$widget_ops = array('classname' => __CLASS__, 'description' => __('Displays a menubar.','comicpress') );
-			$this->WP_Widget(__CLASS__, __('Easel Menubar','comicpress'), $widget_ops);
+			$this->WP_Widget(__CLASS__, __('ComicPress Menubar','comicpress'), $widget_ops);
 		}
 	}
 	

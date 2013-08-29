@@ -1,5 +1,5 @@
 <?php
-// page options - extra page options for easel, shown in a meta box in the page editor
+// page options - extra page options, shown in a meta box in the page editor
 
 function comicpress_page_editor_options($post) { 
 ?>
@@ -20,7 +20,7 @@ function comicpress_page_editor_options($post) {
 add_action('add_meta_boxes', 'comicpress_add_page_editor_meta_box');
 
 function comicpress_add_page_editor_meta_box() {
-	add_meta_box('comicpress-page-options', __('Easel Page Options', 'comicpress'), 'comicpress_page_editor_options', 'page', 'side', 'high');
+	add_meta_box('comicpress-page-options', __('Page Options', 'comicpress'), 'comicpress_page_editor_options', 'page', 'side', 'high');
 }
 
 function comicpress_save_page_editor_options($post_id) {

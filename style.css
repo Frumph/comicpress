@@ -1,7 +1,7 @@
 /*
 Theme Name: ComicPress
 Contributors: Frumph
-Theme URI: http://frumph.net/easel
+Theme URI: http://frumph.net/comicpress
 Description: New Description Needed - Pre-Release
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
@@ -1552,7 +1552,7 @@ span.author-archive-date {
 	padding: 3px 0 3px 20px;
 }
 
-/* comic easel mini navigation overrides */
+/*CE mini navigation overrides */
 
 .mininav-prev a, .mininav-next a {
     color: #fff;

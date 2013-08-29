@@ -68,7 +68,7 @@ function comicpress_customize_register( $wp_customize ) {
 			array('slug' => 'footer_copyright_acolor', 'label' => '.footer-text a', 'section' => 'comicpress-link-colors'),
 			array('slug' => 'footer_copyright_hcolor', 'label' => '.footer-text a:hover', 'section' => 'comicpress-link-colors'),
 			);
-	// Additions for Comic Easel
+	// Additions for CE
 	if (function_exists('ceo_pluginfo')) {
 		$css_array[] = array('slug' => 'comic_wrap_background', 'label' => '#comic-wrap', 'section' => 'colors');
 		$css_array[] = array('slug' => 'comic_wrap_textcolor', 'label' => '#comic-wrap', 'section' => 'comicpress-text-colors');

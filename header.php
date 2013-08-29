@@ -5,7 +5,7 @@
 	<title><?php wp_title(); ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<meta name="Easel" content="<?php echo comicpress_themeinfo('version'); ?>" />
+	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
 <?php wp_head(); ?>
 </head>
 

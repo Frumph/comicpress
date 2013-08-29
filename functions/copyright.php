@@ -5,7 +5,7 @@ if (!function_exists('comicpress_copyright_text')) {
 		$output = "<p class=\"copyright-info\">\r\n";
 		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
-		$output .= __('Powered by','comicpress') . " <a href=\"http://wordpress.org/\">WordPress</a> " . __('with','comicpress'). " <a href=\"http://frumph.net\">Easel</a>\r\n";
+		$output .= __('Powered by','comicpress') . " <a href=\"http://wordpress.org/\">WordPress</a> " . __('with','comicpress'). " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span> ";
