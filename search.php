@@ -5,8 +5,8 @@ $count = 'No';
 if (have_posts()) :
 	$count = $wp_query->found_posts;
 ?>
-	<h2 class="page-title"><?php _e('Search for &lsquo;','easel'); the_search_query(); _e('&rsquo;','easel'); ?></h2>
-	<div class="searchresults"><?php printf(_n("%d result.", "%d results.", $count,'easel'),$count); ?></div>
+	<h2 class="page-title"><?php _e('Search for &lsquo;','comicpress'); the_search_query(); _e('&rsquo;','comicpress'); ?></h2>
+	<div class="searchresults"><?php printf(_n("%d result.", "%d results.", $count,'comicpress'),$count); ?></div>
 	<div class="clear"></div>
 <?php 
 	if (easel_themeinfo('display_archive_as_links')) { ?>
@@ -15,7 +15,7 @@ if (have_posts()) :
 		<div class="entry">
 		<table class="archive-table">
 			<?php while (have_posts()) : the_post(); ?>
-			<tr><td class="archive-date"><?php the_time('M d, Y') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','easel'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
+			<tr><td class="archive-date"><?php the_time('M d, Y') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','comicpress'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
 			<?php endwhile; ?>
 		</table>
 		</div>
@@ -34,8 +34,8 @@ if (have_posts()) :
 			<div class="post-head"></div>
 			<div class="post-content">
 				<div class="entry">
-					<h3><?php _e('No results found.','easel'); ?></h3>
-					<p><?php _e('Try another search?','easel'); ?></p>
+					<h3><?php _e('No results found.','comicpress'); ?></h3>
+					<p><?php _e('Try another search?','comicpress'); ?></p>
 					<p><?php get_search_form(); ?></p>
 				</div>
 			</div>

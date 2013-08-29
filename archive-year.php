@@ -35,12 +35,12 @@ if (empty($archive_year)) $archive_year = date('Y');
 			Protect();
 			$posts = &query_posts($args);
 			while (have_posts()) : the_post() ?>
-				<tr class="archive-tr"><td class="archive-date"><?php the_time('M j') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','easel'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
+				<tr class="archive-tr"><td class="archive-date"><?php the_time('M j') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','comicpress'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
 			<?php endwhile;
 			 UnProtect(); ?>
 		</table>
 		<div class="clear"></div>
-		<?php edit_post_link(__('Edit this page.','easel'), '', ''); ?>
+		<?php edit_post_link(__('Edit this page.','comicpress'), '', ''); ?>
 	</div>
 	<div class="post-foot"></div>
 </div>

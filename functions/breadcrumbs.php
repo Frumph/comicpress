@@ -3,8 +3,8 @@
 
 function easel_breadcrumbs() {
 	
-	$delimiter = __('&raquo;','easel');
-	$home = __('Home','easel'); // text for the 'Home' link
+	$delimiter = __('&raquo;','comicpress');
+	$home = __('Home','comicpress'); // text for the 'Home' link
 	$before = '<span class="current">'; // tag before the current crumb
 	$after = '</span>'; // tag after the current crumb
 	
@@ -23,7 +23,7 @@ function easel_breadcrumbs() {
 			$thisCat = get_category($thisCat);
 			$parentCat = get_category($thisCat->parent);
 			if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-			echo $before . __('Archive by category','easel').' "' . single_cat_title('', false) . '"' . $after;
+			echo $before . __('Archive by category','comicpress').' "' . single_cat_title('', false) . '"' . $after;
 			
 		} elseif ( is_day() ) {
 			echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
@@ -53,7 +53,7 @@ function easel_breadcrumbs() {
 			$post_type = get_post_type_object(get_post_type());
 			if (!empty($post)) {
 				echo $before . $post_type->labels->singular_name . $after;
-			} else echo $before . __('No Results', 'easel') . $after;
+			} else echo $before . __('No Results', 'comicpress') . $after;
 			
 		} elseif ( is_attachment() ) {
 			$parent = get_post($post->post_parent);
@@ -80,23 +80,23 @@ function easel_breadcrumbs() {
 			echo $before . get_the_title() . $after;
 			
 		} elseif ( is_search() ) {
-			echo $before . __('Search results for','easel').' "' . get_search_query() . '"' . $after;
+			echo $before . __('Search results for','comicpress').' "' . get_search_query() . '"' . $after;
 			
 		} elseif ( is_tag() ) {
-			echo $before . __('Posts tagged','easel').' "' . single_tag_title('', false) . '"' . $after;
+			echo $before . __('Posts tagged','comicpress').' "' . single_tag_title('', false) . '"' . $after;
 			
 		} elseif ( is_author() ) {
 			global $author;
 			$userdata = get_userdata($author);
-			echo $before . __('Articles posted by','easel').' ' . $userdata->display_name . $after;
+			echo $before . __('Articles posted by','comicpress').' ' . $userdata->display_name . $after;
 			
 		} elseif ( is_404() ) {
-			echo $before . __('Error 404','easel') . $after;
+			echo $before . __('Error 404','comicpress') . $after;
 		}
 		
 		if ( get_query_var('paged') ) {
 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-			echo __('Page','easel') . ' ' . get_query_var('paged');
+			echo __('Page','comicpress') . ' ' . get_query_var('paged');
 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 		}
 		

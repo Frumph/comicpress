@@ -20,7 +20,7 @@ function easel_page_editor_options($post) {
 add_action('add_meta_boxes', 'easel_add_page_editor_meta_box');
 
 function easel_add_page_editor_meta_box() {
-	add_meta_box('easel-page-options', __('Easel Page Options', 'easel'), 'easel_page_editor_options', 'page', 'side', 'high');
+	add_meta_box('easel-page-options', __('Easel Page Options', 'comicpress'), 'easel_page_editor_options', 'page', 'side', 'high');
 }
 
 function easel_save_page_editor_options($post_id) {

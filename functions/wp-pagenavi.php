@@ -157,15 +157,15 @@ if (easel_themeinfo('enable_numbered_pagination')) {
 	function easel_pagenavi_init() {
 		// Add Options
 		$pagenavi_options = array();
-		$pagenavi_options['pages_text'] = __('Page %CURRENT_PAGE% of %TOTAL_PAGES%','easel');
+		$pagenavi_options['pages_text'] = __('Page %CURRENT_PAGE% of %TOTAL_PAGES%','comicpress');
 		$pagenavi_options['current_text'] = '%PAGE_NUMBER%';
 		$pagenavi_options['page_text'] = '%PAGE_NUMBER%';
-		$pagenavi_options['first_text'] = __('&laquo; First','easel');
-		$pagenavi_options['last_text'] = __('Last &raquo;','easel');
-		$pagenavi_options['next_text'] = __('&raquo;','easel');
-		$pagenavi_options['prev_text'] = __('&laquo;','easel');
-		$pagenavi_options['dotright_text'] = __('...','easel');
-		$pagenavi_options['dotleft_text'] = __('...','easel');
+		$pagenavi_options['first_text'] = __('&laquo; First','comicpress');
+		$pagenavi_options['last_text'] = __('Last &raquo;','comicpress');
+		$pagenavi_options['next_text'] = __('&raquo;','comicpress');
+		$pagenavi_options['prev_text'] = __('&laquo;','comicpress');
+		$pagenavi_options['dotright_text'] = __('...','comicpress');
+		$pagenavi_options['dotleft_text'] = __('...','comicpress');
 		$pagenavi_options['style'] = 1;
 		$pagenavi_options['num_pages'] = 5;
 		$pagenavi_options['always_show'] = 0;

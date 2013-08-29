@@ -38,7 +38,7 @@ if (!is_home() && !is_archive() && !is_search()) { easel_display_post_thumbnail(
 			?>
 			<div class="clear"></div>
 		</div>
-		<?php edit_post_link(__('Edit this post.','easel'), '', ''); ?>
+		<?php edit_post_link(__('Edit this post.','comicpress'), '', ''); ?>
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>

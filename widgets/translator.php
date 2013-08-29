@@ -13,8 +13,8 @@ class easel_google_translate_widget extends WP_Widget {
 
 	function easel_google_translate_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __('Translate your site with Google.','easel') );
-			$this->WP_Widget(__CLASS__, __('Google Translator','easel'), $widget_ops);
+			$widget_ops = array('classname' => __CLASS__, 'description' => __('Translate your site with Google.','comicpress') );
+			$this->WP_Widget(__CLASS__, __('Google Translator','comicpress'), $widget_ops);
 		}
 	}
 	
@@ -41,7 +41,7 @@ class easel_google_translate_widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
 		$title = strip_tags($instance['title']);
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','easel'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 		<?php
 	}
 }

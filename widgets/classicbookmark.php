@@ -37,7 +37,7 @@ global $post, $wp_query; ?>
 						ct = imgClearOn;
 					}
 					document.write('<div id="bmh" style="width: 173px; margin: 15px 0 0 0; padding: 5px; position: absolute; color: #eee; font-size: 11px; background-color:#222; border: 1px solid #ccc; visibility: hidden;"><strong>BOOKMARK<\/strong><br />Click "Tag Page" to bookmark a page. When you return to the site, click "Goto Tag" to continue where you left off.<\/div>');
-					document.write('<a href="#" onClick="bmhome();return false;"><img src="'+imgTag+'" alt="<?php __('Tag This Page','easel'); ?>" border="0"><\/a>');
+					document.write('<a href="#" onClick="bmhome();return false;"><img src="'+imgTag+'" alt="<?php __('Tag This Page','comicpress'); ?>" border="0"><\/a>');
 					document.write('<a href="#" onClick="gto();return false;"><img src="'+gt+'" alt="Goto Tag" border="0" id="gtc"><\/a>');
 					document.write('<a href="#" onClick="bmc();return false;"><img src="'+ct+'" alt="Clear Tag" border="0" id="rmc"><\/a>');
 					document.write('<a href="#" onMouseOver="document.getElementById(\'bmh\').style.visibility=\'visible\';" onMouseOut="document.getElementById(\'bmh\').style.visibility=\'hidden\';" onClick="return false;"><img src="'+imgInfo+'" alt="" border="0" \/><\/a>');
@@ -109,8 +109,8 @@ global $post, $wp_query; ?>
 class widget_easel_classic_bookmark extends WP_Widget {
 	
 	function widget_easel_classic_bookmark() {
-		$widget_ops = array('classname' => __CLASS__, 'description' => __('Creates a set of buttons that let the user return to the page they tagged.','easel') );
-		$this->WP_Widget(__CLASS__, __('Classic Bookmark','easel'), $widget_ops);
+		$widget_ops = array('classname' => __CLASS__, 'description' => __('Creates a set of buttons that let the user return to the page they tagged.','comicpress') );
+		$this->WP_Widget(__CLASS__, __('Classic Bookmark','comicpress'), $widget_ops);
 	}
 	
 	function widget($args, $instance) {
@@ -133,7 +133,7 @@ class widget_easel_classic_bookmark extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','easel'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 		<?php
 	}
 }

@@ -94,8 +94,8 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 			LIMIT 1");
 
 	/* translators: Calendar caption: 1: month name, 2: 4-digit year */
-	$calendar_caption = _x('%1$s %2$s', 'calendar caption', 'easel');
-	$calendar_output = '<table id="wp-calendar" summary="' . esc_attr__('Calendar', 'easel') . '">
+	$calendar_caption = _x('%1$s %2$s', 'calendar caption', 'comicpress');
+	$calendar_output = '<table id="wp-calendar" summary="' . esc_attr__('Calendar', 'comicpress') . '">
 	<caption>' . sprintf($calendar_caption, $wp_locale->get_month($thismonth), date('Y', $unixmonth)) . '</caption>
 	<thead>
 	<tr>';
@@ -120,7 +120,7 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 	<tr>';
 
 	if ( $previous ) {
-		$calendar_output .= "\n\t\t".'<td colspan="3" id="prev"><a href="' . get_month_link($previous->year, $previous->month) . '" title="' . sprintf(__('View posts for %1$s %2$s', 'easel'), $wp_locale->get_month($previous->month), date('Y', mktime(0, 0 , 0, $previous->month, 1, $previous->year))) . '">&laquo; ' . $wp_locale->get_month_abbrev($wp_locale->get_month($previous->month)) . '</a></td>';
+		$calendar_output .= "\n\t\t".'<td colspan="3" id="prev"><a href="' . get_month_link($previous->year, $previous->month) . '" title="' . sprintf(__('View posts for %1$s %2$s', 'comicpress'), $wp_locale->get_month($previous->month), date('Y', mktime(0, 0 , 0, $previous->month, 1, $previous->year))) . '">&laquo; ' . $wp_locale->get_month_abbrev($wp_locale->get_month($previous->month)) . '</a></td>';
 	} else {
 		$calendar_output .= "\n\t\t".'<td colspan="3" id="prev" class="pad">&nbsp;</td>';
 	}
@@ -128,7 +128,7 @@ function easel_get_calendar($initial = true, $echo = true, $taxonomy = 'post') {
 	$calendar_output .= "\n\t\t".'<td class="pad">&nbsp;</td>';
 
 	if ( $next ) {
-		$calendar_output .= "\n\t\t".'<td colspan="3" id="next"><a href="' . get_month_link($next->year, $next->month) . '" title="' . esc_attr( sprintf(__('View posts for %1$s %2$s', 'easel'), $wp_locale->get_month($next->month), date('Y', mktime(0, 0 , 0, $next->month, 1, $next->year))) ) . '">' . $wp_locale->get_month_abbrev($wp_locale->get_month($next->month)) . ' &raquo;</a></td>';
+		$calendar_output .= "\n\t\t".'<td colspan="3" id="next"><a href="' . get_month_link($next->year, $next->month) . '" title="' . esc_attr( sprintf(__('View posts for %1$s %2$s', 'comicpress'), $wp_locale->get_month($next->month), date('Y', mktime(0, 0 , 0, $next->month, 1, $next->year))) ) . '">' . $wp_locale->get_month_abbrev($wp_locale->get_month($next->month)) . ' &raquo;</a></td>';
 	} else {
 		$calendar_output .= "\n\t\t".'<td colspan="3" id="next" class="pad">&nbsp;</td>';
 	}
@@ -244,8 +244,8 @@ class easel_calendar_widget extends WP_Widget {
 	
 	function easel_calendar_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)','easel') );
-			$this->WP_Widget(__CLASS__, __('Easel Calendar','easel'), $widget_ops);
+			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)','comicpress') );
+			$this->WP_Widget(__CLASS__, __('Easel Calendar','comicpress'), $widget_ops);
 		}
 	}
 
@@ -267,12 +267,12 @@ class easel_calendar_widget extends WP_Widget {
 					<?php } ?>
 						<div class="wp-calendar-download-links">
 							<?php if (!empty($small) || !empty($medium) || !empty($large)) { ?>
-								<?php _e('DOWNLOAD','easel'); ?>
+								<?php _e('DOWNLOAD','comicpress'); ?>
 								<?php
 								  foreach (array(
-								    'small' => array(__('Download Small', 'easel'), __('S', 'easel')),
-								    'medium' => array(__('Download Medium', 'easel'), __('M', 'easel')),
-								  	'large' => array(__('Download Large', 'easel'), __('L', 'easel'))
+								    'small' => array(__('Download Small', 'comicpress'), __('S', 'comicpress')),
+								    'medium' => array(__('Download Medium', 'comicpress'), __('M', 'comicpress')),
+								  	'large' => array(__('Download Large', 'comicpress'), __('L', 'comicpress'))
 								 	) as $field => $text) {
 								 		if (!empty(${$field})) {
 								 			?><a href="<?php echo esc_attr(${$field}); ?>" title="<?php echo esc_attr($text[0]); ?>"><?php echo esc_html($text[1]); ?></a><?php
@@ -311,11 +311,11 @@ class easel_calendar_widget extends WP_Widget {
 		$link = $instance['link'];
 
 		foreach (array(
-			'thumbnail' => __('Thumbnail URL (178px by 130px):','easel'),
-			'link' => array('label' => __('Add link on thumbnails:','easel'), 'after' => '<hr />'),
-			'small' => __('Wallpaper URL (Small):','easel'),
-			'medium' => __('Wallpaper URL (Medium):','easel'),
-			'large' => __('Wallpaper URL (Large):','easel'),
+			'thumbnail' => __('Thumbnail URL (178px by 130px):','comicpress'),
+			'link' => array('label' => __('Add link on thumbnails:','comicpress'), 'after' => '<hr />'),
+			'small' => __('Wallpaper URL (Small):','comicpress'),
+			'medium' => __('Wallpaper URL (Medium):','comicpress'),
+			'large' => __('Wallpaper URL (Large):','comicpress'),
 		) as $field => $label) {
 			unset($after);
 			if (is_array($label)) { extract($label); }

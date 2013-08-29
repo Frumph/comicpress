@@ -8,7 +8,7 @@ get_header();
 		$curauth = get_userdata(get_query_var('author'));
 	}
 		if (empty($curauth)) { ?>
-			<h2><?php _e('No such author.','easel'); ?></h2>
+			<h2><?php _e('No such author.','comicpress'); ?></h2>
 		<?php } else { ?>
 		<div <?php post_class(); ?>>
 			<div class="post-head"></div>
@@ -30,15 +30,15 @@ get_header();
 			$authorname = $curauth->user_login;
 	?>
 							<h2><?php echo $authorname; ?></h2><br />
-							<?php _e('Registered on','easel'); ?> <?php echo date('l \\t\h\e jS \o\f M, Y',strtotime($curauth->user_registered)); ?><br />
+							<?php _e('Registered on','comicpress'); ?> <?php echo date('l \\t\h\e jS \o\f M, Y',strtotime($curauth->user_registered)); ?><br />
 							<br />
-							<?php if (!empty($curauth->user_url)) { ?><?php _e('Website:','easel'); ?> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->aim)) { ?><?php _e('AIM:','easel'); ?> <?php echo $curauth->aim; ?><br /><?php } ?>
-							<?php if (!empty($curauth->jabber)) { ?><?php _e('Jabber/Google Talk:','easel'); ?> <?php echo $curauth->jabber; ?><br /><?php } ?>
-							<?php if (!empty($curauth->yim)) { ?><?php _e('Yahoo IM:','easel'); ?> <?php echo $curauth->yim; ?><br /><?php } ?>
-							<?php if (!empty($curauth->twitter)) { ?><?php _e('Twitter:','easel'); ?> <a href="http://www.twitter.com/<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->facebook)) { ?><?php _e('Facebook:','easel'); ?> <a href="http://www.facebook.com/<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->msn)) { ?><?php _e('MSN:','easel'); ?> <?php echo $curauth->msn; ?><br /><?php } ?>
+							<?php if (!empty($curauth->user_url)) { ?><?php _e('Website:','comicpress'); ?> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->aim)) { ?><?php _e('AIM:','comicpress'); ?> <?php echo $curauth->aim; ?><br /><?php } ?>
+							<?php if (!empty($curauth->jabber)) { ?><?php _e('Jabber/Google Talk:','comicpress'); ?> <?php echo $curauth->jabber; ?><br /><?php } ?>
+							<?php if (!empty($curauth->yim)) { ?><?php _e('Yahoo IM:','comicpress'); ?> <?php echo $curauth->yim; ?><br /><?php } ?>
+							<?php if (!empty($curauth->twitter)) { ?><?php _e('Twitter:','comicpress'); ?> <a href="http://www.twitter.com/<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->facebook)) { ?><?php _e('Facebook:','comicpress'); ?> <a href="http://www.facebook.com/<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->msn)) { ?><?php _e('MSN:','comicpress'); ?> <?php echo $curauth->msn; ?><br /><?php } ?>
 
 						</div>
 						<?php if (!empty($curauth->description)) { ?>
@@ -53,7 +53,7 @@ get_header();
 	if (have_posts()) {
 ?>
 					<div class="userpage-posts">
-						<h3><?php _e('Posts by','easel'); ?> <?php echo $authorname; ?> &not;</h3>
+						<h3><?php _e('Posts by','comicpress'); ?> <?php echo $authorname; ?> &not;</h3>
 						<ol>
 						<?php while (have_posts()) : the_post(); ?>
 							<li><span class="author-archive-date" align="right"><?php the_time('M j, Y') ?></span><span class="author-archive-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></span></li>		
