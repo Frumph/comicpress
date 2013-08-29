@@ -42,7 +42,7 @@ function comicpress_admin_options() { ?>
 	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
-		delete_option('comicpress-options');
+		delete_option('cp-options');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings RESET!','comicpress'); ?></strong></p></div>
@@ -56,7 +56,7 @@ function comicpress_admin_options() { ?>
 	if (empty($comicpress_options)) { 
 		comicpress_themeinfo('reset');
 	}
-	$comicpress_options = get_option('comicpress-options');
+	$comicpress_options = get_option('cp-options');
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
 		if ($_REQUEST['action'] == 'comicpress_save_layout') {
@@ -76,7 +76,7 @@ function comicpress_admin_options() { ?>
 			}
 			
 			$tab = 'layout';
-			update_option('comicpress-options', $comicpress_options);
+			update_option('cp-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_debug') {
@@ -88,7 +88,7 @@ function comicpress_admin_options() { ?>
 				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
 			}
 			$tab = 'debug';
-			update_option('comicpress-options', $comicpress_options);
+			update_option('cp-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_menubar') {
@@ -126,7 +126,7 @@ function comicpress_admin_options() { ?>
 							}
 			}
 			$tab = 'menubar';
-			update_option('comicpress-options', $comicpress_options);
+			update_option('cp-options', $comicpress_options);
 		}
 		
 		if ($_REQUEST['action'] == 'comicpress_save_general') {
@@ -174,7 +174,7 @@ function comicpress_admin_options() { ?>
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'general';
-			update_option('comicpress-options', $comicpress_options);
+			update_option('cp-options', $comicpress_options);
 		}
 		if ($tab) { ?>
 			<div id="message" class="updated"><p><strong><?php _e('ComicPress Settings SAVED!','comicpress'); ?></strong></p></div>
@@ -182,7 +182,7 @@ function comicpress_admin_options() { ?>
 		<?php }
 	} 
 	$version = comicpress_themeinfo('version');
-	$comicpress_options = get_option('comicpress-options');
+	$comicpress_options = get_option('cp-options');
 	?>
 	<div id="poststuff" class="metabox-holder">
 		<div id="eadmin">

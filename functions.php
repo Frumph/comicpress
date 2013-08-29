@@ -380,7 +380,7 @@ function comicpress_load_options() {
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
-		update_option('comicpress-options', $comicpress_options);
+		update_option('cp-options', $comicpress_options);
 	}
 	return $comicpress_options;
 }
