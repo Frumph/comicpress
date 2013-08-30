@@ -12,6 +12,7 @@
 		</div>
 			<h2><?php _e('Recommended Plugins','comicpress'); ?></h2>
 			<ol>
+				<li><a href="http://wordpress.org/extend/plugins/comic-easel/">Comic Easel</a></li>
 				<li><a href="http://wordpress.org/extend/plugins/vipers-video-quicktags/">Viper's Video Quicktags</a></li>
 				<li><a href="http://wordpress.org/extend/plugins/audio-player/">Audio Player</a></li>
 				<li><a href="http://wordpress.org/extend/plugins/comicpress-companion/">Theme Companion</a></li>

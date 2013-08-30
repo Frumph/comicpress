@@ -4,14 +4,14 @@ Widget Name: Menubar Widget (wordpress 3.0 required)
 Widget URI: http://frumph.net/
 Description: Display a calendar of this months posts.
 Author: Philip M. Hofer (Frumph)
-Version: 1.08
+Version: 1.09
 Author URI: http://frumph.net/
 
 */
 
 function comicpress_menubar() {
 	if (file_exists(comicpress_themeinfo('stylepath') . '/custom-menubar.php')) {
-		include(comicpress_themeinfo('stylepath') . '/custom-menubar.php');
+		get_template_part('custom-menubar');
 	} else { ?>
 		<div id="menubar-wrapper">
 			<div class="menu-container">
