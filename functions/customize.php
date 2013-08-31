@@ -1,11 +1,9 @@
 <?php
 
-if (!function_exists('comicpress_sandbox_body_class')) {
-	add_action('customize_register', 'comicpress_customize_register');
-	add_action('customize_preview_init', 'comicpress_customize_preview_js');
-	add_action('wp_head', 'comicpress_customize_wp_head');
-	add_filter('body_class', 'comicpress_customize_body_class');
-}
+add_action('customize_register', 'comicpress_customize_register');
+add_action('customize_preview_init', 'comicpress_customize_preview');
+add_action('wp_head', 'comicpress_customize_wp_head', 19);
+add_filter('body_class', 'comicpress_customize_body_class');
 
 function comicpress_customize_body_class($classes = array()){
 	$classes[] = 'scheme-'.get_theme_mod('comicpress-customize-select-scheme', 'none');
@@ -14,7 +12,15 @@ function comicpress_customize_body_class($classes = array()){
 	return $classes;
 }
 
+/*
+			<span class="customize-control-title" style="font-size: 14px; color: #21759B;"><?php echo esc_html( $this->label ); ?></span>
+			<?php if (isset( $this->description)) { ?>
+			<span class="customize-control-title" style="line-height: 16px; font-size: 11px; font-weight: 400;"><?php echo esc_html( $this->description); ?></span>
+*/
+
 function comicpress_customize_register( $wp_customize ) {
+	global $css_array;
+
 	$wp_customize->remove_section('colors');
 	$wp_customize->remove_section('title_tagline');
 	$wp_customize->add_section('comicpress-scheme-options' , array('title' => __('Options','comicpress'), 'priority' => 10));	
@@ -23,61 +29,62 @@ function comicpress_customize_register( $wp_customize ) {
 	$wp_customize->add_section('comicpress-text-colors' , array('title' => __('Text Colors','comicpress'), 'priority' => 30));	
 	$wp_customize->add_section('comicpress-link-colors' , array('title' => __('Link Colors','comicpress'), 'priority' => 40));
 	$wp_customize->add_section('comicpress-logo-options', array('title' => __('Logo','comicpress'), 'priority' => 50));
+	
 	$css_array = array(
 			// Background Colors	
-			array('slug' => 'page_background', 'label' => '#page', 'section' => 'colors'),
-			array('slug' => 'header_background', 'label' => '#header', 'section' => 'colors'),
-			array('slug' => 'menubar_background', 'label' => '#menubar-wrapper', 'section' => 'colors'),
-			array('slug' => 'menubar_submenu_background', 'label' => '.menu ul li ul li a', 'section' => 'colors'),
-			array('slug' => 'menubar_mouseover_background', 'label' => '.menu ul li a:hover', 'section' => 'colors'),
-			array('slug' => 'breadcrumb_background', 'label' => '#breadcrumb-wrapper', 'section' => 'colors'),
-			array('slug' => 'content_wrapper_background', 'label' => '#content-wrapper', 'section' => 'colors'),
-			array('slug' => 'subcontent_wrapper_background', 'label' => '#subcontent-wrapper', 'section' => 'colors'),
-			array('slug' => 'narrowcolumn_widecolumn_background', 'label' => '.narrowcolumn/.widecolumn', 'section' => 'colors'),
-			array('slug' => 'post_page_navigation_background', 'label' => '.uentry, #comment-wrapper, #wp-paginav', 'section' => 'colors'),
-			array('slug' => 'post_info_background', 'label' => '.post-info', 'section' => 'colors'),
-			array('slug' => 'comment_background', 'label' => '.comment, #comment-wrapper #wp-paginav', 'section' => 'colors'),
-			array('slug' => 'comment_meta_data_background', 'label' => '.comment-meta-data', 'section' => 'colors'),
-			array('slug' => 'bypostauthor_background', 'label' => '.bypostauthor', 'section' => 'colors'),
-			array('slug' => 'bypostauthor_meta_data_background', 'label' => '.bypostauthor .comment-meta-data', 'section' => 'colors'),
-			array('slug' => 'footer_background', 'label' => '#footer', 'section' => 'colors'),
+			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => 'Entire Content Area'),
+			array('slug' => 'header_background', 'description' => '#header', 'section' => 'colors', 'label' => 'Header'),
+			array('slug' => 'menubar_background', 'description' => '#menubar-wrapper', 'section' => 'colors', 'label' => 'Menubar'),
+			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => 'Menubar Dropdown'),
+			array('slug' => 'menubar_mouseover_background', 'description' => '.menu ul li a:hover', 'section' => 'colors', 'label' => 'Menubar When Mouseover'),
+			array('slug' => 'breadcrumb_background', 'description' => '#breadcrumb-wrapper', 'section' => 'colors', 'label' => 'Breadcrumbs'),
+			array('slug' => 'content_wrapper_background', 'description' => '#content-wrapper', 'section' => 'colors', 'label' => 'Content Area Below Menubar'),
+			array('slug' => 'subcontent_wrapper_background', 'description' => '#subcontent-wrapper', 'section' => 'colors', 'label' => 'Content Area Below Comic'),
+			array('slug' => 'narrowcolumn_widecolumn_background', 'description' => '#content-column', 'section' => 'colors', 'label' => 'Content Column'),
+			array('slug' => 'post_page_navigation_background', 'description' => '.uentry, #comment-wrapper, #wp-paginav', 'section' => 'colors', 'label' => 'Entire Post Area'),
+			array('slug' => 'post_info_background', 'description' => '.post-info', 'section' => 'colors', 'label' => 'Top Section of a Post'),
+			array('slug' => 'comment_background', 'description' => '.comment, #comment-wrapper #wp-paginav', 'section' => 'colors', 'label' => 'Comment Section'),
+			array('slug' => 'comment_meta_data_background', 'description' => '.comment-meta-data', 'section' => 'colors', 'label' => 'Comment Info. Line'),
+			array('slug' => 'bypostauthor_background', 'description' => '.bypostauthor', 'section' => 'colors', 'label' => 'Comments Made By Post Author'),
+			array('slug' => 'bypostauthor_meta_data_background', 'description' => '.bypostauthor .comment-meta-data', 'section' => 'colors', 'label' => 'Info. Line Of Post Author'),
+			array('slug' => 'footer_background', 'description' => '#footer', 'section' => 'colors', 'label' => 'Footer'),
 			// Text Colors 
-			array('slug' => 'content_text_color', 'label' => 'body', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'header_textcolor', 'label' => '#header', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'header_description_textcolor', 'label' => '.header-info .description', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'breadcrumb_textcolor', 'label' => '#breadcrumb-wrapper', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'lrsidebar_widgettitle_textcolor', 'label' => 'h2.widget-title', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'lrsidebar_textcolor', 'label' => '.sidebar', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'posttitle_textcolor', 'label' => 'h2.post-title', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'pagetitle_textcolor', 'label' => 'h2.page-title', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'postinfo_textcolor', 'label' => '.post-info', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'post_page_navigation_textcolor', 'label' => '.uentry, #comment-wrapper, #wp-paginav', 'section' => 'comicpress-text-colors'),
-			array('slug' => 'footer_copyright_textcolor', 'label' => '.footer-text', 'section' => 'comicpress-text-colors'),
+			array('slug' => 'content_text_color', 'description' => 'body', 'section' => 'comicpress-text-colors', 'label' => 'Sitewide Textcolor'),
+			array('slug' => 'header_textcolor', 'description' => '#header', 'section' => 'comicpress-text-colors', 'label' => ''),
+			array('slug' => 'header_description_textcolor', 'description' => '.header-info .description', 'section' => 'comicpress-text-colors', 'label' => 'Site Tagline'),
+			array('slug' => 'breadcrumb_textcolor', 'description' => '#breadcrumb-wrapper', 'section' => 'comicpress-text-colors', 'label' => ''),
+			array('slug' => 'lrsidebar_widgettitle_textcolor', 'description' => 'h2.widget-title', 'section' => 'comicpress-text-colors', 'label' => 'Widget Titles'),
+			array('slug' => 'lrsidebar_textcolor', 'description' => '.sidebar', 'section' => 'comicpress-text-colors', 'label' => 'Sidebar Textcolor'),
+			array('slug' => 'posttitle_textcolor', 'description' => 'h2.post-title', 'section' => 'comicpress-text-colors', 'label' => 'Non-Link Post Titles'),
+			array('slug' => 'pagetitle_textcolor', 'description' => 'h2.page-title', 'section' => 'comicpress-text-colors', 'label' => 'Page Titles'),
+			array('slug' => 'postinfo_textcolor', 'description' => '.post-info', 'section' => 'comicpress-text-colors', 'label' => ''),
+			array('slug' => 'post_page_navigation_textcolor', 'description' => '.uentry, #comment-wrapper, #wp-paginav', 'section' => 'comicpress-text-colors', 'label' => 'Post/Page Comments'),
+			array('slug' => 'footer_copyright_textcolor', 'description' => '.copyright-info', 'section' => 'comicpress-text-colors', 'label' => 'Copyright'),
 			// Link Colors
-			array('slug' => 'content_link_acolor', 'label' => 'body a:link', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'content_link_vcolor', 'label' => 'body a:visited', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'content_link_hcolor', 'label' => 'body a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'header_title_acolor', 'label' => '#header h1 a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'header_title_hcolor', 'label' => '#header h1 a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'menubar_top_acolor', 'label' => '.menu ul li a:link, .menu ul li a:visited, .mininav-prev a, .mininav-next a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'menubar_hcolor', 'label' => '.menu ul li a:hover, .menu ul li a.selected, .menu ul li ul li a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'menubar_sub_acolor', 'label' => '.menu ul li ul li a:link, .menu ul li ul li a:visited', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'breadcrumb_acolor', 'label' => '.breadcrumbs a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'breadcrumb_hcolor', 'label' => '.breadcrumbs a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'sidebar_acolor', 'label' => '.sidebar .widget a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'sidebar_hcolor', 'label' => '.sidebar .widget a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'postpagenav_acolor', 'label' => '.entry a, .blognav a, #paginav a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'postpagenav_hcolor', 'label' => '.entry a:hover, .blognav a:hover, #paginav a:hover', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'footer_copyright_acolor', 'label' => '.footer-text a', 'section' => 'comicpress-link-colors'),
-			array('slug' => 'footer_copyright_hcolor', 'label' => '.footer-text a:hover', 'section' => 'comicpress-link-colors'),
+			array('slug' => 'content_link_acolor', 'description' => 'body a:link', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'content_link_vcolor', 'description' => 'body a:visited', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'content_link_hcolor', 'description' => 'body a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'header_title_acolor', 'description' => '#header h1 a', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'header_title_hcolor', 'description' => '#header h1 a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'menubar_top_acolor', 'description' => '.menu ul li a:link, .menu ul li a:visited, .mininav-prev a, .mininav-next a', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'menubar_hcolor', 'description' => '.menu ul li a:hover, .menu ul li a.selected, .menu ul li ul li a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'menubar_sub_acolor', 'description' => '.menu ul li ul li a:link, .menu ul li ul li a:visited', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'breadcrumb_acolor', 'description' => '.breadcrumbs a', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'breadcrumb_hcolor', 'description' => '.breadcrumbs a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'sidebar_acolor', 'description' => '.sidebar .widget a', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'sidebar_hcolor', 'description' => '.sidebar .widget a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'postpagenav_acolor', 'description' => '.entry a, .blognav a, #paginav a', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'postpagenav_hcolor', 'description' => '.entry a:hover, .blognav a:hover, #paginav a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
+			array('slug' => 'footer_copyright_acolor', 'description' => '.copyright-info a', 'section' => 'comicpress-link-colors', 'label' => 'Copyright'),
+			array('slug' => 'footer_copyright_hcolor', 'description' => '.copyright-info a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
 			);
 	// Additions for CE
 	if (function_exists('ceo_pluginfo')) {
-		$css_array[] = array('slug' => 'comic_wrap_background', 'label' => '#comic-wrap', 'section' => 'colors');
-		$css_array[] = array('slug' => 'comic_wrap_textcolor', 'label' => '#comic-wrap', 'section' => 'comicpress-text-colors');
-		$css_array[] = array('slug' => 'comic_nav_background', 'label' => 'table#comic-nav-wrapper', 'section' => 'colors');
+		$css_array[] = array('slug' => 'comic_wrap_background', 'description' => '#comic-wrap', 'section' => 'colors', 'label' => 'Comic Area');
+		$css_array[] = array('slug' => 'comic_wrap_textcolor', 'description' => '#comic-wrap', 'section' => 'comicpress-text-colors', 'label' => '');
+		$css_array[] = array('slug' => 'comic_nav_background', 'description' => 'table#comic-nav-wrapper', 'section' => 'colors', 'label' => 'Default Comic Navigation');
 	}
-	$priority_value = 1;
+	$priority_value = 11;
 	foreach ($css_array as $setinfo) {
 		$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
 		$wp_customize->add_setting($setinfo_register_name, array('default' => ''));
@@ -85,7 +92,7 @@ function comicpress_customize_register( $wp_customize ) {
 				new WP_Customize_Color_Control(
 					$wp_customize,
 					$setinfo['slug'], 
-					array('label' => $setinfo['label'], 'section' => $setinfo['section'], 'settings' => $setinfo_register_name, 'priority' => $priority_value)
+					array('label' => $setinfo['description'], 'description' => $setinfo['label'], 'section' => $setinfo['section'], 'settings' => $setinfo_register_name, 'priority' => $priority_value)
 					)
 				);
 		$priority_value++;
@@ -115,7 +122,7 @@ function comicpress_customize_register( $wp_customize ) {
 				));
 				
 	$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => ''));
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo', 'themeslug' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'themeslug' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 
 	if (function_exists('ceo_pluginfo')) {
 		$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false));
@@ -126,13 +133,32 @@ function comicpress_customize_register( $wp_customize ) {
 					'type'     => 'checkbox'
 					));
 	}
+	foreach ($css_array as $setting) {
+		$wp_customize->get_setting($setting['slug'])->transport='postMessage';
+	}
 }
 
-function comicpress_customize_preview_js() {
-	//	wp_enqueue_script( 'comicpress-boxed-customizer', get_stylesheet_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
+function comicpress_customize_preview() {
+	global $settings_array;
+	if (!empty($settings_array)) {
+    ?>
+    <script type="text/javascript">
+    ( function( $ ){
+	<?php foreach ($settings_array as $setting) { ?>
+    wp.customize('<?php echo $setting['slug']; ?>',function( value ) {
+        value.bind(function(to) {
+            $('<?php echo $setting['element']; ?>').css('<?php echo $setting['style']; ?>', to ? to : '' );
+        });
+    });
+	<?php } ?>
+    } )( jQuery )
+    </script>
+    <?php
+	}
 }
 
 function comicpress_customize_wp_head() {
+	global $settings_array;
 	$important = '';
 	$settings_array = array(
 			// background colors
@@ -163,7 +189,7 @@ function comicpress_customize_wp_head() {
 			array('slug' => 'pagetitle_textcolor', 'element' => 'h2.page-title', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postinfo_textcolor', 'element' => '.post-info', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'post_page_navigation_textcolor', 'element' => '.uentry, #comment-wrapper, #wp-paginav', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'footer_copyright_textcolor', 'element' => '.footer-text', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_textcolor', 'element' => '.copyright-info', 'style' => 'color', 'default' => '',  'important' => false),
 			// link colors
 			array('slug' => 'content_link_acolor', 'element' => 'a:link, a:visited', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'content_link_vcolor', 'element' => 'a:visited', 'style' => 'color', 'default' => '',  'important' => false),
@@ -180,8 +206,8 @@ function comicpress_customize_wp_head() {
 			array('slug' => 'sidebar_hcolor', 'element' => '.sidebar .widget a:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postpagenav_acolor', 'element' => '.entry a, .blognav a, #paginav a', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postpagenav_hcolor', 'element' => '.entry a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'footer_copyright_acolor', 'element' => '.footer-text a', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'footer_copyright_hcolor', 'element' => '.footer-text a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_acolor', 'element' => '.copyright-info a', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_hcolor', 'element' => '.copyright-info a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			);
 	if (function_exists('ceo_pluginfo')) {
 		$settings_array[] = array('slug' => 'comic_wrap_background', 'element' => '#comic-wrap', 'style' => 'background-color', 'default' => '',  'important' => true);
@@ -190,13 +216,19 @@ function comicpress_customize_wp_head() {
 	}
 	$output = '';
 	$style_output = '';
+	$customize = get_theme_mod('comicpress-customize');
+
 	foreach ($settings_array as $setting) {
-		$customize = get_theme_mod('comicpress-customize');
-		if (empty($customize)) return;
-		if (!empty($customize) && isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
+		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
 		if (empty($content)) $content = $setting['default'];
 		$important = ($setting['important']) ? '!important' : '';
 		if (!empty($content)) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
+	}
+	if (isset($customize['logo']) && !empty($customize['logo'])) {
+		$style_output .= '.header-info { display: inline-block; float: left; padding: 0; }';
+		$style_output .= '.header-info h1 { margin: 0; padding: 0; background: url("'.$customize['logo'].'") top left no-repeat; background-size: contain; display: cover; }';
+		$style_output .= '.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}';
+		$style_output .= '.header-info .description { display: none!important; }';
 	}
 	if (!empty($style_output)) {
 		$output = '<style type="text/css">'."\r\n";
@@ -204,4 +236,5 @@ function comicpress_customize_wp_head() {
 		$output .= "\r\n</style>\r\n";
 		echo $output;
 	}
+	add_action('wp_footer', 'comicpress_customize_preview');
 }
