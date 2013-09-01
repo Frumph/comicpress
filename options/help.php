@@ -1,11 +1,13 @@
 <div id="comicpress-help">
 
 	<div class="comicpress-options">
+		<?php if (comicpress_themeinfo('first_run')) { ?>
 		<h1 class="options-about-title"><?php _e('Welcome to ComicPress 4.0!','comicpress'); ?></h1>
 		<div class="options-about-welcome">
 			<strong><?php _e('Thank you for using ComicPress!','comicpress'); ?></strong><br />
 			<?php _e('ComicPress 4.0 has more features, uses the Comic Easel plugin now and is more stable than ever to help you build an incredible WebComic website.','comicpress'); ?>
 		</div>
+		<?php } ?>
 		<div class="options-about-table">
 			<div class="options-about-migrate">
 				<h3><?php _e('Fresh installation of Comic Easel and ComicPress','comicpress'); ?></h3>
