@@ -122,7 +122,7 @@ function comicpress_customize_register( $wp_customize ) {
 				));
 				
 	$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => ''));
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'themeslug' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 
 	if (function_exists('ceo_pluginfo')) {
 		$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false));
