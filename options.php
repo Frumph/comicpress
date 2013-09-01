@@ -27,7 +27,6 @@ function comicpress_admin_page_head() { ?>
 	<!--[if lt ie 8]> <style> div.show { position: static; margin-top: 1px; } #eadmin div.off { height: 22px; } </style> <![endif]-->
 <?php }
 
-
 function comicpress_admin_options() { ?>
 <div class="wrap">
 	<div id="eadmin-headericon" style="background: url('<?php echo comicpress_themeinfo('themeurl') ?>/images/comicpress-rascal.png') no-repeat;"></div>
@@ -38,7 +37,7 @@ function comicpress_admin_options() { ?>
 	</p>
 	<div class="clear"></div>
 	<?php
-	$tab = '';
+	$tab = (comicpress_themeinfo('first_run')) ? $tab = 'help' : $tab = '';
 	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
@@ -191,7 +190,8 @@ function comicpress_admin_options() { ?>
 				'layout' => __('Layout', 'comicpress'),
 		  		'general' => __('General', 'comicpress'),
 				'menubar' => __('Menubar', 'comicpress'),
-				'debug' => __('Debug', 'comicpress') 
+				'debug' => __('Debug', 'comicpress'),
+				'help' => __('Help', 'comicpress')
 		  	);
 
 		  	if (empty($tab)) { $tab = array_shift(array_keys($tab_info)); }

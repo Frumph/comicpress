@@ -246,3 +246,58 @@ div.show .eadmin-footer img{
 	height: 180px;
 	width: 240px;
 }
+
+.options-about-title {
+	font-size: 48px;
+	text-align: center;
+	color: #21759B;
+	text-shadow: 1px 1px 1px #000;
+	-moz-text-shadow: 1px 1px 1px #000;
+	-khtml-text-shadow: 1px 1px 1px #000;
+	-webkit-text-shadow: 1px 1px 1px #000;
+/*	transform: skew(10deg,0deg); */
+/*	-ms-transform: skew(10deg,0deg); */ /* IE 9 */
+/*	-webkit-transform: skew(10deg,0deg); */ /* Safari and Chrome */ 
+}
+
+.options-about-welcome {
+	text-align: center;
+	width: 100%;
+}
+
+.options-about-table {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	padding: 3px;
+	margin-top: 20px;
+}
+
+.options-about-table h3 {
+	display: block;
+	border: solid 1px #ccc;
+	background: #efefef;
+	transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg); /* IE 9 */
+	-webkit-transform: rotate(-1deg); /* Safari and Chrome */
+}
+
+.options-about-migrate {
+	width: 50%;
+	display: table-cell;
+	height: auto;
+	margin-left: 20px;
+	margin-right: 10px;
+	border: solid 1px #eee;
+	padding: 10px;
+}
+
+.options-about-directions {
+	width: 50%;
+	display: table-cell;
+	height: auto;
+	margin-left: 10px;
+	margin-right: 20px;
+	border: solid 1px #eee;
+	padding: 10px;
+}
