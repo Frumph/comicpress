@@ -11,6 +11,7 @@
 				<h3><?php _e('Fresh installation of Comic Easel and ComicPress','comicpress'); ?></h3>
 				<br />
 				<strong><?php _e('There is a video at the bottom of this page to help guide you with installation and usage.','comicpress'); ?></strong><br />
+				<br />
 				<h3><?php _e('Migration Instructions','comicpress'); ?></h3>
 				<br />
 				<strong><?php _e('There are videos available at','comicpress'); ?> <a href="http://comiceasel.com/category/tutorials/video/" target="_blank">comiceasel.com</a> <?php _e('that show a migration.','comicpress'); ?></strong><br />
@@ -55,7 +56,7 @@
 					<li><?php _e('Each comic when added needs to be in a chapter, each chapter is considered an individual story. If you do not need chapters then create a chapter that is named something that encompasses all of of your comics.','comicpress'); ?></li>
 					<li><?php _e('You cannot use comic as a slug for anything','comicpress'); ?></li>
 					<li><?php _e('Slugs can not be strictly numerical, has to have some sort of alpha character in them.','comicpress'); ?></li>
-					<li><?php _e('In the wp-admin - Plugins section there is an area now for recommended plugins to use with ComicPress.','comicpress'); ?></li>
+					<li><?php _e('In the wp-admin - Themes section there is an area now for recommended plugins to use with ComicPress.','comicpress'); ?></li>
 					<li><?php _e('The configuration for comic options is in the wp-admin - Comics - Config are while the configuration for the theme is in wp-admin - Appearance - ComicPress Options','comicpress'); ?></li>
 				</ul>
 				<h3><?php _e('Reverting a Migration','comicpress'); ?></h3>
@@ -63,7 +64,7 @@
 				<strong><?php _e('If you accidently migrated blog categories.','comicpress'); ?></strong><br />
 				<ul>
 					<ol>
-						<li><?php _e('Install and activate the Convert Post Types plugin from wp-admin - plugins - recommended plugins.','comicpress'); ?></li>
+						<li><?php _e('Install and activate the Convert Post Types plugin from wp-admin - Themes - Recommended Plugins.','comicpress'); ?></li>
 						<li><?php _e('Select the comic post type in the Convert From.. dropdown and set the Convert To.. dropdown to post.','comicpress'); ?></li>
 						<li><?php _e('Click the [convert] button and it will set all of the things you migrated back to posts.','comicpress'); ?></li>
 						<li><?php _e('Go to the media library and delete all of the comic images that it already migrated.','comicpress'); ?></li>
@@ -77,9 +78,9 @@
 		</div>
 <?php
 // Set it so that this screen has been seen on activation.
-$comicpress_options = get_options('cp-options');
-$comicpress_options['first_run'] = true;
-update_options('cp-options', $comicpress_options);
+$comicpress_options = get_option('cp-options');
+$comicpress_options['first_run'] = false;
+update_option('cp-options', $comicpress_options);
 ?>
 	</div>	
 </div>

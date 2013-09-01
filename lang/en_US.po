@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-09-01 02:58:11+0000\n"
+"PO-Revision-Date: 2013-09-01 03:08:47+0000\n"
 "Last-Translator: frumph <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -892,14 +892,14 @@ msgstr[1] ""
 
 #: functions.php:522
 #: lib/class-tgm-plugin-activation.php:178
-#: lib/class-tgm-plugin-activation.php:490
+#: lib/class-tgm-plugin-activation.php:489
 #@ comicpress
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: functions.php:523
 #: lib/class-tgm-plugin-activation.php:179
-#: lib/class-tgm-plugin-activation.php:1846
+#: lib/class-tgm-plugin-activation.php:1845
 #@ comicpress
 msgid "Plugin activated successfully."
 msgstr ""
@@ -951,205 +951,205 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:517
-#: lib/class-tgm-plugin-activation.php:2058
+#: lib/class-tgm-plugin-activation.php:516
+#: lib/class-tgm-plugin-activation.php:2057
 #@ comicpress
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:545
+#: lib/class-tgm-plugin-activation.php:544
 #, php-format
 #@ comicpress
 msgid "The following plugin was activated successfully: %s."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:704
+#: lib/class-tgm-plugin-activation.php:703
 #@ comicpress
 msgid "Dismiss this notice"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1091
+#: lib/class-tgm-plugin-activation.php:1090
 #@ comicpress
 msgid "External Link"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1096
+#: lib/class-tgm-plugin-activation.php:1095
 #@ comicpress
 msgid "Private Repository"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1099
+#: lib/class-tgm-plugin-activation.php:1098
 #@ comicpress
 msgid "Pre-Packaged"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1103
+#: lib/class-tgm-plugin-activation.php:1102
 #@ comicpress
 msgid "WordPress Repository"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1106
+#: lib/class-tgm-plugin-activation.php:1105
 #@ comicpress
 msgid "Required"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1106
+#: lib/class-tgm-plugin-activation.php:1105
 #@ comicpress
 msgid "Recommended"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1109
+#: lib/class-tgm-plugin-activation.php:1108
 #@ comicpress
 msgid "Not Installed"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1111
+#: lib/class-tgm-plugin-activation.php:1110
 #@ comicpress
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1281
+#: lib/class-tgm-plugin-activation.php:1280
 #, php-format
 #@ comicpress
 msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1297
+#: lib/class-tgm-plugin-activation.php:1296
 #@ comicpress
 msgid "Plugin"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1298
+#: lib/class-tgm-plugin-activation.php:1297
 #@ comicpress
 msgid "Source"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1299
+#: lib/class-tgm-plugin-activation.php:1298
 #@ comicpress
 msgid "Type"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1300
+#: lib/class-tgm-plugin-activation.php:1299
 #@ comicpress
 msgid "Status"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1318
+#: lib/class-tgm-plugin-activation.php:1317
 #@ comicpress
 msgid "Install"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1319
+#: lib/class-tgm-plugin-activation.php:1318
 #@ comicpress
 msgid "Activate"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1544
+#: lib/class-tgm-plugin-activation.php:1543
 #@ comicpress
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/class-tgm-plugin-activation.php:1829
+#: lib/class-tgm-plugin-activation.php:1828
 #@ comicpress
 msgid "Install package not available."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1830
+#: lib/class-tgm-plugin-activation.php:1829
 #, php-format
 #@ comicpress
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1831
+#: lib/class-tgm-plugin-activation.php:1830
 #@ comicpress
 msgid "Unpacking the package&#8230;"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1832
+#: lib/class-tgm-plugin-activation.php:1831
 #@ comicpress
 msgid "Installing the plugin&#8230;"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1833
+#: lib/class-tgm-plugin-activation.php:1832
 #@ comicpress
 msgid "Plugin install failed."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1834
+#: lib/class-tgm-plugin-activation.php:1833
 #@ comicpress
 msgid "Plugin installed successfully."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1845
+#: lib/class-tgm-plugin-activation.php:1844
 #@ comicpress
 msgid "Plugin activation failed."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1955
+#: lib/class-tgm-plugin-activation.php:1954
 #@ comicpress
 msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1956
+#: lib/class-tgm-plugin-activation.php:1955
 #, php-format
 #@ comicpress
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1956
-#: lib/class-tgm-plugin-activation.php:1965
+#: lib/class-tgm-plugin-activation.php:1955
+#: lib/class-tgm-plugin-activation.php:1964
 #@ comicpress
 msgid "Show Details"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1956
-#: lib/class-tgm-plugin-activation.php:1965
+#: lib/class-tgm-plugin-activation.php:1955
+#: lib/class-tgm-plugin-activation.php:1964
 #@ comicpress
 msgid "Hide Details"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1957
+#: lib/class-tgm-plugin-activation.php:1956
 #@ comicpress
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1958
+#: lib/class-tgm-plugin-activation.php:1957
 #, php-format
 #@ comicpress
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1962
+#: lib/class-tgm-plugin-activation.php:1961
 #@ comicpress
 msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1963
+#: lib/class-tgm-plugin-activation.php:1962
 #, php-format
 #@ comicpress
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1964
+#: lib/class-tgm-plugin-activation.php:1963
 #, php-format
 #@ comicpress
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1965
+#: lib/class-tgm-plugin-activation.php:1964
 #, php-format
 #@ comicpress
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1966
+#: lib/class-tgm-plugin-activation.php:1965
 #@ comicpress
 msgid "All installations have been completed."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:1967
+#: lib/class-tgm-plugin-activation.php:1966
 #, php-format
 #@ comicpress
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
@@ -1517,212 +1517,202 @@ msgstr ""
 msgid "There is a video at the bottom of this page to help guide you with installation and usage."
 msgstr ""
 
-#: options/help.php:14
+#: options/help.php:15
 #@ comicpress
 msgid "Migration Instructions"
 msgstr ""
 
-#: options/help.php:16
+#: options/help.php:17
 #@ comicpress
 msgid "There are videos available at"
 msgstr ""
 
-#: options/help.php:16
+#: options/help.php:17
 #@ comicpress
 msgid "that show a migration."
 msgstr ""
 
-#: options/help.php:19
+#: options/help.php:20
 #@ comicpress
 msgid "Deactivate ComicPress manager if you are using it."
 msgstr ""
 
-#: options/help.php:20
+#: options/help.php:21
 #@ comicpress
 msgid "If you are using a child theme, activate the main ComicPress theme while migrating."
 msgstr ""
 
-#: options/help.php:21
+#: options/help.php:22
 #@ comicpress
 msgid "Install and activate both the Comic Easel and CP2CE (ComicPress to Comic Easel) plugins."
 msgstr ""
 
-#: options/help.php:22
+#: options/help.php:23
 #@ comicpress
 msgid "Make sure your comics folder is named comics and is directly off the root of your WordPress installation, that is where the CP2CE plugin is looking for the comics."
 msgstr ""
 
-#: options/help.php:23
+#: options/help.php:24
 #@ comicpress
 msgid "Go through all of your comics in wp-admin - posts - all posts.  Make sure all of your comics are set into only one category.   They can be different categories for each group of comics, but only one category set."
 msgstr ""
 
-#: options/help.php:24
+#: options/help.php:25
 #@ comicpress
 msgid "Go to wp-admin - tools - export and make a backup of your current sites data.  (best if you use phpmyadmin from your hostings cpanel and do an .sql export of your database)"
 msgstr ""
 
-#: options/help.php:25
+#: options/help.php:26
 #@ comicpress
 msgid "Make sure Comic Easel is activated and go to wp-admin - Tools - CP2CE Migrator"
 msgstr ""
 
-#: options/help.php:26
+#: options/help.php:27
 #@ comicpress
 msgid "Select one category at a time in the drop down."
 msgstr ""
 
-#: options/help.php:27
+#: options/help.php:28
 #@ comicpress
 msgid "Choose how many comics to migrate at once. The first time you use it, select 1 comic to migrate. Click the [Migrate!] button and it will refresh the page and give you information on the migration."
 msgstr ""
 
-#: options/help.php:28
+#: options/help.php:29
 #@ comicpress
 msgid "If it looks like it could not find the comic to attach to the post, follow the Reverting a Migration steps and fix your comics location to the path the CP2CE plugin is looking for the comics in, then start over in the CP2CE."
 msgstr ""
 
-#: options/help.php:29
+#: options/help.php:30
 #@ comicpress
 msgid "If it looks successful and found the comic to attach to the post, start increasing the amount of comics to migrate at one time. 1-25 at a time for shared hostings.  25-50 for VPS hosting, 50-100 for dedicated servers with high memory availability."
 msgstr ""
 
-#: options/help.php:30
+#: options/help.php:31
 #@ comicpress
 msgid "Once you are done with the migration, go to wp-admin - Comics -> Comics and check all of your comic posts, note if they have comics attached to them."
 msgstr ""
 
-#: options/help.php:31
+#: options/help.php:32
 #@ comicpress
 msgid "Go to wp-admin - posts - categories and delete the OLD comic categories that you used to have.  Check the column to see if there are any comics you still need to migrate."
 msgstr ""
 
-#: options/help.php:32
+#: options/help.php:33
 #@ comicpress
 msgid "If all looks good, you have successfully migrated to using Comic Easel, congratulations!"
 msgstr ""
 
-#: options/help.php:35
+#: options/help.php:36
 #@ comicpress
 msgid "Converting Child Theme Instructions"
 msgstr ""
 
-#: options/help.php:37
+#: options/help.php:38
 #@ comicpress
 msgid "Now that you have successfully migrated to Comic Easel, it is time to fix your child theme."
 msgstr ""
 
-#: options/help.php:39
+#: options/help.php:40
 #@ comicpress
 msgid "Important things to note:"
 msgstr ""
 
-#: options/help.php:41
+#: options/help.php:42
 #@ comicpress
 msgid "Any theme files, child-functions.php and functions.php all of those .php files will no longer be able to be used.  While this ComicPress is similar it is not the same. Remove them from your child theme - make backups of them to your local drive via FTP so you can reference them later.  The only file you should have left is the style.css in the child theme directory."
 msgstr ""
 
-#: options/help.php:42
+#: options/help.php:43
 #@ comicpress
 msgid "Some elements have changed (only a select few).  For example, .narrowcolumn width is now controlled by #content-column,  .uentry is used in place of .type-post, .type-comic, .type-page and handles all of those."
 msgstr ""
 
-#: options/help.php:43
+#: options/help.php:44
 #@ comicpress
 msgid "Use a browser based developement tool like firebug for Firefox or Chromes developement tools to point and click and find the CSS element you need."
 msgstr ""
 
-#: options/help.php:44
+#: options/help.php:45
 #@ comicpress
 msgid "If in doubt, contact me - Frumph and I will help you."
 msgstr ""
 
-#: options/help.php:48
+#: options/help.php:49
 #@ comicpress
 msgid "Yada Yada Notes"
 msgstr ""
 
-#: options/help.php:50
+#: options/help.php:51
 #@ comicpress
 msgid "ComicPress no longer supports ComicPress Manager, you can deactivate the plugin and delete it."
 msgstr ""
 
-#: options/help.php:51
+#: options/help.php:52
 #@ comicpress
 msgid "Frumph can help you migrate your ComicPress old version to this new version if you are stuck."
 msgstr ""
 
-#: options/help.php:52
+#: options/help.php:53
 #@ comicpress
 msgid "Your widgets are NOT lost, they are in the [inactive] section of the appearance - widgets area, just put them back into the sidebars you want them in."
 msgstr ""
 
-#: options/help.php:53
+#: options/help.php:54
 #@ comicpress
 msgid "It is still a good idea to use a child theme if you do customizations beyond what the customizer has."
 msgstr ""
 
-#: options/help.php:54
+#: options/help.php:55
 #@ comicpress
 msgid "You can download a blank child theme on frumph.net."
 msgstr ""
 
-#: options/help.php:55
+#: options/help.php:56
 #@ comicpress
 msgid "Each comic when added needs to be in a chapter, each chapter is considered an individual story. If you do not need chapters then create a chapter that is named something that encompasses all of of your comics."
 msgstr ""
 
-#: options/help.php:56
+#: options/help.php:57
 #@ comicpress
 msgid "You cannot use comic as a slug for anything"
 msgstr ""
 
-#: options/help.php:57
+#: options/help.php:58
 #@ comicpress
 msgid "Slugs can not be strictly numerical, has to have some sort of alpha character in them."
 msgstr ""
 
-#: options/help.php:58
-#@ comicpress
-msgid "In the wp-admin - Plugins section there is an area now for recommended plugins to use with ComicPress."
-msgstr ""
-
-#: options/help.php:59
+#: options/help.php:60
 #@ comicpress
 msgid "The configuration for comic options is in the wp-admin - Comics - Config are while the configuration for the theme is in wp-admin - Appearance - ComicPress Options"
 msgstr ""
 
-#: options/help.php:61
+#: options/help.php:62
 #@ comicpress
 msgid "Reverting a Migration"
 msgstr ""
 
-#: options/help.php:63
+#: options/help.php:64
 #@ comicpress
 msgid "If you accidently migrated blog categories."
 msgstr ""
 
-#: options/help.php:66
-#@ comicpress
-msgid "Install and activate the Convert Post Types plugin from wp-admin - plugins - recommended plugins."
-msgstr ""
-
-#: options/help.php:67
+#: options/help.php:68
 #@ comicpress
 msgid "Select the comic post type in the Convert From.. dropdown and set the Convert To.. dropdown to post."
 msgstr ""
 
-#: options/help.php:68
+#: options/help.php:69
 #@ comicpress
 msgid "Click the [convert] button and it will set all of the things you migrated back to posts."
 msgstr ""
 
-#: options/help.php:69
+#: options/help.php:70
 #@ comicpress
 msgid "Go to the media library and delete all of the comic images that it already migrated."
 msgstr ""
 
-#: options/help.php:70
+#: options/help.php:71
 #@ comicpress
 msgid "Start over with your migration."
 msgstr ""
@@ -2166,5 +2156,15 @@ msgstr ""
 #: widgets/translator.php:17
 #@ comicpress
 msgid "Google Translator"
+msgstr ""
+
+#: options/help.php:59
+#@ comicpress
+msgid "In the wp-admin - Themes section there is an area now for recommended plugins to use with ComicPress."
+msgstr ""
+
+#: options/help.php:67
+#@ comicpress
+msgid "Install and activate the Convert Post Types plugin from wp-admin - Themes - Recommended Plugins."
 msgstr ""
 
