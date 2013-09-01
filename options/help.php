@@ -23,7 +23,7 @@
 						<li><?php _e('If you are using a child theme, activate the main ComicPress theme while migrating.','comicpress'); ?></li>
 						<li><?php _e('Install and activate both the Comic Easel and CP2CE (ComicPress to Comic Easel) plugins.','comicpress'); ?></li>
 						<li><?php _e('Make sure your comics folder is named comics and is directly off the root of your WordPress installation, that is where the CP2CE plugin is looking for the comics.','comicpress'); ?></li>
-						<li><?php _e('Go through all of your comics in wp-admin - posts - all posts.  Make sure all of your comics are set into only one category.   They can be different categories for each group of comics, but only one category set.','comicpress'); ?></li>
+						<li><strong><?php _e('Go through all of your comics in wp-admin - posts - all posts.  Make sure all of your comics are set into only one category.   They can be different categories for each group of comics, but only one category set.','comicpress'); ?></strong></li>
 						<li><?php _e('Go to wp-admin - tools - export and make a backup of your current sites data.  (best if you use phpmyadmin from your hostings cpanel and do an .sql export of your database)','comicpress'); ?></li>
 						<li><?php _e('Make sure Comic Easel is activated and go to wp-admin - Tools - CP2CE Migrator','comicpress'); ?></li>
 						<li><?php _e('Select one category at a time in the drop down.','comicpress'); ?></li>
@@ -50,6 +50,7 @@
 			<div class="options-about-directions">
 				<h3><?php _e('Yada Yada Notes','comicpress'); ?></h3>
 				<ul>
+					<li><strong><?php _e('Do NOT migrate unless you are confident on its success, read EVERYTHING.','comicpress'); ?></strong></li>
 					<li><?php _e('ComicPress no longer supports ComicPress Manager, you can deactivate the plugin and delete it.','comicpress'); ?></li>
 					<li><?php _e('Frumph can help you migrate your ComicPress old version to this new version if you are stuck.','comicpress'); ?></li>
 					<li><?php _e('Your widgets are NOT lost, they are in the [inactive] section of the appearance - widgets area, just put them back into the sidebars you want them in.','comicpress'); ?></li>
@@ -60,6 +61,7 @@
 					<li><?php _e('Slugs can not be strictly numerical, has to have some sort of alpha character in them.','comicpress'); ?></li>
 					<li><?php _e('In the wp-admin - Themes section there is an area now for recommended plugins to use with ComicPress.','comicpress'); ?></li>
 					<li><?php _e('The configuration for comic options is in the wp-admin - Comics - Config are while the configuration for the theme is in wp-admin - Appearance - ComicPress Options','comicpress'); ?></li>
+					<li><?php _e('You do NOT have to install all of the recommended plugins, just dismiss the message so you do not see it again.','comicpress'); ?></li>
 				</ul>
 				<h3><?php _e('Reverting a Migration','comicpress'); ?></h3>
 				<br />
@@ -69,6 +71,7 @@
 						<li><?php _e('Install and activate the Convert Post Types plugin from wp-admin - Themes - Recommended Plugins.','comicpress'); ?></li>
 						<li><?php _e('Select the comic post type in the Convert From.. dropdown and set the Convert To.. dropdown to post.','comicpress'); ?></li>
 						<li><?php _e('Click the [convert] button and it will set all of the things you migrated back to posts.','comicpress'); ?></li>
+						<li><?php _e('NOTE: This WILL make it so that you lose all of your chapter/categories set.  So you will have to remake them.','comicpress'); ?></li>
 						<li><?php _e('Go to the media library and delete all of the comic images that it already migrated.','comicpress'); ?></li>
 						<li><?php _e('Start over with your migration.','comicpress'); ?></li>
 					</ol>

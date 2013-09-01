@@ -121,6 +121,14 @@ function comicpress_customize_register( $wp_customize ) {
 				'type'     => 'checkbox'
 				));
 				
+	$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false));
+	$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
+				'settings' => 'comicpress-customize-checkbox-header-hotspot',
+				'label'    => __( 'Make the header title become a hotspot for the custom-header.','comicpress'),
+				'section'  => 'comicpress-scheme-options',
+				'type'     => 'checkbox'
+				));
+				
 	$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => ''));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 
@@ -217,12 +225,13 @@ function comicpress_customize_wp_head() {
 	$output = '';
 	$style_output = '';
 	$customize = get_theme_mod('comicpress-customize');
-
-	foreach ($settings_array as $setting) {
-		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
-		if (empty($content)) $content = $setting['default'];
-		$important = ($setting['important']) ? '!important' : '';
-		if (!empty($content)) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
+	if (!empty($customize)) {
+		foreach ($settings_array as $setting) {
+			if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
+			if (empty($content)) $content = $setting['default'];
+			$important = ($setting['important']) ? '!important' : '';
+			if (!empty($content)) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
+		}
 	}
 	if (isset($customize['logo']) && !empty($customize['logo'])) {
 		$style_output .= '.header-info { display: inline-block; float: left; padding: 0; }';

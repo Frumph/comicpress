@@ -37,12 +37,11 @@ function comicpress_header_style() {
 	if (get_header_image()) { ?>
 <style type="text/css">
 	#header { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url('<?php header_image(); ?>') top center no-repeat; overflow: hidden; }
+<?php if (get_theme_mod('comicpress-customize-checkbox-header-hotspot', false)) { ?>
+	#header h1 { padding: 0; }
+	#header h1 a { display: block; width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; text-indent: -9999px; }
+	#header .description { display: none; }	
+<?php } ?>
 </style>
 	<?php }
 }
-
-/*
-	#header h1 { padding: 0; }
-	#header h1 a { display: block; width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; text-indent: -9999px; }
-	#header .description { display: none; }
-*/
