@@ -58,6 +58,12 @@ function comicpress_admin_options() { ?>
 	$comicpress_options = get_option('cp-options');
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
+		if ($_REQUEST['action'] == 'comicpress_save_help') {
+			$comicpress_options['first_run'] = false;
+			$tab = 'layout';
+			update_option('cp-options', $comicpress_options);
+		}
+		
 		if ($_REQUEST['action'] == 'comicpress_save_layout') {
 			foreach (array(
 				'layout',

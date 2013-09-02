@@ -1,11 +1,15 @@
 <div id="comicpress-help">
-
 	<div class="comicpress-options">
 		<?php if (comicpress_themeinfo('first_run')) { ?>
 		<h1 class="options-about-title"><?php _e('Welcome to ComicPress 4.0!','comicpress'); ?></h1>
 		<div class="options-about-welcome">
 			<strong><?php _e('Thank you for using ComicPress!','comicpress'); ?></strong><br />
 			<?php _e('ComicPress 4.0 has more features, uses the Comic Easel plugin now and is more stable than ever to help you build an incredible WebComic website.','comicpress'); ?>
+		<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
+			<?php wp_nonce_field('update-options') ?>
+			<input name="comicpress_save_help" type="submit" class="button-primary" value="Dismiss Help Page From Continually Showing Up" />
+			<input type="hidden" name="action" value="comicpress_save_help" />
+		</form>			
 		</div>
 		<?php } ?>
 		<div class="options-about-table">
@@ -62,6 +66,7 @@
 					<li><?php _e('In the wp-admin - Themes section there is an area now for recommended plugins to use with ComicPress.','comicpress'); ?></li>
 					<li><?php _e('The configuration for comic options is in the wp-admin - Comics - Config are while the configuration for the theme is in wp-admin - Appearance - ComicPress Options','comicpress'); ?></li>
 					<li><?php _e('You do NOT have to install all of the recommended plugins, just dismiss the message so you do not see it again.','comicpress'); ?></li>
+					<li><?php _e('In the customizer, if you set a logo you should NOT use the checkbox in the Header Image to make the header title the hotspot.','comicpress'); ?></li>
 				</ul>
 				<h3><?php _e('Reverting a Migration','comicpress'); ?></h3>
 				<br />
@@ -81,12 +86,7 @@
 		<div style="text-align:center; clear: both;margin-top:40px;">
 			<iframe width="853" height="480" src="//www.youtube.com/embed/b6feJZJPtD0" frameborder="0" allowfullscreen></iframe>
 		</div>
-<?php
-// Set it so that this screen has been seen on activation.
-$comicpress_options = get_option('cp-options');
-$comicpress_options['first_run'] = false;
-update_option('cp-options', $comicpress_options);
-?>
+
 	</div>	
 </div>
 

@@ -124,8 +124,8 @@ function comicpress_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false));
 	$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 				'settings' => 'comicpress-customize-checkbox-header-hotspot',
-				'label'    => __( 'Make the header title become a hotspot for the custom-header.','comicpress'),
-				'section'  => 'comicpress-scheme-options',
+				'label'    => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)','comicpress'),
+				'section'  => 'header_image',
 				'type'     => 'checkbox'
 				));
 				
