@@ -444,18 +444,13 @@ function comicpress_register_required_plugins() {
             'required'  => false,
         ),
 		array(
-			'name'		=> 'Convert Post Types',
-			'slug'		=> 'convert-post-types',
+			'name'		=> 'Post Type Converter',
+			'slug'		=> 'post-type-converter',
 			'required'	=> false,
 		),
 		array(
 			'name'		=> 'AJAX Thumbnail Rebuild',
 			'slug'		=> 'ajax-thumbnail-rebuild',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Custom Post Type Permalinks',
-			'slug'		=> 'custom-post-type-permalinks',
 			'required'	=> false,
 		),
 		array(
@@ -471,11 +466,6 @@ function comicpress_register_required_plugins() {
 		array(
 			'name'		=> 'Google Analyticator',
 			'slug'		=> 'google-analyticator',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'WP Super-cache',
-			'slug'		=> 'wp-super-cache',
 			'required'	=> false,
 		),
 		array(
