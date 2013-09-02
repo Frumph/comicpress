@@ -403,7 +403,6 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_themeinfo = array_merge($comicpress_coreinfo, $comicpress_addinfo);
 		$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_options);
 		if (!isset($comicpress_themeinfo['layout']) || empty($comicpress_themeinfo['layout']) || ($comicpress_themeinfo['layout'] == 'standard')) $comicpress_themeinfo['layout'] = '3c';
-		if (!isset($comicpress_themeinfo['enable_jetpack_infinite_scrolling']) || empty($comicpress_themeinfo['enable_jetpack_infinite_scrolling'])) $comicpress_themeinfo['enable_jetpack_infinite_scrolling'] = false;
 	}
 	if ($whichinfo && $whichinfo !== 'reset')
 		if (isset($comicpress_themeinfo[$whichinfo])) 
@@ -502,7 +501,7 @@ function comicpress_register_required_plugins() {
         'parent_menu_slug'  => 'plugins.php',         // Default parent menu slug
         'parent_url_slug'   => 'plugins.php',         // Default parent URL slug
         'menu'              => 'install-recommended-plugins',   // Menu slug
-        'has_notices'       => true,                         // Show admin notices or not
+        'has_notices'       => false,                         // Show admin notices or not
         'is_automatic'      => false,            // Automatically activate plugins after installation or not
         'message'           => '',               // Message to output right before the plugins table
         'strings'           => array(
