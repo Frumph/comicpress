@@ -10,9 +10,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php comicpress_get_sidebar('above-header'); ?>
 <div id="page-wrap">
 	<div id="page">
-		<?php comicpress_get_sidebar('above-header'); ?>
 		<div id="header">
 			<div class="header-info">
 				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
