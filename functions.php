@@ -2,7 +2,6 @@
 
 add_action('after_setup_theme', 'comicpress_setup');
 add_action('wp_enqueue_scripts', 'comicpress_enqueue_theme_scripts');
-add_action('init', 'comicpress_init');
 add_action('widgets_init', 'comicpress_register_sidebars');
 add_filter('wp_title', 'comicpress_filter_wp_title');
 add_filter('excerpt_length', 'comicpress_excerpt_length');
@@ -14,6 +13,8 @@ if (comicpress_themeinfo('force_active_connection_close'))
 if (comicpress_themeinfo('menubar_social_icons')) 
 	add_action('comicpress-menubar-menunav', 'comicpress_display_social_icons');
 add_action( 'tgmpa_register', 'comicpress_register_required_plugins' );
+if (!is_admin())
+	add_action('init', 'comicpress_init');
 
 if (class_exists('MultiPostThumbnails')) {
 	new MultiPostThumbnails(
@@ -92,33 +93,22 @@ function comicpress_enqueue_theme_scripts() {
 }
 
 function comicpress_init() {
-	if (!is_admin()) {
-		add_action('pre_get_posts', 'comicpress_query_change_posts_per_page');
-		// Set the post count on the home page
-		function comicpress_query_change_posts_per_page($query) {
-			if ( $query->is_home() && $query->is_main_query()) {
-//				$query->set('category__in', '8');
-				$query->set('posts_per_page', comicpress_themeinfo('home_post_count'));
-			}
-		}
-		add_action('pre_get_posts', 'comicpress_query_change_archive_display_order');
-		// Set the 'order' of the archive and search		
-		function comicpress_query_change_archive_display_order($query) {
-			if (($query->is_archive() || $query->is_search()) && !isset($query->query_vars['feed'])) {
-				$archive_display_order = comicpress_themeinfo('archive_display_order');
-				if (empty($archive_display_order)) $archive_display_order = 'DESC';
-				$order = '&order='.$archive_display_order;
-				$query->set('order', $archive_display_order);
-			}
-		}
-		// Make it so that it displays *all* posts by the author within the loop that is in the author.php file
-		add_action('pre_get_posts', 'comicpress_query_change_author_pages');
-		function comicpress_query_change_author_pages($query) {
-			if ($query->is_author() && $query->is_main_query()) {
-				$query->set('nopaging', true);
-			}
-		}
-	}	
+	add_action('pre_get_posts', 'comicpress_pre_parser', 1, 1);
+}
+
+function comicpress_pre_parser($query) {
+	if ( $query->is_home() && $query->is_main_query()) {
+//		$query->set('category__in', '8');
+		$query->set('posts_per_page', comicpress_themeinfo('home_post_count'));
+	}
+	if (($query->is_archive() || $query->is_search() || is_post_type_archive())  && !$query->is_feed() && $query->is_main_query()) {	
+		$archive_display_order = comicpress_themeinfo('archive_display_order');
+		if (empty($archive_display_order)) $archive_display_order = 'desc';
+		$query->set('order', $archive_display_order);
+	}
+	if ($query->is_author() && $query->is_main_query()) {
+		$query->set('nopaging', true);
+	}
 }
 
 if (!function_exists('comicpress_register_sidebars')) {

@@ -1242,6 +1242,7 @@ span.author-archive-date {
 }
 
 .archive-date {
+	text-align: right;
 	padding: 0 5px 0 0;
 	font-size: 12px;
 	white-space: nowrap;

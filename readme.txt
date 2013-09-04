@@ -16,6 +16,7 @@ Please read information and faqs on comiceasel.com for more information.
 == Changelog ==
 = 4.0.3 =
 * Correctly attribute the height to auto for images inside posts.
+* fixed the archive - asc/desc setting in the comicpress options
 
 = 4.0.2 =
 * Added toggle to make header text into a hotspot for the entire header image.
