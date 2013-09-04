@@ -13,12 +13,15 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 
 Please read information and faqs on comiceasel.com for more information.
 
-== Changelog
-= 4.0.2 
+== Changelog ==
+= 4.0.3 =
+* Correctly attribute the height to auto for images inside posts.
+
+= 4.0.2 =
 * Added toggle to make header text into a hotspot for the entire header image.
 * Don't show recommended plugins notice (it confuses people into installing them all)
 * Better Handling of the help screen when first installing the new ComicPress theme
 
-= 4.0.1 
+= 4.0.1 =
 * Fixed the 'description' of the theme.
 
