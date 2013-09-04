@@ -17,6 +17,7 @@ Please read information and faqs on comiceasel.com for more information.
 = 4.0.3 =
 * Correctly attribute the height to auto for images inside posts.
 * fixed the archive - asc/desc setting in the comicpress options
+* added #pagenav to the customizer for the uentry section for link:hover
 
 = 4.0.2 =
 * Added toggle to make header text into a hotspot for the entire header image.
