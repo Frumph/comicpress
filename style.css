@@ -422,7 +422,7 @@ body.wide #content-column, body.signup #content-column {
 	width: auto;
 }
 
-.uentry, #comment-wrapper, #wp-paginav {
+.uentry, #comment-wrapper, #wp-paginav, #pagenav {
 	border: solid 1px Transparent;
 }
 
@@ -1123,6 +1123,10 @@ table#wp-calendar td {
 	line-height: 25px;
 }
 
+#pagenav {
+	padding: 3px 5px 2px;
+}
+
 #paginav .paginav-pages {
 	padding-right: 10px;
 }
@@ -1578,7 +1582,7 @@ span.author-archive-date {
 
 /* Hides navigation links and site footer when infinite scroll is active */
 /* .infinite-scroll.neverending #footer */
-.infinite-scroll #navigation, .infinite-scroll #wp-paginav {
+.infinite-scroll #navigation, .infinite-scroll #wp-paginav, .infinite-scroll #pagenav {
 	display: none;
 }
 
@@ -1936,7 +1940,7 @@ body.scheme-ceasel .menu ul li a, body.scheme-ceasel .menunav-rss {
 	-webkit-text-shadow: 1px 1px 1px #000;
 }
 
-body.scheme-ceasel #breadcrumb-wrapper, body.scheme-ceasel #wp-paginav {
+body.scheme-ceasel #breadcrumb-wrapper, body.scheme-ceasel #wp-paginav, body.scheme-ceasel #pagenav {
 	border: 1px solid #ccc;
 	-moz-border-radius: 4px;
 	-khtml-border-radius: 4px;
@@ -1954,7 +1958,7 @@ body.scheme-ceasel #breadcrumb-wrapper, body.scheme-ceasel #wp-paginav {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ffffff' , endColorstr= '#f4f4f4' ,GradientType=0 );
 }
 
-body.scheme-ceasel #wp-paginav {
+body.scheme-ceasel #wp-paginav, body.scheme-ceasel #pagenav {
 	padding: 0 5px;
 }
 
