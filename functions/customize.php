@@ -109,7 +109,8 @@ function comicpress_customize_register( $wp_customize ) {
 					'boxed' => 'Boxed',
 					'sandy' => 'Sandy',
 					'mecha' => 'Mecha',
-					'ceasel' => 'CEasel'
+					'ceasel' => 'CEasel',
+					'high' => 'High Society'
 					)
 				)); 
 	
@@ -144,6 +145,8 @@ function comicpress_customize_register( $wp_customize ) {
 	foreach ($css_array as $setting) {
 		$wp_customize->get_setting($setting['slug'])->transport='postMessage';
 	}
+	if ($wp_customize->is_preview() && !is_admin())
+		add_action('wp_footer', 'comicpress_customize_preview');
 }
 
 function comicpress_customize_preview() {
@@ -245,5 +248,4 @@ function comicpress_customize_wp_head() {
 		$output .= "\r\n</style>\r\n";
 		echo $output;
 	}
-	add_action('wp_footer', 'comicpress_customize_preview');
 }
