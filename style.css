@@ -2122,6 +2122,7 @@ body.scheme-high #comic-wrap {
 }
 
 
+
 body.layout-2cl.scheme-high #header, 
 body.layout-2cr.scheme-high #header,
 body.layout-2cl.scheme-high #menubar-wrapper, 
@@ -2137,6 +2138,11 @@ body.layout-2cr.scheme-high #comic-wrap {
     width: 782px;
     margin: 0 auto;
 }
+
+body.scheme-high.cnc #comic-wrap {
+	width: auto!important;
+}
+
 
 body.scheme-high #page-wrap {
 	background: url('images/background-high-page-wrap.jpg') top repeat-x;
