@@ -2117,11 +2117,9 @@ body.scheme-high #footer-sidebar-wrapper {
 
 body.scheme-high #comic-wrap {
 	width: 982px;
-	margin: 5px auto!important;
+	margin: 2px auto 5px!important;
 	padding: 5px;
 }
-
-
 
 body.layout-2cl.scheme-high #header, 
 body.layout-2cr.scheme-high #header,
@@ -2185,7 +2183,7 @@ body.scheme-high .menu a, body.scheme-high .menunav a, body.scheme-high .comic-n
 
 body.scheme-high #menubar-wrapper {
 	background-color: Transparent;
-	margin-bottom: 5px;
+	margin-bottom: 10px!important;
 }
 
 body.scheme-high .menu ul li a:link, body.scheme-high .menu ul li a:visited, body.scheme-high .menunav a:link, body.scheme-high .menunav a:visited {
