@@ -14,6 +14,10 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+= 4.0.4 =
+* CSS: body.wide set properly for when the sidebars get removed!important
+* CSS: .header-info padding removal when used as click block
+
 = 4.0.3 =
 * Correctly attribute the height to auto for images inside posts.
 * fixed the archive - asc/desc setting in the comicpress options

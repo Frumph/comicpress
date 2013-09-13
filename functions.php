@@ -379,7 +379,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 			'upload_path' => get_option('upload_path'),
-			'version' => '4.0.2',
+			'version' => '4.0.4',
 			'themepath' => get_template_directory(),
 			'themeurl' => get_template_directory_uri(), 
 			'stylepath' => get_stylesheet_directory(), 
@@ -476,14 +476,14 @@ function comicpress_register_required_plugins() {
      * end of each line for what each argument will be.
      */
     $config = array(
-        'domain'            => $theme_text_domain,           // Text domain - likely want to be the same as your theme.
-        'default_path'      => '',                           // Default absolute path to pre-packaged plugins
-        'parent_menu_slug'  => 'plugins.php',         // Default parent menu slug
-        'parent_url_slug'   => 'plugins.php',         // Default parent URL slug
+        'domain'            => $theme_text_domain,				// Text domain - likely want to be the same as your theme.
+        'default_path'      => '',								// Default absolute path to pre-packaged plugins
+        'parent_menu_slug'  => 'plugins.php',					// Default parent menu slug
+        'parent_url_slug'   => 'plugins.php',					// Default parent URL slug
         'menu'              => 'install-recommended-plugins',   // Menu slug
-        'has_notices'       => false,                         // Show admin notices or not
-        'is_automatic'      => false,            // Automatically activate plugins after installation or not
-        'message'           => '',               // Message to output right before the plugins table
+        'has_notices'       => true,							// Show admin notices or not
+        'is_automatic'      => false,							// Automatically activate plugins after installation or not
+        'message'           => '',								// Message to output right before the plugins table
         'strings'           => array(
             'page_title'                                => __( 'Install Recommended Plugins', $theme_text_domain ),
             'menu_title'                                => __( 'Recommended Plugins', $theme_text_domain ),
