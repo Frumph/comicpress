@@ -15,9 +15,11 @@ Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
 = 4.0.4 =
+* Archive pages now display comic thumbnails for ComiC Easel if show archives as links enabled
 * CSS: body.wide set properly for when the sidebars get removed!important
 * CSS: .header-info padding removal when used as click block
 * CSS: 780px 980px #page instead of 782/982 .. extra 2px was wrong, fixed
+
 
 = 4.0.3 =
 * Correctly attribute the height to auto for images inside posts.
