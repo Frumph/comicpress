@@ -188,12 +188,12 @@ h4, h4 a {
 }
 
 #page {
-	width: 982px;
+	width: 980px;
 	margin: 0 auto;
 }
 
 body.layout-2cl #page, body.layout-2cr #page{
-	width: 782px;
+	width: 780px;
 }
 
 /* Header */
@@ -981,6 +981,32 @@ table#wp-calendar td {
 .wp-calendar-download-links a:hover {
 	background: #800;
 }
+
+/* Archive */
+
+.archivecomicthumbwrap {
+	display: inline-block;
+	float: left;
+	width: 120px;
+	margin: 5px 3px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.archivecomicthumbdate {
+	text-align: center;
+}
+
+.archivecomicframe {
+	text-align: center;
+}
+
+.archivecomicframe img {
+	width: 120px;
+	height: auto;
+	max-height: 200px;
+}
+
 
 /* SEARCH */
 

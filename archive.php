@@ -12,40 +12,53 @@ if (is_category()) {
 
 $count = $wp_query->found_posts;
 if (empty($count)) $count = 'No';
-//	$count = $wp_query->post_count;
-$post = $posts[0]; // Hack. Set $post so that the_date() works
+
 $title_string = '';
-if (is_category()) { /* Category */
-	$title_string = __('Archive for ','comicpress').single_cat_title('',false);
-} elseif(is_tag()) { /* Tag */
-	$title_string = __('Posts Tagged ','comicpress').single_tag_title('',false);
-} elseif (is_day()) {
-	$title_string = __('Archive for ','comicpress').get_the_time('F jS, Y');
-} elseif (is_month()) {
-	$title_string = __('Archive for ','comicpress').get_the_time('F, Y');
-} elseif (is_year()) {
-	$title_string = __('Archive for ','comicpress').get_the_time('Y');
-} elseif (is_author()) {
-	$title_string = __('Author Archive ','comicpress').get_the_time('Y');
-} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
-	$title_string = __('Archives','comicpress');
-} elseif (isset($wp_query->query_vars['taxonomy']) && taxonomy_exists($wp_query->query_vars['taxonomy'])) {
-	if (term_exists($wp_query->query_vars['term'])) {
-		$title_string = __('Archive for ','comicpress').$wp_query->query_vars['term'];
+
+if ($count > 0) {
+	if (is_category()) { /* Category */
+		$title_string = __('Archive for ','comicpress').single_cat_title('',false);
+	} elseif(is_tag()) { /* Tag */
+		$title_string = __('Posts Tagged ','comicpress').single_tag_title('',false);
+	} elseif (is_day()) {
+		$title_string = __('Archive for ','comicpress').get_the_time('F jS, Y');
+	} elseif (is_month()) {
+		$title_string = __('Archive for ','comicpress').get_the_time('F, Y');
+	} elseif (is_year()) {
+		$title_string = __('Archive for ','comicpress').get_the_time('Y');
+	} elseif (is_author()) {
+		$title_string = __('Author Archive ','comicpress').get_the_time('Y');
+	} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
+		$title_string = __('Archives','comicpress');
+	} elseif (isset($wp_query->query_vars['taxonomy']) && taxonomy_exists($wp_query->query_vars['taxonomy'])) {
+		if (term_exists($wp_query->query_vars['term'])) {
+			$title_string = __('Archive for ','comicpress').$wp_query->query_vars['term'];
+		} else {
+			$title_string = __('Archive for ','comicpress').$wp_query->query_vars['taxonomy'];
+		}
+	} elseif ($wp_query->query_vars['post_type'] !== 'post') {
+		$title_string = __('Archive for ','comicpress').$wp_query->query_vars['post_type'];
 	} else {
-		$title_string = __('Archive for ','comicpress').$wp_query->query_vars['taxonomy'];
+		$title_string = __('Archive is unable to be found.','comicpress');
 	}
-} elseif ($post->post_type !== 'post') {
-	$title_string = __('Archive for ','comicpress').$post->post_type;
-} else {
-	$title_string = __('Archive is unable to be found.','comicpress');
-}
+} else $title_string = __('No Archive Found.','comicpress');
 if (have_posts()) { ?>
 	<h2 class="page-title"><?php echo $title_string; ?></h2>
 	<div class="archiveresults"><?php printf(_n("%d result.", "%d results.", $count,'comicpress'),$count); ?></div>
 	<div class="clear"></div>
-	<?php 
-	if (comicpress_themeinfo('display_archive_as_links') || comicpress_is_bbpress()) { ?>
+	<?php if (function_exists('ceo_pluginfo') && (isset($wp_query->query_vars['chapters']) || isset($wp_query->query_vars['characters']) || isset($wp_query->query_vars['locations']) || ($wp_query->query_vars['post_type'] == 'comic')) && (comicpress_themeinfo('display_archive_as_links') && !comicpress_is_bbpress())) { ?>
+		<?php while (have_posts()) : the_post(); ?>
+			<div class="archivecomicthumbwrap">
+				<div class="archivecomicthumbdate"><?php echo get_the_time('M jS, Y'); ?></div>
+				<div class="archivecomicframe">
+			<?php 
+			$thumbnail = ceo_display_comic_thumbnail('thumbnail', $post);
+			$thumbnail = (!$thumbnail) ? __('No Thumbnail or Featured Image Found','comicpress') : $thumbnail; ?>
+					<a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo $thumbnail; ?></a><br />
+				</div>
+			</div>
+		<?php endwhile; ?>
+	<?php } elseif (comicpress_themeinfo('display_archive_as_links') || comicpress_is_bbpress()) { ?>
 	<div <?php post_class(); ?>>
 		<div class="post-head"></div>
 		<div class="entry">
