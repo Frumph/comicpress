@@ -6,7 +6,7 @@ Description: Publish a WebComic with the ComicPress theme and the Comic Easel pl
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
 Tags: two-columns, three-columns, left-sidebar, right-sidebar, fixed-width, custom-background, custom-header, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready, flexible-header, featured-images
-Version: 4.0.4
+Version: 4.0.5
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
 */
@@ -390,7 +390,7 @@ body.layout-2cl #page, body.layout-2cr #page{
 /* This is the wrapper for the #content floats need to be in here */
 #content-column {
 	float: left;
-	width: 550px;
+	width: 548px;
 	margin: 0 2px;
 }
 
@@ -405,12 +405,12 @@ body.layout-2clw #content-column, body.layout-2cl #content-column, body.layout-3
 }
 
 body.layout-2cl #content-column, body.layout-2cr #content-column {
-	width: 560px;
+	width: 558px;
 }
 
 body.layout-2clw #content-column, 
 body.layout-2crw #content-column {
-	width: 660px;
+	width: 658px;
 }
 
 body.wide #content-column, body.signup #content-column {
