@@ -90,39 +90,6 @@
 						<?php _e('With this enabled, the avatar\'s that are displayed will be jquery modified to look like polaroids randomly tilted.','comicpress'); ?>
 					</td>
 				</tr>
-				<?php
-					$current_avatar_directory = $comicpress_options['avatar_directory'];
-					if (empty($current_avatar_directory)) $current_avatar_directory = 'default';
-					$avatar_directories = array();
-					$dirs_to_search = array_unique(array(comicpress_themeinfo('themepath'), comicpress_themeinfo('stylepath')));
-					foreach ($dirs_to_search as $avdir) { 
-						if (is_dir($avdir . '/images/avatars')) {
-							$thisdir = null;
-							$thisdir = array();
-							$thisdir = glob($avdir. '/images/avatars/*');
-							$avatar_directories = array_merge($avatar_directories, $thisdir); 		
-						}
-					}
-				?>
-				<tr>
-					<th scope="row" colspan="2">
-						<label for="avatar_directory"><?php _e('Avatar Directory','comicpress'); ?></label>
-						<select name="avatar_directory" id="avatar_directory">
-							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
-							<?php
-								foreach ($avatar_directories as $avatar_dirs) {
-									if (is_dir($avatar_dirs)) {
-										$avatar_dir_name = basename($avatar_dirs); ?>
-										<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
-								<?php }
-								}
-							?>
-						</select>
-					</th>
-					<td>
-						<?php _e('Choose a directory to get the avatars for default gravatars if someone does not have one.  You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. <strong>Setting this to \'none\' will disable it from using any special avatar sets.</strong>','comicpress'); ?><br />
-					</td>
-				</tr>
 				<tr class="alternate">
 					<th scope="row"><label for="disable_tags_in_posts"><?php _e('Disable display of <strong>tags</strong> in posts','comicpress'); ?></label></th>
 					<td>
@@ -210,6 +177,39 @@
 					</td>
 					<td>
 						<?php _e('Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them, This will ONLY work if you have it set to only display 1 post on the home page.  The post count and this must be set to work.','comicpress'); ?>
+					</td>
+				</tr>
+<?php
+$current_avatar_directory = $comicpress_options['avatar_directory'];
+if (empty($current_avatar_directory)) $current_avatar_directory = 'default';
+$avatar_directories = array();
+$dirs_to_search = array_unique(array(comicpress_themeinfo('themepath'), comicpress_themeinfo('stylepath')));
+foreach ($dirs_to_search as $avdir) { 
+	if (is_dir($avdir . '/images/avatars')) {
+		$thisdir = null;
+		$thisdir = array();
+		$thisdir = glob($avdir. '/images/avatars/*');
+		$avatar_directories = array_merge($avatar_directories, $thisdir); 		
+	}
+}
+				?>
+				<tr>
+					<th scope="row" colspan="2">
+						<label for="avatar_directory"><?php _e('Avatar Directory','comicpress'); ?></label>
+						<select name="avatar_directory" id="avatar_directory">
+							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
+<?php
+foreach ($avatar_directories as $avatar_dirs) {
+	if (is_dir($avatar_dirs)) {
+										$avatar_dir_name = basename($avatar_dirs); ?>
+										<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
+	<?php }
+}
+							?>
+						</select>
+					</th>
+					<td>
+						<?php _e('Choose a directory to get the avatars for default gravatars if someone does not have one.  You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. <strong>Setting this to \'none\' will disable it from using any special avatar sets.</strong>','comicpress'); ?><br />
 					</td>
 				</tr>
 			</table>

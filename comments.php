@@ -66,9 +66,10 @@ if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']
 					</div>
 				<div class="clear"></div>
 			</div>					
-			<?php } ?>
-
-		<?php } else { ?>
+<?php 
+				} 
+			} else { 
+?>
 			<div class="commentnav">
 				<div class="commentnav-right"><?php next_comments_link(__('Next Comments &uarr;','comicpress')) ?></div>
 				<div class="commentnav-left"><?php previous_comments_link(__('&darr; Previous Comments','comicpress')) ?></div>
@@ -101,7 +102,7 @@ if (comments_open()) { ?>
 	comment_form($args); 
 	?>
 	</div>
-<?php } elseif (!comments_open() && (get_comments_number() > 0)) { ?>
+<?php } elseif (!comments_open() && (get_comments_number() > 0) && !is_page()) { ?>
 	<p class="closed-comments"><?php _e('Comments are closed.','comicpress'); ?></p>
 <?php } ?>
 </div>

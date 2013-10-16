@@ -31,7 +31,7 @@
 							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e('3 Column - Sidebar\'s on Right','comicpress'); ?></option>
 							<option class="level-0" value="2cl" <?php if ($comicpress_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Left (780px)','comicpress'); ?></option>
 							<option class="level-0" value="2cr" <?php if ($comicpress_options['layout'] == '2cr') { ?>selected="selected" <?php } ?>><?php _e('2 Column - Sidebar on Right (780px)','comicpress'); ?></option>
-							<option class="level-0" value="2clw" <?php if ($comicpress_options['layout'] == '2clw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide, Sidebar on Left (980px)', 'comicpress'); ?></option>
+							<option class="level-0" value="2clw" <?php if ($comicpress_options['layout'] == '2clw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide - Sidebar on Left (980px)', 'comicpress'); ?></option>
 							<option class="level-0" value="2crw" <?php if ($comicpress_options['layout'] == '2crw') { ?>selected="selected" <?php } ?>><?php _e('2 Column Wide - Sidebar on Right (980px)','comicpress'); ?></option>
 						</select>
 						<br />
