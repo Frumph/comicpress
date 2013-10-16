@@ -142,9 +142,9 @@ function comicpress_customize_register( $wp_customize ) {
 					'type'     => 'checkbox'
 					));
 	}
-	foreach ($css_array as $setting) {
+/*	foreach ($css_array as $setting) {
 		$wp_customize->get_setting($setting['slug'])->transport='postMessage';
-	}
+	} */
 	if ($wp_customize->is_preview() && !is_admin())
 		add_action('wp_footer', 'comicpress_customize_preview');
 }

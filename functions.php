@@ -1,5 +1,12 @@
 <?php
 
+function comicpress_child_modify_post_link( $url, $bleah ) {
+	$url = str_replace('comic/', '', $url);
+	return $url;
+}
+
+add_filter( 'sharing_permalink', 'comicpress_child_modify_post_link', 10, 2 );
+
 add_action('after_setup_theme', 'comicpress_setup');
 add_action('wp_enqueue_scripts', 'comicpress_enqueue_theme_scripts');
 add_action('widgets_init', 'comicpress_register_sidebars');

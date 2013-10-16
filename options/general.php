@@ -289,7 +289,8 @@ foreach ($avatar_directories as $avatar_dirs) {
 					</td>
 				</tr>
 			</table>
-		
+<?php
+/*
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -315,7 +316,8 @@ foreach ($avatar_directories as $avatar_dirs) {
 					</td>
 				</tr>
 			</table>
-			
+*/
+?>			
 			<table class="widefat">
 				<thead>
 					<tr>

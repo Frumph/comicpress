@@ -1,29 +1,16 @@
 <?php
 
-$custom_header_args = array();
-
-add_theme_support( 'custom-header', array(
-			'flex-height' => true,
+$custom_header_args = array(
 			'flex-width' => true,
-			// Header image default
-			'default-image'			=> false,
-			// Header text display default
-			'header-text'			=> false,
-			// Header text color default
-			'default-text-color'		=> '000',
-			// Default Header image width (in pixels)
-			'width'				=> comicpress_themeinfo('custom_image_header_width'),
-			// Default Header image height (in pixels)
-			'height'			=> comicpress_themeinfo('custom_image_header_height'),
-			// Header image random rotation default
-			'random-default'		=> false,
-			// Template header style callback
-			'wp-head-callback'		=> 'comicpress_header_style',
-			// Admin header style callback
-			'admin-head-callback'		=> 'comicpress_admin_header_style',
-			// Admin preview style callback
-			'admin-preview-callback'	=> 'comicpress_admin_header_style'
-			) );
+			'width' => 980,
+			'flex-height' => true,
+			'height' => 120,
+			'wp-head-callback' => 'comicpress_header_style',
+			'admin-head-callback' => 'comicpress_admin_header_style',
+			'admin-preview-callback' => 'comicpress_admin_header_style'	
+	);
+
+add_theme_support( 'custom-header', $custom_header_args );
 
 function comicpress_admin_header_style() { ?>
 <style type="text/css">
