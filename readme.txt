@@ -14,6 +14,9 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+= 4.0.6 =
+* Adjusted the page titles function in displaypost.php to allow the titles to be clicked on search and archive results /bugfix
+
 = 4.0.4 =
 * Archive pages now display comic thumbnails for ComiC Easel if show archives as links enabled
 * CSS: body.wide set properly for when the sidebars get removed!important
