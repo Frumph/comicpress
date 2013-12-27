@@ -31,8 +31,7 @@ class comicpress_dogecoins_widget extends WP_Widget {
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-		echo '
-		<script>
+		echo '<script>
 		  CoinWidgetCom.go({
 			wallet_address: "'.$instance['wallet_id'].'"
 			, currency: "dogecoin"

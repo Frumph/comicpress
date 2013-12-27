@@ -872,8 +872,14 @@ h2.widget-title, h2.widget-title a {
 	text-align: center;
 	display: table-cell;
 	vertical-align: top;
-	width: 33%;
+	width: 326px;
 	padding: 2px;
+}
+
+body.layout-2cl #sidebar-footer-left,
+body.layout-2cl #sidebar-footer,
+body.layout-2cl #sidebar-footer-right {
+	width: 260px;
 }
 
 #sidebar-footer-left .widget,
