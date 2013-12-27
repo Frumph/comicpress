@@ -1,0 +1,60 @@
+<?php
+/*
+Widget Name: Control Panel
+Description: Display an area for login and logout, forgot password and register.
+Author: Philip M. Hofer (Frumph)
+Author URI: http://frumph.net/
+Version: 1.04
+*/
+class comicpress_dogecoins_widget extends WP_Widget {
+
+	function comicpress_dogecoins_widget($skip_widget_init = false) {
+		if (!$skip_widget_init) {
+			$widget_ops = array('classname' => __CLASS__, 'description' => __('An accept Dogecoins button.','comicpress') );
+			$this->WP_Widget(__CLASS__, __('Dogecoins Button','comicpress'), $widget_ops);
+		}
+	}
+		
+	function widget($args, $instance) {
+		extract($args, EXTR_SKIP);
+		wp_enqueue_script('dogecoins-js', 'http://cdn.bitmindo.com/dogecoin.min.js', null, null, true);
+		echo $before_widget;
+		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
+		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
+		echo '
+		<script>
+		  CoinWidgetCom.go({
+			wallet_address: "'.$instance['wallet_id'].'"
+			, currency: "dogecoin"
+			, counter: "amount"
+			, alignment: "bl"
+			, qrcode: true
+			, auto_show: false
+			, lbl_button: "Donate"
+			, lbl_address: "'.__('Tip Dogecoin to this Address:','comicpress').'"
+			, lbl_amount: "DOGE"
+		  });
+		</script>		
+		';		
+		echo $after_widget;
+	}
+	
+	function update($new_instance, $old_instance) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['wallet_id'] = strip_tags($new_instance['wallet_id']);
+		return $instance;
+	}
+	
+	function form($instance) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'wallet_id' => '' ) );
+		$title = strip_tags($instance['title']);
+		$wallet_id = strip_tags($instance['wallet_id']);
+		?>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('wallet_id'); ?>"><?php _e('Wallet ID:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('wallet_id'); ?>" name="<?php echo $this->get_field_name('wallet_id'); ?>" type="text" value="<?php echo esc_attr($wallet_id); ?>" /></label></p>
+		<?php
+	}
+}
+
+register_widget('comicpress_dogecoins_widget');
