@@ -17,7 +17,7 @@ class comicpress_dogecoins_widget extends WP_Widget {
 		
 	function widget($args, $instance) {
 		extract($args, EXTR_SKIP);
-		wp_enqueue_script('dogecoins-js', 'http://cdn.bitmindo.com/dogecoin.min.js', null, null, true);
+		wp_enqueue_script('dogecoins-js', 'http://cdn.bitmindo.com/dogecoin.min.js');
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
