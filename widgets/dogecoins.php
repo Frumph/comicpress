@@ -4,19 +4,19 @@ Widget Name: Dogecoins
 Description: Accept Dogecoins button with input box for wallet_id
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.04
+Version: 1.05
 */
 
-
+/*
 if (is_active_widget('comicpress_dogecoins_widget', false, 'comicpress_dogecoins_widget', true)) {	
-	add_action('after_theme_setup', comicpress_enqueue_dogecoin_js());
+	add_action('wp_head', 'comicpress_enqueue_dogecoin_js');
 }
 
 function comicpress_enqueue_dogecoin_js() {
-	wp_enqueue_script('dogecoins-js', 'http://cdn.bitmindo.com/dogecoin.min.js', null, null, false);
+	echo '<script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>'."\r\n";
 }
 		
-
+*/
 class comicpress_dogecoins_widget extends WP_Widget {
 
 	function comicpress_dogecoins_widget($skip_widget_init = false) {
@@ -31,7 +31,8 @@ class comicpress_dogecoins_widget extends WP_Widget {
 		echo $before_widget;
 		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
-		echo '<script>
+		echo '<script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>
+		<script>
 		  CoinWidgetCom.go({
 			wallet_address: "'.$instance['wallet_id'].'"
 			, currency: "dogecoin"

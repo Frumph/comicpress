@@ -288,36 +288,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						<?php _e('If enabled will show the post thumbnail of the post in the RSS feed.','comicpress'); ?>
 					</td>
 				</tr>
-			</table>
-<?php
-/*
-			<table class="widefat">
-				<thead>
-					<tr>
-						<th colspan="3"><?php _e('Facebook','comicpress'); ?></th>
-					</tr>
-				</thead>
-				<tr class="alternate">
-					<th scope="row"><label for="facebook_like_blog_post"><?php _e('Enable the Facebook Like button in Blog Posts?','comicpress'); ?></label></th>
-					<td>
-						<input id="facebook_like_blog_post" name="facebook_like_blog_post" type="checkbox" value="1" <?php checked(true, $comicpress_options['facebook_like_blog_post']); ?> />
-					</td>
-					<td>
-						<?php _e('When enabled this option will allow the Facebook like button to appear at the bottom of regular blog posts.','comicpress'); ?>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row"><label for="facebook_meta"><?php _e('Enable the Facebook Meta?','comicpress'); ?></label></th>
-					<td>
-						<input id="facebook_meta" name="facebook_meta" type="checkbox" value="1" <?php checked(true, $comicpress_options['facebook_meta']); ?> />
-					</td>
-					<td>
-						<?php _e('When setting this option, it will add meta information to the head area of each page so that facebook will recognize the content within.','comicpress'); ?>
-					</td>
-				</tr>
-			</table>
-*/
-?>			
+			</table>		
 			<table class="widefat">
 				<thead>
 					<tr>

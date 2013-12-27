@@ -409,6 +409,21 @@ body.layout-2crw #content-column {
 	width: 658px;
 }
 
+body.layout-3clgn #content-column,
+body.layout-3crgn #content-column {
+	width: 762px;
+}
+
+body.layout-3clgn #content {
+	width: 538px;
+	float: left;
+}
+
+body.layout-3crgn #content {
+	width: 538px;
+	float: right;
+}
+
 body.wide #content-column, body.signup #content-column {
 	width: auto!important;
 	float: none!important;
