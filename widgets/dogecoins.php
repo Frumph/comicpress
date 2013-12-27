@@ -1,7 +1,7 @@
 <?php
 /*
-Widget Name: Control Panel
-Description: Display an area for login and logout, forgot password and register.
+Widget Name: Dogecoins
+Description: Accept Dogecoins button with input box for wallet_id
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
 Version: 1.04
