@@ -363,12 +363,32 @@ body.layout-2cl #page, body.layout-2cr #page{
 
 /* ######### CSS classes applied to down and right arrow images  ######### */
 
-.arrowclass {
+.menubar-arrow {
 	position: absolute;
-	top: 2px;
 	margin-left: 2px;
 	font-size: 11px;
 }
+
+/* classes that can be used to override the down/right arrows with images of your own */
+.menubar-down-arrow {}
+
+.menubar-right-arrow {}
+
+/* home icon */
+/*
+.menu-item-home {
+	background: url('images/home.png') top center no-repeat;
+	height: 25px;
+	width: 34px;
+	text-indent: -9999px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.menu-item-home a:hover {
+	background: #000 url('images/home.png') top center no-repeat!important;
+}
+*/
 
 /* Content-Wrapper */
 
