@@ -40,6 +40,7 @@ if (!function_exists('comicpress_display_post_title')) {
 	function comicpress_display_post_title() {
 		global $post, $wp_query;
 		$get_post_title = '';
+		if (($post->post_type == 'page') && is_front_page()) return; // don't display the title on static home pages
 		if ((comicpress_themeinfo('disable_page_titles') && is_page()) || (comicpress_themeinfo('disable_post_titles') && !is_page()) || (is_page('chat') || is_page('forum'))) return;
 		if (is_page()) {
 			$post_title = "<h2 class=\"page-title\">";

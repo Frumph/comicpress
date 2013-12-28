@@ -2,9 +2,9 @@
 
 $custom_header_args = array(
 			'flex-width' => true,
-			'width' => 980,
+			'width' => comicpress_themeinfo('custom_image_header_width'),
 			'flex-height' => true,
-			'height' => 120,
+			'height' => comicpress_themeinfo('custom_image_header_height'),
 			'wp-head-callback' => 'comicpress_header_style',
 			'admin-head-callback' => 'comicpress_admin_header_style',
 			'admin-preview-callback' => 'comicpress_admin_header_style'	

@@ -31,6 +31,25 @@
 				</tr>
 			</table>
 			
+			
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="5"><?php _e('Custom Header','easel'); ?></th>
+					</tr>
+				</thead>
+				<tr class="alternate">
+					<th scope="row"><label for="custom_image_header_width"><?php _e('Custom Header Values','comicpress'); ?></label></th>
+					<td>
+						<?php _e('Width:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo $comicpress_options['custom_image_header_width']; ?>" />px &nbsp;
+						<?php _e('Height:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo $comicpress_options['custom_image_header_height']; ?>" />px<br />
+						<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header','comicpress'); ?><br />
+						<?php _e('3 Column Layouts are 980px width while 2 Column Layouts are 780px width as default.','comicpress'); ?><br />
+						<strong><?php _e('NOTE: This should only be used if the appearance - header section is not displaying your header dimensions correctly.', 'comicpress'); ?></strong>
+					</td>
+				</tr>
+			</table>
+			
 			<table class="widefat">
 				<thead>
 					<tr>
