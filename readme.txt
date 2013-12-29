@@ -14,6 +14,22 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+= 4.1 =
+* Added LGN and RGN (3 column) layouts back into ComicPress, layout-head.php and layout-foot.php updated
+* Fixed problem with customizer not setting defaults
+* Added #footer a, #footer a:hover and footer textcolor entries to the customizer which were missing
+* Boxed scheme w/blue background image is now the default design
+* added sidebar.php as a default to handle plugins that need it
+* added missing .uentry entries for search.php 
+* Changed the footer widgets to be specific widths instead of percent
+* New browser window/tab when clicking social links in the menubar
+* Titles no longer link on pages, static or otherwise
+* Regenerated .pot/.mo files 
+* Readded the default height and width for the custom header image in case the auto-sensing one doesn't work
+* The home link .menu-item-home and the downarrows in the menubar can now all be skinned, i.e. replaced with your own images if you want to; I left examples inside the style.css for the home button
+* Calendar widget removed for ComicPress; since Comic Easel has one, will re-add in a newer version when I update it to the new WordPress code; otherwise it's a liability until then
+
+
 = 4.0.6 =
 * Adjusted the page titles function in displaypost.php to allow the titles to be clicked on search and archive results /bugfix
 
