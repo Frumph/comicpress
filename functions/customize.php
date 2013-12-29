@@ -234,9 +234,6 @@ function comicpress_customize_wp_head() {
 	$output = '';
 	$style_output = '';
 	$default_settings = false;
-	$is_ok = remove_theme_mod('comicpress-customize-select-scheme');
-	$is_okk = remove_theme_mod('comicpress-customize-checkbox-rounded');
-	$is_okkk = remove_theme_mod('comicpress-customize');
 	$customize = get_theme_mod('comicpress-customize');
 	if (!empty($customize)) {
 		foreach ($settings_array as $setting) {
