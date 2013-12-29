@@ -416,8 +416,6 @@ body.layout-2clw #content-column, body.layout-2cl #content-column, body.layout-3
 
 #content {
 	overflow: hidden;
-	padding: 2px;
-	margin: 0px 2px 5px 2px;
 }
 
 body.layout-2cl #content-column, body.layout-2cr #content-column {
@@ -442,6 +440,11 @@ body.layout-3clgn #content {
 body.layout-3crgn #content {
 	width: 538px;
 	float: right;
+}
+
+body.wide #content,
+body.wide #content-column {
+	width: 100%;
 }
 
 body.wide #content-column, body.signup #content-column {

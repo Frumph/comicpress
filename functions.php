@@ -34,7 +34,7 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 // These autoload
-foreach (glob(comicpress_themeinfo('themepath') . "/functions/*.php") as $funcfile) {
+foreach (glob(comicpress_themeinfo('themepath') . '/functions/*.php') as $funcfile) {
 	@require_once($funcfile);
 }
 
@@ -62,7 +62,11 @@ function comicpress_setup() {
 		'Primary' => __('Primary', 'comicpress'),
 		'Footer' => __('Footer', 'comicpress')
 	));
-	add_theme_support('custom-background');
+	$args = array(
+			'default-color' => '1C2C5B',
+			'default-image' => get_template_directory_uri() . '/images/background.jpg'
+		);
+	add_theme_support('custom-background', $args);
 	add_theme_support('post-thumbnails');
 	if (class_exists( 'Jetpack' ) && Jetpack::init()->is_module_active('infinite-scroll')) {
 		add_theme_support('infinite-scroll', array(
