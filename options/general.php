@@ -35,7 +35,7 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="5"><?php _e('Custom Header','easel'); ?></th>
+						<th colspan="5"><?php _e('Custom Header','comicpress'); ?></th>
 					</tr>
 				</thead>
 				<tr class="alternate">
