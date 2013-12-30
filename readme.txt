@@ -28,6 +28,7 @@ Please read information and faqs on comiceasel.com for more information.
 * Readded the default height and width for the custom header image in case the auto-sensing one doesn't work
 * The home link .menu-item-home and the downarrows in the menubar can now all be skinned, i.e. replaced with your own images if you want to; I left examples inside the style.css for the home button
 * Calendar widget removed for ComicPress; since Comic Easel has one, will re-add in a newer version when I update it to the new WordPress code; otherwise it's a liability until then
+* Options to allow changing media content width in posts and pages
 
 
 = 4.0.6 =
