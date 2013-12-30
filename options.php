@@ -32,8 +32,8 @@ function comicpress_admin_options() { ?>
 	<div id="eadmin-headericon" style="background: url('<?php echo comicpress_themeinfo('themeurl') ?>/images/comicpress-rascal.png') no-repeat;"></div>
 	<p class="alignleft">
 		<h2><?php _e('ComicPress Options','comicpress'); ?></h2>
-		<?php _e('ComicPress is a modular theme that has an abundant of hooks and actions placed in it for additional usability.  Ref: Comic Easel', 'comicpress'); ?><br />
-		<?php _e('While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize it\'s functionality.','comicpress'); ?><br />
+		<?php _e('ComicPress is a modular theme that has an abundance of hooks and actions placed in it for additional usability. Ref: Comic Easel', 'comicpress'); ?><br />
+		<?php _e('While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize its functionality.','comicpress'); ?><br />
 	</p>
 	<div class="clear"></div>
 	<?php
