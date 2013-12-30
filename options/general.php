@@ -58,9 +58,9 @@
 				</thead>
 				<tr>
 					<?php if (!isset($comicpress_options['content_width'])) $comicpress_options['content_width'] = 500; ?>
-					<th scope="row"><label for="home_post_count"><?php _e('How wide do you want the media and images content to appear in posts and pages?','comicpress'); ?></label></th>
+					<th scope="row"><label for="content_width"><?php _e('How wide do you want the media and images content to appear in posts and pages?','comicpress'); ?></label></th>
 					<td>
-						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />
+						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />px
 					</td>
 					<td>
 						<?php _e('This sets a specific width for WordPress to use for media content within your posts.  Default = 500','comicpress'); ?>
@@ -163,7 +163,7 @@
 						<?php _e('Checkmarking this will make it so that posted on date information will not appear in posts.','comicpress'); ?>
 					</td>
 				</tr>
-				<tr>
+				<tr class="alternate">
 					<th scope="row"><label for="disable_posted_at_time_in_posts"><?php _e('Disable the display of the posted at time in posts','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_posted_at_time_in_posts" name="disable_posted_at_time_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_posted_at_time_in_posts']); ?> />
