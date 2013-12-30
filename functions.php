@@ -222,21 +222,19 @@ function comicpress_is_bbpress() {
 	return false;
 }
 
-if (!function_exists('comicpress_sidebars_disabled')) {
-	function comicpress_sidebars_disabled() {
-		global $post;
-		if (!is_404() && is_page() && !empty($post)) {
-			$sidebars_disabled = get_post_meta($post->ID, 'disable-sidebars', true);
-			if ($sidebars_disabled) return true;
-		}
-//		if (comicpress_is_bbpress()) return true;
-		return false;
+function comicpress_sidebars_disabled() {
+	global $wp_query, $post;
+	if (!empty($post) && (is_single() || is_page()) && !is_404()) {
+		$sidebars_disabled = get_post_meta($post->ID, 'disable-sidebars', true);
+		if ($sidebars_disabled) return true;
 	}
+//		if (comicpress_is_bbpress()) return true;
+	return false;
 }
 
 global $content_width;
 if (!isset($content_width)) {
-	$content_width = comicpress_themeinfo('content_width');
+	$content_width = comicpress_themeinfo('content_width');		
 	if (!$content_width) $content_width = 500;
 }
 
@@ -371,7 +369,8 @@ function comicpress_load_options() {
 			'menubar_social_myspace' => '',
 			'menubar_social_email' => '',
 			'enable_jetpack_infinite_scrolling' => false,
-			'content_width' => 500
+			'content_width' => 500,
+			'content_width_disabled_sidebars' => 700
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}

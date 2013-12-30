@@ -58,12 +58,22 @@
 				</thead>
 				<tr>
 					<?php if (!isset($comicpress_options['content_width'])) $comicpress_options['content_width'] = 500; ?>
-					<th scope="row"><label for="content_width"><?php _e('How wide do you want the media and images content to appear in posts and pages?','comicpress'); ?></label></th>
+					<th scope="row"><label for="content_width"><?php _e('Media and images width on posts and pages?','comicpress'); ?></label></th>
 					<td>
 						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />px
 					</td>
 					<td>
-						<?php _e('This sets a specific width for WordPress to use for media content within your posts.  Default = 500','comicpress'); ?>
+						<?php _e('This sets a specific width for WordPress to use for media content within your posts and pages.  Default = 500','comicpress'); ?>
+					</td>
+				</tr>
+				<tr class="alternate">
+					<?php if (!isset($comicpress_options['content_width_disabled_sidebars'])) $comicpress_options['content_width_disabled_sidebars'] = 700; ?>
+					<th scope="row"><label for="content_width_disabled_sidebars"><?php _e('Media and images width when sidebars are disabled on pages?','comicpress'); ?></label></th>
+					<td>
+						<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" />px
+					</td>
+					<td>
+						<?php _e('When the sidebars are disabled on pages?  Default = 700','comicpress'); ?>
 					</td>
 				</tr>
 			</table>

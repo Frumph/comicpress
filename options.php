@@ -174,7 +174,8 @@ function comicpress_admin_options() { ?>
 				'custom_image_header_height',
 				'archive_display_order',
 				'excerpt_or_content_in_archive',
-				'content_width'
+				'content_width',
+				'content_width_disabled_sidebars'
 						) as $key) {
 							if (isset($_REQUEST[$key])) 
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
