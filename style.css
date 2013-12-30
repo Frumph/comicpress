@@ -424,7 +424,7 @@ body.layout-2cl #content-column, body.layout-2cr #content-column {
 
 body.layout-2clw #content-column, 
 body.layout-2crw #content-column {
-	width: 658px;
+	width: 762px;
 }
 
 body.layout-3clgn #content-column,
@@ -811,10 +811,12 @@ body.layout-3cl #sidebar-right {
 	float: left;
 }
 
+/*
 body.layout-2clw #sidebar-left,
 body.layout-2crw #sidebar-right {
 	width: 308px;
 }
+*/
 
 .sidebar-basic ul, .sidebar-basic li {
 	margin: 0;
