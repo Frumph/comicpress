@@ -49,6 +49,24 @@
 					</td>
 				</tr>
 			</table>
+
+			<table class="widefat">
+				<thead>
+					<tr>
+						<th colspan="3"><?php _e('Content Width','comicpress'); ?></th>
+					</tr>
+				</thead>
+				<tr>
+					<?php if (!isset($comicpress_options['content_width'])) $comicpress_options['content_width'] = 500; ?>
+					<th scope="row"><label for="home_post_count"><?php _e('How wide do you want the media and images content to appear in posts and pages?','comicpress'); ?></label></th>
+					<td>
+						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />
+					</td>
+					<td>
+						<?php _e('This sets a specific width for WordPress to use for media content within your posts.  Default = 500','comicpress'); ?>
+					</td>
+				</tr>
+			</table>
 			
 			<table class="widefat">
 				<thead>

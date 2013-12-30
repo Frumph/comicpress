@@ -235,12 +235,9 @@ if (!function_exists('comicpress_sidebars_disabled')) {
 }
 
 global $content_width;
-if ( ! isset( $content_width ) ) {
-	if (comicpress_sidebars_disabled()) { 
-		$content_width = 720; 
-	} else {
-		$content_width = 520;
-	}
+if (!isset($content_width)) {
+	$content_width = comicpress_themeinfo('content_width');
+	if (!$content_width) $content_width = 500;
 }
 
 if (!function_exists('comicpress_display_social_icons')) {
@@ -373,7 +370,8 @@ function comicpress_load_options() {
 			'menubar_social_deviantart' => '',
 			'menubar_social_myspace' => '',
 			'menubar_social_email' => '',
-			'enable_jetpack_infinite_scrolling' => false
+			'enable_jetpack_infinite_scrolling' => false,
+			'content_width' => 500
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
