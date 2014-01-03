@@ -22,15 +22,8 @@ if (!function_exists('comicpress_random_default_avatar')) {
 					return false;
 				}
 				return $blogurl.'/images/avatars/'.$current_avatar_directory.'/'.$default;
-			} else
-				return get_option('avatar_default');
-		} else {
-			return get_option('avatar_default');
+			}
 		}
-		return false;
+		return get_option('avatar_default');
 	}
-}
-
-function temp_random_default_avatar($id_or_email = '') {
-	return get_option('avatar_default');
 }
