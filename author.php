@@ -30,7 +30,7 @@ get_header();
 			$authorname = $curauth->user_login;
 	?>
 							<h2><?php echo $authorname; ?></h2><br />
-							<?php _e('Registered on','comicpress'); ?> <?php echo date('l \\t\h\e jS \o\f M, Y',strtotime($curauth->user_registered)); ?><br />
+							<?php _e('Registered on','comicpress'); ?> <?php echo date('d. F Y', strtotime($curauth->user_registered)); ?><br />
 							<br />
 							<?php if (!empty($curauth->user_url)) { ?><?php _e('Website:','comicpress'); ?> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
 							<?php if (!empty($curauth->aim)) { ?><?php _e('AIM:','comicpress'); ?> <?php echo $curauth->aim; ?><br /><?php } ?>
