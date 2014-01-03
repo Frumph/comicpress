@@ -55,9 +55,13 @@ get_header();
 					<div class="userpage-posts">
 						<h3><?php _e('Posts by','comicpress'); ?> <?php echo $authorname; ?> &not;</h3>
 						<ol>
+						<table class="author-posts">
 						<?php while (have_posts()) : the_post(); ?>
-							<li><span class="author-archive-date" align="right"><?php the_time('M j, Y') ?></span><span class="author-archive-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></span></li>		
+							<tr>
+								<td class="author-archive-date" align="right"><?php the_time('M j, Y') ?></td><td class="author-archive-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></td>
+							</tr>
 						<?php endwhile; ?>
+						</table>
 						</ol>
 					</div>
 <?php } ?>
