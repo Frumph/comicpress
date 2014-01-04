@@ -10,19 +10,20 @@
  */
 
 function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
-	unset($contactmethods['aim']);
-	unset($contactmethods['jabber']);
-	unset($contactmethods['yim']);
+	if (isset($contactmethods['aim'])) unset($contactmethods['aim']);
+	if (isset($contactmethods['jabber'])) unset($contactmethods['jabber']);
+	if (isset($contactmethods['yim'])) unset($contactmethods['yim']);
 	return $contactmethods;
 }
 
-// add_filter('user_contactmethods','comicpress_remove_unwanted_contactmethods',10,1);
-
+add_filter('user_contactmethods','comicpress_remove_unwanted_contactmethods',10,1);
 
 function add_new_contactmethods($methods){
-	$methods['twitter'] = 'Twitter ID';
-	$methods['facebook'] = 'Facebook';
-	$methods['msn'] = 'MSN';
+	$methods['twitter'] = 'Twitter (url)';
+	$methods['facebook'] = 'Facebook (url)';
+//	$methods['msn'] = 'MSN';
+	$methods['skype'] = 'Skype (url)';
+	$methods['googleplus'] = 'Google+ (url)';
 	return $methods;
 }
 
