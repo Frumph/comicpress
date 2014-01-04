@@ -24,6 +24,11 @@ function add_new_contactmethods($methods){
 //	$methods['msn'] = 'MSN';
 	$methods['skype'] = 'Skype (url)';
 	$methods['googleplus'] = 'Google+ (url)';
+	$methods['linkedin'] = 'LinkedIn (url)';
+	$methods['pinterest'] = 'Pinterest (url)';
+	$methods['stumbleupon'] = 'Stumbleupon (url)';
+	$methods['tumblr'] = 'Tumblr (url)';
+	$methods['instagram'] = 'Instagram (url)';
 	return $methods;
 }
 
