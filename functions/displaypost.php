@@ -106,7 +106,7 @@ if (!function_exists('comicpress_display_post_author')) {
 	function comicpress_display_post_author() {
 		global $post, $authordata;
 		if (!comicpress_themeinfo('disable_author_info_in_posts')) {
-			$post_author = "<span class=\"post-author\">".__('by','comicpress')." <a href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a></span>\r\n";
+			$post_author = '<span class="post-author">'.__('by','comicpress').' <a href="'.get_author_posts_url( $authordata->ID, $authordata->user_nicename ).'" rel="author">'.get_the_author().'</a></span>'."\r\n";
 			echo apply_filters('comicpress_display_post_author',$post_author);
 		}
 	}
