@@ -30,16 +30,15 @@ get_header();
 			$authorname = $curauth->user_login;
 	?>
 							<h2><?php echo $authorname; ?></h2><br />
-							<?php /* _e('Registered on','comicpress'); ?> <?php echo date('F d, Y', strtotime($curauth->user_registered)); */ ?><br />
+							<?php if (current_user_can('manage_options')) { ?>
+								<?php _e('Registered on','comicpress'); ?> <?php echo date('F d, Y', strtotime($curauth->user_registered)); ?><br />
+								<?php _e('Email:','comicpress'); ?> <a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a><br />
 							<br />
+							<?php } ?>
 							<?php if (!empty($curauth->user_url)) { ?><?php _e('Website:','comicpress'); ?> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->aim)) { ?><?php _e('AIM:','comicpress'); ?> <?php echo $curauth->aim; ?><br /><?php } ?>
-							<?php if (!empty($curauth->jabber)) { ?><?php _e('Jabber/Google Talk:','comicpress'); ?> <?php echo $curauth->jabber; ?><br /><?php } ?>
-							<?php if (!empty($curauth->yim)) { ?><?php _e('Yahoo IM:','comicpress'); ?> <?php echo $curauth->yim; ?><br /><?php } ?>
-							<?php if (!empty($curauth->twitter)) { ?><?php _e('Twitter:','comicpress'); ?> <a href="http://www.twitter.com/<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->facebook)) { ?><?php _e('Facebook:','comicpress'); ?> <a href="http://www.facebook.com/<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->msn)) { ?><?php _e('MSN:','comicpress'); ?> <?php echo $curauth->msn; ?><br /><?php } ?>
-
+							<?php if (!empty($curauth->twitter)) { ?><?php _e('Twitter:','comicpress'); ?> <a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->facebook)) { ?><?php _e('Facebook :','comicpress'); ?> <a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->googleplus)) { ?><?php _e('Google+ :','comicpress'); ?> <a href="<?php echo $curauth->googleplus; ?>" target="_blank"><?php echo $curauth->googleplus; ?></a><br /><?php } ?>
 						</div>
 						<?php if (!empty($curauth->description)) { ?>
 						<div class="userpage-desc">
