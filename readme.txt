@@ -29,6 +29,11 @@ Please read information and faqs on comiceasel.com for more information.
 * The home link .menu-item-home and the downarrows in the menubar can now all be skinned, i.e. replaced with your own images if you want to; I left examples inside the style.css for the home button
 * Calendar widget removed for ComicPress; since Comic Easel has one, will re-add in a newer version when I update it to the new WordPress code; otherwise it's a liability until then
 * Options to allow changing media content width in posts and pages
+* a couple spelling fixes
+* option to change the media width inside posts
+* fix for 2 column wide layouts having that extra wide sidebar (that was a bug)
+* random default avatar adjustments to work with facebook commenting / as user
+* a plethora of author page fixes/adjustments
 
 
 = 4.0.6 =
