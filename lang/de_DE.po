@@ -1,0 +1,2436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ComicPress 4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-07 23:34+0100\n"
+"PO-Revision-Date: 2014-01-08 23:42+0100\n"
+"Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
+"Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ easel
+#: 404.php:6
+msgid "Page Not Found"
+msgstr "Seite nicht gefunden"
+
+# @ easel
+#: 404.php:9
+msgid "Click here to return to the home page"
+msgstr "Klicke hier, um die Startseite aufzurufen "
+
+# @ easel
+#: 404.php:9
+msgid "or try a search:"
+msgstr "oder probiere eine Suche:"
+
+# @ easel
+#: archive-year.php:38 archive.php:67 search.php:18
+msgid "Permanent Link:"
+msgstr "Permalink:"
+
+# @ easel
+#: archive-year.php:43 content-page.php:20 functions/displaypost.php:266
+msgid "Edit this page."
+msgstr "Diese Seite bearbeiten."
+
+# @ easel
+#: archive.php:20 archive.php:24 archive.php:26 archive.php:28 archive.php:35
+#: archive.php:37 archive.php:40
+msgid "Archive for "
+msgstr "Archive für "
+
+# @ easel
+#: archive.php:22
+msgid "Posts Tagged "
+msgstr "Beiträge mit Schlagwort "
+
+# @ easel
+#: archive.php:30
+msgid "Author Archive "
+msgstr "Autorenarchiv "
+
+# @ easel
+#: archive.php:32
+msgid "Archives"
+msgstr "Archive"
+
+# @ easel
+#: archive.php:42
+msgid "Archive is unable to be found."
+msgstr "Archiv ist nicht zu finden."
+
+# @ easel
+#: archive.php:44
+msgid "No Archive Found."
+msgstr "Kein Archiv gefunden."
+
+# @ easel
+#: archive.php:47 archive.php:85 search.php:9
+#, php-format
+msgid "%d result."
+msgid_plural "%d results."
+msgstr[0] "%d Eintrag"
+msgstr[1] "%d Einträge"
+
+#: archive.php:56
+msgid "No Thumbnail or Featured Image Found"
+msgstr "Kein Vorschaubild oder Ausgewähltes Bild gefunden"
+
+# @ easel
+#: author.php:11
+msgid "No such author."
+msgstr "Dieser Autor existiert nicht!"
+
+# @ easel
+#: author.php:34
+msgid "Registered on"
+msgstr "Registriert am"
+
+# @ easel
+#: author.php:35
+msgid "Email:"
+msgstr "E-Mail:"
+
+# @ easel
+#: author.php:38
+msgid "Website:"
+msgstr "Homepage:"
+
+# @ easel
+#: author.php:39
+msgid "Twitter:"
+msgstr "Twitter:"
+
+# @ easel
+#: author.php:40
+msgid "Facebook :"
+msgstr "Facebook :"
+
+# @ easel
+#: author.php:41
+msgid "Google+ :"
+msgstr "Google+ :"
+
+# @ easel
+#: author.php:55
+msgid "Posts by"
+msgstr "Beiträge von"
+
+# @ easel
+#: comments.php:3
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Dieser Beitrag ist Passwort geschützt. Bite gebe Dein Passwort ein, um die "
+"Kommentar zu sehen."
+
+# @ easel
+#: comments.php:14
+msgid "Comments RSS"
+msgstr "Kommentar-RSS"
+
+# @ easel
+#: comments.php:15
+msgid "Discussion &not;"
+msgstr "Diskussion &not;"
+
+# @ easel
+#: comments.php:15
+msgid "Discussion (%) &not;"
+msgstr "Diskussion (%) &not;"
+
+# @ easel
+#: comments.php:44
+msgid "Reply &not;"
+msgstr "Antwort &not;"
+
+# @ easel
+#: comments.php:65
+msgid "Comment Pages"
+msgstr "Kommentar-Seiten"
+
+# @ easel
+#: comments.php:73
+msgid "Next Comments &uarr;"
+msgstr "Weitere Kommentare &uarr;"
+
+# @ easel
+#: comments.php:74
+msgid "&darr; Previous Comments"
+msgstr "&darr; Vorherige Kommentare"
+
+# @ easel
+#: comments.php:86
+msgid "*NAME"
+msgstr "*NAME"
+
+# @ easel
+#: comments.php:88
+msgid "*EMAIL"
+msgstr "*EMAIL"
+
+# @ easel
+#: comments.php:88
+msgid "Get a Gravatar"
+msgstr "Hole Dir einen Gravatar"
+
+# @ easel
+#: comments.php:90
+msgid "Website URL"
+msgstr "Webseite-URL"
+
+# @ easel
+#: comments.php:95
+msgid "NOTE - You can use these HTML tags and attributes: "
+msgstr "HINWEIS - Du kannst diese HTML-Tags und Attribute verwenden: "
+
+# @ easel
+#: comments.php:96
+msgid "Comment &not;"
+msgstr "Kommentar &not;"
+
+# @ easel
+#: comments.php:97
+#, php-format
+msgid "Reply to %s &not;"
+msgstr "Beantworte %s &not;"
+
+# @ easel
+#: comments.php:98
+msgid "Cancel reply"
+msgstr "Verwerfe Antwort"
+
+# @ easel
+#: comments.php:99
+msgid "Post Comment"
+msgstr "Sende Kommentar"
+
+# @ easel
+#: comments.php:105
+msgid "Comments are closed."
+msgstr "Kommentarfunktion ist gesperrt!"
+
+# @ easel
+#: content-aside.php:6 content-link.php:11 content.php:41
+msgid "Edit this post."
+msgstr "Diesen Beitrag bearbeiten."
+
+# @ easel
+#: content-comic.php:38
+msgid "Edit this comic."
+msgstr "Diesen Comic bearbeiten."
+
+# @ easel
+#: functions.php:62
+msgid "Primary"
+msgstr "Primär"
+
+# @ easel
+#: functions.php:63 functions.php:135 options/general.php:284
+msgid "Footer"
+msgstr "Footer"
+
+# @ easel
+#: functions.php:128
+msgid "Left Sidebar"
+msgstr "Linke Sidebar"
+
+# @ easel
+#: functions.php:128
+msgid "The sidebar that appears to the left of the content."
+msgstr "Diese Sidebar erscheint links der Inhalte."
+
+# @ easel
+#: functions.php:129
+msgid "Right Sidebar"
+msgstr "Rechte Sidebar"
+
+# @ easel
+#: functions.php:129
+msgid "The sidebar that appears to the right of the content."
+msgstr "Diese Sidebar erscheint rechts der Inhalte."
+
+# @ easel
+#: functions.php:130
+msgid "Above Header"
+msgstr "Über dem Header"
+
+# @ easel
+#: functions.php:130
+msgid ""
+"This sidebar appears to above all of the site information.  This sidebar is "
+"not encased in CSS, you will need to create CSS for it."
+msgstr ""
+"Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
+"Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
+
+# @ easel
+#: functions.php:131
+msgid "Header"
+msgstr "Header"
+
+# @ easel
+#: functions.php:131
+msgid "This sidebar appears inside the #header block."
+msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
+
+# @ easel
+#: functions.php:132 options.php:200 options/menubar.php:10
+msgid "Menubar"
+msgstr "Menüleiste"
+
+# @ easel
+#: functions.php:132
+msgid "This sidebar is under the header and above the content-wrapper block"
+msgstr ""
+"Diese Sidebar erscheint unter dem Header und über dem content-wrapper Block"
+
+# @ easel
+#: functions.php:133
+msgid "Over Blog"
+msgstr "Über dem Blog"
+
+# @ easel
+#: functions.php:133
+msgid "This sidebar appears over the blog within the #column .narrowcolumn"
+msgstr ""
+"Diese Sidebar erscheint über dem Blog innerhalb von #column .narrowcolumn"
+
+# @ easel
+#: functions.php:134
+msgid "Under Blog"
+msgstr "Unter dem Blog"
+
+# @ easel
+#: functions.php:134
+msgid "This sidebar appears under the blog within the #column .narrowocolumn"
+msgstr ""
+"Diese Sidebar erscheint unter dem Blog innerhalb von #column .narrowcolumn"
+
+#: functions.php:135
+msgid ""
+"This sidebar is at the bottom of the page and is the center of the 3 footer "
+"sidebars."
+msgstr ""
+"Diese Sidebar ist am unteren Rand von der Seite und ist die Mitte von den 3 "
+"Footer Sidebars."
+
+# @ easel
+#: functions.php:136
+msgid "Footer Left"
+msgstr "Footer Links"
+
+# @ easel
+#: functions.php:136
+msgid "This sidebar is at the bottom of the page, the left one."
+msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Linke. "
+
+# @ easel
+#: functions.php:137
+msgid "Footer Right"
+msgstr "Footer Rechts"
+
+# @ easel
+#: functions.php:137
+msgid "This sidebar is at the bottom of the page, the right one."
+msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Rechte."
+
+#: functions.php:140
+msgid "Jetpack Mobile Sidebar"
+msgstr "Jetpack Mobile Sidebar"
+
+# @ easel
+#: functions.php:184
+msgid " [&hellip;]"
+msgstr " [&hellip;]"
+
+# @ easel
+#: functions.php:184 functions/displaypost.php:213
+msgid "&darr; Read the rest of this entry..."
+msgstr "&darr; Lese den Rest dieses Eintrags ..."
+
+# @ easel
+#: functions.php:255
+msgid " my DeviantART"
+msgstr "Mein DeviantART"
+
+# @ easel
+#: functions.php:255 options/menubar.php:97
+msgid "DeviantART"
+msgstr "DeviantART"
+
+# @ easel
+#: functions.php:256
+msgid "Examine my Tumblr"
+msgstr "Überprüfe mein Tumblr"
+
+# @ easel
+#: functions.php:256 options/menubar.php:94
+msgid "Tumblr"
+msgstr "tumblr"
+
+# @ easel
+#: functions.php:257
+msgid "Friend on Facebook"
+msgstr "Freund auf Facebook"
+
+# @ easel
+#: functions.php:257 options/menubar.php:77
+msgid "Facebook"
+msgstr "Facebook"
+
+# @ easel
+#: functions.php:258
+msgid "Make use of MySpace"
+msgstr "Mache Gebrauch von MySpace"
+
+# @ easel
+#: functions.php:258 options/menubar.php:100
+msgid "MySpace"
+msgstr "MySpace"
+
+# @ easel
+#: functions.php:259
+msgid "Look at my LinkedIn"
+msgstr "Betrachte mein Linkedin"
+
+# @ easel
+#: functions.php:259 options/menubar.php:82
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+# @ easel
+#: functions.php:260
+msgid "Follow me on Twitter"
+msgstr "Folge mir auf Twitter"
+
+# @ easel
+#: functions.php:260 options/menubar.php:75
+msgid "Twitter"
+msgstr "Twitter"
+
+# @ easel
+#: functions.php:261
+msgid "Gaze at my Flickr"
+msgstr "Besuche mein Flickr"
+
+# @ easel
+#: functions.php:261 options/menubar.php:91
+msgid "Flickr"
+msgstr "Flickr"
+
+# @ easel
+#: functions.php:262
+msgid "Email me"
+msgstr "Maile mir"
+
+# @ easel
+#: functions.php:262
+msgid "Email"
+msgstr "E-Mail"
+
+# @ easel
+#: functions.php:263
+msgid "\"Circle me on Google+"
+msgstr "Circle mich auf Google+"
+
+# @ easel
+#: functions.php:263 options/menubar.php:79
+msgid "Google+"
+msgstr "Google+"
+
+# @ easel
+#: functions.php:264
+msgid "Peruse my Pinterests"
+msgstr "Durchstöbere mein Pinterests"
+
+# @ easel
+#: functions.php:264 options/menubar.php:85
+msgid "pinterest"
+msgstr "Pinterest"
+
+# @ easel
+#: functions.php:265
+msgid "View my YouTube-Channel"
+msgstr "Siehe meinen YouTube-Channel"
+
+# @ easel
+#: functions.php:265 options/menubar.php:88
+msgid "YouTube"
+msgstr "YouTube"
+
+# @ easel
+#: functions.php:266
+msgid "RSS Feed"
+msgstr "RSS-Feed"
+
+# @ easel
+#: functions.php:266 options/general.php:326
+msgid "RSS"
+msgstr "RSS"
+
+# @ easel
+#: functions.php:287 functions/breadcrumbs.php:6 functions/wp-pagenavi.php:165
+msgid "&raquo;"
+msgstr "&raquo;"
+
+# @ easel
+#: functions.php:295
+#, php-format
+msgid "Search Results: %s"
+msgstr "Suchergebnisse: %s"
+
+# @ easel
+#: functions.php:299
+#, php-format
+msgid "Page: %s"
+msgstr "Seite: %s"
+
+# @ easel
+#: functions.php:496
+msgid "Install Recommended Plugins"
+msgstr "Installiere Empfohlene Plugins"
+
+# @ easel
+#: functions.php:497 sidebar-right.php:13
+msgid "Recommended Plugins"
+msgstr "Empfohlene Plugins"
+
+#: functions.php:498 lib/class-tgm-plugin-activation.php:166
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Installieren von Plugin: %s"
+
+#: functions.php:499
+msgid "Something went wrong with the plugin API."
+msgstr "Etwas ging falsch mit der Plugin API."
+
+#: functions.php:500 lib/class-tgm-plugin-activation.php:168
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Dieses Theme erfordert das folgende Plugin: %1$s."
+msgstr[1] "Dieses Theme erfordert die folgenden Plugins: %1$s."
+
+#: functions.php:501 lib/class-tgm-plugin-activation.php:169
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Dieses Theme empfiehlt das folgende Plugin: %1$s."
+msgstr[1] "Dieses Theme empfiehlt die folgenden Plugins: %1$s."
+
+#: functions.php:502 lib/class-tgm-plugin-activation.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Installation des "
+"%s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu bekommen "
+"bei der Installation des Plugins."
+msgstr[1] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Installation der "
+"%s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu bekommen "
+"bei den Installationen der Plugins."
+
+#: functions.php:503 lib/class-tgm-plugin-activation.php:171
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Das folgende erforderliche Plugin ist derzeit inaktiv: %1$s."
+msgstr[1] "Die folgende erforderliche Plugins sind derzeit inaktiv: %1$s."
+
+#: functions.php:504 lib/class-tgm-plugin-activation.php:172
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Das folgende empfohlene Plugin ist derzeit inaktiv: %1$s."
+msgstr[1] "Die folgenden empfohlenen Plugins sind derzeit inaktiv: %1$s."
+
+#: functions.php:505 lib/class-tgm-plugin-activation.php:173
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Aktivierung des "
+"%s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu bekommen "
+"bei der Aktivierung des Plugins."
+msgstr[1] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Aktivierung der "
+"%s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu bekommen "
+"bei den Aktivierungen der Plugins."
+
+#: functions.php:506 lib/class-tgm-plugin-activation.php:174
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"Das folgende Plugin benötigt eine Aktualisierung auf die neueste Version, um "
+"maximale Kompatibilität mit diesem Theme zu gewährleisten: %1$s."
+msgstr[1] ""
+"Die folgenden Plugins benötigen eine Aktualisierung auf die neueste Version, "
+"um maximale Kompatibilität mit diesem Theme zu gewährleisten: %1$s."
+
+#: functions.php:507 lib/class-tgm-plugin-activation.php:175
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Aktualisierung "
+"des %s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu "
+"bekommen bei der Aktualisierung des Plugins."
+msgstr[1] ""
+"Sorry, aber Du hast nicht die richtige Berechtigung für die Aktualisierungen "
+"der %s Plugins. Kontaktiere den Administrator dieser Seite, um Hilfe zu "
+"bekommen bei den Aktualisierungen der Plugins."
+
+#: functions.php:508 lib/class-tgm-plugin-activation.php:176
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Beginne mit der Plugin Installation"
+msgstr[1] "Beginne mit den Plugin Installationen"
+
+#: functions.php:509 lib/class-tgm-plugin-activation.php:177
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] "Aktiviertes installiertes Plugin"
+msgstr[1] "Aktivierte installierte Plugins"
+
+#: functions.php:510 lib/class-tgm-plugin-activation.php:178
+#: lib/class-tgm-plugin-activation.php:489
+msgid "Return to Required Plugins Installer"
+msgstr "Zurück zum erforderlichen Plugins Installer"
+
+#: functions.php:511 lib/class-tgm-plugin-activation.php:179
+#: lib/class-tgm-plugin-activation.php:1845
+msgid "Plugin activated successfully."
+msgstr "Plugin erfolgreich aktiviert."
+
+#: functions.php:512
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Alle Plugins sind installiert und erfolgreich aktiviert. %s"
+
+# @ easel
+#: image.php:22
+msgid "&larr; Back to Gallery"
+msgstr "&larr; Zurück zur Galerie"
+
+# @ easel
+#: image.php:39
+msgid "Click for full size."
+msgstr "Klicke für Originalgröße."
+
+# @ easel
+#: image.php:52
+msgid "Edit this attachment."
+msgstr "Bearbeite diesen Anhang."
+
+# @ easel
+#: image.php:58
+msgid "Sorry, no image matched your criteria."
+msgstr "Tut uns leid, kein Bild entsprach deinen Suchkriterien."
+
+# @ easel
+#: options.php:6 functions/customize.php:26
+msgid "Options"
+msgstr "Optionen"
+
+# @ easel
+#: options.php:7 options.php:34
+msgid "ComicPress Options"
+msgstr "ComicPress Optionen"
+
+# @ easel
+#: options.php:35
+msgid ""
+"ComicPress is a modular theme that has an abundance of hooks and actions "
+"placed in it for additional usability. Ref: Comic Easel"
+msgstr ""
+"ComicPress ist ein modulares Theme, das eine Fülle von Hooks und Aktionen "
+"für zusätzliche Benutzerfreundlichkeit hat. Ref: Comic Easel"
+
+# @ easel
+#: options.php:36
+msgid ""
+"While ComicPress is an excellent stand-alone theme, it can be enhanced in "
+"usability with the associated plugins that have been built to utilize its "
+"functionality."
+msgstr ""
+"Obwohl ComicPress ist ein ausgezeichneter Stand-alone Themae ist, kann es "
+"verstärkt werden in der Brauchbarkeit mit den zugehörigen Plugins, die "
+"gebaut wurden, um seine Funktionalität zu nutzen."
+
+# @ easel
+#: options.php:47
+msgid "ComicPress Settings RESET!"
+msgstr "ComicPress Einstellungen ZURÜCKGESETZT!"
+
+# @ easel
+#: options.php:53
+msgid "ComicPress Customizer Colors RESET!"
+msgstr "ComicPress angepasste Farben ZURÜCKGESETZT!"
+
+# @ easel
+#: options.php:187
+msgid "ComicPress Settings SAVED!"
+msgstr "ComicPress Einstellungen GESICHERT!"
+
+# @ easel
+#: options.php:198 options/layout.php:22
+msgid "Layout"
+msgstr "Layout"
+
+# @ easel
+#: options.php:199 options/general.php:10
+msgid "General"
+msgstr "Allgemein"
+
+# @ easel
+#: options.php:201 options/debug.php:10
+msgid "Debug"
+msgstr "Debugger"
+
+#: options.php:202
+msgid "Help"
+msgstr "Hilfe"
+
+# @ easel
+#: options.php:244
+msgid "Developed and maintained by"
+msgstr "Entwickelt und gepflegt von"
+
+#: options.php:244
+msgid "Originally created by"
+msgstr "Ursprünglich erstellt von"
+
+# @ easel
+#: options.php:245
+msgid ""
+"If you like the ComicPress theme, please donate.  It will help in developing "
+"new features and versions."
+msgstr ""
+"Wenn Du das Theme ComicPress magst, spende bitte. Es wird bei der "
+"Entwicklung neuer Features und Versionen helfen."
+
+# @ easel
+#: search.php:8
+msgid "Search for &lsquo;"
+msgstr "Suche nach &lsquo;"
+
+# @ easel
+#: search.php:8
+msgid "&rsquo;"
+msgstr "&rsquo;"
+
+# @ easel
+#: search.php:37
+msgid "No results found."
+msgstr "Keine Ergebnisse gefunden"
+
+# @ easel
+#: search.php:38
+msgid "Try another search?"
+msgstr "Noch einmal suchen?"
+
+# @ easel
+#: searchform.php:2
+msgid "Search..."
+msgstr "Suche..."
+
+# @ easel
+#: sidebar-left.php:7 sidebar.php:7
+msgid ""
+"There are currently no widgets assigned to the left-sidebar, place some!"
+msgstr ""
+"Momentan sind für die linke Sidebar keine Widgets festgelegt. Füge welche "
+"hinzu!"
+
+# @ easel
+#: sidebar-left.php:9 sidebar-right.php:9 sidebar.php:9
+msgid ""
+"Once you add widgets to this sidebar, this default information will go away."
+msgstr ""
+"Sobald du in diese Sidebar ein Widget platzierst, verschwindet dieser "
+"Hinweis..."
+
+# @ easel
+#: sidebar-left.php:11 sidebar.php:11
+msgid ""
+"Widgets can be added by going to your dashboard (wp-admin) -> Appearance -> "
+"Widgets, drag a widget you want to see into one of the appropriate sidebars."
+msgstr ""
+"Widgets können via Dashboard -> Design -> Widgets hinzugefügt werden. Das "
+"funktioniert ganz einfach, indem du via Drag + Drop die Widgets aus dem "
+"Hauptbereich in die jeweilige Sidebar ziehst..."
+
+# @ easel
+#: sidebar-right.php:7
+msgid ""
+"There are currently no widgets assigned to the right-sidebar, place some!"
+msgstr ""
+"Für die rechte Sidebar wurden noch keine Widgets festgelegt. Platziere "
+"welche!"
+
+# @ easel
+#: sidebar-right.php:11
+msgid ""
+"This theme also uses the WordPress 3.0 Menu system.  You probably see the "
+"default stuff you have in the menubar.  Go to Appearance -> Menu in the wp-"
+"admin (dashboard) and create a new menu."
+msgstr ""
+"Dieses Theme benutzt auch das WordPress 3.0 Menüsystem. Du siehst "
+"möglicherweise die Standardangaben, die dir vorliegen, in der Menüleiste. "
+"Gehe zu  Design -> Menü im Dashboard (wp-admin) und erstelle ein neues Menü."
+
+# @ easel
+#: single.php:23
+msgid "Sorry, post is not found."
+msgstr "Tut uns leid, der Beitrag wurde nicht gefunden."
+
+# @ easel
+#: functions/breadcrumbs.php:7
+msgid "Home"
+msgstr "Zurück"
+
+# @ easel
+#: functions/breadcrumbs.php:26
+msgid "Archive by category"
+msgstr "Archiv der Kategorie"
+
+# @ easel
+#: functions/breadcrumbs.php:56
+msgid "No Results"
+msgstr "Kein Ergebnisse"
+
+# @ easel
+#: functions/breadcrumbs.php:83
+msgid "Search results for"
+msgstr "Suchergebnisse für"
+
+# @ easel
+#: functions/breadcrumbs.php:86
+msgid "Posts tagged"
+msgstr "Beiträge getaggt"
+
+# @ easel
+#: functions/breadcrumbs.php:91
+msgid "Articles posted by"
+msgstr "Artikel von"
+
+# @ easel
+#: functions/breadcrumbs.php:94
+msgid "Error 404"
+msgstr "Fehler 404"
+
+# @ easel
+#: functions/breadcrumbs.php:99
+msgid "Page"
+msgstr "Seite"
+
+# @ easel
+#: functions/comment-functions.php:128
+msgid "l, F jS Y, g:ia"
+msgstr "l, F jS Y, g:ia"
+
+# @ easel
+#: functions/comment-functions.php:129
+#, php-format
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+# @ easel
+#: functions/comment-functions.php:133
+msgid "Permalink to comment"
+msgstr "Permalink zum Kommentar"
+
+#: functions/comment-functions.php:133
+msgid "#"
+msgstr "#"
+
+# @ easel
+#: functions/comment-functions.php:139
+msgid "Reply"
+msgstr "Antworten"
+
+# @ easel
+#: functions/comment-functions.php:140
+msgid "Login to Reply"
+msgstr "Zum Antworten einloggen"
+
+# @ easel
+#: functions/comment-functions.php:148 functions/displaypost.php:240
+msgid "Edit"
+msgstr "Bearbeiten"
+
+# @ easel
+#: functions/comment-functions.php:151
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+# @ easel
+#: functions/copyright.php:8
+msgid "Powered by"
+msgstr "Präsentiert von"
+
+# @ easel
+#: functions/copyright.php:8
+msgid "with"
+msgstr "mit"
+
+# @ easel
+#: functions/copyright.php:17
+msgid "Back to Top &uarr;"
+msgstr "Nach oben &uarr;"
+
+# @ easel
+#: functions/copyright.php:35
+msgid "Hosted on"
+msgstr "Gehostet auf"
+
+# @ easel
+#: functions/copyright.php:47
+msgid "&copy;"
+msgstr "&copy;"
+
+#: functions/customize.php:28
+msgid "Background Colors"
+msgstr "Hintergrundfarben"
+
+#: functions/customize.php:28
+msgid "some description here"
+msgstr "Hier einige Beschreibungen"
+
+#: functions/customize.php:29
+msgid "Text Colors"
+msgstr "Textfarben"
+
+#: functions/customize.php:30
+msgid "Link Colors"
+msgstr "Linkfarben"
+
+# @ easel
+#: functions/customize.php:31
+msgid "Logo"
+msgstr "Logo"
+
+#: functions/customize.php:106
+msgid "Choose a default scheme."
+msgstr "Wählen ein Standard-Schema."
+
+#: functions/customize.php:123
+msgid "Rounded corners on Post/Page Navigation Sections"
+msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
+
+#: functions/customize.php:131
+msgid ""
+"Make the header title and description become a clickable hotspot for the "
+"entire header? (If you do the logo will not display right)"
+msgstr ""
+"Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
+"für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
+
+#: functions/customize.php:137
+msgid "Logo, 120px height x 160px width"
+msgstr "Logo, 120px hoch x 160px breit"
+
+#: functions/customize.php:143
+msgid "Put the Comic in the content column?"
+msgstr "Setze das Comic in die content column?"
+
+# @ easel
+#: functions/displaypost.php:109
+msgid "by"
+msgstr "von"
+
+# @ easel
+#: functions/displaypost.php:119
+msgid "on&nbsp;"
+msgstr "am&nbsp;"
+
+# @ easel
+#: functions/displaypost.php:129
+msgid "at&nbsp;"
+msgstr "um&nbsp;"
+
+# @ easel
+#: functions/displaypost.php:142
+msgid "and modified on"
+msgstr "und bearbeitet am"
+
+# @ easel
+#: functions/displaypost.php:143
+msgid "at"
+msgstr "um"
+
+# @ easel
+#: functions/displaypost.php:155
+msgid "Posted In: "
+msgstr "Veröffentlicht In:"
+
+# @ easel
+#: functions/displaypost.php:165
+msgid "&#9492; Tags: "
+msgstr "&#9492; Schlagwörter: "
+
+# @ easel
+#: functions/displaypost.php:176
+msgid "Comment&nbsp;"
+msgstr "Kommentar&nbsp;"
+
+# @ easel
+#: functions/displaypost.php:176
+msgid "Comment "
+msgstr "Kommentar "
+
+# @ easel
+#: functions/displaypost.php:176
+msgid "Comments "
+msgstr "Kommentare "
+
+# @ easel
+#: functions/displaypost.php:192
+msgid "&lsaquo; Prev"
+msgstr "&lsaquo; Vorheriger"
+
+# @ easel
+#: functions/displaypost.php:193
+msgid "Next &rsaquo;"
+msgstr "Nächster &rsaquo;"
+
+# @ easel
+#: functions/page-options.php:23
+msgid "Page Options"
+msgstr "Seiten Optionen"
+
+# @ easel
+#: functions/pagination.php:9
+msgid "Newer Entries &uarr;"
+msgstr "Neuere Einträge &uarr;"
+
+# @ easel
+#: functions/pagination.php:10
+msgid "&darr; Previous Entries"
+msgstr "&darr;  Ältere Einträge"
+
+# @ easel
+#: functions/wp-pagenavi.php:160
+msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
+msgstr "Seite %CURRENT_PAGE% von %TOTAL_PAGES%"
+
+# @ easel
+#: functions/wp-pagenavi.php:163
+msgid "&laquo; First"
+msgstr "&laquo; Erste"
+
+# @ easel
+#: functions/wp-pagenavi.php:164
+msgid "Last &raquo;"
+msgstr "Letzte &raquo;"
+
+# @ easel
+#: functions/wp-pagenavi.php:166
+msgid "&laquo;"
+msgstr "&laquo;"
+
+# @ easel
+#: functions/wp-pagenavi.php:167 functions/wp-pagenavi.php:168
+msgid "..."
+msgstr "..."
+
+#: lib/class-tgm-plugin-activation.php:164
+msgid "Install Required Plugins"
+msgstr "Erforderliche Plugins installieren"
+
+#: lib/class-tgm-plugin-activation.php:165
+msgid "Install Plugins"
+msgstr "Plugins installieren"
+
+#: lib/class-tgm-plugin-activation.php:167
+msgid "Something went wrong."
+msgstr "Irgendetwas ist schiefgegangen."
+
+#: lib/class-tgm-plugin-activation.php:180
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Alle Plugins sind installiert und erfolgreich aktiviert. %1$s"
+
+#: lib/class-tgm-plugin-activation.php:516
+#: lib/class-tgm-plugin-activation.php:2057
+msgid "Return to the Dashboard"
+msgstr "Zurück zum Dashboard"
+
+#: lib/class-tgm-plugin-activation.php:544
+#, php-format
+msgid "The following plugin was activated successfully: %s."
+msgstr "Das folgende Plugin wurde erfolgreich aktiviert: %s."
+
+#: lib/class-tgm-plugin-activation.php:703
+msgid "Dismiss this notice"
+msgstr "Ignoriere diese Notiz"
+
+# @ easel
+#: lib/class-tgm-plugin-activation.php:1090
+msgid "External Link"
+msgstr "Externer Link"
+
+#: lib/class-tgm-plugin-activation.php:1095
+msgid "Private Repository"
+msgstr "Privates Projektarchiv"
+
+#: lib/class-tgm-plugin-activation.php:1098
+msgid "Pre-Packaged"
+msgstr "Abgepackt"
+
+#: lib/class-tgm-plugin-activation.php:1102
+msgid "WordPress Repository"
+msgstr "WordPress Projektarchiv"
+
+#: lib/class-tgm-plugin-activation.php:1105
+msgid "Required"
+msgstr "Erforderlich"
+
+# @ easel
+#: lib/class-tgm-plugin-activation.php:1105
+msgid "Recommended"
+msgstr "Empfohlen"
+
+#: lib/class-tgm-plugin-activation.php:1108
+msgid "Not Installed"
+msgstr "Nicht Installiert"
+
+#: lib/class-tgm-plugin-activation.php:1110
+msgid "Installed But Not Activated"
+msgstr "Installiert aber nicht Aktiviert"
+
+#: lib/class-tgm-plugin-activation.php:1280
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Keine Plugins zum installieren oder aktivieren. <a href=\"%1$s\" title="
+"\"Zurück zum Dashboard\">Zurück zum Dashboard</a>"
+
+#: lib/class-tgm-plugin-activation.php:1296
+msgid "Plugin"
+msgstr "Plugin"
+
+#: lib/class-tgm-plugin-activation.php:1297
+msgid "Source"
+msgstr "Quelle"
+
+#: lib/class-tgm-plugin-activation.php:1298
+msgid "Type"
+msgstr "Typ"
+
+#: lib/class-tgm-plugin-activation.php:1299
+msgid "Status"
+msgstr "Status"
+
+#: lib/class-tgm-plugin-activation.php:1317
+msgid "Install"
+msgstr "Installieren"
+
+#: lib/class-tgm-plugin-activation.php:1318
+msgid "Activate"
+msgstr "Aktiviere"
+
+#: lib/class-tgm-plugin-activation.php:1543
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Das folgende Plugin wurde erfolgreich aktiviert:"
+msgstr[1] "Die folgenden Plugins wurden erfolgreich aktiviert:"
+
+#: lib/class-tgm-plugin-activation.php:1828
+msgid "Install package not available."
+msgstr "Installationspaket nicht verfügbar."
+
+#: lib/class-tgm-plugin-activation.php:1829
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+"Lade Installationspaket herunter von <span class=\"code\">%s</span>&#8230; "
+
+#: lib/class-tgm-plugin-activation.php:1830
+msgid "Unpacking the package&#8230;"
+msgstr "Entpacke das Paket&#8230;"
+
+#: lib/class-tgm-plugin-activation.php:1831
+msgid "Installing the plugin&#8230;"
+msgstr "Installiere das Paket&#8230;"
+
+#: lib/class-tgm-plugin-activation.php:1832
+msgid "Plugin install failed."
+msgstr "Plugin Installation ist fehlgeschlagen."
+
+#: lib/class-tgm-plugin-activation.php:1833
+msgid "Plugin installed successfully."
+msgstr "Plugin erfolgreich installiert."
+
+#: lib/class-tgm-plugin-activation.php:1844
+msgid "Plugin activation failed."
+msgstr "Plugin Aktivierung ist fehlgeschlagen."
+
+#: lib/class-tgm-plugin-activation.php:1954
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Der Installations- und Aktivierungsprozess beginnt. Dieser Vorgang kann auf "
+"einigen Hosts eine Weile dauern, bitte habe Geduld."
+
+#: lib/class-tgm-plugin-activation.php:1955
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installiert und erfolgreich aktiviert."
+
+#: lib/class-tgm-plugin-activation.php:1955
+#: lib/class-tgm-plugin-activation.php:1964
+msgid "Show Details"
+msgstr "Zeige Details"
+
+#: lib/class-tgm-plugin-activation.php:1955
+#: lib/class-tgm-plugin-activation.php:1964
+msgid "Hide Details"
+msgstr "Verstecke Details"
+
+#: lib/class-tgm-plugin-activation.php:1956
+msgid "All installations and activations have been completed."
+msgstr "Alle Installationen und Aktivierungen sind abgeschlossen."
+
+#: lib/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installieren und Aktivieren von Plugin %1$s (%2$d/%3$d)"
+
+#: lib/class-tgm-plugin-activation.php:1961
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Der Installationsvorgang wird gestartet. Dieser Vorgang kann auf einigen "
+"Hosts eine Weile dauern, bitte habe Geduld."
+
+#: lib/class-tgm-plugin-activation.php:1962
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Ein Fehler ist aufgetreten während der Installation von %1$s: <strong>%2$s</"
+"strong>."
+
+#: lib/class-tgm-plugin-activation.php:1963
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Die Installation von %1$s ist fehlgeschlagen."
+
+#: lib/class-tgm-plugin-activation.php:1964
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s erfolgreich installiert."
+
+#: lib/class-tgm-plugin-activation.php:1965
+msgid "All installations have been completed."
+msgstr "Alle Installationen sind abgeschlossen."
+
+#: lib/class-tgm-plugin-activation.php:1966
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installiere Plugin %1$s (%2$d/%3$d)"
+
+# @ easel
+#: options/debug.php:14
+msgid "Enable the debug page load/memory usage at the bottom of each page?"
+msgstr ""
+"Aktiviere die Debug-Seite Lade/Speichernutzung am unteren Rand jeder Seite?"
+
+# @ easel
+#: options/debug.php:19
+msgid ""
+"If enabled will show information on how many queries, memory is used as well "
+"as how fast the page loads."
+msgstr ""
+"Wenn diese Option aktiviert ist, werden Informationen gezeigt, wie viele "
+"Abfragen, Speichernuzung und auch wie schnell die Seite geladen wird."
+
+# @ easel
+#: options/debug.php:23
+msgid "Force MySQL to close the current active connection after page load?"
+msgstr ""
+"Zwinge MySQL, die aktuelle aktive Verbindung nach Laden der Seites zu "
+"schließen?"
+
+# @ easel
+#: options/debug.php:28
+msgid ""
+"This option forces mysql to close the connection after each page load - not "
+"recommended unless you are requested to enable it."
+msgstr ""
+"Diese Option zwingt MySQL die Verbindung nach jedem Laden einer Seite zu "
+"schliessen. Dies ist nicht empfohlen und sollte nur aktiviert werden, wenn "
+"Du danach gefragt wirst."
+
+# @ easel
+#: options/general.php:15
+msgid "How many blog posts would you like to display on the home page?"
+msgstr "Wie viele Blog Beiträge sollen auf der Hauptseite angezeigt werden?"
+
+# @ easel
+#: options/general.php:20
+msgid ""
+"How many blog posts you would like displayed on the index page at one time.  "
+"This is different then the one in the wp-admin - settings, the one in the "
+"settings will control how many show up on search and archive pages."
+msgstr ""
+"Wie viele Blog Beiträge sollen auf der Hauptseite angezeigt werden? Dies ist "
+"eine andere, als diejenige in den wp-admin Einstellungen, wo man in den "
+"Einstellungen festlegt, wie viele angezeigt werden, bis auf Such-und "
+"Archivseiten. "
+
+# @ easel
+#: options/general.php:24
+msgid "Disable Blog Loop"
+msgstr "Deaktiviere Blog Schleife"
+
+# @ easel
+#: options/general.php:29
+msgid ""
+"Enabling this option, will DISABLE the blog from appearing on the home page "
+"AND any pages set as the blog posts page in the settings - reading."
+msgstr ""
+"Aktivieren dieser Option, deaktiviert das Erscheinen als Blog auf der "
+"Homepage und alle Seiten werden als Blogbeitragsseiten eingesetellt in den "
+"Einstellungen > Lesen."
+
+# @ easel
+#: options/general.php:38
+msgid "Custom Header"
+msgstr "Benutzerdefinierter Header"
+
+#: options/general.php:42
+msgid "Custom Header Values"
+msgstr "Benutzerdefinierter Header Werte"
+
+#: options/general.php:44
+msgid "Width:"
+msgstr "Breite:"
+
+#: options/general.php:45
+msgid "Height:"
+msgstr "Höhe:"
+
+#: options/general.php:46
+msgid ""
+"Modify the height and width of the custom header *if* you use Appearance - "
+"Header"
+msgstr ""
+"Zum Modifizieren der Höhe und Breite von dem benutzerdefinierten Header "
+"*wenn* verwende Anpassen -> Kopfzeile "
+
+#: options/general.php:47
+msgid ""
+"3 Column Layouts are 980px width while 2 Column Layouts are 780px width as "
+"default."
+msgstr ""
+"Bei 3 Spaltenlayouts sind 980px Breite Standard, während bei 2 "
+"Spaltenlayouts 780px Breite Standard sind."
+
+#: options/general.php:48
+msgid ""
+"NOTE: This should only be used if the appearance - header section is not "
+"displaying your header dimensions correctly."
+msgstr ""
+"HINWEIS: Dieses sollte nur verwendet werden, wenn in dem Abschnitt Anpassen-"
+"> Kopfzeile dein Header nicht korrekt angezeigt wird."
+
+#: options/general.php:56
+msgid "Content Width"
+msgstr "Inhaltsbreite"
+
+#: options/general.php:61
+msgid "Media and images width on posts and pages?"
+msgstr "Breite von Medien und Bilder in Beiträgen und Seiten?"
+
+#: options/general.php:66
+msgid ""
+"This sets a specific width for WordPress to use for media content within "
+"your posts and pages.  Default = 500"
+msgstr ""
+"Dies legt eine bestimmte Breite für Wordpress fest, bei Verwendung von "
+"Medieninhalten in Deinen Beiträgen und Seiten. Standard = 500"
+
+#: options/general.php:71
+msgid "Media and images width when sidebars are disabled on pages?"
+msgstr ""
+"Breite von Medien und Bilder, wenn Sidebars auf Seiten deaktiviert sind?"
+
+#: options/general.php:76
+msgid "When the sidebars are disabled on pages?  Default = 700"
+msgstr "Wenn die Sidebar's auf den Seiten deaktiviert sind? Standard = 700"
+
+# @ easel
+#: options/general.php:84
+msgid "Pages"
+msgstr "Seiten"
+
+# @ easel
+#: options/general.php:88
+msgid "Disable the titles on pages"
+msgstr "Deaktiviere die Titel in Seiten"
+
+# @ easel
+#: options/general.php:93
+msgid ""
+"Page titles will be turned off.  If you disable the titles no pages you can "
+"still add a post-image in the page editor."
+msgstr ""
+"Seitentitel werden deaktiviert. Wenn du die Titel auf Seiten deaktivierst, "
+"kannst du im Seiteneditor ein Beitragsbild hizufügen."
+
+# @ easel
+#: options/general.php:101
+msgid "Posts"
+msgstr "Artikel"
+
+# @ easel
+#: options/general.php:105
+msgid "Disable the titles on posts"
+msgstr "Deaktiviere die Titel in Beiträgen"
+
+# @ easel
+#: options/general.php:110
+msgid ""
+"Post titles will be turned off.  If you disable the titles on posts can "
+"still add a post-image in the post editor."
+msgstr ""
+"Beitragstitel werden deaktiviert. Wenn du die Titel in Beiträgen "
+"deaktivierst, kannst du im Beitragseditor ein Beitragsbild hinzufügen."
+
+# @ easel
+#: options/general.php:114
+msgid "Add graphic calendar to blog posts"
+msgstr "Füge Kalendergrafik zu Blogbeiträgen hinzu "
+
+# @ easel
+#: options/general.php:119
+msgid ""
+"Enabling this option will display a calendar image on your blog posts. The "
+"graphic calendar is an image that has the date of the blog post overlayed on "
+"top of it."
+msgstr ""
+"Bei Aktivierung dieser Option, wird ein Kalenderbild bei Deinen Blogbeitägen "
+"angezeigt. Die Kalendergrafik ist ein Bild, welches durch das Datum des "
+"Blogbeitrages überlagert wird."
+
+# @ easel
+#: options/general.php:123
+msgid "Enable Author Gravatar"
+msgstr "Aktiviere Autoren Gravatar"
+
+# @ easel
+#: options/general.php:128
+msgid ""
+"Enabling this option will show a gravatar of the post author based on the "
+"author email address.  Gravatars are associated by your email address and "
+"you can create them at"
+msgstr ""
+"Bei Aktivierung dieser Option, wird ein Gravatar vom Beitragsautor "
+"angezeigt, basierend auf der Email-Adresse des Autors. Gravatare werden mit "
+"der Emailadresse assoziiert. Du kannst Gravatare erstellen auf"
+
+# @ easel
+#: options/general.php:132
+msgid "Enable Avatar Mod"
+msgstr "Aktiviere Avator Mod"
+
+# @ easel
+#: options/general.php:137
+msgid ""
+"With this enabled, the avatar's that are displayed will be jquery modified "
+"to look like polaroids randomly tilted."
+msgstr ""
+"Wenn aktiviert, werden die dargestellten Avatare durch jQuery etwas "
+"modifiziert und sehen dann wie zufällig benannte Polaroids aus."
+
+# @ easel
+#: options/general.php:141
+msgid "Disable display of <strong>tags</strong> in posts"
+msgstr "Deaktiviere Anzeige von <strong>Schlagwörtern</strong> in Beiträgen"
+
+# @ easel
+#: options/general.php:146
+msgid "Checkmarking this will make it so that tags will not appear in posts."
+msgstr ""
+"Durch markieren der Checkbox werden keine Schlagwörter in Beiträgen "
+"angezeigt."
+
+# @ easel
+#: options/general.php:150
+msgid "Disable display of <strong>categories</strong> in posts"
+msgstr "Deaktiviere Anzeige von <strong>Kategorien</strong> in Beiträgen"
+
+# @ easel
+#: options/general.php:155
+msgid ""
+"Checkmarking this will make it so that categories will not appear in posts."
+msgstr ""
+"Durch markieren der Checkbox werden keine Kategorien in Beiträgen angezeigt."
+
+# @ easel
+#: options/general.php:159
+msgid "Disable display of <strong>by Author</strong> in post information."
+msgstr "Deaktiviere Anzeige von <strong>Autor</strong> in Beitragsinformation."
+
+# @ easel
+#: options/general.php:164
+msgid ""
+"Checkmarking this will make it so that the by Author information will not "
+"appear in posts."
+msgstr ""
+"Durch markieren der Checkbox werden keine Autoreninformation in Beiträgen "
+"angezeigt."
+
+# @ easel
+#: options/general.php:168
+msgid "Disable display of the posted on date in posts"
+msgstr "Deaktiviere die Anzeige vom Datum des Postens in Beiträgen"
+
+# @ easel
+#: options/general.php:173
+msgid ""
+"Checkmarking this will make it so that posted on date information will not "
+"appear in posts."
+msgstr ""
+"Markieren der Checkbox, führt dazu das keine Informationen über das Datum "
+"des Postens angezeigt werden in den Beiträgen."
+
+# @ easel
+#: options/general.php:177
+msgid "Disable the display of the posted at time in posts"
+msgstr "Deaktiviere die Anzeige der Uhrzeit des Postens in Beiträgen"
+
+# @ easel
+#: options/general.php:182
+msgid ""
+"Checkmarking this will make it so that the information about what time the "
+"post was made will not show."
+msgstr ""
+"Markieren der Checkbox, führt dazu das keine Informationen über die Uhrzeit "
+"des Postens angezeigt werden in den Beiträgen."
+
+# @ easel
+#: options/general.php:186
+msgid "Enable the display of last modified information in posts."
+msgstr "Aktiviere die Anzeige der letzten Veränderung in Beiträgen."
+
+# @ easel
+#: options/general.php:191
+msgid ""
+"Checkmarking this will make it so that it will show when the last time that "
+"the post was modified in the post date information."
+msgstr ""
+"Wenn aktiv, wird angezeigt, ob ein Artikel noch mal geändert wurde - und "
+"auch wann."
+
+# @ easel
+#: options/general.php:199
+msgid "Comments"
+msgstr "Kommentare"
+
+# @ easel
+#: options/general.php:203
+msgid "Disable the comment notes"
+msgstr "Deaktiviere die Kommentar Notizen"
+
+# @ easel
+#: options/general.php:208
+msgid ""
+"Disabling this will remove the note text that displays with more options for "
+"adding to comments (html)."
+msgstr ""
+"Deaktivierung, entfernt die Anzeige des Hinweistextes mit mehr Optionen "
+"(html) zum hinzufügen zu den Kommentaren.  "
+
+# @ easel
+#: options/general.php:212
+msgid "Disable Comment Javascript"
+msgstr "Deaktiviere Kommentar Javascript"
+
+# @ easel
+#: options/general.php:217
+msgid ""
+"Checkmark this if you want the comment form to not use javascript to appear "
+"directly under who is being replied to. (increases pageviews/hits)"
+msgstr ""
+"Markiere die Checkbox, wenn Du das Kommentarformular dazu zwingen möchtest, "
+"kein Javascript direkt unter dem Antwortenden zu nutzen (erhöht Pageviews "
+"und Hits)"
+
+# @ easel
+#: options/general.php:221
+msgid "Enable Comments on Home Page"
+msgstr "Aktiviere Kommentare auf der Homepage"
+
+# @ easel
+#: options/general.php:226
+msgid ""
+"Checkmarking this option will make it so that the post(s) on the home page "
+"will also display the comments under them, This will ONLY work if you have "
+"it set to only display 1 post on the home page.  The post count and this "
+"must be set to work."
+msgstr ""
+"Markieren der Checkbox, führt dazu das in den Beitägen auf Deiner Homepage "
+"die Kommentare unter diesen angezeigt werden. Dies wird NUR funktionieren, "
+"wenn Du eingestellt hast, zeige1 Beitrag auf der Homepage. Die Anzahl der "
+"Postings und dieses müssen arbeiten."
+
+# @ easel
+#: options/general.php:245
+msgid "Avatar Directory"
+msgstr "Avatar Verzeichnis"
+
+# @ easel
+#: options/general.php:259
+msgid ""
+"Choose a directory to get the avatars for default gravatars if someone does "
+"not have one.  You will have to make these images yourself, or download them "
+"from avatar providers. Then make a new directory on your site server to "
+"upload them to and select that directory here. <strong>Setting this to "
+"'none' will disable it from using any special avatar sets.</strong>"
+msgstr ""
+"Wähle ein Verzeichnis für die Avatarbenutzung für Standardavatare, wenn "
+"jemand keinen Gravatar hat. Du musst diese Bilder selber erstellen, oder von "
+"einem Avatar Anbieter herunterladen. Dann machst Du ein neues Verzeichnis "
+"auf Deinem Webseiten Server, um sie hoch zu laden und wählst das Verzeichnis "
+"hier aus. <strong>Diese Einstellung auf 'none' deaktiviert die Verwendung "
+"von speziellen Avatar Sets. </strong>"
+
+# @ easel
+#: options/general.php:267
+msgid "Navigation"
+msgstr "Navigation"
+
+# @ easel
+#: options/general.php:271
+msgid "Enable numbered pagination"
+msgstr "Aktiviere Seitennummerierung"
+
+# @ easel
+#: options/general.php:276
+msgid ""
+"Previous Entries and Next Entries buttons are replaced by a bar of numbered "
+"pages. Numbered pagination appears on the Home page, the author(s) page, the "
+"blog template, and comments/single when there are more then the set number "
+"of comments per page. Uses the same styling as the Menubar."
+msgstr ""
+"Vorige und nächste Beiträge Buttons werden durch einen Balken mit "
+"nummerierten Seiten ersetzt.  Nummerierte Seitenzahlen erscheinen auf der "
+"Startseite, der Autor(en) Seite, der Blog-Vorlage, und Kommentare/Single ,"
+"wenn es mehr als die eingestellte Anzahl der Kommentare pro Seite sind. "
+"Benutzt die selbe Optik wie die Menüleiste."
+
+# @ easel
+#: options/general.php:288
+msgid "Disable the default text in the footer"
+msgstr "Deaktiviere den Standardtext im Footer"
+
+# @ easel
+#: options/general.php:293
+msgid ""
+"Default text in the footer will not display. Enable this if you do not want "
+"any text in the footer. If you wish to add you own custom content, you may "
+"do so via Appearance -> Widgets-> Footer."
+msgstr ""
+"Wenn aktiv, wird im Footer kein Text angezeigt. Wenn du deinen eigenen "
+"Footertext eingeben möchtest, kannst du das via Widgets -> Footer tun."
+
+# @ easel
+#: options/general.php:297
+msgid "Disable the scroll to top link in the footer?"
+msgstr "Deaktiviere den Nach-Oben-Link im Footer?"
+
+# @ easel
+#: options/general.php:302
+msgid "When this link is clicked on long pages it will scroll back to the top."
+msgstr ""
+"Wenn dieser Link angeklickt wird kannst Du auf langen Seiten zurück zum "
+"Seitenanfang springen."
+
+# @ easel
+#: options/general.php:306
+msgid "&copy; Copyright Name"
+msgstr "&copy; Copyright Name"
+
+# @ easel
+#: options/general.php:310
+msgid ""
+"Set the name to which this site is &copy; Copyright to, leave blank to have "
+"the site name."
+msgstr ""
+"Name festlegen, auf den das &copy; Copyright dieser Seite läuft. Leer "
+"lassen, um den Seitennamen zu verwenden."
+
+# @ easel
+#: options/general.php:314
+msgid "Copyright Holder URL"
+msgstr "Copyright-Inhaber URL"
+
+# @ easel
+#: options/general.php:318
+msgid ""
+"Set the URL to the owner of the &copy; Copyright if different then this "
+"website, leave blank for sites link."
+msgstr ""
+"Setze die URL von dem Besitzer des &copy; Urheberrechts von dieser Webseite, "
+"Leer lassen für Seitenlink."
+
+# @ easel
+#: options/general.php:330
+msgid "Enable the post thumbnails in the RSS feed?"
+msgstr "Artikelthumbnails im RSS-Feed aktivieren?"
+
+# @ easel
+#: options/general.php:335
+msgid "If enabled will show the post thumbnail of the post in the RSS feed."
+msgstr ""
+"Wenn aktiviert, wird das Beitrags Vorschaubild von dem Beitrag in dem RSS-"
+"Feed gezeigt."
+
+# @ easel
+#: options/general.php:342
+msgid "Archive & Search"
+msgstr "Archiv & Suche"
+
+# @ easel
+#: options/general.php:346
+msgid "Display archive results as a list of links?"
+msgstr "Zeige Archivergebnisse als eine  Liste von Links?"
+
+# @ easel
+#: options/general.php:351
+msgid ""
+"Enabling this will make the archive pages by date/category/term display as a "
+"list of links instead of full posts."
+msgstr ""
+"Wenn aktiviert, werden keine Artikel angezeigt, sondern nur die Titel "
+"derselben aufgelistet."
+
+# @ easel
+#: options/general.php:356
+msgid "Excerpt or Full Content in archive and search."
+msgstr "Auszug oder vollständiger Inhalt in Archiv und Suche."
+
+# @ easel
+#: options/general.php:363
+msgid ""
+"If Display archives results as list is disabled, decide how much is seen in "
+"the archive display. "
+msgstr ""
+"Wenn die Anzeige der Archiv Ergebnisse als Liste deaktiviert ist, "
+"entscheide, wieviele in der Archivanzeige  zu sehen sein sollen."
+
+# @ easel
+#: options/general.php:368
+msgid "Archive Display Order"
+msgstr "Archiv Darstellungsreihenfolge"
+
+# @ easel
+#: options/general.php:375
+msgid ""
+"Sets the display order of your archives. Newest to Oldest will display your "
+"posts starting with the most recent. Oldest to Newest will start with the "
+"first entry in the category, tag, or date range (e.g., Selecting May 20XX "
+"will start with May 1, not May 31st.)"
+msgstr ""
+"Hier stellst du die Anzeigen-Reihenfolge der Archive ein. Neueste nach "
+"älteste zeigt den aktuellsten Artikel ganz oben. Älteste nach neueste "
+"beginnt mit dem ersten Eintrag in einer Kategorie, einem Schlagwort, einem "
+"Datumsbereich usw..."
+
+#: options/help.php:4
+msgid "Welcome to ComicPress 4.0!"
+msgstr "Willkommen zu ComicPress 4.0! "
+
+#: options/help.php:6
+msgid "Thank you for using ComicPress!"
+msgstr "Danke Schön für das Benutzen von Comic Press!"
+
+#: options/help.php:7
+msgid ""
+"ComicPress 4.0 has more features, uses the Comic Easel plugin now and is "
+"more stable than ever to help you build an incredible WebComic website."
+msgstr ""
+"ComicPress 4.0 hat mehr Features jetzt, bei Verwendung des Comic Easel "
+"Plugins und ist stabiler als je zuvor. Es wird Dir helfen eine unglaubliche "
+"Webcomic Webseite zu bauen."
+
+#: options/help.php:17
+msgid "Fresh installation of Comic Easel and ComicPress"
+msgstr "Neuinstallation von Comic Easel und ComicPress"
+
+# @ easel
+#: options/help.php:19
+msgid ""
+"There is a video at the bottom of this page to help guide you with "
+"installation and usage."
+msgstr ""
+"Es gibt ein Video am unteren Rand dieser Seite, welches Dir bei der "
+"Installation und Nutzung hilft."
+
+#: options/help.php:21
+msgid "Migration Instructions"
+msgstr "Migration Anweisungen"
+
+#: options/help.php:23
+msgid "There are videos available at"
+msgstr "Es sind Videos verfügbar unter"
+
+#: options/help.php:23
+msgid "that show a migration."
+msgstr "welche eine Migration zeigen."
+
+#: options/help.php:26
+msgid "Deactivate ComicPress manager if you are using it."
+msgstr "Deaktiviere den ComicPress Manager, wenn er benutzt wird."
+
+#: options/help.php:27
+msgid ""
+"If you are using a child theme, activate the main ComicPress theme while "
+"migrating."
+msgstr ""
+"Wenn Du ein Child Theme benutzt, aktiviere das Haupt ComicPress Theme "
+"während der Migration."
+
+#: options/help.php:28
+msgid ""
+"Install and activate both the Comic Easel and CP2CE (ComicPress to Comic "
+"Easel) plugins."
+msgstr ""
+"Installiere und Aktiviere sowohl die Comic Easel und CP2CE (ComicPress zu "
+"Comic Easel) Plugins."
+
+#: options/help.php:29
+msgid ""
+"Make sure your comics folder is named comics and is directly off the root of "
+"your WordPress installation, that is where the CP2CE plugin is looking for "
+"the comics."
+msgstr ""
+"Stelle sicher das Dein Comic Ordner \"comics\" heißt und direkt in "
+"Stammverzeichnis der WordPress-Installation liegt, also da, wo das CP2CE "
+"Plugin nach den Comics sucht."
+
+#: options/help.php:30
+msgid ""
+"Go through all of your comics in wp-admin - posts - all posts.  Make sure "
+"all of your comics are set into only one category.   They can be different "
+"categories for each group of comics, but only one category set."
+msgstr ""
+"Gehe durch alle Deine Comics in wp-admin ->Beiträge ->alle Beiträge. Achte "
+"darauf, das alle Deine Comics in nur einer Kategorie eingestellt sind. Es "
+"können verschiedenen Kategorien für jede Gruppe von Comics sein, aber nur "
+"ein Kategorie Set."
+
+#: options/help.php:31
+msgid ""
+"Go to wp-admin - tools - export and make a backup of your current sites "
+"data.  (best if you use phpmyadmin from your hostings cpanel and do an .sql "
+"export of your database)"
+msgstr ""
+"Geh zu wp-admin ->Werkzeuge ->Export und mache eine Sicherungskopie von "
+"Deinen aktuellen Webseiten Daten. (Am besten ist, wenn Du phpmyadmin "
+"verwendest von Deinem Hostings cPanel und ein . sql Export Deiner Datenbank "
+"machst)"
+
+#: options/help.php:32
+msgid ""
+"Make sure Comic Easel is activated and go to wp-admin - Tools - CP2CE "
+"Migrator"
+msgstr ""
+"Stelle sicher das Comic Easel aktiviert ist und gehe zu wp-admin ->Werkzeuge "
+"->CP2CE Migrator"
+
+#: options/help.php:33
+msgid "Select one category at a time in the drop down."
+msgstr "Wählen eine Kategorie auf einmal in dem Drop-Down aus."
+
+#: options/help.php:34
+msgid ""
+"Choose how many comics to migrate at once. The first time you use it, select "
+"1 comic to migrate. Click the [Migrate!] button and it will refresh the page "
+"and give you information on the migration."
+msgstr ""
+"Wähle, wie viele Comics auf einmal zu migriert werden sollen. Bei Deiner "
+"ersten Verwendung, wähle 1 Comic zum migrieren aus. Klicke auf den "
+"[Migrate!] Button und es wird die Seite aktualisieren und Dir Informationen "
+"über die Migration geben"
+
+#: options/help.php:35
+msgid ""
+"If it looks like it could not find the comic to attach to the post, follow "
+"the Reverting a Migration steps and fix your comics location to the path the "
+"CP2CE plugin is looking for the comics in, then start over in the CP2CE."
+msgstr ""
+"Wenn es den Comic der am Beitrag angehängt ist nicht finden konnte, befolge "
+"die Schritte Wiederherstellen einer Migration und fixe deinen Comics Ort auf "
+"den Pfad, wo das CP2CE Plugin nach den Comics sucht, beginne erneut mit "
+"CP2CE."
+
+#: options/help.php:36
+msgid ""
+"If it looks successful and found the comic to attach to the post, start "
+"increasing the amount of comics to migrate at one time. 1-25 at a time for "
+"shared hostings.  25-50 for VPS hosting, 50-100 for dedicated servers with "
+"high memory availability."
+msgstr ""
+"Wenn es aussieht, das es erfolgreich war und das Comic als Anhang am Beitrag "
+"gefunden wurde, beginne mit der Erhöhung der Menge von Comics zur Migration "
+"auf einmal. 1-25 auf einmal für Shared Hostings. 25-50 für VPS-Hosting. "
+"50-100 für dedizierte Server mit hoher Speicherverfügbarkeit."
+
+#: options/help.php:37
+msgid ""
+"Once you are done with the migration, go to wp-admin - Comics -> Comics and "
+"check all of your comic posts, note if they have comics attached to them."
+msgstr ""
+"Wenn Du fertig bist mit der Migration, gehe zu wp-admin ->Comics -> Comics "
+"und überprüfen alle Deine Comic Beiträge, beachte ob die Comics mit ihnen "
+"verbunden sind."
+
+#: options/help.php:38
+msgid ""
+"Go to wp-admin - posts - categories and delete the OLD comic categories that "
+"you used to have.  Check the column to see if there are any comics you still "
+"need to migrate."
+msgstr ""
+"Gehe zu wp-admin ->Beiträge ->Kategorien und lösche die Alten Comic "
+"Kategorien, die Du verwendet hast. Überprüfe die Spalte, um zu sehen, ob "
+"irgendwelche Comics noch migriert werden müssen."
+
+#: options/help.php:39
+msgid ""
+"If all looks good, you have successfully migrated to using Comic Easel, "
+"congratulations!"
+msgstr ""
+"Wenn alles gut aussieht, hast Du erfolgreich zu Comic Easel migriert, "
+"gratuliere!"
+
+#: options/help.php:42
+msgid "Converting Child Theme Instructions"
+msgstr "Anleitung Child Theme Konvertierung"
+
+#: options/help.php:44
+msgid ""
+"Now that you have successfully migrated to Comic Easel, it is time to fix "
+"your child theme."
+msgstr ""
+"Jetzt hast Du erfolgreich migriert zu Comic Easel, es ist Zeit Dein Child "
+"Theme zu fixen."
+
+#: options/help.php:46
+msgid "Important things to note:"
+msgstr "Wichtige Dinge sind zu beachten:"
+
+#: options/help.php:48
+msgid ""
+"Any theme files, child-functions.php and functions.php all of those .php "
+"files will no longer be able to be used.  While this ComicPress is similar "
+"it is not the same. Remove them from your child theme - make backups of them "
+"to your local drive via FTP so you can reference them later.  The only file "
+"you should have left is the style.css in the child theme directory."
+msgstr ""
+"Alle Theme Dateien, child-und functions.php und functions.php alle von "
+"denen. php-Dateien kannst du nicht länger benutzen. Obwohl dieses ComicPress "
+"vergleichbar ist, ist es nicht identisch. Entferne das Child-Theme - mache "
+"eine Sicherungskopie davon auf die lokale Festplatte via FTP, so kannst du "
+"später darauf verweisen. Die einzige Datei, die Du hinterlassen solltest, "
+"ist die style.css in dem Child-Theme-Verzeichnis."
+
+#: options/help.php:49
+msgid ""
+"Some elements have changed (only a select few).  For example, .narrowcolumn "
+"width is now controlled by #content-column,  .uentry is used in place of ."
+"type-post, .type-comic, .type-page and handles all of those."
+msgstr ""
+"Einige Elemente haben sich geändert (nur ein paar Auserwählte). Zum "
+"Beispiel, .narrowcolumn Breite wird jetzt kontrolliert von #content-column, ."
+"uentry wird anstelle von .type-post, .type-comic, .type-page verwendet und "
+"behandelt alle von denen."
+
+#: options/help.php:50
+msgid ""
+"Use a browser based developement tool like firebug for Firefox or Chromes "
+"developement tools to point and click and find the CSS element you need."
+msgstr ""
+"Verwende ein Browser basiertes Entwicklungs-Tool wie Firebug für Firefox "
+"oder Chromes Entwicklungsumgebung zum suchen und anklicken und finde das CSS-"
+"Element, das Du brauchst."
+
+#: options/help.php:51
+msgid "If in doubt, contact me - Frumph and I will help you."
+msgstr ""
+"Wenn Du Zweifel hast, kontaktiere mich - Frumph und ich werden Dir helfen."
+
+#: options/help.php:55
+msgid "Yada Yada Notes"
+msgstr "Bla Bla Hinweise"
+
+#: options/help.php:57
+msgid ""
+"Do NOT migrate unless you are confident on its success, read EVERYTHING."
+msgstr ""
+"Migriere NICHT, wenn Du Dir nicht sicher bist, das Du erfolgreich sein "
+"wirst, lese ALLES."
+
+#: options/help.php:58
+msgid ""
+"ComicPress no longer supports ComicPress Manager, you can deactivate the "
+"plugin and delete it."
+msgstr ""
+"ComicPress unterstützt nicht länger mehr den ComicPress Manager, Du kannst "
+"das Plugin deaktivieren und löschen."
+
+#: options/help.php:59
+msgid ""
+"Frumph can help you migrate your ComicPress old version to this new version "
+"if you are stuck."
+msgstr ""
+"Frumph kann Dir helfen bei der Migration Deiner alten ComicPress Version zu "
+"dieser neuen Version, wenn Du stecken bleibst."
+
+#: options/help.php:60
+msgid ""
+"Your widgets are NOT lost, they are in the [inactive] section of the "
+"appearance - widgets area, just put them back into the sidebars you want "
+"them in."
+msgstr ""
+"Deine Widgets sind nicht verloren, sie sind in dem [inaktiv] Abschnitt von "
+"Design ->Widgets, Du brauchst sie nur noch zurück in die Sidebar setzen, wo "
+"Du sie hin haben möchtest."
+
+#: options/help.php:61
+msgid ""
+"It is still a good idea to use a child theme if you do customizations beyond "
+"what the customizer has."
+msgstr ""
+"Es ist immer noch eine gute Idee, ein Child Thema zu verwenden, wenn Deine "
+"Anpassungen über die Anpassungsfunktion hinaus gehen."
+
+#: options/help.php:62
+msgid "You can download a blank child theme on frumph.net."
+msgstr "Du kannst ein leeres Child Theme auf frumph.net herunterladen."
+
+#: options/help.php:63
+msgid ""
+"Each comic when added needs to be in a chapter, each chapter is considered "
+"an individual story. If you do not need chapters then create a chapter that "
+"is named something that encompasses all of of your comics."
+msgstr ""
+"Jedes hinzugefügte Comic benötigt ein Kapitel, jedes Kapitel ist eine "
+"individuelle Geschichte. Wenn Du keine Kapitel benötigst, erstelle ein "
+"bezeichnendes Kapitel, welches alle Deine Comics umfasst."
+
+#: options/help.php:64
+msgid "You cannot use comic as a slug for anything"
+msgstr "Du kannst Comic nicht als ein Slug für alles verwenden."
+
+#: options/help.php:65
+msgid ""
+"Slugs can not be strictly numerical, has to have some sort of alpha "
+"character in them."
+msgstr ""
+"Slugs können nicht streng nummerisch sein, sie müssen irgendeine Art von "
+"alphabetisches Zeichen in ihnen haben."
+
+#: options/help.php:66
+msgid ""
+"In the wp-admin - Themes section there is an area now for recommended "
+"plugins to use with ComicPress."
+msgstr ""
+"In dem wp-admin Themes Abschnitt gibt es jetzt einen Bereich für empfohlene "
+"Plugins, die du mit ComicPress nutzen kannst."
+
+#: options/help.php:67
+msgid ""
+"The configuration for comic options is in the wp-admin - Comics - Config are "
+"while the configuration for the theme is in wp-admin - Appearance - "
+"ComicPress Options"
+msgstr ""
+"Die Konfiguration für Comic Optionen ist in wp-admin ->Comics ->Config, "
+"während die Konfiguration für das Theme in wp-admin ->Design ->ComicPress "
+"Optionen ist."
+
+#: options/help.php:68
+msgid ""
+"You do NOT have to install all of the recommended plugins, just dismiss the "
+"message so you do not see it again."
+msgstr ""
+"Du musst NICHT alle von den empfohlenen Plugins installieren, einfach die "
+"Nachricht abweisen, und Du wirst diese nicht mehr sehen."
+
+#: options/help.php:69
+msgid ""
+"In the customizer, if you set a logo you should NOT use the checkbox in the "
+"Header Image to make the header title the hotspot."
+msgstr ""
+"In der Anpassungsfunktion, wenn Du ein Logo eingestellt hast, solltest Du "
+"NIEMALS in der Checkbox Kopfbild \"Macht den Header Titel zu Hotspot\" "
+"markieren."
+
+#: options/help.php:71
+msgid "Reverting a Migration"
+msgstr "Wiederherstellen einer Migration"
+
+#: options/help.php:73
+msgid "If you accidently migrated blog categories."
+msgstr "Wenn Du versehentlich Blog Kategorien migrierst."
+
+#: options/help.php:76
+msgid ""
+"Install and activate the Convert Post Types plugin from wp-admin - Themes - "
+"Recommended Plugins."
+msgstr ""
+"Installiere und aktiviere das Convent Post Types Plugin von wp-admin - "
+"Themes - Empfohlene Plugins."
+
+#: options/help.php:77
+msgid ""
+"Select the comic post type in the Convert From.. dropdown and set the "
+"Convert To.. dropdown to post."
+msgstr ""
+"Wähle den Comic Beitragstyp in Convert From.. Dropdown und setze den Convert "
+"To .. Dropdown zu Beitrag."
+
+#: options/help.php:78
+msgid ""
+"Click the [convert] button and it will set all of the things you migrated "
+"back to posts."
+msgstr ""
+"Klicke den [convert] Button und es werden alle Dinge, die du migriert hast, "
+"zurück zu den Beiträgen gesetzt."
+
+#: options/help.php:79
+msgid ""
+"NOTE: This WILL make it so that you lose all of your chapter/categories "
+"set.  So you will have to remake them."
+msgstr ""
+"HINWEIS: Das Macht es so, dass Du alles von Deinem Kapitel/Kategorien Set "
+"verlierst. Du musst diese erneuern."
+
+#: options/help.php:80
+msgid ""
+"Go to the media library and delete all of the comic images that it already "
+"migrated."
+msgstr ""
+"Gehe zu der Medienbibliothek und lösche alle von den Comic Bildern, die "
+"bereits migriert sind."
+
+#: options/help.php:81
+msgid "Start over with your migration."
+msgstr "Beginne mit Deiner Migration von vorn."
+
+# @ easel
+#: options/layout.php:27
+msgid "Choose Your Website Layout"
+msgstr "Wähle Dein Webseitenlayout"
+
+# @ easel
+#: options/layout.php:29
+msgid "3 Column - Standard"
+msgstr "3 Spalten - Standard"
+
+# @ easel
+#: options/layout.php:30
+msgid "3 Column - Sidebar's on Left"
+msgstr "3 Spalten - Sidebar's sind Links"
+
+# @ easel
+#: options/layout.php:31
+msgid "3 Column - Sidebar's on Right"
+msgstr "3 Spalten - Sidebar's sind Rechts"
+
+# @ easel
+#: options/layout.php:32
+msgid "2 Column - Sidebar on Left (780px)"
+msgstr "2 Spalten - Sidebar ist links (780px)"
+
+# @ easel
+#: options/layout.php:33
+msgid "2 Column - Sidebar on Right (780px)"
+msgstr "2 Spalten - Sidebar ist Rechts (780px) "
+
+# @ easel
+#: options/layout.php:34
+msgid "2 Column Wide - Sidebar on Left (980px)"
+msgstr "2 Spalten Breiter - Sidebar ist Links (980px) "
+
+# @ easel
+#: options/layout.php:35
+msgid "2 Column Wide - Sidebar on Right (980px)"
+msgstr "2 Spalten Breiter - Sidebar ist Rechts (980px) "
+
+# @ easel
+#: options/layout.php:36
+msgid "3 Column - Sidebar on Left, Sidebar on right under comic. "
+msgstr "3 Spalten - Sidebar ist Links, Sidebar ist Rechts unter Comic."
+
+# @ easel
+#: options/layout.php:37
+msgid "3 Column - Sidebar on Right, Sidebar on left under comic."
+msgstr "3 Spalten - Sidebar ist Rechts, Sidebar ist Links unter Comic."
+
+#: options/layout.php:49
+msgid ""
+"Schemes and customization can be modified in the appearance - customize "
+"section of the wp-admin"
+msgstr ""
+"Schemas und Anpassungen kannst Du modifizieren im wp-admin Bereich Design -> "
+"Anpassen"
+
+# @ easel
+#: options/menubar.php:14
+msgid "Disable default Menubar"
+msgstr "Deaktiviere Standard Menüleiste"
+
+# @ easel
+#: options/menubar.php:19
+msgid ""
+"Allows you to customize the location of the Menubar via Widgets or, just not "
+"have it."
+msgstr ""
+"Erlaubt dir, die Position der Menüleiste anzupassen - oder sie ganz "
+"wegzulassen."
+
+# @ easel
+#: options/menubar.php:23
+msgid "Enable Search Form"
+msgstr "Aktiviere Suchfeld"
+
+# @ easel
+#: options/menubar.php:28
+msgid "Searchforms can be fun when you have something to search for."
+msgstr "Suchfunktionen sind etwas Wunderbares, wenn es etwas zu suchen gibt."
+
+# @ easel
+#: options/menubar.php:32
+msgid "Enable RSS Link"
+msgstr "Aktiviere RSS-Link"
+
+# @ easel
+#: options/menubar.php:37
+msgid "Adds an RSS link icon to your menubar on the right side."
+msgstr ""
+"Fügt ein kleinen RSS-Link Icon in die Menüleiste auf der rechten Seite hinzu."
+
+# @ easel
+#: options/menubar.php:41
+msgid "Disable the menubar jQuery?"
+msgstr "Deaktiviere Menüleisten jQuery?"
+
+# @ easel
+#: options/menubar.php:46
+msgid ""
+"Disable the loading of the menubar jQuery.  If you do not want the "
+"ddsmoother menu code to load. (will not do drop downs without it)"
+msgstr ""
+"Verhindert das Laden der jQuery für die Menüleiste - wenn du z.B. keinen "
+"ddsmoother Menücode laden möchtest. Ohne diesen Code kannst du allerdings "
+"auch keine Dropdowns erzeugen."
+
+# @ easel
+#: options/menubar.php:51
+msgid "Enable Breadcrumbs?"
+msgstr "Aktiviere Breadcrumbs?"
+
+# @ easel
+#: options/menubar.php:56
+msgid ""
+"This will create a pathable breathcrumbs beneith the menubar underneith the "
+"default menubar location."
+msgstr ""
+"Erstellt nachvollziehbare Breadcrumbs in Nähe der Menüleiste, direkt unter "
+"der Standardmenübar Position."
+
+# @ easel
+#: options/menubar.php:64
+msgid "Menubar - Social Icons"
+msgstr "Menüleiste - Social Icons"
+
+# @ easel
+#: options/menubar.php:68
+msgid "Enable Social Icons in Menubar?"
+msgstr "Aktiviere Social Icons in der Menüleiste?"
+
+# @ easel
+#: options/menubar.php:73
+msgid ""
+"Adds additional social icons in the menubar on in the menunav area.  Put the "
+"entire http:// url in the input box that leads to your account on those "
+"sites.  Leave field empty if you do not have one and it will not show."
+msgstr ""
+"Fügt ein paar kleine Social Icons in die Menüleiste ein, wo auch die "
+"Navigation zu finden ist. Bitte füge in die jeweiligen Fenster die komplette "
+"URL inklusive http:// zu dem jeweiligen Profil ein. Wenn du das Feld leer "
+"lässt, wird kein betreffendes Icon angezeigt."
+
+# @ easel
+#: options/menubar.php:103
+msgid "Email - use mailto://your@email.com"
+msgstr "E-Mail - Verwende mailto://deine@mailadres.se"
+
+# @ easel
+#: widgets/classicbookmark.php:40
+msgid "Tag This Page"
+msgstr "Diese Seite taggen"
+
+# @ easel
+#: widgets/classicbookmark.php:112
+msgid ""
+"Creates a set of buttons that let the user return to the page they tagged."
+msgstr ""
+"Erstellt ein kleines Button-Set, das die Besucher zu getaggten Seiten "
+"zurückführen kann."
+
+# @ easel
+#: widgets/classicbookmark.php:113
+msgid "Classic Bookmark"
+msgstr "Klassisches Lesezeichen"
+
+# @ easel
+#: widgets/classicbookmark.php:136 widgets/controlpanel.php:68
+#: widgets/menubar.php:74 widgets/randompostlink.php:61
+#: widgets/scheduledposts.php:49 widgets/translator.php:44
+msgid "Title:"
+msgstr "Titel:"
+
+# @ easel
+#: widgets/controlpanel.php:13
+msgid ""
+"Login/Logoff menu with register/lost password links if not logged on. (use "
+"only if registrations are enabled)."
+msgstr ""
+"Login/Logout-Menü mit Registrieren-/Passwortverlust-Links anzeigen, wenn man "
+"nicht eingeloggt ist. (Nur benutzen, wenn auch Registrierungen erlaubt sind)."
+
+# @ easel
+#: widgets/controlpanel.php:14 widgets/controlpanel.php:51
+msgid "Control Panel"
+msgstr "Kontrollzentrum"
+
+# @ easel
+#: widgets/controlpanel.php:23
+msgid "Username"
+msgstr "Benutzername"
+
+# @ easel
+#: widgets/controlpanel.php:24
+msgid "Password"
+msgstr "Passwort"
+
+# @ easel
+#: widgets/controlpanel.php:30 widgets/controlpanel.php:32
+msgid "Register"
+msgstr "Registrieren"
+
+# @ easel
+#: widgets/controlpanel.php:34
+msgid "Recover password"
+msgstr "Passwort wiederherstellen"
+
+# @ easel
+#: widgets/controlpanel.php:38
+msgid "Logout"
+msgstr "Abmelden"
+
+# @ easel
+#: widgets/controlpanel.php:40
+msgid "Profile"
+msgstr "Profil"
+
+# @ easel
+#: widgets/menubar.php:48
+msgid "Displays a menubar."
+msgstr "Zeigt eine Menüleiste."
+
+#: widgets/menubar.php:49
+msgid "ComicPress Menubar"
+msgstr "ComicPress Menuleiste"
+
+# @ easel
+#: widgets/multisite-list.php:15
+msgid ""
+"Display Site List of all sites that have recently updated on this Multisite."
+msgstr ""
+"Zeigt eine Seitenliste aller Seiten, die auf dieser Multisite zuetzt "
+"aktualisiert wurden."
+
+# @ easel
+#: widgets/multisite-list.php:25
+msgid "Hosted Site List"
+msgstr "Liste gehosteter Seiten"
+
+# @ easel
+#: widgets/randompostlink.php:34
+msgid "Displays a link to click to trigger a random blog post."
+msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
+
+# @ easel
+#: widgets/randompostlink.php:35
+msgid "Random Post Link"
+msgstr "Link des zufälligen Beitrags"
+
+# @ easel
+#: widgets/randompostlink.php:46
+msgid "Random Post"
+msgstr "Zufälliger Beitrags"
+
+# @ easel
+#: widgets/scheduledposts.php:14
+msgid "Display a list of posts that are scheduled to be published."
+msgstr ""
+"Zeigt eine Liste von Beiträgen, die zur Veröffentlichung terminiert sind."
+
+# @ easel
+#: widgets/scheduledposts.php:15 widgets/scheduledposts.php:23
+msgid "Scheduled Posts"
+msgstr "Terminierte Beiträge"
+
+# @ easel
+#: widgets/translator.php:16
+msgid "Translate your site with Google."
+msgstr "Seite mit Google übersetzen."
+
+# @ easel
+#: widgets/translator.php:17
+msgid "Google Translator"
+msgstr "Google Übersetzer"
