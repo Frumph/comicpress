@@ -60,7 +60,7 @@ if (!function_exists('comicpress_display_post_title')) {
 if (!function_exists('comicpress_display_post_thumbnail')) {
 	function comicpress_display_post_thumbnail($size = 'thumbnail') {
 		global $post, $wp_query;
-		if ($post->post_type == 'post') {
+		if ($post->post_type !== 'comic') {
 			$post_thumbnail = '';
 			$link = get_post_meta( $post->ID, 'link', true );
 			if (empty($link)) $link = get_permalink();
