@@ -12,12 +12,6 @@ function comicpress_customize_body_class($classes = array()){
 	return $classes;
 }
 
-/*
-			<span class="customize-control-title" style="font-size: 14px; color: #21759B;"><?php echo esc_html( $this->label ); ?></span>
-			<?php if (isset( $this->description)) { ?>
-			<span class="customize-control-title" style="line-height: 16px; font-size: 11px; font-weight: 400;"><?php echo esc_html( $this->description); ?></span>
-*/
-
 function comicpress_customize_register( $wp_customize ) {
 	global $css_array;
 
