@@ -45,7 +45,7 @@
 		<table class="widefat" style="width: 100%">
 		<tr>
 			<td colspan="5">
-				Technical Support is available on the forums at <a href="http://forum.frumph.net" target="_blank">Frumph.NET forums</a>
+				Technical Support is available on the <a href="https://github.com/Frumph/comicpress/issues">github repository</a> or use the Contact form on <a href="http://frumph.net" target="_blank">Frumph.NET</a>
 			</td>
 		<tr>
 			<td>
