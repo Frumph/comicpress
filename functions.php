@@ -262,7 +262,7 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($email)) $output .= '<a href="'.$email.'" target="_blank" title="'.__('Email me','comicpress').'" class="menunav-social menunav-email">'.__('Email','comicpress').'</a>'."\r\n";
 		if (!empty($googleplus)) $output .= '<a href="'.$googleplus.'" target="_blank" title="'.__('Circle me on Google+','comicpress').'" class="menunav-social menunav-googleplus">'.__('Google+','comicpress').'</a>'."\r\n";
 		if (!empty($pinterest)) $output .= '<a href="'.$pinterest.'" target="_blank" title="'.__('Peruse my Pinterests','comicpress').'" class="menunav-social menunav-pinterest">'.__('pinterest','comicpress').'</a>'."\r\n";
-		if (!empty($youtube)) $output .= '<a href="'.$youtube.'" target="_blank" title="'.__('View my YouTube-Channel','comicpress').'" class="menunav-social menunav-youtube">'.__('YouTube','comicpress').'</a>'."\r\n";
+		if (!empty($youtube)) $output .= '<a href="'.$youtube.'" target="_blank" title="'.__('My Channel on YouTube','comicpress').'" class="menunav-social menunav-youtube">'.__('YouTube','comicpress').'</a>'."\r\n";
 		if (comicpress_themeinfo('enable_rss_in_menubar')) $output .= '<a href="'.get_bloginfo('rss2_url').'" target="_blank" title="'.__('RSS Feed','comicpress').'" class="menunav-social menunav-rss2">'.__('RSS','comicpress').'</a>'."\r\n";
 		$output .= '<div class="clear"></div>';
 		$output .= '</div>'."\r\n";
