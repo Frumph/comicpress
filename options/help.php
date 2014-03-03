@@ -63,7 +63,6 @@
 					<li><?php _e('Each comic when added needs to be in a chapter, each chapter is considered an individual story. If you do not need chapters then create a chapter that is named something that encompasses all of of your comics.','comicpress'); ?></li>
 					<li><?php _e('You cannot use comic as a slug for anything','comicpress'); ?></li>
 					<li><?php _e('Slugs can not be strictly numerical, has to have some sort of alpha character in them.','comicpress'); ?></li>
-					<li><?php _e('In the wp-admin - Themes section there is an area now for recommended plugins to use with ComicPress.','comicpress'); ?></li>
 					<li><?php _e('The configuration for comic options is in the wp-admin - Comics - Config are while the configuration for the theme is in wp-admin - Appearance - ComicPress Options','comicpress'); ?></li>
 					<li><?php _e('You do NOT have to install all of the recommended plugins, just dismiss the message so you do not see it again.','comicpress'); ?></li>
 					<li><?php _e('In the customizer, if you set a logo you should NOT use the checkbox in the Header Image to make the header title the hotspot.','comicpress'); ?></li>
