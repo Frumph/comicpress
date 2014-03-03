@@ -72,7 +72,7 @@
 				<strong><?php _e('If you accidently migrated blog categories.','comicpress'); ?></strong><br />
 				<ul>
 					<ol>
-						<li><?php _e('Install and activate the Convert Post Types plugin from wp-admin - Themes - Recommended Plugins.','comicpress'); ?></li>
+						<li><?php _e('Install and activate the Convert Post Types plugin from wp-admin - plugins - add new','comicpress'); ?></li>
 						<li><?php _e('Select the comic post type in the Convert From.. dropdown and set the Convert To.. dropdown to post.','comicpress'); ?></li>
 						<li><?php _e('Click the [convert] button and it will set all of the things you migrated back to posts.','comicpress'); ?></li>
 						<li><?php _e('NOTE: This WILL make it so that you lose all of your chapter/categories set.  So you will have to remake them.','comicpress'); ?></li>
