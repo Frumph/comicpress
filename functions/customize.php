@@ -16,7 +16,7 @@ function comicpress_customize_register( $wp_customize ) {
 	global $css_array;
 
 	$wp_customize->remove_section('colors');
-	$wp_customize->remove_section('title_tagline');
+//	$wp_customize->remove_section('title_tagline');
 	$wp_customize->add_section('comicpress-scheme-options' , array('title' => __('Options','comicpress'), 'priority' => 10));	
 //	$wp_customize->add_section('comicpress-background-colors' , array('title' => __('Background Colors','comicpress')));
 	$wp_customize->add_section('colors' , array('title' => __('Background Colors','comicpress'), 'description' => __('some description here','comicpress'), 'priority' => 20));
@@ -139,11 +139,12 @@ function comicpress_customize_register( $wp_customize ) {
 					'type'     => 'checkbox'
 					));
 	}
-/*	foreach ($css_array as $setting) {
-		$wp_customize->get_setting($setting['slug'])->transport='postMessage';
-	} */
+	foreach ($css_array as $setting) {
+		$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
+		$wp_customize->get_setting($setinfo_register_name)->transport='postMessage';
+	} 
 	if ($wp_customize->is_preview() && !is_admin())
-		add_action('wp_footer', 'comicpress_customize_preview');
+		add_action('wp_footer', 'comicpress_customize_preview'); 
 }
 
 function comicpress_customize_preview() {

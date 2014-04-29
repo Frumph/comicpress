@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-12-29 10:54:30+0000\n"
+"PO-Revision-Date: 2014-03-02 22:12:31+0000\n"
 "Last-Translator: frumph <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -105,29 +105,14 @@ msgstr ""
 msgid "No such author."
 msgstr ""
 
-#: author.php:33
+#: author.php:34
 #@ comicpress
 msgid "Registered on"
 msgstr ""
 
-#: author.php:35
-#@ comicpress
-msgid "Website:"
-msgstr ""
-
-#: author.php:36
-#@ comicpress
-msgid "AIM:"
-msgstr ""
-
-#: author.php:37
-#@ comicpress
-msgid "Jabber/Google Talk:"
-msgstr ""
-
 #: author.php:38
 #@ comicpress
-msgid "Yahoo IM:"
+msgid "Website:"
 msgstr ""
 
 #: author.php:39
@@ -135,17 +120,7 @@ msgstr ""
 msgid "Twitter:"
 msgstr ""
 
-#: author.php:40
-#@ comicpress
-msgid "Facebook:"
-msgstr ""
-
-#: author.php:41
-#@ comicpress
-msgid "MSN:"
-msgstr ""
-
-#: author.php:56
+#: author.php:55
 #@ comicpress
 msgid "Posts by"
 msgstr ""
@@ -255,7 +230,7 @@ msgstr ""
 
 #: functions/breadcrumbs.php:6
 #: functions/wp-pagenavi.php:165
-#: functions.php:292
+#: functions.php:287
 #@ comicpress
 msgid "&raquo;"
 msgstr ""
@@ -300,44 +275,44 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: functions/comment-functions.php:121
+#: functions/comment-functions.php:128
 #@ comicpress
 msgid "l, F jS Y, g:ia"
 msgstr ""
 
-#: functions/comment-functions.php:122
+#: functions/comment-functions.php:129
 #, php-format
 #@ comicpress
 msgid "%1$s, %2$s"
 msgstr ""
 
-#: functions/comment-functions.php:126
+#: functions/comment-functions.php:133
 #@ comicpress
 msgid "Permalink to comment"
 msgstr ""
 
-#: functions/comment-functions.php:126
+#: functions/comment-functions.php:133
 #@ comicpress
 msgid "#"
 msgstr ""
 
-#: functions/comment-functions.php:132
+#: functions/comment-functions.php:139
 #@ comicpress
 msgid "Reply"
 msgstr ""
 
-#: functions/comment-functions.php:133
+#: functions/comment-functions.php:140
 #@ comicpress
 msgid "Login to Reply"
 msgstr ""
 
-#: functions/comment-functions.php:141
+#: functions/comment-functions.php:148
 #: functions/displaypost.php:240
 #@ comicpress
 msgid "Edit"
 msgstr ""
 
-#: functions/comment-functions.php:144
+#: functions/comment-functions.php:151
 #@ comicpress
 msgid "Your comment is awaiting moderation."
 msgstr ""
@@ -367,58 +342,58 @@ msgstr ""
 msgid "&copy;"
 msgstr ""
 
-#: functions/customize.php:26
+#: functions/customize.php:20
 #: options.php:6
 #@ comicpress
 msgid "Options"
 msgstr ""
 
-#: functions/customize.php:28
+#: functions/customize.php:22
 #@ comicpress
 msgid "Background Colors"
 msgstr ""
 
-#: functions/customize.php:28
+#: functions/customize.php:22
 #@ comicpress
 msgid "some description here"
 msgstr ""
 
-#: functions/customize.php:29
+#: functions/customize.php:23
 #@ comicpress
 msgid "Text Colors"
 msgstr ""
 
-#: functions/customize.php:30
+#: functions/customize.php:24
 #@ comicpress
 msgid "Link Colors"
 msgstr ""
 
-#: functions/customize.php:31
+#: functions/customize.php:25
 #@ comicpress
 msgid "Logo"
 msgstr ""
 
-#: functions/customize.php:106
+#: functions/customize.php:100
 #@ comicpress
 msgid "Choose a default scheme."
 msgstr ""
 
-#: functions/customize.php:123
+#: functions/customize.php:117
 #@ comicpress
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr ""
 
-#: functions/customize.php:131
+#: functions/customize.php:125
 #@ comicpress
 msgid "Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)"
 msgstr ""
 
-#: functions/customize.php:137
+#: functions/customize.php:131
 #@ comicpress
 msgid "Logo, 120px height x 160px width"
 msgstr ""
 
-#: functions/customize.php:143
+#: functions/customize.php:137
 #@ comicpress
 msgid "Put the Comic in the content column?"
 msgstr ""
@@ -538,7 +513,7 @@ msgstr ""
 
 #: functions.php:63
 #: functions.php:135
-#: options/general.php:256
+#: options/general.php:284
 #@ comicpress
 msgid "Footer"
 msgstr ""
@@ -585,7 +560,7 @@ msgstr ""
 
 #: functions.php:132
 #: options/menubar.php:10
-#: options.php:198
+#: options.php:200
 #@ comicpress
 msgid "Menubar"
 msgstr ""
@@ -650,278 +625,142 @@ msgstr ""
 msgid " [&hellip;]"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:255
 #@ comicpress
 msgid " my DeviantART"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:255
 #: options/menubar.php:97
 #@ comicpress
 msgid "DeviantART"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:256
 #@ comicpress
 msgid "Examine my Tumblr"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:256
 #: options/menubar.php:94
 #@ comicpress
 msgid "Tumblr"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:257
 #@ comicpress
 msgid "Friend on Facebook"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:257
 #: options/menubar.php:77
 #@ comicpress
 msgid "Facebook"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:258
 #@ comicpress
 msgid "Make use of MySpace"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:258
 #: options/menubar.php:100
 #@ comicpress
 msgid "MySpace"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:259
 #@ comicpress
 msgid "Look at my LinkedIn"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:259
 #: options/menubar.php:82
 #@ comicpress
 msgid "LinkedIn"
 msgstr ""
 
-#: functions.php:265
+#: functions.php:260
 #@ comicpress
 msgid "Follow me on Twitter"
 msgstr ""
 
-#: functions.php:265
+#: functions.php:260
 #: options/menubar.php:75
 #@ comicpress
 msgid "Twitter"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:261
 #@ comicpress
 msgid "Gaze at my Flickr"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:261
 #: options/menubar.php:91
 #@ comicpress
 msgid "Flickr"
 msgstr ""
 
-#: functions.php:267
+#: functions.php:262
 #@ comicpress
 msgid "Email me"
 msgstr ""
 
-#: functions.php:267
+#: functions.php:262
 #@ comicpress
 msgid "Email"
 msgstr ""
 
-#: functions.php:268
-#@ comicpress
-msgid "Check me out on Google+"
-msgstr ""
-
-#: functions.php:268
+#: functions.php:263
 #: options/menubar.php:79
 #@ comicpress
 msgid "Google+"
 msgstr ""
 
-#: functions.php:269
+#: functions.php:264
 #@ comicpress
 msgid "Peruse my Pinterests"
 msgstr ""
 
-#: functions.php:269
+#: functions.php:264
 #: options/menubar.php:85
 #@ comicpress
 msgid "pinterest"
 msgstr ""
 
-#: functions.php:270
-#@ comicpress
-msgid "View my YouTube"
-msgstr ""
-
-#: functions.php:270
+#: functions.php:265
 #: options/menubar.php:88
 #@ comicpress
 msgid "YouTube"
 msgstr ""
 
-#: functions.php:271
+#: functions.php:266
 #@ comicpress
 msgid "RSS Feed"
 msgstr ""
 
-#: functions.php:271
-#: options/general.php:298
+#: functions.php:266
+#: options/general.php:326
 #@ comicpress
 msgid "RSS"
 msgstr ""
 
-#: functions.php:300
+#: functions.php:295
 #, php-format
 #@ comicpress
 msgid "Search Results: %s"
 msgstr ""
 
-#: functions.php:304
+#: functions.php:299
 #, php-format
 #@ comicpress
 msgid "Page: %s"
 msgstr ""
 
-#: functions.php:499
-#@ comicpress
-msgid "Install Recommended Plugins"
-msgstr ""
-
-#: functions.php:500
 #: sidebar-right.php:13
 #@ comicpress
 msgid "Recommended Plugins"
-msgstr ""
-
-#: functions.php:501
-#: lib/class-tgm-plugin-activation.php:166
-#, php-format
-#@ comicpress
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#: functions.php:502
-#@ comicpress
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#: functions.php:503
-#: lib/class-tgm-plugin-activation.php:168
-#, php-format
-#@ comicpress
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:504
-#: lib/class-tgm-plugin-activation.php:169
-#, php-format
-#@ comicpress
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:505
-#: lib/class-tgm-plugin-activation.php:170
-#, php-format
-#@ comicpress
-msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
-msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:506
-#: lib/class-tgm-plugin-activation.php:171
-#, php-format
-#@ comicpress
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:507
-#: lib/class-tgm-plugin-activation.php:172
-#, php-format
-#@ comicpress
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:508
-#: lib/class-tgm-plugin-activation.php:173
-#, php-format
-#@ comicpress
-msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
-msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:509
-#: lib/class-tgm-plugin-activation.php:174
-#, php-format
-#@ comicpress
-msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
-msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:510
-#: lib/class-tgm-plugin-activation.php:175
-#, php-format
-#@ comicpress
-msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
-msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:511
-#: lib/class-tgm-plugin-activation.php:176
-#@ comicpress
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:512
-#: lib/class-tgm-plugin-activation.php:177
-#@ comicpress
-msgid "Activate installed plugin"
-msgid_plural "Activate installed plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:513
-#: lib/class-tgm-plugin-activation.php:178
-#: lib/class-tgm-plugin-activation.php:489
-#@ comicpress
-msgid "Return to Required Plugins Installer"
-msgstr ""
-
-#: functions.php:514
-#: lib/class-tgm-plugin-activation.php:179
-#: lib/class-tgm-plugin-activation.php:1845
-#@ comicpress
-msgid "Plugin activated successfully."
-msgstr ""
-
-#: functions.php:515
-#, php-format
-#@ comicpress
-msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
 #: image.php:22
@@ -944,233 +783,8 @@ msgstr ""
 msgid "Sorry, no image matched your criteria."
 msgstr ""
 
-#: lib/class-tgm-plugin-activation.php:164
-#@ comicpress
-msgid "Install Required Plugins"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:165
-#@ comicpress
-msgid "Install Plugins"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:167
-#@ comicpress
-msgid "Something went wrong."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:180
-#, php-format
-#@ comicpress
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:516
-#: lib/class-tgm-plugin-activation.php:2057
-#@ comicpress
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:544
-#, php-format
-#@ comicpress
-msgid "The following plugin was activated successfully: %s."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:703
-#@ comicpress
-msgid "Dismiss this notice"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1090
-#@ comicpress
-msgid "External Link"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1095
-#@ comicpress
-msgid "Private Repository"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1098
-#@ comicpress
-msgid "Pre-Packaged"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1102
-#@ comicpress
-msgid "WordPress Repository"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1105
-#@ comicpress
-msgid "Required"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1105
-#@ comicpress
-msgid "Recommended"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1108
-#@ comicpress
-msgid "Not Installed"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1110
-#@ comicpress
-msgid "Installed But Not Activated"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1280
-#, php-format
-#@ comicpress
-msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1296
-#@ comicpress
-msgid "Plugin"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1297
-#@ comicpress
-msgid "Source"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1298
-#@ comicpress
-msgid "Type"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1299
-#@ comicpress
-msgid "Status"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1317
-#@ comicpress
-msgid "Install"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1318
-#@ comicpress
-msgid "Activate"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1543
-#@ comicpress
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/class-tgm-plugin-activation.php:1828
-#@ comicpress
-msgid "Install package not available."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1829
-#, php-format
-#@ comicpress
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1830
-#@ comicpress
-msgid "Unpacking the package&#8230;"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1831
-#@ comicpress
-msgid "Installing the plugin&#8230;"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1832
-#@ comicpress
-msgid "Plugin install failed."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1833
-#@ comicpress
-msgid "Plugin installed successfully."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1844
-#@ comicpress
-msgid "Plugin activation failed."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1954
-#@ comicpress
-msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1955
-#, php-format
-#@ comicpress
-msgid "%1$s installed and activated successfully."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1955
-#: lib/class-tgm-plugin-activation.php:1964
-#@ comicpress
-msgid "Show Details"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1955
-#: lib/class-tgm-plugin-activation.php:1964
-#@ comicpress
-msgid "Hide Details"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1956
-#@ comicpress
-msgid "All installations and activations have been completed."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1957
-#, php-format
-#@ comicpress
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1961
-#@ comicpress
-msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1962
-#, php-format
-#@ comicpress
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1963
-#, php-format
-#@ comicpress
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1964
-#, php-format
-#@ comicpress
-msgid "%1$s installed successfully."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1965
-#@ comicpress
-msgid "All installations have been completed."
-msgstr ""
-
-#: lib/class-tgm-plugin-activation.php:1966
-#, php-format
-#@ comicpress
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
 #: options/debug.php:10
-#: options.php:199
+#: options.php:201
 #@ comicpress
 msgid "Debug"
 msgstr ""
@@ -1196,7 +810,7 @@ msgid "This option forces mysql to close the connection after each page load - n
 msgstr ""
 
 #: options/general.php:10
-#: options.php:197
+#: options.php:199
 #@ comicpress
 msgid "General"
 msgstr ""
@@ -1256,267 +870,267 @@ msgstr ""
 msgid "NOTE: This should only be used if the appearance - header section is not displaying your header dimensions correctly."
 msgstr ""
 
-#: options/general.php:56
+#: options/general.php:84
 #@ comicpress
 msgid "Pages"
 msgstr ""
 
-#: options/general.php:60
+#: options/general.php:88
 #@ comicpress
 msgid "Disable the titles on pages"
 msgstr ""
 
-#: options/general.php:65
+#: options/general.php:93
 #@ comicpress
 msgid "Page titles will be turned off.  If you disable the titles no pages you can still add a post-image in the page editor."
 msgstr ""
 
-#: options/general.php:73
+#: options/general.php:101
 #@ comicpress
 msgid "Posts"
 msgstr ""
 
-#: options/general.php:77
+#: options/general.php:105
 #@ comicpress
 msgid "Disable the titles on posts"
 msgstr ""
 
-#: options/general.php:82
+#: options/general.php:110
 #@ comicpress
 msgid "Post titles will be turned off.  If you disable the titles on posts can still add a post-image in the post editor."
 msgstr ""
 
-#: options/general.php:86
+#: options/general.php:114
 #@ comicpress
 msgid "Add graphic calendar to blog posts"
 msgstr ""
 
-#: options/general.php:91
+#: options/general.php:119
 #@ comicpress
 msgid "Enabling this option will display a calendar image on your blog posts. The graphic calendar is an image that has the date of the blog post overlayed on top of it."
 msgstr ""
 
-#: options/general.php:95
+#: options/general.php:123
 #@ comicpress
 msgid "Enable Author Gravatar"
 msgstr ""
 
-#: options/general.php:100
+#: options/general.php:128
 #@ comicpress
 msgid "Enabling this option will show a gravatar of the post author based on the author email address.  Gravatars are associated by your email address and you can create them at"
 msgstr ""
 
-#: options/general.php:104
+#: options/general.php:132
 #@ comicpress
 msgid "Enable Avatar Mod"
 msgstr ""
 
-#: options/general.php:109
+#: options/general.php:137
 #@ comicpress
 msgid "With this enabled, the avatar's that are displayed will be jquery modified to look like polaroids randomly tilted."
 msgstr ""
 
-#: options/general.php:113
+#: options/general.php:141
 #@ comicpress
 msgid "Disable display of <strong>tags</strong> in posts"
 msgstr ""
 
-#: options/general.php:118
+#: options/general.php:146
 #@ comicpress
 msgid "Checkmarking this will make it so that tags will not appear in posts."
 msgstr ""
 
-#: options/general.php:122
+#: options/general.php:150
 #@ comicpress
 msgid "Disable display of <strong>categories</strong> in posts"
 msgstr ""
 
-#: options/general.php:127
+#: options/general.php:155
 #@ comicpress
 msgid "Checkmarking this will make it so that categories will not appear in posts."
 msgstr ""
 
-#: options/general.php:131
+#: options/general.php:159
 #@ comicpress
 msgid "Disable display of <strong>by Author</strong> in post information."
 msgstr ""
 
-#: options/general.php:136
+#: options/general.php:164
 #@ comicpress
 msgid "Checkmarking this will make it so that the by Author information will not appear in posts."
 msgstr ""
 
-#: options/general.php:140
+#: options/general.php:168
 #@ comicpress
 msgid "Disable display of the posted on date in posts"
 msgstr ""
 
-#: options/general.php:145
+#: options/general.php:173
 #@ comicpress
 msgid "Checkmarking this will make it so that posted on date information will not appear in posts."
 msgstr ""
 
-#: options/general.php:149
+#: options/general.php:177
 #@ comicpress
 msgid "Disable the display of the posted at time in posts"
 msgstr ""
 
-#: options/general.php:154
+#: options/general.php:182
 #@ comicpress
 msgid "Checkmarking this will make it so that the information about what time the post was made will not show."
 msgstr ""
 
-#: options/general.php:158
+#: options/general.php:186
 #@ comicpress
 msgid "Enable the display of last modified information in posts."
 msgstr ""
 
-#: options/general.php:163
+#: options/general.php:191
 #@ comicpress
 msgid "Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information."
 msgstr ""
 
-#: options/general.php:171
+#: options/general.php:199
 #@ comicpress
 msgid "Comments"
 msgstr ""
 
-#: options/general.php:175
+#: options/general.php:203
 #@ comicpress
 msgid "Disable the comment notes"
 msgstr ""
 
-#: options/general.php:180
+#: options/general.php:208
 #@ comicpress
 msgid "Disabling this will remove the note text that displays with more options for adding to comments (html)."
 msgstr ""
 
-#: options/general.php:184
+#: options/general.php:212
 #@ comicpress
 msgid "Disable Comment Javascript"
 msgstr ""
 
-#: options/general.php:189
+#: options/general.php:217
 #@ comicpress
 msgid "Checkmark this if you want the comment form to not use javascript to appear directly under who is being replied to. (increases pageviews/hits)"
 msgstr ""
 
-#: options/general.php:193
+#: options/general.php:221
 #@ comicpress
 msgid "Enable Comments on Home Page"
 msgstr ""
 
-#: options/general.php:198
+#: options/general.php:226
 #@ comicpress
 msgid "Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them, This will ONLY work if you have it set to only display 1 post on the home page.  The post count and this must be set to work."
 msgstr ""
 
-#: options/general.php:217
+#: options/general.php:245
 #@ comicpress
 msgid "Avatar Directory"
 msgstr ""
 
-#: options/general.php:231
+#: options/general.php:259
 #@ comicpress
 msgid "Choose a directory to get the avatars for default gravatars if someone does not have one.  You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. <strong>Setting this to 'none' will disable it from using any special avatar sets.</strong>"
 msgstr ""
 
-#: options/general.php:239
+#: options/general.php:267
 #@ comicpress
 msgid "Navigation"
 msgstr ""
 
-#: options/general.php:243
+#: options/general.php:271
 #@ comicpress
 msgid "Enable numbered pagination"
 msgstr ""
 
-#: options/general.php:248
+#: options/general.php:276
 #@ comicpress
 msgid "Previous Entries and Next Entries buttons are replaced by a bar of numbered pages. Numbered pagination appears on the Home page, the author(s) page, the blog template, and comments/single when there are more then the set number of comments per page. Uses the same styling as the Menubar."
 msgstr ""
 
-#: options/general.php:260
+#: options/general.php:288
 #@ comicpress
 msgid "Disable the default text in the footer"
 msgstr ""
 
-#: options/general.php:265
+#: options/general.php:293
 #@ comicpress
 msgid "Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance -> Widgets-> Footer."
 msgstr ""
 
-#: options/general.php:269
+#: options/general.php:297
 #@ comicpress
 msgid "Disable the scroll to top link in the footer?"
 msgstr ""
 
-#: options/general.php:274
+#: options/general.php:302
 #@ comicpress
 msgid "When this link is clicked on long pages it will scroll back to the top."
 msgstr ""
 
-#: options/general.php:278
+#: options/general.php:306
 #@ comicpress
 msgid "&copy; Copyright Name"
 msgstr ""
 
-#: options/general.php:282
+#: options/general.php:310
 #@ comicpress
 msgid "Set the name to which this site is &copy; Copyright to, leave blank to have the site name."
 msgstr ""
 
-#: options/general.php:286
+#: options/general.php:314
 #@ comicpress
 msgid "Copyright Holder URL"
 msgstr ""
 
-#: options/general.php:290
+#: options/general.php:318
 #@ comicpress
 msgid "Set the URL to the owner of the &copy; Copyright if different then this website, leave blank for sites link."
 msgstr ""
 
-#: options/general.php:302
+#: options/general.php:330
 #@ comicpress
 msgid "Enable the post thumbnails in the RSS feed?"
 msgstr ""
 
-#: options/general.php:307
+#: options/general.php:335
 #@ comicpress
 msgid "If enabled will show the post thumbnail of the post in the RSS feed."
 msgstr ""
 
-#: options/general.php:314
+#: options/general.php:342
 #@ comicpress
 msgid "Archive & Search"
 msgstr ""
 
-#: options/general.php:318
+#: options/general.php:346
 #@ comicpress
 msgid "Display archive results as a list of links?"
 msgstr ""
 
-#: options/general.php:323
+#: options/general.php:351
 #@ comicpress
 msgid "Enabling this will make the archive pages by date/category/term display as a list of links instead of full posts."
 msgstr ""
 
-#: options/general.php:328
+#: options/general.php:356
 #@ comicpress
 msgid "Excerpt or Full Content in archive and search."
 msgstr ""
 
-#: options/general.php:335
+#: options/general.php:363
 #@ comicpress
 msgid "If Display archives results as list is disabled, decide how much is seen in the archive display. "
 msgstr ""
 
-#: options/general.php:340
+#: options/general.php:368
 #@ comicpress
 msgid "Archive Display Order"
 msgstr ""
 
-#: options/general.php:347
+#: options/general.php:375
 #@ comicpress
 msgid "Sets the display order of your archives. Newest to Oldest will display your posts starting with the most recent. Oldest to Newest will start with the first entry in the category, tag, or date range (e.g., Selecting May 20XX will start with May 1, not May 31st.)"
 msgstr ""
@@ -1777,7 +1391,7 @@ msgid "Start over with your migration."
 msgstr ""
 
 #: options/layout.php:22
-#: options.php:196
+#: options.php:198
 #@ comicpress
 msgid "Layout"
 msgstr ""
@@ -1913,16 +1527,6 @@ msgstr ""
 msgid "ComicPress Options"
 msgstr ""
 
-#: options.php:35
-#@ comicpress
-msgid "ComicPress is a modular theme that has an abundant of hooks and actions placed in it for additional usability.  Ref: Comic Easel"
-msgstr ""
-
-#: options.php:36
-#@ comicpress
-msgid "While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize it's functionality."
-msgstr ""
-
 #: options.php:47
 #@ comicpress
 msgid "ComicPress Settings RESET!"
@@ -1933,27 +1537,27 @@ msgstr ""
 msgid "ComicPress Customizer Colors RESET!"
 msgstr ""
 
-#: options.php:185
+#: options.php:187
 #@ comicpress
 msgid "ComicPress Settings SAVED!"
 msgstr ""
 
-#: options.php:200
+#: options.php:202
 #@ comicpress
 msgid "Help"
 msgstr ""
 
-#: options.php:242
+#: options.php:244
 #@ comicpress
 msgid "Developed and maintained by"
 msgstr ""
 
-#: options.php:242
+#: options.php:244
 #@ comicpress
 msgid "Originally created by"
 msgstr ""
 
-#: options.php:243
+#: options.php:245
 #@ comicpress
 msgid "If you like the ComicPress theme, please donate.  It will help in developing new features and versions."
 msgstr ""
@@ -1984,17 +1588,20 @@ msgid "Search..."
 msgstr ""
 
 #: sidebar-left.php:7
+#: sidebar.php:7
 #@ comicpress
 msgid "There are currently no widgets assigned to the left-sidebar, place some!"
 msgstr ""
 
 #: sidebar-left.php:9
 #: sidebar-right.php:9
+#: sidebar.php:9
 #@ comicpress
 msgid "Once you add widgets to this sidebar, this default information will go away."
 msgstr ""
 
 #: sidebar-left.php:11
+#: sidebar.php:11
 #@ comicpress
 msgid "Widgets can be added by going to your dashboard (wp-admin) -> Appearance -> Widgets, drag a widget you want to see into one of the appropriate sidebars."
 msgstr ""
@@ -2012,96 +1619,6 @@ msgstr ""
 #: single.php:23
 #@ comicpress
 msgid "Sorry, post is not found."
-msgstr ""
-
-#. translators: Calendar caption: 1: month name, 2: 4-digit year
-#: widgets/calendar.php:97
-#, php-format
-#@ comicpress
-msgctxt "calendar caption"
-msgid "%1$s %2$s"
-msgstr ""
-
-#: widgets/calendar.php:98
-#@ comicpress
-msgid "Calendar"
-msgstr ""
-
-#: widgets/calendar.php:123
-#: widgets/calendar.php:131
-#, php-format
-#@ comicpress
-msgid "View posts for %1$s %2$s"
-msgstr ""
-
-#: widgets/calendar.php:247
-#@ comicpress
-msgid "Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)"
-msgstr ""
-
-#: widgets/calendar.php:248
-#@ comicpress
-msgid "ComicPress Calendar"
-msgstr ""
-
-#: widgets/calendar.php:270
-#@ comicpress
-msgid "DOWNLOAD"
-msgstr ""
-
-#: widgets/calendar.php:273
-#@ comicpress
-msgid "Download Small"
-msgstr ""
-
-#: widgets/calendar.php:273
-#@ comicpress
-msgid "S"
-msgstr ""
-
-#: widgets/calendar.php:274
-#@ comicpress
-msgid "Download Medium"
-msgstr ""
-
-#: widgets/calendar.php:274
-#@ comicpress
-msgid "M"
-msgstr ""
-
-#: widgets/calendar.php:275
-#@ comicpress
-msgid "Download Large"
-msgstr ""
-
-#: widgets/calendar.php:275
-#@ comicpress
-msgid "L"
-msgstr ""
-
-#: widgets/calendar.php:314
-#@ comicpress
-msgid "Thumbnail URL (178px by 130px):"
-msgstr ""
-
-#: widgets/calendar.php:315
-#@ comicpress
-msgid "Add link on thumbnails:"
-msgstr ""
-
-#: widgets/calendar.php:316
-#@ comicpress
-msgid "Wallpaper URL (Small):"
-msgstr ""
-
-#: widgets/calendar.php:317
-#@ comicpress
-msgid "Wallpaper URL (Medium):"
-msgstr ""
-
-#: widgets/calendar.php:318
-#@ comicpress
-msgid "Wallpaper URL (Large):"
 msgstr ""
 
 #: widgets/classicbookmark.php:40
@@ -2225,5 +1742,70 @@ msgstr ""
 #: widgets/translator.php:17
 #@ comicpress
 msgid "Google Translator"
+msgstr ""
+
+#: author.php:35
+#@ comicpress
+msgid "Email:"
+msgstr ""
+
+#: author.php:40
+#@ comicpress
+msgid "Facebook :"
+msgstr ""
+
+#: author.php:41
+#@ comicpress
+msgid "Google+ :"
+msgstr ""
+
+#: functions/wp-pagenavi.php:149
+#@ comicpress
+msgid "Go"
+msgstr ""
+
+#: functions.php:263
+#@ comicpress
+msgid "\"Circle me on Google+"
+msgstr ""
+
+#: functions.php:265
+#@ comicpress
+msgid "View my YouTube-Channel"
+msgstr ""
+
+#: options/general.php:56
+#@ comicpress
+msgid "Content Width"
+msgstr ""
+
+#: options/general.php:61
+#@ comicpress
+msgid "Media and images width on posts and pages?"
+msgstr ""
+
+#: options/general.php:66
+#@ comicpress
+msgid "This sets a specific width for WordPress to use for media content within your posts and pages.  Default = 500"
+msgstr ""
+
+#: options/general.php:71
+#@ comicpress
+msgid "Media and images width when sidebars are disabled on pages?"
+msgstr ""
+
+#: options/general.php:76
+#@ comicpress
+msgid "When the sidebars are disabled on pages?  Default = 700"
+msgstr ""
+
+#: options.php:35
+#@ comicpress
+msgid "ComicPress is a modular theme that has an abundance of hooks and actions placed in it for additional usability. Ref: Comic Easel"
+msgstr ""
+
+#: options.php:36
+#@ comicpress
+msgid "While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize its functionality."
 msgstr ""
 

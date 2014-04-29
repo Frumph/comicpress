@@ -68,7 +68,7 @@ function comicpress_setup() {
 		);
 	add_theme_support('custom-background', $args);
 	add_theme_support('post-thumbnails');
-	if (class_exists( 'Jetpack' ) && Jetpack::init()->is_module_active('infinite-scroll')) {
+	if (class_exists( 'Jetpack' )) {
 		add_theme_support('infinite-scroll', array(
 		 	'type'           => 'scroll',
 			'container'      => 'content',
