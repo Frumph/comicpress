@@ -5,7 +5,7 @@ ComicPress is a configurable theme, layouts to colors.
 It is primarily to be used with the Comic Easel plugin.
 
 
-ComicPress 4.0 -
+ComicPress 4.* -
 
 ComicPress now does not include comic running code, this is handled with the plugin Comic Easel.
 
@@ -14,6 +14,9 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+= 4.2 =
+* Information Being Compiled Now
+
 = 4.1 =
 * Added LGN and RGN (3 column) layouts back into ComicPress, layout-head.php and layout-foot.php updated
 * Fixed problem with customizer not setting defaults
