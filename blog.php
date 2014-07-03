@@ -4,19 +4,25 @@ Template Name: Blog
 */
 get_header();
 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $blog_query = array(
-		'paged' => get_query_var('paged'),
-		'post_type' => 'post'
+		'paged' => $paged,
+		'post_type' => 'post',
+		'in_the_loop' => true,
+		'posts_per_page' => comicpress_themeinfo('home_post_count')
 		);
 		
-$blogpage = new WP_Query(); $blogpage->query($blog_query);
-if ($blogpage->have_posts()) {
-	while ($blogpage->have_posts()) : $blogpage->the_post();
+$wp_query = new WP_Query(); $wp_query->query($blog_query);
+if (have_posts()) {
+	while (have_posts()) : the_post();
 		$withcomment = 0;
 		get_template_part('content', get_post_format());
 	endwhile;
 	comicpress_pagination();
 }
+
+wp_reset_query();
 
 get_footer();
 
