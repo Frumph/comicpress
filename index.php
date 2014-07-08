@@ -1,4 +1,5 @@
-<?php get_header();
+<?php 
+get_header();
 
 if (!comicpress_themeinfo('disable_blog_on_homepage')) {
 	
