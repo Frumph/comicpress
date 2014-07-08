@@ -68,13 +68,6 @@ function comicpress_setup() {
 		);
 	add_theme_support('custom-background', $args);
 	add_theme_support('post-thumbnails');
-	if (class_exists( 'Jetpack' )) {
-		add_theme_support('infinite-scroll', array(
-		 	'type'           => 'scroll',
-			'container'      => 'content',
-			'posts_per_page' => comicpress_themeinfo('home_post_count')
-		) );
-	}
 	add_theme_support( 'woocommerce' ); // PMH
 }
 
@@ -370,11 +363,13 @@ function comicpress_load_options() {
 			'menubar_social_email' => '',
 			'enable_jetpack_infinite_scrolling' => false,
 			'content_width' => 500,
-			'content_width_disabled_sidebars' => 700
+			'content_width_disabled_sidebars' => 700,
+			'add_pw_async_code_to_head' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
-		update_option('cp-options', $comicpress_options);
+//		update_option('cp-options', $comicpress_options);
+//		Cannot save to the database unless you click the save button in options
 	}
 	return $comicpress_options;
 }

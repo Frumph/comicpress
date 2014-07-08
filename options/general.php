@@ -29,6 +29,16 @@
 						<?php _e('Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings - reading.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr>
+					<?php if (!isset($comicpress_options['add_pw_async_code_to_head'])) $comicpress_options['add_pw_async_code_to_head'] = false; ?>
+					<th scope="row"><label for="add_pw_async_code_to_head"><?php _e('Enable Project Wonderful Asyncronus code?','comicpress'); ?></label></th>
+					<td>
+						<input id="add_pw_async_code_to_head" name="add_pw_async_code_to_head" type="checkbox" value="1" <?php checked(true, $comicpress_options['add_pw_async_code_to_head']); ?> />
+					</td>
+					<td>
+						<?php _e('This option places the Project Wonderful asyncronus code into the header of the site.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			

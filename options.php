@@ -55,7 +55,7 @@ function comicpress_admin_options() { ?>
 	if (empty($comicpress_options)) { 
 		comicpress_themeinfo('reset');
 	}
-	$comicpress_options = get_option('cp-options');
+	$comicpress_options = comicpress_load_options();
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
 		if ($_REQUEST['action'] == 'comicpress_save_help') {
@@ -159,7 +159,8 @@ function comicpress_admin_options() { ?>
 			'facebook_meta',
 			'display_archive_as_links',
 			'enable_last_modified_in_posts',
-			'disable_posted_at_time_in_posts'
+			'disable_posted_at_time_in_posts',
+			'add_pw_async_code_to_head'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
@@ -189,7 +190,7 @@ function comicpress_admin_options() { ?>
 		<?php }
 	} 
 	$version = comicpress_themeinfo('version');
-	$comicpress_options = get_option('cp-options');
+	$comicpress_options = comicpress_load_options();
 	?>
 	<div id="poststuff" class="metabox-holder">
 		<div id="eadmin">
