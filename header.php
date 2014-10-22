@@ -28,4 +28,3 @@ if (!comicpress_themeinfo('disable_default_menubar') && function_exists('comicpr
 if (comicpress_themeinfo('enable_breadcrumbs')) comicpress_breadcrumbs();
 comicpress_get_sidebar('menubar');
 get_template_part('layout', 'head');
-?>
