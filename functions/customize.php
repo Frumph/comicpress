@@ -12,6 +12,14 @@ function comicpress_customize_body_class($classes = array()){
 	return $classes;
 }
 
+function comicpress_sanitize_checkbox( $input ) {
+    if ( $input == 1 ) {
+        return 1;
+    } else {
+        return false;
+    }
+}
+
 function comicpress_customize_register( $wp_customize ) {
 	global $css_array;
 
@@ -84,7 +92,7 @@ function comicpress_customize_register( $wp_customize ) {
 	$priority_value = 11;
 	foreach ($css_array as $setinfo) {
 		$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
-		$wp_customize->add_setting($setinfo_register_name, array('default' => ''));
+		$wp_customize->add_setting($setinfo_register_name, array('default' => '', 'sanitize_callback' => 'sanitize_hex_color'));
 		$wp_customize->add_control(
 				new WP_Customize_Color_Control(
 					$wp_customize,
@@ -95,7 +103,7 @@ function comicpress_customize_register( $wp_customize ) {
 		$priority_value++;
 	}
 	
-	$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'boxed'));
+	$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'boxed', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 	$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
 				'label' => __('Choose a default scheme.','comicpress'),
 				'settings' => 'comicpress-customize-select-scheme',
@@ -111,7 +119,7 @@ function comicpress_customize_register( $wp_customize ) {
 					)
 				)); 
 	
-	$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false));
+	$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 	$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 				'settings' => 'comicpress-customize-checkbox-rounded',
 				'label'    => __( 'Rounded corners on Post/Page Navigation Sections','comicpress'),
@@ -119,7 +127,7 @@ function comicpress_customize_register( $wp_customize ) {
 				'type'     => 'checkbox'
 				));
 				
-	$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false));
+	$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false, 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 	$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 				'settings' => 'comicpress-customize-checkbox-header-hotspot',
 				'label'    => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)','comicpress'),
@@ -127,11 +135,11 @@ function comicpress_customize_register( $wp_customize ) {
 				'type'     => 'checkbox'
 				));
 				
-	$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => ''));
+	$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => '', 'sanitize_callback' => 'esc_url_raw'));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 
 	if (function_exists('ceo_pluginfo')) {
-		$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false));
+		$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false, 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-comic-in-column-control', array(
 					'settings' => 'comicpress-customize-comic-in-column',
 					'label'    => __('Put the Comic in the content column?','comicpress'),
