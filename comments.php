@@ -10,9 +10,9 @@ if (!comments_open() && !get_comments_number()) {
 }
 ?>
 <div id="comment-wrapper">
-<?php if (comments_open() && (get_comments_number() > 0)) { ?> 
+<?php if (comments_open()) { ?> 
 	<div class="commentsrsslink"><?php post_comments_feed_link(__('Comments RSS', 'comicpress')); ?></div>
-	<h3 id="comments"><?php comments_number(__('Discussion &not;','comicpress'), __('Discussion &not;','comicpress'), __('Discussion (%) &not;','comicpress') );?></h3>
+	<h4 id="comments"><?php comments_number(__('Discussion &not;','comicpress'), __('Discussion &not;','comicpress'), __('Discussion (%) &not;','comicpress') );?></h4>
 <?php } 
 if ( isset($comments_by_type['pings']) && (!isset($wp_query->query_vars['cpage']) || ((int)$wp_query->query_vars['cpage'] < 2))&& (count($comments_by_type['pings']) > 0)) { ?>
 		<div id="pingtrackback-wrap">
