@@ -98,6 +98,8 @@ function comicpress_enqueue_theme_scripts() {
 
 function comicpress_init() {
 	add_action('pre_get_posts', 'comicpress_pre_parser', 1, 1);
+	// Don't let WordPress recompress images.
+	add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
 }
 
 function comicpress_pre_parser($query) {
