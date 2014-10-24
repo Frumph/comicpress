@@ -158,7 +158,8 @@ function comicpress_admin_options() { ?>
 			'display_archive_as_links',
 			'enable_last_modified_in_posts',
 			'disable_posted_at_time_in_posts',
-			'add_pw_async_code_to_head'
+			'add_pw_async_code_to_head',
+			'over-blog-sidebar-all-posts'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );

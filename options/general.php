@@ -39,6 +39,15 @@
 						<?php _e('This option places the Project Wonderful asyncronus code into the header of the site.','comicpress'); ?>
 					</td>
 				</tr>
+				<tr class="alternate">
+					<th scope="row"><label for="over-blog-sidebar-all-posts"><?php _e('Allow the sidebar over-blog to appear on all posts?','comicpress'); ?></label></th>
+					<td>
+						<input id="over-blog-sidebar-all-posts" name="over-blog-sidebar-all-posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['over-blog-sidebar-all-posts']); ?> />
+					</td>
+					<td>
+						<?php _e('Sidebar Over-Blog appears on all posts not just the front page/blog loop when enabled.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			
