@@ -27,7 +27,7 @@ function comicpress_customize_register( $wp_customize ) {
 //	$wp_customize->remove_section('title_tagline');
 	$wp_customize->add_section('comicpress-scheme-options' , array('title' => __('Options','comicpress'), 'priority' => 10));	
 //	$wp_customize->add_section('comicpress-background-colors' , array('title' => __('Background Colors','comicpress')));
-	$wp_customize->add_section('colors' , array('title' => __('Background Colors','comicpress'), 'description' => __('some description here','comicpress'), 'priority' => 20));
+	$wp_customize->add_section('colors' , array('title' => __('Background Colors','comicpress'), 'description' => __('Background Colors','comicpress'), 'priority' => 20));
 	$wp_customize->add_section('comicpress-text-colors' , array('title' => __('Text Colors','comicpress'), 'priority' => 30));	
 	$wp_customize->add_section('comicpress-link-colors' , array('title' => __('Link Colors','comicpress'), 'priority' => 40));
 	$wp_customize->add_section('comicpress-logo-options', array('title' => __('Logo','comicpress'), 'priority' => 50));
@@ -88,6 +88,9 @@ function comicpress_customize_register( $wp_customize ) {
 		$css_array[] = array('slug' => 'comic_wrap_background', 'description' => '#comic-wrap', 'section' => 'colors', 'label' => 'Comic Area');
 		$css_array[] = array('slug' => 'comic_wrap_textcolor', 'description' => '#comic-wrap', 'section' => 'comicpress-text-colors', 'label' => '');
 		$css_array[] = array('slug' => 'comic_nav_background', 'description' => 'table#comic-nav-wrapper', 'section' => 'colors', 'label' => 'Default Comic Navigation');
+		$css_array[] = array('slug' => 'comic_nav_textcolor', 'description' => '.comic-nav', 'section' => 'comicpress-text-colors', 'label' => 'Default Nav Normal Text Color');
+		$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => 'Default Navigation Link');
+		$css_array[] = array('slug' => 'comic_nav_hcolor', 'description' => '.comic-nav a:hover', 'section' => 'comicpress-link-colors', 'label' => 'Default Navigation Hover');
 	}
 	$priority_value = 11;
 	foreach ($css_array as $setinfo) {
@@ -233,6 +236,10 @@ function comicpress_customize_wp_head() {
 		$settings_array[] = array('slug' => 'comic_wrap_background', 'element' => '#comic-wrap', 'style' => 'background-color', 'default' => '',  'important' => true);
 		$settings_array[] = array('slug' => 'comic_wrap_textcolor', 'element' => '#comic-wrap', 'style' => 'color', 'default' => '',  'important' => true);
 		$settings_array[] = array('slug' => 'comic_nav_background', 'element' => 'table#comic-nav-wrapper', 'style' => 'background-color', 'default' => '',  'important' => true);
+		$settings_array[] = array('slug' => 'comic_nav_textcolor', 'element' => '.comic-nav', 'style' => 'color', 'default' => '',  'important' => true);
+		$settings_array[] = array('slug' => 'comic_nav_acolor', 'element' => '.comic-nav a:link, .comic-nav a:visited', 'style' => 'color', 'default' => '#FFFFFF',  'important' => true);
+		$settings_array[] = array('slug' => 'comic_nav_hcolor', 'element' => '.comic-nav a:hover', 'style' => 'color', 'default' => '#F00',  'important' => true);
+		
 	}
 	$output = '';
 	$style_output = '';
