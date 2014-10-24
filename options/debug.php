@@ -33,7 +33,7 @@
 		<div class="comicpress-options-save">
 			<div class="comicpress-major-publishing-actions">
 				<div class="comicpress-publishing-action">
-					<input name="comicpress_save_debug" type="submit" class="button-primary" value="Save Settings" />
+					<input name="comicpress_save_debug" type="submit" class="button-primary" value="<?php _e('Save Settings','comicpress'); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_debug" />
 				</div>
 				<div class="clear"></div>
@@ -43,10 +43,6 @@
 		</form>
 		
 		<table class="widefat" style="width: 100%">
-		<tr>
-			<td colspan="5">
-				Technical Support is available on the <a href="https://github.com/Frumph/comicpress/issues">github repository</a> or use the Contact form on <a href="http://frumph.net" target="_blank">Frumph.NET</a>
-			</td>
 		<tr>
 			<td>
 			<strong>Site URL</strong>:(siteurl) <?php echo comicpress_themeinfo('siteurl'); ?><br />

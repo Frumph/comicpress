@@ -37,7 +37,6 @@ function comicpress_admin_options() { ?>
 	</p>
 	<div class="clear"></div>
 	<?php
-	$tab = (comicpress_themeinfo('first_run')) ? $tab = 'help' : $tab = '';
 	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
@@ -59,7 +58,6 @@ function comicpress_admin_options() { ?>
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
 		if ($_REQUEST['action'] == 'comicpress_save_help') {
-			$comicpress_options['first_run'] = false;
 			$tab = 'layout';
 			update_option('cp-options', $comicpress_options);
 		}
@@ -199,8 +197,7 @@ function comicpress_admin_options() { ?>
 				'layout' => __('Layout', 'comicpress'),
 		  		'general' => __('General', 'comicpress'),
 				'menubar' => __('Menubar', 'comicpress'),
-				'debug' => __('Debug', 'comicpress'),
-				'help' => __('Help', 'comicpress')
+				'debug' => __('Debug', 'comicpress')
 		  	);
 
 		  	if (empty($tab)) { $tab = array_shift(array_keys($tab_info)); }
@@ -257,14 +254,14 @@ function comicpress_admin_options() { ?>
 				<td style="width:200px;">
 					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
 						<?php wp_nonce_field('update-options') ?>
-						<input name="comicpress_reset" type="submit" class="button" value="Reset All Settings" />
+						<input name="comicpress_reset" type="submit" class="button" value="<?php _e('Reset All Settings','comicpress'); ?>" />
 						<input type="hidden" name="action" value="comicpress_reset" />
 					</form>
 				</td>
 				<td style="width:200px;">
 					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
 						<?php wp_nonce_field('update-options') ?>
-						<input name="comicpress_reset_customize" type="submit" class="button" value="Reset Customizer Colors" />
+						<input name="comicpress_reset_customize" type="submit" class="button" value="<?php _e('Reset Customizer Colors','comicpress'); ?>" />
 						<input type="hidden" name="action" value="comicpress_reset_customize" />
 					</form>
 				</td>

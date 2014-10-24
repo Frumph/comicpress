@@ -337,7 +337,7 @@ function comicpress_load_options() {
 			'display_archive_as_links' => false,
 			'archive_display_order' => 'DESC',
 			'layout' => '3c',
-			'first_run' => true,
+			'first_run' => true, /* no longer used */
 			'force_active_connection_close' => false,
 			'removed_option' => true,
 			'menubar_social_icons' => false,
@@ -400,11 +400,7 @@ function comicpress_themeinfo($whichinfo = null) {
 	return $comicpress_themeinfo;
 }
 
-// Dashboard Menu Options -- last thing to load so it can redirect
+// Dashboard Menu Options - Only run in the wp-admin area
 if (is_admin()) {
 	@require_once(comicpress_themeinfo('themepath').'/options.php');
-    global $pagenow;
-	if (('themes.php' == $pagenow) && isset($_GET['activated']) && comicpress_themeinfo('first_run')) {
-		header( 'Location: '.admin_url().'themes.php?page=comicpress-options' ) ;
-	}
 }
