@@ -15,7 +15,26 @@ Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
 = 4.2 =
-* Information Being Compiled Now
+* No longer saves data to the database unless you click save in the comicpress options
+* logic change on featured image for non-comics
+* fixed a few localization strings that weren't set properly to 'comicpress' 
+* fixed a few strings that weren't set as translatable localization
+* removed suggested plugins completely
+* removed help panel completely when updating from old version of comicpress (migration help)
+* removed extra " from circle me line in functions.php
+* word change for describing youtube channel for the social icons in the menubar
+* sidebar.php cleanup so it shows empty if it executes from a plugin
+* several comicpress->jetpack plugin adjustments
+* removed the blog.php template per request from theme review teams many silly requirements
+* option added on the general tab to enable the project wonderful asyncronus code into the header
+* above-blog sidebar shows on all pages now - not just the home page
+* checkbox in appearance -> header now works in conjunction with the make hotspot option in the customizer
+* added value checks in the customizer (sanitization)
+* the id="comments" 'discussion' line will now appear whether there are comments or not
+* added commented out line in the functions.php that when uncommented will stop wordpress from recompressing images on upload
+* updated translation files en_US and de_DE
+* updated screenshot
+
 
 = 4.1 =
 * Added LGN and RGN (3 column) layouts back into ComicPress, layout-head.php and layout-foot.php updated
