@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-23 19:07-0800\n"
-"PO-Revision-Date: 2014-10-23 19:07-0800\n"
+"POT-Creation-Date: 2014-10-23 23:31-0800\n"
+"PO-Revision-Date: 2014-10-23 23:32-0800\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -538,53 +538,56 @@ msgid "While ComicPress is an excellent stand-alone theme, it can be enhanced in
 msgstr ""
 
 # @ comicpress
-#: ../options.php:47
+#: ../options.php:46
 msgid "ComicPress Settings RESET!"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:53
+#: ../options.php:52
 msgid "ComicPress Customizer Colors RESET!"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:188
+#: ../options.php:186
 msgid "ComicPress Settings SAVED!"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:199
+#: ../options.php:197
 msgid "Layout"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:200
+#: ../options.php:198
 msgid "General"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:202
+#: ../options.php:200
 msgid "Debug"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:203
-msgid "Help"
-msgstr ""
-
-# @ comicpress
-#: ../options.php:245
+#: ../options.php:242
 msgid "Developed and maintained by"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:245
+#: ../options.php:242
 msgid "Originally created by"
 msgstr ""
 
 # @ comicpress
-#: ../options.php:246
+#: ../options.php:243
 msgid "If you like the ComicPress theme, please donate.  It will help in developing new features and versions."
+msgstr ""
+
+#: ../options.php:257
+msgid "Reset All Settings"
+msgstr ""
+
+#: ../options.php:264
+msgid "Reset Customizer Colors"
 msgstr ""
 
 # @ comicpress
@@ -928,6 +931,13 @@ msgstr ""
 # @ comicpress
 #: ../options/debug.php:28
 msgid "This option forces mysql to close the connection after each page load - not recommended unless you are requested to enable it."
+msgstr ""
+
+#: ../options/debug.php:36
+#: ../options/general.php:395
+#: ../options/layout.php:55
+#: ../options/menubar.php:114
+msgid "Save Settings"
 msgstr ""
 
 # @ comicpress
