@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-24 08:33+0100\n"
-"PO-Revision-Date: 2014-10-24 08:39+0100\n"
+"POT-Creation-Date: 2014-10-24 16:30+0100\n"
+"PO-Revision-Date: 2014-10-24 16:36+0100\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -236,7 +236,7 @@ msgid "Primary"
 msgstr "Primär"
 
 # @ easel
-#: functions.php:58 functions.php:123 options/general.php:294
+#: functions.php:58 functions.php:123 options/general.php:303
 msgid "Footer"
 msgstr "Footer"
 
@@ -285,7 +285,7 @@ msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
 # @ easel
-#: functions.php:120 options.php:199 options/menubar.php:10
+#: functions.php:120 options.php:200 options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
 
@@ -474,7 +474,7 @@ msgid "RSS Feed"
 msgstr "RSS-Feed"
 
 # @ easel
-#: functions.php:254 options/general.php:336
+#: functions.php:254 options/general.php:345
 msgid "RSS"
 msgstr "RSS"
 
@@ -810,36 +810,36 @@ msgid "ComicPress Customizer Colors RESET!"
 msgstr "ComicPress angepasste Farben ZURÜCKGESETZT!"
 
 # @ easel
-#: options.php:186
+#: options.php:187
 msgid "ComicPress Settings SAVED!"
 msgstr "ComicPress Einstellungen GESICHERT!"
 
 # @ easel
-#: options.php:197 options/layout.php:22
+#: options.php:198 options/layout.php:22
 msgid "Layout"
 msgstr "Layout"
 
 # @ easel
-#: options.php:198 options/general.php:10
+#: options.php:199 options/general.php:10
 msgid "General"
 msgstr "Allgemein"
 
 # @ easel
-#: options.php:200 options/debug.php:10
+#: options.php:201 options/debug.php:10
 msgid "Debug"
 msgstr "Debugger"
 
 # @ easel
-#: options.php:242
+#: options.php:243
 msgid "Developed and maintained by"
 msgstr "Entwickelt und gepflegt von"
 
-#: options.php:242
+#: options.php:243
 msgid "Originally created by"
 msgstr "Ursprünglich erstellt von"
 
 # @ easel
-#: options.php:243
+#: options.php:244
 msgid ""
 "If you like the ComicPress theme, please donate.  It will help in developing "
 "new features and versions."
@@ -847,12 +847,12 @@ msgstr ""
 "Wenn Du das Theme ComicPress magst, spende bitte. Es wird bei der "
 "Entwicklung neuer Features und Versionen helfen."
 
-#: options.php:257
+#: options.php:258
 msgid "Reset All Settings"
 msgstr "Alle Einstellungen zurücksetzen"
 
 # @ easel
-#: options.php:264
+#: options.php:265
 msgid "Reset Customizer Colors"
 msgstr "Angepasste Farben zurücksetzen"
 
@@ -888,7 +888,7 @@ msgstr ""
 "schliessen. Dies ist nicht empfohlen und sollte nur aktiviert werden, wenn "
 "Du danach gefragt wirst."
 
-#: options/debug.php:36 options/general.php:395 options/layout.php:55
+#: options/debug.php:36 options/general.php:404 options/layout.php:55
 #: options/menubar.php:114
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
@@ -937,24 +937,36 @@ msgstr ""
 "Diese Option setzt den Project Wonderful Asyncronus Code in den Header von "
 "der Website."
 
-# @ easel
+#: options/general.php:43
+msgid "Allow the sidebar over-blog to appear on all posts?"
+msgstr "Erlaube der Sidebar Over-Blog, auf allen Beiträge zu erscheinen?"
+
 #: options/general.php:48
+msgid ""
+"Sidebar Over-Blog appears on all posts not just the front page/blog loop "
+"when enabled."
+msgstr ""
+"Sidebar Over-Blog erscheint auf allen Beiträgen nicht nur auf der "
+"Titelseite / Blog Schleife, wenn aktiviert."
+
+# @ easel
+#: options/general.php:57
 msgid "Custom Header"
 msgstr "Benutzerdefinierter Header"
 
-#: options/general.php:52
+#: options/general.php:61
 msgid "Custom Header Values"
 msgstr "Benutzerdefinierter Header Werte"
 
-#: options/general.php:54
+#: options/general.php:63
 msgid "Width:"
 msgstr "Breite:"
 
-#: options/general.php:55
+#: options/general.php:64
 msgid "Height:"
 msgstr "Höhe:"
 
-#: options/general.php:56
+#: options/general.php:65
 msgid ""
 "Modify the height and width of the custom header *if* you use Appearance - "
 "Header"
@@ -962,7 +974,7 @@ msgstr ""
 "Zum Modifizieren der Höhe und Breite von dem benutzerdefinierten Header "
 "*wenn* verwende Anpassen -> Kopfzeile "
 
-#: options/general.php:57
+#: options/general.php:66
 msgid ""
 "3 Column Layouts are 980px width while 2 Column Layouts are 780px width as "
 "default."
@@ -970,7 +982,7 @@ msgstr ""
 "Bei 3 Spaltenlayouts sind 980px Breite Standard, während bei 2 "
 "Spaltenlayouts 780px Breite Standard sind."
 
-#: options/general.php:58
+#: options/general.php:67
 msgid ""
 "NOTE: This should only be used if the appearance - header section is not "
 "displaying your header dimensions correctly."
@@ -978,15 +990,15 @@ msgstr ""
 "HINWEIS: Dieses sollte nur verwendet werden, wenn in dem Abschnitt Anpassen-"
 "> Kopfzeile dein Header nicht korrekt angezeigt wird."
 
-#: options/general.php:66
+#: options/general.php:75
 msgid "Content Width"
 msgstr "Inhaltsbreite"
 
-#: options/general.php:71
+#: options/general.php:80
 msgid "Media and images width on posts and pages?"
 msgstr "Breite von Medien und Bilder in Beiträgen und Seiten?"
 
-#: options/general.php:76
+#: options/general.php:85
 msgid ""
 "This sets a specific width for WordPress to use for media content within "
 "your posts and pages.  Default = 500"
@@ -994,27 +1006,27 @@ msgstr ""
 "Dies legt eine bestimmte Breite für Wordpress fest, bei Verwendung von "
 "Medieninhalten in Deinen Beiträgen und Seiten. Standard = 500"
 
-#: options/general.php:81
+#: options/general.php:90
 msgid "Media and images width when sidebars are disabled on pages?"
 msgstr ""
 "Breite von Medien und Bilder, wenn Sidebars auf Seiten deaktiviert sind?"
 
-#: options/general.php:86
+#: options/general.php:95
 msgid "When the sidebars are disabled on pages?  Default = 700"
 msgstr "Wenn die Sidebar's auf den Seiten deaktiviert sind? Standard = 700"
 
 # @ easel
-#: options/general.php:94
+#: options/general.php:103
 msgid "Pages"
 msgstr "Seiten"
 
 # @ easel
-#: options/general.php:98
+#: options/general.php:107
 msgid "Disable the titles on pages"
 msgstr "Deaktiviere die Titel in Seiten"
 
 # @ easel
-#: options/general.php:103
+#: options/general.php:112
 msgid ""
 "Page titles will be turned off.  If you disable the titles no pages you can "
 "still add a post-image in the page editor."
@@ -1023,17 +1035,17 @@ msgstr ""
 "kannst du im Seiteneditor ein Beitragsbild hizufügen."
 
 # @ easel
-#: options/general.php:111
+#: options/general.php:120
 msgid "Posts"
 msgstr "Artikel"
 
 # @ easel
-#: options/general.php:115
+#: options/general.php:124
 msgid "Disable the titles on posts"
 msgstr "Deaktiviere die Titel in Beiträgen"
 
 # @ easel
-#: options/general.php:120
+#: options/general.php:129
 msgid ""
 "Post titles will be turned off.  If you disable the titles on posts can "
 "still add a post-image in the post editor."
@@ -1042,12 +1054,12 @@ msgstr ""
 "deaktivierst, kannst du im Beitragseditor ein Beitragsbild hinzufügen."
 
 # @ easel
-#: options/general.php:124
+#: options/general.php:133
 msgid "Add graphic calendar to blog posts"
 msgstr "Füge Kalendergrafik zu Blogbeiträgen hinzu "
 
 # @ easel
-#: options/general.php:129
+#: options/general.php:138
 msgid ""
 "Enabling this option will display a calendar image on your blog posts. The "
 "graphic calendar is an image that has the date of the blog post overlayed on "
@@ -1058,12 +1070,12 @@ msgstr ""
 "Blogbeitrages überlagert wird."
 
 # @ easel
-#: options/general.php:133
+#: options/general.php:142
 msgid "Enable Author Gravatar"
 msgstr "Aktiviere Autoren Gravatar"
 
 # @ easel
-#: options/general.php:138
+#: options/general.php:147
 msgid ""
 "Enabling this option will show a gravatar of the post author based on the "
 "author email address.  Gravatars are associated by your email address and "
@@ -1074,12 +1086,12 @@ msgstr ""
 "der Emailadresse assoziiert. Du kannst Gravatare erstellen auf"
 
 # @ easel
-#: options/general.php:142
+#: options/general.php:151
 msgid "Enable Avatar Mod"
 msgstr "Aktiviere Avator Mod"
 
 # @ easel
-#: options/general.php:147
+#: options/general.php:156
 msgid ""
 "With this enabled, the avatar's that are displayed will be jquery modified "
 "to look like polaroids randomly tilted."
@@ -1088,36 +1100,36 @@ msgstr ""
 "modifiziert und sehen dann wie zufällig benannte Polaroids aus."
 
 # @ easel
-#: options/general.php:151
+#: options/general.php:160
 msgid "Disable display of <strong>tags</strong> in posts"
 msgstr "Deaktiviere Anzeige von <strong>Schlagwörtern</strong> in Beiträgen"
 
 # @ easel
-#: options/general.php:156
+#: options/general.php:165
 msgid "Checkmarking this will make it so that tags will not appear in posts."
 msgstr ""
 "Durch markieren der Checkbox werden keine Schlagwörter in Beiträgen "
 "angezeigt."
 
 # @ easel
-#: options/general.php:160
+#: options/general.php:169
 msgid "Disable display of <strong>categories</strong> in posts"
 msgstr "Deaktiviere Anzeige von <strong>Kategorien</strong> in Beiträgen"
 
 # @ easel
-#: options/general.php:165
+#: options/general.php:174
 msgid ""
 "Checkmarking this will make it so that categories will not appear in posts."
 msgstr ""
 "Durch markieren der Checkbox werden keine Kategorien in Beiträgen angezeigt."
 
 # @ easel
-#: options/general.php:169
+#: options/general.php:178
 msgid "Disable display of <strong>by Author</strong> in post information."
 msgstr "Deaktiviere Anzeige von <strong>Autor</strong> in Beitragsinformation."
 
 # @ easel
-#: options/general.php:174
+#: options/general.php:183
 msgid ""
 "Checkmarking this will make it so that the by Author information will not "
 "appear in posts."
@@ -1126,12 +1138,12 @@ msgstr ""
 "angezeigt."
 
 # @ easel
-#: options/general.php:178
+#: options/general.php:187
 msgid "Disable display of the posted on date in posts"
 msgstr "Deaktiviere die Anzeige vom Datum des Postens in Beiträgen"
 
 # @ easel
-#: options/general.php:183
+#: options/general.php:192
 msgid ""
 "Checkmarking this will make it so that posted on date information will not "
 "appear in posts."
@@ -1140,12 +1152,12 @@ msgstr ""
 "des Postens angezeigt werden in den Beiträgen."
 
 # @ easel
-#: options/general.php:187
+#: options/general.php:196
 msgid "Disable the display of the posted at time in posts"
 msgstr "Deaktiviere die Anzeige der Uhrzeit des Postens in Beiträgen"
 
 # @ easel
-#: options/general.php:192
+#: options/general.php:201
 msgid ""
 "Checkmarking this will make it so that the information about what time the "
 "post was made will not show."
@@ -1154,12 +1166,12 @@ msgstr ""
 "des Postens angezeigt werden in den Beiträgen."
 
 # @ easel
-#: options/general.php:196
+#: options/general.php:205
 msgid "Enable the display of last modified information in posts."
 msgstr "Aktiviere die Anzeige der letzten Veränderung in Beiträgen."
 
 # @ easel
-#: options/general.php:201
+#: options/general.php:210
 msgid ""
 "Checkmarking this will make it so that it will show when the last time that "
 "the post was modified in the post date information."
@@ -1168,17 +1180,17 @@ msgstr ""
 "auch wann."
 
 # @ easel
-#: options/general.php:209
+#: options/general.php:218
 msgid "Comments"
 msgstr "Kommentare"
 
 # @ easel
-#: options/general.php:213
+#: options/general.php:222
 msgid "Disable the comment notes"
 msgstr "Deaktiviere die Kommentar Notizen"
 
 # @ easel
-#: options/general.php:218
+#: options/general.php:227
 msgid ""
 "Disabling this will remove the note text that displays with more options for "
 "adding to comments (html)."
@@ -1187,12 +1199,12 @@ msgstr ""
 "(html) zum hinzufügen zu den Kommentaren.  "
 
 # @ easel
-#: options/general.php:222
+#: options/general.php:231
 msgid "Disable Comment Javascript"
 msgstr "Deaktiviere Kommentar Javascript"
 
 # @ easel
-#: options/general.php:227
+#: options/general.php:236
 msgid ""
 "Checkmark this if you want the comment form to not use javascript to appear "
 "directly under who is being replied to. (increases pageviews/hits)"
@@ -1202,12 +1214,12 @@ msgstr ""
 "und Hits)"
 
 # @ easel
-#: options/general.php:231
+#: options/general.php:240
 msgid "Enable Comments on Home Page"
 msgstr "Aktiviere Kommentare auf der Homepage"
 
 # @ easel
-#: options/general.php:236
+#: options/general.php:245
 msgid ""
 "Checkmarking this option will make it so that the post(s) on the home page "
 "will also display the comments under them, This will ONLY work if you have "
@@ -1220,12 +1232,12 @@ msgstr ""
 "Postings und dieses müssen arbeiten."
 
 # @ easel
-#: options/general.php:255
+#: options/general.php:264
 msgid "Avatar Directory"
 msgstr "Avatar Verzeichnis"
 
 # @ easel
-#: options/general.php:269
+#: options/general.php:278
 msgid ""
 "Choose a directory to get the avatars for default gravatars if someone does "
 "not have one.  You will have to make these images yourself, or download them "
@@ -1241,17 +1253,17 @@ msgstr ""
 "von speziellen Avatar Sets. </strong>"
 
 # @ easel
-#: options/general.php:277
+#: options/general.php:286
 msgid "Navigation"
 msgstr "Navigation"
 
 # @ easel
-#: options/general.php:281
+#: options/general.php:290
 msgid "Enable numbered pagination"
 msgstr "Aktiviere Seitennummerierung"
 
 # @ easel
-#: options/general.php:286
+#: options/general.php:295
 msgid ""
 "Previous Entries and Next Entries buttons are replaced by a bar of numbered "
 "pages. Numbered pagination appears on the Home page, the author(s) page, the "
@@ -1265,12 +1277,12 @@ msgstr ""
 "Benutzt die selbe Optik wie die Menüleiste."
 
 # @ easel
-#: options/general.php:298
+#: options/general.php:307
 msgid "Disable the default text in the footer"
 msgstr "Deaktiviere den Standardtext im Footer"
 
 # @ easel
-#: options/general.php:303
+#: options/general.php:312
 msgid ""
 "Default text in the footer will not display. Enable this if you do not want "
 "any text in the footer. If you wish to add you own custom content, you may "
@@ -1280,24 +1292,24 @@ msgstr ""
 "Footertext eingeben möchtest, kannst du das via Widgets -> Footer tun."
 
 # @ easel
-#: options/general.php:307
+#: options/general.php:316
 msgid "Disable the scroll to top link in the footer?"
 msgstr "Deaktiviere den Nach-Oben-Link im Footer?"
 
 # @ easel
-#: options/general.php:312
+#: options/general.php:321
 msgid "When this link is clicked on long pages it will scroll back to the top."
 msgstr ""
 "Wenn dieser Link angeklickt wird kannst Du auf langen Seiten zurück zum "
 "Seitenanfang springen."
 
 # @ easel
-#: options/general.php:316
+#: options/general.php:325
 msgid "&copy; Copyright Name"
 msgstr "&copy; Copyright Name"
 
 # @ easel
-#: options/general.php:320
+#: options/general.php:329
 msgid ""
 "Set the name to which this site is &copy; Copyright to, leave blank to have "
 "the site name."
@@ -1306,12 +1318,12 @@ msgstr ""
 "lassen, um den Seitennamen zu verwenden."
 
 # @ easel
-#: options/general.php:324
+#: options/general.php:333
 msgid "Copyright Holder URL"
 msgstr "Copyright-Inhaber URL"
 
 # @ easel
-#: options/general.php:328
+#: options/general.php:337
 msgid ""
 "Set the URL to the owner of the &copy; Copyright if different then this "
 "website, leave blank for sites link."
@@ -1320,29 +1332,29 @@ msgstr ""
 "Leer lassen für Seitenlink."
 
 # @ easel
-#: options/general.php:340
+#: options/general.php:349
 msgid "Enable the post thumbnails in the RSS feed?"
 msgstr "Artikelthumbnails im RSS-Feed aktivieren?"
 
 # @ easel
-#: options/general.php:345
+#: options/general.php:354
 msgid "If enabled will show the post thumbnail of the post in the RSS feed."
 msgstr ""
 "Wenn aktiviert, wird das Beitrags Vorschaubild von dem Beitrag in dem RSS-"
 "Feed gezeigt."
 
 # @ easel
-#: options/general.php:352
+#: options/general.php:361
 msgid "Archive & Search"
 msgstr "Archiv & Suche"
 
 # @ easel
-#: options/general.php:356
+#: options/general.php:365
 msgid "Display archive results as a list of links?"
 msgstr "Zeige Archivergebnisse als eine  Liste von Links?"
 
 # @ easel
-#: options/general.php:361
+#: options/general.php:370
 msgid ""
 "Enabling this will make the archive pages by date/category/term display as a "
 "list of links instead of full posts."
@@ -1351,12 +1363,12 @@ msgstr ""
 "derselben aufgelistet."
 
 # @ easel
-#: options/general.php:366
+#: options/general.php:375
 msgid "Excerpt or Full Content in archive and search."
 msgstr "Auszug oder vollständiger Inhalt in Archiv und Suche."
 
 # @ easel
-#: options/general.php:373
+#: options/general.php:382
 msgid ""
 "If Display archives results as list is disabled, decide how much is seen in "
 "the archive display. "
@@ -1365,12 +1377,12 @@ msgstr ""
 "entscheide, wieviele in der Archivanzeige  zu sehen sein sollen."
 
 # @ easel
-#: options/general.php:378
+#: options/general.php:387
 msgid "Archive Display Order"
 msgstr "Archiv Darstellungsreihenfolge"
 
 # @ easel
-#: options/general.php:385
+#: options/general.php:394
 msgid ""
 "Sets the display order of your archives. Newest to Oldest will display your "
 "posts starting with the most recent. Oldest to Newest will start with the "
@@ -1381,379 +1393,6 @@ msgstr ""
 "älteste zeigt den aktuellsten Artikel ganz oben. Älteste nach neueste "
 "beginnt mit dem ersten Eintrag in einer Kategorie, einem Schlagwort, einem "
 "Datumsbereich usw..."
-
-#: options/help.php:4
-msgid "Welcome to ComicPress 4.0!"
-msgstr "Willkommen zu ComicPress 4.0! "
-
-#: options/help.php:6
-msgid "Thank you for using ComicPress!"
-msgstr "Danke Schön für das Benutzen von Comic Press!"
-
-#: options/help.php:7
-msgid ""
-"ComicPress 4.0 has more features, uses the Comic Easel plugin now and is "
-"more stable than ever to help you build an incredible WebComic website."
-msgstr ""
-"ComicPress 4.0 hat mehr Features jetzt, bei Verwendung des Comic Easel "
-"Plugins und ist stabiler als je zuvor. Es wird Dir helfen eine unglaubliche "
-"Webcomic Website zu bauen."
-
-#: options/help.php:17
-msgid "Fresh installation of Comic Easel and ComicPress"
-msgstr "Neuinstallation von Comic Easel und ComicPress"
-
-# @ easel
-#: options/help.php:19
-msgid ""
-"There is a video at the bottom of this page to help guide you with "
-"installation and usage."
-msgstr ""
-"Es gibt ein Video am unteren Rand dieser Seite, welches Dir bei der "
-"Installation und Nutzung hilft."
-
-#: options/help.php:21
-msgid "Migration Instructions"
-msgstr "Migration Anweisungen"
-
-#: options/help.php:23
-msgid "There are videos available at"
-msgstr "Es sind Videos verfügbar unter"
-
-#: options/help.php:23
-msgid "that show a migration."
-msgstr "welche eine Migration zeigen."
-
-#: options/help.php:26
-msgid "Deactivate ComicPress manager if you are using it."
-msgstr "Deaktiviere den ComicPress Manager, wenn er benutzt wird."
-
-#: options/help.php:27
-msgid ""
-"If you are using a child theme, activate the main ComicPress theme while "
-"migrating."
-msgstr ""
-"Wenn Du ein Child Theme benutzt, aktiviere das Haupt ComicPress Theme "
-"während der Migration."
-
-#: options/help.php:28
-msgid ""
-"Install and activate both the Comic Easel and CP2CE (ComicPress to Comic "
-"Easel) plugins."
-msgstr ""
-"Installiere und Aktiviere sowohl die Comic Easel und CP2CE (ComicPress zu "
-"Comic Easel) Plugins."
-
-#: options/help.php:29
-msgid ""
-"Make sure your comics folder is named comics and is directly off the root of "
-"your WordPress installation, that is where the CP2CE plugin is looking for "
-"the comics."
-msgstr ""
-"Stelle sicher das Dein Comic Ordner \"comics\" heißt und direkt in "
-"Stammverzeichnis der WordPress-Installation liegt, also da, wo das CP2CE "
-"Plugin nach den Comics sucht."
-
-#: options/help.php:30
-msgid ""
-"Go through all of your comics in wp-admin - posts - all posts.  Make sure "
-"all of your comics are set into only one category.   They can be different "
-"categories for each group of comics, but only one category set."
-msgstr ""
-"Gehe durch alle Deine Comics in wp-admin ->Beiträge ->alle Beiträge. Achte "
-"darauf, das alle Deine Comics in nur einer Kategorie eingestellt sind. Es "
-"können verschiedenen Kategorien für jede Gruppe von Comics sein, aber nur "
-"ein Kategorie Set."
-
-#: options/help.php:31
-msgid ""
-"Go to wp-admin - tools - export and make a backup of your current sites "
-"data.  (best if you use phpmyadmin from your hostings cpanel and do an .sql "
-"export of your database)"
-msgstr ""
-"Geh zu wp-admin ->Werkzeuge ->Export und mache eine Sicherungskopie von "
-"Deinen aktuellen Webseiten Daten. (Am besten ist, wenn Du phpmyadmin "
-"verwendest von Deinem Hostings cPanel und ein . sql Export Deiner Datenbank "
-"machst)"
-
-#: options/help.php:32
-msgid ""
-"Make sure Comic Easel is activated and go to wp-admin - Tools - CP2CE "
-"Migrator"
-msgstr ""
-"Stelle sicher das Comic Easel aktiviert ist und gehe zu wp-admin ->Werkzeuge "
-"->CP2CE Migrator"
-
-#: options/help.php:33
-msgid "Select one category at a time in the drop down."
-msgstr "Wählen eine Kategorie auf einmal in dem Drop-Down aus."
-
-#: options/help.php:34
-msgid ""
-"Choose how many comics to migrate at once. The first time you use it, select "
-"1 comic to migrate. Click the [Migrate!] button and it will refresh the page "
-"and give you information on the migration."
-msgstr ""
-"Wähle, wie viele Comics auf einmal zu migriert werden sollen. Bei Deiner "
-"ersten Verwendung, wähle 1 Comic zum migrieren aus. Klicke auf den "
-"[Migrate!] Button und es wird die Seite aktualisieren und Dir Informationen "
-"über die Migration geben"
-
-#: options/help.php:35
-msgid ""
-"If it looks like it could not find the comic to attach to the post, follow "
-"the Reverting a Migration steps and fix your comics location to the path the "
-"CP2CE plugin is looking for the comics in, then start over in the CP2CE."
-msgstr ""
-"Wenn es den Comic der am Beitrag angehängt ist nicht finden konnte, befolge "
-"die Schritte Wiederherstellen einer Migration und fixe deinen Comics Ort auf "
-"den Pfad, wo das CP2CE Plugin nach den Comics sucht, beginne erneut mit "
-"CP2CE."
-
-#: options/help.php:36
-msgid ""
-"If it looks successful and found the comic to attach to the post, start "
-"increasing the amount of comics to migrate at one time. 1-25 at a time for "
-"shared hostings.  25-50 for VPS hosting, 50-100 for dedicated servers with "
-"high memory availability."
-msgstr ""
-"Wenn es aussieht, das es erfolgreich war und das Comic als Anhang am Beitrag "
-"gefunden wurde, beginne mit der Erhöhung der Menge von Comics zur Migration "
-"auf einmal. 1-25 auf einmal für Shared Hostings. 25-50 für VPS-Hosting. "
-"50-100 für dedizierte Server mit hoher Speicherverfügbarkeit."
-
-#: options/help.php:37
-msgid ""
-"Once you are done with the migration, go to wp-admin - Comics -> Comics and "
-"check all of your comic posts, note if they have comics attached to them."
-msgstr ""
-"Wenn Du fertig bist mit der Migration, gehe zu wp-admin ->Comics -> Comics "
-"und überprüfen alle Deine Comic Beiträge, beachte ob die Comics mit ihnen "
-"verbunden sind."
-
-#: options/help.php:38
-msgid ""
-"Go to wp-admin - posts - categories and delete the OLD comic categories that "
-"you used to have.  Check the column to see if there are any comics you still "
-"need to migrate."
-msgstr ""
-"Gehe zu wp-admin ->Beiträge ->Kategorien und lösche die Alten Comic "
-"Kategorien, die Du verwendet hast. Überprüfe die Spalte, um zu sehen, ob "
-"irgendwelche Comics noch migriert werden müssen."
-
-#: options/help.php:39
-msgid ""
-"If all looks good, you have successfully migrated to using Comic Easel, "
-"congratulations!"
-msgstr ""
-"Wenn alles gut aussieht, hast Du erfolgreich zu Comic Easel migriert, "
-"gratuliere!"
-
-#: options/help.php:42
-msgid "Converting Child Theme Instructions"
-msgstr "Anleitung Child Theme Konvertierung"
-
-#: options/help.php:44
-msgid ""
-"Now that you have successfully migrated to Comic Easel, it is time to fix "
-"your child theme."
-msgstr ""
-"Jetzt hast Du erfolgreich migriert zu Comic Easel, es ist Zeit Dein Child "
-"Theme zu fixen."
-
-#: options/help.php:46
-msgid "Important things to note:"
-msgstr "Wichtige Dinge sind zu beachten:"
-
-#: options/help.php:48
-msgid ""
-"Any theme files, child-functions.php and functions.php all of those .php "
-"files will no longer be able to be used.  While this ComicPress is similar "
-"it is not the same. Remove them from your child theme - make backups of them "
-"to your local drive via FTP so you can reference them later.  The only file "
-"you should have left is the style.css in the child theme directory."
-msgstr ""
-"Alle Theme Dateien, child-und functions.php und functions.php alle von "
-"denen. php-Dateien kannst du nicht länger benutzen. Obwohl dieses ComicPress "
-"vergleichbar ist, ist es nicht identisch. Entferne das Child-Theme - mache "
-"eine Sicherungskopie davon auf die lokale Festplatte via FTP, so kannst du "
-"später darauf verweisen. Die einzige Datei, die Du hinterlassen solltest, "
-"ist die style.css in dem Child-Theme-Verzeichnis."
-
-#: options/help.php:49
-msgid ""
-"Some elements have changed (only a select few).  For example, .narrowcolumn "
-"width is now controlled by #content-column,  .uentry is used in place of ."
-"type-post, .type-comic, .type-page and handles all of those."
-msgstr ""
-"Einige Elemente haben sich geändert (nur ein paar Auserwählte). Zum "
-"Beispiel, .narrowcolumn Breite wird jetzt kontrolliert von #content-column, ."
-"uentry wird anstelle von .type-post, .type-comic, .type-page verwendet und "
-"behandelt alle von denen."
-
-#: options/help.php:50
-msgid ""
-"Use a browser based developement tool like firebug for Firefox or Chromes "
-"developement tools to point and click and find the CSS element you need."
-msgstr ""
-"Verwende ein Browser basiertes Entwicklungs-Tool wie Firebug für Firefox "
-"oder Chromes Entwicklungsumgebung zum suchen und anklicken und finde das CSS-"
-"Element, das Du brauchst."
-
-#: options/help.php:51
-msgid "If in doubt, contact me - Frumph and I will help you."
-msgstr ""
-"Wenn Du Zweifel hast, kontaktiere mich - Frumph und ich werden Dir helfen."
-
-#: options/help.php:55
-msgid "Yada Yada Notes"
-msgstr "Bla Bla Hinweise"
-
-#: options/help.php:57
-msgid ""
-"Do NOT migrate unless you are confident on its success, read EVERYTHING."
-msgstr ""
-"Migriere NICHT, wenn Du Dir nicht sicher bist, das Du erfolgreich sein "
-"wirst, lese ALLES."
-
-#: options/help.php:58
-msgid ""
-"ComicPress no longer supports ComicPress Manager, you can deactivate the "
-"plugin and delete it."
-msgstr ""
-"ComicPress unterstützt nicht länger mehr den ComicPress Manager, Du kannst "
-"das Plugin deaktivieren und löschen."
-
-#: options/help.php:59
-msgid ""
-"Frumph can help you migrate your ComicPress old version to this new version "
-"if you are stuck."
-msgstr ""
-"Frumph kann Dir helfen bei der Migration Deiner alten ComicPress Version zu "
-"dieser neuen Version, wenn Du stecken bleibst."
-
-#: options/help.php:60
-msgid ""
-"Your widgets are NOT lost, they are in the [inactive] section of the "
-"appearance - widgets area, just put them back into the sidebars you want "
-"them in."
-msgstr ""
-"Deine Widgets sind nicht verloren, sie sind in dem [inaktiv] Abschnitt von "
-"Design ->Widgets, Du brauchst sie nur noch zurück in die Sidebar setzen, wo "
-"Du sie hin haben möchtest."
-
-#: options/help.php:61
-msgid ""
-"It is still a good idea to use a child theme if you do customizations beyond "
-"what the customizer has."
-msgstr ""
-"Es ist immer noch eine gute Idee, ein Child Thema zu verwenden, wenn Deine "
-"Anpassungen über die Anpassungsfunktion hinaus gehen."
-
-#: options/help.php:62
-msgid "You can download a blank child theme on frumph.net."
-msgstr "Du kannst ein leeres Child Theme auf frumph.net herunterladen."
-
-#: options/help.php:63
-msgid ""
-"Each comic when added needs to be in a chapter, each chapter is considered "
-"an individual story. If you do not need chapters then create a chapter that "
-"is named something that encompasses all of of your comics."
-msgstr ""
-"Jedes hinzugefügte Comic benötigt ein Kapitel, jedes Kapitel ist eine "
-"individuelle Geschichte. Wenn Du keine Kapitel benötigst, erstelle ein "
-"bezeichnendes Kapitel, welches alle Deine Comics umfasst."
-
-#: options/help.php:64
-msgid "You cannot use comic as a slug for anything"
-msgstr "Du kannst Comic nicht als ein Slug für alles verwenden."
-
-#: options/help.php:65
-msgid ""
-"Slugs can not be strictly numerical, has to have some sort of alpha "
-"character in them."
-msgstr ""
-"Slugs können nicht streng nummerisch sein, sie müssen irgendeine Art von "
-"alphabetisches Zeichen in ihnen haben."
-
-#: options/help.php:66
-msgid ""
-"The configuration for comic options is in the wp-admin - Comics - Config are "
-"while the configuration for the theme is in wp-admin - Appearance - "
-"ComicPress Options"
-msgstr ""
-"Die Konfiguration für Comic Optionen ist in wp-admin ->Comics ->Config, "
-"während die Konfiguration für das Theme in wp-admin ->Design ->ComicPress "
-"Optionen ist."
-
-#: options/help.php:67
-msgid ""
-"You do NOT have to install all of the recommended plugins, just dismiss the "
-"message so you do not see it again."
-msgstr ""
-"Du musst NICHT alle von den empfohlenen Plugins installieren, einfach die "
-"Nachricht abweisen, und Du wirst diese nicht mehr sehen."
-
-#: options/help.php:68
-msgid ""
-"In the customizer, if you set a logo you should NOT use the checkbox in the "
-"Header Image to make the header title the hotspot."
-msgstr ""
-"In der Anpassungsfunktion, wenn Du ein Logo eingestellt hast, solltest Du "
-"NIEMALS in der Checkbox Kopfbild \"Macht den Header Titel zu Hotspot\" "
-"markieren."
-
-#: options/help.php:70
-msgid "Reverting a Migration"
-msgstr "Wiederherstellen einer Migration"
-
-#: options/help.php:72
-msgid "If you accidently migrated blog categories."
-msgstr "Wenn Du versehentlich Blog Kategorien migrierst."
-
-#: options/help.php:75
-msgid ""
-"Install and activate the Convert Post Types plugin from wp-admin - plugins - "
-"add new"
-msgstr ""
-"Installiere und aktiviere das Convent Post Types Plugin von wp-admin -> "
-"Plugins -> Installieren"
-
-#: options/help.php:76
-msgid ""
-"Select the comic post type in the Convert From.. dropdown and set the "
-"Convert To.. dropdown to post."
-msgstr ""
-"Wähle den Comic Beitragstyp in Convert From.. Dropdown und setze den Convert "
-"To .. Dropdown zu Beitrag."
-
-#: options/help.php:77
-msgid ""
-"Click the [convert] button and it will set all of the things you migrated "
-"back to posts."
-msgstr ""
-"Klicke den [convert] Button und es werden alle Dinge, die du migriert hast, "
-"zurück zu den Beiträgen gesetzt."
-
-#: options/help.php:78
-msgid ""
-"NOTE: This WILL make it so that you lose all of your chapter/categories "
-"set.  So you will have to remake them."
-msgstr ""
-"HINWEIS: Das Macht es so, dass Du alles von Deinem Kapitel/Kategorien Set "
-"verlierst. Du musst diese erneuern."
-
-#: options/help.php:79
-msgid ""
-"Go to the media library and delete all of the comic images that it already "
-"migrated."
-msgstr ""
-"Gehe zu der Medienbibliothek und lösche alle von den Comic Bildern, die "
-"bereits migriert sind."
-
-#: options/help.php:80
-msgid "Start over with your migration."
-msgstr "Beginne mit Deiner Migration von vorn."
 
 # @ easel
 #: options/layout.php:27
@@ -2110,6 +1749,3 @@ msgstr "Seite mit Google übersetzen."
 #: widgets/translator.php:17
 msgid "Google Translator"
 msgstr "Google Übersetzer"
-
-#~ msgid "Help"
-#~ msgstr "Hilfe"
