@@ -4,6 +4,7 @@ ComicPress is a configurable theme, layouts to colors.
 
 It is primarily to be used with the Comic Easel plugin.
 
+All images content and everything herein this distribution is released GPL3 and under compatible.
 
 ComicPress 4.* -
 
@@ -34,6 +35,7 @@ Please read information and faqs on comiceasel.com for more information.
 * added commented out line in the functions.php that when uncommented will stop wordpress from recompressing images on upload
 * updated translation files en_US and de_DE
 * updated screenshot
+* added option to enable the sidebar-over-blog to be seen on all posts
 
 
 = 4.1 =
