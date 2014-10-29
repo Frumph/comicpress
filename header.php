@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1, width=device-width, target-densitydpi=device-dpi" />
 <?php wp_head(); ?>
 </head>
 
