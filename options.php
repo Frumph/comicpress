@@ -37,7 +37,7 @@ function comicpress_admin_options() { ?>
 	</p>
 	<div class="clear"></div>
 	<?php
-	if (isset($_GET['tab'])) $tab = wp_filter_nohtml_kses($_GET['tab']);
+	if (isset($_GET['tab'])) { $tab = wp_filter_nohtml_kses($_GET['tab']); } else { $tab = ''; };
 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset') {
 		delete_option('cp-options');

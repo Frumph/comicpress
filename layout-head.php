@@ -20,4 +20,9 @@ if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 			<div id="content" class="narrowcolumn">
 				<?php do_action('comic-blog-area'); ?>
 				<?php do_action('comicpress-narrowcolumn-area'); ?>
-				<?php if (!comicpress_sidebars_disabled()) comicpress_get_sidebar('over-blog'); ?>
+				<?php
+					if (!comicpress_sidebars_disabled()) {
+						if (!is_front_page() && !comicpress_themeinfo('over-blog-sidebar-all-posts')) return;
+							comicpress_get_sidebar('over-blog');
+					}
+				?>

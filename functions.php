@@ -12,9 +12,6 @@ if (comicpress_themeinfo('force_active_connection_close'))
 if (comicpress_themeinfo('menubar_social_icons')) 
 	add_action('comicpress-menubar-menunav', 'comicpress_display_social_icons');
 
-// Don't let WordPress recompress images.	
-add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
-
 if (!is_admin())
 	add_action('init', 'comicpress_init');
 
@@ -359,7 +356,8 @@ function comicpress_load_options() {
 			'enable_jetpack_infinite_scrolling' => false,
 			'content_width' => 500,
 			'content_width_disabled_sidebars' => 700,
-			'add_pw_async_code_to_head' => false
+			'add_pw_async_code_to_head' => false,
+			'over-blog-sidebar-all-posts' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
@@ -377,7 +375,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 			'upload_path' => get_option('upload_path'),
-			'version' => '4.1',
+			'version' => '4.2.1',
 			'themepath' => get_template_directory(),
 			'themeurl' => get_template_directory_uri(), 
 			'stylepath' => get_stylesheet_directory(), 
@@ -403,4 +401,6 @@ function comicpress_themeinfo($whichinfo = null) {
 // Dashboard Menu Options - Only run in the wp-admin area
 if (is_admin()) {
 	@require_once(comicpress_themeinfo('themepath').'/options.php');
+	// This line is here so the description in the style.css get's translated
+	$bogus_translation = __('Publish a WebComic with the ComicPress theme and the Comic Easel plugin.','comicpress');
 }

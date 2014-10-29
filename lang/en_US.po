@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-24 07:09-0800\n"
-"PO-Revision-Date: 2014-10-24 07:12-0800\n"
+"POT-Creation-Date: 2014-10-29 09:37-0800\n"
+"PO-Revision-Date: 2014-10-29 09:37-0800\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -496,6 +496,10 @@ msgstr ""
 msgid "Page: %s"
 msgstr ""
 
+#: ../functions.php:408
+msgid "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
+msgstr ""
+
 # @ comicpress
 #: ../image.php:22
 msgid "&larr; Back to Gallery"
@@ -763,11 +767,6 @@ msgid "Background Colors"
 msgstr ""
 
 # @ comicpress
-#: ../functions/customize.php:30
-msgid "some description here"
-msgstr ""
-
-# @ comicpress
 #: ../functions/customize.php:31
 msgid "Text Colors"
 msgstr ""
@@ -782,28 +781,129 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
+#: ../functions/customize.php:37
+msgid "Entire Content Area"
+msgstr ""
+
+#: ../functions/customize.php:40
+msgid "Menubar Dropdown"
+msgstr ""
+
+#: ../functions/customize.php:41
+msgid "Menubar When Mouseover"
+msgstr ""
+
+#: ../functions/customize.php:42
+msgid "Breadcrumbs"
+msgstr ""
+
+#: ../functions/customize.php:43
+msgid "Content Area Below Menubar"
+msgstr ""
+
+#: ../functions/customize.php:44
+msgid "Content Area Below Comic"
+msgstr ""
+
+#: ../functions/customize.php:45
+msgid "Content Column"
+msgstr ""
+
+#: ../functions/customize.php:46
+msgid "Entire Post Area"
+msgstr ""
+
+#: ../functions/customize.php:48
+msgid "Comment Section"
+msgstr ""
+
+#: ../functions/customize.php:49
+msgid "Comment Info. Line"
+msgstr ""
+
+#: ../functions/customize.php:50
+msgid "Comments Made By Post Author"
+msgstr ""
+
+#: ../functions/customize.php:51
+msgid "Info. Line Of Post Author"
+msgstr ""
+
+#: ../functions/customize.php:54
+msgid "Sitewide Textcolor"
+msgstr ""
+
+#: ../functions/customize.php:56
+msgid "Site Tagline"
+msgstr ""
+
+#: ../functions/customize.php:58
+msgid "Widget Titles"
+msgstr ""
+
+#: ../functions/customize.php:59
+msgid "Sidebar Textcolor"
+msgstr ""
+
+#: ../functions/customize.php:60
+msgid "Non-Link Post Titles"
+msgstr ""
+
+#: ../functions/customize.php:61
+msgid "Page Titles"
+msgstr ""
+
+#: ../functions/customize.php:63
+msgid "Post/Page Comments"
+msgstr ""
+
+#: ../functions/customize.php:65
+#: ../functions/customize.php:83
+msgid "Copyright"
+msgstr ""
+
+#: ../functions/customize.php:88
+msgid "Comic Area"
+msgstr ""
+
+#: ../functions/customize.php:90
+msgid "Default Comic Navigation"
+msgstr ""
+
+#: ../functions/customize.php:91
+msgid "Default Nav Normal Text Color"
+msgstr ""
+
+#: ../functions/customize.php:92
+msgid "Default Navigation Link"
+msgstr ""
+
+#: ../functions/customize.php:93
+msgid "Default Navigation Hover"
+msgstr ""
+
 # @ comicpress
-#: ../functions/customize.php:108
+#: ../functions/customize.php:111
 msgid "Choose a default scheme."
 msgstr ""
 
 # @ comicpress
-#: ../functions/customize.php:125
+#: ../functions/customize.php:128
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr ""
 
 # @ comicpress
-#: ../functions/customize.php:133
+#: ../functions/customize.php:136
 msgid "Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)"
 msgstr ""
 
 # @ comicpress
-#: ../functions/customize.php:139
+#: ../functions/customize.php:142
 msgid "Logo, 120px height x 160px width"
 msgstr ""
 
 # @ comicpress
-#: ../functions/customize.php:145
+#: ../functions/customize.php:148
 msgid "Put the Comic in the content column?"
 msgstr ""
 
