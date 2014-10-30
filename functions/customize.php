@@ -31,20 +31,20 @@ function comicpress_customize_register( $wp_customize ) {
 	$wp_customize->add_section('comicpress-text-colors' , array('title' => __('Text Colors','comicpress'), 'priority' => 30));	
 	$wp_customize->add_section('comicpress-link-colors' , array('title' => __('Link Colors','comicpress'), 'priority' => 40));
 	$wp_customize->add_section('comicpress-logo-options', array('title' => __('Logo','comicpress'), 'priority' => 50));
-	
+ 
 	$css_array = array(
-			// Background Colors	
-			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __('Entire Content Area','comicpress')),
+			// Background Colors
+			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __('Entire Content Area','comicpress')), 
 			array('slug' => 'header_background', 'description' => '#header', 'section' => 'colors', 'label' => __('Header','comicpress')),
 			array('slug' => 'menubar_background', 'description' => '#menubar-wrapper', 'section' => 'colors', 'label' => __('Menubar','comicpress')),
-			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => __('Menubar Dropdown','comiceasel')),
+			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => __('Menubar Dropdown','comicpress')),
 			array('slug' => 'menubar_mouseover_background', 'description' => '.menu ul li a:hover', 'section' => 'colors', 'label' => __('Menubar When Mouseover','comicpress')),
 			array('slug' => 'breadcrumb_background', 'description' => '#breadcrumb-wrapper', 'section' => 'colors', 'label' => __('Breadcrumbs','comicpress')),
 			array('slug' => 'content_wrapper_background', 'description' => '#content-wrapper', 'section' => 'colors', 'label' => __('Content Area Below Menubar','comicpress')),
 			array('slug' => 'subcontent_wrapper_background', 'description' => '#subcontent-wrapper', 'section' => 'colors', 'label' => __('Content Area Below Comic','comicpress')),
 			array('slug' => 'narrowcolumn_widecolumn_background', 'description' => '#content-column', 'section' => 'colors', 'label' => __('Content Column','comicpress')),
 			array('slug' => 'post_page_navigation_background', 'description' => '.uentry, #comment-wrapper, #wp-paginav, #pagenav', 'section' => 'colors', 'label' => __('Entire Post Area','comicpress')),
-			array('slug' => 'post_info_background', 'description' => '.post-info', 'section' => 'colors', 'label' => 'Top Section of a Post'),
+			array('slug' => 'post_info_background', 'description' => '.post-info', 'section' => 'colors', 'label' => __('Top Section of a Post','comicpress')),
 			array('slug' => 'comment_background', 'description' => '.comment, #comment-wrapper #wp-paginav', 'section' => 'colors', 'label' => __('Comment Section','comicpress')),
 			array('slug' => 'comment_meta_data_background', 'description' => '.comment-meta-data', 'section' => 'colors', 'label' => __('Comment Info. Line','comicpress')),
 			array('slug' => 'bypostauthor_background', 'description' => '.bypostauthor', 'section' => 'colors', 'label' => __('Comments Made By Post Author','comicpress')),
@@ -61,7 +61,7 @@ function comicpress_customize_register( $wp_customize ) {
 			array('slug' => 'pagetitle_textcolor', 'description' => 'h2.page-title', 'section' => 'comicpress-text-colors', 'label' => __('Page Titles','comicpress')),
 			array('slug' => 'postinfo_textcolor', 'description' => '.post-info', 'section' => 'comicpress-text-colors', 'label' => ''),
 			array('slug' => 'post_page_navigation_textcolor', 'description' => '.uentry, #comment-wrapper, #wp-paginav', 'section' => 'comicpress-text-colors', 'label' => __('Post/Page Comments','comicpress')),
-			array('slug' => 'footer_textcolor', 'description' => '#footer', 'section' => 'comicpress-text-colors', 'label' => 'Footer','comicpress')),
+			array('slug' => 'footer_textcolor', 'description' => '#footer', 'section' => 'comicpress-text-colors', 'label' => __('Footer','comicpress')),
 			array('slug' => 'footer_copyright_textcolor', 'description' => '.copyright-info', 'section' => 'comicpress-text-colors', 'label' => __('Copyright','comicpress')),
 			// Link Colors
 			array('slug' => 'content_link_acolor', 'description' => 'body a:link', 'section' => 'comicpress-link-colors', 'label' => ''),
@@ -83,6 +83,7 @@ function comicpress_customize_register( $wp_customize ) {
 			array('slug' => 'footer_copyright_acolor', 'description' => '.copyright-info a', 'section' => 'comicpress-link-colors', 'label' => __('Copyright','comicpress')),
 			array('slug' => 'footer_copyright_hcolor', 'description' => '.copyright-info a:hover', 'section' => 'comicpress-link-colors', 'label' => ''),
 			);
+			
 	// Additions for CE
 	if (function_exists('ceo_pluginfo')) {
 		$css_array[] = array('slug' => 'comic_wrap_background', 'description' => '#comic-wrap', 'section' => 'colors', 'label' => __('Comic Area','comicpress'));
@@ -92,6 +93,7 @@ function comicpress_customize_register( $wp_customize ) {
 		$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => __('Default Navigation Link','comicpress'));
 		$css_array[] = array('slug' => 'comic_nav_hcolor', 'description' => '.comic-nav a:hover', 'section' => 'comicpress-link-colors', 'label' => __('Default Navigation Hover','comicpress'));
 	}
+	
 	$priority_value = 11;
 	foreach ($css_array as $setinfo) {
 		$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
@@ -104,7 +106,7 @@ function comicpress_customize_register( $wp_customize ) {
 					)
 				);
 		$priority_value++;
-	}
+	} 
 	
 	$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'boxed', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 	$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
