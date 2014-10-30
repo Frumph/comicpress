@@ -37,7 +37,7 @@ function comicpress_customize_register( $wp_customize ) {
 			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __('Entire Content Area','comicpress')),
 			array('slug' => 'header_background', 'description' => '#header', 'section' => 'colors', 'label' => __('Header','comicpress')),
 			array('slug' => 'menubar_background', 'description' => '#menubar-wrapper', 'section' => 'colors', 'label' => __('Menubar','comicpress')),
-			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => __('Menubar Dropdown'),
+			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => __('Menubar Dropdown','comiceasel')),
 			array('slug' => 'menubar_mouseover_background', 'description' => '.menu ul li a:hover', 'section' => 'colors', 'label' => __('Menubar When Mouseover','comicpress')),
 			array('slug' => 'breadcrumb_background', 'description' => '#breadcrumb-wrapper', 'section' => 'colors', 'label' => __('Breadcrumbs','comicpress')),
 			array('slug' => 'content_wrapper_background', 'description' => '#content-wrapper', 'section' => 'colors', 'label' => __('Content Area Below Menubar','comicpress')),
