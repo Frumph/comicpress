@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress 4.2\n"
+"Project-Id-Version: ComicPress 4.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-24 16:30+0100\n"
-"PO-Revision-Date: 2014-10-24 16:36+0100\n"
+"POT-Creation-Date: 2014-10-29 23:25+0100\n"
+"PO-Revision-Date: 2014-10-29 23:50+0100\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -218,7 +218,7 @@ msgstr "Sende Kommentar"
 # @ easel
 #: comments.php:105
 msgid "Comments are closed."
-msgstr "Kommentarfunktion ist gesperrt!"
+msgstr "Kommentare sind geschlossen."
 
 # @ easel
 #: content-aside.php:6 content-link.php:11 content.php:41
@@ -231,42 +231,43 @@ msgid "Edit this comic."
 msgstr "Diesen Comic bearbeiten."
 
 # @ easel
-#: functions.php:57
+#: functions.php:54
 msgid "Primary"
 msgstr "Primär"
 
 # @ easel
-#: functions.php:58 functions.php:123 options/general.php:303
+#: functions.php:55 functions.php:120 functions/customize.php:52
+#: options/general.php:303
 msgid "Footer"
 msgstr "Footer"
 
 # @ easel
-#: functions.php:116
+#: functions.php:113
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
 # @ easel
-#: functions.php:116
+#: functions.php:113
 msgid "The sidebar that appears to the left of the content."
 msgstr "Diese Sidebar erscheint links der Inhalte."
 
 # @ easel
-#: functions.php:117
+#: functions.php:114
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
 # @ easel
-#: functions.php:117
+#: functions.php:114
 msgid "The sidebar that appears to the right of the content."
 msgstr "Diese Sidebar erscheint rechts der Inhalte."
 
 # @ easel
-#: functions.php:118
+#: functions.php:115
 msgid "Above Header"
 msgstr "Über dem Header"
 
 # @ easel
-#: functions.php:118
+#: functions.php:115
 msgid ""
 "This sidebar appears to above all of the site information.  This sidebar is "
 "not encased in CSS, you will need to create CSS for it."
@@ -275,49 +276,50 @@ msgstr ""
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
 # @ easel
-#: functions.php:119
+#: functions.php:116 functions/customize.php:38
 msgid "Header"
 msgstr "Header"
 
 # @ easel
-#: functions.php:119
+#: functions.php:116
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
 # @ easel
-#: functions.php:120 options.php:200 options/menubar.php:10
+#: functions.php:117 functions/customize.php:39 options.php:200
+#: options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
 
 # @ easel
-#: functions.php:120
+#: functions.php:117
 msgid "This sidebar is under the header and above the content-wrapper block"
 msgstr ""
 "Diese Sidebar erscheint unter dem Header und über dem content-wrapper Block"
 
 # @ easel
-#: functions.php:121
+#: functions.php:118
 msgid "Over Blog"
 msgstr "Über dem Blog"
 
 # @ easel
-#: functions.php:121
+#: functions.php:118
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
 msgstr ""
 "Diese Sidebar erscheint über dem Blog innerhalb von #column .narrowcolumn"
 
 # @ easel
-#: functions.php:122
+#: functions.php:119
 msgid "Under Blog"
 msgstr "Unter dem Blog"
 
 # @ easel
-#: functions.php:122
+#: functions.php:119
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
 msgstr ""
 "Diese Sidebar erscheint unter dem Blog innerhalb von #column .narrowcolumn"
 
-#: functions.php:123
+#: functions.php:120
 msgid ""
 "This sidebar is at the bottom of the page and is the center of the 3 footer "
 "sidebars."
@@ -326,174 +328,181 @@ msgstr ""
 "Footer Sidebars."
 
 # @ easel
-#: functions.php:124
+#: functions.php:121
 msgid "Footer Left"
 msgstr "Footer Links"
 
 # @ easel
-#: functions.php:124
+#: functions.php:121
 msgid "This sidebar is at the bottom of the page, the left one."
 msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Linke. "
 
 # @ easel
-#: functions.php:125
+#: functions.php:122
 msgid "Footer Right"
 msgstr "Footer Rechts"
 
 # @ easel
-#: functions.php:125
+#: functions.php:122
 msgid "This sidebar is at the bottom of the page, the right one."
 msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Rechte."
 
-#: functions.php:128
+#: functions.php:125
 msgid "Jetpack Mobile Sidebar"
 msgstr "Jetpack Mobile Sidebar"
 
 # @ easel
-#: functions.php:172
+#: functions.php:169
 msgid " [&hellip;]"
 msgstr " [&hellip;]"
 
 # @ easel
-#: functions.php:172 functions/displaypost.php:213
+#: functions.php:169 functions/displaypost.php:213
 msgid "&darr; Read the rest of this entry..."
 msgstr "&darr; Lese den Rest dieses Eintrags ..."
 
 # @ easel
-#: functions.php:243
+#: functions.php:240
 msgid " my DeviantART"
 msgstr "Mein DeviantART"
 
 # @ easel
-#: functions.php:243 options/menubar.php:97
+#: functions.php:240 options/menubar.php:97
 msgid "DeviantART"
 msgstr "DeviantART"
 
 # @ easel
-#: functions.php:244
+#: functions.php:241
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
 # @ easel
-#: functions.php:244 options/menubar.php:94
+#: functions.php:241 options/menubar.php:94
 msgid "Tumblr"
 msgstr "tumblr"
 
 # @ easel
-#: functions.php:245
+#: functions.php:242
 msgid "Friend on Facebook"
 msgstr "Freund auf Facebook"
 
 # @ easel
-#: functions.php:245 options/menubar.php:77
+#: functions.php:242 options/menubar.php:77
 msgid "Facebook"
 msgstr "Facebook"
 
 # @ easel
-#: functions.php:246
+#: functions.php:243
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
 # @ easel
-#: functions.php:246 options/menubar.php:100
+#: functions.php:243 options/menubar.php:100
 msgid "MySpace"
 msgstr "MySpace"
 
 # @ easel
-#: functions.php:247
+#: functions.php:244
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein Linkedin"
 
 # @ easel
-#: functions.php:247 options/menubar.php:82
+#: functions.php:244 options/menubar.php:82
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
 # @ easel
-#: functions.php:248
+#: functions.php:245
 msgid "Follow me on Twitter"
 msgstr "Folge mir auf Twitter"
 
 # @ easel
-#: functions.php:248 options/menubar.php:75
+#: functions.php:245 options/menubar.php:75
 msgid "Twitter"
 msgstr "Twitter"
 
 # @ easel
-#: functions.php:249
+#: functions.php:246
 msgid "Gaze at my Flickr"
 msgstr "Besuche mein Flickr"
 
 # @ easel
-#: functions.php:249 options/menubar.php:91
+#: functions.php:246 options/menubar.php:91
 msgid "Flickr"
 msgstr "Flickr"
 
 # @ easel
-#: functions.php:250
+#: functions.php:247
 msgid "Email me"
 msgstr "Maile mir"
 
 # @ easel
-#: functions.php:250
+#: functions.php:247
 msgid "Email"
 msgstr "Email"
 
 # @ easel
-#: functions.php:251
+#: functions.php:248
 msgid "Circle me on Google+"
 msgstr "Circle mich auf Google+"
 
 # @ easel
-#: functions.php:251 options/menubar.php:79
+#: functions.php:248 options/menubar.php:79
 msgid "Google+"
 msgstr "Google+"
 
 # @ easel
-#: functions.php:252
+#: functions.php:249
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
 # @ easel
-#: functions.php:252 options/menubar.php:85
+#: functions.php:249 options/menubar.php:85
 msgid "pinterest"
 msgstr "Pinterest"
 
-#: functions.php:253
+#: functions.php:250
 msgid "My Channel on YouTube"
 msgstr "Mein Kanal auf YouTube"
 
 # @ easel
-#: functions.php:253 options/menubar.php:88
+#: functions.php:250 options/menubar.php:88
 msgid "YouTube"
 msgstr "YouTube"
 
 # @ easel
-#: functions.php:254
+#: functions.php:251
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
 # @ easel
-#: functions.php:254 options/general.php:345
+#: functions.php:251 options/general.php:345
 msgid "RSS"
 msgstr "RSS"
 
 # @ easel
-#: functions.php:275 functions/breadcrumbs.php:6 functions/wp-pagenavi.php:165
+#: functions.php:272 functions/breadcrumbs.php:6 functions/wp-pagenavi.php:165
 msgid "&raquo;"
 msgstr "&raquo;"
 
 # @ easel
-#: functions.php:283
+#: functions.php:280
 #, php-format
 msgid "Search Results: %s"
 msgstr "Suchergebnisse: %s"
 
 # @ easel
-#: functions.php:287
+#: functions.php:284
 #, php-format
 msgid "Page: %s"
 msgstr "Seite: %s"
+
+#: functions.php:405
+msgid ""
+"Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
+msgstr ""
+"Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
+"Plugin."
 
 # @ easel
 #: functions/breadcrumbs.php:7
@@ -609,10 +618,6 @@ msgstr "Optionen"
 msgid "Background Colors"
 msgstr "Hintergrundfarben"
 
-#: functions/customize.php:30
-msgid "some description here"
-msgstr "Hier einige Beschreibungen"
-
 #: functions/customize.php:31
 msgid "Text Colors"
 msgstr "Textfarben"
@@ -626,15 +631,123 @@ msgstr "Linkfarben"
 msgid "Logo"
 msgstr "Logo"
 
-#: functions/customize.php:108
+#: functions/customize.php:37
+msgid "Entire Content Area"
+msgstr "Gesamten Inhaltsbereich"
+
+# @ easel
+#: functions/customize.php:40
+msgid "Menubar Dropdown"
+msgstr "Menüleiste Dropdown"
+
+#: functions/customize.php:41
+msgid "Menubar When Mouseover"
+msgstr "Menübar bei Mouseover"
+
+# @ easel
+#: functions/customize.php:42
+msgid "Breadcrumbs"
+msgstr "Breadcrumbs"
+
+#: functions/customize.php:43
+msgid "Content Area Below Menubar"
+msgstr "Inhaltsbereich Unter der Menüleiste"
+
+#: functions/customize.php:44
+msgid "Content Area Below Comic"
+msgstr "Inhaltsbereich unterhalb vom Comic"
+
+#: functions/customize.php:45
+msgid "Content Column"
+msgstr "Inhaltsspalte"
+
+#: functions/customize.php:46
+msgid "Entire Post Area"
+msgstr "Gesamten Beitragsbereich"
+
+# @ easel
+#: functions/customize.php:48
+msgid "Comment Section"
+msgstr "Kommentar Abschnitt"
+
+# @ easel
+#: functions/customize.php:49
+msgid "Comment Info. Line"
+msgstr "Kommentar Info Linie"
+
+#: functions/customize.php:50
+msgid "Comments Made By Post Author"
+msgstr "Kommentare gemacht vom Beitragsautor"
+
+#: functions/customize.php:51
+msgid "Info. Line Of Post Author"
+msgstr "Info. Linie von dem Beitragsautor"
+
+#: functions/customize.php:54
+msgid "Sitewide Textcolor"
+msgstr "Seitenbreite Textfarbe"
+
+#: functions/customize.php:56
+msgid "Site Tagline"
+msgstr "Website Untertitel"
+
+#: functions/customize.php:58
+msgid "Widget Titles"
+msgstr "Widget Titel"
+
+#: functions/customize.php:59
+msgid "Sidebar Textcolor"
+msgstr "Sidebar Textfarbe"
+
+#: functions/customize.php:60
+msgid "Non-Link Post Titles"
+msgstr "Nicht verlinkte Beitragstitel"
+
+# @ easel
+#: functions/customize.php:61
+msgid "Page Titles"
+msgstr "Seitentitel"
+
+# @ easel
+#: functions/customize.php:63
+msgid "Post/Page Comments"
+msgstr "Beitrag/Seiten Kommentare"
+
+# @ easel
+#: functions/customize.php:65 functions/customize.php:83
+msgid "Copyright"
+msgstr "Copyright"
+
+#: functions/customize.php:88
+msgid "Comic Area"
+msgstr "Comic Bereich"
+
+#: functions/customize.php:90
+msgid "Default Comic Navigation"
+msgstr "Standard Comic Navigation"
+
+#: functions/customize.php:91
+msgid "Default Nav Normal Text Color"
+msgstr "Standard Nav Normal Textfarbe"
+
+# @ easel
+#: functions/customize.php:92
+msgid "Default Navigation Link"
+msgstr "Standard Navigation Link"
+
+#: functions/customize.php:93
+msgid "Default Navigation Hover"
+msgstr "Standar Navigation Hover"
+
+#: functions/customize.php:111
 msgid "Choose a default scheme."
 msgstr "Wählen ein Standard-Schema."
 
-#: functions/customize.php:125
+#: functions/customize.php:128
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
 
-#: functions/customize.php:133
+#: functions/customize.php:136
 msgid ""
 "Make the header title and description become a clickable hotspot for the "
 "entire header? (If you do the logo will not display right)"
@@ -642,11 +755,11 @@ msgstr ""
 "Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
 "für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
 
-#: functions/customize.php:139
+#: functions/customize.php:142
 msgid "Logo, 120px height x 160px width"
 msgstr "Logo, 120px hoch x 160px breit"
 
-#: functions/customize.php:145
+#: functions/customize.php:148
 msgid "Put the Comic in the content column?"
 msgstr "Setze das Comic in die content column?"
 
