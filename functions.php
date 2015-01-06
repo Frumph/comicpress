@@ -31,9 +31,12 @@ foreach (glob(comicpress_themeinfo('themepath') . '/functions/*.php') as $funcfi
 }
 
 // Load all the widgets.
+function comicpress_widgets_init() {
 foreach (glob(comicpress_themeinfo('themepath')  . '/widgets/*.php') as $widgefile) {
 	@require_once($widgefile);
 }
+}
+add_action( 'widgets_init', 'comicpress_widgets_init' );
 
 function comicpress_setup() {
 	load_theme_textdomain('comicpress', get_template_directory().'/lang');
