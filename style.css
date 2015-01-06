@@ -470,11 +470,6 @@ body.wide #content-column, body.signup #content-column {
 	padding: 10px;
 }
 
-.facebook-like {
-	display: block;
-	position: static;
-}
-
 .post-cat, .post-author {
 	text-transform: capitalize;
 }
