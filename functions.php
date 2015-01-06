@@ -401,6 +401,6 @@ function comicpress_themeinfo($whichinfo = null) {
 // Dashboard Menu Options - Only run in the wp-admin area
 if (is_admin()) {
 	@require_once(comicpress_themeinfo('themepath').'/options.php');
-	// This line is here so the description in the style.css get's translated
+	/* translators: This is the theme discription for wp-admin */
 	$bogus_translation = __('Publish a WebComic with the ComicPress theme and the Comic Easel plugin.','comicpress');
 }
