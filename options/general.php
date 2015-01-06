@@ -374,8 +374,8 @@ foreach ($avatar_directories as $avatar_dirs) {
 					<th scope="row" colspan="2">
 						<label for="excerpt_or_content_in_archive"><?php _e('Excerpt or Full Content in archive and search.','comicpress'); ?></label>
 						<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
-							<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>>Excerpt</option>
-							<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>>Full Content</option>
+							<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>><?php _e('Excerpt','comicpress'); ?></option>
+							<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>><?php _e('Full Content','comicpress'); ?></option>
 						</select>
 					</th>
 					<td>
@@ -386,8 +386,8 @@ foreach ($avatar_directories as $avatar_dirs) {
 					<th scope="row" colspan="2">
 						<label for="archive_display_order"><?php _e('Archive Display Order','comicpress'); ?></label>
 						<select name="archive_display_order" id="archive_display_order">
-							<option class="level-0" value="asc" <?php if ($comicpress_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>>Oldest to Newest - Ascending</option>
-							<option class="level-0" value="desc" <?php if ($comicpress_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>>Newest to Oldest - Descending</option>
+							<option class="level-0" value="asc" <?php if ($comicpress_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>><?php _e('Oldest to Newest - Ascending','comicpress'); ?></option>
+							<option class="level-0" value="desc" <?php if ($comicpress_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>><?php _e('Newest to Oldest - Descending','comicpress'); ?></option>
 						</select>
 					</th>
 					<td>
