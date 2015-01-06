@@ -153,8 +153,6 @@ function comicpress_admin_options() { ?>
 			'disable_date_info_in_posts',
 			'disable_blog_on_homepage',
 			'enable_comments_on_homepage',
-			'facebook_like_blog_post',
-			'facebook_meta',
 			'display_archive_as_links',
 			'enable_last_modified_in_posts',
 			'disable_posted_at_time_in_posts',
