@@ -17,11 +17,11 @@
 						<input type="text" size="2" name="home_post_count" id="home_post_count" value="<?php echo $comicpress_options['home_post_count']; ?>" />
 					</td>
 					<td>
-						<?php _e('How many blog posts you would like displayed on the index page at one time.  This is different then the one in the wp-admin - settings, the one in the settings will control how many show up on search and archive pages.','comicpress'); ?>
+						<?php _e('How many blog posts you would like displayed on the index page at one time. This is different then the one in the wp-admin - settings, the one in the settings will control how many show up on search and archive pages.','comicpress'); ?>
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_blog_on_homepage"><?php _e('Disable Blog Loop','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_blog_on_homepage"><?php _e('Disable Blog Loop?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_blog_on_homepage']); ?> />
 					</td>
@@ -82,7 +82,7 @@
 						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />px
 					</td>
 					<td>
-						<?php _e('This sets a specific width for WordPress to use for media content within your posts and pages.  Default = 500','comicpress'); ?>
+						<?php _e('This sets a specific width for WordPress to use for media content within your posts and pages. Default = 500','comicpress'); ?>
 					</td>
 				</tr>
 				<tr class="alternate">
@@ -92,7 +92,7 @@
 						<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" />px
 					</td>
 					<td>
-						<?php _e('When the sidebars are disabled on pages?  Default = 700','comicpress'); ?>
+						<?php _e('When the sidebars are disabled on pages? Default = 700','comicpress'); ?>
 					</td>
 				</tr>
 			</table>
@@ -104,12 +104,12 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_page_titles"><?php _e('Disable the titles on pages','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_page_titles"><?php _e('Disable the titles on pages?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_page_titles" name="disable_page_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_page_titles']); ?> />
 					</td>
 					<td>
-						<?php _e('Page titles will be turned off.  If you disable the titles no pages you can still add a post-image in the page editor.','comicpress'); ?>
+						<?php _e('Page titles will be turned off. If you disable the titles no pages you can still add a post-image in the page editor.','comicpress'); ?>
 					</td>
 				</tr>			
 			</table>
@@ -126,11 +126,11 @@
 						<input id="disable_post_titles" name="disable_post_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_post_titles']); ?> />
 					</td>
 					<td>
-						<?php _e('Post titles will be turned off.  If you disable the titles on posts can still add a post-image in the post editor.','comicpress'); ?>
+						<?php _e('Post titles will be turned off. If you disable the titles on posts can still add a post-image in the post editor.','comicpress'); ?>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="enable_post_calendar"><?php _e('Add graphic calendar to blog posts','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_post_calendar"><?php _e('Add graphic calendar to blog posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_post_calendar" name="enable_post_calendar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_calendar']); ?> />
 					</td>
@@ -139,12 +139,12 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_post_author_gravatar"><?php _e('Enable Author Gravatar','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_post_author_gravatar"><?php _e('Enable Author Gravatar?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_post_author_gravatar" name="enable_post_author_gravatar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_author_gravatar']); ?> />
 					</td>
 					<td>
-						<?php _e('Enabling this option will show a gravatar of the post author based on the author email address.  Gravatars are associated by your email address and you can create them at','comicpress'); ?> <a href="http://gravatar.com/">http://gravatar.com</a>.
+						<?php _e('Enabling this option will show a gravatar of the post author based on the author email address. Gravatars are associated by your email address and you can create them at','comicpress'); ?> <a href="http://gravatar.com/">http://gravatar.com</a>.
 					</td>
 				</tr>
 				<tr>
@@ -157,7 +157,7 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_tags_in_posts"><?php _e('Disable display of <strong>tags</strong> in posts','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_tags_in_posts"><?php _e('Disable display of <strong>tags</strong> in posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_tags_in_posts" name="disable_tags_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_tags_in_posts']); ?> />
 					</td>
@@ -166,7 +166,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="disable_categories_in_posts"><?php _e('Disable display of <strong>categories</strong> in posts','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_categories_in_posts"><?php _e('Disable display of <strong>categories</strong> in posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_categories_in_posts" name="disable_categories_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_categories_in_posts']); ?> />
 					</td>
@@ -175,7 +175,7 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_author_info_in_posts"><?php _e('Disable display of <strong>by Author</strong> in post information.','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_author_info_in_posts"><?php _e('Disable display of <strong>by Author</strong> in post information?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_author_info_in_posts" name="disable_author_info_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_author_info_in_posts']); ?> />
 					</td>
@@ -184,7 +184,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="disable_date_info_in_posts"><?php _e('Disable display of the posted on date in posts','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_date_info_in_posts"><?php _e('Disable display of the posted on date in posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_date_info_in_posts" name="disable_date_info_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_date_info_in_posts']); ?> />
 					</td>
@@ -193,7 +193,7 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_posted_at_time_in_posts"><?php _e('Disable the display of the posted at time in posts','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_posted_at_time_in_posts"><?php _e('Disable the display of the posted at time in posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_posted_at_time_in_posts" name="disable_posted_at_time_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_posted_at_time_in_posts']); ?> />
 					</td>
@@ -202,7 +202,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="enable_last_modified_in_posts"><?php _e('Enable the display of last modified information in posts.','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_last_modified_in_posts"><?php _e('Enable the display of last modified information in posts?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_last_modified_in_posts" name="enable_last_modified_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_last_modified_in_posts']); ?> />
 					</td>
@@ -219,7 +219,7 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_comment_note"><?php _e('Disable the comment notes','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_comment_note"><?php _e('Disable the comment notes?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_comment_note" name="disable_comment_note" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_comment_note']); ?> />
 					</td>
@@ -228,7 +228,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="disable_comment_javascript"><?php _e('Disable Comment Javascript','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_comment_javascript"><?php _e('Disable Comment Javascript?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_comment_javascript" name="disable_comment_javascript" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_comment_javascript']); ?> />
 					</td>
@@ -237,12 +237,12 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_comments_on_homepage"><?php _e('Enable Comments on Home Page','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_comments_on_homepage"><?php _e('Enable Comments on Home Page?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_comments_on_homepage" name="enable_comments_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_comments_on_homepage']); ?> />
 					</td>
 					<td>
-						<?php _e('Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them, This will ONLY work if you have it set to only display 1 post on the home page.  The post count and this must be set to work.','comicpress'); ?>
+						<?php _e('Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them. This will ONLY work if you have it set to only display 1 post on the home page. The post count and this must be set to work.','comicpress'); ?>
 					</td>
 				</tr>
 <?php
@@ -275,7 +275,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						</select>
 					</th>
 					<td>
-						<?php _e('Choose a directory to get the avatars for default gravatars if someone does not have one.  You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. <strong>Setting this to \'none\' will disable it from using any special avatar sets.</strong>','comicpress'); ?><br />
+						<?php _e('Choose a directory to get the avatars for default gravatars if someone does not have one. You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. Setting this to <strong>none</strong> will disable it from using any special avatar sets.','comicpress'); ?><br />
 					</td>
 				</tr>
 			</table>
@@ -287,7 +287,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_numbered_pagination"><?php _e('Enable numbered pagination','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_numbered_pagination"><?php _e('Enable numbered pagination?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_numbered_pagination']); ?> />
 					</td>
@@ -304,7 +304,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_footer_text"><?php _e('Disable the default text in the footer','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_footer_text"><?php _e('Disable the default text in the footer?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_footer_text']); ?> />
 					</td>
@@ -372,14 +372,14 @@ foreach ($avatar_directories as $avatar_dirs) {
 				</tr>
 				<tr>
 					<th scope="row" colspan="2">
-						<label for="excerpt_or_content_in_archive"><?php _e('Excerpt or Full Content in archive and search.','comicpress'); ?></label>
+						<label for="excerpt_or_content_in_archive"><?php _e('Excerpt or Full Content in archive and search?','comicpress'); ?></label>
 						<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
 							<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>><?php _e('Excerpt','comicpress'); ?></option>
 							<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>><?php _e('Full Content','comicpress'); ?></option>
 						</select>
 					</th>
 					<td>
-						<?php _e('If Display archives results as list is disabled, decide how much is seen in the archive display. ','comicpress'); ?>
+						<?php _e('If Display archives results as list is disabled, decide how much is seen in the archive display.','comicpress'); ?>
 					</td>
 				</tr>				
 				<tr class="alternate">
@@ -391,7 +391,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						</select>
 					</th>
 					<td>
-						<?php _e('Sets the display order of your archives. Newest to Oldest will display your posts starting with the most recent. Oldest to Newest will start with the first entry in the category, tag, or date range (e.g., Selecting May 20XX will start with May 1, not May 31st.)','comicpress'); ?>
+						<?php _e('Sets the display order of your archives. Newest to Oldest will display your posts starting with the most recent. Oldest to Newest will start with the first entry in the category, tag, or date range (e.g. Selecting May 20XX will start with May 1, not May 31st.)','comicpress'); ?>
 					</td>
 				</tr>
 			</table>

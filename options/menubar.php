@@ -11,7 +11,7 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_default_menubar"><?php _e('Disable default Menubar','comicpress'); ?></label></th>
+					<th scope="row"><label for="disable_default_menubar"><?php _e('Disable default Menubar?','comicpress'); ?></label></th>
 					<td>
 						<input id="disable_default_menubar" name="disable_default_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_default_menubar']); ?> />
 					</td>
@@ -20,7 +20,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="enable_search_in_menubar"><?php _e('Enable Search Form','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_search_in_menubar"><?php _e('Enable Search Form?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_search_in_menubar" name="enable_search_in_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_search_in_menubar']); ?> />
 					</td>
@@ -29,7 +29,7 @@
 					</td>
 				</tr>
 				<tr class="alternate">
-					<th scope="row"><label for="enable_rss_in_menubar"><?php _e('Enable RSS Link','comicpress'); ?></label></th>
+					<th scope="row"><label for="enable_rss_in_menubar"><?php _e('Enable RSS Link?','comicpress'); ?></label></th>
 					<td>
 						<input id="enable_rss_in_menubar" name="enable_rss_in_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_rss_in_menubar']); ?> />
 					</td>
@@ -43,7 +43,7 @@
 						<input id="disable_jquery_menu_code" name="disable_jquery_menu_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_jquery_menu_code']); ?> />
 					</td>
 					<td>
-						<?php _e('Disable the loading of the menubar jQuery.  If you do not want the ddsmoother menu code to load. (will not do drop downs without it)','comicpress'); ?>
+						<?php _e('Disable the loading of the menubar jQuery. If you do not want the ddsmoother menu code to load. (will not do drop downs without it)','comicpress'); ?>
 					</td>
 				</tr>
 
@@ -70,7 +70,7 @@
 						<input id="menubar_social_icons" name="menubar_social_icons" type="checkbox" value="1" <?php checked(true, $comicpress_options['menubar_social_icons']); ?> />
 					</td>
 					<td>
-					<?php _e('Adds additional social icons in the menubar on in the menunav area.  Put the entire http:// url in the input box that leads to your account on those sites.  Leave field empty if you do not have one and it will not show.','comicpress'); ?><br />
+					<?php _e('Adds additional social icons in the menubar on in the menunav area. Put the entire http:// url in the input box that leads to your account on those sites.  Leave field empty if you do not have one and it will not show.','comicpress'); ?><br />
 					<br />
 					<strong><?php _e('Twitter','comicpress'); ?></strong><br />
 					<input type="text" size="60" name="menubar_social_twitter" id="menubar_social_twitter" value="<?php echo $comicpress_options['menubar_social_twitter']; ?>" /><br />
