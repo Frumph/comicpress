@@ -44,6 +44,10 @@
 		
 		<table class="widefat" style="width: 100%">
 		<tr>
+		    <td colspan="5">
+                <?php _e('Technical Support is available on the <a href="https://github.com/Frumph/comicpress/issues" target="_blank">github repository</a> or use the Contact form on <a href="http://frumph.net" target="_blank">Frumph.NET</a>.','comicpress'); ?>
+            </td>
+        <tr>
 			<td>
 			<strong>Site URL</strong>:(siteurl) <?php echo comicpress_themeinfo('siteurl'); ?><br />
 			<strong>Blog URL</strong>:(home) <?php echo comicpress_themeinfo('home'); ?><br />
