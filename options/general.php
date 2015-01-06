@@ -263,7 +263,7 @@ foreach ($dirs_to_search as $avdir) {
 					<th scope="row" colspan="2">
 						<label for="avatar_directory"><?php _e('Avatar Directory','comicpress'); ?></label>
 						<select name="avatar_directory" id="avatar_directory">
-							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
+							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>><?php _e('none','comicpress'); ?></option>
 <?php
 foreach ($avatar_directories as $avatar_dirs) {
 	if (is_dir($avatar_dirs)) {
