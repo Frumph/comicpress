@@ -26,7 +26,7 @@
 						<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_blog_on_homepage']); ?> />
 					</td>
 					<td>
-						<?php _e('Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings - reading.','comicpress'); ?>
+						<?php _e('Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings &#10132; reading.','comicpress'); ?>
 					</td>
 				</tr>
 				<tr>
@@ -62,9 +62,9 @@
 					<td>
 						<?php _e('Width:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_width" id="custom_image_header_width" value="<?php echo $comicpress_options['custom_image_header_width']; ?>" />px &nbsp;
 						<?php _e('Height:','comicpress'); ?> <input type="text" size="5" name="custom_image_header_height" id="custom_image_header_height" value="<?php echo $comicpress_options['custom_image_header_height']; ?>" />px<br />
-						<?php _e('Modify the height and width of the custom header *if* you use Appearance - Header','comicpress'); ?><br />
+						<?php _e('Modify the height and width of the custom header *if* you use Appearance &#10132; Header','comicpress'); ?><br />
 						<?php _e('3 Column Layouts are 980px width while 2 Column Layouts are 780px width as default.','comicpress'); ?><br />
-						<strong><?php _e('NOTE: This should only be used if the appearance - header section is not displaying your header dimensions correctly.', 'comicpress'); ?></strong>
+						<strong><?php _e('NOTE: This should only be used if the appearance &#10132; header section is not displaying your header dimensions correctly.', 'comicpress'); ?></strong>
 					</td>
 				</tr>
 			</table>
@@ -309,7 +309,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_footer_text']); ?> />
 					</td>
 					<td>
-						<?php _e('Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance -> Widgets-> Footer.', 'comicpress'); ?>
+						<?php _e('Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer.', 'comicpress'); ?>
 					</td>
 				</tr>
 				<tr>
