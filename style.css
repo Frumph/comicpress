@@ -1835,6 +1835,14 @@ body.scheme-mecha .blognav {
 	margin-bottom: 5px;
 }
 
+body.scheme-mecha .blognav-prev {
+    margin-left: 5px;
+}
+
+body.scheme-mecha .blognav-next {
+    margin-right: 5px;
+}
+
 body.scheme-mecha .menu a, body.scheme-mecha .menunav a, body.scheme-mecha h2.page-title, body.scheme-mecha h2.post-title {
 	text-shadow: 1px 1px 1px #000;
 	-moz-text-shadow: 1px 1px 1px #000;
