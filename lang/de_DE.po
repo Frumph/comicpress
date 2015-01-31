@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-12 22:35+0100\n"
-"PO-Revision-Date: 2015-01-12 22:39+0100\n"
+"POT-Creation-Date: 2015-01-31 18:24+0100\n"
+"PO-Revision-Date: 2015-01-31 18:46+0100\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -125,60 +125,60 @@ msgstr "Diskussion &not;"
 msgid "Discussion (%) &not;"
 msgstr "Diskussion (%) &not;"
 
-#: comments.php:44
+#: comments.php:41
 msgid "Reply &not;"
 msgstr "Antwort &not;"
 
-#: comments.php:65
+#: comments.php:58
 msgid "Comment Pages"
 msgstr "Kommentar-Seiten"
 
-#: comments.php:73
+#: comments.php:66
 msgid "Next Comments &uarr;"
 msgstr "Weitere Kommentare &uarr;"
 
-#: comments.php:74
+#: comments.php:67
 msgid "&darr; Previous Comments"
 msgstr "&darr; Vorherige Kommentare"
 
-#: comments.php:86
+#: comments.php:78
 msgid "*NAME"
 msgstr "*NAME"
 
-#: comments.php:88
+#: comments.php:78
 msgid "*EMAIL"
 msgstr "*EMAIL"
 
-#: comments.php:88
+#: comments.php:78
 msgid "Get a Gravatar"
 msgstr "Hole dir einen Gravatar"
 
-#: comments.php:90
+#: comments.php:78
 msgid "Website URL"
 msgstr "Website URL"
 
-#: comments.php:95
-msgid "NOTE - You can use these HTML tags and attributes: "
-msgstr "HINWEIS - Du kannst diese HTML-Tags und Attribute verwenden: "
+#: comments.php:79
+msgid "NOTE &mdash; You can use these HTML tags and attributes: "
+msgstr "HINWEIS &mdash; Du kannst diese HTML-Tags und Attribute verwenden: "
 
-#: comments.php:96
+#: comments.php:79
 msgid "Comment &not;"
 msgstr "Kommentar &not;"
 
-#: comments.php:97
+#: comments.php:79
 #, php-format
 msgid "Reply to %s &not;"
 msgstr "Antwort an %s &not;"
 
-#: comments.php:98
+#: comments.php:79
 msgid "Cancel reply"
 msgstr "Verwerfe Antwort"
 
-#: comments.php:99
+#: comments.php:79
 msgid "Post Comment"
 msgstr "Sende Kommentar"
 
-#: comments.php:105
+#: comments.php:84
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
@@ -303,7 +303,7 @@ msgstr "&darr; Lese den Rest dieses Eintrags ..."
 msgid " my DeviantART"
 msgstr "Mein DeviantART"
 
-#: functions.php:241 options/menubar.php:97
+#: functions.php:241 options/menubar.php:115
 msgid "DeviantART"
 msgstr "DeviantART"
 
@@ -311,7 +311,7 @@ msgstr "DeviantART"
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
-#: functions.php:242 options/menubar.php:94
+#: functions.php:242 options/menubar.php:109
 msgid "Tumblr"
 msgstr "Tumblr"
 
@@ -327,7 +327,7 @@ msgstr "Facebook"
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
-#: functions.php:244 options/menubar.php:100
+#: functions.php:244 options/menubar.php:121
 msgid "MySpace"
 msgstr "MySpace"
 
@@ -335,7 +335,7 @@ msgstr "MySpace"
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein Linkedin"
 
-#: functions.php:245 options/menubar.php:82
+#: functions.php:245 options/menubar.php:85
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
@@ -351,7 +351,7 @@ msgstr "Twitter"
 msgid "Gaze at my Flickr"
 msgstr "Besuche mein Flickr"
 
-#: functions.php:247 options/menubar.php:91
+#: functions.php:247 options/menubar.php:103
 msgid "Flickr"
 msgstr "Flickr"
 
@@ -375,7 +375,7 @@ msgstr "Google+"
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
-#: functions.php:250 options/menubar.php:85
+#: functions.php:250 options/menubar.php:91
 msgid "pinterest"
 msgstr "Pinterest"
 
@@ -383,7 +383,7 @@ msgstr "Pinterest"
 msgid "My Channel on YouTube"
 msgstr "Mein Kanal auf YouTube"
 
-#: functions.php:251 options/menubar.php:88
+#: functions.php:251 options/menubar.php:97
 msgid "YouTube"
 msgstr "YouTube"
 
@@ -395,7 +395,8 @@ msgstr "RSS-Feed"
 msgid "RSS"
 msgstr "RSS"
 
-#: functions.php:273 functions/breadcrumbs.php:6 functions/wp-pagenavi.php:165
+#: functions.php:273 functions/breadcrumbs.php:11
+#: functions/wp-pagenavi.php:165
 msgid "&raquo;"
 msgstr "&raquo;"
 
@@ -417,35 +418,36 @@ msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
-#: functions/breadcrumbs.php:7
+#. translators: home link for breadcrumps
+#: functions/breadcrumbs.php:13
 msgid "Home"
 msgstr "Zurück"
 
-#: functions/breadcrumbs.php:26
+#: functions/breadcrumbs.php:35
 msgid "Archive by category"
 msgstr "Archiv der Kategorie"
 
-#: functions/breadcrumbs.php:56
+#: functions/breadcrumbs.php:67
 msgid "No Results"
 msgstr "Kein Ergebnisse"
 
-#: functions/breadcrumbs.php:83
+#: functions/breadcrumbs.php:97
 msgid "Search results for"
 msgstr "Suchergebnisse für"
 
-#: functions/breadcrumbs.php:86
+#: functions/breadcrumbs.php:100
 msgid "Posts tagged"
 msgstr "Beiträge getaggt"
 
-#: functions/breadcrumbs.php:91
+#: functions/breadcrumbs.php:105
 msgid "Articles posted by"
 msgstr "Artikel geschrieben von"
 
-#: functions/breadcrumbs.php:94
+#: functions/breadcrumbs.php:108
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#: functions/breadcrumbs.php:99
+#: functions/breadcrumbs.php:114
 msgid "Page"
 msgstr "Seite"
 
@@ -677,7 +679,7 @@ msgstr "Veröffentlicht In:"
 
 #: functions/displaypost.php:165
 msgid "&#9492; Tags: "
-msgstr "&#9492; Schlagwörter: "
+msgstr "&#9492; Tags: "
 
 #: functions/displaypost.php:176
 msgid "Comment&nbsp;"
@@ -842,15 +844,15 @@ msgstr ""
 
 #: options/debug.php:28
 msgid ""
-"This option forces mysql to close the connection after each page load - not "
-"recommended unless you are requested to enable it."
+"This option forces mysql to close the connection after each page load "
+"&mdash; not recommended unless you are requested to enable it."
 msgstr ""
 "Diese Option zwingt MySQL die Verbindung nach jedem Laden einer Seite zu "
-"schliessen. Dies ist nicht empfohlen und sollte nur aktiviert werden, wenn "
-"Du danach gefragt wirst."
+"schliessen &mdash; nicht empfohlen und sollte nur aktiviert werden, wenn Du "
+"danach gefragt wirst."
 
 #: options/debug.php:36 options/general.php:414 options/layout.php:60
-#: options/menubar.php:114
+#: options/menubar.php:141
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
@@ -1118,8 +1120,8 @@ msgid ""
 "Checkmarking this will make it so that it will show when the last time that "
 "the post was modified in the post date information."
 msgstr ""
-"Wenn aktiv, wird angezeigt, ob ein Artikel noch mal geändert wurde - und "
-"auch wann."
+"Wenn aktiv, wird angezeigt, ob ein Artikel noch mal geändert wurde und auch "
+"wann."
 
 #: options/general.php:227
 msgid "Comments"
@@ -1247,8 +1249,8 @@ msgstr ""
 "lassen, um den Seitennamen zu verwenden."
 
 #: options/general.php:343
-msgid "Copyright Holder URL"
-msgstr "Copyright-Inhaber URL"
+msgid "&copy; Copyright Holder URL"
+msgstr "&copy; Copyright Inhaber URL"
 
 #: options/general.php:347
 msgid ""
@@ -1309,12 +1311,12 @@ msgid "Archive Display Order"
 msgstr "Archiv Darstellungsreihenfolge"
 
 #: options/general.php:399
-msgid "Oldest to Newest - Ascending"
-msgstr "Alt nach Neu - Aufsteigend"
+msgid "Oldest to Newest &mdash; Ascending"
+msgstr "Alt nach Neu &mdash; Aufsteigend"
 
 #: options/general.php:400
-msgid "Newest to Oldest - Descending"
-msgstr "Neu nach Alt - Absteigend"
+msgid "Newest to Oldest &mdash; Descending"
+msgstr "Neu nach Alt &mdash; Absteigend"
 
 #: options/general.php:404
 msgid ""
@@ -1333,40 +1335,40 @@ msgid "Choose Your Website Layout"
 msgstr "Wähle dein Websitenlayout"
 
 #: options/layout.php:34
-msgid "3 Column - Standard"
-msgstr "3 Spalten - Standard"
+msgid "3 Column &mdash; Standard"
+msgstr "3 Spalten &mdash; Standard"
 
 #: options/layout.php:35
-msgid "3 Column - Sidebar's on Left"
-msgstr "3 Spalten - Sidebar's sind Links"
+msgid "3 Column &mdash; Sidebar's on Left"
+msgstr "3 Spalten &mdash; Sidebar's sind Links"
 
 #: options/layout.php:36
-msgid "3 Column - Sidebar's on Right"
-msgstr "3 Spalten - Sidebar's sind Rechts"
+msgid "3 Column &mdash; Sidebar's on Right"
+msgstr "3 Spalten &mdash; Sidebar's sind Rechts"
 
 #: options/layout.php:37
-msgid "2 Column - Sidebar on Left (780px)"
-msgstr "2 Spalten - Sidebar ist links (780px)"
+msgid "2 Column &mdash; Sidebar on Left (780px)"
+msgstr "2 Spalten &mdash; Sidebar ist Links (780px)"
 
 #: options/layout.php:38
-msgid "2 Column - Sidebar on Right (780px)"
-msgstr "2 Spalten - Sidebar ist Rechts (780px) "
+msgid "2 Column &mdash; Sidebar on Right (780px)"
+msgstr "2 Spalten &mdash; Sidebar ist Rechts (780px)"
 
 #: options/layout.php:39
-msgid "2 Column Wide - Sidebar on Left (980px)"
-msgstr "2 Spalten Breiter - Sidebar ist Links (980px) "
+msgid "2 Column Wide &mdash; Sidebar on Left (980px)"
+msgstr "2 Spalten Breiter &mdash; Sidebar ist Links (980px)"
 
 #: options/layout.php:40
-msgid "2 Column Wide - Sidebar on Right (980px)"
-msgstr "2 Spalten Breiter - Sidebar ist Rechts (980px) "
+msgid "2 Column Wide &mdash; Sidebar on Right (980px)"
+msgstr "2 Spalten Breiter &mdash; Sidebar ist Rechts (980px)"
 
 #: options/layout.php:41
-msgid "3 Column - Sidebar on Left, Sidebar on right under comic. "
-msgstr "3 Spalten - Sidebar ist Links, Sidebar ist Rechts unter Comic."
+msgid "3 Column &mdash; Sidebar on Left, Sidebar on right under comic."
+msgstr "3 Spalten &mdash; Sidebar Links, Sidebar Rechts unter Comic."
 
 #: options/layout.php:42
-msgid "3 Column - Sidebar on Right, Sidebar on left under comic."
-msgstr "3 Spalten - Sidebar ist Rechts, Sidebar ist Links unter Comic."
+msgid "3 Column &mdash; Sidebar on Right, Sidebar on left under comic."
+msgstr "3 Spalten &mdash; Sidebar Rechts, Sidebar Links unter Comic."
 
 #: options/layout.php:54
 msgid ""
@@ -1385,7 +1387,7 @@ msgid ""
 "Allows you to customize the location of the Menubar via Widgets or, just not "
 "have it."
 msgstr ""
-"Erlaubt dir, die Position der Menüleiste anzupassen - oder sie ganz "
+"Erlaubt dir, die Position der Menüleiste anzupassen oder sie ganz "
 "wegzulassen."
 
 #: options/menubar.php:23
@@ -1414,7 +1416,7 @@ msgid ""
 "Disable the loading of the menubar jQuery. If you do not want the ddsmoother "
 "menu code to load. (will not do drop downs without it)"
 msgstr ""
-"Verhindert das Laden der jQuery für die Menüleiste - wenn du z.B. keinen "
+"Verhindert das Laden der jQuery für die Menüleiste. Wenn du z.B. keinen "
 "ddsmoother Menücode laden möchtest. Ohne diesen Code kannst du allerdings "
 "auch keine Dropdowns erzeugen."
 
@@ -1431,8 +1433,8 @@ msgstr ""
 "der Standardmenübar Position."
 
 #: options/menubar.php:64
-msgid "Menubar - Social Icons"
-msgstr "Menüleiste - Social Icons"
+msgid "Menubar &mdash; Social Icons"
+msgstr "Menüleiste &mdash; Social Icons"
 
 #: options/menubar.php:68
 msgid "Enable Social Icons in Menubar?"
@@ -1449,9 +1451,9 @@ msgstr ""
 "URL inklusive http:// zu dem jeweiligen Profil ein. Wenn du das Feld leer "
 "lässt, wird kein betreffendes Icon angezeigt."
 
-#: options/menubar.php:103
-msgid "Email - use mailto://your@email.com"
-msgstr "Email - Verwende mailto://deine@mailadres.se"
+#: options/menubar.php:127
+msgid "Email &mdash; use mailto://your@email.com"
+msgstr "Email &mdash; Verwende mailto://deine@emailadresse.de"
 
 #: search.php:8
 msgid "Search for &lsquo;"
