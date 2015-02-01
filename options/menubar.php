@@ -43,7 +43,7 @@
 						<input id="disable_jquery_menu_code" name="disable_jquery_menu_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_jquery_menu_code']); ?> />
 					</td>
 					<td>
-						<?php _e('Disable the loading of the menubar jQuery. If you do not want the ddsmoother menu code to load. (will not do drop downs without it)', 'comicpress'); ?>
+						<?php _e('Disable the loading of the menubar jQuery. If you do not want the ddsmoother menu code to load. (Will not do drop downs without it.)', 'comicpress'); ?>
 					</td>
 				</tr>
 
