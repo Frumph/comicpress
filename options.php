@@ -47,6 +47,7 @@ function comicpress_admin_options() { ?>
 	<?php } 
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset_customize') {
 		remove_theme_mod('comicpress-customize');
+		delete_option('theme_mods_comicpress');
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e('ComicPress Customizer Colors RESET!','comicpress'); ?></strong></p></div>

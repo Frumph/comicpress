@@ -59,7 +59,8 @@ function comicpress_setup() {
 	));
 	$args = array(
 			'default-color' => '1C2C5B',
-			'default-image' => get_template_directory_uri() . '/images/background.jpg'
+			'default-image' => get_template_directory_uri() . '/images/background.jpg',
+			'default-position' => 'fixed'
 		);
 	add_theme_support('custom-background', $args);
 	add_theme_support('post-thumbnails');
