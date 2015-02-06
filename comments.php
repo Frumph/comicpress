@@ -63,8 +63,8 @@ if ( post_password_required() ) { ?>
 
 		<?php } else { ?>
 			<div class="commentnav">
-				<div class="commentnav-right"><?php next_comments_link(__('Next Comments &uarr;','comicpress')) ?></div>
-				<div class="commentnav-left"><?php previous_comments_link(__('&darr; Previous Comments','comicpress')) ?></div>
+				<div class="commentnav-right"><?php next_comments_link(__( 'Next Comments &uarr;', 'comicpress' )) ?></div>
+				<div class="commentnav-left"><?php previous_comments_link(__( '&darr; Previous Comments', 'comicpress ')) ?></div>
 				<div class="clear"></div>
 			</div>
 		<?php }
