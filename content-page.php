@@ -17,6 +17,6 @@
 			<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
-		<?php edit_post_link(__('Edit this page.','comicpress'), '', ''); ?>
+		<?php edit_post_link(__( 'Edit this page.', 'comicpress' ), '', ''); ?>
 	</div>
 </div>

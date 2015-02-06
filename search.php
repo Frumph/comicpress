@@ -5,8 +5,8 @@ $count = 'No';
 if (have_posts()) :
 	$count = $wp_query->found_posts;
 ?>
-	<h2 class="page-title"><?php _e('Search for &lsquo;','comicpress'); the_search_query(); _e('&rsquo;','comicpress'); ?></h2>
-	<div class="searchresults"><?php printf(_n("%d result.", "%d results.", $count,'comicpress'),$count); ?></div>
+	<h2 class="page-title"><?php _e( 'Search for &lsquo;', 'comicpress' ); the_search_query(); _e( '&rsquo;', 'comicpress' ); ?></h2>
+	<div class="searchresults"><?php printf(_n( "%d result.", "%d results.", $count, 'comicpress' ),$count); ?></div>
 	<div class="clear"></div>
 <?php 
 	if (comicpress_themeinfo('display_archive_as_links')) { ?>
@@ -34,8 +34,8 @@ if (have_posts()) :
 			<div class="post-head"></div>
 			<div class="post-content">
 				<div class="entry">
-					<h3><?php _e('No results found.','comicpress'); ?></h3>
-					<p><?php _e('Try another search?','comicpress'); ?></p>
+					<h3><?php _e( 'No results found.', 'comicpress' ); ?></h3>
+					<p><?php _e( 'Try another search?', 'comicpress' ); ?></p>
 					<p><?php get_search_form(); ?></p>
 				</div>
 			</div>

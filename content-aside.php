@@ -3,7 +3,7 @@
 		<div class="entry">
 			<?php comicpress_display_the_content(); ?>
 			<div class="clear"></div>
-			<?php edit_post_link(__('Edit this post.','comicpress'), '', ''); ?>
+			<?php edit_post_link(__( 'Edit this post.', 'comicpress' ), '', ''); ?>
 		</div>
 	</div>
 	<div class="clear"></div>

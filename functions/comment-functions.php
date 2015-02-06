@@ -132,7 +132,7 @@ function comicpress_comments_callback($comment, $args, $depth) {
 				</span> 
 		
 				<span class="comment-permalink">
-					<span class="separator">|</span> <a href="#comment-<?php echo str_replace('&', '&amp;', get_comment_ID()); ?>" title="<?php _e('Permalink to comment','comicpress'); ?>"><?php _e('#','comicpress'); ?></a>
+					<span class="separator">|</span> <a href="#comment-<?php echo str_replace('&', '&amp;', get_comment_ID()); ?>" title="<?php _e( 'Permalink to comment', 'comicpress' ); ?>"><?php _e( '#', 'comicpress' ); ?></a>
 				</span>
 				
 				<?php if((get_option('thread_comments')) && ($args['type'] == 'all' || get_comment_type() == 'comment')) :
