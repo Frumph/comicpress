@@ -243,7 +243,7 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($tumblr)) $output .= '<a href="'.$tumblr.'" target="_blank" title="'.__( 'Examine my Tumblr', 'comicpress' ).'" class="menunav-social menunav-tumblr">'.__( 'Tumblr', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($facebook)) $output .= '<a href="'.$facebook.'" target="_blank" title="'.__( 'Friend on Facebook', 'comicpress' ).'" class="menunav-social menunav-facebook">'.__( 'Facebook', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($myspace)) $output .= '<a href="'.$myspace.'" target="_blank" title="'.__( 'Make use of MySpace', 'comicpress' ).'" class="menunav-social menunav-myspace">'.__( 'MySpace', 'comicpress' ).'</a>'."\r\n";		
-		if (!empty($linkedin)) $output .= '<a href="'.$linkedin.'" target="_blank" title="'.__( 'Look at my LinkedIn', 'comicpress' ).'" class="menunav-social menunav-linkedin">'.__(' LinkedIn', 'comicpress' ).'</a>'."\r\n";
+		if (!empty($linkedin)) $output .= '<a href="'.$linkedin.'" target="_blank" title="'.__( 'Look at my LinkedIn', 'comicpress' ).'" class="menunav-social menunav-linkedin">'.__( 'LinkedIn', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__('Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";		
 		if (!empty($email)) $output .= '<a href="'.$email.'" target="_blank" title="'.__( 'Email me', 'comicpress' ).'" class="menunav-social menunav-email">'.__( 'Email', 'comicpress' ).'</a>'."\r\n";
