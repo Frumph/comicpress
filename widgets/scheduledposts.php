@@ -11,8 +11,8 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 	
 	function comicpress_scheduled_posts_widget($skip_widget_init = false) {
 		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __('Display a list of posts that are scheduled to be published.','comicpress') );
-			$this->WP_Widget(__CLASS__, __('Scheduled Posts','comicpress'), $widget_ops);
+			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comicpress' ) );
+			$this->WP_Widget(__CLASS__, __( 'Scheduled Posts', 'comicpress' ), $widget_ops);
 		}
 	}
 	
@@ -20,7 +20,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		extract($args, EXTR_SKIP); 
 		Protect();
 		echo $before_widget;
-		$title = empty($instance['title']) ? __('Scheduled Posts','comicpress') : apply_filters('widget_title', $instance['title']); 
+		$title = empty($instance['title']) ? __( 'Scheduled Posts', 'comicpress' ) : apply_filters('widget_title', $instance['title']); 
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
 		$scheduled_posts = &get_posts('post_status=future&showposts=5');
 		if (empty($scheduled_posts)) {
@@ -46,7 +46,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','comicpress'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'comicpress' ); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
 		<?php
 	}
 }

@@ -12,7 +12,7 @@ if (function_exists('is_multisite')) {
 		class widget_multisite_sitelist extends WP_Widget {
 			
 			function widget_multisite_sitelist() {
-				$widget_ops = array('classname' => 'widget_multisite_sitelist', 'description' => __('Display Site List of all sites that have recently updated on this Multisite.','comicpress') );
+				$widget_ops = array('classname' => 'widget_multisite_sitelist', 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comicpress' ) );
 				$this->WP_Widget('multisite_sitelist', 'Site List', $widget_ops);
 			}
 			
@@ -22,7 +22,7 @@ if (function_exists('is_multisite')) {
 				extract($args, EXTR_SKIP); 
 				
 				echo $before_widget;
-				$title = empty($instance['title']) ? __('Hosted Site List','comicpress') : apply_filters('widget_title', $instance['title']); 
+				$title = empty($instance['title']) ? __( 'Hosted Site List', 'comicpress' ) : apply_filters('widget_title', $instance['title']); 
 				if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
 				$blogs = get_last_updated();
 				if( is_array( $blogs ) ) { ?>

@@ -15,7 +15,7 @@ if (have_posts()) :
 		<div class="entry">
 		<table class="archive-table">
 			<?php while (have_posts()) : the_post(); ?>
-			<tr><td class="archive-date"><?php the_time('M d, Y') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e('Permanent Link:','comicpress'); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
+			<tr><td class="archive-date"><?php the_time('M d, Y') ?></td><td class="archive-title"><a href="<?php echo get_permalink($post->ID) ?>" rel="bookmark" title="<?php _e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title() ?>"><?php the_title() ?></a></td></tr>
 			<?php endwhile; ?>
 		</table>
 		</div>

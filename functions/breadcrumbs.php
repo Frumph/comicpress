@@ -8,9 +8,9 @@
 
 function comicpress_breadcrumbs() {
 
-    $delimiter = __('&raquo;', 'comicpress');
+    $delimiter = __( '&raquo;', 'comicpress' );
     /* translators: home link for breadcrumps */
-    $home = __('Home', 'comicpress');
+    $home = __( 'Home', 'comicpress' );
     // tag before the current crumb
     $before = '<span class="current">';
     // tag after the current crumb
@@ -32,7 +32,7 @@ function comicpress_breadcrumbs() {
             $parentCat = get_category($thisCat -> parent);
             if ($thisCat -> parent != 0)
                 echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-            echo $before . __('Archive by category', 'comicpress') . ' "' . single_cat_title('', false) . '"' . $after;
+            echo $before . __( 'Archive by category', 'comicpress' ) . ' "' . single_cat_title('', false) . '"' . $after;
 
         } elseif (is_day()) {
             echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
@@ -64,7 +64,7 @@ function comicpress_breadcrumbs() {
             if (!empty($post)) {
                 echo $before . $post_type -> labels -> singular_name . $after;
             } else
-                echo $before . __('No Results', 'comicpress') . $after;
+                echo $before . __( 'No Results', 'comicpress' ) . $after;
 
         } elseif (is_attachment()) {
             $parent = get_post($post -> post_parent);
@@ -94,24 +94,24 @@ function comicpress_breadcrumbs() {
             echo $before . get_the_title() . $after;
 
         } elseif (is_search()) {
-            echo $before . __('Search results for', 'comicpress') . ' "' . get_search_query() . '"' . $after;
+            echo $before . __( 'Search results for', 'comicpress' ) . ' "' . get_search_query() . '"' . $after;
 
         } elseif (is_tag()) {
-            echo $before . __('Posts tagged', 'comicpress') . ' "' . single_tag_title('', false) . '"' . $after;
+            echo $before . __( 'Posts tagged', 'comicpress' ) . ' "' . single_tag_title('', false) . '"' . $after;
 
         } elseif (is_author()) {
             global $author;
             $userdata = get_userdata($author);
-            echo $before . __('Articles posted by', 'comicpress') . ' ' . $userdata -> display_name . $after;
+            echo $before . __( 'Articles posted by', 'comicpress' ) . ' ' . $userdata -> display_name . $after;
 
         } elseif (is_404()) {
-            echo $before . __('Error 404', 'comicpress') . $after;
+            echo $before . __( 'Error 404', 'comicpress' ) . $after;
         }
 
         if (get_query_var('paged')) {
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo ' (';
-            echo __('Page', 'comicpress') . ' ' . get_query_var('paged');
+            echo __( 'Page', 'comicpress' ) . ' ' . get_query_var('paged');
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo ')';
         }

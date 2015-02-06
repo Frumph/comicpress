@@ -20,7 +20,7 @@ function comicpress_page_editor_options($post) {
 add_action('add_meta_boxes', 'comicpress_add_page_editor_meta_box');
 
 function comicpress_add_page_editor_meta_box() {
-	add_meta_box('comicpress-page-options', __('Page Options', 'comicpress'), 'comicpress_page_editor_options', 'page', 'side', 'high');
+	add_meta_box('comicpress-page-options', __( 'Page Options', 'comicpress' ), 'comicpress_page_editor_options', 'page', 'side', 'high');
 }
 
 function comicpress_save_page_editor_options($post_id) {

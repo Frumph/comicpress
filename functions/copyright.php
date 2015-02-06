@@ -44,7 +44,7 @@ if (!function_exists('comicpress_copyright_info')) {
 		if (empty($copyright_name)) $copyright_name = get_bloginfo('name');
 		$copyright_url = comicpress_themeinfo('copyright_url');
 		if (empty($copyright_url)) $copyright_url = home_url();
-		$copyright = __('&copy;', 'comicpress'). comicpress_copyright_dates() . ' ' . apply_filters('comicpress_copyright_info_name', '<a href="'.$copyright_url.'">' . $copyright_name . '</a>') . ' ';
+		$copyright = __( '&copy;', 'comicpress' ). comicpress_copyright_dates() . ' ' . apply_filters('comicpress_copyright_info_name', '<a href="'.$copyright_url.'">' . $copyright_name . '</a>') . ' ';
 		return apply_filters('comicpress_copyright_info', $copyright);
 	}
 }

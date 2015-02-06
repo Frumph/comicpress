@@ -35,6 +35,6 @@
 			?>
 			<div class="clear"></div>
 		</div>
-		<?php edit_post_link(__('Edit this comic.','comicpress'), '', ''); ?>
+		<?php edit_post_link(__( 'Edit this comic.', 'comicpress' ), '', ''); ?>
 	</div>
 </div>

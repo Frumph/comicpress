@@ -146,7 +146,7 @@ if (comicpress_themeinfo('enable_numbered_pagination')) {
 				echo '<div class="pagejumper-wrap">';
 				echo '<form id="pagejumper" action="" method="get">';
 				echo '<input type="text" size="2" name="paged" id="paged" />';
-				echo '<input type="submit" value="'.__('Go', 'comicpress').'" />';
+				echo '<input type="submit" value="'.__( 'Go', 'comicpress' ).'" />';
 				echo '</form>';
 				echo '</div>';
 				echo $after."\n";

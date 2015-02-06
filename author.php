@@ -8,7 +8,7 @@ get_header();
 		$curauth = get_userdata(get_query_var('author'));
 	}
 		if (empty($curauth)) { ?>
-			<h2><?php _e('No such author.','comicpress'); ?></h2>
+			<h2><?php _e( 'No such author.', 'comicpress' ); ?></h2>
 		<?php } else { ?>
 		<div <?php post_class(); ?>>
 			<div class="post-head"></div>
@@ -31,14 +31,14 @@ get_header();
 	?>
 							<h2><?php echo $authorname; ?></h2><br />
 							<?php if (current_user_can('manage_options')) { ?>
-								<strong><?php _e('Registered on','comicpress'); ?></strong> <?php echo date('F d, Y', strtotime($curauth->user_registered)); ?><br />
-								<strong><?php _e('Email:','comicpress'); ?></strong> <a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a><br />
+								<strong><?php _e( 'Registered on', 'comicpress' ); ?></strong> <?php echo date('F d, Y', strtotime($curauth->user_registered)); ?><br />
+								<strong><?php _e( 'Email:', 'comicpress' ); ?></strong> <a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a><br />
 							<br />
 							<?php } ?>
-							<?php if (!empty($curauth->user_url)) { ?><strong><?php _e('Website:','comicpress'); ?></strong> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->twitter)) { ?><strong><?php _e('Twitter:','comicpress'); ?></strong> <a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->facebook)) { ?><strong><?php _e('Facebook :','comicpress'); ?></strong> <a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
-							<?php if (!empty($curauth->googleplus)) { ?><strong><?php _e('Google+ :','comicpress'); ?></strong> <a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->user_url)) { ?><strong><?php _e( 'Website:', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->twitter)) { ?><strong><?php _e( 'Twitter:', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->facebook)) { ?><strong><?php _e( 'Facebook :', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
+							<?php if (!empty($curauth->googleplus)) { ?><strong><?php _e( 'Google+ :', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><br /><?php } ?>
 						</div>
 						<?php if (!empty($curauth->description)) { ?>
 						<div class="userpage-desc">
@@ -52,7 +52,7 @@ get_header();
 	if (have_posts()) {
 ?>
 					<div class="userpage-posts">
-						<h3><?php _e('Posts by','comicpress'); ?> <?php echo $authorname; ?> &not;</h3>
+						<h3><?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;</h3>
 						<ol>
 						<table class="author-posts">
 						<?php while (have_posts()) : the_post(); ?>
