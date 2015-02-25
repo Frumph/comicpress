@@ -6,7 +6,7 @@ Description: Publish a WebComic with the ComicPress theme and the Comic Easel pl
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
 Tags: two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, custom-background, custom-header, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready, flexible-header, featured-images
-Version: 4.2.1
+Version: 4.2.2
 Text Domain: comicpress
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
@@ -233,13 +233,9 @@ body.layout-2cl #page, body.layout-2cr #page{
 	text-align: center;
 }
 
-.menunav a:link, .menunav a:visited {
-	color: #fff;
-}
+.menunav a:link, .menunav a:visited {}
 
-.menunav a:hover {
-	color: #fcff00;
-}
+.menunav a:hover {}
 
 .menunav-search {
 	float: left;
@@ -255,20 +251,16 @@ body.layout-2cl #page, body.layout-2cr #page{
 	height: 21px;
 }
 
-.menunav-rss {
+a.menunav-rss {
 	line-height: 25px;
 	padding: 0 4px;
 	float: left;
 	display: inline-block;
 	overflow: hidden;
-	color: #fff;
 	margin: 0 3px;
 }
 
-.menunav-rss:hover {
-	background: #414141;
-	color: #fff;
-}
+.menunav-rss:hover {}
 
 .menu {
 /*	font: bold 12px Verdana; */
@@ -308,7 +300,7 @@ body.layout-2cl #page, body.layout-2cr #page{
 	display: inline-block;
 }
 
-.menu ul li a:link, .menu ul li a:visited, .menunav a:link, .menunav a:visited  {
+.menu ul li a:link, .menu ul li a:visited  {
 	color: #000;
 }
 

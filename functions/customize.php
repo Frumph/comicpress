@@ -152,7 +152,7 @@ class comicpress_Customize {
 		foreach ($css_array as $setinfo) {
 			$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
 			$default = (isset($setinfo['default'])) ? $setinfo['default'] : '';
-			$wp_customize->add_setting($setinfo_register_name, array('default' => $default, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'postMessage', 'sanitize_callback' => 'sanitize_hex_color'));
+			$wp_customize->add_setting($setinfo_register_name, array('default' => $default, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'sanitize_hex_color'));
 			$wp_customize->add_control(
 					new WP_Customize_Color_Control(
 						$wp_customize,
@@ -210,8 +210,8 @@ class comicpress_Customize {
 			array('slug' => 'pagetitle_textcolor', 'element' => 'h2.page-title', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postinfo_textcolor', 'element' => '.post-info', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'post_page_navigation_textcolor', 'element' => '.uentry, #comment-wrapper, #wp-paginav', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'footer_text', 'element' => '#footer', 'style' => 'color', 'default' => '#FFFFFF',  'important' => false),
-			array('slug' => 'footer_copyright_textcolor', 'element' => '.copyright-info', 'style' => 'color', 'default' => '#CCC',  'important' => false),
+			array('slug' => 'footer_text', 'element' => '#footer', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_textcolor', 'element' => '.copyright-info', 'style' => 'color', 'default' => '',  'important' => false),
 			// link colors
 			array('slug' => 'content_link_acolor', 'element' => 'a:link, a:visited', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'content_link_vcolor', 'element' => 'a:visited', 'style' => 'color', 'default' => '',  'important' => false),
@@ -219,8 +219,8 @@ class comicpress_Customize {
 			array('slug' => 'content_link_vcolor', 'element' => 'a:visited', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'header_title_acolor', 'element' => '#header h1 a:link, #header h1 a:visited', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'header_title_hcolor', 'element' => '#header h1 a:hover', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'menubar_top_acolor', 'element' => '.menu ul li a:link, .menu ul li a:visited, .mininav-prev a, .mininav-next a', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'menubar_hcolor', 'element' => '.menu ul li a:hover, .menu ul li a.selected, .menu ul li ul li a:hover, .menunav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'menubar_top_acolor', 'element' => '.menu ul li a:link, .menu ul li a:visited, .mininav-prev a, .mininav-next a, a.menunav-rss', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'menubar_hcolor', 'element' => '.menu ul li a:hover, .menu ul li a.selected, .menu ul li ul li a:hover, .menunav a:hover, a.menunav-rss:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'menubar_sub_acolor', 'element' => '.menu ul li ul li a:link, .menu ul li ul li a:visited', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'breadcrumb_acolor', 'element' => '.breadcrumbs a', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'breadcrumb_hcolor', 'element' => '.breadcrumbs a:hover', 'style' => 'color', 'default' => '',  'important' => false),
@@ -228,10 +228,10 @@ class comicpress_Customize {
 			array('slug' => 'sidebar_hcolor', 'element' => '.sidebar .widget a:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postpagenav_acolor', 'element' => '.entry a, .blognav a, #paginav a, #pagenav a', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'postpagenav_hcolor', 'element' => '.entry a:hover, .blognav a:hover, #paginav a:hover, #pagenav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
-			array('slug' => 'footer_acolor', 'element' => '#footer a', 'style' => 'color', 'default' => '#ffdf00',  'important' => false),
-			array('slug' => 'footer_hcolor', 'element' => '#footer a:hover', 'style' => 'color', 'default' => '#F00',  'important' => false),
-			array('slug' => 'footer_copyright_acolor', 'element' => '.copyright-info a', 'style' => 'color', 'default' => '#FFFFFF',  'important' => false),
-			array('slug' => 'footer_copyright_hcolor', 'element' => '.copyright-info a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '#F00',  'important' => false),
+			array('slug' => 'footer_acolor', 'element' => '#footer a', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_hcolor', 'element' => '#footer a:hover', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_acolor', 'element' => '.copyright-info a', 'style' => 'color', 'default' => '',  'important' => false),
+			array('slug' => 'footer_copyright_hcolor', 'element' => '.copyright-info a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			);
 			
 		if (function_exists('ceo_pluginfo')) {
