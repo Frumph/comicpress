@@ -6,7 +6,7 @@ Description: Publish a WebComic with the ComicPress theme and the Comic Easel pl
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
 Tags: two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, custom-background, custom-header, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready, flexible-header, featured-images
-Version: 4.2.2
+Version: 4.2.1
 Text Domain: comicpress
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
@@ -206,9 +206,9 @@ body.layout-2cl #page, body.layout-2cr #page{
 	z-index: 500;
 }
 
-#header .description {
-	display: block;
-	margin-left: 140px;
+	#header .description {
+		display: block;
+		margin-left: 140px;
 	}
 
 .header-info {
@@ -309,7 +309,7 @@ body.layout-2cl #page, body.layout-2cr #page{
 }
 
 .menu ul li a:link, .menu ul li a:visited, .menunav a:link, .menunav a:visited  {
-	color: #fff;
+	color: #000;
 }
 
 .menu ul li ul li a:link, .menu ul li ul li a:visited {
@@ -323,7 +323,7 @@ body.layout-2cl #page, body.layout-2cr #page{
 	color: #fff;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover, .menunav a:hover {
 	color: #fff;
 	background: #414141; /*background of menu items during onmouseover (hover state)*/
 }
@@ -1611,16 +1611,6 @@ table#wp-calendar td {
 /* breadcrumbs */
 .breadcrumbs {
 	padding: 3px 0 3px 20px;
-}
-
-/*CE mini navigation overrides */
-
-.mininav-prev a, .mininav-next a {
-    color: #fff;
-}
-
-.mininav-prev a:hover, .mininav-next a:hover {
-	color: #f00;
 }
 
 .sticky-image {
