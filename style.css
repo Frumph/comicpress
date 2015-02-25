@@ -206,9 +206,9 @@ body.layout-2cl #page, body.layout-2cr #page{
 	z-index: 500;
 }
 
-	#header .description {
-		display: block;
-		margin-left: 140px;
+#header .description {
+	display: block;
+	margin-left: 140px;
 	}
 
 .header-info {
