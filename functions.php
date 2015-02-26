@@ -27,15 +27,16 @@ if (class_exists('MultiPostThumbnails')) {
 
 // These autoload
 foreach (glob(comicpress_themeinfo('themepath') . '/functions/*.php') as $funcfile) {
-	@require_once($funcfile);
+	get_template_part('functions/'.basename($funcfile,'.php'));
 }
 
 // Load all the widgets.
 function comicpress_widgets_init() {
-foreach (glob(comicpress_themeinfo('themepath')  . '/widgets/*.php') as $widgefile) {
-	@require_once($widgefile);
+	foreach (glob(comicpress_themeinfo('themepath')  . '/widgets/*.php') as $widgefile) {
+		get_template_part('widgets/'.basename($widgefile,'.php'));
+	}
 }
-}
+
 add_action( 'widgets_init', 'comicpress_widgets_init' );
 
 function comicpress_setup() {
