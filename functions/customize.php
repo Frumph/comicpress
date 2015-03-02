@@ -161,7 +161,7 @@ class comicpress_Customize {
 						)
 					);
 			$priority_value++;
-			$wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
+//			$wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
 		}
       
 	
@@ -253,7 +253,7 @@ class comicpress_Customize {
 		$content = $setting['default'];
 		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
 		$important = ($setting['important']) ? '!important' : '';
-		if (!empty($content)) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
+		if (!empty($content) && $content) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
 	}
 	if (isset($customize['logo']) && !empty($customize['logo'])) {
 		$style_output .= '.header-info { display: inline-block; float: left; padding: 0; }';
