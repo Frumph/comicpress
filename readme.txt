@@ -14,6 +14,18 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+= 4.2.2 =
+* translation and typo fixes by Kniebremser
+* removed unused functions
+* removed unused images
+* minor change for blognav-prev and next by Kniebremser
+* breadcrumbs update by Kniebremser
+* revamped the customizr to work with WP 4.1+
+* fixed custom-header.php to remove the checkbox
+* removed all defaults from customizr and set base to no-scheme
+* using get_template_part for loading of functions and widgets now
+* added add_theme_support('title_tag') removed wp_title from header.php
+
 = 4.2.1 =
 * Translation string for description in style.css thanks kniebremser
 * Translation strings for Customizer
