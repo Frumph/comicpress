@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>> 
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<title><?php wp_title(); ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<meta name="ComicPress" content="<?php echo comicpress_themeinfo('version'); ?>" />

@@ -60,7 +60,8 @@ function comicpress_setup() {
 	));
 	add_theme_support('custom-background');
 	add_theme_support('post-thumbnails');
-	add_theme_support( 'woocommerce' ); // PMH
+	add_theme_support('title-tag');
+	add_theme_support('woocommerce'); // PMH
 }
 
 function comicpress_enqueue_theme_scripts() {
