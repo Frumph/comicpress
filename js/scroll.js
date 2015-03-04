@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var up_timer
+var up_timer;
 
 function getPosition(){
 	yoko = document.body.scrollLeft || document.documentElement.scrollLeft;
@@ -24,5 +24,5 @@ function pageup(x,y){
 
 function scrollup(){
 		getPosition();
-		pageup(yoko,tate)
+		pageup(yoko,tate);
 }
