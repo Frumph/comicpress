@@ -1,14 +1,14 @@
-// cvi_text_lib.js version 1.02 (18-Mar-2009)
+// cvi_text_lib.js version 1.03 (29-Aug-2009)
 // (c) 2008 by Christian Effenberger. All Rights reserved. 
 // Distributed under Netzgestade Software License Agreement
 // Open Source Version "strokeText.js" at http://dev.netzgesta.de/
 
 function check_strokeTextCapability() {
-	if(document.namespaces['v']==null) {
+	if(document.namespaces['v']===null) {
 		var e=["shape","shapetype","group","background","path","formulas","handles","fill","stroke","shadow","textbox","textpath","imagedata","line","polyline","curve","roundrect","oval","rect","arc","image"],s=document.createStyleSheet(); 
 		for(var i=0; i<e.length; i++) {s.addRule("v\\:"+e[i],"behavior: url(#default#VML);");} document.namespaces.add("v","urn:schemas-microsoft-com:vml");
 	} 
-	if(typeof get_strokeText == 'function' && document.namespaces['v'] != null) {return true;}else {return false;}
+	if(typeof get_strokeText == 'function' && document.namespaces['v'] !== null) {return true;}else {return false;}
 }
 function get_boundingBox(x,y,baseline,lineheight,linewidth,weight,color,opacity,rotation) {
 	rotation=typeof(rotation)!='undefined'?rotation:0; color=typeof(color)!='undefined'?color:'#000000'; opacity=typeof(opacity)!='undefined'?opacity:1; id=typeof(id)!='undefined'?'id="'+id+'"':''; var w=parseInt(linewidth), b=parseInt(baseline), h=parseInt(lineheight);
@@ -23,9 +23,8 @@ function get_strokeText(string,x,y,size,weight,width,space,font,color,opacity,ro
 	var spc=Math.max(Math.min(space,1000),10)/100,mx=((mag*16*faw)*spc)-(mag*16*faw),lw=(fac*mag);x=0;y=size;
 	var ww=Math.round(get_textWidth(string,size,width,space,font)), hh=Math.round(get_textHeight(size));
 	var out='<v:shape '+id+' filled="f" stroked="t" coordorigin="0,0" coordsize="'+parseInt(ww*f)+','+parseInt(hh*f)+'"';
-	for(i=0; i<len; i++) { c=strokeFont[font][string.charAt(i)]; if(!c) {continue;} o=0; 
-		for(j=0; j<c.n; j++) {
-			if(typeof(c.d[o])!="string") {o++; continue;} p=c.d[o]; o++; a=c.d[o];
+	for(i=0; i<len; i++) { if(string.charAt(i)>'ÿ') {c=strokeFont[font][string.charCodeAt(i)];}else {c=strokeFont[font][string.charAt(i)];} if(!c) {continue;} o=0; 
+		for(j=0; j<c.n; j++) {if(typeof(c.d[o])!="string") {o++; continue;} p=c.d[o]; o++; a=c.d[o];
 			if(p=="m") {path+=' m '+parseInt((x+a[0]*mag*faw)*f)+','+parseInt((y-a[1]*mag)*f); o++;}else
 			if(p=="q") {z=c.d[o-2]; o++; b=c.d[o]; k=qC(z[0],z[1],a[0],a[1],b[0],b[1]); path+=' c '+parseInt((x+k[0]*mag*faw)*f)+','+parseInt((y-k[1]*mag)*f)+','+parseInt((x+k[2]*mag*faw)*f)+','+parseInt((y-k[3]*mag)*f)+','+parseInt((x+k[4]*mag*faw)*f)+','+parseInt((y-k[5]*mag)*f); o++;}else 
 			if(p=="b") {o++; b=c.d[o]; o++; z=c.d[o]; path+=' c '+parseInt((x+a[0]*mag*faw)*f)+','+parseInt((y-a[1]*mag)*f)+','+parseInt((x+a[0]*mag*faw)*f)+','+parseInt((y-a[1]*mag)*f)+','+parseInt((x+z[0]*mag*faw)*f)+','+parseInt((y-z[1]*mag)*f); o++;}else
@@ -39,12 +38,12 @@ function get_textHeight(size) {size=typeof(size)!='undefined'?size:12; return 32
 function get_textWidth(string,size,width,space,font) {
 	size=typeof(size)!='undefined'?size:12; width=typeof(width)!='undefined'?width:100; space=typeof(space)!='undefined'?space:100; string=typeof(string)!='undefined'?string:' ';
 	font=typeof(font)!='undefined'?font:"sans-serif"; var total=0,len=string.length,mg=size/25.0,fw=Math.max(Math.min(width,400),10)/100,sp=Math.max(Math.min(space,1000),10)/100,m=((mg*16*fw)*sp)-(mg*16*fw); 	
-	for(var i=0; i<len; i++) {var c=strokeFont[font][string.charAt(i)]; if(c) total += ((c.w*fw)*mg)+m;}return total-(m);
+	for(var i=0,c=''; i<len; i++) {if(string.charAt(i)>'ÿ') {c=strokeFont[font][string.charCodeAt(i)];}else {c=strokeFont[font][string.charAt(i)];} if(c) total+=((c.w*fw)*mg)+m;}return total-(m);
 }
 function get_widthText(string,width,size,fontwidth,space,font) {
 	size=typeof(size)!='undefined'?size:12; fontwidth=typeof(fontwidth)!='undefined'?fontwidth:100; space=typeof(space)!='undefined'?space:100; string=typeof(string)!='undefined'?string:' '; width=typeof(width)!='undefined'?width:100;
 	font=typeof(font)!='undefined'?font:"sans-serif"; var cur=0,total=0,len=string.length,mg=size/25.0,fw=Math.max(Math.min(fontwidth,400),10)/100,sp=Math.max(Math.min(space,1000),10)/100,m=((mg*16*fw)*sp)-(mg*16*fw); 	
-	for(var i=0; i<len; i++) {var c=strokeFont[font][string.charAt(i)]; if(c) {cur = ((c.w*fw)*mg)+m; if((total+cur-(m)) <= width) {total += cur;}else {break; }}else {break; }} return string.substring(0,i); 
+	for(var i=0,c=''; i<len; i++) {if(string.charAt(i)>'ÿ') {c=strokeFont[font][string.charCodeAt(i)];}else {c=strokeFont[font][string.charAt(i)];} if(c) {cur=((c.w*fw)*mg)+m; if((total+cur-(m))<=width) {total+=cur;}else {break; }}else {break; }} return string.substring(0,i); 
 }
 function draw_boundingBox(ctx,x,y,baseline,lineheight,linewidth) {ctx.strokeRect(x,y+baseline,linewidth,lineheight-baseline); ctx.strokeRect(x,y,linewidth,baseline);}
 function do_drawText(string,x,y,size,weight,width,space,font) {
@@ -53,9 +52,8 @@ function do_drawText(string,x,y,size,weight,width,space,font) {
 	var i=0,j=0,a,b,z,c,p,o,len=string.length,mag=size/25.0,fac=Math.max(Math.min(weight,400),1)/40, faw=Math.max(Math.min(width,400),10)/100;
 	var spc=Math.max(Math.min(space,1000),10)/100,mx=((mag*16*faw)*spc)-(mag*16*faw),lw=this.lineWidth, ml=this.miterLimit, lj=this.lineJoin, lc=this.lineCap;
 	this.lineWidth=(fac*mag); this.miterLimit=0; this.lineJoin="round"; this.lineCap="round";
-	for(i=0; i<len; i++) { c=strokeFont[font][string.charAt(i)]; if(!c) {continue;} o=0; this.beginPath(); 
-		for(j=0; j<c.n; j++) {
-			if(typeof(c.d[o])!="string") {o++; continue;} p=c.d[o]; o++; a=c.d[o];
+	for(i=0; i<len; i++) {if(string.charAt(i)>'ÿ') {c=strokeFont[font][string.charCodeAt(i)];}else {c=strokeFont[font][string.charAt(i)];} if(!c) {continue;} o=0; this.beginPath(); 
+		for(j=0; j<c.n; j++) {if(typeof(c.d[o])!="string") {o++; continue;} p=c.d[o]; o++; a=c.d[o];
 			if(p=="m") {this.moveTo(x+a[0]*mag*faw, y-a[1]*mag); o++;}else
 			if(p=="q") {o++; b=c.d[o]; this.quadraticCurveTo(x+a[0]*mag*faw, y-a[1]*mag, x+b[0]*mag*faw, y-b[1]*mag); o++;}else 
 			if(p=="b") {o++; b=c.d[o]; o++; z=c.d[o]; this.bezierCurveTo(x+a[0]*mag*faw, y-a[1]*mag, x+b[0]*mag*faw, y-b[1]*mag, x+z[0]*mag*faw, y-z[1]*mag); o++;}else 
@@ -163,7 +161,7 @@ strokeFont["sans-serif"] = {
 	'|': {w: 8,n:2,d:['m',[4,25],'l',[4,-7]]},
 	'}': {w:14,n:9,d:['m',[5,25],'q',[9,24],[9,20],'q',[9,17],[7,16],'q',[5,15],[6,12],'q',[7,9],[10,9],'q',[7,9],[6,6],'q',[5,3],[7,2],'q',[9,1],[9,-2],'q',[9,-6],[5,-7]]},
 	'~': {w:24,n:4,d:['m',[3,6],'q',[3,12],[10,10],'l',[14,8],'q',[21,4],[21,10]]},
-	' ': {w:16,n:1,d:[]},
+	' ': {w:16,n:1,d:[]},
 	'¡': {w:10,n:4,d:['m',[5,10],'l',[5,-4],'m',[5,17],'l',[4,16],[5,15],[6,16],[5,17]]},
 	'¢': {w:18,n:14,d:['m',[9,14],'l',[9,18],'m',[9,0],'l',[9,-4],'m',[10,14],'l',[9,14],'q',[3,14],[3,7],'q',[3,0],[9,0],'l',[10,0],'q',[14,0],[15,3],'m',[15,11],'q',[14,14],[10,14]]},
 	'£': {w:18,n:8,d:['m',[4,11],'l',[13,11],'m',[16,18],'q',[15,21],[11,21],'q',[5,21],[6,16],'q',[7,8],[6,2],'q',[5,0],[4,0],'l',[16,0]]},
@@ -258,5 +256,7 @@ strokeFont["sans-serif"] = {
 	'ü': {w:19,n:10,d:['m',[4,20],'l',[4,18],'m',[15,20],'l',[15,18],'m',[4,14],'l',[4,4],'q',[4,0],[8,0],'q',[13,0],[15,4],'m',[15,14],'l',[15,0]]},
 	'ý': {w:16,n:7,d:['m',[7,18],'l',[10,20],'m',[2,14],'l',[8,0],'m',[14,14],'l',[8,0],'q',[5,-7],[1,-7]]},
 	'þ': {w:19,n:10,d:['m',[4,21],'l',[4,-7],'m',[10,14],'l',[9,14],'q',[6,14],[4,12],'m',[4,2],'q',[6,0],[9,0],'l',[10,0],'q',[16,0],[16,7],'q',[16,14],[10,14]]},
-	'ÿ': {w:16,n:9,d:['m',[2,20],'l',[2,18],'m',[14,20],'l',[14,18],'m',[2,14],'l',[8,0],'m',[14,14],'l',[8,0],'q',[5,-7],[1,-7]]}
+	'ÿ': {w:16,n:9,d:['m',[2,20],'l',[2,18],'m',[14,20],'l',[14,18],'m',[2,14],'l',[8,0],'m',[14,14],'l',[8,0],'q',[5,-7],[1,-7]]},
+   // utf extensions as numeric numbers (Euro)
+   8364: {w:21,n:11,d:['m',[11,21],'q',[17,21],[18,16],'m',[18,5],'q',[17,0],[11,0],'q',[3,0],[3,9],'l',[3,12],'q',[3,21],[11,21],'m',[1,13],'l',[11,13],'m',[1,8],'l',[10,8]]}
 };
