@@ -4,9 +4,9 @@
 // Open Source Version "strokeText.js" at http://dev.netzgesta.de/
 
 function check_strokeTextCapability() {
-	if(document.namespaces['v']===null) {
-		var e=["shape","shapetype","group","background","path","formulas","handles","fill","stroke","shadow","textbox","textpath","imagedata","line","polyline","curve","roundrect","oval","rect","arc","image"],s=document.createStyleSheet(); 
-		for(var i=0; i<e.length; i++) {s.addRule("v\\:"+e[i],"behavior: url(#default#VML);");} document.namespaces.add("v","urn:schemas-microsoft-com:vml");
+    if (document.namespaces['v'] === null) {
+        var e = ["shape", "shapetype", "group", "background", "path", "formulas", "handles", "fill", "stroke", "shadow", "textbox", "textpath", "imagedata", "line", "polyline", "curve", "roundrect", "oval", "rect", "arc", "image"], s = document.createStyleSheet();
+        for (var i=0; i<e.length; i++) {s.addRule("v\\:"+e[i],"behavior: url(#default#VML);");} document.namespaces.add("v","urn:schemas-microsoft-com:vml");
 	} 
 	if(typeof get_strokeText == 'function' && document.namespaces['v'] !== null) {return true;}else {return false;}
 }
@@ -161,7 +161,6 @@ strokeFont["sans-serif"] = {
 	'|': {w: 8,n:2,d:['m',[4,25],'l',[4,-7]]},
 	'}': {w:14,n:9,d:['m',[5,25],'q',[9,24],[9,20],'q',[9,17],[7,16],'q',[5,15],[6,12],'q',[7,9],[10,9],'q',[7,9],[6,6],'q',[5,3],[7,2],'q',[9,1],[9,-2],'q',[9,-6],[5,-7]]},
 	'~': {w:24,n:4,d:['m',[3,6],'q',[3,12],[10,10],'l',[14,8],'q',[21,4],[21,10]]},
-	' ': {w:16,n:1,d:[]},
 	'¡': {w:10,n:4,d:['m',[5,10],'l',[5,-4],'m',[5,17],'l',[4,16],[5,15],[6,16],[5,17]]},
 	'¢': {w:18,n:14,d:['m',[9,14],'l',[9,18],'m',[9,0],'l',[9,-4],'m',[10,14],'l',[9,14],'q',[3,14],[3,7],'q',[3,0],[9,0],'l',[10,0],'q',[14,0],[15,3],'m',[15,11],'q',[14,14],[10,14]]},
 	'£': {w:18,n:8,d:['m',[4,11],'l',[13,11],'m',[16,18],'q',[15,21],[11,21],'q',[5,21],[6,16],'q',[7,8],[6,2],'q',[5,0],[4,0],'l',[16,0]]},

@@ -2,14 +2,14 @@
 
 var up_timer;
 
-function getPosition(){
-	yoko = document.body.scrollLeft || document.documentElement.scrollLeft;
-	tate = document.body.scrollTop  || document.documentElement.scrollTop;
+function getPosition() {
+    yoko = document.body.scrollLeft || document.documentElement.scrollLeft;
+    tate = document.body.scrollTop  || document.documentElement.scrollTop;
 
 }
 
-function pageup(x,y){
-	if(up_timer) clearTimeout(up_timer);
+function pageup(x, y) {
+    if (up_timer) clearTimeout(up_timer);
 	if(y >= 1){
 		getPosition();
 		var divisionY = (tate-(tate/5));

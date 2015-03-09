@@ -1,50 +1,46 @@
 //** Smooth Navigational Menu- By Dynamic Drive DHTML code library: http://www.dynamicdrive.com
 //** Script Download/ instructions page: http://www.dynamicdrive.com/dynamicindex1/ddlevelsmenu/
 //** Menu created: Nov 12, 2008
-
 //** Dec 12th, 08" (v1.01): Fixed Shadow issue when multiple LIs within the same UL (level) contain sub menus: http://www.dynamicdrive.com/forums/showthread.php?t=39177&highlight=smooth
-
 //** Feb 11th, 09" (v1.02): The currently active main menu item (LI A) now gets a CSS class of ".selected", including sub menu items.
-
 //** May 1st, 09" (v1.3):
 //** 1) Now supports vertical (side bar) menu mode- set "orientation" to 'v'
 //** 2) In IE6, shadows are now always disabled
-
 //** July 27th, 09" (v1.31): Fixed bug so shadows can be disabled if desired.
 //** Feb 2nd, 10" (v1.4): Adds ability to specify delay before sub menus appear and disappear, respectively. See showhidedelay variable below
 
 var ddsmoothmenu = {
 
-	//Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
-	arrowimages: { down: ['downarrowclass', '/wp-content/themes/easel/images/down.gif', 15], right: ['rightarrowclass', '/wp-content/themes/easel/images/right.gif'] },
-	transition: { overtime: 200, outtime: 200 }, //duration of slide in/ out animation, in milliseconds
-	shadow: { enable: false, offsetx: 2, offsety: 2 }, //enable shadow?
-	showhidedelay: { showdelay: 100, hidedelay: 200 }, //set delay in milliseconds before sub menus appear and disappear, respectively
+    //Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
+    arrowimages: { down: ['downarrowclass', '/wp-content/themes/comicpress/images/down.gif', 15], right: ['rightarrowclass', '/wp-content/themes/comicpress/images/right.gif'] },
+    transition: { overtime: 200, outtime: 200 }, //duration of slide in/ out animation, in milliseconds
+    shadow: { enable: false, offsetx: 2, offsety: 2 }, //enable shadow?
+    showhidedelay: { showdelay: 100, hidedelay: 200 }, //set delay in milliseconds before sub menus appear and disappear, respectively
 
-	///////Stop configuring beyond here///////////////////////////
+    ///////Stop configuring beyond here///////////////////////////
 
-	detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit") != -1, //detect WebKit browsers (Safari, Chrome etc)
-	detectie6: document.all && !window.XMLHttpRequest,
+    detectwebkit: navigator.userAgent.toLowerCase().indexOf("applewebkit") !== -1, //detect WebKit browsers (Safari, Chrome etc)
+    detectie6: document.all && !window.XMLHttpRequest,
 
-	getajaxmenu: function($, setting) { //function to fetch external page containing the panel DIVs
-		var $menucontainer = $('#' + setting.contentsource[0]) //reference empty div on page that will hold menu
+	getajaxmenu: function ($, setting) { //function to fetch external page containing the panel DIVs
+		var $menucontainer = $('#' + setting.contentsource[0]); //reference empty div on page that will hold menu
 		$menucontainer.html("Loading Menu...")
 		$.ajax({
 			url: setting.contentsource[1], //path to external menu file
 			async: true,
-			error: function(ajaxrequest) {
+			error: function (ajaxrequest) {
 				$menucontainer.html('Error fetching content. Server Response: ' + ajaxrequest.responseText)
 			},
-			success: function(content) {
-				$menucontainer.html(content)
-				ddsmoothmenu.buildmenu($, setting)
+			success: function (content) {
+				$menucontainer.html(content);
+				ddsmoothmenu.buildmenu($, setting);
 			}
 		})
 	},
 
 
-	buildmenu: function($, setting) {
-		var smoothmenu = ddsmoothmenu
+	buildmenu: function ($, setting) {
+		var smoothmenu = ddsmoothmenu;
 		var $mainmenu = $("#" + setting.mainmenuid + " ul:eq(0)") //reference main menu UL 
 		$mainmenu.parent().get(0).className = setting.classname || "ddsmoothmenu"
 		var $headers = $mainmenu.find("ul").parent()
@@ -64,7 +60,7 @@ var ddsmoothmenu = {
 			this.istopheader = $curobj.parents("ul").length == 1 ? true : false //is top level header?
 			$subul.css({ top: this.istopheader && setting.orientation != 'v' ? this._dimensions.h + "px" : 0 })
 			$curobj.children("a:eq(0)").css(this.istopheader ? { paddingRight: smoothmenu.arrowimages.down[2]} : {}).append( //add arrow images
-			'<span class="menubar-arrow ' + (this.istopheader && setting.orientation != 'v' ? 'menubar-down' : 'menubar-right') + '-arrow">' + (this.istopheader && setting.orientation != 'v' ? '&darr;' : '&rarr;') + '</span>'
+			'<span class="menubar-arrow ' + (this.istopheader && setting.orientation !== 'v' ? 'menubar-down' : 'menubar-right') + '-arrow">' + (this.istopheader && setting.orientation !== 'v' ? '&darr;' : '&rarr;') + '</span>'
 		)
 			if (smoothmenu.shadow.enable) {
 				this._shadowoffset = { x: (this.istopheader ? $subul.offset().left + smoothmenu.shadow.offsetx : this._dimensions.w), y: (this.istopheader ? $subul.offset().top + smoothmenu.shadow.offsety : $curobj.position().top)} //store this shadow's offsets
