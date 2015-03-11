@@ -121,7 +121,7 @@ if (!function_exists('comicpress_register_sidebars')) {
 			array('id' => 'footer-right', 'name' => __( 'Footer Right', 'comicpress' ), 'description' => __( 'This sidebar is at the bottom of the page, the right one.', 'comicpress' )),
 		);
 		if (class_exists('Jetpack') && Jetpack::init()->is_module_active('minileven')) { 
-			$widgets_list[] = array('id' => '1', 'name' => __( 'Jetpack Mobile Sidebar', 'comicpress' ), 'description' => __('Jetpack Mobile Sidebar', 'comicpress' ));
+			$widgets_list[] = array('id' => '1', 'name' => __( 'Jetpack Mobile Sidebar', 'comicpress' ), 'description' => __( 'Jetpack Mobile Sidebar', 'comicpress' ));
 		}
 		foreach ($widgets_list as $widget_info) {
 			register_sidebar(array(
@@ -241,7 +241,7 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($facebook)) $output .= '<a href="'.$facebook.'" target="_blank" title="'.__( 'Friend on Facebook', 'comicpress' ).'" class="menunav-social menunav-facebook">'.__( 'Facebook', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($myspace)) $output .= '<a href="'.$myspace.'" target="_blank" title="'.__( 'Make use of MySpace', 'comicpress' ).'" class="menunav-social menunav-myspace">'.__( 'MySpace', 'comicpress' ).'</a>'."\r\n";		
 		if (!empty($linkedin)) $output .= '<a href="'.$linkedin.'" target="_blank" title="'.__( 'Look at my LinkedIn', 'comicpress' ).'" class="menunav-social menunav-linkedin">'.__( 'LinkedIn', 'comicpress' ).'</a>'."\r\n";
-		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__('Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
+		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__( 'Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";		
 		if (!empty($email)) $output .= '<a href="'.$email.'" target="_blank" title="'.__( 'Email me', 'comicpress' ).'" class="menunav-social menunav-email">'.__( 'Email', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($googleplus)) $output .= '<a href="'.$googleplus.'" target="_blank" title="'.__( 'Circle me on Google+', 'comicpress' ).'" class="menunav-social menunav-googleplus">'.__( 'Google+', 'comicpress' ).'</a>'."\r\n";
@@ -374,7 +374,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
 			'upload_path' => get_option('upload_path'),
-			'version' => '4.2.1',
+			'version' => '4.2.3',
 			'themepath' => get_template_directory(),
 			'themeurl' => get_template_directory_uri(), 
 			'stylepath' => get_stylesheet_directory(), 
