@@ -7,8 +7,7 @@ function comicpress_sanitize_checkbox( $input ) {
 		return false;
 	}
 }
-	
-	
+
 /**
  * Contains methods for customizing the theme customization screen.
  * 
@@ -28,19 +27,20 @@ class comicpress_Customize {
     * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
     * @since ComicPress 4.2
     */
+
 	public $css_array = Array();
 
 	public static function register($wp_customize) {
 		
 		$wp_customize->remove_section('colors');
-		//	$wp_customize->remove_section('title_tagline');
-		$wp_customize->add_section('comicpress-scheme-options' , array('title' => __( 'Layout Options', 'comicpress '), 'priority' => 10, 'capability' => 'edit_theme_options','description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress ')));
-//		$wp_customize->add_section('comicpress-background-colors' , array('title' => __( 'Background Colors',' comicpress' ), 'capability' => 'edit_theme_options'));
+//		$wp_customize->remove_section('title_tagline');
+		$wp_customize->add_section('comicpress-scheme-options' , array('title' => __( 'Layout Options', 'comicpress '), 'priority' => 10, 'capability' => 'edit_theme_options','description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress' )));
+//		$wp_customize->add_section('comicpress-background-colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'description' => __( 'Colors that are in the background of each of the sections.', 'comicpress' ), 'priority' => 20, 'capability' => 'edit_theme_options'));
-		$wp_customize->add_section('comicpress-text-colors' , array('title' => __( 'Text Colors', 'comicpress' ), 'priority' => 30, 'capability' => 'edit_theme_options'));	
+		$wp_customize->add_section('comicpress-text-colors' , array('title' => __( 'Text Colors', 'comicpress' ), 'priority' => 30, 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('comicpress-link-colors' , array('title' => __( 'Link Colors', 'comicpress' ), 'priority' => 40, 'capability' => 'edit_theme_options'));
-		$wp_customize->add_section('comicpress-logo-options', array('title' => __( 'Logo', 'comicpress' ), 'priority' => 50, 'capability' => 'edit_theme_options'));	
-		
+		$wp_customize->add_section('comicpress-logo-options', array('title' => __( 'Logo', 'comicpress' ), 'priority' => 50, 'capability' => 'edit_theme_options'));
+
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
 				'label' => __( 'Choose a default scheme.', 'comicpress' ),
@@ -88,7 +88,7 @@ class comicpress_Customize {
 		
 		$css_array = array(
 			// Background Colors
-			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __( 'Entire Content Area', 'comicpress' ), 'default' => '', 'default' => ''), 
+			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __( 'Entire Content Area', 'comicpress' ), 'default' => '', 'default' => ''),
 			array('slug' => 'header_background', 'description' => '#header', 'section' => 'colors', 'label' => __( 'Header', 'comicpress' ), 'default' => ''),
 			array('slug' => 'menubar_background', 'description' => '#menubar-wrapper', 'section' => 'colors', 'label' => __( 'Menubar', 'comicpress' ), 'default' => ''),
 			array('slug' => 'menubar_submenu_background', 'description' => '.menu ul li ul li a', 'section' => 'colors', 'label' => __( 'Menubar Dropdown', 'comicpress' ), 'default' => ''),
@@ -249,7 +249,7 @@ class comicpress_Customize {
 <?php
 	$customize = get_theme_mod('comicpress-customize');
 //	var_dump($customize);
-	foreach ($settings_array as $setting) { 
+	foreach ($settings_array as $setting) {
 		$content = $setting['default'];
 		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
 		$important = ($setting['important']) ? '!important' : '';
