@@ -14,6 +14,12 @@ You will need to use the ComicPress to Comic Easel migrator plugin.
 Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
+
+= 4.?.? =
+* update instant.js to v2.4
+* update cvi_text_lib.js to 1.03
+* fixed various js errors
+
 = 4.2.2 =
 * translation and typo fixes by Kniebremser
 * removed unused functions
