@@ -1,7 +1,9 @@
-// cvi_text_lib.js version 1.03 (29-Aug-2009)
-// (c) 2008 by Christian Effenberger. All Rights reserved. 
-// Distributed under Netzgestade Software License Agreement
-// Open Source Version "strokeText.js" at http://dev.netzgesta.de/
+/**
+ * cvi_text_lib.js version 1.03 (29-Aug-2009)
+ * (c) 2008 by Christian Effenberger. All Rights reserved.
+ * Distributed under Netzgestade Software License Agreement
+ * Open Source Version "strokeText.js" at http://dev.netzgesta.de/
+ */
 
 function check_strokeTextCapability() {
     "use strict";

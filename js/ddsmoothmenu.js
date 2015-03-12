@@ -1,13 +1,15 @@
-//** Smooth Navigational Menu- By Dynamic Drive DHTML code library: http://www.dynamicdrive.com
-//** Script Download/ instructions page: http://www.dynamicdrive.com/dynamicindex1/ddlevelsmenu/
-//** Menu created: Nov 12, 2008
-//** Dec 12th, 08" (v1.01): Fixed Shadow issue when multiple LIs within the same UL (level) contain sub menus: http://www.dynamicdrive.com/forums/showthread.php?t=39177&highlight=smooth
-//** Feb 11th, 09" (v1.02): The currently active main menu item (LI A) now gets a CSS class of ".selected", including sub menu items.
-//** May 1st, 09" (v1.3):
-//** 1) Now supports vertical (side bar) menu mode- set "orientation" to 'v'
-//** 2) In IE6, shadows are now always disabled
-//** July 27th, 09" (v1.31): Fixed bug so shadows can be disabled if desired.
-//** Feb 2nd, 10" (v1.4): Adds ability to specify delay before sub menus appear and disappear, respectively. See showhidedelay variable below
+/**
+ * Smooth Navigational Menu- By Dynamic Drive DHTML code library: http://www.dynamicdrive.com
+ * Script Download/ instructions page: http://www.dynamicdrive.com/dynamicindex1/ddlevelsmenu/
+ * Menu created: Nov 12, 2008
+ * Dec 12th, 08" (v1.01): Fixed Shadow issue when multiple LIs within the same UL (level) contain sub menus: http://www.dynamicdrive.com/forums/showthread.php?t=39177&highlight=smooth
+ * Feb 11th, 09" (v1.02): The currently active main menu item (LI A) now gets a CSS class of ".selected", including sub menu items.
+ * May 1st, 09" (v1.3):
+ * 1) Now supports vertical (side bar) menu mode- set "orientation" to 'v'
+ * 2) In IE6, shadows are now always disabled
+ * July 27th, 09" (v1.31): Fixed bug so shadows can be disabled if desired.
+ * Feb 2nd, 10" (v1.4): Adds ability to specify delay before sub menus appear and disappear, respectively. See showhidedelay variable below
+ */
 
 var ddsmoothmenu = {
 

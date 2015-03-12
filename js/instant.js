@@ -1,14 +1,14 @@
 /**
  * instant.js 2.4 (10-Aug-2010)
- * (c) by Christian Effenberger 
+ * (c) by Christian Effenberger
  * All Rights Reserved
  * Source: instant.netzgesta.de
  * Distributed under Netzgestade Software License Agreement
  * http://www.netzgesta.de/cvi/LICENSE.txt
  * License permits free of charge
- * use on non-commercial and 
- * private web sites only 
-**/
+ * use on non-commercial and
+ * private web sites only
+ */
 
 var tmp = navigator.appName === 'Microsoft Internet Explorer' && navigator.userAgent.indexOf('Opera') < 1 ? 1 : 0;
 if (tmp) var isIE = document.namespaces && (!document.documentMode || document.documentMode < 9) ? 1 : 0;
