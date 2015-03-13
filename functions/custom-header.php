@@ -17,7 +17,7 @@ add_theme_support( 'custom-header', $custom_header_args );
 function comicpress_admin_header_style() { ?>
 <style type="text/css">
 	#headimg { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; }
-<?php if (!display_header_text()) { ?>	
+<?php if (!display_header_text()) { ?>
 	#headimg h1, #headimg .description { display: none; }
 <?php } ?>
 </style>
@@ -25,8 +25,8 @@ function comicpress_admin_header_style() { ?>
 }
 
 function comicpress_header_style() { 
-	if (get_header_image()) { 
-		$textcolor = get_header_textcolor()	
+	if (get_header_image()) {
+		$textcolor = get_header_textcolor()
 ?>
 <style type="text/css">
 	#header { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url('<?php header_image(); ?>') top center no-repeat; overflow: hidden; }
