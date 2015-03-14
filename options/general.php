@@ -130,7 +130,7 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_post_titles"><?php _e( 'Disable the titles on posts', 'comicpress' ); ?></label></th>
+					<th scope="row"><label for="disable_post_titles"><?php _e( 'Disable the titles on posts?', 'comicpress' ); ?></label></th>
 					<td>
 						<input id="disable_post_titles" name="disable_post_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_post_titles']); ?> />
 					</td>
@@ -157,7 +157,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="enable_avatar_trick"><?php _e( 'Enable Avatar Mod', 'comicpress' ); ?></label></th>
+					<th scope="row"><label for="enable_avatar_trick"><?php _e( 'Enable Avatar Mod?', 'comicpress' ); ?></label></th>
 					<td>
 						<input id="enable_avatar_trick" name="enable_avatar_trick" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_avatar_trick']); ?> />
 					</td>
@@ -336,7 +336,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo stripcslashes($comicpress_options['copyright_name']); ?>" /><br />
 					</th>
 					<td colspan="2">
-						<?php _e( 'Set the name to which this site is &copy; Copyright to, leave blank to have the site name.', 'comicpress' ); ?>
+						<?php _e( 'Set the name to which this site is &copy; Copyright to. Leave blank to have the site name.', 'comicpress' ); ?>
 					</td>
 				</tr>
 				<tr>
@@ -344,7 +344,7 @@ foreach ($avatar_directories as $avatar_dirs) {
 						<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo stripcslashes($comicpress_options['copyright_url']); ?>" /><br />
 					</th>
 					<td colspan="2">
-						<?php _e( 'Set the URL to the owner of the &copy; Copyright if different then this website, leave blank for sites link.', 'comicpress' ); ?>
+						<?php _e( 'Set the URL to the owner of the &copy; Copyright if different then this website. Leave blank for sites link.', 'comicpress' ); ?>
 					</td>
 				</tr>
 			</table>

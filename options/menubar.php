@@ -70,7 +70,7 @@
 						<input id="menubar_social_icons" name="menubar_social_icons" type="checkbox" value="1" <?php checked(true, $comicpress_options['menubar_social_icons']); ?> />
 					</td>
 					<td>
-					<?php _e( 'Adds additional social icons in the menubar on in the menunav area. Put the entire http:// url in the input box that leads to your account on those sites.  Leave field empty if you do not have one and it will not show.', 'comicpress' ); ?><br />
+					<?php _e( 'Adds additional social icons in the menubar on in the menunav area. Put the entire http:// url in the input box that leads to your account on those sites. Leave field empty if you do not have one and it will not show.', 'comicpress' ); ?><br />
 					<br />
 					<strong><?php _e( 'Twitter', 'comicpress' ); ?></strong><br />
 					<input type="text" size="60" name="menubar_social_twitter" id="menubar_social_twitter" value="<?php echo $comicpress_options['menubar_social_twitter']; ?>" /><br />
