@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Contains methods for customizing the theme customization screen.
+ * 
+ * @link http://codex.wordpress.org/Theme_Customization_API
+ * @since ComicPress 4.2
+ */
+
 function comicpress_sanitize_checkbox( $input ) {
 	if ( $input == 1 ) {
 		return 1;
@@ -8,25 +15,20 @@ function comicpress_sanitize_checkbox( $input ) {
 	}
 }
 
+class comicpress_Customize {
+
 /**
- * Contains methods for customizing the theme customization screen.
+ * This hooks into 'customize_register' (available as of WP 3.4) and allows
+ * you to add new sections and controls to the Theme Customize screen.
  * 
- * @link http://codex.wordpress.org/Theme_Customization_API
+ * Note: To enable instant preview, we have to actually write a bit of custom
+ * javascript. See live_preview() for more.
+ *  
+ * @see add_action('customize_register',$func)
+ * @param \WP_Customize_Manager $wp_customize
+ * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
  * @since ComicPress 4.2
  */
-class comicpress_Customize {
-   /**
-    * This hooks into 'customize_register' (available as of WP 3.4) and allows
-    * you to add new sections and controls to the Theme Customize screen.
-    * 
-    * Note: To enable instant preview, we have to actually write a bit of custom
-    * javascript. See live_preview() for more.
-    *  
-    * @see add_action('customize_register',$func)
-    * @param \WP_Customize_Manager $wp_customize
-    * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
-    * @since ComicPress 4.2
-    */
 
 	public $css_array = Array();
 
@@ -34,7 +36,7 @@ class comicpress_Customize {
 		
 		$wp_customize->remove_section('colors');
 //		$wp_customize->remove_section('title_tagline');
-		$wp_customize->add_section('comicpress-scheme-options' , array('title' => __( 'Layout Options', 'comicpress '), 'priority' => 10, 'capability' => 'edit_theme_options','description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress' )));
+		$wp_customize->add_section('comicpress-scheme-options' , array('title' => __( 'Layout Options', 'comicpress' ), 'priority' => 10, 'capability' => 'edit_theme_options','description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress' )));
 //		$wp_customize->add_section('comicpress-background-colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'description' => __( 'Colors that are in the background of each of the sections.', 'comicpress' ), 'priority' => 20, 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('comicpress-text-colors' , array('title' => __( 'Text Colors', 'comicpress' ), 'priority' => 30, 'capability' => 'edit_theme_options'));
