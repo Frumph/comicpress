@@ -4,16 +4,20 @@ Widget Name: Scheduled Posts
 Description: Display a list of posts that are due to be scheduled.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.1
+Version: 1.2
 */
 
 class comicpress_scheduled_posts_widget extends WP_Widget {
-	
-	function comicpress_scheduled_posts_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comicpress' ) );
-			$this->WP_Widget(__CLASS__, __( 'Scheduled Posts', 'comicpress' ), $widget_ops);
-		}
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Scheduled Posts', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comiceasel' ), )
+		);
 	}
 	
 	function widget($args, $instance) {
@@ -50,6 +54,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('comicpress_scheduled_posts_widget');
 
-?>
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_scheduled_posts_widget');
+});

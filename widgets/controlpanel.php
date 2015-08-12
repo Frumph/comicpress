@@ -4,15 +4,19 @@ Widget Name: Control Panel
 Description: Display an area for login and logout, forgot password and register.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.04
+Version: 1.1
 */
 class comicpress_control_panel_widget extends WP_Widget {
 
-	function comicpress_control_panel_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comicpress' ) );
-			$this->WP_Widget(__CLASS__, __( 'Control Panel', 'comicpress' ), $widget_ops);
-		}
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Control Panel', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comiceasel' ), )
+		);
 	}
 	
 	function comicpress_show_control_panel() { 
@@ -69,5 +73,9 @@ class comicpress_control_panel_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('comicpress_control_panel_widget');
+
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_control_panel_widget');
+});
+
 

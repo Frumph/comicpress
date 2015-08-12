@@ -4,7 +4,7 @@ Widget Name: Dogecoins
 Description: Accept Dogecoins button with input box for wallet_id
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.05
+Version: 1.1
 */
 
 /*
@@ -19,11 +19,15 @@ function comicpress_enqueue_dogecoin_js() {
 */
 class comicpress_dogecoins_widget extends WP_Widget {
 
-	function comicpress_dogecoins_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __('An accept Dogecoins button.','comicpress') );
-			$this->WP_Widget(__CLASS__, __('Dogecoins Button','comicpress'), $widget_ops);
-		}
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Dogecoins Button', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'An accept Dogecoins button.', 'comiceasel' ), )
+		);
 	}
 
 	function widget($args, $instance) {
@@ -67,4 +71,7 @@ class comicpress_dogecoins_widget extends WP_Widget {
 	}
 }
 
-register_widget('comicpress_dogecoins_widget');
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_dogecoins_widget');
+});
+

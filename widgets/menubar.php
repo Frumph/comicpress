@@ -4,7 +4,7 @@ Widget Name: Menubar Widget (wordpress 3.0 required)
 Widget URI: http://frumph.net/
 Description: Display a calendar of this months posts.
 Author: Philip M. Hofer (Frumph)
-Version: 1.09
+Version: 1.1
 Author URI: http://frumph.net/
 
 */
@@ -42,12 +42,16 @@ function comicpress_menubar() {
 }
 
 class comicpress_menubar_widget extends WP_Widget {
-	
-	function comicpress_menubar_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comicpress' ) );
-			$this->WP_Widget(__CLASS__, __( 'ComicPress Menubar', 'comicpress' ), $widget_ops);
-		}
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Menubar', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comiceasel' ), )
+		);
 	}
 	
 	function widget($args, $instance) {
@@ -76,7 +80,7 @@ class comicpress_menubar_widget extends WP_Widget {
 	}
 }
 
-register_widget('comicpress_menubar_widget');
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_menubar_widget');
+});
 
-
-?>

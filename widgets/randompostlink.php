@@ -4,7 +4,7 @@ Widget Name: Random Post
 Description: Display a link to click on to go to a random blog post (not comic).
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.04
+Version: 1.1
 
 There are some issues with cache' plugins where it's cache'ing the page it randomly goes to, 
 you can do an exclude in cache plugins like wp-supercache, exclude "randompost" in the area as 
@@ -29,11 +29,15 @@ function comicpress_random_post() {
 	
 class comicpress_random_post_link_widget extends WP_Widget {
 
-	function comicpress_random_post_link_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Displays a link to click to trigger a random blog post.', 'comicpress' ) );
-			$this->WP_Widget(__CLASS__, __( 'Random Post Link', 'comicpress' ), $widget_ops);
-		}
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Random Post Link', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Displays a link to click that triggers going to a random blog post.', 'comiceasel' ), )
+		);
 	}
 	
 	function widget($args, $instance) {
@@ -62,6 +66,7 @@ class comicpress_random_post_link_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('comicpress_random_post_link_widget');
 
-?>
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_random_post_link_widget');
+});

@@ -5,17 +5,21 @@ Widget URI: http://comicpress.net/
 Description: 
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.1
+Version: 1.3
 
 */
 
 class comicpress_google_translate_widget extends WP_Widget {
 
-	function comicpress_google_translate_widget($skip_widget_init = false) {
-		if (!$skip_widget_init) {
-			$widget_ops = array('classname' => __CLASS__, 'description' => __( 'Translate your site with Google.', 'comicpress' ) );
-			$this->WP_Widget(__CLASS__, __( 'Google Translator', 'comicpress' ), $widget_ops);
-		}
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			__CLASS__, // Base ID
+			__( 'ComicPress - Google Translator', 'comiceasel' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Translate your site with Google.', 'comiceasel' ), )
+		);
 	}
 	
 	function widget($args, $instance) {
@@ -45,7 +49,7 @@ class comicpress_google_translate_widget extends WP_Widget {
 		<?php
 	}
 }
-register_widget('comicpress_google_translate_widget');
 
-
-?>
+add_action( 'widgets_init', function(){
+	register_widget('comicpress_google_translate_widget');
+});

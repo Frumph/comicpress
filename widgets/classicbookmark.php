@@ -4,7 +4,7 @@ Widget Name: (classic) Bookmark
 Description: Adds a bookmark set of icons to save the page your own.
 Author: Tyler Martin, Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
-Version: 1.02
+Version: 1.1
 */
 
 function comicpress_classic_bookmark() { 
@@ -114,7 +114,7 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		__CLASS__, // Base ID
-			__( 'Classic Bookmark', 'comicpress' ), // Name
+			__( 'ComicPress - Classic Bookmark', 'comicpress' ), // Name
 			array( 'description' => __( 'Creates a set of buttons that let the user return to the page they tagged.', 'comicpress' ), ) // Args
 		);
 	}
@@ -143,4 +143,7 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	}
 }
 
-register_widget('widget_comicpress_classic_bookmark');
+add_action( 'widgets_init', function(){
+	register_widget('widget_comicpress_classic_bookmark');
+});
+

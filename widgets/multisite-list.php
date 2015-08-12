@@ -4,16 +4,22 @@ Widget Name: Site List
 Description: Display list of sites, which site updated most recently.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
-Version: 1.04
+Version: 1.1
 */
 if (function_exists('is_multisite')) {
 	if (is_multisite()) {
 		
 		class widget_multisite_sitelist extends WP_Widget {
 			
-			function widget_multisite_sitelist() {
-				$widget_ops = array('classname' => 'widget_multisite_sitelist', 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comicpress' ) );
-				$this->WP_Widget('multisite_sitelist', 'Site List', $widget_ops);
+			/**
+			 * Register widget with WordPress.
+			 */
+			function __construct() {
+				parent::__construct(
+					__CLASS__, // Base ID
+					__( 'ComicPress - Site List', 'comiceasel' ), // Name
+					array( 'classname' => __CLASS__, 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comiceasel' ), )
+				);
 			}
 			
 			function widget($args, $instance) {
@@ -51,7 +57,10 @@ if (function_exists('is_multisite')) {
 			}
 		}
 		
-		register_widget('widget_multisite_sitelist');
+		add_action( 'widgets_init', function(){
+			register_widget('widget_multisite_sitelist');
+		});		
+		
 	}
+	
 }
-?>
