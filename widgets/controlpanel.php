@@ -77,5 +77,3 @@ class comicpress_control_panel_widget extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget('comicpress_control_panel_widget');
 });
-
-

@@ -83,4 +83,3 @@ class comicpress_menubar_widget extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget('comicpress_menubar_widget');
 });
-
