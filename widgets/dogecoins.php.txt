@@ -25,8 +25,8 @@ class comicpress_dogecoins_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			__CLASS__, // Base ID
-			__( 'ComicPress - Dogecoins Button', 'comiceasel' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'An accept Dogecoins button.', 'comiceasel' ), )
+			__( 'ComicPress - Dogecoins Button', 'comicpress' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'An accept Dogecoins button.', 'comicpress' ), )
 		);
 	}
 

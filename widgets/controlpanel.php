@@ -14,8 +14,8 @@ class comicpress_control_panel_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			__CLASS__, // Base ID
-			__( 'ComicPress - Control Panel', 'comiceasel' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comiceasel' ), )
+			__( 'ComicPress - Control Panel', 'comicpress' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comicpress' ), )
 		);
 	}
 	

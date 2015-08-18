@@ -35,8 +35,8 @@ class comicpress_random_post_link_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			__CLASS__, // Base ID
-			__( 'ComicPress - Random Post Link', 'comiceasel' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Displays a link to click that triggers going to a random blog post.', 'comiceasel' ), )
+			__( 'ComicPress - Random Post Link', 'comicpress' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Displays a link to click that triggers going to a random blog post.', 'comicpress' ), )
 		);
 	}
 	

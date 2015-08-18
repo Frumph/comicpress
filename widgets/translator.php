@@ -17,8 +17,8 @@ class comicpress_google_translate_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			__CLASS__, // Base ID
-			__( 'ComicPress - Google Translator', 'comiceasel' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Translate your site with Google.', 'comiceasel' ), )
+			__( 'ComicPress - Google Translator', 'comicpress' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Translate your site with Google.', 'comicpress' ), )
 		);
 	}
 	

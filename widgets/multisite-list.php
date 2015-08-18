@@ -17,8 +17,8 @@ if (function_exists('is_multisite')) {
 			function __construct() {
 				parent::__construct(
 					__CLASS__, // Base ID
-					__( 'ComicPress - Site List', 'comiceasel' ), // Name
-					array( 'classname' => __CLASS__, 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comiceasel' ), )
+					__( 'ComicPress - Site List', 'comicpress' ), // Name
+					array( 'classname' => __CLASS__, 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comicpress' ), )
 				);
 			}
 			

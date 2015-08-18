@@ -49,8 +49,8 @@ class comicpress_menubar_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			__CLASS__, // Base ID
-			__( 'ComicPress - Menubar', 'comiceasel' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comiceasel' ), )
+			__( 'ComicPress - Menubar', 'comicpress' ), // Name
+			array( 'classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comicpress' ), )
 		);
 	}
 	
