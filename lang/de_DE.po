@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.2.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-14 06:50+0100\n"
-"PO-Revision-Date: 2015-03-14 07:16+0100\n"
+"POT-Creation-Date: 2015-08-18 22:14+0200\n"
+"PO-Revision-Date: 2015-08-18 22:16+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -395,8 +395,7 @@ msgstr "RSS-Feed"
 msgid "RSS"
 msgstr "RSS"
 
-#: functions.php:271 functions/breadcrumbs.php:11
-#: functions/wp-pagenavi.php:165
+#: functions.php:271 functions/breadcrumbs.php:11 functions/wp-pagenavi.php:165
 msgid "&raquo;"
 msgstr "&raquo;"
 
@@ -1522,8 +1521,8 @@ msgid "Tag This Page"
 msgstr "Diese Seite taggen"
 
 #: widgets/classicbookmark.php:117
-msgid "Classic Bookmark"
-msgstr "Klassisches Lesezeichen"
+msgid "ComicPress - Classic Bookmark"
+msgstr "ComicPress - Klassisches Lesezeichen"
 
 #: widgets/classicbookmark.php:118
 msgid ""
@@ -1532,13 +1531,17 @@ msgstr ""
 "Erstellt ein kleines Button-Set, das die Besucher zu getaggten Seiten "
 "zurückführen kann."
 
-#: widgets/classicbookmark.php:141 widgets/controlpanel.php:68
-#: widgets/menubar.php:74 widgets/randompostlink.php:61
-#: widgets/scheduledposts.php:49 widgets/translator.php:44
+#: widgets/classicbookmark.php:141 widgets/controlpanel.php:72
+#: widgets/menubar.php:78 widgets/randompostlink.php:65
+#: widgets/scheduledposts.php:53 widgets/translator.php:48
 msgid "Title:"
 msgstr "Titel:"
 
-#: widgets/controlpanel.php:13
+#: widgets/controlpanel.php:17
+msgid "ComicPress - Control Panel"
+msgstr "ComicPress - Kontrollzentrum"
+
+#: widgets/controlpanel.php:18
 msgid ""
 "Login/Logoff menu with register/lost password links if not logged on. (use "
 "only if registrations are enabled)."
@@ -1546,78 +1549,86 @@ msgstr ""
 "Login/Logout-Menü mit Registrieren-/Passwortverlust-Links anzeigen, wenn man "
 "nicht eingeloggt ist. (Nur benutzen, wenn auch Registrierungen erlaubt sind)."
 
-#: widgets/controlpanel.php:14 widgets/controlpanel.php:51
-msgid "Control Panel"
-msgstr "Kontrollzentrum"
-
-#: widgets/controlpanel.php:23
+#: widgets/controlpanel.php:27
 msgid "Username"
 msgstr "Benutzername"
 
-#: widgets/controlpanel.php:24
+#: widgets/controlpanel.php:28
 msgid "Password"
 msgstr "Passwort"
 
-#: widgets/controlpanel.php:30 widgets/controlpanel.php:32
+#: widgets/controlpanel.php:34 widgets/controlpanel.php:36
 msgid "Register"
 msgstr "Registrieren"
 
-#: widgets/controlpanel.php:34
+#: widgets/controlpanel.php:38
 msgid "Recover password"
 msgstr "Passwort wiederherstellen"
 
-#: widgets/controlpanel.php:38
+#: widgets/controlpanel.php:42
 msgid "Logout"
 msgstr "Abmelden"
 
-#: widgets/controlpanel.php:40
+#: widgets/controlpanel.php:44
 msgid "Profile"
 msgstr "Profil"
 
-#: widgets/menubar.php:48
+#: widgets/controlpanel.php:55
+msgid "Control Panel"
+msgstr "Kontrollzentrum"
+
+#: widgets/menubar.php:52
+msgid "ComicPress - Menubar"
+msgstr "ComicPress - Menüleiste"
+
+#: widgets/menubar.php:53
 msgid "Displays a menubar."
 msgstr "Zeigt eine Menüleiste."
 
-#: widgets/menubar.php:49
-msgid "ComicPress Menubar"
-msgstr "ComicPress Menüleiste"
+#: widgets/multisite-list.php:20
+msgid "ComicPress - Site List"
+msgstr "ComicPress - Seitenliste"
 
-#: widgets/multisite-list.php:15
+#: widgets/multisite-list.php:21
 msgid ""
 "Display Site List of all sites that have recently updated on this Multisite."
 msgstr ""
 "Zeigt eine Seitenliste aller Seiten, die auf dieser Multisite zuetzt "
 "aktualisiert wurden."
 
-#: widgets/multisite-list.php:25
+#: widgets/multisite-list.php:31
 msgid "Hosted Site List"
 msgstr "Liste gehosteter Seiten"
 
-#: widgets/randompostlink.php:34
-msgid "Displays a link to click to trigger a random blog post."
+#: widgets/randompostlink.php:38
+msgid "ComicPress - Random Post Link"
+msgstr "ComicPress - Zufällige Beitragslinks"
+
+#: widgets/randompostlink.php:39
+msgid "Displays a link to click that triggers going to a random blog post."
 msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
 
-#: widgets/randompostlink.php:35
-msgid "Random Post Link"
-msgstr "Zufälliger Beitragslink"
-
-#: widgets/randompostlink.php:46
+#: widgets/randompostlink.php:50
 msgid "Random Post"
 msgstr "Zufälliger Beitrag"
 
-#: widgets/scheduledposts.php:14
+#: widgets/scheduledposts.php:18
+msgid "ComicPress - Scheduled Posts"
+msgstr "ComicPress - geplante Beiträge"
+
+#: widgets/scheduledposts.php:19
 msgid "Display a list of posts that are scheduled to be published."
 msgstr ""
 "Zeigt eine Liste von Beiträgen, die zur Veröffentlichung terminiert sind."
 
-#: widgets/scheduledposts.php:15 widgets/scheduledposts.php:23
+#: widgets/scheduledposts.php:27
 msgid "Scheduled Posts"
 msgstr "Geplante Beiträge"
 
-#: widgets/translator.php:16
+#: widgets/translator.php:20
+msgid "ComicPress - Google Translator"
+msgstr "ComicPress - Google Übersetzer"
+
+#: widgets/translator.php:21
 msgid "Translate your site with Google."
 msgstr "Übersetze deine Website mit Google."
-
-#: widgets/translator.php:17
-msgid "Google Translator"
-msgstr "Google Übersetzer"
