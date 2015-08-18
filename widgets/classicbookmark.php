@@ -146,4 +146,3 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget('widget_comicpress_classic_bookmark');
 });
-
