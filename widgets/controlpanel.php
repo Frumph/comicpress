@@ -6,6 +6,10 @@ Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
 Version: 1.1
 */
+
+/**
+ * Adds Control Panel widget.
+ */
 class comicpress_control_panel_widget extends WP_Widget {
 
 	/**
@@ -15,19 +19,19 @@ class comicpress_control_panel_widget extends WP_Widget {
 		parent::__construct(
 			__CLASS__, // Base ID
 			__( 'ComicPress - Control Panel', 'comicpress' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comicpress' ), )
+			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comicpress' ), ) // Args
 		);
 	}
 	
-	function comicpress_show_control_panel() { 
+	function comicpress_show_control_panel() {
 		global $user_login;
 		if (!is_user_logged_in()) { ?>
-			<?php 
+			<?php
 			$args = array(
 					'label_username' => __( 'Username', 'comicpress' ),
 					'label_password' => __( 'Password', 'comicpress' )
 					);
-				wp_login_form($args); 
+				wp_login_form($args);
 			?>
 			<ul>
 			<?php if (is_multisite()) { ?>
@@ -45,10 +49,17 @@ class comicpress_control_panel_widget extends WP_Widget {
 			</ul>
 		<?php } ?>
 		<?php
-	} 	
+	}
 		
-
-	function widget($args, $instance) {
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget($args, $instance) {
 		extract($args, EXTR_SKIP);
 		Protect();
 		echo $before_widget;
@@ -59,13 +70,30 @@ class comicpress_control_panel_widget extends WP_Widget {
 		UnProtect();
 	}
 	
-	function update($new_instance, $old_instance) {
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
 	
-	function form($instance) {
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form($instance) {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 		?>
@@ -74,6 +102,7 @@ class comicpress_control_panel_widget extends WP_Widget {
 	}
 }
 
+// register Control Panel widget
 add_action( 'widgets_init', function(){
 	register_widget('comicpress_control_panel_widget');
 });
