@@ -6,7 +6,6 @@ Description: Display a calendar of this months posts.
 Author: Philip M. Hofer (Frumph)
 Version: 1.1
 Author URI: http://frumph.net/
-
 */
 
 function comicpress_menubar() {
