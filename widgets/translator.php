@@ -1,8 +1,8 @@
 <?php
 /*
-Widget Name: google translator
+Widget Name: Google Translator
 Widget URI: http://comicpress.net/
-Description: 
+Description: Translate your site with Google.
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
 Version: 1.3
