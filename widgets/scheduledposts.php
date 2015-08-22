@@ -20,7 +20,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		parent::__construct(
 			__CLASS__, // Base ID
 			__( 'ComicPress - Scheduled Posts', 'comicpress' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comicpress' ), )
+			array( 'classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comicpress' ), ) //Args
 		);
 	}
 	
