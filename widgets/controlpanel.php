@@ -103,6 +103,8 @@ class comicpress_control_panel_widget extends WP_Widget {
 }
 
 // register Control Panel widget
-add_action( 'widgets_init', function(){
+function comicpress_control_panel_widget_init() {
 	register_widget('comicpress_control_panel_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_control_panel_widget_init');

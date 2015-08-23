@@ -85,6 +85,8 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 }
 
 // register Scheduled Posts widget
-add_action( 'widgets_init', function(){
+function comicpress_scheduled_posts_widget_init() {
 	register_widget('comicpress_scheduled_posts_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_scheduled_posts_widget_init');

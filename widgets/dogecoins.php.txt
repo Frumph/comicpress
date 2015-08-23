@@ -71,6 +71,8 @@ class comicpress_dogecoins_widget extends WP_Widget {
 	}
 }
 
-add_action( 'widgets_init', function(){
+function comicpress_dogecoins_widget_init() {
 	register_widget('comicpress_dogecoins_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_dogecoins_widget_init');

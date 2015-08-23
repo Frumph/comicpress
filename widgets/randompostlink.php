@@ -95,6 +95,8 @@ class comicpress_random_post_link_widget extends WP_Widget {
 }
 
 // register Random Post widget
-add_action( 'widgets_init', function(){
+function comicpress_random_post_link_widget_init() {
 	register_widget('comicpress_random_post_link_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_random_post_link_widget_init');

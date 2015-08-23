@@ -143,6 +143,8 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	}
 }
 
-add_action( 'widgets_init', function(){
+function widget_comicpress_classic_bookmark_init() {
 	register_widget('widget_comicpress_classic_bookmark');
-});
+}
+
+add_action( 'widgets_init', 'widget_comicpress_classic_bookmark_init');

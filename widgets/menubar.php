@@ -107,6 +107,8 @@ class comicpress_menubar_widget extends WP_Widget {
 }
 
 // register Menubar widget
-add_action( 'widgets_init', function(){
+function comicpress_menubar_widget_init() {
 	register_widget('comicpress_menubar_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_menubar_widget_init');

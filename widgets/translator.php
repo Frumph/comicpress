@@ -78,6 +78,8 @@ class comicpress_google_translate_widget extends WP_Widget {
 }
 
 // register Google Translator widget
-add_action( 'widgets_init', function(){
+function comicpress_google_translate_widget_init() {
 	register_widget('comicpress_google_translate_widget');
-});
+}
+
+add_action( 'widgets_init', 'comicpress_google_translate_widget_init');
