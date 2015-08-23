@@ -24,7 +24,7 @@ class comicpress_google_translate_widget extends WP_Widget {
 		);
 	}
 	
-/**
+	/**
 	 * Front-end display of widget.
 	 *
 	 * @see WP_Widget::widget()
