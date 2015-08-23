@@ -20,7 +20,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: 'Arial' , sans-serif;
+	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 	color: #000;
 }
@@ -266,7 +266,8 @@ a.menunav-rss {
 }
 
 .menu {
-	/*	font: bold 12px Verdana; */ /*	background: #414141; background of menu bar (default state)*/
+	/*	font: bold 12px Verdana; */ 
+	/*	background: #414141; background of menu bar (default state)*/
 	float: left;
 }
 
@@ -927,7 +928,6 @@ body.layout-2cl #sidebar-footer-left, body.layout-2cl #sidebar-footer, body.layo
 	padding: 0 2px;
 }
 
-
 /* CALENDAR */
 
 #wp-calendar-wrap {
@@ -1035,7 +1035,6 @@ table#wp-calendar td {
 	max-height: 200px;
 }
 
-
 /* SEARCH */
 
 .s-search {
@@ -1053,7 +1052,6 @@ table#wp-calendar td {
 	padding: 0 0 20px 5px;
 	font-style: italic;
 }
-
 
 /* GALLERY */
 
@@ -1486,7 +1484,6 @@ table#wp-calendar td {
 	float: right;
 }
 
-
 /* menunav social icons */
 
 .menunav-social-wrapper {
@@ -1885,9 +1882,11 @@ body.scheme-mecha .menu ul li a:hover, body.scheme-mecha .menu ul li ul li a:hov
 body.scheme-mecha .copyright-info {
 	color: #ccc;
 }
+
 body.scheme-mecha .copyright-info a:link, body.scheme-mecha .copyright-info a:visited {
 	color: #a0fa0f;
 }
+
 body.scheme-mecha .copyright-info a:hover {
 	color: #f00;
 }
@@ -1919,7 +1918,7 @@ body.scheme-mecha .archiveresults, body.scheme-mecha .searchresults, body.scheme
 /* Scheme: CEasel body.scheme-ceasel */
 
 body.scheme-ceasel {
-	background: #ccc url(  'images/noise.jpg' ) repeat;
+	background: #ccc url( 'images/noise.jpg' ) repeat;
 	font-family: "Trebuchet MS" , Helvetica, sans-serif;
 	font-size: 14px;
 }
@@ -2006,7 +2005,10 @@ body.scheme-ceasel #content-wrapper {
 }
 
 body.scheme-ceasel #content-wrapper, body.scheme-ceasel #menubar-wrapper {
-	/*	-moz-box-shadow: 1px 2px 4px #111; 	-webkit-box-shadow: 1px 2px 4px #111; 	-khtml-box-shadow: 1px 2px 4px #111; 	box-shadow: 1px 2px 4px #111; */
+	/*	-moz-box-shadow: 1px 2px 4px #111; 	
+		-webkit-box-shadow: 1px 2px 4px #111; 	
+		-khtml-box-shadow: 1px 2px 4px #111; 	
+		box-shadow: 1px 2px 4px #111; */ 
 }
 
 body.scheme-ceasel .sidebar .widget {
@@ -2032,7 +2034,7 @@ body.scheme-ceasel .uentry {
 	-khtml-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-	background: #fff url(  'images/post-bottom.jpg' ) bottom left repeat-x;
+	background: #fff url( 'images/post-bottom.jpg' ) bottom left repeat-x;
 }
 
 body.scheme-ceasel .sidebar h2 {
@@ -2276,4 +2278,3 @@ body.scheme-high .post-image img {
 	-webkit-border-radius: 10px 10px 0 0;
 	border-radius: 10px 10px 0 0;
 }
-
