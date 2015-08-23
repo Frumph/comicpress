@@ -49,7 +49,7 @@ class comicpress_menubar_widget extends WP_Widget {
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
-			parent::__construct(
+		parent::__construct(
 			__CLASS__, // Base ID
 			__( 'ComicPress - Menubar', 'comicpress' ), // Name
 			array( 'classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comicpress' ), ) // Args
@@ -72,7 +72,7 @@ class comicpress_menubar_widget extends WP_Widget {
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
 		comicpress_menubar();
 		echo $after_widget;
-     }
+	}
 	
 	/**
 	 * Sanitize widget form values as they are saved.

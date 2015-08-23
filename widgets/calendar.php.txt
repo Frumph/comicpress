@@ -249,7 +249,7 @@ class comicpress_calendar_widget extends WP_Widget {
 		parent::__construct(
 			__CLASS__, // Base ID
 			__( 'ComicPress - Calendar', 'comicpress' ), // Name
-			array( 'classname' => __CLASS__, 'description' => __( 'Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)', 'comicpress' ), )
+			array( 'classname' => __CLASS__, 'description' => __( 'Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)', 'comicpress' ), ) //Args
 		);
 	}
 
@@ -287,7 +287,7 @@ class comicpress_calendar_widget extends WP_Widget {
 					</div>
 				<?php } ?>
 			<?php
-				comicpress_get_calendar(true, true, 'post'); 
+				comicpress_get_calendar(true, true, 'post');
 			?>
 			</div>
 			<div id="wp-calendar-foot"></div>

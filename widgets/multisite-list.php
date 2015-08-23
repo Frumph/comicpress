@@ -89,5 +89,5 @@ if (function_exists('is_multisite') && is_multisite()) {
 		register_widget('comicpress_multisite_sitelist_widget');
 	}
 	
-	add_action( 'widgets_init', 'comicpress_multisite_sitelist_widget_init');	
+	add_action( 'widgets_init', 'comicpress_multisite_sitelist_widget_init');
 }
