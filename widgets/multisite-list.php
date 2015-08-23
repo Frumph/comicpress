@@ -7,8 +7,7 @@ Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net/
 Version: 1.1
 */
-if (function_exists('is_multisite')) {
-	if (is_multisite()) {
+if (function_exists('is_multisite') && is_multisite()) {
 		
 		/**
 		 * Adds Site List widget.
