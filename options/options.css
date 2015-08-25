@@ -39,6 +39,7 @@
 	cursor: pointer;
 	z-index: 20;
 }
+
 #eadmin div.on {
 	color: #333;
 	padding: 0 7px;
@@ -68,10 +69,12 @@ div.show {
 	position: relative;
 	z-index: 50;
 }
+
 div.show img {
 	float: left;
 	margin: 0 10px 10px 0;
 }
+
 .clear {
 	clear: both;
 }
@@ -89,9 +92,11 @@ div.show img {
 	-webkit-border-radius: 6px;
 	-khtml-border-radius: 6px;
 }
+
 .eadmin-donate {
 	float: right;
 }
+
 .eadmin-footer a {
 	text-decoration: none;
 }
@@ -193,8 +198,8 @@ width: auto;
 	font-variant: small-caps;
 }
 
-	#comicpress-version-title  a {
-		color: #333;
+#comicpress-version-title  a {
+	color: #333;
 }
 
 #comicpress-version-number {
