@@ -66,7 +66,7 @@ function comicpress_enqueue_theme_scripts() {
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
 		if (!comicpress_themeinfo('disable_jquery_menu_code')) {
-			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri().'/js/ddsmoothmenu.js'); 
+			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri().'/js/ddsmoothmenu.js');
 			wp_enqueue_script('menubar_js', get_template_directory_uri().'/js/menubar.js');
 		}
 		if (!comicpress_themeinfo('disable_scroll_to_top')) {
