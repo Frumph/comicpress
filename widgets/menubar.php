@@ -9,7 +9,7 @@ Author URI: http://frumph.net/
 */
 
 function comicpress_menubar() {
-	if (file_exists(comicpress_themeinfo('stylepath') . '/custom-menubar.php')) {
+	if (file_exists(get_stylesheet_directory() . '/custom-menubar.php')) {
 		get_template_part('custom-menubar');
 	} else { ?>
 		<div id="menubar-wrapper">

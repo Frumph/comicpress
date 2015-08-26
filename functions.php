@@ -26,12 +26,12 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 // These autoload
-foreach (glob(comicpress_themeinfo('themepath') . '/functions/*.php') as $funcfile) {
+foreach (glob(get_template_directory() . '/functions/*.php') as $funcfile) {
 	get_template_part('functions/'.basename($funcfile,'.php'));
 }
 
 // Load all the widgets.
-foreach (glob(comicpress_themeinfo('themepath')  . '/widgets/*.php') as $widgefile) {
+foreach (glob(get_template_directory()  . '/widgets/*.php') as $widgefile) {
 	get_template_part('widgets/'.basename($widgefile,'.php'));
 }
 
@@ -66,19 +66,19 @@ function comicpress_enqueue_theme_scripts() {
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
 		if (!comicpress_themeinfo('disable_jquery_menu_code')) {
-			wp_enqueue_script('ddsmoothmenu_js', comicpress_themeinfo('themeurl').'/js/ddsmoothmenu.js'); 
-			wp_enqueue_script('menubar_js', comicpress_themeinfo('themeurl').'/js/menubar.js');
+			wp_enqueue_script('ddsmoothmenu_js', get_template_directory_uri().'/js/ddsmoothmenu.js'); 
+			wp_enqueue_script('menubar_js', get_template_directory_uri().'/js/menubar.js');
 		}
 		if (!comicpress_themeinfo('disable_scroll_to_top')) {
-			wp_enqueue_script('comicpress_scroll', comicpress_themeinfo('themeurl').'/js/scroll.js', null, null, true);
+			wp_enqueue_script('comicpress_scroll', get_template_directory_uri().'/js/scroll.js', null, null, true);
 		}
 		if (is_active_widget('comicpress_google_translate_widget', false, 'comicpress_google_translate_widget', true)) {
 			wp_enqueue_script('google-translate', 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', null, null, true);
 			wp_enqueue_script('google-translate-settings', get_template_directory_uri() . '/js/googletranslate.js');
 		}
 		if (comicpress_themeinfo('enable_avatar_trick') && !$is_IE) {
-			wp_enqueue_script('themetricks_historic1', comicpress_themeinfo('themeurl').'/js/cvi_text_lib.js', null, null, true);
-			wp_enqueue_script('themetricks_historic2', comicpress_themeinfo('themeurl').'/js/instant.js', null, null, true);
+			wp_enqueue_script('themetricks_historic1', get_template_directory_uri().'/js/cvi_text_lib.js', null, null, true);
+			wp_enqueue_script('themetricks_historic2', get_template_directory_uri().'/js/instant.js', null, null, true);
 		}
 	}
 }
@@ -367,21 +367,11 @@ function comicpress_themeinfo($whichinfo = null) {
 	if (empty($comicpress_themeinfo) || $whichinfo == 'reset') {
 		$comicpress_themeinfo = array();
 		$comicpress_options = comicpress_load_options();
-		$comicpress_coreinfo = wp_upload_dir();
 		$comicpress_addinfo = array(
-			'upload_path' => get_option('upload_path'),
 			'version' => '4.2.2',
-			'themepath' => get_template_directory(),
-			'themeurl' => get_template_directory_uri(), 
-			'stylepath' => get_stylesheet_directory(), 
-			'styleurl' => get_stylesheet_directory_uri(),
-			'uploadpath' => $comicpress_coreinfo['basedir'],
-			'uploadurl' => $comicpress_coreinfo['baseurl'],
-			'home' => untrailingslashit(home_url()),  
-			'siteurl' => untrailingslashit(site_url()),
 			'excerpt_length' => '40'
 		);
-		$comicpress_themeinfo = array_merge($comicpress_coreinfo, $comicpress_addinfo);
+		$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_addinfo);
 		$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_options);
 		if (!isset($comicpress_themeinfo['layout']) || empty($comicpress_themeinfo['layout']) || ($comicpress_themeinfo['layout'] == 'standard')) $comicpress_themeinfo['layout'] = '3c';
 	}
@@ -395,7 +385,7 @@ function comicpress_themeinfo($whichinfo = null) {
 
 // Dashboard Menu Options - Only run in the wp-admin area
 if (is_admin()) {
-	@require_once(comicpress_themeinfo('themepath').'/options.php');
+	@require_once(get_template_directory().'/options.php');
 	/* translators: theme discription for wp-admin */
 	$bogus_translation = __( 'Publish a WebComic with the ComicPress theme and the Comic Easel plugin.', 'comicpress' );
 }

@@ -259,7 +259,7 @@ $current_avatar_directory = $comicpress_options['avatar_directory'];
 if (empty($current_avatar_directory))
     $current_avatar_directory = 'default';
 $avatar_directories = array();
-$dirs_to_search = array_unique(array(comicpress_themeinfo('themepath'), comicpress_themeinfo('stylepath')));
+$dirs_to_search = array_unique(array(get_template_directory(), get_stylesheet_directory()));
 foreach ($dirs_to_search as $avdir) {
     if (is_dir($avdir . '/images/avatars')) {
         $thisdir = null;

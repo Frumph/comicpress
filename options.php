@@ -20,7 +20,7 @@ function comicpress_admin_print_styles() {
 	wp_admin_css('css/global');
 	wp_admin_css('css/colors');
 	wp_admin_css('css/ie');
-	wp_enqueue_style('comicpress-options-style', comicpress_themeinfo('themeurl') . '/options/options.css');
+	wp_enqueue_style('comicpress-options-style', get_template_directory_uri() . '/options/options.css');
 }
 
 function comicpress_admin_page_head() { ?>
@@ -29,7 +29,7 @@ function comicpress_admin_page_head() { ?>
 
 function comicpress_admin_options() { ?>
 <div class="wrap">
-	<div id="eadmin-headericon" style="background: url('<?php echo comicpress_themeinfo('themeurl') ?>/images/comicpress-rascal.png') no-repeat;"></div>
+	<div id="eadmin-headericon" style="background: url('<?php echo get_template_directory_uri() ?>/images/comicpress-rascal.png') no-repeat;"></div>
 	<p class="alignleft">
 		<h2><?php _e( 'ComicPress Options', 'comicpress' ); ?></h2>
 		<?php _e( 'ComicPress is a modular theme that has an abundance of hooks and actions placed in it for additional usability. Ref: Comic Easel', 'comicpress' ); ?><br />
@@ -209,7 +209,7 @@ function comicpress_admin_options() { ?>
 		</div>
 
 		<div id="comicpress-options-pages">
-		  <?php	foreach (glob(comicpress_themeinfo('themepath') . '/options/*.php') as $file) { include($file); } ?>
+		  <?php	foreach (glob(get_template_directory() . '/options/*.php') as $file) { include($file); } ?>
 		</div>
 	</div>
 	<script type="text/javascript">
