@@ -225,20 +225,22 @@ if (!function_exists('comicpress_display_post')) {
 			<div class="post-head"><?php do_action('comicpress-post-head'); ?></div>
 			<div class="post-content">
 				<div class="post-info">
-					<?php 
+					<?php
 						if (!comicpress_is_bbpress()) comicpress_display_author_gravatar();
 						if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 						if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
+						/* Integrate of the deprecated function comicpress_show_mood_in_post */
 						if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
 					?>
 					<div class="post-text">
-						<?php 
+						<?php
 						comicpress_display_post_title();
 						if (!is_page()) {
 							comicpress_display_post_author();
 							comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
 							if ($post->post_type == 'post') { edit_post_link(__( 'Edit', 'comicpress' ), ' <span class="post-edit">', '</span>'); }
 							comicpress_display_post_category();
+							/* Integrate the WP-Plugin: WP-PostRatings */
 							if (function_exists('the_ratings') && $post->post_type == 'post') { the_ratings(); }
 							do_action('comicpress-post-info');
 							do_action('comic-post-info');
