@@ -6,6 +6,7 @@ http://mindfaucet.net
 Philip Hofer @frumph - Lead Developer
 http://frumph.net
 
+Rene Wolf @ kniebremser - Contributor
 
 Theme Documentation
 
@@ -24,9 +25,12 @@ Please read information and faqs on comiceasel.com for more information.
 
 == Changelog ==
 
-= 4.?.? =
-* update instant.js to v2.4
-* update cvi_text_lib.js to 1.03
+= 4.3 =
+* reintroduced Post/Comic "Moods"
+* changed HTML 5 compliancy for posts footer, header
+* changed Date of registration displayed now translated and with the date format of WP Settings
+* updated instant.js to v2.4
+* updated cvi_text_lib.js to 1.03
 * fixed various js errors
 
 = 4.2.2 =
