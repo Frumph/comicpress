@@ -1,3 +1,12 @@
+Developers, blah blah blah.
+
+Tyler Martin @mindfaucet - Creator
+http://mindfaucet.net
+
+Philip Hofer @frumph - Lead Developer
+http://frumph.net
+
+
 Theme Documentation
 
 ComicPress is a configurable theme, layouts to colors.
