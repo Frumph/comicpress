@@ -218,7 +218,40 @@
 					<td>
 						<?php _e( 'Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information.', 'comicpress' ); ?>
 					</td>
-				</tr>								
+				</tr>
+<?php
+$current_directory = comicpress_themeinfo('moods_directory');
+if (empty($current_directory)) $current_directory = 'default';
+$dirs_to_search = array_unique(array(get_template_directory(), get_stylesheet_directory()));
+$mood_directories = array();
+foreach ($dirs_to_search as $moodir) {
+	if (is_dir($moodir . '/images/moods')) {
+		$thisdir = null;
+		$thisdir = array();
+		$thisdir = glob($moodir. '/images/moods/*');
+		$mood_directories = array_merge($mood_directories, $thisdir); 		
+	}
+}
+				?>
+				<tr class="alternate">
+					<th scope="row" colspan="2">
+						<label for="moods_directory"><?php _e('Moods Directory','comicpress'); ?></label>
+						<select name="moods_directory" id="moods_directory">
+							<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
+<?php
+foreach ($mood_directories as $mood_dirs) {
+	if (is_dir($mood_dirs)) {
+										$mood_dir_name = basename($mood_dirs); ?>
+										<option class="level-0" value="<?php echo $mood_dir_name; ?>" <?php if ($current_directory == $mood_dir_name) { ?>selected="selected"<?php } ?>><?php echo $mood_dir_name; ?></option>
+	<?php }
+}
+							?>
+						</select>
+					</th>
+					<td>
+						<?php _e('Choose a directory to get the post moods from.  Set this to "none" to turn off use.  Mood directories are found in your theme directory/images/moods/* to create your own custom moods just create a directory under images/moods/ and place ONLY image files inside of it. The name of the image file represents what the mood is.','comicpress'); ?>
+					</td>
+				</tr>
 			</table>
 			
 			<table class="widefat">

@@ -352,7 +352,8 @@ function comicpress_load_options() {
 			'content_width' => 500,
 			'content_width_disabled_sidebars' => 700,
 			'add_pw_async_code_to_head' => false,
-			'over-blog-sidebar-all-posts' => false
+			'over-blog-sidebar-all-posts' => false,
+			'moods_directory' => 'none'
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
