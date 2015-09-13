@@ -23,7 +23,6 @@ add_action('add_meta_boxes', 'comicpress_add_moods_into_posts');
 function comicpress_add_moods_into_posts() {
 	global $post;
 	if (!empty($post) && ($post->post_type == 'comic' || $post->post_type == 'post')) {
-		add_meta_box('comicpress_showmood_edit_post', __('Moods', 'comiceasel'), 'comicpress_showmood_edit_post', 'comic', 'normal', 'low');
 		add_meta_box('comicpress_showmood_edit_post', __('Moods', 'comiceasel'), 'comicpress_showmood_edit_post', 'post', 'normal', 'low');
 	}
 }
@@ -112,15 +111,3 @@ function comicpress_handle_edit_post_mood_save($post_id) {
 		}
 	}
 }
-
-function mood_admin_function() {
-	add_meta_box(
-			'mood-for-this-post',
-			__('Mood For This Post', 'comicpress'),
-			'comicpress_showmood_edit_post',
-			'post',
-			'normal',
-			'low'
-			);
-}
-
