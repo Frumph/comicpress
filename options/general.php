@@ -237,7 +237,7 @@ foreach ($dirs_to_search as $moodir) {
 					<th scope="row" colspan="2">
 						<label for="moods_directory"><?php _e('Moods Directory','comicpress'); ?></label>
 						<select name="moods_directory" id="moods_directory">
-							<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>>none</option>
+							<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
 <?php
 foreach ($mood_directories as $mood_dirs) {
 	if (is_dir($mood_dirs)) {
@@ -249,7 +249,7 @@ foreach ($mood_directories as $mood_dirs) {
 						</select>
 					</th>
 					<td>
-						<?php _e('Choose a directory to get the post moods from.  Set this to "none" to turn off use.  Mood directories are found in your theme directory/images/moods/* to create your own custom moods just create a directory under images/moods/ and place ONLY image files inside of it. The name of the image file represents what the mood is.','comicpress'); ?>
+						<?php _e('Choose a directory to get the post moods from. Set this to <strong>none</strong> to turn off use. Mood directories are found in your theme directory/images/moods/* . To create your own custom moods just create a directory under images/moods/ and place ONLY image files inside of it. The name of the image file represents what the mood is.','comicpress'); ?>
 					</td>
 				</tr>
 			</table>
