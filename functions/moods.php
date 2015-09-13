@@ -14,9 +14,7 @@
  * Edit a post and it you will see the possible moods you can use, select one.
  * 
  */
- 
- 
-add_action('admin_menu', 'mood_admin_function');
+
 add_action('save_post', 'comicpress_handle_edit_post_mood_save' ,5, 1);
 add_action('add_meta_boxes', 'comicpress_add_moods_into_posts');
 
