@@ -58,6 +58,14 @@ class comicpress_Customize {
 					'high' => 'High Society'
 				)
 			));
+			
+		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
+		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
+				'settings' => 'comicpress-customize-detach-footer',
+				'label'    => __( 'Detach the footer to below the main content? (Already appears detached on some schemes *but isn\'t)', 'comicpress' ),
+				'section'  => 'comicpress-scheme-options',
+				'type'     => 'checkbox'
+			));
 
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
