@@ -1,5 +1,5 @@
 <?php comicpress_display_post_thumbnail(); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
 		<div class="post-info">
 			<?php 
@@ -19,4 +19,4 @@
 		<div class="clear"></div>
 		<?php edit_post_link(__( 'Edit this page.', 'comicpress' ), '', ''); ?>
 	</div>
-</div>
+</article>

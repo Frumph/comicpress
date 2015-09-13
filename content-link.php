@@ -1,7 +1,7 @@
 <?php
 if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php } 
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
 		<?php if (is_home() || is_archive() || is_search()) comicpress_display_post_thumbnail('thumbnail'); ?>
 		<div class="entry">
@@ -12,4 +12,4 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>
-</div>
+</article>

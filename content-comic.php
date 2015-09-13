@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
 		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
 		<div class="post-info">
@@ -37,4 +37,4 @@
 		</div>
 		<?php edit_post_link(__( 'Edit this comic.', 'comicpress' ), '', ''); ?>
 	</div>
-</div>
+</article>
