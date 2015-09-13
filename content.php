@@ -11,7 +11,6 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 				comicpress_display_post_title();
 				if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 				if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
-				/* Integrate of the deprecated function comicpress_show_mood_in_post */
 				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
 			?>
 			<div class="post-text">
