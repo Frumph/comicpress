@@ -1357,17 +1357,11 @@ table#wp-calendar td {
 /* Image / Attachments */
 
 .imagenav-link img {
-    -moz-opacity: 0.6; /* mozilla, netscape, gecko */
-    opacity: 0.6; /* firefox, opera, safari, chrome */
-    -khtml-opacity: 0.6; /* khtml, old safari */
-    -webkit-opacity: 0.6;
+    opacity: 0.6;
 }
 
 .imagenav-link img:hover {
-    -moz-opacity: 0.1; /* mozilla, netscape */
-    opacity: 0.1; /* firefox, opera, safari, chrome */
-    -khtml-opacity: 0.1; /* khtml, old safari */
-    -webkit-opacity: 0.1;
+    opacity: 0.1;
 }
 
 /* comment form */
