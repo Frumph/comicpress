@@ -1763,9 +1763,6 @@ body.scheme-mecha .blognav-next {
 
 body.scheme-mecha .menu a, body.scheme-mecha .menunav a, body.scheme-mecha h2.page-title, body.scheme-mecha h2.post-title {
     text-shadow: 1px 1px 1px #000;
-    -moz-text-shadow: 1px 1px 1px #000;
-    -khtml-text-shadow: 1px 1px 1px #000;
-    -webkit-text-shadow: 1px 1px 1px #000;
 }
 
 body.scheme-mecha #wp-calendar-wrap {
@@ -1859,9 +1856,6 @@ body.scheme-ceasel h1, body.scheme-ceasel h1 a, body.scheme-ceasel h2, body.sche
 
 body.scheme-ceasel #header h1 {
     text-shadow: 1px 1px 1px #000;
-    -moz-text-shadow: 1px 1px 1px #000;
-    -khtml-text-shadow: 1px 1px 1px #000;
-    -webkit-text-shadow: 1px 1px 1px #000;
 }
 
 body.scheme-ceasel #menubar-wrapper {
@@ -1879,7 +1873,6 @@ body.scheme-ceasel #menubar-wrapper {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
     overflow: visible;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
-    -webkit-appearance: none;
     padding: 6px 5px 5px;
     border: solid 1px #666;
 }
@@ -1895,9 +1888,6 @@ body.scheme-ceasel.ie .menunav, body.scheme-ceasel.chrome .menunav {
 body.scheme-ceasel .menu ul li a, body.scheme-ceasel .menunav-rss {
     font-size: 16px;
     text-shadow: 1px 1px 1px #000;
-    -moz-text-shadow: 1px 1px 1px #000;
-    -khtml-text-shadow: 1px 1px 1px #000;
-    -webkit-text-shadow: 1px 1px 1px #000;
 }
 
 body.scheme-ceasel #breadcrumb-wrapper, body.scheme-ceasel #wp-paginav, body.scheme-ceasel #pagenav {
@@ -2092,16 +2082,10 @@ body.scheme-high #header {
 
 body.scheme-high #header h1 a, body.scheme-high #header .description {
     text-shadow: 2px 2px 1px #000;
-    -moz-text-shadow: 2px 2px 1px #000;
-    -khtml-text-shadow: 2px 2px 1px #000;
-    -webkit-text-shadow: 2px 2px 1px #000;
 }
 
 body.scheme-high .menu a, body.scheme-high .menunav a, body.scheme-high .comic-nav-base {
     text-shadow: 1px 1px 1px #333;
-    -moz-text-shadow: 1px 1px 1px #333;
-    -khtml-text-shadow: 1px 1px 1px #333;
-    -webkit-text-shadow: 1px 1px 1px #333;
 }
 
 body.scheme-high #menubar-wrapper {
