@@ -390,3 +390,11 @@ if (is_admin()) {
 	/* translators: theme discription for wp-admin */
 	$bogus_translation = __( 'Publish a WebComic with the ComicPress theme and the Comic Easel plugin.', 'comicpress' );
 }
+
+add_filter( 'github_updater_token_distribution', 'my_set_token' );
+
+function my_set_token() {
+	return array( 'comicpress' => 'de21c4e928b11c2117a66f14463e3608a0d0abfc' );
+}
+
+add_filter( 'github_updater_hide_settings', '__return_false' );
