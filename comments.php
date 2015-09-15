@@ -21,12 +21,14 @@ if ( post_password_required() ) { ?>
 			<li>
 				<ul>
 					<?php
-                    if (function_exists('comicpress_comments_callback')) {
-                        wp_list_comments(array('type' => 'pings', 'callback' => 'comicpress_comments_callback', 'end-callback' => 'comicpress_comments_end_callback', 'avatar_size' => 32));
-                    } else {
-                        wp_list_comments(array('type' => 'pings', 'avatar_size' => 64));
-                    }
-                ?>	
+						$comment_args = array(
+							'type' => 'pings',
+							'avatar_size' => 32,
+							'callback' => 'comicpress_comments_callback',
+							'end-callback' => 'comicpress_comments_end_callback',
+						);
+                        wp_list_comments($comment_args);
+					?>
 				</ul>
 			</li>
 			</ol>
@@ -37,11 +39,14 @@ if ( post_password_required() ) { ?>
  ?>
 		<ol class="commentlist">
 		<?php
-            if (function_exists('comicpress_comments_callback')) {
-                wp_list_comments(array('type' => 'comment', 'reply_text' => __( 'Reply &not;', 'comicpress' ), 'callback' => 'comicpress_comments_callback', 'end-callback' => 'comicpress_comments_end_callback', 'avatar_size' => 64));
-            } else {
-                wp_list_comments(array('type' => 'comment', 'avatar_size' => 64));
-            }
+            $comment_args = array(
+				'type' => 'comment',
+				'reply_text' => __( 'Reply &not;', 'comicpress' ),
+				'callback' => 'comicpress_comments_callback',
+				'end-callback' => 'comicpress_comments_end_callback',
+				'avatar_size' => 64
+			);
+			wp_list_comments($comment_args);
         ?>
 		</ol>
 	<?php
