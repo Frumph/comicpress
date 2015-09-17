@@ -31,14 +31,38 @@ if(get_query_var('author_name') ) {
 					?>
 					<h2><?php echo $authorname; ?></h2><br />
 					<?php if (current_user_can('manage_options')) { ?>
-					<strong><?php _e( 'Registered on', 'comicpress' ); ?></strong> <?php echo date_i18n(get_option('date_format'), strtotime($curauth->user_registered)); ?><br />
-					<strong><?php _e( 'Email:', 'comicpress' ); ?></strong> <a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a><br />
+					<strong><?php _e( 'Registered on ', 'comicpress' ); ?></strong> <?php echo date_i18n(get_option('date_format'), strtotime($curauth->user_registered)); ?>
 					<br />
+					<br />
+					<table class="author-contacts">
+						<tr>
+							<td class="author-contacts-serv"><?php _e('Email','comicpress'); ?></td>
+							<td class="author-contacts-url"><a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a></td>
+						</tr>
+					</table>
 					<?php } ?>
-					<?php if (!empty($curauth->user_url)) { ?><strong><?php _e( 'Website:', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><br /><?php } ?>
-					<?php if (!empty($curauth->twitter)) { ?><strong><?php _e( 'Twitter:', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><br /><?php } ?>
-					<?php if (!empty($curauth->facebook)) { ?><strong><?php _e( 'Facebook :', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><br /><?php } ?>
-					<?php if (!empty($curauth->googleplus)) { ?><strong><?php _e( 'Google+ :', 'comicpress' ); ?></strong> <a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><br /><?php } ?>
+					<table class="author-contacts">
+					<?php if (!empty($curauth->user_url)) { ?>
+						<tr>
+							<td class="author-contacts-serv"><?php _e('Website','comicpress'); ?></td>
+							<td class="author-contacts-url"><a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><?php } ?></td>
+						</tr>	
+					<?php if (!empty($curauth->twitter)) { ?>
+						<tr>
+							<td class="author-contacts-serv"><?php _e('Twitter','comicpress'); ?></td>
+							<td class="author-contacts-url"><a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><?php } ?></td>
+						</tr>
+					<?php if (!empty($curauth->facebook)) { ?>
+						<tr>
+							<td class="author-contacts-serv"><?php _e('Facebook','comicpress'); ?></td>
+							<td class="author-contacts-url"><a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><?php } ?></td>
+						</tr>
+					<?php if (!empty($curauth->googleplus)) { ?>
+						<tr>
+							<td class="author-contacts-serv"><?php _e('Google+','comicpress'); ?></td>
+							<td class="author-contacts-url"><a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><?php } ?></td>
+						</tr>
+					</table>
 				</div>
 				<?php if (!empty($curauth->description)) { ?>
 				<div class="userpage-desc">
