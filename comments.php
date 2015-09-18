@@ -10,7 +10,7 @@ if ( post_password_required() ) { ?>
     }
 ?>
 <div id="comment-wrapper">
-<?php if (comments_open()) { ?>
+<?php if (comments_open()) { ?> 
 	<div class="commentsrsslink"><?php post_comments_feed_link(__( 'Comments RSS', 'comicpress' )); ?></div>
 	<h4 id="comments"><?php comments_number(__( 'Discussion &not;', 'comicpress' ), __( 'Discussion &not;', 'comicpress' ), __( 'Discussion (%) &not;', 'comicpress' )); ?></h4>
 <?php }
@@ -59,7 +59,7 @@ if ( post_password_required() ) { ?>
 				$pagelinks = str_replace('<span', '<li', $pagelinks);
 				$pagelinks = str_replace('</span>', '</li>', $pagelinks); ?>
 			<div id="wp-paginav">
-				<div id="paginav">
+				<div id="paginav">			
 					<?php echo '<ul><li class="paginav-extend">' . __( 'Comment Pages', 'comicpress' ) . '</li>' . $pagelinks . '</ul>'; ?>
 					</div>
 				<div class="clear"></div>

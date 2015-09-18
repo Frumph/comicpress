@@ -23,7 +23,7 @@ class comicpress_Customize {
  * 
  * Note: To enable instant preview, we have to actually write a bit of custom
  * javascript. See live_preview() for more.
- * 
+ *  
  * @see add_action('customize_register',$func)
  * @param \WP_Customize_Manager $wp_customize
  * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
@@ -31,7 +31,7 @@ class comicpress_Customize {
  */
 
 	public $css_array = Array();
-	
+
 	public static function register($wp_customize) {
 		
 		$wp_customize->remove_section('colors');
@@ -42,6 +42,7 @@ class comicpress_Customize {
 		$wp_customize->add_section('comicpress-text-colors' , array('title' => __( 'Text Colors', 'comicpress' ), 'priority' => 30, 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('comicpress-link-colors' , array('title' => __( 'Link Colors', 'comicpress' ), 'priority' => 40, 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('comicpress-logo-options', array('title' => __( 'Logo', 'comicpress' ), 'priority' => 50, 'capability' => 'edit_theme_options'));
+
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
 				'label' => __( 'Choose a default scheme.', 'comicpress' ),
@@ -65,7 +66,7 @@ class comicpress_Customize {
 				'section'  => 'comicpress-scheme-options',
 				'type'     => 'checkbox'
 			));
-			
+
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 				'settings' => 'comicpress-customize-checkbox-rounded',
@@ -81,7 +82,7 @@ class comicpress_Customize {
 					'section'  => 'header_image',
 					'type'     => 'checkbox'
 					));
-		
+
 		$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => '', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 		
@@ -113,7 +114,7 @@ class comicpress_Customize {
 			array('slug' => 'bypostauthor_background', 'description' => '.bypostauthor', 'section' => 'colors', 'label' => __( 'Comments Made By Post Author', 'comicpress' ), 'default' => ''),
 			array('slug' => 'bypostauthor_meta_data_background', 'description' => '.bypostauthor .comment-meta-data', 'section' => 'colors', 'label' => __( 'Info. Line Of Post Author', 'comicpress' ), 'default' => ''),
 			array('slug' => 'footer_background', 'description' => '#footer', 'section' => 'colors', 'label' => __( 'Footer', 'comicpress' ), 'default' => ''),
-			// Text Colors
+			// Text Colors 
 			array('slug' => 'content_text_color', 'description' => 'body', 'section' => 'comicpress-text-colors', 'label' => __( 'Sitewide Textcolor', 'comicpress' ), 'default' => ''),
 			array('slug' => 'header_textcolor', 'description' => '#header', 'section' => 'comicpress-text-colors', 'label' => '', 'default' => ''),
 			array('slug' => 'header_description_textcolor', 'description' => '.header-info .description', 'section' => 'comicpress-text-colors', 'label' => __( 'Site Tagline', 'comicpress' ), 'default' => ''),
@@ -156,7 +157,7 @@ class comicpress_Customize {
 			$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Link', 'comicpress' ), 'default' => '');
 			$css_array[] = array('slug' => 'comic_nav_hcolor', 'description' => '.comic-nav a:hover', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Hover', 'comicpress' ), 'default' => '');
 		}
-		
+
 		$priority_value = 11;
 		foreach ($css_array as $setinfo) {
 			$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
@@ -165,19 +166,20 @@ class comicpress_Customize {
 			$wp_customize->add_control(
 					new WP_Customize_Color_Control(
 						$wp_customize,
-						$setinfo['slug'],
+						$setinfo['slug'], 
 						array('label' => $setinfo['label'], 'description' => $setinfo['description'], 'section' => $setinfo['section'], 'settings' => $setinfo_register_name, 'priority' => $priority_value)
 						)
 					);
 			$priority_value++;
 //			$wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
 		}
-      	
+      
+	
       //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
 		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	}
-	
+
 	/**
 	 * This will output the custom WordPress settings to the live theme's WP head.
 	 * 
@@ -240,8 +242,8 @@ class comicpress_Customize {
 			array('slug' => 'footer_hcolor', 'element' => '#footer a:hover', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'footer_copyright_acolor', 'element' => '.copyright-info a', 'style' => 'color', 'default' => '',  'important' => false),
 			array('slug' => 'footer_copyright_hcolor', 'element' => '.copyright-info a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => false),
-		);
-		
+			);
+			
 		if (function_exists('ceo_pluginfo')) {
 			$settings_array[] = array('slug' => 'comic_wrap_background', 'element' => '#comic-wrap', 'style' => 'background-color', 'default' => '',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_wrap_textcolor', 'element' => '#comic-wrap', 'style' => 'color', 'default' => '',  'important' => true);
@@ -249,9 +251,10 @@ class comicpress_Customize {
 			$settings_array[] = array('slug' => 'comic_nav_textcolor', 'element' => '.comic-nav', 'style' => 'color', 'default' => '',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_nav_acolor', 'element' => '.comic-nav a:link, .comic-nav a:visited', 'style' => 'color', 'default' => '#FFFFFF',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_nav_hcolor', 'element' => '.comic-nav a:hover', 'style' => 'color', 'default' => '#F00',  'important' => true);
+			
 		}
       ?>
-<!--Customizer CSS-->
+<!--Customizer CSS--> 
 <style type="text/css">
 <?php
 	$customize = get_theme_mod('comicpress-customize');
@@ -288,14 +291,15 @@ class comicpress_Customize {
     * @since MyTheme 1.0
     */
 	public static function live_preview() {
-		wp_enqueue_script(
+		wp_enqueue_script( 
 			'comicpress-themecustomizer', // Give the script a unique ID
 			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
 			array(  'jquery', 'customize-preview' ), // Define dependencies
-			'', // Define a version (optional)
+			'', // Define a version (optional) 
 			true // Specify whether to put in footer (leave this true)
 		);
 	}
+
 }
 
 // Setup the Theme Customizer settings and controls...
