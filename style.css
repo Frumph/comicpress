@@ -1354,6 +1354,13 @@ table#wp-calendar td {
     padding: 0;
 }
 
+.author-contacts-serv {
+    font-weight:bold;
+    text-align: right;
+    width: 80px;
+    margin-right: 20px;
+    display: inline-block;
+}
 /* Image / Attachments */
 
 .imagenav-link img {
