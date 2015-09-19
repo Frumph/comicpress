@@ -1,6 +1,8 @@
 <?php
 get_header();
 
+do_action('comic-blog-area');
+
 // set to empty
 $count = $theCatID = '';
 if (is_category()) {
@@ -31,7 +33,11 @@ if ($count > 0) {
 	} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
 		$title_string = __( 'Archives', 'comicpress' );
 	} elseif (isset($wp_query->query_vars['taxonomy']) && taxonomy_exists($wp_query->query_vars['taxonomy'])) {
-		if (term_exists($wp_query->query_vars['term'])) {
+		$taxonomy_name = '';
+		if (isset($wp_query->query_vars['chapters'])) {
+			$taxonomy_name = get_term_by('slug', $wp_query->query_vars['chapters'], 'chapters');
+			$title_string = $taxonomy_name->name;
+		} elseif (term_exists($wp_query->query_vars['term'])) {
 			$title_string = __( 'Archive for ', 'comicpress' ).$wp_query->query_vars['term'];
 		} else {
 			$title_string = __( 'Archive for ', 'comicpress' ).$wp_query->query_vars['taxonomy'];
@@ -44,7 +50,11 @@ if ($count > 0) {
 } else $title_string = __( 'No Archive Found.', 'comicpress' );
 if (have_posts()) { ?>
 	<h2 class="page-title"><?php echo $title_string; ?></h2>
-	<div class="archiveresults"><?php printf(_n( "%d result.", "%d results.", $count, 'comicpress' ),$count); ?></div>
+	<?php if (isset($wp_query->query_vars['chapters'])) { ?>
+		<div class="archiveresults"><?php printf(_n( "%d comic.", "%d comics.", $count, 'comicpress' ),$count); ?></div>
+	<?php } else {  ?>
+		<div class="archiveresults"><?php printf(_n( "%d result.", "%d results.", $count, 'comicpress' ),$count); ?></div>
+	<?php } ?>
 	<div class="clear"></div>
 	<?php if (function_exists('ceo_pluginfo') && (isset($wp_query->query_vars['chapters']) || isset($wp_query->query_vars['characters']) || isset($wp_query->query_vars['locations']) || ($wp_query->query_vars['post_type'] == 'comic')) && (comicpress_themeinfo('display_archive_as_links') && !comicpress_is_bbpress())) { ?>
 		<?php while (have_posts()) : the_post(); ?>
