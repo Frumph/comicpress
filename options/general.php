@@ -235,7 +235,7 @@ foreach ($dirs_to_search as $moodir) {
 				?>
 				<tr class="alternate">
 					<th scope="row" colspan="2">
-						<label for="moods_directory"><?php _e('Moods Directory','comicpress'); ?></label>
+						<label for="moods_directory"><?php _e( 'Moods Directory','comicpress' ); ?></label>
 						<select name="moods_directory" id="moods_directory">
 							<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
 <?php
