@@ -1354,13 +1354,32 @@ table#wp-calendar td {
     padding: 0;
 }
 
-.author-contacts-serv {
+.user-info {
+    font-size: 12px;
+}
+
+.user-info-name {
     font-weight:bold;
     text-align: right;
-    width: 80px;
-    margin-right: 20px;
+    width: 100px;
+    margin-right: 5px;
     display: inline-block;
 }
+
+.user-contacts {
+    padding: 10px;
+    border: solid 3px #ccc;
+    border-radius: 5px;
+}
+
+.user-contacts-serv {
+    font-weight:bold;
+    text-align: right;
+    width: 70px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
 /* Image / Attachments */
 
 .imagenav-link img {

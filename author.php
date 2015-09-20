@@ -1,4 +1,16 @@
 <?php
+/**
+ * Author Page
+ * by Philip M. Hofer (Frumph)
+ * http://frumph.net/
+ * 
+ * Content for the author page.
+ * 
+ * The table 'user-info' is only visible to admins.
+ * For table 'user-contacts' can you find possible contact methods
+ * in profile-options.php function add_new_contactmethods.
+ */
+
 remove_action( 'init', 'the_neverending_home_page_init', 10 );
 get_header();
 
@@ -29,38 +41,42 @@ if(get_query_var('author_name') ) {
 					else
 						$authorname = $curauth->user_login;
 					?>
-					<h2><?php echo $authorname; ?></h2><br />
+					<h2><?php echo $authorname; ?></h2>
 					<?php if (current_user_can('manage_options')) { ?>
-					<strong><?php _e( 'Registered on ', 'comicpress' ); ?></strong> <?php echo date_i18n(get_option('date_format'), strtotime($curauth->user_registered)); ?>
-					<br />
-					<br />
-					<table class="author-contacts">
+					<table class="user-info">
 						<tr>
-							<td class="author-contacts-serv"><?php _e('Email','comicpress'); ?></td>
-							<td class="author-contacts-url"><a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a></td>
+						<td class="user-info-name"><?php _e( 'Registered on', 'comicpress' ); ?></td>
+						<td class="user-info-value"><?php echo date_i18n(get_option('date_format'), strtotime($curauth->user_registered)); ?></td>
 						</tr>
 					</table>
 					<?php } ?>
-					<table class="author-contacts">
+					<br />
+					<table class="user-contacts">
+					<?php if (current_user_can('manage_options')) { ?>
+						<tr>
+							<td class="user-contacts-serv"><?php _e('Email','comicpress'); ?></td>
+							<td class="user-contacts-url"><a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank"><?php echo $curauth->user_email; ?></a></td>
+						</tr>
+					<?php } ?>
 					<?php if (!empty($curauth->user_url)) { ?>
 						<tr>
-							<td class="author-contacts-serv"><?php _e('Website','comicpress'); ?></td>
-							<td class="author-contacts-url"><a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><?php } ?></td>
+							<td class="user-contacts-serv"><?php _e('Website','comicpress'); ?></td>
+							<td class="user-contacts-url"><a href="<?php echo $curauth->user_url; ?>" target="_blank"><?php echo $curauth->user_url; ?></a><?php } ?></td>
 						</tr>	
 					<?php if (!empty($curauth->twitter)) { ?>
 						<tr>
-							<td class="author-contacts-serv"><?php _e('Twitter','comicpress'); ?></td>
-							<td class="author-contacts-url"><a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><?php } ?></td>
+							<td class="user-contacts-serv"><?php _e('Twitter','comicpress'); ?></td>
+							<td class="user-contacts-url"><a href="<?php echo $curauth->twitter; ?>" target="_blank"><?php echo $curauth->twitter; ?></a><?php } ?></td>
 						</tr>
 					<?php if (!empty($curauth->facebook)) { ?>
 						<tr>
-							<td class="author-contacts-serv"><?php _e('Facebook','comicpress'); ?></td>
-							<td class="author-contacts-url"><a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><?php } ?></td>
+							<td class="user-contacts-serv"><?php _e('Facebook','comicpress'); ?></td>
+							<td class="user-contacts-url"><a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a><?php } ?></td>
 						</tr>
 					<?php if (!empty($curauth->googleplus)) { ?>
 						<tr>
-							<td class="author-contacts-serv"><?php _e('Google+','comicpress'); ?></td>
-							<td class="author-contacts-url"><a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><?php } ?></td>
+							<td class="user-contacts-serv"><?php _e('Google+','comicpress'); ?></td>
+							<td class="user-contacts-url"><a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a><?php } ?></td>
 						</tr>
 					</table>
 				</div>
