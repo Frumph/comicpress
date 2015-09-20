@@ -114,7 +114,7 @@ class comicpress_Customize {
 			array('slug' => 'bypostauthor_background', 'description' => '.bypostauthor', 'section' => 'colors', 'label' => __( 'Comments Made By Post Author', 'comicpress' ), 'default' => ''),
 			array('slug' => 'bypostauthor_meta_data_background', 'description' => '.bypostauthor .comment-meta-data', 'section' => 'colors', 'label' => __( 'Info. Line Of Post Author', 'comicpress' ), 'default' => ''),
 			array('slug' => 'footer_background', 'description' => '#footer', 'section' => 'colors', 'label' => __( 'Footer', 'comicpress' ), 'default' => ''),
-			// Text Colors 
+			// Text Colors
 			array('slug' => 'content_text_color', 'description' => 'body', 'section' => 'comicpress-text-colors', 'label' => __( 'Sitewide Textcolor', 'comicpress' ), 'default' => ''),
 			array('slug' => 'header_textcolor', 'description' => '#header', 'section' => 'comicpress-text-colors', 'label' => '', 'default' => ''),
 			array('slug' => 'header_description_textcolor', 'description' => '.header-info .description', 'section' => 'comicpress-text-colors', 'label' => __( 'Site Tagline', 'comicpress' ), 'default' => ''),
@@ -166,7 +166,7 @@ class comicpress_Customize {
 			$wp_customize->add_control(
 					new WP_Customize_Color_Control(
 						$wp_customize,
-						$setinfo['slug'], 
+						$setinfo['slug'],
 						array('label' => $setinfo['label'], 'description' => $setinfo['description'], 'section' => $setinfo['section'], 'settings' => $setinfo_register_name, 'priority' => $priority_value)
 						)
 					);
@@ -254,7 +254,7 @@ class comicpress_Customize {
 			
 		}
       ?>
-<!--Customizer CSS--> 
+<!--Customizer CSS-->
 <style type="text/css">
 <?php
 	$customize = get_theme_mod('comicpress-customize');
@@ -291,7 +291,7 @@ class comicpress_Customize {
     * @since MyTheme 1.0
     */
 	public static function live_preview() {
-		wp_enqueue_script( 
+		wp_enqueue_script(
 			'comicpress-themecustomizer', // Give the script a unique ID
 			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
 			array(  'jquery', 'customize-preview' ), // Define dependencies
