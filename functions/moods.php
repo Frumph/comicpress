@@ -48,7 +48,7 @@ function comicpress_showmood_edit_post() {
 	$moods_directory = comicpress_themeinfo('moods_directory');
 	if (!empty($moods_directory) && $moods_directory != 'none') { ?>
 		<div class="inside" style="overflow: hidden">
-		<?php _e('Available Moods, you can set which mood images to use in the comicpress Options.','comicpress'); ?><br />
+		<?php _e( 'Available Moods, you can set which mood images to use in the comicpress Options.', 'comicpress' ); ?><br />
 		<br />
 		<?php 
 		
@@ -69,9 +69,9 @@ function comicpress_showmood_edit_post() {
 		} else {
 			$moods_uri = get_stylesheet_directory_uri();
 		}
-		echo $count .__(' moods are available.','comicpress').'<br />
-				'.__('Using Moods from directory: ','comicpress').$moods_directory.'<br />
-				'.__('Current Mood: ','comicpress').$mood.'<br /><br />';
+		echo $count .__( ' moods are available.', 'comicpress' ).'<br />
+				'.__( 'Using Moods from directory: ', 'comicpress' ).$moods_directory.'<br />
+				'.__( 'Current Mood: ', 'comicpress' ).$mood.'<br /><br />';
 		if (!empty($results)) { ?>
 			<div style="float:left; margin-top: 70px; text-align: center; width: 68px; overflow: hidden;"> 
 			<label for="postmood-none" style="cursor:pointer;">		
