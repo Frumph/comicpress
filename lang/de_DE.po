@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress 4.2.2\n"
+"Project-Id-Version: ComicPress 4.2.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-17 11:40+0200\n"
-"PO-Revision-Date: 2015-09-17 11:40+0200\n"
+"POT-Creation-Date: 2015-09-21 11:15+0200\n"
+"PO-Revision-Date: 2015-09-21 11:15+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -31,79 +31,86 @@ msgstr "Klicke hier, um die Startseite aufzurufen"
 msgid "or try a search:"
 msgstr "oder probiere eine Suche:"
 
-#: archive-year.php:38 archive.php:67 search.php:18
-msgid "Permanent Link:"
-msgstr "Permalink:"
-
-#: archive-year.php:43 content-page.php:20 functions/displaypost.php:267
-msgid "Edit this page."
-msgstr "Diese Seite bearbeiten."
-
-#: archive.php:20 archive.php:24 archive.php:26 archive.php:28 archive.php:35
-#: archive.php:37 archive.php:40
+#: archive.php:22 archive.php:26 archive.php:28 archive.php:30 archive.php:41
+#: archive.php:43 archive.php:46
 msgid "Archive for "
 msgstr "Archiv für "
 
-#: archive.php:22
+#: archive.php:24
 msgid "Posts Tagged "
 msgstr "Beiträge getaggt "
 
-#: archive.php:30
+#: archive.php:32
 msgid "Author Archive "
 msgstr "Autorenarchiv "
 
-#: archive.php:32
+#: archive.php:34
 msgid "Archives"
 msgstr "Archive"
 
-#: archive.php:42
+#: archive.php:48
 msgid "Archive is unable to be found."
 msgstr "Archiv ist nicht zu finden."
 
-#: archive.php:44
+#: archive.php:50
 msgid "No Archive Found."
 msgstr "Kein Archiv gefunden."
 
-#: archive.php:47 archive.php:85 search.php:9
+#: archive.php:54
+#, php-format
+msgid "%d comic."
+msgid_plural "%d comics."
+msgstr[0] "%d comic."
+msgstr[1] "%d Comics."
+
+#: archive.php:56 archive.php:95 search.php:9
 #, php-format
 msgid "%d result."
 msgid_plural "%d results."
 msgstr[0] "%d Resultat."
 msgstr[1] "%d Resultate."
 
-#: archive.php:56
+#: archive.php:66
 msgid "No Thumbnail or Featured Image Found"
 msgstr "Kein Vorschaubild oder Ausgewähltes Bild gefunden"
 
-#: author.php:11
+#: archive.php:77 search.php:18
+msgid "Permanent Link:"
+msgstr "Permalink:"
+
+#: author.php:23
 msgid "No such author."
 msgstr "Dieser Autor existiert nicht."
 
-#: author.php:34
-msgid "Registered on "
-msgstr "Registriert am "
+#: author.php:48
+msgid "Registered on"
+msgstr "Registriert am"
 
-#: author.php:39 functions.php:242
+#: author.php:52
+msgid "Posts #"
+msgstr "Beiträge #"
+
+#: author.php:61 functions.php:242
 msgid "Email"
 msgstr "Email"
 
-#: author.php:47
+#: author.php:67
 msgid "Website"
 msgstr "Website"
 
-#: author.php:52 functions.php:240 options/menubar.php:75
+#: author.php:72 functions.php:240 options/menubar.php:75
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:57 functions.php:237 options/menubar.php:77
+#: author.php:77 functions.php:237 options/menubar.php:77
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:62 functions.php:243 options/menubar.php:79
+#: author.php:82 functions.php:243 options/menubar.php:79
 msgid "Google+"
 msgstr "Google+"
 
-#: author.php:76
+#: author.php:96
 msgid "Posts by"
 msgstr "Beiträge von"
 
@@ -190,12 +197,16 @@ msgstr "Diesen Beitrag bearbeiten."
 msgid "Edit this comic."
 msgstr "Diesen Comic bearbeiten."
 
+#: content-page.php:20 functions/displaypost.php:267
+msgid "Edit this page."
+msgstr "Diese Seite bearbeiten."
+
 #: functions.php:54
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:55 functions.php:115 functions/customize.php:115
-#: functions/customize.php:127 options/general.php:346
+#: functions.php:55 functions.php:115 functions/customize.php:116
+#: functions/customize.php:128 options/general.php:346
 msgid "Footer"
 msgstr "Footer"
 
@@ -227,7 +238,7 @@ msgstr ""
 "Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:111 functions/customize.php:101
+#: functions.php:111 functions/customize.php:102
 msgid "Header"
 msgstr "Header"
 
@@ -235,7 +246,7 @@ msgstr "Header"
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
-#: functions.php:112 functions/customize.php:102 options.php:200
+#: functions.php:112 functions/customize.php:103 options.php:200
 #: options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
@@ -512,11 +523,11 @@ msgstr "Link Farben"
 msgid "Logo"
 msgstr "Logo"
 
-#: functions/customize.php:47
+#: functions/customize.php:48
 msgid "Choose a default scheme."
 msgstr "Wähle ein Standard-Schema."
 
-#: functions/customize.php:64
+#: functions/customize.php:65
 msgid ""
 "Detach the footer to below the main content? (Already appears detached on "
 "some schemes *but isn't)"
@@ -524,11 +535,11 @@ msgstr ""
 "Trenne den Footer vom Hauptinhalt? (Schon erscheint sie losgelöst bei "
 "einigen Schemas, *ist aber nicht)"
 
-#: functions/customize.php:72
+#: functions/customize.php:73
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
 
-#: functions/customize.php:80
+#: functions/customize.php:81
 msgid ""
 "Make the header title and description become a clickable hotspot for the "
 "entire header? (If you do the logo will not display right)"
@@ -536,115 +547,115 @@ msgstr ""
 "Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
 "für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
 
-#: functions/customize.php:86
+#: functions/customize.php:87
 msgid "Logo, 120px height x 160px width"
 msgstr "Logo, 120px Höhe x 160px Breite"
 
-#: functions/customize.php:92
+#: functions/customize.php:93
 msgid "Put the Comic in the content column?"
 msgstr "Setze das Comic in die content column?"
 
-#: functions/customize.php:100
+#: functions/customize.php:101
 msgid "Entire Content Area"
 msgstr "Gesamten Inhaltsbereich"
 
-#: functions/customize.php:103
+#: functions/customize.php:104
 msgid "Menubar Dropdown"
 msgstr "Menüleiste Dropdown"
 
-#: functions/customize.php:104
+#: functions/customize.php:105
 msgid "Menubar When Mouseover"
 msgstr "Menüleiste bei Mouseover"
 
-#: functions/customize.php:105
+#: functions/customize.php:106
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
-#: functions/customize.php:106
+#: functions/customize.php:107
 msgid "Content Area Below Menubar"
 msgstr "Inhaltsbereich unterhalb der Menüleiste"
 
-#: functions/customize.php:107
+#: functions/customize.php:108
 msgid "Content Area Below Comic"
 msgstr "Inhaltsbereich unterhalb vom Comic"
 
-#: functions/customize.php:108
+#: functions/customize.php:109
 msgid "Content Column"
 msgstr "Inhaltsspalte"
 
-#: functions/customize.php:109
+#: functions/customize.php:110
 msgid "Entire Post Area"
 msgstr "Gesamten Beitragsbereich"
 
-#: functions/customize.php:110
+#: functions/customize.php:111
 msgid "Top Section of a Post"
 msgstr "Oberer Abschnitt von einem Beitrag"
 
-#: functions/customize.php:111
+#: functions/customize.php:112
 msgid "Comment Section"
 msgstr "Kommentar Abschnitt"
 
-#: functions/customize.php:112
+#: functions/customize.php:113
 msgid "Comment Info. Line"
 msgstr "Kommentar Info. Linie"
 
-#: functions/customize.php:113
+#: functions/customize.php:114
 msgid "Comments Made By Post Author"
 msgstr "Kommentare gemacht vom Beitragsautor"
 
-#: functions/customize.php:114
+#: functions/customize.php:115
 msgid "Info. Line Of Post Author"
 msgstr "Info. Linie von dem Beitragsautor"
 
-#: functions/customize.php:117
+#: functions/customize.php:118
 msgid "Sitewide Textcolor"
 msgstr "Seitenbreite Textfarbe"
 
-#: functions/customize.php:119
+#: functions/customize.php:120
 msgid "Site Tagline"
 msgstr "Website Untertitel"
 
-#: functions/customize.php:121
+#: functions/customize.php:122
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
-#: functions/customize.php:122
+#: functions/customize.php:123
 msgid "Sidebar Textcolor"
 msgstr "Sidebar Textfarbe"
 
-#: functions/customize.php:123
+#: functions/customize.php:124
 msgid "Non-Link Post Titles"
 msgstr "Nicht verlinkte Beitragstitel"
 
-#: functions/customize.php:124
+#: functions/customize.php:125
 msgid "Page Titles"
 msgstr "Seitentitel"
 
-#: functions/customize.php:126
+#: functions/customize.php:127
 msgid "Post/Page Comments"
 msgstr "Beitrag/Seiten Kommentare"
 
-#: functions/customize.php:128 functions/customize.php:146
+#: functions/customize.php:129 functions/customize.php:147
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions/customize.php:152
+#: functions/customize.php:153
 msgid "Comic Area"
 msgstr "Comic Bereich"
 
-#: functions/customize.php:154
+#: functions/customize.php:155
 msgid "Default Comic Navigation"
 msgstr "Standard Comic Navigation"
 
-#: functions/customize.php:155
+#: functions/customize.php:156
 msgid "Default Nav Normal Text Color"
 msgstr "Standard Nav Normal Textfarbe"
 
-#: functions/customize.php:156
+#: functions/customize.php:157
 msgid "Default Navigation Link"
 msgstr "Standard Navigation Link"
 
-#: functions/customize.php:157
+#: functions/customize.php:158
 msgid "Default Navigation Hover"
 msgstr "Standar Navigation Hover"
 
@@ -1663,3 +1674,6 @@ msgstr "ComicPress - Google Übersetzer"
 #: widgets/translator.php:23
 msgid "Translate your site with Google."
 msgstr "Übersetze deine Website mit Google."
+
+#~ msgid "Registered on "
+#~ msgstr "Registriert am "
