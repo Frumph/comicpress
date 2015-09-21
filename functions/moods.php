@@ -21,7 +21,7 @@ add_action('add_meta_boxes', 'comicpress_add_moods_into_posts');
 function comicpress_add_moods_into_posts() {
 	global $post;
 	if (!empty($post) && ($post->post_type == 'comic' || $post->post_type == 'post')) {
-		add_meta_box('comicpress_showmood_edit_post', __('Moods', 'comiceasel'), 'comicpress_showmood_edit_post', 'post', 'normal', 'low');
+		add_meta_box('comicpress_showmood_edit_post', __( 'Moods', 'comicpress' ), 'comicpress_showmood_edit_post', 'post', 'normal', 'low');
 	}
 }
 
