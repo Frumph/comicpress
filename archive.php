@@ -36,7 +36,10 @@ if ($count > 0) {
 		$taxonomy_name = '';
 		if (isset($wp_query->query_vars['chapters'])) {
 			$taxonomy_name = get_term_by('slug', $wp_query->query_vars['chapters'], 'chapters');
-			$title_string = $taxonomy_name->name;
+			if (!is_wp_error($taxonomy_name) && !empty($taxonomy_name)) $title_string = $taxonomy_name->name;
+		} elseif (isset($wp_query->query_vars['locations'])) {
+			$taxonomy_name = get_term_by('slug', $wp_query->query_vars['locations'], 'locations');
+			if (!is_wp_error($taxonomy_name) && !empty($taxonomy_name)) $title_string = $taxonomy_name->name;
 		} elseif (term_exists($wp_query->query_vars['term'])) {
 			$title_string = __( 'Archive for ', 'comicpress' ).$wp_query->query_vars['term'];
 		} else {
