@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress 4.2.9\n"
+"Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 09:31+0200\n"
-"PO-Revision-Date: 2015-09-22 09:33+0200\n"
+"PO-Revision-Date: 2015-09-22 15:34+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -1564,7 +1564,7 @@ msgstr "Tut uns leid, der Beitrag wurde nicht gefunden."
 
 #: taxonomy-locations.php:41
 msgid "Only Scene:"
-msgstr "Nur Szene:"
+msgstr "Einzige Szene:"
 
 #: taxonomy-locations.php:43
 msgid "Recent Scene:"
