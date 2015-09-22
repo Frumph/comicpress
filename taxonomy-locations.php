@@ -38,10 +38,10 @@ if (!empty($location)) {
 		$last_seen_title = $last_seen_object->post_title;
 		$last_seen_id = $last_seen_object->ID;
 		if ($first_seen_id == $last_seen_id) {
-			$cast_output .= '<i>'.__('Only Scene:','comiceasel').'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
+			$cast_output .= '<i>'.__( 'Only Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
 		} else {
-			$cast_output .= '<i>'.__('Recent Scene:','comiceasel').'</i> <a href="'.get_permalink($last_seen_id).'">'.$last_seen_title.'</a><br />';
-			$cast_output .= '<i>'.__('First Scene:','comiceasel').'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';			
+			$cast_output .= '<i>'.__( 'Recent Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($last_seen_id).'">'.$last_seen_title.'</a><br />';
+			$cast_output .= '<i>'.__( 'First Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';			
 		}
 		$cast_output .= '</div>';
 		echo $cast_output;
