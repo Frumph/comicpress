@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.2.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-21 11:15+0200\n"
-"PO-Revision-Date: 2015-09-21 11:15+0200\n"
+"POT-Creation-Date: 2015-09-22 09:31+0200\n"
+"PO-Revision-Date: 2015-09-22 09:33+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -31,8 +31,8 @@ msgstr "Klicke hier, um die Startseite aufzurufen"
 msgid "or try a search:"
 msgstr "oder probiere eine Suche:"
 
-#: archive.php:22 archive.php:26 archive.php:28 archive.php:30 archive.php:41
-#: archive.php:43 archive.php:46
+#: archive.php:22 archive.php:26 archive.php:28 archive.php:30 archive.php:44
+#: archive.php:46 archive.php:49
 msgid "Archive for "
 msgstr "Archiv für "
 
@@ -48,33 +48,33 @@ msgstr "Autorenarchiv "
 msgid "Archives"
 msgstr "Archive"
 
-#: archive.php:48
+#: archive.php:51
 msgid "Archive is unable to be found."
 msgstr "Archiv ist nicht zu finden."
 
-#: archive.php:50
+#: archive.php:53
 msgid "No Archive Found."
 msgstr "Kein Archiv gefunden."
 
-#: archive.php:54
+#: archive.php:57
 #, php-format
 msgid "%d comic."
 msgid_plural "%d comics."
 msgstr[0] "%d comic."
 msgstr[1] "%d Comics."
 
-#: archive.php:56 archive.php:95 search.php:9
+#: archive.php:59 archive.php:98 search.php:9
 #, php-format
 msgid "%d result."
 msgid_plural "%d results."
 msgstr[0] "%d Resultat."
 msgstr[1] "%d Resultate."
 
-#: archive.php:66
+#: archive.php:69
 msgid "No Thumbnail or Featured Image Found"
 msgstr "Kein Vorschaubild oder Ausgewähltes Bild gefunden"
 
-#: archive.php:77 search.php:18
+#: archive.php:80 search.php:18
 msgid "Permanent Link:"
 msgstr "Permalink:"
 
@@ -98,19 +98,19 @@ msgstr "Email"
 msgid "Website"
 msgstr "Website"
 
-#: author.php:72 functions.php:240 options/menubar.php:75
+#: author.php:73 functions.php:240 options/menubar.php:75
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:77 functions.php:237 options/menubar.php:77
+#: author.php:79 functions.php:237 options/menubar.php:77
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:82 functions.php:243 options/menubar.php:79
+#: author.php:85 functions.php:243 options/menubar.php:79
 msgid "Google+"
 msgstr "Google+"
 
-#: author.php:96
+#: author.php:100
 msgid "Posts by"
 msgstr "Beiträge von"
 
@@ -390,9 +390,9 @@ msgstr "RSS-Feed"
 msgid "RSS"
 msgstr "RSS"
 
-#: functions.php:267 functions/breadcrumbs.php:11 functions/wp-pagenavi.php:165
-msgid "&raquo;"
-msgstr "&raquo;"
+#: functions.php:267
+msgid "&nbsp;&raquo;&nbsp;"
+msgstr "&nbsp;&raquo;&nbsp;"
 
 #: functions.php:275
 #, php-format
@@ -411,6 +411,10 @@ msgid ""
 msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
+
+#: functions/breadcrumbs.php:11 functions/wp-pagenavi.php:165
+msgid "&raquo;"
+msgstr "&raquo;"
 
 #. translators: home link for breadcrumps
 #: functions/breadcrumbs.php:13
@@ -1558,6 +1562,18 @@ msgstr ""
 msgid "Sorry, post is not found."
 msgstr "Tut uns leid, der Beitrag wurde nicht gefunden."
 
+#: taxonomy-locations.php:41
+msgid "Only Scene:"
+msgstr "Nur Szene:"
+
+#: taxonomy-locations.php:43
+msgid "Recent Scene:"
+msgstr "Letzte Szene:"
+
+#: taxonomy-locations.php:44
+msgid "First Scene:"
+msgstr "Erste Szene:"
+
 #: widgets/classicbookmark.php:40
 msgid "Tag This Page"
 msgstr "Diese Seite taggen"
@@ -1674,6 +1690,3 @@ msgstr "ComicPress - Google Übersetzer"
 #: widgets/translator.php:23
 msgid "Translate your site with Google."
 msgstr "Übersetze deine Website mit Google."
-
-#~ msgid "Registered on "
-#~ msgstr "Registriert am "
