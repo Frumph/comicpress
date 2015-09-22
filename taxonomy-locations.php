@@ -30,7 +30,7 @@ if (!empty($location)) {
 			);
 	$qposts = get_posts( $args );
 	if (!empty($qposts)) {
-		$cast_output = '<div class="location-info">';
+		$cast_output = '<div class="location-stats">';
 		$first_seen_object = reset($qposts);
 		$first_seen_title = $first_seen_object->post_title;
 		$first_seen_id = $first_seen_object->ID;

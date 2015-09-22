@@ -369,7 +369,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_themeinfo = array();
 		$comicpress_options = comicpress_load_options();
 		$comicpress_addinfo = array(
-			'version' => '4.2.2',
+			'version' => '4.2.9.2',
 			'excerpt_length' => '40'
 		);
 		$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_addinfo);
