@@ -25,23 +25,28 @@ Please read information and faqs on comiceasel.com for more information regardin
 == Changelog ==
 
 = 4.3 =
-* reintroduced Post/Comic "Moods" for github version
+* added locations taxonomy template, for comic easel, for custom location pages 
+* added new CSS requirements for theme review team for screen readers
+* added theme_support('title_tag') per requirements of theme review team
+* re-added Post/Comic "Moods" for github version
+* re-added blog.php template for github version
 * changed HTML 5 compliancy for posts footer, header
-* changed Date of registration displayed now translated and with the date format of WP Settings
+* changed custom-header.php fixes to remove the option to remove header text
+* changed widgets/ section now uses get_template_part so you can overwrite widgets/* files in the child theme
+* changed functions/ section now uses get_template_part so you can overwrite functions/* files in the child theme
+* changed author page Date of registration displayed now translated and with the date format of WP Settings
+* changed author page layout for contact infos
+* changed minor CSS Styles
 * updated instant.js to v2.4
 * updated cvi_text_lib.js to 1.03
-* fixed various js errors
-* re-added blog.php template for github version
-* revamped the customizer
-* custom-header.php fixes to remove the option to remove header text
-* widgets/ section now uses get_template_part so you can overwrite widgets/* files in the child theme
-* functions/ section now uses get_template_part so you can overwrite functions/* files in the child theme
-* added theme_support('title_tag') per requirements of theme review team
 * updated screenshot 880x660 per requirements of theme review team
-* added new CSS requirements for theme review team for screen readers
+* updated german translation
+* fixed various js errors
+* fixed the widgets for PHP 5.4 minimal to remove deprecated notices
+* revamped the customizer
 * moved above-blog sidebar location
 * removed all CSS styling for the dropdown selectors
-* fixed the widgets for PHP 5.4 minimal to remove deprecated notices
+* removed outdated CSS styling references -moz -webkit -khtml
 * removed comicpress_themeinfo('data') calls that overlap standard WordPress ones
 
 = 4.2.2 =
