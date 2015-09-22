@@ -22,6 +22,11 @@ You will need to use the ComicPress to Comic Easel migrator plugin if you are mi
 
 Please read information and faqs on comiceasel.com for more information regarding using ComicPress for your webcomic.
 
+== Requires ==
+
+WordPress: 4.3
+PHP:       5.4
+
 == Changelog ==
 
 = 4.3 =
