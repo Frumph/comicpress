@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-22 09:31+0200\n"
-"PO-Revision-Date: 2015-09-22 15:34+0200\n"
+"POT-Creation-Date: 2015-09-23 23:07+0200\n"
+"PO-Revision-Date: 2015-09-23 23:24+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -829,7 +829,7 @@ msgstr "ComicPress angepasste Farben ZURÜCKGESETZT!"
 msgid "ComicPress Settings SAVED!"
 msgstr "ComicPress Einstellungen GESPEICHERT!"
 
-#: options.php:198 options/layout.php:24
+#: options.php:198 options/layout.php:22
 msgid "Layout"
 msgstr "Layout"
 
@@ -893,7 +893,7 @@ msgstr ""
 "schliessen &mdash; nicht empfohlen und sollte nur aktiviert werden, wenn Du "
 "danach gefragt wirst."
 
-#: options/debug.php:36 options/general.php:447 options/layout.php:60
+#: options/debug.php:36 options/general.php:447 options/layout.php:75
 #: options/menubar.php:141
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
@@ -1383,47 +1383,75 @@ msgstr ""
 "beginnt mit dem ersten Eintrag in einer Kategorie, Tag, oder Datumsbereich "
 "(z.B wähle Mai 20XX wird starten mit 1.Mai, nicht 31.Mai.)"
 
-#: options/layout.php:32
+#: options/layout.php:30
 msgid "Choose Your Website Layout"
 msgstr "Wähle dein Websitenlayout"
 
-#: options/layout.php:34
-msgid "3 Column &mdash; Standard"
-msgstr "3 Spalten &mdash; Standard"
+#: options/layout.php:32
+msgid "3 Column &mdash; Standard (980px) [default]"
+msgstr "3 Spalten &mdash; Standard (980px) [Standard]"
 
-#: options/layout.php:35
-msgid "3 Column &mdash; Sidebar's on Left"
-msgstr "3 Spalten &mdash; Sidebar's sind Links"
+#: options/layout.php:34
+msgid "3 Column &mdash; Standard (1200px)"
+msgstr "3 Spalten &mdash; Standard (1200px)"
 
 #: options/layout.php:36
-msgid "3 Column &mdash; Sidebar's on Right"
-msgstr "3 Spalten &mdash; Sidebar's sind Rechts"
+msgid "3 Column &mdash; Sidebar's on Left (980px)"
+msgstr "3 Spalten &mdash; Sidebar's sind Links (980px)"
 
 #: options/layout.php:37
+msgid "3 Column &mdash; Sidebar's on Right (980px)"
+msgstr "3 Spalten &mdash; Sidebar's sind Rechts (980px)"
+
+#: options/layout.php:39
+msgid "3 Column &mdash; Sidebar's on Left (1200px)"
+msgstr "3 Spalten &mdash; Sidebar's sind Links (1200px)"
+
+#: options/layout.php:40
+msgid "3 Column &mdash; Sidebar's on Right (1200px)"
+msgstr "3 Spalten &mdash; Sidebar's sind Rechts (1200px)"
+
+#: options/layout.php:42
 msgid "2 Column &mdash; Sidebar on Left (780px)"
 msgstr "2 Spalten &mdash; Sidebar ist Links (780px)"
 
-#: options/layout.php:38
+#: options/layout.php:43
 msgid "2 Column &mdash; Sidebar on Right (780px)"
 msgstr "2 Spalten &mdash; Sidebar ist Rechts (780px)"
 
-#: options/layout.php:39
+#: options/layout.php:45
 msgid "2 Column Wide &mdash; Sidebar on Left (980px)"
 msgstr "2 Spalten Breiter &mdash; Sidebar ist Links (980px)"
 
-#: options/layout.php:40
+#: options/layout.php:46
 msgid "2 Column Wide &mdash; Sidebar on Right (980px)"
 msgstr "2 Spalten Breiter &mdash; Sidebar ist Rechts (980px)"
 
-#: options/layout.php:41
-msgid "3 Column &mdash; Sidebar on Left, Sidebar on right under comic."
-msgstr "3 Spalten &mdash; Sidebar Links, Sidebar Rechts unter Comic."
+#: options/layout.php:48
+msgid "2 Column Wide Extended &mdash; Sidebar on Left (1200px)"
+msgstr "2 Spalten Erweiterte Breite &mdash; Sidebar ist Links (1200px)"
 
-#: options/layout.php:42
-msgid "3 Column &mdash; Sidebar on Right, Sidebar on left under comic."
-msgstr "3 Spalten &mdash; Sidebar Rechts, Sidebar Links unter Comic."
+#: options/layout.php:49
+msgid "2 Column Wide Extended &mdash; Sidebar on Right (1200px)"
+msgstr "2 Spalten Erweiterte Breite &mdash; Sidebar ist Rechts (1200px)"
 
-#: options/layout.php:54
+#: options/layout.php:52
+msgid "3 Column &mdash; Sidebar on Left, Sidebar on right under comic (980px)"
+msgstr "3 Spalten &mdash; Sidebar Links, Sidebar Rechts unter Comic (980px)"
+
+#: options/layout.php:53
+msgid "3 Column &mdash; Sidebar on Right, Sidebar on left under comic (980px)"
+msgstr "3 Spalten &mdash; Sidebar Rechts, Sidebar Links unter Comic (980px)"
+
+#: options/layout.php:55
+msgid "3 Column &mdash; Sidebar on Left, Sidebar on right under comic (1200px)"
+msgstr "3 Spalten &mdash; Sidebar Links, Sidebar Rechts unter Comic (1200px)"
+
+#: options/layout.php:56
+msgid "3 Column &mdash; Sidebar on Right, Sidebar on left under comic (1200px)"
+msgstr "3 Spalten &mdash; Sidebar Rechts, Sidebar Links unter Comic (1200px)"
+
+#: options/layout.php:69
 msgid ""
 "Schemes and customization can be modified in the appearance &#10132; "
 "customize section of the wp-admin."
@@ -1561,6 +1589,18 @@ msgstr ""
 #: single.php:23
 msgid "Sorry, post is not found."
 msgstr "Tut uns leid, der Beitrag wurde nicht gefunden."
+
+#: taxonomy-characters.php:38
+msgid "Only Appearance:"
+msgstr "Einziger Auftritt:"
+
+#: taxonomy-characters.php:40
+msgid "Recent Appearance:"
+msgstr "Letzter Auftritt:"
+
+#: taxonomy-characters.php:41
+msgid "First Appearance:"
+msgstr "Erster Auftritt:"
 
 #: taxonomy-locations.php:41
 msgid "Only Scene:"
