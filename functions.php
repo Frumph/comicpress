@@ -305,7 +305,7 @@ function comicpress_load_options() {
 			'enable_post_thumbnail_rss' => true,
 			'disable_page_titles' => false,
 			'disable_post_titles' => false,			
-			'enable_post_calendar' => true,
+			'enable_post_calendar' => false,
 			'enable_post_author_gravatar' => false,
 			'disable_categories_in_posts' => false,
 			'disable_tags_in_posts' => false,
