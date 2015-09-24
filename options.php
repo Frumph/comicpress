@@ -58,31 +58,6 @@ function comicpress_admin_options() { ?>
 	$comicpress_options = comicpress_load_options();
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
 		
-		if ($_REQUEST['action'] == 'comicpress_save_help') {
-			$tab = 'layout';
-			update_option('cp-options', $comicpress_options);
-		}
-		
-		if ($_REQUEST['action'] == 'comicpress_save_layout') {
-			foreach (array(
-				'layout',
-				'scheme'
-					) as $key) {
-							if (isset($_REQUEST[$key])) 
-								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
-			}
-			
-			foreach (array(
-				'disable_default_design'
-			) as $key) {
-				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
-				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
-			}
-			
-			$tab = 'layout';
-			update_option('cp-options', $comicpress_options);
-		}
-		
 		if ($_REQUEST['action'] == 'comicpress_save_debug') {
 			foreach (array(
 				'enable_debug_footer_code',
@@ -195,7 +170,7 @@ function comicpress_admin_options() { ?>
 		<div id="eadmin">
 		  <?php
 		  	$tab_info = array(
-				'layout' => __( 'Layout', 'comicpress' ),
+				'splash' => __( 'Introduction', 'comicpress' ),
 		  		'general' => __( 'General', 'comicpress' ),
 				'menubar' => __( 'Menubar', 'comicpress' ),
 				'debug' => __( 'Debug', 'comicpress' )
