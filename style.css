@@ -406,11 +406,25 @@ a.menunav-rss {
 }
 
 /* This is the wrapper for the #content floats need to be in here */
+/* This settings are involved */
 #content-column {
 	display: table-cell;
 	vertical-align: top;
     margin: 0 2px;
     width: 100%;
+}
+/* This are the old settings */
+/*#content-column {
+*   float: left;
+*   margin: 0 2px;
+*	width: 546px;
+}*/
+
+/* This settings are involved */
+#content {
+	display: table-cell;
+	vertical-align: top;
+    overflow: hidden;
 }
 
 .spacer {
@@ -419,12 +433,6 @@ a.menunav-rss {
 
 .spacer img {
 	max-width: 100%;
-}
-
-#content {
-	display: table-cell;
-	vertical-align: top;
-    overflow: hidden;
 }
 
 .uentry, #comment-wrapper, #wp-paginav, #pagenav {
@@ -858,7 +866,7 @@ h2.widget-title, h2.widget-title a {
 #footer-sidebar-wrapper {
     display: table;
     table-layout: fixed;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 #sidebar-footer-left, #sidebar-footer, #sidebar-footer-right {
