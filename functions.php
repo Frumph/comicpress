@@ -172,7 +172,7 @@ function comicpress_close_up_shop() {
 if (!function_exists('comicpress_is_layout')) {
 	function comicpress_is_layout($choices) {
 		$choices = explode(",", $choices);
-		if (in_array(comicpress_themeinfo('layout'), $choices)) return true;
+		if (in_array(get_theme_mod('comicpress-customize-select-layout','3c'), $choices)) return true;
 		return false;
 	}
 }
@@ -266,7 +266,7 @@ function comicpress_filter_wp_title( $title ) {
 	if (!is_feed()) {
 		$sep = __( '&nbsp;&raquo;&nbsp;', 'comicpress' );
 		$new_title = get_bloginfo('name').$sep;
-		$bloginfo_description = get_bloginfo('description').$sep;
+		$bloginfo_description = get_bloginfo('description').$sep;	
 		if ((is_home () || is_front_page()) && !empty($bloginfo_description) && !$paged && !$page) {
 			$new_title .= $sep.' '.$bloginfo_description;
 		} elseif (is_single() || is_page()) { 

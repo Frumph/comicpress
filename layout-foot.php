@@ -10,7 +10,7 @@ if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 <?php 
 if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 	if (comicpress_is_layout('3cl,3cr')) comicpress_get_sidebar('left');
-	if (comicpress_is_layout('2cr,2crw,3c,3cr,3crgn')) comicpress_get_sidebar('right');
+	if (comicpress_is_layout('2cr,3c,3cr,3crgn')) comicpress_get_sidebar('right');
 }
 ?>
 		<div class="clear"></div>

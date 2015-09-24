@@ -43,9 +43,26 @@ class comicpress_Customize {
 		$wp_customize->add_section('comicpress-link-colors' , array('title' => __( 'Link Colors', 'comicpress' ), 'priority' => 40, 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section('comicpress-logo-options', array('title' => __( 'Logo', 'comicpress' ), 'priority' => 50, 'capability' => 'edit_theme_options'));
 
+		$wp_customize->add_setting( 'comicpress-customize-select-layout', array('default' => '3c', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
+		$wp_customize->add_control( 'comicpress-customize-select-layout-control' , array(
+				'label' => __( 'Choose a layout.', 'comicpress' ),
+				'settings' => 'comicpress-customize-select-layout',
+				'section' => 'comicpress-scheme-options',
+				'type' => 'select',
+				'choices' => array(
+					'3c' => __('3 Column (default)', 'comicpress'),
+					'3cl' => __('3 Column, both sidebars on left', 'comicpress'),
+					'3cr' => __('3 Column, both sidebars on right', 'comicpress'),
+					'2cl' => __('2 Column, sidebar on left', 'comicpress'),
+					'2cr' => __('2 Column, sidebar on right', 'comicpress'),
+					'3clgn' => __('3 Column, Graphic Novel style, main sidebar on left', 'comicpress'),
+					'3crgn' => __('3 Column, Graphic Novel style, main sidebar on right', 'comicpress')
+				)
+			));
+
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
-				'label' => __( 'Choose a default scheme.', 'comicpress' ),
+				'label' => __( 'Choose a scheme.', 'comicpress' ),
 				'settings' => 'comicpress-customize-select-scheme',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'select',
@@ -72,20 +89,49 @@ class comicpress_Customize {
 					'step' => 2,
 				),
 		));
+		
+		$wp_customize->add_setting( 'comicpress-customize-range-left-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
+		$wp_customize->add_control( 'comicpress-customize-range-left-sidebar-width-control' , array(
+				'label' => __( 'Left Sidebar Width', 'comicpress' ),
+				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-left-sidebar-width', 200).'px',
+				'settings' => 'comicpress-customize-range-left-sidebar-width',
+				'section' => 'comicpress-scheme-options',
+				'type' => 'range',
+				'input_attrs' => array(
+					'min' => 200,
+					'max' => 400,
+					'step' => 2,
+				),
+		));
+		
+		$wp_customize->add_setting( 'comicpress-customize-range-right-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
+		$wp_customize->add_control( 'comicpress-customize-range-right-sidebar-width-control' , array(
+				'label' => __( 'Right Sidebar Width', 'comicpress' ),
+				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-right-sidebar-width', 200).'px',
+				'settings' => 'comicpress-customize-range-right-sidebar-width',
+				'section' => 'comicpress-scheme-options',
+				'type' => 'range',
+				'input_attrs' => array(
+					'min' => 200,
+					'max' => 400,
+					'step' => 2,
+				),
+		));
 
-			
 		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
 				'settings' => 'comicpress-customize-detach-footer',
-				'label'    => __( 'Detach the footer to below the main content? (Already appears detached on some schemes *but isn\'t)', 'comicpress' ),
-				'section'  => 'comicpress-scheme-options',
-				'type'     => 'checkbox'
+				'label' => __('Detach Footer', 'comicpress'),
+				'description' => __( 'Detach the footer to below the main content? (Already appears detached on some schemes *but isn\'t)', 'comicpress' ),
+				'section' => 'comicpress-scheme-options',
+				'type' => 'checkbox'
 			));
 
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 				'settings' => 'comicpress-customize-checkbox-rounded',
-				'label'    => __( 'Rounded corners on Post/Page Navigation Sections', 'comicpress' ),
+				'label' => __('Rounded Corners', 'comicpress'),
+				'description'    => __( 'Rounded corners on Post/Page Navigation Sections', 'comicpress' ),
 				'section'  => 'comicpress-scheme-options',
 				'type'     => 'checkbox'
 			));
@@ -93,7 +139,8 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 					'settings' => 'comicpress-customize-checkbox-header-hotspot',
-					'label'    => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)', 'comicpress' ),
+					'label' => __('Clickable Header Image', 'comicpress'),
+					'description' => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)', 'comicpress' ),
 					'section'  => 'header_image',
 					'type'     => 'checkbox'
 					));
@@ -105,7 +152,8 @@ class comicpress_Customize {
 			$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 			$wp_customize->add_control( 'comicpress-customize-comic-in-column-control', array(
 						'settings' => 'comicpress-customize-comic-in-column',
-						'label'    => __( 'Put the Comic in the content column?', 'comicpress' ),
+						'label'    => __( 'Comic in content column?', 'comicpress' ),
+						'description' => __('Put the comic into the content column?  This must be done for the Graphic Novel Layouts.', 'comicpress'),
 						'section'  => 'comicpress-scheme-options',
 						'type'     => 'checkbox'
 						));
@@ -276,28 +324,31 @@ class comicpress_Customize {
 	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', 980));
 	$comic_width = intval($page_width)+40;
 	$scheme = get_theme_mod('comicpress-customize-select-scheme', 'none');
+	$left_sidebar_width = get_theme_mod('comicpress-customize-range-left-sidebar-width', 200);
+	$right_sidebar_width = get_theme_mod('comicpress-customize-range-right-sidebar-width', 200);
 	$style_output = '';
 	if ($scheme !== 'sandy') {
-		$style_output = '#page { '.$page_width.'px; } ';
+		$style_output = "\t#page { width: ".$page_width."px; }\r\n";
 	} else {
-		$style_output = '#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer { width: '.$page_width.'px; }';
-		$style_output .= '#comic-wrap { width: '.$comic_width.'px } ';
+		$style_output = "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer { width: ".$page_width."px; }\r\n";
+		$style_output .= "\t#comic-wrap { width: ".$comic_width."px }\r\n";
 	}
+	$style_output .= "\t#sidebar-right { min-width: ".$right_sidebar_width."px; }\r\n";
+	$style_output .= "\t#sidebar-left { min-width: ".$left_sidebar_width."px; }\r\n";
 	foreach ($settings_array as $setting) {
 		$content = $setting['default'];
 		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
 		$important = ($setting['important']) ? '!important' : '';
-		if (!empty($content) && $content) $style_output .= $setting['element'].' { '.$setting['style'].': '.$content.$important.'; } ';
+		if (!empty($content) && $content) $style_output .= "\t".$setting['element'].' { '.$setting['style'].': '.$content.$important."; }\r\n";
 	}
 	if (isset($customize['logo']) && !empty($customize['logo'])) {
-		$style_output .= '.header-info { display: inline-block; float: left; padding: 0; }';
-		$style_output .= '.header-info h1 { margin: 0; padding: 0; background: url("'.$customize['logo'].'") top left no-repeat; background-size: contain; display: cover; }';
-		$style_output .= '.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}';
-		$style_output .= '.header-info .description { display: none!important; }';
+		$style_output .= "\t.header-info { display: inline-block; float: left; padding: 0; }\r\n";
+		$style_output .= "\t.header-info h1 { margin: 0; padding: 0; background: url(\"".$customize['logo']."\") top left no-repeat; background-size: contain; display: cover; }\r\n";
+		$style_output .= "\t.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}\r\n";
+		$style_output .= "\t.header-info .description { display: none!important; }\r\n";
 	}
 	echo $style_output;
 ?>
-
 </style>
 <!--/Customizer CSS-->
       <?php

@@ -78,7 +78,7 @@ function comicpress_body_class($classes = array()) {
 	
 	if (comicpress_sidebars_disabled()) $classes[] = 'wide';
 	
-	$layout = comicpress_themeinfo('layout');
+	$layout = get_theme_mod('comicpress-customize-select-layout', '3c');
 	if (empty($layout)) $layout = '3c';
 	$classes[] = 'layout-'.$layout;
 
