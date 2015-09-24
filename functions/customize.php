@@ -67,12 +67,12 @@ class comicpress_Customize {
 				'section' => 'comicpress-scheme-options',
 				'type' => 'select',
 				'choices' => array(
-					'none' => 'No Scheme',
-					'boxed' => 'Boxed',
-					'sandy' => 'Sandy',
-					'mecha' => 'Mecha',
-					'ceasel' => 'CEasel',
-					'high' => 'High Society'
+					'none' => __('No Scheme', 'comicpress'),
+					'boxed' => __('Boxed', 'comicpress'),
+					'sandy' => __('Sandy', 'comicpress'),
+					'mecha' => __('Mecha', 'comicpress'),
+					'ceasel' => __('CEasel', 'comicpress'),
+					'high' => __('High Society', 'comicpress')
 				)
 			));
 			
