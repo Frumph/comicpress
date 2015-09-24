@@ -23,15 +23,15 @@
 					</tr>
 				</thead>
 				<?php
-                if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout']))
+				if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout']))
                     $comicpress_options['layout'] = '3c';
- ?>
+				?>
 				<tr class="alternate">
 					<th scope="row" style="width:250px"><label for="layout" style="text-align:left"><?php _e( 'Choose Your Website Layout', 'comicpress' ); ?></label>
 						<select name="layout" id="layout" onchange="lshowimage(this,'thelayout')">
 							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Standard [default]', 'comicpress' ); ?></option>
 														
-							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Left' 'comicpress' ); ?></option>
+							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Left', 'comicpress' ); ?></option>
 							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Right', 'comicpress' ); ?></option>
 
 							<option class="level-0" value="2cl" <?php if ($comicpress_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e( '2 Column &mdash; Sidebar on Left', 'comicpress' ); ?></option>
@@ -50,7 +50,7 @@
 				</tr>
 			</table>
 			<br />
-			<strong><?php _e( 'Schemes and customization can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
+			<strong><?php _e( 'Schemes, Side Width and customization can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
 			<br />
 		</div>
 		<div class="comicpress-options-save">
