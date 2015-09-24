@@ -59,6 +59,21 @@ class comicpress_Customize {
 				)
 			));
 			
+		$wp_customize->add_setting( 'comicpress-customize-range-site-width', array('default' => '980', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
+		$wp_customize->add_control( 'comicpress-customize-range-site-width-control' , array(
+				'label' => __( 'Site Width', 'comicpress' ),
+				'description' => __( 'Minimum value is 720px, maximum is 1600px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-site-width', 980).'px',
+				'settings' => 'comicpress-customize-range-site-width',
+				'section' => 'comicpress-scheme-options',
+				'type' => 'range',
+				'input_attrs' => array(
+					'min' => 780,
+					'max' => 1600,
+					'step' => 2,
+				),
+		));
+
+			
 		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
 				'settings' => 'comicpress-customize-detach-footer',
@@ -258,7 +273,16 @@ class comicpress_Customize {
 <style type="text/css">
 <?php
 	$customize = get_theme_mod('comicpress-customize');
-//	var_dump($customize);
+	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', 980));
+	$comic_width = intval($page_width)+40;
+	$scheme = get_theme_mod('comicpress-customize-select-scheme', 'none');
+	$style_output = '';
+	if ($scheme !== 'sandy') {
+		$style_output = '#page { '.$page_width.'px; } ';
+	} else {
+		$style_output = '#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer { width: '.$page_width.'px; }';
+		$style_output .= '#comic-wrap { width: '.$comic_width.'px } ';
+	}
 	foreach ($settings_array as $setting) {
 		$content = $setting['default'];
 		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
@@ -271,6 +295,8 @@ class comicpress_Customize {
 		$style_output .= '.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}';
 		$style_output .= '.header-info .description { display: none!important; }';
 	}
+	$page_width = get_theme_mod('comicpress-customize-range-site-width', 980);
+	
 	echo $style_output;
 ?>
 

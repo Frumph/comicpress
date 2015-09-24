@@ -190,13 +190,9 @@ h4, h4 a {
     padding: 10px 0;
 }
 
-#page {
+#page, #header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
     width: 980px;
     margin: 0 auto;
-}
-
-body.layout-2cl #page, body.layout-2cr #page {
-    width: 780px;
 }
 
 /* Header */
@@ -222,16 +218,18 @@ body.layout-2cl #page, body.layout-2cr #page {
 /* THE MENU */
 
 #menubar-wrapper {
-    width: 100%;
     clear: both;
     display: block;
     margin: 0 auto;
     text-transform: uppercase;
 	line-height: 25px;
 	height: 25px;
+	background-color: #000;
+	color: #fff;
 }
 
 .menu-container {
+	width: 100%;
 	margin-left: 5px;
 }
 
@@ -307,7 +305,7 @@ a.menunav-rss {
 }
 
 .menu ul li a:link, .menu ul li a:visited {
-    color: #000;
+    color: #fff;
 }
 
 .menu ul li ul li a:link, .menu ul li ul li a:visited {
@@ -322,7 +320,7 @@ a.menunav-rss {
 }
 
 .menu ul li a:hover, .menunav a:hover {
-    color: #fff;
+    color: #ffcc00;
     background: #414141; /*background of menu items during onmouseover (hover state)*/
 }
 
@@ -376,6 +374,7 @@ a.menunav-rss {
 }
 
 /* home icon */
+
 /*
 .menu-item-home {
 	background: url('images/home.png') top center no-repeat;
@@ -402,52 +401,23 @@ a.menunav-rss {
 #subcontent-wrapper {
     padding: 2px 0;
     overflow: hidden;
+    display: table;
+    table-layout: auto;
 }
 
 /* This is the wrapper for the #content floats need to be in here */
 #content-column {
-    float: left;
-    width: 546px;
+    display: table-cell;
+    vertical-align: top;	
     margin: 0 2px;
-}
-
-body.layout-2clw #content-column, body.layout-2cl #content-column, body.layout-3cl #content-column {
-    float: right;
-}
-
-#content {
-    overflow: hidden;
-}
-
-body.layout-2cl #content-column, body.layout-2cr #content-column {
-    width: 558px;
-}
-
-body.layout-2clw #content-column, body.layout-2crw #content-column {
-    width: 762px;
-}
-
-body.layout-3clgn #content-column, body.layout-3crgn #content-column {
-    width: 762px;
-}
-
-body.layout-3clgn #content {
-    width: 538px;
-    float: left;
-}
-
-body.layout-3crgn #content {
-    width: 538px;
-    float: right;
-}
-
-body.wide #content, body.wide #content-column {
     width: 100%;
 }
 
-body.wide #content-column, body.signup #content-column {
-    width: auto !important;
-    float: none !important;
+#content {
+	display: table-cell;
+    vertical-align: top;
+    overflow: hidden;
+    width: 100%;
 }
 
 .uentry, #comment-wrapper, #wp-paginav, #pagenav {
@@ -784,29 +754,16 @@ textarea#comment {
 }
 
 #sidebar-left {
-    float: left;
+	display: table-cell;
+	vertical-align: top;
     width: 204px;
 }
 
 #sidebar-right {
-    float: right;
+    display: table-cell;
+    vertical-align: top;
     width: 204px;
 }
-
-body.layout-3cr #sidebar-right {
-    /*	margin-left: 0px; */
-}
-
-body.layout-3cl #sidebar-right {
-    float: left;
-}
-
-/*
-body.layout-2clw #sidebar-left,
-body.layout-2crw #sidebar-right {
-	width: 308px;
-}
-*/
 
 .sidebar-basic ul, .sidebar-basic li {
     margin: 0;
@@ -1662,21 +1619,11 @@ body.scheme-sandy h1 a, body.scheme-boxed h1 a {
     text-shadow: 1px 2px 2px #777;
 }
 
-body.scheme-sandy #header, body.scheme-sandy #menubar-wrapper, body.scheme-sandy #breadcrumb-wrapper, body.scheme-sandy #subcontent-wrapper, body.scheme-sandy #footer {
-    width: 980px;
-    margin: 0 auto;
-}
-
-body.layout-2cl.scheme-sandy #header, body.layout-2cl.scheme-sandy #menubar-wrapper, body.layout-2cl.scheme-sandy #breadcrumb-wrapper, body.layout-2cl.scheme-sandy #subcontent-wrapper, body.layout-2cl.scheme-sandy #footer, body.layout-2cr.scheme-sandy #header, body.layout-2cr.scheme-sandy #menubar-wrapper, body.layout-2cr.scheme-sandy #breadcrumb-wrapper, body.layout-2cr.scheme-sandy #subcontent-wrapper, body.layout-2cr.scheme-sandy #footer {
-    width: 780px;
-}
-
 body.scheme-sandy #breadcrumb-wrapper {
     box-shadow: 1px 2px 10px #000;
 }
 
 body.scheme-sandy #comic-wrap {
-    width: 1020px;
     margin: 0 auto;
     margin-bottom: -5px;
     position: relative;
@@ -1685,19 +1632,6 @@ body.scheme-sandy #comic-wrap {
     border-radius: 12px;
 }
 
-body.scheme-sandy.cnc #comic-wrap {
-    width: auto;
-    margin-bottom: 0;
-}
-
-body.scheme-sandy.layout-2cl #comic-wrap, body.scheme-sandy.layout-2cr #comic-wrap {
-    width: 840px;
-}
-/*
-body.scheme-sandy #menubar-wrapper {
-	box-shadow: 1px 2px 10px #000;
-}
-*/
 body.scheme-sandy #subcontent-wrapper {
     padding-top: 5px;
     box-shadow: 1px 2px 10px #000;

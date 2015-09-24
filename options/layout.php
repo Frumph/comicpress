@@ -23,38 +23,22 @@
 					</tr>
 				</thead>
 				<?php
-				if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout']))
+                if (!isset($comicpress_options['layout']) || empty($comicpress_options['layout']))
                     $comicpress_options['layout'] = '3c';
-				?>
+ ?>
 				<tr class="alternate">
-					<th scope="row" style="width:520px"><label for="layout" style="text-align:left"><?php _e( 'Choose Your Website Layout', 'comicpress' ); ?></label>
+					<th scope="row" style="width:250px"><label for="layout" style="text-align:left"><?php _e( 'Choose Your Website Layout', 'comicpress' ); ?></label>
 						<select name="layout" id="layout" onchange="lshowimage(this,'thelayout')">
-							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Standard (980px) [default]', 'comicpress' ); ?></option>
-							
-							<option class="level-0" value="3cext" <?php if ($comicpress_options['layout'] == '3cext') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Standard (1200px)', 'comicpress' ); ?></option>
-							
-							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Left (980px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Right (980px)', 'comicpress' ); ?></option>
-							
-							<option class="level-0" value="3clext" <?php if ($comicpress_options['layout'] == '3clext') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Left (1200px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="3crext" <?php if ($comicpress_options['layout'] == '3crext') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Right (1200px)', 'comicpress' ); ?></option>
-							
-							<option class="level-0" value="2cl" <?php if ($comicpress_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e( '2 Column &mdash; Sidebar on Left (780px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="2cr" <?php if ($comicpress_options['layout'] == '2cr') { ?>selected="selected" <?php } ?>><?php _e( '2 Column &mdash; Sidebar on Right (780px)', 'comicpress' ); ?></option>
-							
-							<option class="level-0" value="2clw" <?php if ($comicpress_options['layout'] == '2clw') { ?>selected="selected" <?php } ?>><?php _e( '2 Column Wide &mdash; Sidebar on Left (980px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="2crw" <?php if ($comicpress_options['layout'] == '2crw') { ?>selected="selected" <?php } ?>><?php _e( '2 Column Wide &mdash; Sidebar on Right (980px)', 'comicpress' ); ?></option>
+							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Standard [default]', 'comicpress' ); ?></option>
+														
+							<option class="level-0" value="3cl" <?php if ($comicpress_options['layout'] == '3cl') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Left' 'comicpress' ); ?></option>
+							<option class="level-0" value="3cr" <?php if ($comicpress_options['layout'] == '3cr') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar\'s on Right', 'comicpress' ); ?></option>
 
-							<option class="level-0" value="2clwext" <?php if ($comicpress_options['layout'] == '2clwext') { ?>selected="selected" <?php } ?>><?php _e( '2 Column Wide Extended &mdash; Sidebar on Left (1200px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="2crwext" <?php if ($comicpress_options['layout'] == '2crwext') { ?>selected="selected" <?php } ?>><?php _e( '2 Column Wide Extended &mdash; Sidebar on Right (1200px)', 'comicpress' ); ?></option>
-							
-							
-							<option class="level-0" value="3clgn" <?php if ($comicpress_options['layout'] == '3clgn') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Left, Sidebar on right under comic (980px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="3crgn" <?php if ($comicpress_options['layout'] == '3crgn') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Right, Sidebar on left under comic (980px)', 'comicpress' ); ?></option>							
-							
-							<option class="level-0" value="3clgnext" <?php if ($comicpress_options['layout'] == '3clgnext') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Left, Sidebar on right under comic (1200px)', 'comicpress' ); ?></option>
-							<option class="level-0" value="3crgnext" <?php if ($comicpress_options['layout'] == '3crgnext') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Right, Sidebar on left under comic (1200px)', 'comicpress' ); ?></option>							
-							
+							<option class="level-0" value="2cl" <?php if ($comicpress_options['layout'] == '2cl') { ?>selected="selected" <?php } ?>><?php _e( '2 Column &mdash; Sidebar on Left', 'comicpress' ); ?></option>
+							<option class="level-0" value="2cr" <?php if ($comicpress_options['layout'] == '2cr') { ?>selected="selected" <?php } ?>><?php _e( '2 Column &mdash; Sidebar on Right', 'comicpress' ); ?></option>
+																			
+							<option class="level-0" value="3clgn" <?php if ($comicpress_options['layout'] == '3clgn') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Left, Sidebar on right under comic', 'comicpress' ); ?></option>
+							<option class="level-0" value="3crgn" <?php if ($comicpress_options['layout'] == '3crgn') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Sidebar on Right, Sidebar on left under comic', 'comicpress' ); ?></option>
 						</select>
 						<br />
 					</th>
