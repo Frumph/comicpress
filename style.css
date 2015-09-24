@@ -437,10 +437,6 @@ a.menunav-rss {
     margin-bottom: 10px;
 }
 
-.uentry img {
-	max-width: 100%;
-}
-
 .sticky {
 }
 
@@ -1989,7 +1985,6 @@ body.layout-2cl.scheme-high #header, body.layout-2cr.scheme-high #header, body.l
 body.scheme-high.cnc #comic-wrap {
     width: auto !important;
 }
-
 
 body.scheme-high #page-wrap {
     background: url('images/background-high-page-wrap.jpg') top repeat-x;
