@@ -407,8 +407,8 @@ a.menunav-rss {
 
 /* This is the wrapper for the #content floats need to be in here */
 #content-column {
-	display: block;
 	display: table-cell;
+	vertical-align: top;
     margin: 0 2px;
     width: 100%;
 }
@@ -422,6 +422,8 @@ a.menunav-rss {
 }
 
 #content {
+	display: table-cell;
+	vertical-align: top;
     overflow: hidden;
 }
 
