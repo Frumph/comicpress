@@ -402,21 +402,27 @@ a.menunav-rss {
     overflow: hidden;
     display: table;
     table-layout: auto;
+    width: 100%;
 }
 
 /* This is the wrapper for the #content floats need to be in here */
 #content-column {
-    display: table-cell;
-    vertical-align: top;	
+	display: block;
+	display: table-cell;
     margin: 0 2px;
     width: 100%;
 }
 
+.spacer {
+	max-width: 100%;
+}
+
+.spacer img {
+	max-width: 100%;
+}
+
 #content {
-	display: table-cell;
-    vertical-align: top;
     overflow: hidden;
-    width: 100%;
 }
 
 .uentry, #comment-wrapper, #wp-paginav, #pagenav {
@@ -442,6 +448,7 @@ a.menunav-rss {
 }
 
 .post-extras {
+	display: block;
     clear: both;
     padding: 3px 10px;
 }

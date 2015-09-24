@@ -6,6 +6,7 @@ if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 	if (comicpress_is_layout('3clgn')) comicpress_get_sidebar('right');
 }
 ?>
+			<div class="spacer"><img src="<? echo get_template_directory_uri(); ?>/images/spacer.png" /></div>
 		</div>
 <?php 
 if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {

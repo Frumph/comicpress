@@ -333,8 +333,8 @@ class comicpress_Customize {
 		$style_output = "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer { width: ".$page_width."px; }\r\n";
 		$style_output .= "\t#comic-wrap { width: ".$comic_width."px }\r\n";
 	}
-	$style_output .= "\t#sidebar-right { min-width: ".$right_sidebar_width."px; }\r\n";
-	$style_output .= "\t#sidebar-left { min-width: ".$left_sidebar_width."px; }\r\n";
+	$style_output .= "\t#sidebar-right { min-width: ".$right_sidebar_width."px; max-width: ".$right_sidebar_width."px; }\r\n";
+	$style_output .= "\t#sidebar-left { min-width: ".$left_sidebar_width."px; max-width: ".$left_sidebar_width."px; }\r\n";
 	foreach ($settings_array as $setting) {
 		$content = $setting['default'];
 		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
