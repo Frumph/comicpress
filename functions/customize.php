@@ -45,34 +45,34 @@ class comicpress_Customize {
 
 		$wp_customize->add_setting( 'comicpress-customize-select-layout', array('default' => '3c', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-layout-control' , array(
-				'label' => __( 'Choose a layout.', 'comicpress' ),
+				'label' => __( 'Choose a layout', 'comicpress' ),
 				'settings' => 'comicpress-customize-select-layout',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'select',
 				'choices' => array(
-					'3c' => __('3 Column (default)', 'comicpress'),
-					'3cl' => __('3 Column, both sidebars on left', 'comicpress'),
-					'3cr' => __('3 Column, both sidebars on right', 'comicpress'),
-					'2cl' => __('2 Column, sidebar on left', 'comicpress'),
-					'2cr' => __('2 Column, sidebar on right', 'comicpress'),
-					'3clgn' => __('3 Column, Graphic Novel style, main sidebar on left', 'comicpress'),
-					'3crgn' => __('3 Column, Graphic Novel style, main sidebar on right', 'comicpress')
+					'3c' => __( '3 Column (default)', 'comicpress' ),
+					'3cl' => __( '3 Column, both sidebars on left', 'comicpress' ),
+					'3cr' => __( '3 Column, both sidebars on right', 'comicpress' ),
+					'2cl' => __( '2 Column, sidebar on left', 'comicpress' ),
+					'2cr' => __( '2 Column, sidebar on right', 'comicpress' ),
+					'3clgn' => __( '3 Column, Graphic Novel style, main sidebar on left', 'comicpress' ),
+					'3crgn' => __( '3 Column, Graphic Novel style, main sidebar on right', 'comicpress' )
 				)
 			));
 
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
-				'label' => __( 'Choose a scheme.', 'comicpress' ),
+				'label' => __( 'Choose a scheme', 'comicpress' ),
 				'settings' => 'comicpress-customize-select-scheme',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'select',
 				'choices' => array(
-					'none' => __('No Scheme', 'comicpress'),
-					'boxed' => __('Boxed', 'comicpress'),
-					'sandy' => __('Sandy', 'comicpress'),
-					'mecha' => __('Mecha', 'comicpress'),
-					'ceasel' => __('CEasel', 'comicpress'),
-					'high' => __('High Society', 'comicpress')
+					'none' => __( 'No Scheme', 'comicpress' ),
+					'boxed' => __( 'Boxed', 'comicpress' ),
+					'sandy' => __( 'Sandy', 'comicpress' ),
+					'mecha' => __( 'Mecha', 'comicpress' ),
+					'ceasel' => __( 'CEasel', 'comicpress' ),
+					'high' => __( 'High Society', 'comicpress' )
 				)
 			));
 			
@@ -121,7 +121,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
 				'settings' => 'comicpress-customize-detach-footer',
-				'label' => __('Detach Footer', 'comicpress'),
+				'label' => __( 'Detach Footer', 'comicpress' ),
 				'description' => __( 'Detach the footer to below the main content? (Already appears detached on some schemes *but isn\'t)', 'comicpress' ),
 				'section' => 'comicpress-scheme-options',
 				'type' => 'checkbox'
@@ -130,7 +130,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 				'settings' => 'comicpress-customize-checkbox-rounded',
-				'label' => __('Rounded Corners', 'comicpress'),
+				'label' => __( 'Rounded Corners', 'comicpress' ),
 				'description'    => __( 'Rounded corners on Post/Page Navigation Sections', 'comicpress' ),
 				'section'  => 'comicpress-scheme-options',
 				'type'     => 'checkbox'
@@ -139,7 +139,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 					'settings' => 'comicpress-customize-checkbox-header-hotspot',
-					'label' => __('Clickable Header Image', 'comicpress'),
+					'label' => __( 'Clickable Header Image', 'comicpress' ),
 					'description' => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)', 'comicpress' ),
 					'section'  => 'header_image',
 					'type'     => 'checkbox'
