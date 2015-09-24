@@ -295,8 +295,6 @@ class comicpress_Customize {
 		$style_output .= '.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}';
 		$style_output .= '.header-info .description { display: none!important; }';
 	}
-	$page_width = get_theme_mod('comicpress-customize-range-site-width', 980);
-	
 	echo $style_output;
 ?>
 
