@@ -191,7 +191,6 @@ h4, h4 a {
 }
 
 #page, #header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
-    width: 980px;
     margin: 0 auto;
 }
 
@@ -756,13 +755,11 @@ textarea#comment {
 #sidebar-left {
 	display: table-cell;
 	vertical-align: top;
-    width: 204px;
 }
 
 #sidebar-right {
     display: table-cell;
     vertical-align: top;
-    width: 204px;
 }
 
 .sidebar-basic ul, .sidebar-basic li {

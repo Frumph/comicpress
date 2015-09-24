@@ -1,19 +1,7 @@
-<script language="javascript" type="text/javascript">
-	function lshowimage(sel,pic) {
-		if (!document.images) return
-		document.getElementById(pic).src = '<?php echo get_template_directory_uri(); ?>/images/options/'+sel.options[sel.selectedIndex].value+'.png'
-	}
-</script>
-<script language="javascript" type="text/javascript">
-	function sshowimage(sel,pic) {
-		if (!document.images) return
-		document.getElementById(pic).src = '<?php echo get_template_directory_uri(); ?>/images/schemes/'+sel.options[sel.selectedIndex].value+'.jpg'
-	}
-</script>
 <div id="comicpress-layout">
 	<form method="post" id="myForm-layout" enctype="multipart/form-data" action="?page=comicpress-options">
+	<form method="post" id="myForm-layout" enctype="multipart/form-data" action="?page=comicpress-options">
 	<?php wp_nonce_field('update-options') ?>
-
 		<div class="comicpress-options">
 
 			<table class="widefat" cellspacing="0">
@@ -50,19 +38,8 @@
 				</tr>
 			</table>
 			<br />
+			<strong><?php _e( 'Schemes, layout and customization can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
 			<strong><?php _e( 'Schemes, Side Width and customization can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
 			<br />
 		</div>
-		<div class="comicpress-options-save">
-			<div class="comicpress-major-publishing-actions">
-				<div class="comicpress-publishing-action">
-					<input name="comicpress_save_layout" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
-					<input type="hidden" name="action" value="comicpress_save_layout" />
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-
-	</form>
-
 </div>

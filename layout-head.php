@@ -6,7 +6,7 @@
 	<div id="subcontent-wrapper">
 <?php
 if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
-		if (comicpress_is_layout('2cl,2clw,3c,3cl,3clgn')) comicpress_get_sidebar('left');
+		if (comicpress_is_layout('2cl,3c,3cl,3clgn')) comicpress_get_sidebar('left');
 		if (comicpress_is_layout('3cl')) comicpress_get_sidebar('right');
 }
 ?>
