@@ -437,6 +437,10 @@ a.menunav-rss {
     margin-bottom: 10px;
 }
 
+.uentry img {
+	max-width: 100%;
+}
+
 .sticky {
 }
 
