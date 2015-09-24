@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-24 10:59+0200\n"
-"PO-Revision-Date: 2015-09-24 11:08+0200\n"
+"POT-Creation-Date: 2015-09-24 13:28+0200\n"
+"PO-Revision-Date: 2015-09-24 13:28+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -205,8 +205,8 @@ msgstr "Diese Seite bearbeiten."
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:55 functions.php:115 functions/customize.php:179
-#: functions/customize.php:191 options/general.php:346
+#: functions.php:55 functions.php:115 functions/customize.php:185
+#: functions/customize.php:197 options/general.php:346
 msgid "Footer"
 msgstr "Footer"
 
@@ -238,7 +238,7 @@ msgstr ""
 "Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:111 functions/customize.php:165
+#: functions.php:111 functions/customize.php:171
 msgid "Header"
 msgstr "Header"
 
@@ -246,7 +246,7 @@ msgstr "Header"
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
-#: functions.php:112 functions/customize.php:166 options.php:175
+#: functions.php:112 functions/customize.php:172 options.php:175
 #: options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
@@ -527,95 +527,95 @@ msgstr "Link Farben"
 msgid "Logo"
 msgstr "Logo"
 
-#: functions/customize.php:48
-msgid "Choose a layout"
-msgstr "Wähle ein Layout"
-
-#: functions/customize.php:53
+#: functions/customize.php:49
 msgid "3 Column (default)"
 msgstr "3 Spalten (Standard)"
 
-#: functions/customize.php:54
+#: functions/customize.php:50
 msgid "3 Column, both sidebars on left"
 msgstr "3 Spalten, beide Sidebars sind links"
 
-#: functions/customize.php:55
+#: functions/customize.php:51
 msgid "3 Column, both sidebars on right"
 msgstr "3 Spalten, beide Sidebars sind rechts"
 
-#: functions/customize.php:56
+#: functions/customize.php:52
 msgid "2 Column, sidebar on left"
 msgstr "2 Spalten, Sidebar ist links"
 
-#: functions/customize.php:57
+#: functions/customize.php:53
 msgid "2 Column, sidebar on right"
 msgstr "2 Spalten, Sidebar ist rechts"
 
-#: functions/customize.php:58
+#: functions/customize.php:57
 msgid "3 Column, Graphic Novel style, main sidebar on left"
 msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist links"
 
-#: functions/customize.php:59
+#: functions/customize.php:58
 msgid "3 Column, Graphic Novel style, main sidebar on right"
 msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist rechts"
 
-#: functions/customize.php:65
+#: functions/customize.php:62
+msgid "Choose a layout"
+msgstr "Wähle ein Layout"
+
+#: functions/customize.php:71
 msgid "Choose a scheme"
 msgstr "Wähle ein Schema"
 
-#: functions/customize.php:70
+#: functions/customize.php:76
 msgid "No Scheme"
 msgstr "Kein Schema"
 
-#: functions/customize.php:71
+#: functions/customize.php:77
 msgid "Boxed"
 msgstr "Boxed"
 
-#: functions/customize.php:72
+#: functions/customize.php:78
 msgid "Sandy"
 msgstr "Sandy"
 
-#: functions/customize.php:73
+#: functions/customize.php:79
 msgid "Mecha"
 msgstr "Mecha"
 
-#: functions/customize.php:74
+#: functions/customize.php:80
 msgid "CEasel"
 msgstr "CEasel"
 
-#: functions/customize.php:75
+#: functions/customize.php:81
 msgid "High Society"
 msgstr "High Society"
 
-#: functions/customize.php:81
+#: functions/customize.php:87
 msgid "Site Width"
 msgstr "Seitenbreite"
 
-#: functions/customize.php:82
+#: functions/customize.php:88
 msgid "Minimum value is 720px, maximum is 1600px width - Currently saved at: "
 msgstr ""
 "Minimalwert ist 720px, Maximalwert ist 1600 Breite - Derzeitig gespeichert "
 "ist: "
 
-#: functions/customize.php:95
+#: functions/customize.php:101
 msgid "Left Sidebar Width"
 msgstr "Linke Sidebar Breite"
 
-#: functions/customize.php:96 functions/customize.php:110
+#: functions/customize.php:102 functions/customize.php:116
 msgid "Minimum value is 200px, maximum is 400px width - Currently saved at: "
 msgstr ""
 "Minimalwert ist 200px, Maximalwert ist 400px Breite - derzeitig gespeichert "
 "ist: "
 
-#: functions/customize.php:109
+#: functions/customize.php:115
 msgid "Right Sidebar Width"
 msgstr "Rechte Sidebar Breite"
 
-#: functions/customize.php:124
+#: functions/customize.php:130
 msgid "Detach Footer"
 msgstr "Footer Trennen"
 
-#: functions/customize.php:125
+#: functions/customize.php:131
 msgid ""
 "Detach the footer to below the main content? (Already appears detached on "
 "some schemes *but isn't)"
@@ -623,19 +623,19 @@ msgstr ""
 "Trenne den Footer vom Hauptinhalt? (Schon erscheint sie losgelöst bei "
 "einigen Schemas, *ist aber nicht)"
 
-#: functions/customize.php:133
+#: functions/customize.php:139
 msgid "Rounded Corners"
 msgstr "Abgerundete Ecken"
 
-#: functions/customize.php:134
+#: functions/customize.php:140
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
 
-#: functions/customize.php:142
+#: functions/customize.php:148
 msgid "Clickable Header Image"
 msgstr "Anklickbares Header Bild"
 
-#: functions/customize.php:143
+#: functions/customize.php:149
 msgid ""
 "Make the header title and description become a clickable hotspot for the "
 "entire header? (If you do the logo will not display right)"
@@ -643,123 +643,123 @@ msgstr ""
 "Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
 "für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
 
-#: functions/customize.php:149
+#: functions/customize.php:155
 msgid "Logo, 120px height x 160px width"
 msgstr "Logo, 120px Höhe x 160px Breite"
 
-#: functions/customize.php:155
+#: functions/customize.php:161
 msgid "Comic in content column?"
 msgstr "Comic in Inhaltsspalte?"
 
-#: functions/customize.php:156
+#: functions/customize.php:162
 msgid ""
 "Put the comic into the content column?  This must be done for the Graphic "
 "Novel Layouts."
 msgstr ""
-"Setzen Sie den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
+"Setze den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
 "Layouts durchgeführt werden."
 
-#: functions/customize.php:164
+#: functions/customize.php:170
 msgid "Entire Content Area"
 msgstr "Gesamten Inhaltsbereich"
 
-#: functions/customize.php:167
+#: functions/customize.php:173
 msgid "Menubar Dropdown"
 msgstr "Menüleiste Dropdown"
 
-#: functions/customize.php:168
+#: functions/customize.php:174
 msgid "Menubar When Mouseover"
 msgstr "Menüleiste bei Mouseover"
 
-#: functions/customize.php:169
+#: functions/customize.php:175
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
-#: functions/customize.php:170
+#: functions/customize.php:176
 msgid "Content Area Below Menubar"
 msgstr "Inhaltsbereich unterhalb der Menüleiste"
 
-#: functions/customize.php:171
+#: functions/customize.php:177
 msgid "Content Area Below Comic"
 msgstr "Inhaltsbereich unterhalb vom Comic"
 
-#: functions/customize.php:172
+#: functions/customize.php:178
 msgid "Content Column"
 msgstr "Inhaltsspalte"
 
-#: functions/customize.php:173
+#: functions/customize.php:179
 msgid "Entire Post Area"
 msgstr "Gesamten Beitragsbereich"
 
-#: functions/customize.php:174
+#: functions/customize.php:180
 msgid "Top Section of a Post"
 msgstr "Oberer Abschnitt von einem Beitrag"
 
-#: functions/customize.php:175
+#: functions/customize.php:181
 msgid "Comment Section"
 msgstr "Kommentar Abschnitt"
 
-#: functions/customize.php:176
+#: functions/customize.php:182
 msgid "Comment Info. Line"
 msgstr "Kommentar Info. Linie"
 
-#: functions/customize.php:177
+#: functions/customize.php:183
 msgid "Comments Made By Post Author"
 msgstr "Kommentare gemacht vom Beitragsautor"
 
-#: functions/customize.php:178
+#: functions/customize.php:184
 msgid "Info. Line Of Post Author"
 msgstr "Info. Linie von dem Beitragsautor"
 
-#: functions/customize.php:181
+#: functions/customize.php:187
 msgid "Sitewide Textcolor"
 msgstr "Seitenbreite Textfarbe"
 
-#: functions/customize.php:183
+#: functions/customize.php:189
 msgid "Site Tagline"
 msgstr "Website Untertitel"
 
-#: functions/customize.php:185
+#: functions/customize.php:191
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
-#: functions/customize.php:186
+#: functions/customize.php:192
 msgid "Sidebar Textcolor"
 msgstr "Sidebar Textfarbe"
 
-#: functions/customize.php:187
+#: functions/customize.php:193
 msgid "Non-Link Post Titles"
 msgstr "Nicht verlinkte Beitragstitel"
 
-#: functions/customize.php:188
+#: functions/customize.php:194
 msgid "Page Titles"
 msgstr "Seitentitel"
 
-#: functions/customize.php:190
+#: functions/customize.php:196
 msgid "Post/Page Comments"
 msgstr "Beitrag/Seiten Kommentare"
 
-#: functions/customize.php:192 functions/customize.php:210
+#: functions/customize.php:198 functions/customize.php:216
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions/customize.php:216
+#: functions/customize.php:222
 msgid "Comic Area"
 msgstr "Comic Bereich"
 
-#: functions/customize.php:218
+#: functions/customize.php:224
 msgid "Default Comic Navigation"
 msgstr "Standard Comic Navigation"
 
-#: functions/customize.php:219
+#: functions/customize.php:225
 msgid "Default Nav Normal Text Color"
 msgstr "Standard Nav Normal Textfarbe"
 
-#: functions/customize.php:220
+#: functions/customize.php:226
 msgid "Default Navigation Link"
 msgstr "Standard Navigation Link"
 
-#: functions/customize.php:221
+#: functions/customize.php:227
 msgid "Default Navigation Hover"
 msgstr "Standar Navigation Hover"
 
