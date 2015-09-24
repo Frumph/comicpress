@@ -336,7 +336,7 @@ class comicpress_Customize {
 	if ($scheme !== 'sandy') {
 		$style_output = "\t#page { width: ".$page_width."px; }\r\n";
 	} else {
-		$style_output = "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer { width: ".$page_width."px; }\r\n";
+		$style_output = "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer, #footer-sidebar-wrapper { width: ".$page_width."px; }\r\n";
 		$style_output .= "\t#comic-wrap { width: ".$comic_width."px }\r\n";
 	}
 	$style_output .= "\t#sidebar-right { min-width: ".$right_sidebar_width."px; max-width: ".$right_sidebar_width."px; }\r\n";

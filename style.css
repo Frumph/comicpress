@@ -839,6 +839,7 @@ h2.widget-title, h2.widget-title a {
 /* Footer */
 
 #footer {
+	margin: 0 auto;
 }
 
 #footer-menubar-wrapper {
@@ -857,18 +858,15 @@ h2.widget-title, h2.widget-title a {
 #footer-sidebar-wrapper {
     display: table;
     table-layout: fixed;
+    margin: 0 auto;
 }
 
 #sidebar-footer-left, #sidebar-footer, #sidebar-footer-right {
     text-align: center;
     display: table-cell;
     vertical-align: top;
-    width: 326px;
+    width: 33%;
     padding: 2px;
-}
-
-body.layout-2cl #sidebar-footer-left, body.layout-2cl #sidebar-footer, body.layout-2cl #sidebar-footer-right {
-    width: 260px;
 }
 
 #sidebar-footer-left .widget, #sidebar-footer .widget, #sidebar-footer-right .widget {
