@@ -27,7 +27,7 @@
                     $comicpress_options['layout'] = '3c';
 				?>
 				<tr class="alternate">
-					<th scope="row" style="width:250px"><label for="layout" style="text-align:left"><?php _e( 'Choose Your Website Layout', 'comicpress' ); ?></label>
+					<th scope="row" style="width:280px"><label for="layout" style="text-align:left"><?php _e( 'Choose Your Website Layout', 'comicpress' ); ?></label>
 						<select name="layout" id="layout" onchange="lshowimage(this,'thelayout')">
 							<option class="level-0" value="3c" <?php if ($comicpress_options['layout'] == '3c') { ?>selected="selected" <?php } ?>><?php _e( '3 Column &mdash; Standard [default]', 'comicpress' ); ?></option>
 														
