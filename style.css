@@ -192,11 +192,7 @@ h4, h4 a {
 
 #page, #header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
     margin: 0 auto;
-    height: auto;
-    margin-left: auto; 
-    margin-right: auto;
     display: block;
-    max-width: 100%;
 }
 
 /* Header */
@@ -204,7 +200,6 @@ h4, h4 a {
 #header {
     display: block;
     overflow: hidden;
-    max-width: 100%;
     z-index: 500;
 }
 
@@ -231,11 +226,9 @@ h4, h4 a {
 	background-color: #000;
 	color: #fff;
 	display: block;
-	max-width: 100%;
 }
 
 .menu-container {
-	max-width: 100%;
 	display: block;
 	margin-left: 5px;
 }
@@ -410,43 +403,24 @@ a.menunav-rss {
 #subcontent-wrapper {
     padding: 2px 0;
     overflow: hidden;
-    display: table;
-    table-layout: auto;
-    width: 100%;
 }
 
 /* This is the wrapper for the #content floats need to be in here */
 #content-column {
-	display: table-cell;
-	vertical-align: top;
+	float: left;
+	display: inline-block;
     margin: 0 2px;
-    width: 100%;
 }
 
 /* This settings are involved */
 #content {
-	display: table-cell;
-	vertical-align: top;
+	float: left;
+	display: inline-block;
     overflow: hidden;
 }
 
 article {
 	display: block;
-	max-width: 100%;
-}
-
-@media screen and (max-width: 480px) {
-	div#sidebar-left, div#sidebar-right {
-		display: none;
-	}
-}
-
-.spacer {
-	max-width: 100%;
-}
-
-.spacer img {
-	max-width: 100%;
 }
 
 .uentry, #comment-wrapper, #wp-paginav, #pagenav {
@@ -779,18 +753,26 @@ textarea#comment {
 /* Default Sidebars */
 
 #sidebar-left, #sidebar-right {
+	background: #fff;
+	display: inline-block;
     padding: 2px;
     margin: 0px 2px;
 }
 
 #sidebar-left {
-	display: table-cell;
-	vertical-align: top;
+	float: left;
 }
 
 #sidebar-right {
-    display: table-cell;
-    vertical-align: top;
+	float: right;
+}
+
+body.layout-3cl #sidebar-right {
+	float: left;
+}
+
+body.layout-3cr #sidebar-left {
+	float: right;
 }
 
 .sidebar-basic ul, .sidebar-basic li {
@@ -1946,7 +1928,7 @@ body.scheme-ceasel #comment-wrapper {
 
 body.scheme-ceasel .feature img {
     border: none;
-    max-width: none;
+    max-width: 100%;
 }
 
 body.scheme-ceasel h2.slider-title a:hover {
