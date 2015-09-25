@@ -412,7 +412,6 @@ a.menunav-rss {
     margin: 0 2px;
 }
 
-/* This settings are involved */
 #content {
 	float: left;
 	display: inline-block;
@@ -515,7 +514,6 @@ a.post-edit-link {
     line-height: 100%;
     padding: 0 2px 0 0;
 }
-
 
 .post-calendar-date .calendar-date span {
     height: 16px;
