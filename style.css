@@ -225,25 +225,18 @@ h4, h4 a {
 	height: 25px;
 	background-color: #000;
 	color: #fff;
-	display: block;
 }
 
 .menu-container {
-	display: block;
-	margin-left: 5px;
+	display: inline-block;
+	float: left;
+	width: 100%;
 }
 
 .menunav {
     float: right;
+    display: inline-block;
     text-align: center;
-}
-
-.menunav a:link, .menunav a:visited {
-	color: #fff;
-}
-
-.menunav a:hover {
-	color: #f00;
 }
 
 .menunav-search {
@@ -264,11 +257,11 @@ a.menunav-rss {
     padding: 0 4px;
     float: left;
     display: inline-block;
-    overflow: hidden;
-    margin: 0 3px;
+    margin: 0 5px 0 3px;
 }
 
 .menunav-rss:hover {
+	background-color: none;
 }
 
 .menu {
@@ -321,7 +314,7 @@ a.menunav-rss {
     color: #fff;
 }
 
-.menu ul li a:hover, .menunav a:hover {
+.menu ul li a:hover {
     color: #ffcc00;
     background: #414141; /*background of menu items during onmouseover (hover state)*/
 }
@@ -412,10 +405,15 @@ a.menunav-rss {
     margin: 0 2px;
 }
 
+body.wide #content-column {
+	width: 100%!important;
+}
+
 #content {
 	float: left;
 	display: inline-block;
     overflow: hidden;
+    width: 100%;
 }
 
 article {
@@ -751,7 +749,6 @@ textarea#comment {
 /* Default Sidebars */
 
 #sidebar-left, #sidebar-right {
-	background: #fff;
 	display: inline-block;
     padding: 2px;
     margin: 0px 2px;
@@ -1473,55 +1470,57 @@ table#wp-calendar td {
 }
 
 .menunav-twitter {
-    background: url(    'images/icons/twitter.png' ) no-repeat;
+    background: url('images/icons/twitter.png') no-repeat;
 }
 
 .menunav-rss2 {
-    background: url(    'images/icons/rss.png' ) no-repeat;
+    background: url('images/icons/rss.png') no-repeat;
     margin-right: 3px;
 }
 
 .menunav-facebook {
-    background: url(    'images/icons/facebook.png' ) no-repeat;
+    background: url('images/icons/facebook.png') no-repeat;
 }
 
 .menunav-googleplus {
-    background: url(    'images/icons/googleplus.png' ) no-repeat;
+    background: url('images/icons/googleplus.png') no-repeat;
 }
 
 .menunav-linkedin {
-    background: url(    'images/icons/linkedin.png' ) no-repeat;
+    background: url('images/icons/linkedin.png') no-repeat;
 }
 
 .menunav-pinterest {
-    background: url(    'images/icons/pinterest.png' ) no-repeat;
+    background: url('images/icons/pinterest.png') no-repeat;
 }
 
 .menunav-youtube {
-    background: url(    'images/icons/youtube.png' ) no-repeat;
+    background: url('images/icons/youtube.png') no-repeat;
 }
 
 .menunav-flickr {
-    background: url(    'images/icons/flickr.png' ) no-repeat;
+    background: url('images/icons/flickr.png') no-repeat;
 }
 
 .menunav-tumblr {
-    background: url(    'images/icons/tumblr.png' ) no-repeat;
+    background: url('images/icons/tumblr.png') no-repeat;
 }
 
 .menunav-deviantart {
-    background: url(    'images/icons/deviantart.png' ) no-repeat;
+    background: url('images/icons/deviantart.png') no-repeat;
 }
 
 .menunav-myspace {
-    background: url(    'images/icons/myspace.png' ) no-repeat;
+    background: url('images/icons/myspace.png') no-repeat;
 }
 
 .menunav-email {
-    background: url(    'images/icons/email.png' ) no-repeat;
+    background: url('images/icons/email.png') no-repeat;
 }
 
 .menunav-social:hover {
+	background-color: none!important;
+	color: none!important;
     background-position: 0 -25px;
 }
 
@@ -1686,7 +1685,7 @@ body.scheme-mecha #content-wrapper {
     box-shadow: 1px 2px 10px #000;
 }
 
-body.scheme-mecha #submit, body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.widget-title, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .submit, body.scheme-mecha .feature, body.scheme-mecha .related-comics {
+body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.widget-title, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .feature {
     border-color: #000;
     background: #eee;
 }
@@ -1696,7 +1695,7 @@ body.scheme-mecha #submit, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.w
     margin-bottom: 2px;
 }
 
-body.scheme-mecha #submit, body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha .type-attachment, body.scheme-mecha #wp-paginav, body.scheme-mecha .sidebar h2, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .submit, body.scheme-mecha .feature, body.scheme-mecha .related-comics {
+body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha .type-attachment, body.scheme-mecha #wp-paginav, body.scheme-mecha .sidebar h2, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .submit, body.scheme-mecha .feature {
     border-radius: 10px 10px 5px 5px;
     background: #eee; /* Old browsers */
     background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%, rgba(170,170,170,1) 100%);

@@ -28,9 +28,6 @@ function comicpress_menubar() {
 					</div>
 					<?php } ?>
 					<?php do_action('comicpress-menubar-menunav'); ?>
-					<?php if (comicpress_themeinfo('enable_rss_in_menubar') && !comicpress_themeinfo('menubar_social_icons')) { ?>
-						<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
-					<?php } ?>
 					<?php do_action('comicpress-menubar-mini-navigation'); ?>
 				</div>
 				<div class="clear"></div>
