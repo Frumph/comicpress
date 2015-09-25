@@ -334,7 +334,6 @@ class comicpress_Customize {
 	$left_sidebar_width = get_theme_mod('comicpress-customize-range-left-sidebar-width', 200)+4;
 	$right_sidebar_width = get_theme_mod('comicpress-customize-range-right-sidebar-width', 200)+4;
 	$style_output = '';
-	
 	if ($scheme !== 'sandy') {
 		$style_output .= "\t#page { width: ".$page_width."px; }\r\n";
 		
