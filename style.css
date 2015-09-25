@@ -192,6 +192,11 @@ h4, h4 a {
 
 #page, #header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
     margin: 0 auto;
+    height: auto;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
 }
 
 /* Header */
@@ -225,10 +230,13 @@ h4, h4 a {
 	height: 25px;
 	background-color: #000;
 	color: #fff;
+	display: block;
+	max-width: 100%;
 }
 
 .menu-container {
-	width: 100%;
+	max-width: 100%;
+	display: block;
 	margin-left: 5px;
 }
 
@@ -238,9 +246,11 @@ h4, h4 a {
 }
 
 .menunav a:link, .menunav a:visited {
+	color: #fff;
 }
 
 .menunav a:hover {
+	color: #f00;
 }
 
 .menunav-search {
@@ -406,25 +416,29 @@ a.menunav-rss {
 }
 
 /* This is the wrapper for the #content floats need to be in here */
-/* This settings are involved */
 #content-column {
 	display: table-cell;
 	vertical-align: top;
     margin: 0 2px;
     width: 100%;
 }
-/* This are the old settings */
-/*#content-column {
-*   float: left;
-*   margin: 0 2px;
-*	width: 546px;
-}*/
 
 /* This settings are involved */
 #content {
 	display: table-cell;
 	vertical-align: top;
     overflow: hidden;
+}
+
+article {
+	display: block;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+	div#sidebar-left, div#sidebar-right {
+		display: none;
+	}
 }
 
 .spacer {
