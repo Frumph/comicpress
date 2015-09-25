@@ -1,4 +1,3 @@
-				<div class="spacer"><img src=<?php echo get_template_directory_uri(). '/images/spacer.png' ?>></div>
 				<?php if (!comicpress_sidebars_disabled()) comicpress_get_sidebar('under-blog'); ?>
 			</div>
 <?php
