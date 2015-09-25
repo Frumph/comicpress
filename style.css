@@ -423,7 +423,6 @@ a.menunav-rss {
     width: 100%;
 }
 
-/* This settings are involved */
 #content {
 	display: table-cell;
 	vertical-align: top;
@@ -541,7 +540,6 @@ a.post-edit-link {
     line-height: 100%;
     padding: 0 2px 0 0;
 }
-
 
 .post-calendar-date .calendar-date span {
     height: 16px;
