@@ -30,6 +30,13 @@ PHP:       5.4
 == Changelog ==
 
 = 4.3 =
+* wp_title filter removed and now using WordPress's default one
+* layout is controlled in the customizer now
+* templates for individual character and location for comic easel users landing pages added
+* author pages restyled
+* tons and tons of CSS changes, no elements were renamed mainly colorizations, margin's removed etc.
+* adjustable site width & sidebars in the customizer
+* zappbar support for responsive, mobile friendly comicpress
 * added layout options to the costumizer
 * added locations taxonomy template, for comic easel, for custom location pages 
 * added new CSS requirements for theme review team for screen readers
@@ -54,6 +61,7 @@ PHP:       5.4
 * removed tab layout in comicpress options
 * removed all CSS styling for the dropdown selectors
 * removed comicpress_themeinfo('data') calls that overlap standard WordPress ones
+* removed archive-year template for posts 
 
 = 4.2.2 =
 * translation and typo fixes by Kniebremser
