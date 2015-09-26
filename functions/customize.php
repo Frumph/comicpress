@@ -31,7 +31,7 @@ class comicpress_Customize {
  	*/
 
 	public $css_array = Array();
-
+	
 	public static function register($wp_customize) {
 		
 		$wp_customize->remove_section('colors');
@@ -65,7 +65,7 @@ class comicpress_Customize {
 				'type' => 'select',
 				'choices' => $choices
 			));
-
+		
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
 				'label' => __( 'Choose a scheme', 'comicpress' ),
@@ -123,7 +123,7 @@ class comicpress_Customize {
 					'step' => 2,
 				),
 		));
-
+		
 		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
 				'settings' => 'comicpress-customize-detach-footer',
@@ -132,7 +132,7 @@ class comicpress_Customize {
 				'section' => 'comicpress-scheme-options',
 				'type' => 'checkbox'
 			));
-
+		
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 				'settings' => 'comicpress-customize-checkbox-rounded',
@@ -150,7 +150,7 @@ class comicpress_Customize {
 					'section'  => 'header_image',
 					'type'     => 'checkbox'
 					));
-
+		
 		$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => '', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
 		
@@ -226,7 +226,7 @@ class comicpress_Customize {
 			$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Link', 'comicpress' ), 'default' => '');
 			$css_array[] = array('slug' => 'comic_nav_hcolor', 'description' => '.comic-nav a:hover', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Hover', 'comicpress' ), 'default' => '');
 		}
-
+		
 		$priority_value = 11;
 		foreach ($css_array as $setinfo) {
 			$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
@@ -426,7 +426,7 @@ class comicpress_Customize {
 			'comicpress-themecustomizer', // Give the script a unique ID
 			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
 			array(  'jquery', 'customize-preview' ), // Define dependencies
-			'', // Define a version (optional) 
+			'', // Define a version (optional)
 			true // Specify whether to put in footer (leave this true)
 		);
 	}
