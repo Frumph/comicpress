@@ -334,7 +334,7 @@ class comicpress_Customize {
 	$left_sidebar_width = get_theme_mod('comicpress-customize-range-left-sidebar-width', 200)+4;
 	$right_sidebar_width = get_theme_mod('comicpress-customize-range-right-sidebar-width', 200)+4;
 	$style_output = '';
-	if ($scheme !== 'sandy') {
+	if (($scheme !== 'sandy') && ($scheme !== 'high')) {
 		$style_output .= "\t#page { width: ".$page_width."px; }\r\n";
 		
 	} else {
@@ -345,27 +345,38 @@ class comicpress_Customize {
 	$content_width = '';
 	switch ($layout) {
 		case '2cl':
-			$content_width = $page_width - ($left_sidebar_width+14);
+			$add_width = 14;
+			if ($scheme == 'CEasel') $add_width = $add_width + 4;
+			$content_width = $page_width - ($left_sidebar_width+$add_width);
 			break;
 		case '2cr':
-			$content_width = $page_width - ($right_sidebar_width+14);
+			$add_width = 14;
+			if ($scheme == 'CEasel') $add_width = $add_width + 4;
+			$content_width = $page_width - ($right_sidebar_width+$add_width);
 			break;
 		case '3clgn':
-			$content_width = $page_width - ($left_sidebar_width+14);
+			$add_width = 12;
+			if ($scheme == 'CEasel') $add_width = $add_width + 6;
+			$content_width = $page_width - ($left_sidebar_width+$add_width);
 			$inside_content_width = $content_width - ($right_sidebar_width+12);
 			break;
 		case '3crgn':
-			$content_width = $page_width - ($right_sidebar_width+14);
+			$add_width = 12;
+			if ($scheme == 'CEasel') $add_width = $add_width + 6;
+			$content_width = $page_width - ($right_sidebar_width+$add_width);
 			$inside_content_width = $content_width - ($left_sidebar_width+12);
 			break;
 		case '3c':
 		case '3cl':
 		case '3cr':
 		default: 
-			$content_width = $page_width - ($left_sidebar_width + $right_sidebar_width+22);
+			$add_width = 22;
+			if ($scheme == 'CEasel') $add_width = $add_width + 4;
+			$content_width = $page_width - ($left_sidebar_width + $right_sidebar_width + $add_width);
 			break;
 		
 	}
+	$style_output .= "\t#add-width { width: ".$add_width."px; }\r\n";
 	$style_output .= "\t#content-column { width: ".$content_width."px; }\r\n";
 	if (!empty($inside_content_width)) {
 		$style_output .= "\t#content { width: ".$inside_content_width."px; }\r\n";
