@@ -387,14 +387,11 @@ a.menunav-rss {
 
 /* Content-Wrapper */
 
-#content-wrapper {
-    border: solid 1px transparent;
-}
-
+#content-wrapper {}
+	
 /* Subcontent-Wrapper */
 
 #subcontent-wrapper {
-    padding: 2px 0;
     overflow: hidden;
 }
 
@@ -402,10 +399,9 @@ a.menunav-rss {
 #content-column {
 	float: left;
 	display: inline-block;
-    margin: 0 2px;
 }
 
-body.wide #content-column {
+body.wide #content-column, body.wide #content {
 	width: 100%!important;
 }
 
@@ -751,7 +747,6 @@ textarea#comment {
 #sidebar-left, #sidebar-right {
 	display: inline-block;
     padding: 2px;
-    margin: 0px 2px;
 }
 
 #sidebar-left {
@@ -798,7 +793,7 @@ body.layout-3cr #sidebar-left {
 h2.widget-title, h2.widget-title a {
     display: block;
     font-size: 16px;
-    margin: 0;
+    margin: 0 0 0 2px;
     padding: 0;
 }
 
@@ -890,7 +885,7 @@ h2.widget-title, h2.widget-title a {
 #wp-calendar-wrap {
     margin: 0px auto;
     width: 180px;
-    padding: 5px;
+    padding: 2px;
 }
 
 #wp-calendar {
@@ -1742,12 +1737,8 @@ body.scheme-mecha #footer-sidebar-wrapper {
 
 body.scheme-mecha .menunav-rss:hover, body.scheme-mecha .menu ul li a:hover, body.scheme-mecha .menu ul li a.selected {
     color: #fcff00;
-    background: #303030; /* Old browsers */
-    background: -moz-linear-gradient(100% 100% 90deg, #303030, #444, #000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000), color-stop(100%, #303030)); /* Safari 4+, Chrome 2+ */
-    background: -webkit-linear-gradient(linear, left top, left bottom, from(#000),to(#303030)); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(#000,#303030); /* Opera11.10+ */
-    background: -ms-linear-gradient(#000,#303030); /* IE10+ */
+	background: #111;
+    background: linear-gradient(to bottom, #131313 0%, #1c1c1c 91%, #4c4c4c 100%);
     border-radius: 10px;
 }
 
@@ -1870,11 +1861,6 @@ body.scheme-ceasel #content-wrapper {
     background: #fff;
     border-radius: 6px;
     border: solid 1px #ccc;
-    padding: 2px;
-}
-
-body.scheme-ceasel #content-wrapper, body.scheme-ceasel #menubar-wrapper {
-    /* box-shadow: 1px 2px 4px #111; */
 }
 
 body.scheme-ceasel .sidebar .widget {
@@ -2062,7 +2048,10 @@ body.scheme-high .uentry, body.scheme-high .sidebar h2, body.scheme-high #wp-cal
     border: solid 1px #2d1f04;
     border-radius: 10px;
     box-shadow: 1px 2px 3px #000;
-    margin-right: 3px;
+}
+
+body.scheme-high .sidebar h2 {
+	margin-right: 3px;
 }
 
 body.scheme-high .post-info {
