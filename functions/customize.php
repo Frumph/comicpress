@@ -220,7 +220,7 @@ class comicpress_Customize {
 		// Additions for CE
 		if (function_exists('ceo_pluginfo')) {
 			$css_array[] = array('slug' => 'comic_wrap_background', 'description' => '#comic-wrap', 'section' => 'colors', 'label' => __( 'Comic Area', 'comicpress' ), 'default' => '');
-			$css_array[] = array('slug' => 'comic_wrap_textcolor', 'description' => '#comic-wrap', 'section' => 'comicpress-text-colors', 'label' => '', 'default' => '');
+			$css_array[] = array('slug' => 'comic_wrap_textcolor', 'description' => '#comic-wrap', 'section' => 'comicpress-text-colors', 'label' => '');
 			$css_array[] = array('slug' => 'comic_nav_background', 'description' => 'table#comic-nav-wrapper', 'section' => 'colors', 'label' => __( 'Default Comic Navigation', 'comicpress' ), 'default' => '');
 			$css_array[] = array('slug' => 'comic_nav_textcolor', 'description' => '.comic-nav', 'section' => 'comicpress-text-colors', 'label' => __( 'Default Nav Normal Text Color', 'comicpress' ), 'default' => '');
 			$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Link', 'comicpress' ), 'default' => '');
