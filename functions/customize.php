@@ -352,7 +352,7 @@ class comicpress_Customize {
 			break;
 		case '2cr':
 			$add_width = 4;
-			if ($scheme == 'ceasel') $add_width = $add_width + 2;
+			if ($scheme == 'ceasel') $add_width = $add_width + 4;
 			$content_width = $page_width - ($right_sidebar_width + $add_width);
 			break;
 		case '3clgn':
