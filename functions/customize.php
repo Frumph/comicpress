@@ -329,7 +329,7 @@ class comicpress_Customize {
 	$customize = get_theme_mod('comicpress-customize');
 	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', 980));
 	$layout = get_theme_mod('comicpress-customize-select-layout', '3c');
-	$comic_width = intval($page_width)+40;
+	$comic_width = intval($page_width) + 40;
 	$scheme = get_theme_mod('comicpress-customize-select-scheme', 'none');
 	$left_sidebar_width = get_theme_mod('comicpress-customize-range-left-sidebar-width', 200)+4;
 	$right_sidebar_width = get_theme_mod('comicpress-customize-range-right-sidebar-width', 200)+4;
@@ -337,25 +337,27 @@ class comicpress_Customize {
 	if (($scheme !== 'sandy') && ($scheme !== 'high')) {
 		$style_output .= "\t#page { width: ".$page_width."px; max-width: ".$page_width."px; }\r\n";
 	} else {
+		if (($scheme == 'sandy') || ($scheme == 'high'))
+			$style_output .= "\t#page, #page-wide { width: ".$comic_width."px!important; max-width: 100%!important; }\r\n";
 		$style_output .= "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer, #footer-sidebar-wrapper { width: ".$page_width."px; max-width: ".$page_width."px; }\r\n";
-		$style_output .= "\t#comic-wrap { width: ".$comic_width."px; max-width: 100%; }\r\n";
+		$style_output .= "\t#comic-wrap { max-width: 100%; }\r\n";
 	}
 	$content = '';
 	$content_width = '';
 	switch ($layout) {
 		case '2cl':
-			$add_width = -2;
+			$add_width = 0;
 			if ($scheme == 'ceasel') $add_width = $add_width + 2;
 			if ($scheme = 'high') $add_width = $add_width + 6;
 			$content_width = $page_width - ($left_sidebar_width + $add_width);
 			break;
 		case '2cr':
-			$add_width = 4;
+			$add_width = 6;
 			if ($scheme == 'ceasel') $add_width = $add_width + 2;
 			$content_width = $page_width - ($right_sidebar_width + $add_width);
 			break;
 		case '3clgn':
-			$add_width = 4;
+			$add_width = 6;
 			if ($scheme == 'ceasel') $add_width = $add_width + 4; 
 			$content_width = $page_width - ($left_sidebar_width + $add_width);
 			$add_inside = 4;
@@ -363,7 +365,7 @@ class comicpress_Customize {
 			$inside_content_width = $content_width - ($right_sidebar_width + $add_inside);
 			break;
 		case '3crgn':
-			$add_width = 4;
+			$add_width = 6;
 			if ($scheme == 'ceasel') $add_width = $add_width + 2;
 			$content_width = $page_width - ($right_sidebar_width + $add_width);
 			$add_inside = 4;
@@ -374,7 +376,7 @@ class comicpress_Customize {
 		case '3cl':
 		case '3cr':
 		default: 
-			$add_width = 8;
+			$add_width = 10;
 			if ($scheme == 'ceasel') $add_width = $add_width +2;
 			$content_width = $page_width - ($left_sidebar_width + $right_sidebar_width + $add_width);
 			break;

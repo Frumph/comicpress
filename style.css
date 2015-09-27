@@ -397,6 +397,7 @@ a.menunav-rss {
 /* Subcontent-Wrapper */
 
 #subcontent-wrapper {
+	padding: 1px;
     overflow: hidden;
 }
 
