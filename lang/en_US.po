@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress v4.2.9.3\n"
+"Project-Id-Version: ComicPress v4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-29 09:37-0800\n"
-"PO-Revision-Date: 2015-09-26 01:57:46+0000\n"
+"PO-Revision-Date: 2015-09-27 22:58:41+0000\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1788,7 +1788,7 @@ msgstr ""
 msgid "Email &mdash; use mailto://your@email.com"
 msgstr ""
 
-#: options/splash.php:4
+#: options/splash.php:26
 #@ comicpress
 msgid "Schemes, layout and Site Width along with other customizations can be modified in the appearance &#10132; customize section of the wp-admin."
 msgstr ""
@@ -1877,5 +1877,65 @@ msgstr ""
 #: widgets/translator.php:22
 #@ comicpress
 msgid "ComicPress - Google Translator"
+msgstr ""
+
+#: options/splash.php:7
+#@ comiceasel
+msgid "Technical Support"
+msgstr ""
+
+#: options/splash.php:12
+#@ comiceasel
+msgid "You can contact me for technical support at any of the following locations: "
+msgstr ""
+
+#: options/splash.php:13
+#@ comiceasel
+msgid "(best chances to reach me at the top going down to the least chance)"
+msgstr ""
+
+#: options/splash.php:15
+#@ comiceasel
+msgid "Form Email:"
+msgstr ""
+
+#: options/splash.php:16
+#@ comiceasel
+msgid "Via Facebook:"
+msgstr ""
+
+#: options/splash.php:17
+#@ comiceasel
+msgid "WebComics.COM Forums:"
+msgstr ""
+
+#: options/splash.php:17
+#@ comiceasel
+msgid "(Subscription only)"
+msgstr ""
+
+#: options/splash.php:18
+#@ comiceasel
+msgid "WordPress.ORG Forums:"
+msgstr ""
+
+#: options/splash.php:18
+#@ comiceasel
+msgid "(rarely go here)"
+msgstr ""
+
+#: options/splash.php:19
+#@ comiceasel
+msgid "On Twitter:"
+msgstr ""
+
+#: options/splash.php:19
+#@ comiceasel
+msgid "(Twitter and I are not friends atm)"
+msgstr ""
+
+#: options/splash.php:21
+#@ comicpress
+msgid "Please take note that I speak American-English only, pardon my ignorance and will try to understand you as best I can."
 msgstr ""
 
