@@ -55,7 +55,7 @@ function comicpress_showmood_edit_post() {
 		$currentmood = get_post_meta( $post->ID, "mood", true );
 		
 		if (empty($currentmood) || $currentmood == '' || $currentmood == null) { 
-			$mood = __('none','comicpress');
+			$mood = __( 'none', 'comicpress' );
 		} else {
 			$mood = explode(".", $currentmood);
 			$mood = reset($mood);
