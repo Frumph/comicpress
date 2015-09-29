@@ -16,12 +16,12 @@ global $post, $wp_query; ?>
 				/* Bookmark Config Settings */
 
 				var cl = 31;
-				var imgTag = '<?php echo get_template_directory_uri(); ?>/images/1.gif';		//add tag image.
-				var imgClearOff = '<?php echo get_template_directory_uri(); ?>/images/3a.gif';	//no comic tagged, clear not possible
-				var imgGotoOff = '<?php echo get_template_directory_uri(); ?>/images/2a.gif';	//no comic tagged, goto not possible
-				var imgClearOn = '<?php echo get_template_directory_uri(); ?>/images/3.gif';	//clear a tag, shows when comic previously tagged
-				var imgGotoOn = '<?php echo get_template_directory_uri(); ?>/images/2.gif';	//shows when a comic is tagged  
-				var imgInfo = '<?php echo get_template_directory_uri(); ?>/images/4.gif';  	//img that displays the help
+				var imgTag = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/tagpage.gif';		//add tag image
+				var imgClearOff = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/clearno.gif';	//no comic tagged, clear not possible
+				var imgGotoOff = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/gototagno.gif';	//no comic tagged, goto not possible
+				var imgClearOn = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/clear.gif';		//clear a tag, shows when comic previously tagged
+				var imgGotoOn = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/gototag.gif';		//shows when a comic is tagged
+				var imgInfo = '<?php echo get_template_directory_uri(); ?>/images/bookmarks/info.gif';  		//img that displays the help
 				var comicDir = '/'; 		//alter this if you run multiple comics in different directories on your site.
 
 				/* Now write out the applicable links */
