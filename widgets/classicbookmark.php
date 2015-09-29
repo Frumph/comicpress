@@ -36,7 +36,7 @@ global $post, $wp_query; ?>
 						gt = imgGotoOn;
 						ct = imgClearOn;
 					}
-					document.write('<div id="bmh"><?php _e( '<strong>BOOKMARK<\/strong><br />Click "Tag Page" to bookmark a page. When you return to the site, click "Goto Tag" to continue where you left off.', 'comicpress' ); ?><\/div>');
+					document.write('<div id="bmh"><strong><?php _e( 'BOOKMARK', 'comicpress' ); ?><\/strong><br /><?php _e( 'Click "Tag Page" to bookmark a page. When you return to the site, click "Goto Tag" to continue where you left off.', 'comicpress' ); ?><\/div>');
 					document.write('<a href="#" onClick="bmhome();return false;"><img src="'+imgTag+'" alt="Tag This Page" border="0"><\/a>');
 					document.write('<a href="#" onClick="gto();return false;"><img src="'+gt+'" alt="Goto Tag" border="0" id="gtc"><\/a>');
 					document.write('<a href="#" onClick="bmc();return false;"><img src="'+ct+'" alt="Clear Tag" border="0" id="rmc"><\/a>');
