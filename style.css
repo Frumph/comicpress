@@ -1598,6 +1598,20 @@ table#wp-calendar td {
     z-index: 100000; /* Above WP toolbar. */
 }
 
+/* Widget Classic Bookmark */
+
+#bmh {
+    width: 173px; 
+    margin: 15px 0 0 0; 
+    padding: 5px; 
+    position: absolute; 
+    color: #eee; 
+    font-size: 11px; 
+    background-color:#222; 
+    border: 1px solid #ccc; 
+    visibility: hidden;
+}
+
 /* customizer rounded posts */
 
 body.rounded-posts .uentry, body.rounded-posts #comment-wrapper, body.rounded-posts #wp-paginav, body.rounded-posts #pagenav, body.rounded-posts .location-info {
