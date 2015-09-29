@@ -1548,7 +1548,7 @@ table#wp-calendar td {
     text-indent: -9999px;
     width: 16px;
     height: 16px;
-    background: url(    'images/pushpin-small.png' ) top center no-repeat;
+    background: url('images/pushpin-small.png') top center no-repeat;
     display: inline-block;
     float: left;
     margin-top: 20px;
