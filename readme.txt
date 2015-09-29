@@ -29,6 +29,9 @@ PHP:       5.4
 
 == Changelog ==
 
+= 4.? =
+* removed widget google translaor
+
 = 4.3 =
 * wp_title filter removed and now using WordPress's default one
 * layout is controlled in the customizer now
