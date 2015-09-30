@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-28 15:07+0200\n"
-"PO-Revision-Date: 2015-09-28 15:25+0200\n"
+"POT-Creation-Date: 2015-09-29 19:07+0200\n"
+"PO-Revision-Date: 2015-09-29 19:08+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -90,7 +90,7 @@ msgstr "Registriert am"
 msgid "Posts #"
 msgstr "Beiträge #"
 
-#: author.php:61 functions.php:241
+#: author.php:61 functions.php:237
 msgid "Email"
 msgstr "Email"
 
@@ -98,15 +98,15 @@ msgstr "Email"
 msgid "Website"
 msgstr "Website"
 
-#: author.php:73 functions.php:239 options/menubar.php:75
+#: author.php:73 functions.php:235 options/menubar.php:75
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:79 functions.php:236 options/menubar.php:77
+#: author.php:79 functions.php:232 options/menubar.php:77
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:85 functions.php:242 options/menubar.php:79
+#: author.php:85 functions.php:238 options/menubar.php:79
 msgid "Google+"
 msgstr "Google+"
 
@@ -205,32 +205,32 @@ msgstr "Diese Seite bearbeiten."
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:54 functions.php:114 functions/customize.php:185
+#: functions.php:54 functions.php:110 functions/customize.php:185
 #: functions/customize.php:197 options/general.php:346
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:107
+#: functions.php:103
 msgid "Left Sidebar"
 msgstr "Linke Sidebar"
 
-#: functions.php:107
+#: functions.php:103
 msgid "The sidebar that appears to the left of the content."
 msgstr "Diese Sidebar erscheint links der Inhalte."
 
-#: functions.php:108
+#: functions.php:104
 msgid "Right Sidebar"
 msgstr "Rechte Sidebar"
 
-#: functions.php:108
+#: functions.php:104
 msgid "The sidebar that appears to the right of the content."
 msgstr "Diese Sidebar erscheint rechts der Inhalte."
 
-#: functions.php:109
+#: functions.php:105
 msgid "Above Header"
 msgstr "Über dem Header"
 
-#: functions.php:109
+#: functions.php:105
 msgid ""
 "This sidebar appears to above all of the site information.  This sidebar is "
 "not encased in CSS, you will need to create CSS for it."
@@ -238,43 +238,43 @@ msgstr ""
 "Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:110 functions/customize.php:171
+#: functions.php:106 functions/customize.php:171
 msgid "Header"
 msgstr "Header"
 
-#: functions.php:110
+#: functions.php:106
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
-#: functions.php:111 functions/customize.php:172 options.php:175
+#: functions.php:107 functions/customize.php:172 options.php:175
 #: options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
 
-#: functions.php:111
+#: functions.php:107
 msgid "This sidebar is under the header and above the content-wrapper block"
 msgstr ""
 "Diese Sidebar erscheint unter dem Header und über dem content-wrapper Block"
 
-#: functions.php:112
+#: functions.php:108
 msgid "Over Blog"
 msgstr "Über dem Blog"
 
-#: functions.php:112
+#: functions.php:108
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
 msgstr ""
 "Diese Sidebar erscheint über dem Blog innerhalb von #column .narrowcolumn"
 
-#: functions.php:113
+#: functions.php:109
 msgid "Under Blog"
 msgstr "Unter dem Blog"
 
-#: functions.php:113
+#: functions.php:109
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
 msgstr ""
 "Diese Sidebar erscheint unter dem Blog innerhalb von #column .narrowcolumn"
 
-#: functions.php:114
+#: functions.php:110
 msgid ""
 "This sidebar is at the bottom of the page and is the center of the 3 footer "
 "sidebars."
@@ -282,116 +282,116 @@ msgstr ""
 "Diese Sidebar ist am unteren Rand von der Seite und ist die Mitte von den 3 "
 "Footer Sidebars."
 
-#: functions.php:115
+#: functions.php:111
 msgid "Footer Left"
 msgstr "Footer Links"
 
-#: functions.php:115
+#: functions.php:111
 msgid "This sidebar is at the bottom of the page, the left one."
 msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Linke. "
 
-#: functions.php:116
+#: functions.php:112
 msgid "Footer Right"
 msgstr "Footer Rechts"
 
-#: functions.php:116
+#: functions.php:112
 msgid "This sidebar is at the bottom of the page, the right one."
 msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Rechte."
 
-#: functions.php:119
+#: functions.php:115
 msgid "Jetpack Mobile Sidebar"
 msgstr "Jetpack Mobile Sidebar"
 
-#: functions.php:163
+#: functions.php:159
 msgid " [&hellip;]"
 msgstr " [&hellip;]"
 
-#: functions.php:163 functions/displaypost.php:213
+#: functions.php:159 functions/displaypost.php:213
 msgid "&darr; Read the rest of this entry..."
 msgstr "&darr; Lese den Rest dieses Eintrags ..."
 
-#: functions.php:234
+#: functions.php:230
 msgid "my DeviantART"
 msgstr "mein DeviantART"
 
-#: functions.php:234 options/menubar.php:115
+#: functions.php:230 options/menubar.php:115
 msgid "DeviantART"
 msgstr "DeviantART"
 
-#: functions.php:235
+#: functions.php:231
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
-#: functions.php:235 options/menubar.php:109
+#: functions.php:231 options/menubar.php:109
 msgid "Tumblr"
 msgstr "Tumblr"
 
-#: functions.php:236
+#: functions.php:232
 msgid "Friend on Facebook"
 msgstr "Freund auf Facebook"
 
-#: functions.php:237
+#: functions.php:233
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
-#: functions.php:237 options/menubar.php:121
+#: functions.php:233 options/menubar.php:121
 msgid "MySpace"
 msgstr "MySpace"
 
-#: functions.php:238
+#: functions.php:234
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein LinkedIn"
 
-#: functions.php:238 options/menubar.php:85
+#: functions.php:234 options/menubar.php:85
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: functions.php:239
+#: functions.php:235
 msgid "Follow me on Twitter"
 msgstr "Folge mir auf Twitter"
 
-#: functions.php:240
+#: functions.php:236
 msgid "Gaze at my Flickr"
 msgstr "Besuche mich bei Flickr"
 
-#: functions.php:240 options/menubar.php:103
+#: functions.php:236 options/menubar.php:103
 msgid "Flickr"
 msgstr "Flickr"
 
-#: functions.php:241
+#: functions.php:237
 msgid "Email me"
 msgstr "Maile mir"
 
-#: functions.php:242
+#: functions.php:238
 msgid "Circle me on Google+"
 msgstr "Circle mich auf Google+"
 
-#: functions.php:243
+#: functions.php:239
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
-#: functions.php:243 options/menubar.php:91
+#: functions.php:239 options/menubar.php:91
 msgid "pinterest"
 msgstr "Pinterest"
 
-#: functions.php:244
+#: functions.php:240
 msgid "My Channel on YouTube"
 msgstr "Mein Channel auf YouTube"
 
-#: functions.php:244 options/menubar.php:97
+#: functions.php:240 options/menubar.php:97
 msgid "YouTube"
 msgstr "YouTube"
 
-#: functions.php:245
+#: functions.php:241
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: functions.php:245 options/general.php:388
+#: functions.php:241 options/general.php:388
 msgid "RSS"
 msgstr "RSS"
 
 #. translators: theme discription for wp-admin
-#: functions.php:368
+#: functions.php:364
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
@@ -1688,9 +1688,18 @@ msgstr "Letzte Szene:"
 msgid "First Scene:"
 msgstr "Erste Szene:"
 
-#: widgets/classicbookmark.php:40
-msgid "Tag This Page"
-msgstr "Diese Seite taggen"
+#: widgets/classicbookmark.php:39
+msgid "BOOKMARK"
+msgstr "Lesezeichen"
+
+#: widgets/classicbookmark.php:39
+msgid ""
+"Click \"Tag Page\" to bookmark a page. When you return to the site, click "
+"\"Goto Tag\" to continue where you left off."
+msgstr ""
+"Klicke \"Tag Page\" zum bookmarken einer Seite. Wenn Du auf die Website "
+"zurück kehrst, klicke auf \"Goto Tag\", um fortzufahren, wo Du aufgehörst "
+"hast."
 
 #: widgets/classicbookmark.php:117
 msgid "ComicPress - Classic Bookmark"
@@ -1705,7 +1714,7 @@ msgstr ""
 
 #: widgets/classicbookmark.php:167 widgets/controlpanel.php:100
 #: widgets/menubar.php:101 widgets/randompostlink.php:92
-#: widgets/scheduledposts.php:82 widgets/translator.php:75
+#: widgets/scheduledposts.php:82
 msgid "Title:"
 msgstr "Titel:"
 
@@ -1796,11 +1805,3 @@ msgstr ""
 #: widgets/scheduledposts.php:39
 msgid "Scheduled Posts"
 msgstr "Geplante Beiträge"
-
-#: widgets/translator.php:22
-msgid "ComicPress - Google Translator"
-msgstr "ComicPress - Google Übersetzer"
-
-#: widgets/translator.php:23
-msgid "Translate your site with Google."
-msgstr "Übersetze deine Website mit Google."
