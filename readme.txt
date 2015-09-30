@@ -29,7 +29,8 @@ PHP:       5.4
 
 == Changelog ==
 
-= 4.? =
+= 4.3.? =
+* fixed some little errors in widget classic bookmark
 * removed widget google translaor
 
 = 4.3 =
