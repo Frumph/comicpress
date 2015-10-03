@@ -301,7 +301,7 @@ function comicpress_load_options() {
 			'facebook_meta' => false,
 			'display_archive_as_links' => false,
 			'archive_display_order' => 'DESC',
-			'layout' => '3c',
+// 			'layout' => '3c',  -- remove
 			'first_run' => true, /* no longer used */
 			'force_active_connection_close' => false,
 			'removed_option' => true,

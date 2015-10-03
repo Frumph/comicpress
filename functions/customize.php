@@ -327,7 +327,27 @@ class comicpress_Customize {
 <style type="text/css">
 <?php
 	$customize = get_theme_mod('comicpress-customize');
-	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', 980));
+
+// get defaults here:
+	$default_width = 980;
+	$comicpress_options = comicpress_load_options();
+// if the theme mod returns no value for a selected layout at all but cp_options exists
+	if (isset($comicpress_options['layout']) && !intval(get_theme_mod('comicpress-customize-select-layout', 0))) {
+		switch ($comicpress_options['layout']) {
+			case '2cl':
+			case '2cr':
+				$default_width = 780;
+				break;
+			case '3c':
+			case '3clgn':
+			case '3crgn':
+			default:
+				$default_width = 980;
+				break;
+		}
+	}
+
+	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', $default_width));
 	$layout = get_theme_mod('comicpress-customize-select-layout', '3c');
 	$comic_width = intval($page_width) + 40;
 	$scheme = get_theme_mod('comicpress-customize-select-scheme', 'none');
