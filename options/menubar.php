@@ -132,6 +132,7 @@
 					</td>
 				</tr>
 			</table>
+			<br />
 		</div>
 
 		<div class="comicpress-options-save">

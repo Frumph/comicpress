@@ -280,9 +280,6 @@ function comicpress_load_options() {
 				'disable_blog_on_homepage' => false,
 				'add_pw_async_code_to_head' => false,
 				'over-blog-sidebar-all-posts' => false,
-				// Custom Header
-				'custom_image_header_width' => '980',
-				'custom_image_header_height' => '100',
 				// WordPress Content Width that sets video and image size within posts
 				'content_width' => 500,
 				'content_width_disabled_sidebars' => 700,
