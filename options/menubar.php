@@ -46,8 +46,7 @@
 						<?php _e( 'Disable the loading of the menubar jQuery. If you do not want the ddsmoother menu code to load. (Will not do drop downs without it.)', 'comicpress' ); ?>
 					</td>
 				</tr>
-
-				<tr>
+				<tr class="alternate">
 					<th scope="row"><label for="enable_breadcrumbs"><?php _e( 'Enable Breadcrumbs?', 'comicpress' ); ?></label></th>
 					<td>
 						<input id="enable_breadcrumbs" name="enable_breadcrumbs" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_breadcrumbs']); ?> />
@@ -64,7 +63,7 @@
 						<th colspan="3"><?php _e( 'Menubar &mdash; Social Icons', 'comicpress' ); ?></th>
 					</tr>
 				</thead>
-				<tr class="alternate">
+				<tr>
 					<th scope="row" align="top" valign="top"><label for="menubar_social_icons"><?php _e( 'Enable Social Icons in Menubar?', 'comicpress' ); ?></label></th>
 					<td align="top" valign="top">
 						<input id="menubar_social_icons" name="menubar_social_icons" type="checkbox" value="1" <?php checked(true, $comicpress_options['menubar_social_icons']); ?> />
