@@ -283,7 +283,7 @@ function comicpress_load_options() {
 				// Custom Header
 				'custom_image_header_width' => '980',
 				'custom_image_header_height' => '100',
-				// Content Width
+				// WordPress Content Width that sets video and image size within posts
 				'content_width' => 500,
 				'content_width_disabled_sidebars' => 700,
 				// Pages
@@ -305,7 +305,7 @@ function comicpress_load_options() {
 				'disable_comment_javascript' => false,
 				'enable_comments_on_homepage' => false,
 				'avatar_directory' => 'none',
-				// Navigation
+				// Pagination
 				'enable_numbered_pagination' => true,
 				// Footer
 				'disable_footer_text' => false,
@@ -341,15 +341,7 @@ function comicpress_load_options() {
 				'enable_debug_footer_code' => false,
 				'force_active_connection_close' => false,
 				// Jetpack
-				'enable_jetpack_infinite_scrolling' => false,
-				// Facebook
-				'facebook_like_blog_post' => false,
-				'facebook_meta' => false,
-				// ???
-				'disable_default_design' => false,
-// 				'layout' => '3c',  -- remove
-				'first_run' => true, /* no longer used */
-				'removed_option' => true
+				'enable_jetpack_infinite_scrolling' => false
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
