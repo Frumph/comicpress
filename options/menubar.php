@@ -85,73 +85,73 @@
 				<tr>
 					<td><strong><?php _e( 'Google+', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_googleplus']))
-                        $comicpress_options['menubar_social_googleplus'] = '';
+					if (!isset($comicpress_options['menubar_social_googleplus']))
+						$comicpress_options['menubar_social_googleplus'] = '';
  					?>
 					<td><input type="text" size="60" name="menubar_social_googleplus" id="menubar_social_googleplus" value="<?php echo $comicpress_options['menubar_social_googleplus']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'LinkedIn', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_linkedin']))
-                        $comicpress_options['menubar_social_linkedin'] = '';
- 					?>
+					if (!isset($comicpress_options['menubar_social_linkedin']))
+						$comicpress_options['menubar_social_linkedin'] = '';
+					?>
 					<td><input type="text" size="60" name="menubar_social_linkedin" id="menubar_social_linkedin" value="<?php echo $comicpress_options['menubar_social_linkedin']; ?>" /></td>
 				</tr>
 				<tr>
 					 <td><strong><?php _e( 'pinterest', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_pinterest']))
-                        $comicpress_options['menubar_social_pinterest'] = '';
+					if (!isset($comicpress_options['menubar_social_pinterest']))
+						$comicpress_options['menubar_social_pinterest'] = '';
  					?>
 					<td><input type="text" size="60" name="menubar_social_pinterest" id="menubar_social_pinterest" value="<?php echo $comicpress_options['menubar_social_pinterest']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'YouTube', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_youtube']))
-                        $comicpress_options['menubar_social_youtube'] = '';
+					if (!isset($comicpress_options['menubar_social_youtube']))
+						$comicpress_options['menubar_social_youtube'] = '';
 					?>
 					<td><input type="text" size="60" name="menubar_social_youtube" id="menubar_social_youtube" value="<?php echo $comicpress_options['menubar_social_youtube']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'Flickr', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_flickr']))
-                        $comicpress_options['menubar_social_flickr'] = '';
- 					?>
+					if (!isset($comicpress_options['menubar_social_flickr']))
+						$comicpress_options['menubar_social_flickr'] = '';
+					?>
 					<td><input type="text" size="60" name="menubar_social_flickr" id="menubar_social_flickr" value="<?php echo $comicpress_options['menubar_social_flickr']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'Tumblr', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_tumblr']))
-                        $comicpress_options['menubar_social_tumblr'] = '';
- 					?>
+					if (!isset($comicpress_options['menubar_social_tumblr']))
+						$comicpress_options['menubar_social_tumblr'] = '';
+					?>
 					<td><input type="text" size="60" name="menubar_social_tumblr" id="menubar_social_tumblr" value="<?php echo $comicpress_options['menubar_social_tumblr']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'DeviantART', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_deviantart']))
-                        $comicpress_options['menubar_social_deviantart'] = '';
- 					?>
+					if (!isset($comicpress_options['menubar_social_deviantart']))
+						$comicpress_options['menubar_social_deviantart'] = '';
+					?>
 					<td><input type="text" size="60" name="menubar_social_deviantart" id="menubar_social_deviantart" value="<?php echo $comicpress_options['menubar_social_deviantart']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'MySpace', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_myspace']))
-                        $comicpress_options['menubar_social_myspace'] = '';
+					if (!isset($comicpress_options['menubar_social_myspace']))
+						$comicpress_options['menubar_social_myspace'] = '';
 					?>
 					<td><input type="text" size="60" name="menubar_social_myspace" id="menubar_social_myspace" value="<?php echo $comicpress_options['menubar_social_myspace']; ?>" /></td>
 				</tr>
 				<tr>
 					<td><strong><?php _e( 'Email', 'comicpress' ); ?></strong></td>
 					<?php
-                    if (!isset($comicpress_options['menubar_social_email']))
-                        $comicpress_options['menubar_social_email'] = '';
- 					?>
+					if (!isset($comicpress_options['menubar_social_email']))
+						$comicpress_options['menubar_social_email'] = '';
+					?>
 					<td><input type="text" size="60" name="menubar_social_email" id="menubar_social_email" value="<?php echo $comicpress_options['menubar_social_email']; ?>" /><br /><?php _e( 'use mailto://your@email.com', 'comicpress' ); ?></td>
 				</tr>
 			</table>

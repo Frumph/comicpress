@@ -39,7 +39,7 @@
 					</td>
 				</tr>
 			</table>
-			<br />		
+			<br />
 			<strong><?php _e( 'Schemes, layout and Site Width along with other customizations can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong><br />
 			<br />
 		</div>

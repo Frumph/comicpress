@@ -9,7 +9,7 @@
 				<tr>
 					<th colspan="3"><?php _e( 'Debug', 'comicpress' ); ?></th>
 				</tr>
-			</thead>			
+			</thead>
 			<tr class="alternate">
 				<th scope="row"><label for="enable_debug_footer_code"><?php _e( 'Enable the debug page load/memory usage at the bottom of each page?', 'comicpress' ); ?></label></th>
 				<td>
@@ -22,7 +22,7 @@
 			<tr>
 				<th scope="row"><label for="force_active_connection_close"><?php _e( 'Force MySQL to close the current active connection after page load?', 'comicpress' ); ?></label></th>
 				<td>
-					<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $comicpress_options['force_active_connection_close']); ?> />		
+					<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $comicpress_options['force_active_connection_close']); ?> />
 				</td>
 				<td>
 					<?php _e( 'This option forces mysql to close the connection after each page load &mdash; not recommended unless you are requested to enable it.', 'comicpress' ); ?>
@@ -53,9 +53,9 @@
 					<td> <?php var_dump($value); ?></td>
 				</tr>
 			<?php }
-        	}
-    		?>
-    	// -->
+			}
+			?>
+		// -->
 		</table>
 	</div>
 </div>

@@ -30,7 +30,7 @@
 					<td>
 						<?php _e( 'If Display archives results as list is disabled, decide how much is seen in the archive display.', 'comicpress' ); ?>
 					</td>
-				</tr>				
+				</tr>
 				<tr class="alternate">
 					<th scope="row" colspan="2">
 						<label for="archive_display_order"><?php _e( 'Archive Display Order', 'comicpress' ); ?></label>

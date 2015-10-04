@@ -110,7 +110,7 @@
 						$thisdir = null;
 						$thisdir = array();
 						$thisdir = glob($moodir. '/images/moods/*');
-						$mood_directories = array_merge($mood_directories, $thisdir);	
+						$mood_directories = array_merge($mood_directories, $thisdir);
 					}
 				}
 				?>
@@ -160,9 +160,9 @@
 				</thead>
 				<tr>
 					<?php
-                    if (!isset($comicpress_options['content_width']))
-                        $comicpress_options['content_width'] = 500;
- 					?>
+					if (!isset($comicpress_options['content_width']))
+						$comicpress_options['content_width'] = 500;
+					?>
 					<th scope="row"><label for="content_width"><?php _e( 'Media and images width on posts and pages?', 'comicpress' ); ?></label></th>
 					<td>
 						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" /> px
@@ -173,9 +173,9 @@
 				</tr>
 				<tr class="alternate">
 					<?php
-                    if (!isset($comicpress_options['content_width_disabled_sidebars']))
-                        $comicpress_options['content_width_disabled_sidebars'] = 700;
-                    ?>
+					if (!isset($comicpress_options['content_width_disabled_sidebars']))
+						$comicpress_options['content_width_disabled_sidebars'] = 700;
+					?>
 					<th scope="row"><label for="content_width_disabled_sidebars"><?php _e( 'Media and images width when sidebars are disabled on pages?', 'comicpress' ); ?></label></th>
 					<td>
 						<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" /> px

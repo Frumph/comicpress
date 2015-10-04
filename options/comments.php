@@ -45,11 +45,11 @@ $avatar_directories = array();
 $dirs_to_search = array_unique(array(get_template_directory(), get_stylesheet_directory()));
 foreach ($dirs_to_search as $avdir) {
     if (is_dir($avdir . '/images/avatars')) {
-        $thisdir = null;
-        $thisdir = array();
-        $thisdir = glob($avdir . '/images/avatars/*');
-        $avatar_directories = array_merge($avatar_directories, $thisdir);
-    }
+		$thisdir = null;
+		$thisdir = array();
+		$thisdir = glob($avdir . '/images/avatars/*');
+		$avatar_directories = array_merge($avatar_directories, $thisdir);
+	}
 }
 				?>
 				<tr>
@@ -57,13 +57,13 @@ foreach ($dirs_to_search as $avdir) {
 						<label for="avatar_directory"><?php _e( 'Avatar Directory', 'comicpress' ); ?></label>
 						<select name="avatar_directory" id="avatar_directory">
 							<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
-<?php
-foreach ($avatar_directories as $avatar_dirs) {
-	if (is_dir($avatar_dirs)) {
-										$avatar_dir_name = basename($avatar_dirs); ?>
-										<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
-	<?php }
-                                            }
+							<?php
+							foreach ($avatar_directories as $avatar_dirs) {
+								if (is_dir($avatar_dirs)) {
+									$avatar_dir_name = basename($avatar_dirs); ?>
+									<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
+							<?php }
+							}
 							?>
 						</select>
 					</th>
