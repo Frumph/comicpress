@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-29 09:37-0800\n"
-"PO-Revision-Date: 2015-09-27 22:58:41+0000\n"
+"PO-Revision-Date: 2015-10-04 15:09:43+0000\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -219,123 +219,123 @@ msgstr ""
 #: functions/customize.php:185
 #: functions/customize.php:197
 #: functions.php:54
-#: functions.php:114
+#: functions.php:110
 #: options/general.php:346
 #@ comicpress
 msgid "Footer"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:103
 #@ comicpress
 msgid "Left Sidebar"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:103
 #@ comicpress
 msgid "The sidebar that appears to the left of the content."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:104
 #@ comicpress
 msgid "Right Sidebar"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:104
 #@ comicpress
 msgid "The sidebar that appears to the right of the content."
 msgstr ""
 
-#: functions.php:109
+#: functions.php:105
 #@ comicpress
 msgid "Above Header"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:105
 #@ comicpress
 msgid "This sidebar appears to above all of the site information.  This sidebar is not encased in CSS, you will need to create CSS for it."
 msgstr ""
 
 #: functions/customize.php:171
-#: functions.php:110
+#: functions.php:106
 #@ comicpress
 msgid "Header"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:106
 #@ comicpress
 msgid "This sidebar appears inside the #header block."
 msgstr ""
 
 #: functions/customize.php:172
-#: functions.php:111
+#: functions.php:107
 #: options/menubar.php:10
 #: options.php:175
 #@ comicpress
 msgid "Menubar"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:107
 #@ comicpress
 msgid "This sidebar is under the header and above the content-wrapper block"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:108
 #@ comicpress
 msgid "Over Blog"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:108
 #@ comicpress
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:109
 #@ comicpress
 msgid "Under Blog"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:109
 #@ comicpress
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:110
 #@ comicpress
 msgid "This sidebar is at the bottom of the page and is the center of the 3 footer sidebars."
 msgstr ""
 
-#: functions.php:115
+#: functions.php:111
 #@ comicpress
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:111
 #@ comicpress
 msgid "This sidebar is at the bottom of the page, the left one."
 msgstr ""
 
-#: functions.php:116
+#: functions.php:112
 #@ comicpress
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:112
 #@ comicpress
 msgid "This sidebar is at the bottom of the page, the right one."
 msgstr ""
 
-#: functions.php:119
+#: functions.php:115
 #@ comicpress
 msgid "Jetpack Mobile Sidebar"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:159
 #@ comicpress
 msgid " [&hellip;]"
 msgstr ""
 
 #: functions/displaypost.php:213
-#: functions.php:163
+#: functions.php:159
 #@ comicpress
 msgid "&darr; Read the rest of this entry..."
 msgstr ""
@@ -477,7 +477,7 @@ msgid "&raquo;"
 msgstr ""
 
 #. translators: theme discription for wp-admin
-#: functions.php:368
+#: functions.php:379
 #@ comicpress
 msgid "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
@@ -1226,11 +1226,6 @@ msgstr ""
 msgid "Enable Social Icons in Menubar?"
 msgstr ""
 
-#: widgets/classicbookmark.php:40
-#@ comicpress
-msgid "Tag This Page"
-msgstr ""
-
 #: widgets/classicbookmark.php:118
 #@ comicpress
 msgid "Creates a set of buttons that let the user return to the page they tagged."
@@ -1241,7 +1236,6 @@ msgstr ""
 #: widgets/menubar.php:101
 #: widgets/randompostlink.php:92
 #: widgets/scheduledposts.php:82
-#: widgets/translator.php:75
 #@ comicpress
 msgid "Title:"
 msgstr ""
@@ -1315,11 +1309,6 @@ msgstr ""
 #: widgets/scheduledposts.php:39
 #@ comicpress
 msgid "Scheduled Posts"
-msgstr ""
-
-#: widgets/translator.php:23
-#@ comicpress
-msgid "Translate your site with Google."
 msgstr ""
 
 #: archive.php:57
@@ -1541,11 +1530,6 @@ msgstr ""
 #: options/debug.php:28
 #@ comicpress
 msgid "This option forces mysql to close the connection after each page load &mdash; not recommended unless you are requested to enable it."
-msgstr ""
-
-#: options/debug.php:48
-#@ comicpress
-msgid "Technical Support is available on the <a href=\"https://github.com/Frumph/comicpress/issues\" target=\"_blank\">github repository</a> or use the Contact form on <a href=\"http://frumph.net\" target=\"_blank\">Frumph.NET</a>."
 msgstr ""
 
 #: options/general.php:20
@@ -1788,7 +1772,7 @@ msgstr ""
 msgid "Email &mdash; use mailto://your@email.com"
 msgstr ""
 
-#: options/splash.php:26
+#: options/splash.php:43
 #@ comicpress
 msgid "Schemes, layout and Site Width along with other customizations can be modified in the appearance &#10132; customize section of the wp-admin."
 msgstr ""
@@ -1874,68 +1858,68 @@ msgstr ""
 msgid "ComicPress - Scheduled Posts"
 msgstr ""
 
-#: widgets/translator.php:22
-#@ comicpress
-msgid "ComicPress - Google Translator"
-msgstr ""
-
 #: options/splash.php:7
-#@ comiceasel
+#@ comicpress
 msgid "Technical Support"
 msgstr ""
 
 #: options/splash.php:12
-#@ comiceasel
+#@ comicpress
 msgid "You can contact me for technical support at any of the following locations: "
 msgstr ""
 
 #: options/splash.php:13
-#@ comiceasel
+#@ comicpress
 msgid "(best chances to reach me at the top going down to the least chance)"
 msgstr ""
 
-#: options/splash.php:15
+#: options/splash.php:18
 #@ comiceasel
 msgid "Form Email:"
 msgstr ""
 
-#: options/splash.php:16
+#: options/splash.php:21
 #@ comiceasel
 msgid "Via Facebook:"
 msgstr ""
 
-#: options/splash.php:17
-#@ comiceasel
+#: options/splash.php:25
+#@ comicpress
 msgid "WebComics.COM Forums:"
 msgstr ""
 
-#: options/splash.php:17
-#@ comiceasel
+#: options/splash.php:26
+#@ comicpress
 msgid "(Subscription only)"
 msgstr ""
 
-#: options/splash.php:18
-#@ comiceasel
+#: options/splash.php:29
+#@ comicpress
 msgid "WordPress.ORG Forums:"
 msgstr ""
 
-#: options/splash.php:18
-#@ comiceasel
+#: options/splash.php:30
+#@ comicpress
 msgid "(rarely go here)"
 msgstr ""
 
-#: options/splash.php:19
-#@ comiceasel
+#: options/splash.php:33
+#@ comicpress
 msgid "On Twitter:"
 msgstr ""
 
-#: options/splash.php:19
-#@ comiceasel
-msgid "(Twitter and I are not friends atm)"
-msgstr ""
-
-#: options/splash.php:21
+#: options/splash.php:38
 #@ comicpress
 msgid "Please take note that I speak American-English only, pardon my ignorance and will try to understand you as best I can."
+msgstr ""
+
+#: widgets/classicbookmark.php:39
+#@ comicpress
+msgid "BOOKMARK"
+msgstr ""
+
+#: widgets/classicbookmark.php:39
+#@ comicpress
+msgid "Click \"Tag Page\" to bookmark a page. When you return to the site, click \"Goto Tag\" to continue where you left off."
 msgstr ""
 
