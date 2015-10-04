@@ -172,6 +172,7 @@ if (!function_exists('comicpress_is_layout')) {
 			if (in_array($comicpress_options['layout'], $choices)) return true;
 		elseif (in_array(get_theme_mod('comicpress-customize-select-layout', '3c'), $choices)) return true;
 		return false;
+		}
 	}
 }
 
