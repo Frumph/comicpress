@@ -39,31 +39,12 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		
 		</form>
 		
 		<table class="widefat">
-			<thead>
-				<tr>
-					<th colspan="3"><?php _e( 'Summary', 'comicpress' ); ?></th>
-				</tr>
-			</thead>
-		<tr>
-		    <td colspan="5">
-                <?php _e( 'Technical Support is available on the <a href="https://github.com/Frumph/comicpress/issues" target="_blank">github repository</a> or use the Contact form on <a href="http://frumph.net" target="_blank">Frumph.NET</a>.', 'comicpress' ); ?>
-            </td>
-        </tr>
-        <tr>
-			<td style= "width: 330px;"><strong><?php _e( 'Site URL', 'comicpress' ); ?></strong>:(siteurl)</td>
-			<td><?php echo site_url(); ?></td>
-		 </tr>
-		 <tr>
-			<td style= "width: 330px;"><strong><?php _e( 'Blog URL', 'comicpress' ); ?></strong>:(home)</td>
-			<td> <?php echo home_url(); ?></td>
-		 </tr>
-		</table>
-		<table class="widefat">
+		<!--
 			<?php 
+			// hidden with <!-- from displaying, but not hidden from view-source
 			$variable_dump = comicpress_themeinfo(); 
 			if (is_array($variable_dump)) {
 				while (list($key, $value) = each($variable_dump)) { ?>
@@ -74,6 +55,7 @@
 			<?php }
         	}
     		?>
+    	// -->
 		</table>
 	</div>
 </div>
