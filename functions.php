@@ -167,7 +167,10 @@ function comicpress_close_up_shop() {
 if (!function_exists('comicpress_is_layout')) {
 	function comicpress_is_layout($choices) {
 		$choices = explode(",", $choices);
-		if (in_array(get_theme_mod('comicpress-customize-select-layout','3c'), $choices)) return true;
+		$comicpress_options = comicpress_load_options();
+		if (isset($comicpress_options['layout']) && !intval(get_theme_mod('comicpress-customize-select-layout', 0))) {		
+			if (in_array($comicpress_options['layout'], $choices)) return true;
+		elseif (in_array(get_theme_mod('comicpress-customize-select-layout', '3c'), $choices)) return true;
 		return false;
 	}
 }

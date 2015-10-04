@@ -339,6 +339,10 @@ class comicpress_Customize {
 				$default_width = 780;
 				break;
 			case '3c':
+			case '3cl':
+			case '3cr':
+			case '3clw':
+			case '3crw':
 			case '3clgn':
 			case '3crgn':
 			default:
