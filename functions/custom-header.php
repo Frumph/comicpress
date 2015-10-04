@@ -3,9 +3,9 @@
 $custom_header_args = array(
 			'default-text-color' => 'B00',
 			'flex-width' => true,
-			'width' => comicpress_themeinfo('custom_image_header_width'),
+			'width' => get_theme_mod('comicpress-customize-range-site-width', '980'),
 			'flex-height' => true,
-			'height' => comicpress_themeinfo('custom_image_header_height'),
+			'height' => '110',
 			'header-text' => false,
 			'wp-head-callback' => 'comicpress_header_style',
 			'admin-head-callback' => 'comicpress_admin_header_style',
