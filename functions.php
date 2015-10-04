@@ -266,71 +266,90 @@ function comicpress_infinite_scroll_loop() {
 	endwhile;
 }
 
+/**
+ * function load default settings
+ */
 function comicpress_load_options() {
 
 	$comicpress_options = get_option('cp-options');
 	if (empty($comicpress_options)) {
 		
 		foreach (array(
-			'disable_jquery_menu_code' => false,
-			'disable_scroll_to_top' => false,
-			'enable_avatar_trick' => true,
-			'disable_default_design' => false,
-			'disable_comment_note' => true,
-			'enable_numbered_pagination' => true,
-			'disable_comment_javascript' => false,
-			'enable_post_thumbnail_rss' => true,
-			'disable_page_titles' => false,
-			'disable_post_titles' => false,			
-			'enable_post_calendar' => false,
-			'enable_post_author_gravatar' => false,
-			'disable_categories_in_posts' => false,
-			'disable_tags_in_posts' => false,
-			'disable_author_info_in_posts' => false,
-			'disable_date_info_in_posts' => false,
-			'home_post_count' => '5',
-			'disable_footer_text' => false,
-			'disable_default_menubar' => false,
-			'enable_search_in_menubar' => false,
-			'enable_rss_in_menubar' => true,
-			'avatar_directory' => 'none',
-			'enable_debug_footer_code' => false,
-			'disable_blog_on_homepage' => false,
-			'enable_comments_on_homepage' => false,
-			'custom_image_header_width' => '980',
-			'custom_image_header_height' => '100',
-			'copyright_name' => '',
-			'copyright_url' => '',
-			'facebook_like_blog_post' => false,
-			'facebook_meta' => false,
-			'display_archive_as_links' => false,
-			'archive_display_order' => 'DESC',
-// 			'layout' => '3c',  -- remove
-			'first_run' => true, /* no longer used */
-			'force_active_connection_close' => false,
-			'removed_option' => true,
-			'menubar_social_icons' => false,
-			'menubar_social_twitter' => '',
-			'menubar_social_facebook' => '',
-			'enable_breadcrumbs' => false,
-			'excerpt_or_content_in_archive' => 'excerpt',
-			'enable_last_modified_in_posts' => false,
-			'disable_posted_at_time_in_posts' => false,
-			'menubar_social_googleplus' => '',
-			'menubar_social_linkedin' => '',
-			'menubar_social_pinterest' => '',
-			'menubar_social_youtube' => '',
-			'menubar_social_flickr' => '',
-			'menubar_social_tumblr' => '',
-			'menubar_social_deviantart' => '',
-			'menubar_social_myspace' => '',
-			'menubar_social_email' => '',
-			'enable_jetpack_infinite_scrolling' => false,
-			'content_width' => 500,
-			'content_width_disabled_sidebars' => 700,
-			'add_pw_async_code_to_head' => false,
-			'over-blog-sidebar-all-posts' => false,
-			'moods_directory' => 'none'
+				// General
+				'home_post_count' => '5',
+				'disable_blog_on_homepage' => false,
+				'add_pw_async_code_to_head' => false,
+				'over-blog-sidebar-all-posts' => false,
+				// Custom Header
+				'custom_image_header_width' => '980',
+				'custom_image_header_height' => '100',
+				// Content Width
+				'content_width' => 500,
+				'content_width_disabled_sidebars' => 700,
+				// Pages
+				'disable_page_titles' => false,
+				// Posts
+				'disable_post_titles' => false,
+				'enable_post_calendar' => false,
+				'enable_post_author_gravatar' => false,
+				'enable_avatar_trick' => true,
+				'disable_tags_in_posts' => false,
+				'disable_categories_in_posts' => false,
+				'disable_author_info_in_posts' => false,
+				'disable_date_info_in_posts' => false,
+				'disable_posted_at_time_in_posts' => false,
+				'enable_last_modified_in_posts' => false,
+				'moods_directory' => 'none',
+				// Comments
+				'disable_comment_note' => true,
+				'disable_comment_javascript' => false,
+				'enable_comments_on_homepage' => false,
+				'avatar_directory' => 'none',
+				// Navigation
+				'enable_numbered_pagination' => true,
+				// Footer
+				'disable_footer_text' => false,
+				'disable_scroll_to_top' => false,
+				'copyright_name' => '',
+				'copyright_url' => '',
+				// RSS
+				'enable_post_thumbnail_rss' => true,
+				// Archive & Search
+				'display_archive_as_links' => false,
+				'excerpt_or_content_in_archive' => 'excerpt',
+				'archive_display_order' => 'DESC',
+				// Menubar
+				'disable_default_menubar' => false,
+				'enable_search_in_menubar' => false,
+				'enable_rss_in_menubar' => true,
+				'disable_jquery_menu_code' => false,
+				'enable_breadcrumbs' => false,
+				// Menubar - Social Icons
+				'menubar_social_icons' => false,
+				'menubar_social_twitter' => '',
+				'menubar_social_facebook' => '',
+				'menubar_social_googleplus' => '',
+				'menubar_social_linkedin' => '',
+				'menubar_social_pinterest' => '',
+				'menubar_social_youtube' => '',
+				'menubar_social_flickr' => '',
+				'menubar_social_tumblr' => '',
+				'menubar_social_deviantart' => '',
+				'menubar_social_myspace' => '',
+				'menubar_social_email' => '',
+				// Debug
+				'enable_debug_footer_code' => false,
+				'force_active_connection_close' => false,
+				// Jetpack
+				'enable_jetpack_infinite_scrolling' => false,
+				// Facebook
+				'facebook_like_blog_post' => false,
+				'facebook_meta' => false,
+				// ???
+				'disable_default_design' => false,
+// 				'layout' => '3c',  -- remove
+				'first_run' => true, /* no longer used */
+				'removed_option' => true
 		) as $field => $value) {
 			$comicpress_options[$field] = $value;
 		}
