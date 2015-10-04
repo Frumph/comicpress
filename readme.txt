@@ -30,9 +30,10 @@ PHP:       5.4
 == Changelog ==
 
 = 4.3.? =
-* changed layout in Debugger page
-* fixed some little errors in widget classic bookmark
-* removed widget google translaor
+* reworked all ComicPress options pages
+* fixed problems with costumizer layout and header
+* fixed some little errors in widget "classic bookmark"
+* removed widget "google translaor"
 
 = 4.3 =
 * wp_title filter removed and now using WordPress's default one
