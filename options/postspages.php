@@ -110,7 +110,7 @@
 						$thisdir = null;
 						$thisdir = array();
 						$thisdir = glob($moodir. '/images/moods/*');
-						$mood_directories = array_merge($mood_directories, $thisdir); 		
+						$mood_directories = array_merge($mood_directories, $thisdir);	
 					}
 				}
 				?>
@@ -149,7 +149,7 @@
 					<td>
 						<?php _e( 'Page titles will be turned off. If you disable the titles no pages you can still add a post-image in the page editor.', 'comicpress' ); ?>
 					</td>
-				</tr>			
+				</tr>
 			</table>
 			<br />
 			<table class="widefat">
@@ -162,10 +162,10 @@
 					<?php
                     if (!isset($comicpress_options['content_width']))
                         $comicpress_options['content_width'] = 500;
- ?>
+ 					?>
 					<th scope="row"><label for="content_width"><?php _e( 'Media and images width on posts and pages?', 'comicpress' ); ?></label></th>
 					<td>
-						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" />px
+						<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" /> px
 					</td>
 					<td>
 						<?php _e( 'This sets a specific width for WordPress to use for media content within your posts and pages. Default = 500', 'comicpress' ); ?>
@@ -175,10 +175,10 @@
 					<?php
                     if (!isset($comicpress_options['content_width_disabled_sidebars']))
                         $comicpress_options['content_width_disabled_sidebars'] = 700;
- ?>
+                    ?>
 					<th scope="row"><label for="content_width_disabled_sidebars"><?php _e( 'Media and images width when sidebars are disabled on pages?', 'comicpress' ); ?></label></th>
 					<td>
-						<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" />px
+						<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" /> px
 					</td>
 					<td>
 						<?php _e( 'When the sidebars are disabled on pages? Default = 700', 'comicpress' ); ?>
