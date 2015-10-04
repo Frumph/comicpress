@@ -31,7 +31,7 @@
 				<tr>
 				</tr>
 					<td style= "width: 180px;"><?php _e( 'On Twitter:', 'comicpress' ); ?></td>
-					<td><a href="http://twitter.com/Frumph">http://twitter.com/Frumph</a> <?php _e( '(Twitter and I are not friends atm)', 'comicpress' ); ?></td>
+					<td><a href="http://twitter.com/Frumph">http://twitter.com/Frumph</a></td>
 				</tr>
 				<tr>
 					<td colspan="5">
