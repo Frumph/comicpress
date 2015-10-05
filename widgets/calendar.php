@@ -363,7 +363,7 @@ class comicpress_calendar_widget extends WP_Widget {
 	}
 }
 
-// register Scheduled Posts widget
+// register Calendar widget
 function comicpress_calendar_widget_init() {
 	register_widget('comicpress_calendar_widget');
 }
