@@ -156,7 +156,7 @@ function comicpress_excerpt_length($length) {
 
 if (!function_exists('comicpress_auto_excerpt_more')) {
 	function comicpress_auto_excerpt_more( $more ) {
-		return __( ' [&hellip;]', 'comicpress' ) . ' <a class="more-link" href="'. get_permalink() . '">' . __( '&darr; Read the rest of this entry...', 'comicpress' ) . '</a>';
+		return __( '[&hellip;]', 'comicpress' ) . '<a class="more-link" href="'. get_permalink() . '">' . __( '&darr; Read the rest of this entry...', 'comicpress' ) . '</a>';
 	}
 }
 

@@ -4,13 +4,12 @@
 			<table class="widefat">
 				<thead>
 					<tr>
-						<th colspan="3"><?php _e( 'First Steps', 'comicpress' ); ?></th>
+						<th colspan="3"><?php _e( 'Notices', 'comicpress' ); ?></th>
 					</tr>
 				</thead>
 					<tr>
 					<td colspan="5">
-						<?php _e( 'Here you can specify the default functions of the theme.', 'comicpress' ); ?><br />
-						<strong><?php _e( 'Costumize (aka Schema, Layout, Site Width and Textcolors) can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
+						<?php _e( 'Schema, layout, site width and colors can be modified in the <strong>Appearance &#10132; Customize</strong> section of the wp-admin.', 'comicpress' ); ?>
 					</td>
 				</tr>
 			</table>
