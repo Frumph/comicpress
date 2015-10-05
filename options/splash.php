@@ -4,16 +4,30 @@
 			<table class="widefat">
 				<thead>
 					<tr>
+						<th colspan="3"><?php _e( 'First Steps', 'comicpress' ); ?></th>
+					</tr>
+				</thead>
+					<tr>
+					<td colspan="5">
+						<?php _e( 'Here you can specify the default functions of the theme.', 'comicpress' ); ?><br />
+						<strong><?php _e( 'Costumize (aka Schema, Layout, Site Width and Textcolors) can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong>
+					</td>
+				</tr>
+			</table>
+			<br />
+			<table class="widefat">
+				<thead>
+					<tr>
 						<th colspan="3"><?php _e( 'Technical Support', 'comicpress' ); ?></th>
 					</tr>
 				</thead>
 				<tr>
 					<td colspan="5">
-						<?php _e( 'You can contact me for technical support at any of the following locations: ', 'comicpress' ); ?><br />
-						<em><?php _e( '(best chances to reach me at the top going down to the least chance)', 'comicpress' ); ?></em><br />
+						<?php _e( 'You can contact me for technical support at any of the following locations:', 'comicpress' ); ?><br />
+						<em><?php _e( '(best chances to reach me at the top going down to the least chance)', 'comicpress' ); ?></em>
 					</td>
 				</tr>
-						<br />
+				<br />
 				<tr>
 					<td style= "width: 180px;"><?php _e( 'Form Email:', 'comiceasel' ); ?></td>
 					<td><a href="http://frumph.net/contact/">http://frumph.net/contact/</a></td>
@@ -39,8 +53,6 @@
 					</td>
 				</tr>
 			</table>
-			<br />
-			<strong><?php _e( 'Schemes, layout and Site Width along with other customizations can be modified in the appearance &#10132; customize section of the wp-admin.', 'comicpress' ); ?></strong><br />
 			<br />
 		</div>
 </div>
