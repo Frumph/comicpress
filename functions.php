@@ -87,7 +87,7 @@ function comicpress_pre_parser($query) {
 //		$query->set('category__in', '8');
 		$query->set('posts_per_page', comicpress_themeinfo('home_post_count'));
 	}
-	if (($query->is_archive() || $query->is_search() || is_post_type_archive())  && !$query->is_feed() && $query->is_main_query()) {	
+	if (($query->is_archive() || $query->is_search() || is_post_type_archive())  && !$query->is_feed() && $query->is_main_query()) {
 		$archive_display_order = comicpress_themeinfo('archive_display_order');
 		if (empty($archive_display_order)) $archive_display_order = 'desc';
 		$query->set('order', $archive_display_order);
@@ -212,7 +212,7 @@ function comicpress_sidebars_disabled() {
 
 global $content_width;
 if (!isset($content_width)) {
-	$content_width = comicpress_themeinfo('content_width');		
+	$content_width = comicpress_themeinfo('content_width');
 	if (!$content_width) $content_width = 500;
 }
 
@@ -233,7 +233,7 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($deviantart)) $output .= '<a href="'.$deviantart.'" target="_blank" title="'.__( 'my DeviantART', 'comicpress' ).'" class="menunav-social menunav-deviantart">'.__( 'DeviantART', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($tumblr)) $output .= '<a href="'.$tumblr.'" target="_blank" title="'.__( 'Examine my Tumblr', 'comicpress' ).'" class="menunav-social menunav-tumblr">'.__( 'Tumblr', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($facebook)) $output .= '<a href="'.$facebook.'" target="_blank" title="'.__( 'Friend on Facebook', 'comicpress' ).'" class="menunav-social menunav-facebook">'.__( 'Facebook', 'comicpress' ).'</a>'."\r\n";
-		if (!empty($myspace)) $output .= '<a href="'.$myspace.'" target="_blank" title="'.__( 'Make use of MySpace', 'comicpress' ).'" class="menunav-social menunav-myspace">'.__( 'MySpace', 'comicpress' ).'</a>'."\r\n";		
+		if (!empty($myspace)) $output .= '<a href="'.$myspace.'" target="_blank" title="'.__( 'Make use of MySpace', 'comicpress' ).'" class="menunav-social menunav-myspace">'.__( 'MySpace', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($linkedin)) $output .= '<a href="'.$linkedin.'" target="_blank" title="'.__( 'Look at my LinkedIn', 'comicpress' ).'" class="menunav-social menunav-linkedin">'.__( 'LinkedIn', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__( 'Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";		
@@ -253,7 +253,6 @@ if (!function_exists('comicpress_display_social_icons')) {
  *
  * @param string $filename the BASE filename
  * @return string returns the rawurlencoded filename with the %2F put back to /
- *
  */
 function comicpress_clean_filename($filename) {
 	return str_replace("%2F", "/", rawurlencode($filename));
