@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-29 09:37-0800\n"
-"PO-Revision-Date: 2015-10-06 09:30:59+0000\n"
+"PO-Revision-Date: 2015-10-06 09:43:30+0000\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1825,12 +1825,12 @@ msgid "(best chances to reach me at the top going down to the least chance)"
 msgstr ""
 
 #: options/splash.php:31
-#@ comiceasel
+#@ comicpress
 msgid "Form Email:"
 msgstr ""
 
 #: options/splash.php:34
-#@ comiceasel
+#@ comicpress
 msgid "Via Facebook:"
 msgstr ""
 
