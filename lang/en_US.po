@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-29 09:37-0800\n"
-"PO-Revision-Date: 2015-10-04 15:20:29+0000\n"
+"PO-Revision-Date: 2015-10-06 09:30:59+0000\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -220,7 +220,7 @@ msgstr ""
 #: functions/customize.php:197
 #: functions.php:54
 #: functions.php:110
-#: options/general.php:327
+#: options/general.php:59
 #@ comicpress
 msgid "Footer"
 msgstr ""
@@ -269,7 +269,7 @@ msgstr ""
 #: functions/customize.php:172
 #: functions.php:107
 #: options/menubar.php:10
-#: options.php:175
+#: options.php:224
 #@ comicpress
 msgid "Menubar"
 msgstr ""
@@ -329,143 +329,139 @@ msgstr ""
 msgid "Jetpack Mobile Sidebar"
 msgstr ""
 
-#: functions.php:159
-#@ comicpress
-msgid " [&hellip;]"
-msgstr ""
-
 #: functions/displaypost.php:213
 #: functions.php:159
 #@ comicpress
 msgid "&darr; Read the rest of this entry..."
 msgstr ""
 
-#: functions.php:234
-#: options/menubar.php:114
+#: functions.php:233
+#: options/menubar.php:134
 #@ comicpress
 msgid "DeviantART"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:234
 #@ comicpress
 msgid "Examine my Tumblr"
 msgstr ""
 
-#: functions.php:235
-#: options/menubar.php:108
+#: functions.php:234
+#: options/menubar.php:126
 #@ comicpress
 msgid "Tumblr"
 msgstr ""
 
-#: functions.php:236
+#: functions.php:235
 #@ comicpress
 msgid "Friend on Facebook"
 msgstr ""
 
 #: author.php:79
-#: functions.php:236
-#: options/menubar.php:76
+#: functions.php:235
+#: options/menubar.php:82
 #@ comicpress
 msgid "Facebook"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:236
 #@ comicpress
 msgid "Make use of MySpace"
 msgstr ""
 
-#: functions.php:237
-#: options/menubar.php:120
+#: functions.php:236
+#: options/menubar.php:142
 #@ comicpress
 msgid "MySpace"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:237
 #@ comicpress
 msgid "Look at my LinkedIn"
 msgstr ""
 
-#: functions.php:238
-#: options/menubar.php:84
+#: functions.php:237
+#: options/menubar.php:94
 #@ comicpress
 msgid "LinkedIn"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:238
 #@ comicpress
 msgid "Follow me on Twitter"
 msgstr ""
 
 #: author.php:73
-#: functions.php:239
-#: options/menubar.php:74
+#: functions.php:238
+#: options/menubar.php:78
 #@ comicpress
 msgid "Twitter"
 msgstr ""
 
-#: functions.php:240
+#: functions.php:239
 #@ comicpress
 msgid "Gaze at my Flickr"
 msgstr ""
 
-#: functions.php:240
-#: options/menubar.php:102
+#: functions.php:239
+#: options/menubar.php:118
 #@ comicpress
 msgid "Flickr"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:240
 #@ comicpress
 msgid "Email me"
 msgstr ""
 
 #: author.php:61
-#: functions.php:241
+#: functions.php:240
+#: options/menubar.php:150
 #@ comicpress
 msgid "Email"
 msgstr ""
 
-#: functions.php:242
+#: functions.php:241
 #@ comicpress
 msgid "Circle me on Google+"
 msgstr ""
 
 #: author.php:85
-#: functions.php:242
-#: options/menubar.php:78
+#: functions.php:241
+#: options/menubar.php:86
 #@ comicpress
 msgid "Google+"
 msgstr ""
 
-#: functions.php:243
+#: functions.php:242
 #@ comicpress
 msgid "Peruse my Pinterests"
 msgstr ""
 
-#: functions.php:243
-#: options/menubar.php:90
+#: functions.php:242
+#: options/menubar.php:102
 #@ comicpress
 msgid "pinterest"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:243
 #@ comicpress
 msgid "My Channel on YouTube"
 msgstr ""
 
-#: functions.php:244
-#: options/menubar.php:96
+#: functions.php:243
+#: options/menubar.php:110
 #@ comicpress
 msgid "YouTube"
 msgstr ""
 
-#: functions.php:245
+#: functions.php:244
 #@ comicpress
 msgid "RSS Feed"
 msgstr ""
 
-#: functions.php:245
-#: options/general.php:369
+#: functions.php:244
+#: options/general.php:101
 #@ comicpress
 msgid "RSS"
 msgstr ""
@@ -477,7 +473,7 @@ msgid "&raquo;"
 msgstr ""
 
 #. translators: theme discription for wp-admin
-#: functions.php:379
+#: functions.php:374
 #@ comicpress
 msgid "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
@@ -533,39 +529,39 @@ msgstr ""
 msgid "ComicPress Customizer Colors RESET!"
 msgstr ""
 
-#: options.php:162
+#: options.php:211
 #@ comicpress
 msgid "ComicPress Settings SAVED!"
 msgstr ""
 
 #: options/general.php:10
-#: options.php:174
+#: options.php:223
 #@ comicpress
 msgid "General"
 msgstr ""
 
 #: options/debug.php:10
-#: options.php:176
+#: options.php:228
 #@ comicpress
 msgid "Debug"
 msgstr ""
 
-#: options.php:218
+#: options.php:270
 #@ comicpress
 msgid "Developed and maintained by"
 msgstr ""
 
-#: options.php:218
+#: options.php:270
 #@ comicpress
 msgid "Originally created by"
 msgstr ""
 
-#: options.php:233
+#: options.php:285
 #@ comicpress
 msgid "Reset All Settings"
 msgstr ""
 
-#: options.php:240
+#: options.php:292
 #@ comicpress
 msgid "Reset Customizer Colors"
 msgstr ""
@@ -993,9 +989,12 @@ msgstr ""
 msgid "Force MySQL to close the current active connection after page load?"
 msgstr ""
 
+#: options/archivesearch.php:70
+#: options/comments.php:81
 #: options/debug.php:36
-#: options/general.php:428
-#: options/menubar.php:140
+#: options/general.php:120
+#: options/menubar.php:164
+#: options/postspages.php:194
 #@ comicpress
 msgid "Save Settings"
 msgstr ""
@@ -1025,143 +1024,145 @@ msgstr ""
 msgid "Sidebar Over-Blog appears on all posts not just the front page/blog loop when enabled."
 msgstr ""
 
-#: options/general.php:59
+#: options/postspages.php:158
 #@ comicpress
 msgid "Content Width"
 msgstr ""
 
-#: options/general.php:67
+#: options/postspages.php:166
 #@ comicpress
 msgid "Media and images width on posts and pages?"
 msgstr ""
 
-#: options/general.php:80
+#: options/postspages.php:179
 #@ comicpress
 msgid "Media and images width when sidebars are disabled on pages?"
 msgstr ""
 
-#: options/general.php:93
+#: options/postspages.php:141
 #@ comicpress
 msgid "Pages"
 msgstr ""
 
-#: options/general.php:110
+#: options/postspages.php:10
 #@ comicpress
 msgid "Posts"
 msgstr ""
 
-#: options/general.php:128
+#: options/postspages.php:28
 #@ comicpress
 msgid "Enabling this option will display a calendar image on your blog posts. The graphic calendar is an image that has the date of the blog post overlayed on top of it."
 msgstr ""
 
-#: options/general.php:146
+#: options/postspages.php:46
 #@ comicpress
 msgid "With this enabled, the avatar's that are displayed will be jquery modified to look like polaroids randomly tilted."
 msgstr ""
 
-#: options/general.php:155
+#: options/postspages.php:55
 #@ comicpress
 msgid "Checkmarking this will make it so that tags will not appear in posts."
 msgstr ""
 
-#: options/general.php:164
+#: options/postspages.php:64
 #@ comicpress
 msgid "Checkmarking this will make it so that categories will not appear in posts."
 msgstr ""
 
-#: options/general.php:173
+#: options/postspages.php:73
 #@ comicpress
 msgid "Checkmarking this will make it so that the by Author information will not appear in posts."
 msgstr ""
 
-#: options/general.php:182
+#: options/postspages.php:82
 #@ comicpress
 msgid "Checkmarking this will make it so that posted on date information will not appear in posts."
 msgstr ""
 
-#: options/general.php:191
+#: options/postspages.php:91
 #@ comicpress
 msgid "Checkmarking this will make it so that the information about what time the post was made will not show."
 msgstr ""
 
-#: options/general.php:200
+#: options/postspages.php:100
 #@ comicpress
 msgid "Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information."
 msgstr ""
 
 #: functions/displaypost.php:176
-#: options/general.php:241
+#: options/comments.php:10
+#: options.php:226
 #@ comicpress
 msgid "Comments"
 msgstr ""
 
-#: options/general.php:250
+#: options/comments.php:19
 #@ comicpress
 msgid "Disabling this will remove the note text that displays with more options for adding to comments (html)."
 msgstr ""
 
-#: options/general.php:259
+#: options/comments.php:28
 #@ comicpress
 msgid "Checkmark this if you want the comment form to not use javascript to appear directly under who is being replied to. (increases pageviews/hits)"
 msgstr ""
 
-#: options/general.php:288
+#: options/comments.php:57
 #@ comicpress
 msgid "Avatar Directory"
 msgstr ""
 
-#: options/general.php:310
+#: options/archivesearch.php:51
 #@ comicpress
 msgid "Navigation"
 msgstr ""
 
-#: options/general.php:319
+#: options/archivesearch.php:60
 #@ comicpress
 msgid "Previous Entries and Next Entries buttons are replaced by a bar of numbered pages. Numbered pagination appears on the Home page, the author(s) page, the blog template, and comments/single when there are more then the set number of comments per page. Uses the same styling as the Menubar."
 msgstr ""
 
-#: options/general.php:340
+#: options/general.php:72
 #@ comicpress
 msgid "Disable the scroll to top link in the footer?"
 msgstr ""
 
-#: options/general.php:345
+#: options/general.php:77
 #@ comicpress
 msgid "When this link is clicked on long pages it will scroll back to the top."
 msgstr ""
 
-#: options/general.php:349
+#: options/general.php:81
 #@ comicpress
 msgid "&copy; Copyright Name"
 msgstr ""
 
-#: options/general.php:373
+#: options/general.php:105
 #@ comicpress
 msgid "Enable the post thumbnails in the RSS feed?"
 msgstr ""
 
-#: options/general.php:378
+#: options/general.php:110
 #@ comicpress
 msgid "If enabled will show the post thumbnail of the post in the RSS feed."
 msgstr ""
 
-#: options/general.php:385
+#: options/archivesearch.php:10
+#: options.php:227
 #@ comicpress
 msgid "Archive & Search"
 msgstr ""
 
-#: options/general.php:389
+#: options/archivesearch.php:14
 #@ comicpress
 msgid "Display archive results as a list of links?"
 msgstr ""
 
-#: options/general.php:394
+#: options/archivesearch.php:19
 #@ comicpress
 msgid "Enabling this will make the archive pages by date/category/term display as a list of links instead of full posts."
 msgstr ""
 
-#: options/general.php:411
+#: options/archivesearch.php:36
 #@ comicpress
 msgid "Archive Display Order"
 msgstr ""
@@ -1476,8 +1477,8 @@ msgid "Available Moods, you can set which mood images to use in the comicpress O
 msgstr ""
 
 #: functions/moods.php:58
-#: options/general.php:221
-#: options/general.php:290
+#: options/comments.php:59
+#: options/postspages.php:121
 #@ comicpress
 msgid "none"
 msgstr ""
@@ -1497,7 +1498,7 @@ msgstr ""
 msgid "Current Mood: "
 msgstr ""
 
-#: functions.php:234
+#: functions.php:233
 #@ comicpress
 msgid "my DeviantART"
 msgstr ""
@@ -1522,182 +1523,182 @@ msgstr ""
 msgid "Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings &#10132; reading."
 msgstr ""
 
-#: options/general.php:72
+#: options/postspages.php:171
 #@ comicpress
 msgid "This sets a specific width for WordPress to use for media content within your posts and pages. Default = 500"
 msgstr ""
 
-#: options/general.php:85
+#: options/postspages.php:184
 #@ comicpress
 msgid "When the sidebars are disabled on pages? Default = 700"
 msgstr ""
 
-#: options/general.php:97
+#: options/postspages.php:145
 #@ comicpress
 msgid "Disable the titles on pages?"
 msgstr ""
 
-#: options/general.php:102
+#: options/postspages.php:150
 #@ comicpress
 msgid "Page titles will be turned off. If you disable the titles no pages you can still add a post-image in the page editor."
 msgstr ""
 
-#: options/general.php:114
+#: options/postspages.php:14
 #@ comicpress
 msgid "Disable the titles on posts?"
 msgstr ""
 
-#: options/general.php:119
+#: options/postspages.php:19
 #@ comicpress
 msgid "Post titles will be turned off. If you disable the titles on posts can still add a post-image in the post editor."
 msgstr ""
 
-#: options/general.php:123
+#: options/postspages.php:23
 #@ comicpress
 msgid "Add graphic calendar to blog posts?"
 msgstr ""
 
-#: options/general.php:132
+#: options/postspages.php:32
 #@ comicpress
 msgid "Enable Author Gravatar?"
 msgstr ""
 
-#: options/general.php:137
+#: options/postspages.php:37
 #@ comicpress
 msgid "Enabling this option will show a gravatar of the post author based on the author email address. Gravatars are associated by your email address and you can create them at"
 msgstr ""
 
-#: options/general.php:141
+#: options/postspages.php:41
 #@ comicpress
 msgid "Enable Avatar Mod?"
 msgstr ""
 
-#: options/general.php:150
+#: options/postspages.php:50
 #@ comicpress
 msgid "Disable display of <strong>tags</strong> in posts?"
 msgstr ""
 
-#: options/general.php:159
+#: options/postspages.php:59
 #@ comicpress
 msgid "Disable display of <strong>categories</strong> in posts?"
 msgstr ""
 
-#: options/general.php:168
+#: options/postspages.php:68
 #@ comicpress
 msgid "Disable display of <strong>by Author</strong> in post information?"
 msgstr ""
 
-#: options/general.php:177
+#: options/postspages.php:77
 #@ comicpress
 msgid "Disable display of the posted on date in posts?"
 msgstr ""
 
-#: options/general.php:186
+#: options/postspages.php:86
 #@ comicpress
 msgid "Disable the display of the posted at time in posts?"
 msgstr ""
 
-#: options/general.php:195
+#: options/postspages.php:95
 #@ comicpress
 msgid "Enable the display of last modified information in posts?"
 msgstr ""
 
-#: options/general.php:219
+#: options/postspages.php:119
 #@ comicpress
 msgid "Moods Directory"
 msgstr ""
 
-#: options/general.php:233
+#: options/postspages.php:133
 #@ comicpress
 msgid "Choose a directory to get the post moods from. Set this to <strong>none</strong> to turn off use. Mood directories are found in your theme directory/images/moods/* . To create your own custom moods just create a directory under images/moods/ and place ONLY image files inside of it. The name of the image file represents what the mood is."
 msgstr ""
 
-#: options/general.php:245
+#: options/comments.php:14
 #@ comicpress
 msgid "Disable the comment notes?"
 msgstr ""
 
-#: options/general.php:254
+#: options/comments.php:23
 #@ comicpress
 msgid "Disable Comment Javascript?"
 msgstr ""
 
-#: options/general.php:263
+#: options/comments.php:32
 #@ comicpress
 msgid "Enable Comments on Home Page?"
 msgstr ""
 
-#: options/general.php:268
+#: options/comments.php:37
 #@ comicpress
 msgid "Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them. This will ONLY work if you have it set to only display 1 post on the home page. The post count and this must be set to work."
 msgstr ""
 
-#: options/general.php:302
+#: options/comments.php:71
 #@ comicpress
 msgid "Choose a directory to get the avatars for default gravatars if someone does not have one. You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. Setting this to <strong>none</strong> will disable it from using any special avatar sets."
 msgstr ""
 
-#: options/general.php:314
+#: options/archivesearch.php:55
 #@ comicpress
 msgid "Enable numbered pagination?"
 msgstr ""
 
-#: options/general.php:331
+#: options/general.php:63
 #@ comicpress
 msgid "Disable the default text in the footer?"
 msgstr ""
 
-#: options/general.php:336
+#: options/general.php:68
 #@ comicpress
 msgid "Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer."
 msgstr ""
 
-#: options/general.php:353
+#: options/general.php:85
 #@ comicpress
 msgid "Set the name to which this site is &copy; Copyright to. Leave blank to have the site name."
 msgstr ""
 
-#: options/general.php:357
+#: options/general.php:89
 #@ comicpress
 msgid "&copy; Copyright Holder URL"
 msgstr ""
 
-#: options/general.php:361
+#: options/general.php:93
 #@ comicpress
 msgid "Set the URL to the owner of the &copy; Copyright if different then this website. Leave blank for sites link."
 msgstr ""
 
-#: options/general.php:399
+#: options/archivesearch.php:24
 #@ comicpress
 msgid "Excerpt or Full Content in archive and search?"
 msgstr ""
 
-#: options/general.php:401
+#: options/archivesearch.php:26
 #@ comicpress
 msgid "Excerpt"
 msgstr ""
 
-#: options/general.php:402
+#: options/archivesearch.php:27
 #@ comicpress
 msgid "Full Content"
 msgstr ""
 
-#: options/general.php:406
+#: options/archivesearch.php:31
 #@ comicpress
 msgid "If Display archives results as list is disabled, decide how much is seen in the archive display."
 msgstr ""
 
-#: options/general.php:413
+#: options/archivesearch.php:38
 #@ comicpress
 msgid "Oldest to Newest &mdash; Ascending"
 msgstr ""
 
-#: options/general.php:414
+#: options/archivesearch.php:39
 #@ comicpress
 msgid "Newest to Oldest &mdash; Descending"
 msgstr ""
 
-#: options/general.php:418
+#: options/archivesearch.php:43
 #@ comicpress
 msgid "Sets the display order of your archives. Newest to Oldest will display your posts starting with the most recent. Oldest to Newest will start with the first entry in the category, tag, or date range (e.g. Selecting May 20XX will start with May 1, not May 31st.)"
 msgstr ""
@@ -1732,22 +1733,12 @@ msgstr ""
 msgid "Adds additional social icons in the menubar on in the menunav area. Put the entire http:// url in the input box that leads to your account on those sites. Leave field empty if you do not have one and it will not show."
 msgstr ""
 
-#: options/menubar.php:126
-#@ comicpress
-msgid "Email &mdash; use mailto://your@email.com"
-msgstr ""
-
-#: options/splash.php:43
-#@ comicpress
-msgid "Schemes, layout and Site Width along with other customizations can be modified in the appearance &#10132; customize section of the wp-admin."
-msgstr ""
-
-#: options.php:173
+#: options.php:222
 #@ comicpress
 msgid "Introduction"
 msgstr ""
 
-#: options.php:219
+#: options.php:271
 #@ comicpress
 msgid "If you like the ComicPress theme, please donate. It will help in developing new features and versions."
 msgstr ""
@@ -1823,57 +1814,52 @@ msgstr ""
 msgid "ComicPress - Scheduled Posts"
 msgstr ""
 
-#: options/splash.php:7
+#: options/splash.php:20
 #@ comicpress
 msgid "Technical Support"
 msgstr ""
 
-#: options/splash.php:12
-#@ comicpress
-msgid "You can contact me for technical support at any of the following locations: "
-msgstr ""
-
-#: options/splash.php:13
+#: options/splash.php:26
 #@ comicpress
 msgid "(best chances to reach me at the top going down to the least chance)"
 msgstr ""
 
-#: options/splash.php:18
+#: options/splash.php:31
 #@ comiceasel
 msgid "Form Email:"
 msgstr ""
 
-#: options/splash.php:21
+#: options/splash.php:34
 #@ comiceasel
 msgid "Via Facebook:"
 msgstr ""
 
-#: options/splash.php:25
+#: options/splash.php:38
 #@ comicpress
 msgid "WebComics.COM Forums:"
 msgstr ""
 
-#: options/splash.php:26
+#: options/splash.php:39
 #@ comicpress
 msgid "(Subscription only)"
 msgstr ""
 
-#: options/splash.php:29
+#: options/splash.php:42
 #@ comicpress
 msgid "WordPress.ORG Forums:"
 msgstr ""
 
-#: options/splash.php:30
+#: options/splash.php:43
 #@ comicpress
 msgid "(rarely go here)"
 msgstr ""
 
-#: options/splash.php:33
+#: options/splash.php:46
 #@ comicpress
 msgid "On Twitter:"
 msgstr ""
 
-#: options/splash.php:38
+#: options/splash.php:51
 #@ comicpress
 msgid "Please take note that I speak American-English only, pardon my ignorance and will try to understand you as best I can."
 msgstr ""
@@ -1886,5 +1872,125 @@ msgstr ""
 #: widgets/classicbookmark.php:39
 #@ comicpress
 msgid "Click \"Tag Page\" to bookmark a page. When you return to the site, click \"Goto Tag\" to continue where you left off."
+msgstr ""
+
+#: functions.php:159
+#@ comicpress
+msgid "[&hellip;]"
+msgstr ""
+
+#: options/menubar.php:155
+#@ comicpress
+msgid "use mailto://your@email.com"
+msgstr ""
+
+#: options/splash.php:7
+#@ comicpress
+msgid "Notices"
+msgstr ""
+
+#: options/splash.php:12
+#@ comicpress
+msgid "Schema, layout, site width and colors can be modified in the <strong>Appearance &#10132; Customize</strong> section of the wp-admin."
+msgstr ""
+
+#: options/splash.php:25
+#@ comicpress
+msgid "You can contact me for technical support at any of the following locations:"
+msgstr ""
+
+#: options.php:225
+#@ comicpress
+msgid "Posts & Pages"
+msgstr ""
+
+#. translators: Calendar caption: 1: month name, 2: 4-digit year
+#: widgets/calendar.php:97
+#, php-format
+#@ comicpress
+msgctxt "calendar caption"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: widgets/calendar.php:98
+#@ comicpress
+msgid "Calendar"
+msgstr ""
+
+#: widgets/calendar.php:123
+#: widgets/calendar.php:131
+#, php-format
+#@ comicpress
+msgid "View posts for %1$s %2$s"
+msgstr ""
+
+#: widgets/calendar.php:251
+#@ comicpress
+msgid "ComicPress - Posts Calendar"
+msgstr ""
+
+#: widgets/calendar.php:252
+#@ comicpress
+msgid "Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)"
+msgstr ""
+
+#: widgets/calendar.php:282
+#@ comicpress
+msgid "DOWNLOAD"
+msgstr ""
+
+#: widgets/calendar.php:285
+#@ comicpress
+msgid "Download Small"
+msgstr ""
+
+#: widgets/calendar.php:285
+#@ comicpress
+msgid "S"
+msgstr ""
+
+#: widgets/calendar.php:286
+#@ comicpress
+msgid "Download Medium"
+msgstr ""
+
+#: widgets/calendar.php:286
+#@ comicpress
+msgid "M"
+msgstr ""
+
+#: widgets/calendar.php:287
+#@ comicpress
+msgid "Download Large"
+msgstr ""
+
+#: widgets/calendar.php:287
+#@ comicpress
+msgid "L"
+msgstr ""
+
+#: widgets/calendar.php:343
+#@ comicpress
+msgid "Thumbnail URL (178px by 130px):"
+msgstr ""
+
+#: widgets/calendar.php:344
+#@ comicpress
+msgid "Add link on thumbnails:"
+msgstr ""
+
+#: widgets/calendar.php:345
+#@ comicpress
+msgid "Wallpaper URL (Small):"
+msgstr ""
+
+#: widgets/calendar.php:346
+#@ comicpress
+msgid "Wallpaper URL (Medium):"
+msgstr ""
+
+#: widgets/calendar.php:347
+#@ comicpress
+msgid "Wallpaper URL (Large):"
 msgstr ""
 
