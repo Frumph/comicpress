@@ -29,14 +29,12 @@ PHP:       5.4
 
 == Changelog ==
 
-= 4.3.? =
+= 4.3 =
 * re-added: widget "posts calender"
 * reworked: all ComicPress options pages
 * fixed: problems with costumizer layout and header
 * fixed: some little errors in widget "classic bookmark"
 * removed: widget "google translaor"
-
-= 4.3 =
 * wp_title filter removed and now using WordPress's default one
 * layout is controlled in the customizer now
 * templates for individual character and location for comic easel users landing pages added
