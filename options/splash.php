@@ -28,10 +28,10 @@
 				</tr>
 				<br />
 				<tr>
-					<td style= "width: 180px;"><?php _e( 'Form Email:', 'comiceasel' ); ?></td>
+					<td style= "width: 180px;"><?php _e( 'Form Email:', 'comicpress' ); ?></td>
 					<td><a href="http://frumph.net/contact/">http://frumph.net/contact/</a></td>
 				</tr>
-					<td style= "width: 180px;"><?php _e( 'Via Facebook:', 'comiceasel' ); ?></td>
+					<td style= "width: 180px;"><?php _e( 'Via Facebook:', 'comicpress' ); ?></td>
 					<td><a href="http://facebook.com/philip.hofer">http://facebook.com/philip.hofer</a></td>
 				<tr>
 				</tr>
