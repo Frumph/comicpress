@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-04 19:02+0200\n"
-"PO-Revision-Date: 2015-10-04 19:02+0200\n"
+"POT-Creation-Date: 2015-10-05 10:22+0200\n"
+"PO-Revision-Date: 2015-10-05 10:23+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -90,7 +90,7 @@ msgstr "Registriert am"
 msgid "Posts #"
 msgstr "Beiträge #"
 
-#: author.php:61 functions.php:241 options/menubar.php:150
+#: author.php:61 functions.php:240 options/menubar.php:150
 msgid "Email"
 msgstr "Email"
 
@@ -98,15 +98,15 @@ msgstr "Email"
 msgid "Website"
 msgstr "Website"
 
-#: author.php:73 functions.php:239 options/menubar.php:78
+#: author.php:73 functions.php:238 options/menubar.php:78
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:79 functions.php:236 options/menubar.php:82
+#: author.php:79 functions.php:235 options/menubar.php:82
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:85 functions.php:242 options/menubar.php:86
+#: author.php:85 functions.php:241 options/menubar.php:86
 msgid "Google+"
 msgstr "Google+"
 
@@ -303,95 +303,95 @@ msgid "Jetpack Mobile Sidebar"
 msgstr "Jetpack Mobile Sidebar"
 
 #: functions.php:159
-msgid " [&hellip;]"
-msgstr " [&hellip;]"
+msgid "[&hellip;]"
+msgstr "[&hellip;]"
 
 #: functions.php:159 functions/displaypost.php:213
 msgid "&darr; Read the rest of this entry..."
 msgstr "&darr; Lese den Rest dieses Eintrags ..."
 
-#: functions.php:234
+#: functions.php:233
 msgid "my DeviantART"
 msgstr "mein DeviantART"
 
-#: functions.php:234 options/menubar.php:134
+#: functions.php:233 options/menubar.php:134
 msgid "DeviantART"
 msgstr "DeviantART"
 
-#: functions.php:235
+#: functions.php:234
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
-#: functions.php:235 options/menubar.php:126
+#: functions.php:234 options/menubar.php:126
 msgid "Tumblr"
 msgstr "Tumblr"
 
-#: functions.php:236
+#: functions.php:235
 msgid "Friend on Facebook"
 msgstr "Freund auf Facebook"
 
-#: functions.php:237
+#: functions.php:236
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
-#: functions.php:237 options/menubar.php:142
+#: functions.php:236 options/menubar.php:142
 msgid "MySpace"
 msgstr "MySpace"
 
-#: functions.php:238
+#: functions.php:237
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein LinkedIn"
 
-#: functions.php:238 options/menubar.php:94
+#: functions.php:237 options/menubar.php:94
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: functions.php:239
+#: functions.php:238
 msgid "Follow me on Twitter"
 msgstr "Folge mir auf Twitter"
 
-#: functions.php:240
+#: functions.php:239
 msgid "Gaze at my Flickr"
 msgstr "Besuche mich bei Flickr"
 
-#: functions.php:240 options/menubar.php:118
+#: functions.php:239 options/menubar.php:118
 msgid "Flickr"
 msgstr "Flickr"
 
-#: functions.php:241
+#: functions.php:240
 msgid "Email me"
 msgstr "Maile mir"
 
-#: functions.php:242
+#: functions.php:241
 msgid "Circle me on Google+"
 msgstr "Circle mich auf Google+"
 
-#: functions.php:243
+#: functions.php:242
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
-#: functions.php:243 options/menubar.php:102
+#: functions.php:242 options/menubar.php:102
 msgid "pinterest"
 msgstr "Pinterest"
 
-#: functions.php:244
+#: functions.php:243
 msgid "My Channel on YouTube"
 msgstr "Mein Channel auf YouTube"
 
-#: functions.php:244 options/menubar.php:110
+#: functions.php:243 options/menubar.php:110
 msgid "YouTube"
 msgstr "YouTube"
 
-#: functions.php:245
+#: functions.php:244
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: functions.php:245 options/general.php:101
+#: functions.php:244 options/general.php:101
 msgid "RSS"
 msgstr "RSS"
 
 #. translators: theme discription for wp-admin
-#: functions.php:376
+#: functions.php:374
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
@@ -1037,7 +1037,7 @@ msgstr ""
 "Benutzt die selbe Optik wie die Menüleiste."
 
 #: options/archivesearch.php:70 options/comments.php:81 options/debug.php:36
-#: options/general.php:120 options/menubar.php:163 options/postspages.php:194
+#: options/general.php:120 options/menubar.php:164 options/postspages.php:194
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
@@ -1499,65 +1499,70 @@ msgid "When the sidebars are disabled on pages? Default = 700"
 msgstr "Wenn die Seitenleisten auf Seiten deaktiviert sind? Standard = 700"
 
 #: options/splash.php:7
-msgid "Technical Support"
-msgstr "Technische Unterstützung"
+msgid "Notices"
+msgstr "Hinweise"
 
 #: options/splash.php:12
 msgid ""
-"You can contact me for technical support at any of the following locations: "
+"Schema, layout, site width and colors can be modified in the "
+"<strong>Appearance &#10132; Customize</strong> section of the wp-admin."
+msgstr ""
+"Schema, Layout, Webseiten Breite und Farben Seitenbreite und Farben kannst "
+"Du modifizieren in <strong>Design &#10132; Anpassen</strong> Bereich von wp-"
+"admin."
+
+#: options/splash.php:20
+msgid "Technical Support"
+msgstr "Technische Unterstützung"
+
+#: options/splash.php:25
+msgid ""
+"You can contact me for technical support at any of the following locations:"
 msgstr ""
 "Du kannst mich für technischen Support unter einem der folgenden Orte "
-"erreichen: "
+"erreichen:"
 
-#: options/splash.php:13
+#: options/splash.php:26
 msgid "(best chances to reach me at the top going down to the least chance)"
 msgstr ""
 "(Beste Chancen, mich zu erreichen, versuche es von oben nach unten zur "
 "geringsten Chance)"
 
-#: options/splash.php:18
+#: options/splash.php:31
 msgid "Form Email:"
 msgstr "Formular Email:"
 
-#: options/splash.php:21
+#: options/splash.php:34
 msgid "Via Facebook:"
 msgstr "Via Facebook:"
 
-#: options/splash.php:25
+#: options/splash.php:38
 msgid "WebComics.COM Forums:"
 msgstr "WebComics.COM Forums:"
 
-#: options/splash.php:26
+#: options/splash.php:39
 msgid "(Subscription only)"
 msgstr "(Nur für Abonnenten)"
 
-#: options/splash.php:29
+#: options/splash.php:42
 msgid "WordPress.ORG Forums:"
 msgstr "WordPress.ORG Forums:"
 
-#: options/splash.php:30
+#: options/splash.php:43
 msgid "(rarely go here)"
 msgstr "(selten hier zugegen)"
 
-#: options/splash.php:33
+#: options/splash.php:46
 msgid "On Twitter:"
 msgstr "Auf Twitter:"
 
-#: options/splash.php:38
+#: options/splash.php:51
 msgid ""
 "Please take note that I speak American-English only, pardon my ignorance and "
 "will try to understand you as best I can."
 msgstr ""
 "Bitte beachte, dass ich nur amerikanisches Englisch spreche. Verzeihe meine "
 "Unwissenheit und ich werde versuchen  Dich zu verstehen, so gut ich kann."
-
-#: options/splash.php:43
-msgid ""
-"Schemes, layout and Site Width along with other customizations can be "
-"modified in the appearance &#10132; customize section of the wp-admin."
-msgstr ""
-"Schemas, Layout und Webseiten Beite zusammen mit anderen Anpassungen kannst "
-"du verändern im Bereich Design &#10132;  Anpassen von wp-admin."
 
 #: search.php:8
 msgid "Search for &lsquo;"
@@ -1636,6 +1641,78 @@ msgstr "Letzte Szene:"
 #: taxonomy-locations.php:44
 msgid "First Scene:"
 msgstr "Erste Szene:"
+
+#. translators: Calendar caption: 1: month name, 2: 4-digit year
+#: widgets/calendar.php:97
+#, php-format
+msgctxt "calendar caption"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: widgets/calendar.php:123 widgets/calendar.php:131
+#, php-format
+msgid "View posts for %1$s %2$s"
+msgstr "Zeige Beiträge für %1$s %2$s"
+
+#: widgets/calendar.php:251
+msgid "ComicPress - Posts Calendar"
+msgstr "ComicPress - Posts Kalender"
+
+#: widgets/calendar.php:252
+msgid ""
+"Display a calendar showing this months posts. (this calendar does not drop "
+"lines if there is no title given.)"
+msgstr ""
+"Zeigt einen Kalender mit diesen Monats Beiträgen. (Dieser Kalender gibt "
+"keine Ankerlinien, wenn es keinen Titel gibt.)"
+
+#: widgets/calendar.php:282
+msgid "DOWNLOAD"
+msgstr "Herunterladen"
+
+#: widgets/calendar.php:285
+msgid "Download Small"
+msgstr "Download Klein"
+
+#: widgets/calendar.php:285
+msgid "S"
+msgstr "S"
+
+#: widgets/calendar.php:286
+msgid "Download Medium"
+msgstr "Download Mittel"
+
+#: widgets/calendar.php:286
+msgid "M"
+msgstr "M"
+
+#: widgets/calendar.php:287
+msgid "Download Large"
+msgstr "Download Groß"
+
+#: widgets/calendar.php:287
+msgid "L"
+msgstr "L"
+
+#: widgets/calendar.php:343
+msgid "Thumbnail URL (178px by 130px):"
+msgstr "Vorschaubild URL (178px x 130 px):"
+
+#: widgets/calendar.php:344
+msgid "Add link on thumbnails:"
+msgstr "Link auf die Vorschaubilder:"
+
+#: widgets/calendar.php:345
+msgid "Wallpaper URL (Small):"
+msgstr "Hintergrundbild URL (Klein):"
+
+#: widgets/calendar.php:346
+msgid "Wallpaper URL (Medium):"
+msgstr "Hintergrundbild URL (Mittel):"
+
+#: widgets/calendar.php:347
+msgid "Wallpaper URL (Large):"
+msgstr "Hintergrundbild URL (Groß):"
 
 #: widgets/classicbookmark.php:39
 msgid "BOOKMARK"
