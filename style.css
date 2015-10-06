@@ -266,7 +266,7 @@ a.menunav-rss {
 }
 
 .menunav-rss:hover {
-	background-color: none;
+	background-color: Transparent;
 }
 
 .menu {
@@ -1518,8 +1518,7 @@ table#wp-calendar td {
 }
 
 .menunav-social:hover {
-	background-color: none!important;
-	color: none!important;
+	background-color: Transparent;
     background-position: 0 -25px;
 }
 
