@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress v4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-29 09:37-0800\n"
-"PO-Revision-Date: 2015-10-06 09:43:30+0000\n"
+"PO-Revision-Date: 2015-10-06 09:57:43+0000\n"
 "Last-Translator: Philip M. Hofer (Frumph) <philip@frumph.net>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -45,27 +45,6 @@ msgstr ""
 #: functions/displaypost.php:267
 #@ comicpress
 msgid "Edit this page."
-msgstr ""
-
-#: archive.php:22
-#: archive.php:26
-#: archive.php:28
-#: archive.php:30
-#: archive.php:44
-#: archive.php:46
-#: archive.php:49
-#@ comicpress
-msgid "Archive for "
-msgstr ""
-
-#: archive.php:24
-#@ comicpress
-msgid "Posts Tagged "
-msgstr ""
-
-#: archive.php:32
-#@ comicpress
-msgid "Author Archive "
 msgstr ""
 
 #: archive.php:34
@@ -902,16 +881,6 @@ msgstr ""
 msgid "at"
 msgstr ""
 
-#: functions/displaypost.php:155
-#@ comicpress
-msgid "Posted In: "
-msgstr ""
-
-#: functions/displaypost.php:165
-#@ comicpress
-msgid "&#9492; Tags: "
-msgstr ""
-
 #: functions/displaypost.php:176
 #@ comicpress
 msgid "Comment&nbsp;"
@@ -1305,11 +1274,6 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: comments.php:84
-#@ comicpress
-msgid "NOTE &mdash; You can use these HTML tags and attributes: "
-msgstr ""
-
 #: functions/customize.php:39
 #@ comicpress
 msgid "Layout Options"
@@ -1405,20 +1369,9 @@ msgstr ""
 msgid "Site Width"
 msgstr ""
 
-#: functions/customize.php:88
-#@ comicpress
-msgid "Minimum value is 720px, maximum is 1600px width - Currently saved at: "
-msgstr ""
-
 #: functions/customize.php:101
 #@ comicpress
 msgid "Left Sidebar Width"
-msgstr ""
-
-#: functions/customize.php:102
-#: functions/customize.php:116
-#@ comicpress
-msgid "Minimum value is 200px, maximum is 400px width - Currently saved at: "
 msgstr ""
 
 #: functions/customize.php:115
@@ -1486,16 +1439,6 @@ msgstr ""
 #: functions/moods.php:72
 #@ comicpress
 msgid " moods are available."
-msgstr ""
-
-#: functions/moods.php:73
-#@ comicpress
-msgid "Using Moods from directory: "
-msgstr ""
-
-#: functions/moods.php:74
-#@ comicpress
-msgid "Current Mood: "
 msgstr ""
 
 #: functions.php:233
@@ -1992,5 +1935,62 @@ msgstr ""
 #: widgets/calendar.php:347
 #@ comicpress
 msgid "Wallpaper URL (Large):"
+msgstr ""
+
+#: archive.php:22
+#: archive.php:26
+#: archive.php:28
+#: archive.php:30
+#: archive.php:44
+#: archive.php:46
+#: archive.php:49
+#@ comicpress
+msgid "Archive for"
+msgstr ""
+
+#: archive.php:24
+#@ comicpress
+msgid "Posts Tagged"
+msgstr ""
+
+#: archive.php:32
+#@ comicpress
+msgid "Author Archive"
+msgstr ""
+
+#: comments.php:84
+#@ comicpress
+msgid "NOTE &mdash; You can use these HTML tags and attributes:"
+msgstr ""
+
+#: functions/customize.php:88
+#@ comicpress
+msgid "Minimum value is 720px, maximum is 1600px width - Currently saved at:"
+msgstr ""
+
+#: functions/customize.php:102
+#: functions/customize.php:116
+#@ comicpress
+msgid "Minimum value is 200px, maximum is 400px width - Currently saved at:"
+msgstr ""
+
+#: functions/displaypost.php:155
+#@ comicpress
+msgid "Posted In:"
+msgstr ""
+
+#: functions/displaypost.php:165
+#@ comicpress
+msgid "&#9492; Tags:&nbsp;"
+msgstr ""
+
+#: functions/moods.php:73
+#@ comicpress
+msgid "Using Moods from directory:"
+msgstr ""
+
+#: functions/moods.php:74
+#@ comicpress
+msgid "Current Mood:"
 msgstr ""
 

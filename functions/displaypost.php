@@ -152,7 +152,7 @@ if (!function_exists('comicpress_display_post_category')) {
 		global $post;
 		$post_category = '';
 		if (!comicpress_is_bbpress() && !comicpress_themeinfo('disable_categories_in_posts') && !is_attachment() && ($post->post_type == 'post')) {
-			$post_category = "<div class=\"post-cat\">". __( 'Posted In: ', 'comicpress' ) .get_the_category_list(', ')."</div>\r\n";
+			$post_category = "<div class=\"post-cat\">". __( 'Posted In:', 'comicpress' ).' '.get_the_category_list(', ')."</div>\r\n";
 		}
 		echo apply_filters('comicpress_display_post_category', $post_category);
 	}
@@ -162,7 +162,7 @@ if (!function_exists('comicpress_display_post_tags')) {
 	function comicpress_display_post_tags() {
 		global $post;
 		if (!comicpress_themeinfo('disable_tags_in_posts')) {
-			$post_tags = "<div class=\"post-tags\">".get_the_tag_list(__( '&#9492; Tags: ', 'comicpress' ), ', ', '<br />')."</div>\r\n";
+			$post_tags = "<div class=\"post-tags\">".get_the_tag_list(__( '&#9492; Tags:&nbsp;', 'comicpress' ), ', ', '<br />')."</div>\r\n";
 			echo apply_filters('comicpress_display_post_tags', $post_tags);
 		}
 	}

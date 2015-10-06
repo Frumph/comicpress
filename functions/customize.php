@@ -85,7 +85,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-range-site-width', array('default' => '980', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-range-site-width-control' , array(
 				'label' => __( 'Site Width', 'comicpress' ),
-				'description' => __( 'Minimum value is 720px, maximum is 1600px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-site-width', 980).'px',
+				'description' => __( 'Minimum value is 720px, maximum is 1600px width - Currently saved at:', 'comicpress' ).' '.get_theme_mod('comicpress-customize-range-site-width', 980).'px',
 				'settings' => 'comicpress-customize-range-site-width',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'range',
@@ -99,7 +99,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-range-left-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-range-left-sidebar-width-control' , array(
 				'label' => __( 'Left Sidebar Width', 'comicpress' ),
-				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-left-sidebar-width', 200).'px',
+				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at:', 'comicpress' ).' '.get_theme_mod('comicpress-customize-range-left-sidebar-width', 200).'px',
 				'settings' => 'comicpress-customize-range-left-sidebar-width',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'range',
@@ -113,7 +113,7 @@ class comicpress_Customize {
 		$wp_customize->add_setting( 'comicpress-customize-range-right-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-range-right-sidebar-width-control' , array(
 				'label' => __( 'Right Sidebar Width', 'comicpress' ),
-				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at: ', 'comicpress' ).get_theme_mod('comicpress-customize-range-right-sidebar-width', 200).'px',
+				'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at:', 'comicpress' ).' '.get_theme_mod('comicpress-customize-range-right-sidebar-width', 200).'px',
 				'settings' => 'comicpress-customize-range-right-sidebar-width',
 				'section' => 'comicpress-scheme-options',
 				'type' => 'range',

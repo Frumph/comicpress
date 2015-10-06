@@ -70,8 +70,8 @@ function comicpress_showmood_edit_post() {
 			$moods_uri = get_stylesheet_directory_uri();
 		}
 		echo $count .__( ' moods are available.', 'comicpress' ).'<br />
-				'.__( 'Using Moods from directory: ', 'comicpress' ).$moods_directory.'<br />
-				'.__( 'Current Mood: ', 'comicpress' ).$mood.'<br /><br />';
+				'.__( 'Using Moods from directory:', 'comicpress' ).' '.$moods_directory.'<br />
+				'.__( 'Current Mood:', 'comicpress' ).' '.$mood.'<br /><br />';
 		if (!empty($results)) { ?>
 			<div style="float:left; margin-top: 70px; text-align: center; width: 68px; overflow: hidden;"> 
 			<label for="postmood-none" style="cursor:pointer;">		
