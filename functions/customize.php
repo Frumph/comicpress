@@ -104,7 +104,7 @@ class comicpress_Customize {
 				'section' => 'comicpress-scheme-options',
 				'type' => 'range',
 				'input_attrs' => array(
-					'min' => 200,
+					'min' => 160,
 					'max' => 400,
 					'step' => 2,
 				),
