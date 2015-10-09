@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-06 12:06+0200\n"
-"PO-Revision-Date: 2015-10-06 12:08+0200\n"
+"POT-Creation-Date: 2015-10-09 17:42+0200\n"
+"PO-Revision-Date: 2015-10-09 17:50+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -580,18 +580,17 @@ msgstr "Seitenbreite"
 #: functions/customize.php:88
 msgid "Minimum value is 720px, maximum is 1600px width - Currently saved at:"
 msgstr ""
-"Minimalwert ist 720px, Maximalwert ist 1600px Breite - Derzeitig gespeichert "
-"ist:"
+"Minimalwert ist 720px, Maximalwert ist 1600px Breite - Derzeitig gespeichert:"
 
 #: functions/customize.php:101
 msgid "Left Sidebar Width"
 msgstr "Linke Sidebar Breite"
 
 #: functions/customize.php:102 functions/customize.php:116
-msgid "Minimum value is 200px, maximum is 400px width - Currently saved at:"
+msgid "Minimum value is 160px, maximum is 400px width - Currently saved at:"
 msgstr ""
-"Minimalwert ist 200px, Maximalwert ist 400px Breite - derzeitig gespeichert "
-"ist:"
+"Minimalwert ist 1600px, Maximalwert ist 400px Breite - derzeitig "
+"gespeichertt:"
 
 #: functions/customize.php:115
 msgid "Right Sidebar Width"
@@ -1182,18 +1181,18 @@ msgstr ""
 "Titelseite / Blog Schleife wenn aktiviert."
 
 #: options/general.php:63
-msgid "Disable the default text in the footer?"
-msgstr "Deaktiviere den Standardtext im Footer?"
+msgid "Disable the copyright text in the footer?"
+msgstr "Deaktiviere den Copyright-Text im Footer?"
 
 #: options/general.php:68
 msgid ""
-"Default text in the footer will not display. Enable this if you do not want "
-"any text in the footer. If you wish to add you own custom content, you may "
-"do so via Appearance &#10132; Widgets &#10132; Footer."
+"Enable this if you do not want any text in the footer. If you wish to add "
+"you own custom content, you may do so via Appearance &#10132; Widgets "
+"&#10132; Footer."
 msgstr ""
-"Wenn aktiv, wird im Footer kein Text angezeigt. Wenn du deinen eigenen "
-"Footer Text eingeben möchtest, kannst du das via Design &#10132; Widgets "
-"&#10132; Footer tun."
+"Aktiviere diese Option, wenn Du keinen Text in dem Footer möchtest. Wenn du "
+"deinen eigenen Footer Text eingeben möchtest, kannst du das via Design "
+"&#10132; Widgets  &#10132; Footer tun."
 
 #: options/general.php:72
 msgid "Disable the scroll to top link in the footer?"
@@ -1435,8 +1434,8 @@ msgid ""
 "Checkmarking this will make it so that it will show when the last time that "
 "the post was modified in the post date information."
 msgstr ""
-"Wenn aktiv, wird in den Beitrags Datums Informationen angezeigt, wann ein "
-"Artikel noch mal geändert wurde."
+"Wenn aktiviert, wird in den Beitrags Datums Informationen angezeigt, wann "
+"ein Artikel noch mal geändert wurde."
 
 #: options/postspages.php:119
 msgid "Moods Directory"
