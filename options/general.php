@@ -60,12 +60,12 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_footer_text"><?php _e( 'Disable the default text in the footer?', 'comicpress' ); ?></label></th>
+					<th scope="row"><label for="disable_footer_text"><?php _e( 'Disable the copyright text in the footer?', 'comicpress' ); ?></label></th>
 					<td>
 						<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_footer_text']); ?> />
 					</td>
 					<td>
-						<?php _e( 'Default text in the footer will not display. Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer.', 'comicpress' ); ?>
+						<?php _e( 'Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer.', 'comicpress' ); ?>
 					</td>
 				</tr>
 				<tr>
