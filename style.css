@@ -17,28 +17,24 @@ Requires WP: 4.3
 
 /* Content:
 * 1.0 Complete Website
-* 2.0 Schema: no schema / default settings
-*  2.1 Background
-*  2.2 Headings
-*  2.3 Standard Tags
-*  2.4 Header
-*  2.5 Menu
-*  2.6 Page
-*  2.7 Posts
-*  2.8 Sidebars
-*  2.9 Widgets
-* ....
-* 3.0 Schema: Boxed
-* 4.0 Schema: Sandy
-* 5.0 Schema: Mecha
-* 6.0 Schema: CEasel
-* 7.0 Schema: High Society
+*  1.1 Standard Tags
+*  1.2 Headings
+* 2.0 Layout Options
+*  2.1 Schema: no schema
+*  2.2 Schema: Boxed
+*  2.3 Schema: Sandy
+*  2.4 Schema: Mecha
+*  2.5 Schema: CEasel
+*  2.6 Schema: High Society
+* 3.0 Header
 */
 
 /* 1.0 Complete Website
 *
 *  The entries relating to the appearance of the entire website
 */
+
+/* 1.1 STANDARD TAGS */
 
 html {
 	overflow-y: scroll;
@@ -51,11 +47,8 @@ body {
 	color: #000;
 }
 
-/* 2.0 Schema: no schema / default settings*/
-/* 2.1 Background/*
-/* via Costumizer*/
+/* 1.2 HEADINGS */
 
-/* 2.2 Headings/*
 h1, h1 a {
 	margin: 0;
 	padding: 3px;
@@ -87,7 +80,13 @@ h4, h4 a {
 	clear: both;
 }
 
-/* 2.3 Standard Tags/*
+*/ 2.0 Layout Options
+*
+*  The default entries for layout and schemas
+*/
+
+/* 2.1 Schema: no schema*/
+
 a {
 	text-decoration: none;
 }
@@ -221,7 +220,7 @@ input, textarea {
 	display: block;
 }
 
-#breadcrumb-wrapper, #subcontent-wrapper, #footer {
+#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
 	max-width: 100%;
     margin: 0 auto;
     display: block;
@@ -230,11 +229,9 @@ input, textarea {
 /* Header */
 
 #header {
-	max-width: 100%;
-	margin: 0 auto;
-	display: block;
-	overflow: hidden;
-	z-index: 500;
+    display: block;
+    overflow: hidden;
+    z-index: 500;
 }
 
 #header .description {
@@ -251,7 +248,6 @@ input, textarea {
 /* THE MENU */
 
 #menubar-wrapper {
-	max-width: 100%;
     clear: both;
     display: block;
     margin: 0 auto;
