@@ -100,7 +100,7 @@
 					<tr>
 						<th colspan="3"><?php _e( 'RSS', 'comicpress' ); ?></th>
 					</tr>
-				</thead
+				</thead>
 				<tr class="alternate">
 					<th scope="row"><label for="enable_post_thumbnail_rss"><?php _e( 'Enable the post thumbnails in the RSS feed?', 'comicpress' ); ?></label></th>
 					<td>
