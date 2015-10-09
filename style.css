@@ -15,119 +15,60 @@ GitHub Branch: master
 Requires WP: 4.3
 */
 
-/* Content:
-* 1.0 Complete Website
-*  1.1 Standard Tags
-*  1.2 Headings
-* 2.0 Layout Options
-*  2.1 Schema: no schema
-*  2.2 Schema: Boxed
-*  2.3 Schema: Sandy
-*  2.4 Schema: Mecha
-*  2.5 Schema: CEasel
-*  2.6 Schema: High Society
-* 3.0 Header
-*/
-
-/* 1.0 Complete Website
-*
-*  The entries relating to the appearance of the entire website
-*/
-
-/* 1.1 STANDARD TAGS */
+/* STANDARD TAGS */
 
 html {
-	overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 body {
-	margin: 0;
-	font-family: 'Arial' , sans-serif;
-	font-size: 14px;
-	color: #000;
+    margin: 0;
+    font-family: 'Arial' , sans-serif;
+    font-size: 14px;
+    color: #000;
 }
-
-/* 1.2 HEADINGS */
-
-h1, h1 a {
-	margin: 0;
-	padding: 3px;
-	font-size: 48px;
-	line-height: 44px;
-	letter-spacing: -3px;
-}
-
-h2, h2 a {
-	padding: 0 0 2px 0;
-	margin: 0;
-	font-size: 24px;
-	line-height: 24px;
-	letter-spacing: -1px;
-}
-
-h3, h3 a {
-	padding: 0;
-	margin: 5px 0;
-	font-size: 20px;
-	clear: both;
-	letter-spacing: -1px;
-}
-
-h4, h4 a {
-	padding: 0;
-	margin: 0;
-	font-size: 15px;
-	clear: both;
-}
-
-*/ 2.0 Layout Options
-*
-*  The default entries for layout and schemas
-*/
-
-/* 2.1 Schema: no schema*/
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:link {
-	color: #b00;
+    color: #b00;
 }
 
 a:visited {
-	color: #600;
+    color: #600;
 }
 
 a:hover {
-	color: #f00;
+    color: #f00;
 }
 
 a:focus {
-	outline: none;
+    outline: none;
 }
 
 a img {
-	border: none;
+    border: none;
 }
 
 p {
-	margin: 0;
-	padding: 5px 0;
+    margin: 0;
+    padding: 5px 0;
 }
 
 p.attachment {
-	text-align: center;
+    text-align: center;
 }
 
 img {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .entry img, .post-content img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 small {
@@ -207,6 +148,39 @@ input, textarea {
 
 .wp-caption-text {
     text-align: center;
+}
+
+/* HEADINGS */
+
+h1, h1 a {
+    margin: 0;
+    padding: 3px;
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: -3px;
+}
+
+h2, h2 a {
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1px;
+}
+
+h3, h3 a {
+    padding: 0;
+    margin: 5px 0;
+    font-size: 20px;
+    clear: both;
+    letter-spacing: -1px;
+}
+
+h4, h4 a {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    clear: both;
 }
 
 /* Page */
