@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 17:42+0200\n"
-"PO-Revision-Date: 2015-10-09 17:50+0200\n"
+"POT-Creation-Date: 2015-10-09 18:51+0200\n"
+"PO-Revision-Date: 2015-10-09 18:55+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -206,7 +206,8 @@ msgid "Primary"
 msgstr "Primär"
 
 #: functions.php:54 functions.php:110 functions/customize.php:185
-#: functions/customize.php:197 options/general.php:59
+#: functions/customize.php:197 functions/customize.php:214
+#: options/general.php:59
 msgid "Footer"
 msgstr "Footer"
 
@@ -238,7 +239,8 @@ msgstr ""
 "Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:106 functions/customize.php:171
+#: functions.php:106 functions/customize.php:171 functions/customize.php:188
+#: functions/customize.php:203
 msgid "Header"
 msgstr "Header"
 
@@ -246,8 +248,8 @@ msgstr "Header"
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
-#: functions.php:107 functions/customize.php:172 options.php:224
-#: options/menubar.php:10
+#: functions.php:107 functions/customize.php:172 functions/customize.php:205
+#: options.php:224 options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
 
@@ -676,7 +678,7 @@ msgstr "Inhaltsspalte"
 msgid "Entire Post Area"
 msgstr "Gesamten Beitragsbereich"
 
-#: functions/customize.php:180
+#: functions/customize.php:180 functions/customize.php:195
 msgid "Top Section of a Post"
 msgstr "Oberer Abschnitt von einem Beitrag"
 
@@ -698,19 +700,23 @@ msgstr "Info. Linie von dem Beitragsautor"
 
 #: functions/customize.php:187
 msgid "Sitewide Textcolor"
-msgstr "Seitenbreite Textfarbe"
+msgstr "Seitenweite Textfarben"
 
 #: functions/customize.php:189
-msgid "Site Tagline"
-msgstr "Website Untertitel"
+msgid "Site Description"
+msgstr "Website Beschreibung"
+
+#: functions/customize.php:190 functions/customize.php:208
+msgid "Breadcumbs"
+msgstr "Breadcumbs"
 
 #: functions/customize.php:191
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
 #: functions/customize.php:192
-msgid "Sidebar Textcolor"
-msgstr "Sidebar Textfarbe"
+msgid "Sidebar"
+msgstr "Sidebar"
 
 #: functions/customize.php:193
 msgid "Non-Link Post Titles"
@@ -727,6 +733,14 @@ msgstr "Beitrag/Seiten Kommentare"
 #: functions/customize.php:198 functions/customize.php:216
 msgid "Copyright"
 msgstr "Copyright"
+
+#: functions/customize.php:200
+msgid "Sitewide Linkcolor"
+msgstr "Seitenweite Linkfarben"
+
+#: functions/customize.php:210
+msgid "Sidebar Widgets"
+msgstr "Sidebar Widgets"
 
 #: functions/customize.php:222
 msgid "Comic Area"
