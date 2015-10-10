@@ -1,4 +1,4 @@
-== Developers == 
+﻿== Developers == 
 
 Tyler Martin @mindfaucet - Creator
 http://mindfaucet.net
@@ -32,6 +32,7 @@ PHP:       5.4
 == Changelog ==
 
 = 4.3.x =
+* added missed labels in costumizer
 * extended WP_Customize_Control with new range sliders with output bubbles
 * added new range slider CSS to options.css
 * added `no_IE_range.js` to handle old IE that doesn’t understand range sliders
