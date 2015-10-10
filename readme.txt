@@ -32,6 +32,7 @@ PHP:       5.4
 == Changelog ==
 
 = 4.3.x =
+* update breadcumps to version: 2015.09.14
 * added missed labels in costumizer
 * extended WP_Customize_Control with new range sliders with output bubbles
 * added new range slider CSS to options.css
