@@ -306,3 +306,265 @@ div.show .eadmin-footer img{
 	border: solid 1px #eee;
 	padding: 10px;
 }
+/*	Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0;	/* set top/bottom margin on bubble */
+  width: 75%;
+  width: calc(100% - 80px);
+  background: transparent;
+}
+input[type=range]:focus, input[type=range]:active {
+	outline: none;
+	outline: 0 !important;
+	outline-style: none;
+}
+/* old FF method to hide dotted outline on range */
+input[type=range]::-moz-focus-inner {
+	border: 0;
+	outline: 0;
+}
+/* new FF method to hide dotted outline on range */
+input[type=range]::-moz-focus-outer { border: 0; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #333;
+  cursor: pointer;
+  margin-top:-6px;
+}
+	input[type=range]::-webkit-slider-thumb:hover {
+		background: #0091cd;
+	}
+	input[type=range]::-webkit-slider-thumb:active {
+		background: #0073aa;
+	}
+	/* NOTE: Theme Colors do not work on Theme Customize page */
+	.admin-color-blue input[type=range]::-webkit-slider-thumb:hover {
+		background: #e1a948;
+	}
+	.admin-color-blue input[type=range]::-webkit-slider-thumb:active {
+		background: #dd9f32;
+	}
+	.admin-color-coffee input[type=range]::-webkit-slider-thumb:hover {
+		background: #c7a589;
+	}
+	.admin-color-coffee input[type=range]::-webkit-slider-thumb:active {
+		background: #bf9878;
+	}
+	.admin-color-ectoplasm input[type=range]::-webkit-slider-thumb:hover {
+		background: #a3b745;
+	}
+	.admin-color-ectoplasm input[type=range]::-webkit-slider-thumb:active {
+		background: #93a43e;
+	}
+	.admin-color-midnight input[type=range]::-webkit-slider-thumb:hover {
+		background: #e14d43;
+	}
+	.admin-color-midnight input[type=range]::-webkit-slider-thumb:active {
+		background: #dd382d;
+	}
+	.admin-color-ocean input[type=range]::-webkit-slider-thumb:hover {
+		background: #9ebaa0;
+	}
+	.admin-color-ocean input[type=range]::-webkit-slider-thumb:active {
+		background: #8faf91;
+	}
+	.admin-color-sunrise input[type=range]::-webkit-slider-thumb:hover {
+		background: #dd823b;
+	}
+	.admin-color-sunrise input[type=range]::-webkit-slider-thumb:active {
+		background: #cc6d23;
+	}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 10px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #333;
+  cursor: pointer;
+  margin-top:-6px;
+  border: none;
+}
+	input[type=range]::-moz-range-thumb:hover {
+		background: #0091cd;
+	}
+	input[type=range]::-moz-range-thumb:active {
+		background: #0073aa;
+	}
+	/* NOTE: Theme Colors do not work on Theme Customize page */
+	.admin-color-blue input[type=range]::-moz-range-thumb:hover {
+		background: #e1a948;
+	}
+	.admin-color-blue input[type=range]::-moz-range-thumb:active {
+		background: #dd9f32;
+	}
+	.admin-color-coffee input[type=range]::-moz-range-thumb:hover {
+		background: #c7a589;
+	}
+	.admin-color-coffee input[type=range]::-moz-range-thumb:active {
+		background: #bf9878;
+	}
+	.admin-color-ectoplasm input[type=range]::-moz-range-thumb:hover {
+		background: #a3b745;
+	}
+	.admin-color-ectoplasm input[type=range]::-moz-range-thumb:active {
+		background: #93a43e;
+	}
+	.admin-color-midnight input[type=range]::-moz-range-thumb:hover {
+		background: #e14d43;
+	}
+	.admin-color-midnight input[type=range]::-moz-range-thumb:active {
+		background: #dd382d;
+	}
+	.admin-color-ocean input[type=range]::-moz-range-thumb:hover {
+		background: #9ebaa0;
+	}
+	.admin-color-ocean input[type=range]::-moz-range-thumb:active {
+		background: #8faf91;
+	}
+	.admin-color-sunrise input[type=range]::-moz-range-thumb:hover {
+		background: #dd823b;
+	}
+	.admin-color-sunrise input[type=range]::-moz-range-thumb:active {
+		background: #cc6d23;
+	}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #ccc;
+  border: none;
+  border-radius: 3px;
+}
+	input[type=range]:focus::-ms-fill-lower {
+	  background: #ccc;
+	}
+	input[type=range]:focus::-ms-fill-upper {
+	  background: #ccc;
+	}
+input[type=range]::-ms-thumb {
+   height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #333;
+  cursor: pointer;
+  margin-top:-2px;
+  border: none;
+}
+	input[type=range]::-ms-thumb:hover {
+		background: #0091cd;
+	}
+	input[type=range]::-ms-thumb:active {
+		background: #0073aa;
+	}
+	/* NOTE: Theme Colors do not work on Theme Customize page */
+	.admin-color-blue input[type=range]::-ms-thumb:hover {
+		background: #e1a948;
+	}
+	.admin-color-blue input[type=range]::-ms-thumb:active {
+		background: #dd9f32;
+	}
+	.admin-color-coffee input[type=range]::-ms-thumb:hover {
+		background: #c7a589;
+	}
+	.admin-color-coffee input[type=range]::-ms-thumb:active {
+		background: #bf9878;
+	}
+	.admin-color-ectoplasm input[type=range]::-ms-thumb:hover {
+		background: #a3b745;
+	}
+	.admin-color-ectoplasm input[type=range]::-ms-thumb:active {
+		background: #93a43e;
+	}
+	.admin-color-midnight input[type=range]::-ms-thumb:hover {
+		background: #e14d43;
+	}
+	.admin-color-midnight input[type=range]::-ms-thumb:active {
+		background: #dd382d;
+	}
+	.admin-color-ocean input[type=range]::-ms-thumb:hover {
+		background: #9ebaa0;
+	}
+	.admin-color-ocean input[type=range]::-ms-thumb:active {
+		background: #8faf91;
+	}
+	.admin-color-sunrise input[type=range]::-ms-thumb:hover {
+		background: #dd823b;
+	}
+	.admin-color-sunrise input[type=range]::-ms-thumb:active {
+		background: #cc6d23;
+	}
+/*	Range Slider with Value Span */
+.range-value {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	color: #fff;
+	font-size: 13px;
+	line-height: 15px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid #353535; /* otherwise edge between box & pointer is visible */
+	background: #353535;
+	padding: 5px 10px;
+	margin: 16px 0 16px 7px;
+	top: -2px;
+}
+	.range-value input[type=text] {
+		position: relative;
+		top: 0px; /* otherwise bubble is too tall */
+		-webkit-appearance: none;
+		width: 100%;
+		padding: 0;
+		margin: -2px 0;
+		background: transparent;
+		border: none;
+		color: #fff;
+	}
+		.range-value input[type=text]:focus {
+			outline: none;
+			outline: 0;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			-webit-box-shadow: none;
+			-moz-box-shadow: none;
+			-ms-box-shadow: none;
+			box-shadow: none;
+		}
+	.range-value::before {
+		position: absolute;
+		top: 5px;
+		left: -7px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #353535;
+		border-bottom: 7px solid transparent;
+		content: '';}
+	}

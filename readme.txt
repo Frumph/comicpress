@@ -8,6 +8,8 @@ http://frumph.net
 
 Rene Wolf @ kniebremser - Contributor
 
+Kristi Hansen @kmhcreative - Contributor
+
 == Theme Documentation == 
 
 ComicPress is a configurable theme, layouts to colors.
@@ -28,6 +30,11 @@ WordPress: 4.3
 PHP:       5.4
 
 == Changelog ==
+
+= 4.3.x =
+* extended WP_Customize_Control with new range sliders with output bubbles
+* added new range slider CSS to options.css
+* added `no_IE_range.js` to handle old IE that doesn’t understand range sliders
 
 = 4.3 =
 * re-added: widget "posts calender"
