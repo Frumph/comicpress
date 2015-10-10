@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress 4.3\n"
+"Project-Id-Version: ComicPress 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-09 18:51+0200\n"
-"PO-Revision-Date: 2015-10-09 18:55+0200\n"
+"POT-Creation-Date: 2015-10-10 16:02+0200\n"
+"PO-Revision-Date: 2015-10-10 16:22+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -205,8 +205,8 @@ msgstr "Diese Seite bearbeiten."
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:54 functions.php:110 functions/customize.php:185
-#: functions/customize.php:197 functions/customize.php:214
+#: functions.php:54 functions.php:110 functions/customize.php:244
+#: functions/customize.php:256 functions/customize.php:273
 #: options/general.php:59
 msgid "Footer"
 msgstr "Footer"
@@ -239,8 +239,8 @@ msgstr ""
 "Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
 "Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:106 functions/customize.php:171 functions/customize.php:188
-#: functions/customize.php:203
+#: functions.php:106 functions/customize.php:230 functions/customize.php:247
+#: functions/customize.php:262
 msgid "Header"
 msgstr "Header"
 
@@ -248,7 +248,7 @@ msgstr "Header"
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
-#: functions.php:107 functions/customize.php:172 functions/customize.php:205
+#: functions.php:107 functions/customize.php:231 functions/customize.php:264
 #: options.php:224 options/menubar.php:10
 msgid "Menubar"
 msgstr "Menüleiste"
@@ -400,42 +400,51 @@ msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
-#: functions/breadcrumbs.php:11 functions/wp-pagenavi.php:165
-msgid "&raquo;"
-msgstr "&raquo;"
-
 #. translators: home link for breadcrumps
-#: functions/breadcrumbs.php:13
+#: functions/breadcrumbs.php:12
 msgid "Home"
-msgstr "Zurück"
+msgstr "Startseite"
 
-#: functions/breadcrumbs.php:35
-msgid "Archive by category"
-msgstr "Archiv der Kategorie"
+#. translators: text for a category page for breadcrumps
+#: functions/breadcrumbs.php:14
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr "Archiv der Kategorie \"%s\""
 
-#: functions/breadcrumbs.php:67
-msgid "No Results"
-msgstr "Kein Ergebnisse"
+#. translators: text for a search results page for breadcrumps
+#: functions/breadcrumbs.php:16
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr "Suchergebnisse für \"%s\" Anfrage"
 
-#: functions/breadcrumbs.php:97
-msgid "Search results for"
-msgstr "Suchergebnisse für"
+#. translators: text for a tag page for breadcrumps
+#: functions/breadcrumbs.php:18
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr "Beiträge Tagged\"%s\""
 
-#: functions/breadcrumbs.php:100
-msgid "Posts tagged"
-msgstr "Beiträge getaggt"
+#. translators: text for an author page for breadcrumps
+#: functions/breadcrumbs.php:20
+#, php-format
+msgid "Articles Posted by %s"
+msgstr "Beiträge veröffentlicht von %s"
 
-#: functions/breadcrumbs.php:105
-msgid "Articles posted by"
-msgstr "Artikel geschrieben von"
-
-#: functions/breadcrumbs.php:108
+#. translators: text for the 404 page for breadcrumps
+#: functions/breadcrumbs.php:22
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#: functions/breadcrumbs.php:114
-msgid "Page"
-msgstr "Seite"
+#. translators: text 'Page N' for breadcrumps
+#: functions/breadcrumbs.php:24
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#. translators: text 'Comment Page N' for breadcrumps
+#: functions/breadcrumbs.php:26
+#, php-format
+msgid "Comment Page %s"
+msgstr "Kommentarseite %s"
 
 #. translators: date and time in comments
 #: functions/comment-functions.php:131
@@ -487,122 +496,121 @@ msgstr "Gehostet auf"
 msgid "&copy;"
 msgstr "&copy;"
 
-#: functions/customize.php:39
+#: functions/customize.php:98
 msgid "Layout Options"
 msgstr "Layout Optionen"
 
-#: functions/customize.php:39
+#: functions/customize.php:98
 msgid "Allows you to customize layout settings for ComicPress."
 msgstr "Ermöglicht dir das Anpassen der Layouteinstellungen für ComicPress."
 
-#: functions/customize.php:41
+#: functions/customize.php:100
 msgid "Background Colors"
 msgstr "Hintergrundfarben"
 
-#: functions/customize.php:41
+#: functions/customize.php:100
 msgid "Colors that are in the background of each of the sections."
 msgstr "Diese Farben sind im Hintergrund jeder Sektion zu sehen. "
 
-#: functions/customize.php:42
+#: functions/customize.php:101
 msgid "Text Colors"
 msgstr "Textfarben"
 
-#: functions/customize.php:43
+#: functions/customize.php:102
 msgid "Link Colors"
 msgstr "Link Farben"
 
-#: functions/customize.php:44
+#: functions/customize.php:103
 msgid "Logo"
 msgstr "Logo"
 
-#: functions/customize.php:49
+#: functions/customize.php:108
 msgid "3 Column (default)"
 msgstr "3 Spalten (Standard)"
 
-#: functions/customize.php:50
+#: functions/customize.php:109
 msgid "3 Column, both sidebars on left"
 msgstr "3 Spalten, beide Sidebars sind links"
 
-#: functions/customize.php:51
+#: functions/customize.php:110
 msgid "3 Column, both sidebars on right"
 msgstr "3 Spalten, beide Sidebars sind rechts"
 
-#: functions/customize.php:52
+#: functions/customize.php:111
 msgid "2 Column, sidebar on left"
 msgstr "2 Spalten, Sidebar ist links"
 
-#: functions/customize.php:53
+#: functions/customize.php:112
 msgid "2 Column, sidebar on right"
 msgstr "2 Spalten, Sidebar ist rechts"
 
-#: functions/customize.php:57
+#: functions/customize.php:116
 msgid "3 Column, Graphic Novel style, main sidebar on left"
 msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist links"
 
-#: functions/customize.php:58
+#: functions/customize.php:117
 msgid "3 Column, Graphic Novel style, main sidebar on right"
 msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist rechts"
 
-#: functions/customize.php:62
+#: functions/customize.php:121
 msgid "Choose a layout"
 msgstr "Wähle ein Layout"
 
-#: functions/customize.php:71
+#: functions/customize.php:130
 msgid "Choose a scheme"
 msgstr "Wähle ein Schema"
 
-#: functions/customize.php:76
+#: functions/customize.php:135
 msgid "No Scheme"
 msgstr "Kein Schema"
 
-#: functions/customize.php:77
+#: functions/customize.php:136
 msgid "Boxed"
 msgstr "Boxed"
 
-#: functions/customize.php:78
+#: functions/customize.php:137
 msgid "Sandy"
 msgstr "Sandy"
 
-#: functions/customize.php:79
+#: functions/customize.php:138
 msgid "Mecha"
 msgstr "Mecha"
 
-#: functions/customize.php:80
+#: functions/customize.php:139
 msgid "CEasel"
 msgstr "CEasel"
 
-#: functions/customize.php:81
+#: functions/customize.php:140
 msgid "High Society"
 msgstr "High Society"
 
-#: functions/customize.php:87
-msgid "Site Width"
-msgstr "Seitenbreite"
+#: functions/customize.php:146
+msgid "Site Width Control"
+msgstr "Seitenweite Kontrolle"
 
-#: functions/customize.php:88
-msgid "Minimum value is 720px, maximum is 1600px width - Currently saved at:"
+#: functions/customize.php:147
+msgid "Minimum value is 780px, maximum is 1600px width - Currently saved at:"
 msgstr ""
-"Minimalwert ist 720px, Maximalwert ist 1600px Breite - Derzeitig gespeichert:"
+"Minimalwert ist 780px, Maximalwert ist 1600px Breite - Derzeitig gespeichert:"
 
-#: functions/customize.php:101
+#: functions/customize.php:160
 msgid "Left Sidebar Width"
 msgstr "Linke Sidebar Breite"
 
-#: functions/customize.php:102 functions/customize.php:116
-msgid "Minimum value is 160px, maximum is 400px width - Currently saved at:"
+#: functions/customize.php:161 functions/customize.php:175
+msgid "Minimum value is 200px, maximum is 400px width - Currently saved at:"
 msgstr ""
-"Minimalwert ist 1600px, Maximalwert ist 400px Breite - derzeitig "
-"gespeichertt:"
+"Minimalwert ist 200px, Maximalwert ist 400px Breite - derzeitig gespeichert:"
 
-#: functions/customize.php:115
+#: functions/customize.php:174
 msgid "Right Sidebar Width"
 msgstr "Rechte Sidebar Breite"
 
-#: functions/customize.php:130
+#: functions/customize.php:189
 msgid "Detach Footer"
 msgstr "Footer Trennen"
 
-#: functions/customize.php:131
+#: functions/customize.php:190
 msgid ""
 "Detach the footer to below the main content? (Already appears detached on "
 "some schemes *but isn't)"
@@ -610,19 +618,19 @@ msgstr ""
 "Trenne den Footer vom Hauptinhalt? (Schon erscheint sie losgelöst bei "
 "einigen Schemas, *ist aber nicht)"
 
-#: functions/customize.php:139
+#: functions/customize.php:198
 msgid "Rounded Corners"
 msgstr "Abgerundete Ecken"
 
-#: functions/customize.php:140
+#: functions/customize.php:199
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
 
-#: functions/customize.php:148
+#: functions/customize.php:207
 msgid "Clickable Header Image"
 msgstr "Anklickbares Header Bild"
 
-#: functions/customize.php:149
+#: functions/customize.php:208
 msgid ""
 "Make the header title and description become a clickable hotspot for the "
 "entire header? (If you do the logo will not display right)"
@@ -630,15 +638,15 @@ msgstr ""
 "Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
 "für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
 
-#: functions/customize.php:155
+#: functions/customize.php:214
 msgid "Logo, 120px height x 160px width"
 msgstr "Logo, 120px Höhe x 160px Breite"
 
-#: functions/customize.php:161
+#: functions/customize.php:220
 msgid "Comic in content column?"
 msgstr "Comic in Inhaltsspalte?"
 
-#: functions/customize.php:162
+#: functions/customize.php:221
 msgid ""
 "Put the comic into the content column?  This must be done for the Graphic "
 "Novel Layouts."
@@ -646,119 +654,116 @@ msgstr ""
 "Setze den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
 "Layouts durchgeführt werden."
 
-#: functions/customize.php:170
+#: functions/customize.php:229
 msgid "Entire Content Area"
 msgstr "Gesamten Inhaltsbereich"
 
-#: functions/customize.php:173
+#: functions/customize.php:232
 msgid "Menubar Dropdown"
 msgstr "Menüleiste Dropdown"
 
-#: functions/customize.php:174
+#: functions/customize.php:233
 msgid "Menubar When Mouseover"
 msgstr "Menüleiste bei Mouseover"
 
-#: functions/customize.php:175
+#: functions/customize.php:234 functions/customize.php:249
+#: functions/customize.php:267
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
-#: functions/customize.php:176
+#: functions/customize.php:235
 msgid "Content Area Below Menubar"
 msgstr "Inhaltsbereich unterhalb der Menüleiste"
 
-#: functions/customize.php:177
+#: functions/customize.php:236
 msgid "Content Area Below Comic"
 msgstr "Inhaltsbereich unterhalb vom Comic"
 
-#: functions/customize.php:178
+#: functions/customize.php:237
 msgid "Content Column"
 msgstr "Inhaltsspalte"
 
-#: functions/customize.php:179
+#: functions/customize.php:238
 msgid "Entire Post Area"
 msgstr "Gesamten Beitragsbereich"
 
-#: functions/customize.php:180 functions/customize.php:195
+#: functions/customize.php:239 functions/customize.php:254
 msgid "Top Section of a Post"
 msgstr "Oberer Abschnitt von einem Beitrag"
 
-#: functions/customize.php:181
+#: functions/customize.php:240
 msgid "Comment Section"
 msgstr "Kommentar Abschnitt"
 
-#: functions/customize.php:182
+#: functions/customize.php:241
 msgid "Comment Info. Line"
 msgstr "Kommentar Info. Linie"
 
-#: functions/customize.php:183
+#: functions/customize.php:242
 msgid "Comments Made By Post Author"
 msgstr "Kommentare gemacht vom Beitragsautor"
 
-#: functions/customize.php:184
+#: functions/customize.php:243
 msgid "Info. Line Of Post Author"
 msgstr "Info. Linie von dem Beitragsautor"
 
-#: functions/customize.php:187
+#: functions/customize.php:246
 msgid "Sitewide Textcolor"
 msgstr "Seitenweite Textfarben"
 
-#: functions/customize.php:189
+#: functions/customize.php:248
 msgid "Site Description"
 msgstr "Website Beschreibung"
 
-#: functions/customize.php:190 functions/customize.php:208
-msgid "Breadcumbs"
-msgstr "Breadcumbs"
-
-#: functions/customize.php:191
+#: functions/customize.php:250
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
-#: functions/customize.php:192
+#: functions/customize.php:251
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions/customize.php:193
+#: functions/customize.php:252
 msgid "Non-Link Post Titles"
 msgstr "Nicht verlinkte Beitragstitel"
 
-#: functions/customize.php:194
+#: functions/customize.php:253
 msgid "Page Titles"
 msgstr "Seitentitel"
 
-#: functions/customize.php:196
+#: functions/customize.php:255
 msgid "Post/Page Comments"
 msgstr "Beitrag/Seiten Kommentare"
 
-#: functions/customize.php:198 functions/customize.php:216
+#: functions/customize.php:257 functions/customize.php:275
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions/customize.php:200
+#: functions/customize.php:259
 msgid "Sitewide Linkcolor"
 msgstr "Seitenweite Linkfarben"
 
-#: functions/customize.php:210
-msgid "Sidebar Widgets"
-msgstr "Sidebar Widgets"
+#: functions/customize.php:269
+msgid "Sidebar Widget"
+msgstr "Sidebar Widget"
 
-#: functions/customize.php:222
+#: functions/customize.php:281
 msgid "Comic Area"
 msgstr "Comic Bereich"
 
-#: functions/customize.php:224
+#: functions/customize.php:283
 msgid "Default Comic Navigation"
 msgstr "Standard Comic Navigation"
 
-#: functions/customize.php:225
+#: functions/customize.php:284
 msgid "Default Nav Normal Text Color"
 msgstr "Standard Nav Normal Textfarbe"
 
-#: functions/customize.php:226
+#: functions/customize.php:285
 msgid "Default Navigation Link"
 msgstr "Standard Navigation Link"
 
-#: functions/customize.php:227
+#: functions/customize.php:286
 msgid "Default Navigation Hover"
 msgstr "Standar Navigation Hover"
 
@@ -865,6 +870,10 @@ msgstr "&laquo; Erste"
 #: functions/wp-pagenavi.php:164
 msgid "Last &raquo;"
 msgstr "Letzte &raquo;"
+
+#: functions/wp-pagenavi.php:165
+msgid "&raquo;"
+msgstr "&raquo;"
 
 #: functions/wp-pagenavi.php:166
 msgid "&laquo;"
