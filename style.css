@@ -196,16 +196,15 @@ h4, h4 a {
 
 #header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer {
 	max-width: 100%;
-    margin: 0 auto;
-    display: block;
+	margin: 0 auto;
+	display: block;
 }
 
 /* Header */
 
 #header {
-    display: block;
-    overflow: hidden;
-    z-index: 500;
+	overflow: hidden;
+	z-index: 500;
 }
 
 #header .description {
@@ -222,10 +221,8 @@ h4, h4 a {
 /* THE MENU */
 
 #menubar-wrapper {
-    clear: both;
-    display: block;
-    margin: 0 auto;
-    text-transform: uppercase;
+	clear: both;
+	text-transform: uppercase;
 	line-height: 25px;
 	height: 25px;
 	background-color: #000;
@@ -367,11 +364,9 @@ a.menunav-rss {
 }
 
 /* classes that can be used to override the down/right arrows with images of your own */
-.menubar-down-arrow {
-}
+.menubar-down-arrow {}
 
-.menubar-right-arrow {
-}
+.menubar-right-arrow {}
 
 /* home icon */
 
@@ -398,7 +393,7 @@ a.menunav-rss {
 
 #subcontent-wrapper {
 	padding: 1px;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 /* This is the wrapper for the #content floats need to be in here */
@@ -572,8 +567,7 @@ a.post-edit-link {
     margin-left: 20px;
 }
 
-.bypostauthor {
-}
+.bypostauthor {}
 
 .comment-avatar {
     width: 64px;
@@ -752,7 +746,7 @@ textarea#comment {
 
 #sidebar-left, #sidebar-right {
 	display: inline-block;
-    padding: 2px;
+	padding: 2px;
 }
 
 #sidebar-left {
@@ -838,9 +832,7 @@ h2.widget-title, h2.widget-title a {
 
 /* Footer */
 
-#footer {
-	margin: 0 auto;
-}
+#footer {}
 
 #footer-menubar-wrapper {
     clear: both;
@@ -1618,7 +1610,7 @@ body.rounded-posts .uentry, body.rounded-posts #comment-wrapper, body.rounded-po
     box-shadow: inset 1px 2px 2px #000;
 }
 
-/* Scheme Boxed */
+/* Scheme: Boxed */
 body.scheme-boxed {
 	background: #27496b;
 }
@@ -1814,7 +1806,7 @@ body.scheme-mecha .archiveresults, body.scheme-mecha .searchresults, body.scheme
     color: #fff;
 }
 
-/* Scheme: CEasel body.scheme-ceasel */
+/* Scheme: CEasel */
 
 body.scheme-ceasel {
     background: #ccc url('images/noise.jpg') repeat;
@@ -1889,9 +1881,6 @@ body.scheme-ceasel .sidebar .widget {
 
 body.scheme-ceasel .uentry {
     margin-bottom: 30px;
-}
-
-body.scheme-ceasel .uentry {
     border-radius: 6px;
 	background: #fff url('images/post-bottom.jpg') bottom left repeat-x;
 }
@@ -1977,7 +1966,7 @@ body.scheme-ceasel .sidebar .ceo_comic_archive_dropdown_widget h2.widget-title {
     display: none;
 }
 
-/* high society - body.scheme-high */
+/* Scheme: High Society */
 
 body.scheme-high {
     color: #fff;
