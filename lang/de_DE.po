@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress 4.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-10 16:02+0200\n"
-"PO-Revision-Date: 2015-10-10 16:56+0200\n"
+"PO-Revision-Date: 2015-10-10 16:22+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -656,7 +656,7 @@ msgstr ""
 
 #: functions/customize.php:229
 msgid "Entire Content Area"
-msgstr "Gesamter Inhaltsbereich"
+msgstr "Gesamten Inhaltsbereich"
 
 #: functions/customize.php:232
 msgid "Menubar Dropdown"
@@ -681,11 +681,11 @@ msgstr "Inhaltsbereich unterhalb vom Comic"
 
 #: functions/customize.php:237
 msgid "Content Column"
-msgstr "Inhaltsbereich"
+msgstr "Inhaltsspalte"
 
 #: functions/customize.php:238
 msgid "Entire Post Area"
-msgstr "Gesamter Beitragsbereich"
+msgstr "Gesamten Beitragsbereich"
 
 #: functions/customize.php:239 functions/customize.php:254
 msgid "Top Section of a Post"
@@ -1336,7 +1336,7 @@ msgstr ""
 
 #: options/menubar.php:155
 msgid "use mailto://your@email.com"
-msgstr "Verwende mailto://your@email.com"
+msgstr "Verwenden von mailto://your@email.com"
 
 #: options/postspages.php:10
 msgid "Posts"
