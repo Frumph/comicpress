@@ -26,23 +26,23 @@
 						<em><?php _e( '(best chances to reach me at the top going down to the least chance)', 'comicpress' ); ?></em>
 					</td>
 				</tr>
-				<br />
 				<tr>
 					<td style= "width: 180px;"><?php _e( 'Form Email:', 'comicpress' ); ?></td>
 					<td><a href="http://frumph.net/contact/">http://frumph.net/contact/</a></td>
 				</tr>
+				<tr>
 					<td style= "width: 180px;"><?php _e( 'Via Facebook:', 'comicpress' ); ?></td>
 					<td><a href="http://facebook.com/philip.hofer">http://facebook.com/philip.hofer</a></td>
-				<tr>
 				</tr>
+				<tr>
 					<td style= "width: 180px;"><?php _e( 'WebComics.COM Forums:', 'comicpress' ); ?></td>
 					<td><a href="http://webcomics.com/forum/website-design-assistance/">http://webcomics.com/forum/website-design-assistance/</a> <?php _e( '(Subscription only)','comicpress' ); ?></td>
-				<tr>
 				</tr>
+				<tr>
 					<td style= "width: 180px;"><?php _e( 'WordPress.ORG Forums:', 'comicpress' ); ?></td>
 					<td><a href="https://wordpress.org/support/theme/comicpress">https://wordpress.org/support/theme/comicpress</a> <?php _e( '(rarely go here)', 'comicpress' ); ?></td>
-				<tr>
 				</tr>
+				<tr>
 					<td style= "width: 180px;"><?php _e( 'On Twitter:', 'comicpress' ); ?></td>
 					<td><a href="http://twitter.com/Frumph">http://twitter.com/Frumph</a></td>
 				</tr>
