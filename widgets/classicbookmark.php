@@ -10,7 +10,7 @@ Version: 1.1
 function comicpress_classic_bookmark() {
 global $post, $wp_query; ?>
 	<div class="classic-bookmark">
-		<script language="javascript" type="text/javascript">
+		<script type="text/javascript">
 			<!--
 
 				/* Bookmark Config Settings */
