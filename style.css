@@ -25,7 +25,7 @@ body {
     margin: 0;
     font-family: 'Arial' , sans-serif;
     font-size: 14px;
-    color: #000;
+    color: #000000;
 }
 
 a {
@@ -33,15 +33,15 @@ a {
 }
 
 a:link {
-    color: #b00;
+    color: #b00b00;
 }
 
 a:visited {
-    color: #600;
+    color: #600600;
 }
 
 a:hover {
-    color: #f00;
+    color: #f00f00;
 }
 
 a:focus {
@@ -82,7 +82,7 @@ hr {
 
 blockquote {
     margin: 5px;
-    border: 1px dashed #ccc;
+    border: 1px dashed #cccccc;
     padding: 0;
     font-size: 11px;
     font-weight: 400;
@@ -104,7 +104,7 @@ acronym, abbr, span.caps {
 }
 
 acronym, abbr {
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dashed #000000;
 }
 
 form {
@@ -139,7 +139,7 @@ input, textarea {
 .wp-caption {
     text-align: center;
     padding: 3px;
-    background: #eee;
+    background: #eeeeee;
 }
 
 .type-showcase .wp-caption {
@@ -225,8 +225,8 @@ h4, h4 a {
 	text-transform: uppercase;
 	line-height: 25px;
 	height: 25px;
-	background-color: #000;
-	color: #fff;
+	background-color: #000000;
+	color: #ffffff;
 }
 
 .menu-container {
@@ -293,7 +293,7 @@ a.menunav-rss {
 
 .menu ul li ul li a {
     text-align: left;
-    background: #555; /* background of menu items (default state)*/
+    background: #555555; /* background of menu items (default state)*/
 }
 
 * html .menu ul li a {
@@ -302,18 +302,18 @@ a.menunav-rss {
 }
 
 .menu ul li a:link, .menu ul li a:visited {
-    color: #fff;
+    color: #ffffff;
 }
 
 .menu ul li ul li a:link, .menu ul li ul li a:visited {
-    color: #fff;
+    color: #ffffff;
     font-size: 12px;
 }
 
 .menu ul li a.selected {
     /*CSS class that's dynamically added to the currently active menu items' LI A element*/
     background: #414141;
-    color: #fff;
+    color: #ffffff;
 }
 
 .menu ul li a:hover {
@@ -381,7 +381,7 @@ a.menunav-rss {
 }
 
 .menu-item-home a:hover {
-	background: #000 url('images/home.png') top center no-repeat!important;
+	background: #000000 url('images/home.png') top center no-repeat!important;
 }
 */
 
@@ -418,7 +418,7 @@ article {
 }
 
 .uentry, #comment-wrapper, #wp-paginav, #pagenav {
-    border: solid 1px Transparent;
+    border: 1px solid Transparent;
 }
 
 /* Posts Area  */
@@ -489,7 +489,7 @@ a.post-edit-link {
 }
 
 .post-calendar-date {
-    color: #777;
+    color: #777777;
     font-family: 'Georgia' , serif;
     font-size: 15px;
     font-weight: bold;
@@ -504,7 +504,7 @@ a.post-edit-link {
     font-family: 'Georgia' , serif;
     font-size: 22px;
     font-style: normal;
-    color: #000;
+    color: #000000;
     text-align: center;
     line-height: 100%;
     padding: 0 2px 0 0;
@@ -518,7 +518,7 @@ a.post-edit-link {
     font-size: 11px;
     font-style: normal;
     font-weight: normal;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -527,7 +527,7 @@ a.post-edit-link {
 }
 
 .more-link {
-    border-top: 1px dashed #ccc;
+    border-top: 1px dashed #cccccc;
     font-style: italic;
     display: block;
     clear: both;
@@ -629,7 +629,7 @@ a.post-edit-link {
 
 .comment-meta {
     display: inline;
-    border-left: 1px solid #000;
+    border-left: 1px solid #000000;
 }
 
 .commentsrsslink {
@@ -706,16 +706,16 @@ textarea#comment {
 
 #comment, #author, #email, #url, .comment-textarea, .comicpress_control_panel_widget #user_login, .comicpress_control_panel_widget #user_pass {
     padding: 2px;
-    color: #000;
+    color: #000000;
     font-family: 'Verdana' , sans-serif;
     font-size: 12px;
-    background: #ccc;
-    border: 1px solid #999;
+    background: #cccccc;
+    border: 1px solid #999999;
     border-radius: 6px;
 }
 
 #comment-textarea:focus, #comment:hover, #author:hover, #email:hover, #url:hover, #comment:focus, #author:focus, #email:focus, #url:focus, .comicpress_control_panel_widget #user_login:focus, .comicpress_control_panel_widget #user_pass:focus {
-    background: #fff;
+    background: #ffffff;
 }
 
 /* Pagenav / Comment Nav */
@@ -817,11 +817,11 @@ h2.widget-title, h2.widget-title a {
 }
 
 .sidebar-no-widgets {
-    color: #000;
+    color: #000000;
     margin: 0 auto 10px;
     padding: 5px;
-    border: dotted 1px #aaa;
-    background: #ccc;
+    border: 1px dotted #aaaaaa;
+    background: #cccccc;
     border-radius: 6px;
 }
 
@@ -913,19 +913,19 @@ h2.widget-title, h2.widget-title a {
     min-width: 20px;
     padding: 0;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid #000000;
 }
 
 #wp-calendar a {
     display: block;
     text-decoration: none;
     font-weight: bold;
-    color: #b00;
+    color: #b00b00;
 }
 
 #wp-calendar a:hover {
-    color: #fff;
-    background: #000;
+    color: #ffffff;
+    background: #000000;
 }
 
 table#wp-calendar {
@@ -934,7 +934,7 @@ table#wp-calendar {
 }
 
 table#wp-calendar td {
-    border-color: #999;
+    border-color: #999999;
 }
 
 .wp-calendar-download {
@@ -943,20 +943,20 @@ table#wp-calendar td {
     overflow: hidden;
     font-size: 10px;
     text-align: right;
-    color: #777;
-    background: #222;
+    color: #777777;
+    background: #222222;
 }
 
 .wp-calendar-download-links a {
     padding: 0 3px;
     font-weight: bold;
-    color: #fff;
-    background: #000;
-    border-left: 1px solid #777;
+    color: #ffffff;
+    background: #000000;
+    border-left: 1px solid #777777;
 }
 
 .wp-calendar-download-links a:hover {
-    background: #800;
+    background: #800800;
 }
 
 /* Archive */
@@ -1050,13 +1050,13 @@ table#wp-calendar td {
     margin: 0 auto;
     display: inline-block;
     padding: 10px 5px 0 5px;
-    color: #000;
+    color: #000000;
     text-align: center;
     overflow: hidden;
 }
 
 .imagetitle {
-    color: #000;
+    color: #000000;
     font-size: 18px;
 }
 
@@ -1079,7 +1079,7 @@ table#wp-calendar td {
     height: 67px;
     position: absolute;
     z-index: 1;
-    color: #fff;
+    color: #ffffff;
     font-size: 80px;
     font-weight: bold;
     line-height: 67px;
@@ -1212,7 +1212,7 @@ table#wp-calendar td {
 
 .pagenav, .commentnav {
     height: 25px;
-    color: #000;
+    color: #000000;
     font-weight: bold;
     line-height: 25px;
     padding: 0 5px 0 5px;
@@ -1251,7 +1251,7 @@ table#wp-calendar td {
 
 .archive-title {
     padding: 2px 5px; /*	line-height: 11px; */
-    border-left: 1px dashed #aaa;
+    border-left: 1px dashed #aaaaaa;
 }
 
 .month-table {
@@ -1345,16 +1345,16 @@ table#wp-calendar td {
 
 #comment, #author, #email, #url, .s-search, .comicpress_control_panel_widget input {
     padding: 2px;
-    color: #000;
+    color: #000000;
     font-family: 'Verdana' , sans-serif;
     font-size: 12px;
-    background: #eee;
-    border: 1px solid #888;
+    background: #eeeeee;
+    border: 1px solid #888888;
     border-radius: 6px;
 }
 
 #comment:focus, #comment:hover, #author:hover, #email:hover, #url:hover, #author:focus, #email:focus, #url:focus, .comicpress_control_panel_widget #sname:focus, .comicpress_control_panel_widget #sname:hover, .comicpress_control_panel_widget #spassword:focus, .comicpress_control_panel_widget #spassword:hover, .s-search:focus {
-    background: #fff;
+    background: #ffffff;
 }
 
 .searchform {
@@ -1367,8 +1367,8 @@ table#wp-calendar td {
 }
 
 #submit, .searchform button, #comic button, .comicpress_control_panel_widget .button-primary {
-    background: #ccc;
-    color: #000;
+    background: #cccccc;
+    color: #000000;
     border-radius: 6px;
     background: linear-gradient(to bottom, rgba(170,170,170,1) 0%, rgba(204,204,204,1) 50%, rgba(221,221,221,1) 100%);
 }
@@ -1378,7 +1378,7 @@ table#wp-calendar td {
 }
 
 .widget-content option {
-    background: #ddd;
+    background: #dddddd;
 }
 
 #submit {
@@ -1386,7 +1386,7 @@ table#wp-calendar td {
 }
 
 #submit:hover, .searchform button:hover {
-    color: #f00;
+    color: #f00f00;
 }
 
 .searchform {
@@ -1396,11 +1396,11 @@ table#wp-calendar td {
 .ie .searchform button, .ie #submit {
     display: inline-block;
     float: left;
-    background: #ccc;
-    color: #000;
+    background: #cccccc;
+    color: #000000;
     line-height: 18px;
     font-size: 16px;
-    border: solid 1px #888;
+    border: 1px solid #888888;
 }
 
 .chrome .searchform button {
@@ -1417,7 +1417,7 @@ table#wp-calendar td {
 }
 
 #page-foot p {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -1596,10 +1596,10 @@ table#wp-calendar td {
     margin: 15px 0 0 0; 
     padding: 5px; 
     position: absolute; 
-    color: #eee; 
+    color: #eeeeee; 
     font-size: 11px; 
-    background-color:#222; 
-    border: 1px solid #ccc; 
+    background-color:#222222; 
+    border: 1px solid #cccccc; 
     visibility: hidden;
 }
 
@@ -1607,7 +1607,7 @@ table#wp-calendar td {
 
 body.rounded-posts .uentry, body.rounded-posts #comment-wrapper, body.rounded-posts #wp-paginav, body.rounded-posts #pagenav, body.rounded-posts .location-info {
     border-radius: 10px;
-    box-shadow: inset 1px 2px 2px #000;
+    box-shadow: inset 1px 2px 2px #000000;
 }
 
 /* Scheme: Boxed */
@@ -1616,14 +1616,14 @@ body.scheme-boxed {
 }
 
 body.scheme-boxed #page {
-    border: solid 1px #000;
-    box-shadow: 1px 2px 10px #000;
-    background: #fff;
+    border: 1px solid #000000;
+    box-shadow: 1px 2px 10px #000000;
+    background: #ffffff;
 }
 
 /* Scheme Sandy */
 body.scheme-sandy {
-	background: #cca;
+	background: #ccacca;
 }
 
 body.scheme-sandy #page {
@@ -1632,23 +1632,23 @@ body.scheme-sandy #page {
 }
 
 body.scheme-sandy h1 a, body.scheme-boxed h1 a {
-    text-shadow: 1px 2px 2px #777;
+    text-shadow: 1px 2px 2px #777777;
 }
 
 body.scheme-sandy #comic-wrap {
     margin: 0 auto;
     margin-bottom: -3px;
     position: relative;
-    border: solid 1px #000;
-    box-shadow: 1px 2px 10px #000;
+    border: 1px solid #000000;
+    box-shadow: 1px 2px 10px #000000;
     border-radius: 12px;
-    background: #fff;
+    background: #ffffff;
 }
 
 body.scheme-sandy #subcontent-wrapper {
     padding-top: 5px;
-    box-shadow: 1px 2px 10px #000;
-    background: #fff;
+    box-shadow: 1px 2px 10px #000000;
+    background: #ffffff;
 }
 
 body.scheme-sandy.cnc #subcontent-wrapper {
@@ -1657,18 +1657,18 @@ body.scheme-sandy.cnc #subcontent-wrapper {
 
 body.scheme-sandy #footer {
     margin-top: 10px;
-    box-shadow: 1px 2px 10px #000;
-    background: #fff;
+    box-shadow: 1px 2px 10px #000000;
+    background: #ffffff;
 }
 
 /* Scheme: Mecha */
 
 body.scheme-mecha {
-    background-color: #222;
+    background-color: #222222;
 }
 
 body.scheme-mecha .description {
-    color: #fff;
+    color: #ffffff;
 }
 
 body.scheme-mecha #page-wrap {
@@ -1680,24 +1680,24 @@ body.scheme-mecha #menubar-wrapper {
     margin: 1px 0 5px auto;
     padding: 2px 0px 5px 0px;
     border-radius: 4px;
-    box-shadow: 1px 2px 10px #000;
-    background: #111;
+    box-shadow: 1px 2px 10px #000000;
+    background: #111111;
     background: linear-gradient(to bottom, #4c4c4c 0%, #1c1c1c 91%,#131313 100%);
 }
 
 body.scheme-mecha #menubar-wrapper a {
-    text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px #333333;
 }
 
 body.scheme-mecha #content-wrapper {
-    background: #111 url('images/background-lines.png') repeat;
+    background: #111111 url('images/background-lines.png') repeat;
     border-radius: 10px;
-    box-shadow: 1px 2px 10px #000;
+    box-shadow: 1px 2px 10px #000000;
 }
 
 body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.widget-title, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .feature {
     border-color: #000;
-    background: #eee;
+    background: #eeeeee;
 }
 
 body.scheme-mecha #submit, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.widget-title, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .submit, body.scheme-mecha .feature, body.scheme-mecha .related-comics {
@@ -1707,14 +1707,14 @@ body.scheme-mecha #submit, body.scheme-mecha #wp-paginav, body.scheme-mecha h2.w
 
 body.scheme-mecha .post-info, body.scheme-mecha .uentry, body.scheme-mecha .type-attachment, body.scheme-mecha #wp-paginav, body.scheme-mecha .sidebar h2, body.scheme-mecha #comment-wrapper, body.scheme-mecha .blognav, body.scheme-mecha .default-nav, body.scheme-mecha .submit, body.scheme-mecha .feature {
     border-radius: 10px 10px 5px 5px;
-    background: #eee; /* Old browsers */
+    background: #eeeeee; /* Old browsers */
     background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%, rgba(170,170,170,1) 100%);
 }
 
 body.scheme-mecha .post-info {
     padding: 5px 5px 2px 5px;
     border-radius: 6px 6px 0 0;
-    border-bottom: solid 1px #888;
+    border-bottom: 1px solid #888888;
 }
 
 body.scheme-mecha .blognav {
@@ -1730,14 +1730,14 @@ body.scheme-mecha .blognav-next {
 }
 
 body.scheme-mecha .menu a, body.scheme-mecha .menunav a, body.scheme-mecha h2.page-title, body.scheme-mecha h2.post-title {
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 body.scheme-mecha #wp-calendar-wrap {
-    background: #333;
+    background: #333333;
     background: linear-gradient(135deg, rgba(51,51,51,1) 0%, rgba(68,68,68,1) 9%, rgba(85,85,85,1) 24%, rgba(17,17,17,1) 41%, rgba(102,102,102,1) 75%, rgba(89,89,89,1) 88%, rgba(76,76,76,1) 100%);
     border-radius: 6px;
-    border: solid 1px #111;
+    border: 1px solid #111111;
 }
 
 body.scheme-mecha #footer-sidebar-wrapper {
@@ -1746,14 +1746,14 @@ body.scheme-mecha #footer-sidebar-wrapper {
 
 body.scheme-mecha .menunav-rss:hover, body.scheme-mecha .menu ul li a:hover, body.scheme-mecha .menu ul li a.selected {
     color: #fcff00;
-	background: #111;
+	background: #111111;
     background: linear-gradient(to bottom, #131313 0%, #1c1c1c 91%, #4c4c4c 100%);
     border-radius: 10px;
 }
 
 body.scheme-mecha .menu ul li ul li a:hover, body.scheme-mecha .menu ul li ul li a.selected {
     border-radius: 0;
-    background: #111;
+    background: #111111;
 }
 
 body.scheme-mecha .menu .current_page_item > a {
@@ -1765,11 +1765,11 @@ body.scheme-mecha .menu-item-home {
 }
 
 body.scheme-mecha .menu ul li a:hover, body.scheme-mecha .menu ul li ul li a:hover {
-    color: yellow;
+    color: #fcff00;
 }
 
 body.scheme-mecha .copyright-info {
-    color: #ccc;
+    color: #cccccc;
 }
 
 body.scheme-mecha .copyright-info a:link, body.scheme-mecha .copyright-info a:visited {
@@ -1777,39 +1777,39 @@ body.scheme-mecha .copyright-info a:link, body.scheme-mecha .copyright-info a:vi
 }
 
 body.scheme-mecha .copyright-info a:hover {
-    color: #f00;
+    color: #f00f00	;
 }
 
 body.scheme-mecha #sidebar-left, body.scheme-mecha #sidebar-right, body.scheme-mecha #footer-sidebar-wrapper {
-    color: #fff;
+    color: #ffffff;
 }
 
 body.scheme-mecha h2.widget-title {
-    color: #000;
+    color: #000000;
     padding: 0px 0px 0px 10px;
     border-radius: 4px;
 }
 
 body.scheme-mecha #sidebar-left a:link, body.scheme-mecha #sidebar-right a:link, body.scheme-mecha #footer-sidebar-wrapper a:link, body.scheme-mecha .footmenu a:link {
-    color: Yellow;
+    color: #fcff00;
 }
 
 body.scheme-mecha #sidebar-left a:visited, body.scheme-mecha #sidebar-right a:visited, body.scheme-mecha #footer-sidebar-wrapper a:visited, body.scheme-mecha .footmenu a:visited {
-    color: Yellow;
+    color: #fcff00;
 }
 
 body.scheme-mecha #sidebar-left a:hover, body.scheme-mecha #sidebar-right a:hover, body.scheme-mecha #footer-sidebar-wrapper a:hover, body.scheme-mecha .footmenu a:hover {
-    color: #f00;
+    color: #f00f00;
 }
 
 body.scheme-mecha .archiveresults, body.scheme-mecha .searchresults, body.scheme-mecha.archive h2.page-title, body.scheme-mecha.search h2.page-title {
-    color: #fff;
+    color: #ffffff;
 }
 
 /* Scheme: CEasel */
 
 body.scheme-ceasel {
-    background: #ccc url('images/noise.jpg') repeat;
+    background: #cccccc url('images/noise.jpg') repeat;
     font-family: "Trebuchet MS" , Helvetica, sans-serif;
     font-size: 14px;
 }
@@ -1819,30 +1819,30 @@ body.scheme-ceasel h1, body.scheme-ceasel h1 a, body.scheme-ceasel h2, body.sche
 }
 
 body.scheme-ceasel #header h1 {
-    text-shadow: 1px 1px 1px #ccc;
+    text-shadow: 1px 1px 1px #cccccc;
 }
 
 body.scheme-ceasel #menubar-wrapper {
     background: #bababa; /* Old browsers */
 	background: linear-gradient(to bottom, rgba(234,234,234,1) 0%, rgba(202,202,202,1) 100%);
     border-radius: 4px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     overflow: visible;
     box-shadow: 1px 1px 3px rgba(20, 20, 20, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2); 
-    border: solid 1px #ccc;
+    border: 1px solid #cccccc;
 }
 
 body.scheme-ceasel .menu ul li a:link, body.scheme-ceasel .menu ul li a:visited {
-    color: #000;
+    color: #000000;
 }
 
 body.scheme-ceasel .menu ul li a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 body.scheme-ceasel .menu ul li ul li a:link, body.scheme-ceasel .menu ul li ul li a:visited {
-    color: #fff;
+    color: #ffffff;
 }
 
 body.scheme-ceasel #menubar-wrapper a {
@@ -1854,7 +1854,7 @@ body.scheme-ceasel .menu ul li a, body.scheme-ceasel .menunav-rss {
 }
 
 body.scheme-ceasel #breadcrumb-wrapper, body.scheme-ceasel #wp-paginav, body.scheme-ceasel #pagenav {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     box-shadow: none;
     margin: 5px auto;
@@ -1867,9 +1867,9 @@ body.scheme-ceasel #wp-paginav, body.scheme-ceasel #pagenav {
 }
 
 body.scheme-ceasel #content-wrapper {
-    background: #fff;
+    background: #ffffff;
     border-radius: 6px;
-    border: solid 1px #ccc;
+    border: 1px solid #cccccc;
 }
 
 body.scheme-ceasel .sidebar .widget {
@@ -1882,7 +1882,7 @@ body.scheme-ceasel .sidebar .widget {
 body.scheme-ceasel .uentry {
     margin-bottom: 30px;
     border-radius: 6px;
-	background: #fff url('images/post-bottom.jpg') bottom left repeat-x;
+	background: #ffffff url('images/post-bottom.jpg') bottom left repeat-x;
 }
 
 body.scheme-ceasel .post-info {
@@ -1893,7 +1893,7 @@ body.scheme-ceasel .post-info {
 body.scheme-ceasel .sidebar h2 {
     padding: 1px 4px;
     border-radius: 3px;
-    border: solid 1px #ccc;
+    border: 1px solid #cccccc;
     background: linear-gradient(to bottom, rgba(234,234,234,1) 0%, rgba(202,202,202,1) 100%);
 }
 
@@ -1926,7 +1926,7 @@ body.scheme-ceasel #footer {
 }
 
 body.scheme-ceasel #page-foot {
-    background: #111;
+    background: #111111;
 }
 
 body.scheme-ceasel #comment-wrapper {
@@ -1939,7 +1939,7 @@ body.scheme-ceasel .feature img {
 }
 
 body.scheme-ceasel h2.slider-title a:hover {
-    color: #f00;
+    color: #f00f00;
 }
 
 body.layout-2cr.scheme-ceasel #sidebar-footer {
@@ -1969,8 +1969,8 @@ body.scheme-ceasel .sidebar .ceo_comic_archive_dropdown_widget h2.widget-title {
 /* Scheme: High Society */
 
 body.scheme-high {
-    color: #fff;
-    background: #111 url('images/background-high-body.jpg') top center repeat;
+    color: #ffffff;
+    background: #111111 url('images/background-high-body.jpg') top center repeat;
 }
 
 body.scheme-high #page {
@@ -2007,7 +2007,7 @@ body.scheme-high h2.post-title a {
 }
 
 body.scheme-high h2.post-title a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 body.scheme-high #header {
@@ -2016,11 +2016,11 @@ body.scheme-high #header {
 }
 
 body.scheme-high #header h1 a, body.scheme-high #header .description {
-    text-shadow: 2px 2px 1px #000;
+    text-shadow: 2px 2px 1px #000000;
 }
 
 body.scheme-high .menu a, body.scheme-high .menunav a, body.scheme-high .comic-nav-base {
-    text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px #333333;
 }
 
 body.scheme-high #menubar-wrapper {
@@ -2029,11 +2029,11 @@ body.scheme-high #menubar-wrapper {
 }
 
 body.scheme-high .menu ul li a:link, body.scheme-high .menu ul li a:visited, body.scheme-high .menunav a:link, body.scheme-high .menunav a:visited {
-    color: #000;
+    color: #000000;
 }
 
 body.scheme-high .menunav a:hover {
-    color: #fff;
+    color: #ffffff;
     background-color: Transparent;
 }
 
@@ -2044,28 +2044,28 @@ body.scheme-high .menunav-rss:hover, body.scheme-high .menu ul li a:hover, body.
 }
 
 body.scheme-high .menu ul li ul li a:hover {
-    color: #fff;
-    background: #111;
+    color: #ffffff;
+    background: #111111;
 }
 
 body.scheme-high .uentry, body.scheme-high .sidebar h2, body.scheme-high #wp-calendar-wrap, body.scheme-high #wp-paginav, body.scheme-high #comment-wrapper, body.scheme-high #pagenav, body.scheme-high table#comic-nav-wrapper, body.scheme-high #comic-wrap {
-    background: #000 url('images/background-high-post.jpg') repeat;
+    background: #000000 url('images/background-high-post.jpg') repeat;
     margin-bottom: 10px;
-    border: solid 1px #2d1f04;
+    border: 1px solid #2d1f04;
     border-radius: 10px;
-    box-shadow: 1px 2px 3px #000;
+    box-shadow: 1px 2px 3px #000000;
 }
 
 body.scheme-high .post-info {
-    background: #000;
+    background: #000000;
     padding: 0 5px 5px 5px;
-    border-bottom: solid 1px #2d1f04;
+    border-bottom: 1px solid #2d1f04;
     border-radius: 10px 10px 0 0;
     padding: 3px 5px;
 }
 
 body.scheme-high table#comic-nav-wrapper {
-    background: #000 url('images/background-high-body.jpg') repeat;
+    background: #000000 url('images/background-high-body.jpg') repeat;
 }
 
 body.scheme-high .sidebar h2 {
@@ -2078,10 +2078,10 @@ body.scheme-high .sidebar h2 {
 body.scheme-high #blogheader {
     border-color: #2d1f04;
     width: 80%;
-    box-shadow: 1px 2px 1px #000;
+    box-shadow: 1px 2px 1px #000000;
 }
 
 body.scheme-high .post-image img {
-    border: solid 1px #000;
+    border: 1px solid #000000;
     border-radius: 10px 10px 0 0;
 }
