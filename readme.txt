@@ -32,11 +32,17 @@ PHP:       5.4
 == Changelog ==
 
 = 4.3.x =
-* update breadcumps to version: 2015.09.14
-* added missed labels in costumizer
-* extended WP_Customize_Control with new range sliders with output bubbles
-* added new range slider CSS to options.css
-* added `no_IE_range.js` to handle old IE that doesn’t understand range sliders
+* added:   missed labels in costumizer
+* added:   extended WP_Customize_Control with new range sliders with output bubbles
+* added:   new range slider CSS to options.css
+* added: ` no_IE_range.js` to handle old IE that doesn’t understand range sliders
+* fixed:   "back to top" function
+* fixed:   schema Mecha colors for menu changed from yellow to #fcff00
+* fixed:   HTML errors in author.php
+* fixed:   HTML errors in the Back-End
+* update:  breadcumps to version: 2015.09.14
+* changed: convert colors in style.css and options.css from #xxx to #xxxxxx  NO COLOR CHANGES
+* removed: outdated border referenes in options.php for Back-End
 
 = 4.3 =
 * re-added: widget "posts calender"
