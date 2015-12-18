@@ -116,13 +116,16 @@ if(get_query_var('author_name') ) {
 						<?php } ?>
 					</table>
 				</div>
+				
 				<?php if (!empty($curauth->description)) { ?>
 				<div class="userpage-desc">
 					<?php echo $curauth->description; ?>
 				</div>
 				<?php } ?>
+				
 			</div>
 			<div class="clear"></div>
+			
 			<?php if (have_posts()) { ?>
 			<div class="userpage-posts">
 				<h3><?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;</h3>
@@ -130,7 +133,9 @@ if(get_query_var('author_name') ) {
 				<table class="author-posts">
 					<?php while (have_posts()) : the_post(); ?>
 					<tr>
-						<td class="author-archive-date" align="right"><?php the_time('M j, Y') ?></td>
+						<td class="author-archive-date" align="right">
+							<?php the_time('M j, Y') ?>
+						</td>
 						<td class="author-archive-title">
 							<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
 						</td>
