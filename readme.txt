@@ -40,7 +40,8 @@ PHP:       5.4
 * fixed:   schema Mecha colors for menu changed from yellow to #fcff00
 * fixed:   HTML errors in author.php
 * fixed:   HTML errors in the Back-End
-* update:  breadcumps to version: 2015.09.14
+* updated: breadcumps to version: 2015.09.14
+* updated: german translation
 * changed: convert colors in style.css and options.css from #xxx to #xxxxxx  NO COLOR CHANGES
 * removed: outdated border referenes in options.php for Back-End
 
