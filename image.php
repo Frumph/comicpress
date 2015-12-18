@@ -19,7 +19,7 @@
 				</div>
 				<div class="imagenav-center">
 					<a href="<?php echo wp_get_attachment_url($post->ID) ?>" target="_blank" title="Click for full size." class="imagetitle"><?php the_title() ?></a><br />
-					<a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php _e( '&larr; Back to Gallery', 'comicpress' ); ?></a>
+					<a href="<?php echo get_permalink($post->post_parent) ?>" rel="attachment"><?php _e( '&larr; Back to Gallery', 'comicpress' ); ?></a>
 				</div>
 				<div class="imagenav-right">
 					<div class="imagenav-bg">
