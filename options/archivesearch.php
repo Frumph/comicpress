@@ -15,7 +15,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="display_archive_as_links"><?php _e( 'Display archive results as a list of links?', 'comicpress' ); ?></label>
+							<label for="display_archive_as_links">
+								<?php _e( 'Display archive results as a list of links?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="display_archive_as_links" name="display_archive_as_links" type="checkbox" value="1" <?php checked(true, $comicpress_options['display_archive_as_links']); ?> />
@@ -26,10 +28,16 @@
 					</tr>
 					<tr>
 						<th scope="row" colspan="2">
-							<label for="excerpt_or_content_in_archive"><?php _e( 'Excerpt or Full Content in archive and search?', 'comicpress' ); ?></label>
+							<label for="excerpt_or_content_in_archive">
+								<?php _e( 'Excerpt or Full Content in archive and search?', 'comicpress' ); ?>
+							</label>
 							<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
-								<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>><?php _e( 'Excerpt', 'comicpress' ); ?></option>
-								<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>><?php _e( 'Full Content', 'comicpress' ); ?></option>
+								<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>>
+									<?php _e( 'Excerpt', 'comicpress' ); ?>
+								</option>
+								<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>>
+									<?php _e( 'Full Content', 'comicpress' ); ?>
+								</option>
 							</select>
 						</th>
 						<td>
@@ -38,10 +46,16 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row" colspan="2">
-							<label for="archive_display_order"><?php _e( 'Archive Display Order', 'comicpress' ); ?></label>
+							<label for="archive_display_order">
+								<?php _e( 'Archive Display Order', 'comicpress' ); ?>
+							</label>
 							<select name="archive_display_order" id="archive_display_order">
-								<option class="level-0" value="asc" <?php if ($comicpress_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>><?php _e( 'Oldest to Newest &mdash; Ascending', 'comicpress' ); ?></option>
-								<option class="level-0" value="desc" <?php if ($comicpress_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>><?php _e( 'Newest to Oldest &mdash; Descending', 'comicpress' ); ?></option>
+								<option class="level-0" value="asc" <?php if ($comicpress_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>>
+									<?php _e( 'Oldest to Newest &mdash; Ascending', 'comicpress' ); ?>
+								</option>
+								<option class="level-0" value="desc" <?php if ($comicpress_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>>
+									<?php _e( 'Newest to Oldest &mdash; Descending', 'comicpress' ); ?>
+								</option>
 							</select>
 						</th>
 						<td>
@@ -51,7 +65,8 @@
 				</tbody>
 			</table>
 			<br />
-				<table class="widefat">
+			
+			<table class="widefat">
 				<thead>
 					<tr>
 						<th colspan="3">
@@ -62,7 +77,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_numbered_pagination"><?php _e( 'Enable numbered pagination?', 'comicpress' ); ?></label>
+							<label for="enable_numbered_pagination">
+								<?php _e( 'Enable numbered pagination?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_numbered_pagination']); ?> />
@@ -74,6 +91,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">

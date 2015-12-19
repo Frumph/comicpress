@@ -15,7 +15,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_debug_footer_code"><?php _e( 'Enable the debug page load/memory usage at the bottom of each page?', 'comicpress' ); ?></label>
+							<label for="enable_debug_footer_code">
+								<?php _e( 'Enable the debug page load/memory usage at the bottom of each page?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_debug_footer_code" name="enable_debug_footer_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_debug_footer_code']); ?> />
@@ -26,7 +28,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="force_active_connection_close"><?php _e( 'Force MySQL to close the current active connection after page load?', 'comicpress' ); ?></label>
+							<label for="force_active_connection_close">
+								<?php _e( 'Force MySQL to close the current active connection after page load?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $comicpress_options['force_active_connection_close']); ?> />
@@ -38,6 +42,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">
@@ -70,7 +75,6 @@
 			?>
 		// -->
 		</table>
-					
+		
 	</form>
 </div>
-

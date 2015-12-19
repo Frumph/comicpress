@@ -20,6 +20,7 @@
 			</tbody>
 		</table>
 		<br />
+		
 		<table class="widefat">
 			<thead>
 				<tr>
@@ -83,5 +84,7 @@
 			</tbody>
 		</table>
 		<br />
+		
 	</div>
+	
 </div>

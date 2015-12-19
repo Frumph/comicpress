@@ -15,7 +15,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_default_menubar"><?php _e( 'Disable default Menubar?', 'comicpress' ); ?></label>
+							<label for="disable_default_menubar">
+								<?php _e( 'Disable default Menubar?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_default_menubar" name="disable_default_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_default_menubar']); ?> />
@@ -26,7 +28,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="enable_search_in_menubar"><?php _e( 'Enable Search Form?', 'comicpress' ); ?></label>
+							<label for="enable_search_in_menubar">
+								<?php _e( 'Enable Search Form?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_search_in_menubar" name="enable_search_in_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_search_in_menubar']); ?> />
@@ -37,7 +41,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_rss_in_menubar"><?php _e( 'Enable RSS Link?', 'comicpress' ); ?></label>
+							<label for="enable_rss_in_menubar">
+								<?php _e( 'Enable RSS Link?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_rss_in_menubar" name="enable_rss_in_menubar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_rss_in_menubar']); ?> />
@@ -48,7 +54,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="disable_jquery_menu_code"><?php _e( 'Disable the menubar jQuery?', 'comicpress' ); ?></label>
+							<label for="disable_jquery_menu_code">
+								<?php _e( 'Disable the menubar jQuery?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_jquery_menu_code" name="disable_jquery_menu_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_jquery_menu_code']); ?> />
@@ -59,7 +67,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_breadcrumbs"><?php _e( 'Enable Breadcrumbs?', 'comicpress' ); ?></label>
+							<label for="enable_breadcrumbs">
+								<?php _e( 'Enable Breadcrumbs?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_breadcrumbs" name="enable_breadcrumbs" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_breadcrumbs']); ?> />
@@ -71,6 +81,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -82,7 +93,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="menubar_social_icons"><?php _e( 'Enable Social Icons in Menubar?', 'comicpress' ); ?></label>
+							<label for="menubar_social_icons">
+								<?php _e( 'Enable Social Icons in Menubar?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="menubar_social_icons" name="menubar_social_icons" type="checkbox" value="1" <?php checked(true, $comicpress_options['menubar_social_icons']); ?> />
@@ -93,6 +106,7 @@
 					</tr>
 				</tbody>
 			</table>
+			
 			<table class="widefat">
 				<tr>
 					<td>
@@ -222,6 +236,7 @@
 				</tr>
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">

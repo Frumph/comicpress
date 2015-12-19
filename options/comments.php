@@ -15,7 +15,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_comment_note"><?php _e( 'Disable the comment notes?', 'comicpress' ); ?></label>
+							<label for="disable_comment_note">
+								<?php _e( 'Disable the comment notes?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_comment_note" name="disable_comment_note" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_comment_note']); ?> />
@@ -26,7 +28,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="disable_comment_javascript"><?php _e( 'Disable Comment Javascript?', 'comicpress' ); ?></label>
+							<label for="disable_comment_javascript">
+								<?php _e( 'Disable Comment Javascript?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_comment_javascript" name="disable_comment_javascript" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_comment_javascript']); ?> />
@@ -37,7 +41,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_comments_on_homepage"><?php _e( 'Enable Comments on Home Page?', 'comicpress' ); ?></label>
+							<label for="enable_comments_on_homepage">
+								<?php _e( 'Enable Comments on Home Page?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_comments_on_homepage" name="enable_comments_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_comments_on_homepage']); ?> />
@@ -65,26 +71,34 @@
 					
 					<tr>
 						<th scope="row" colspan="2">
-							<label for="avatar_directory"><?php _e( 'Avatar Directory', 'comicpress' ); ?></label>
+							<label for="avatar_directory">
+								<?php _e( 'Avatar Directory', 'comicpress' ); ?>
+							</label>
 							<select name="avatar_directory" id="avatar_directory">
-								<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
+								<option class="level-0" value="none" <?php if ($current_avatar_directory == "none") { ?>selected="selected"<?php } ?>>
+									<?php _e( 'none', 'comicpress' ); ?>
+								</option>
 								<?php
 								foreach ($avatar_directories as $avatar_dirs) {
 									if (is_dir($avatar_dirs)) {
 										$avatar_dir_name = basename($avatar_dirs); ?>
-								<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>><?php echo $avatar_dir_name; ?></option>
+								<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ($current_avatar_directory == $avatar_dir_name) { ?>selected="selected"<?php } ?>>
+									<?php echo $avatar_dir_name; ?>
+								</option>
 								<?php }
 								}
 								?>
 							</select>
 						</th>
 						<td>
-							<?php _e( 'Choose a directory to get the avatars for default gravatars if someone does not have one. You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. Setting this to <strong>none</strong> will disable it from using any special avatar sets.', 'comicpress' ); ?><br />
+							<?php _e( 'Choose a directory to get the avatars for default gravatars if someone does not have one. You will have to make these images yourself, or download them from avatar providers. Then make a new directory on your site server to upload them to and select that directory here. Setting this to <strong>none</strong> will disable it from using any special avatar sets.', 'comicpress' ); ?>
+							<br />
 						</td>
 					</tr>
 				</tbody>
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">

@@ -15,7 +15,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-						<label for="disable_post_titles"><?php _e( 'Disable the titles on posts?', 'comicpress' ); ?></label>
+						<label for="disable_post_titles">
+							<?php _e( 'Disable the titles on posts?', 'comicpress' ); ?>
+						</label>
 						</th>
 						<td>
 							<input id="disable_post_titles" name="disable_post_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_post_titles']); ?> />
@@ -26,7 +28,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="enable_post_calendar"><?php _e( 'Add graphic calendar to blog posts?', 'comicpress' ); ?></label>
+							<label for="enable_post_calendar">
+								<?php _e( 'Add graphic calendar to blog posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_post_calendar" name="enable_post_calendar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_calendar']); ?> />
@@ -37,7 +41,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_post_author_gravatar"><?php _e( 'Enable Author Gravatar?', 'comicpress' ); ?></label>
+							<label for="enable_post_author_gravatar">
+								<?php _e( 'Enable Author Gravatar?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_post_author_gravatar" name="enable_post_author_gravatar" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_author_gravatar']); ?> />
@@ -48,7 +54,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="enable_avatar_trick"><?php _e( 'Enable Avatar Mod?', 'comicpress' ); ?></label>
+							<label for="enable_avatar_trick">
+								<?php _e( 'Enable Avatar Mod?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_avatar_trick" name="enable_avatar_trick" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_avatar_trick']); ?> />
@@ -59,7 +67,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_tags_in_posts"><?php _e( 'Disable display of <strong>tags</strong> in posts?', 'comicpress' ); ?></label>
+							<label for="disable_tags_in_posts">
+								<?php _e( 'Disable display of <strong>tags</strong> in posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_tags_in_posts" name="disable_tags_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_tags_in_posts']); ?> />
@@ -70,7 +80,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="disable_categories_in_posts"><?php _e( 'Disable display of <strong>categories</strong> in posts?', 'comicpress' ); ?></label>
+							<label for="disable_categories_in_posts">
+								<?php _e( 'Disable display of <strong>categories</strong> in posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_categories_in_posts" name="disable_categories_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_categories_in_posts']); ?> />
@@ -81,7 +93,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_author_info_in_posts"><?php _e( 'Disable display of <strong>by Author</strong> in post information?', 'comicpress' ); ?></label>
+							<label for="disable_author_info_in_posts">
+								<?php _e( 'Disable display of <strong>by Author</strong> in post information?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_author_info_in_posts" name="disable_author_info_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_author_info_in_posts']); ?> />
@@ -92,7 +106,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="disable_date_info_in_posts"><?php _e( 'Disable display of the posted on date in posts?', 'comicpress' ); ?></label>
+							<label for="disable_date_info_in_posts">
+								<?php _e( 'Disable display of the posted on date in posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_date_info_in_posts" name="disable_date_info_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_date_info_in_posts']); ?> />
@@ -103,7 +119,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_posted_at_time_in_posts"><?php _e( 'Disable the display of the posted at time in posts?', 'comicpress' ); ?></label>
+							<label for="disable_posted_at_time_in_posts">
+								<?php _e( 'Disable the display of the posted at time in posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_posted_at_time_in_posts" name="disable_posted_at_time_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_posted_at_time_in_posts']); ?> />
@@ -114,7 +132,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="enable_last_modified_in_posts"><?php _e( 'Enable the display of last modified information in posts?', 'comicpress' ); ?></label>
+							<label for="enable_last_modified_in_posts">
+								<?php _e( 'Enable the display of last modified information in posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_last_modified_in_posts" name="enable_last_modified_in_posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_last_modified_in_posts']); ?> />
@@ -141,7 +161,9 @@
 					
 					<tr class="alternate">
 						<th scope="row" colspan="2">
-						<label for="moods_directory"><?php _e( 'Moods Directory','comicpress' ); ?></label>
+						<label for="moods_directory">
+							<?php _e( 'Moods Directory','comicpress' ); ?>
+						</label>
 							<select name="moods_directory" id="moods_directory">
 								<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
 								<?php
@@ -161,6 +183,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -168,7 +191,11 @@
 					</tr>
 				</thead>
 				<tr class="alternate">
-					<th scope="row"><label for="disable_page_titles"><?php _e( 'Disable the titles on pages?', 'comicpress' ); ?></label></th>
+					<th scope="row">
+						<label for="disable_page_titles">
+							<?php _e( 'Disable the titles on pages?', 'comicpress' ); ?>
+						</label>
+					</th>
 					<td>
 						<input id="disable_page_titles" name="disable_page_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_page_titles']); ?> />
 					</td>
@@ -178,6 +205,7 @@
 				</tr>
 			</table>
 			<br />
+			
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -193,7 +221,9 @@
 							$comicpress_options['content_width'] = 500;
 						?>				
 						<th scope="row">
-							<label for="content_width"><?php _e( 'Media and images width on posts and pages?', 'comicpress' ); ?></label>
+							<label for="content_width">
+								<?php _e( 'Media and images width on posts and pages?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input type="text" size="4" name="content_width" id="content_width" value="<?php echo $comicpress_options['content_width']; ?>" /> px
@@ -208,7 +238,9 @@
 							$comicpress_options['content_width_disabled_sidebars'] = 700;
 						?>
 						<th scope="row">
-							<label for="content_width_disabled_sidebars"><?php _e( 'Media and images width when sidebars are disabled on pages?', 'comicpress' ); ?></label>
+							<label for="content_width_disabled_sidebars">
+								<?php _e( 'Media and images width when sidebars are disabled on pages?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" /> px
@@ -220,6 +252,7 @@
 				</tbody>	
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">

@@ -15,7 +15,9 @@
 				<tbody>
 					<tr>
 						<th scope="row">
-							<label for="home_post_count"><?php _e( 'How many blog posts would you like to display on the home page?', 'comicpress' ); ?></label>
+							<label for="home_post_count">
+								<?php _e( 'How many blog posts would you like to display on the home page?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input type="text" size="2" name="home_post_count" id="home_post_count" value="<?php echo $comicpress_options['home_post_count']; ?>" />
@@ -26,7 +28,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_blog_on_homepage"><?php _e( 'Disable Blog Loop?', 'comicpress' ); ?></label>
+							<label for="disable_blog_on_homepage">
+								<?php _e( 'Disable Blog Loop?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_blog_on_homepage']); ?> />
@@ -41,7 +45,9 @@
                         	$comicpress_options['add_pw_async_code_to_head'] = false;
 						 ?>
 						<th scope="row">
-							<label for="add_pw_async_code_to_head"><?php _e( 'Enable Project Wonderful Asyncronus code?', 'comicpress' ); ?></label>
+							<label for="add_pw_async_code_to_head">
+								<?php _e( 'Enable Project Wonderful Asyncronus code?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="add_pw_async_code_to_head" name="add_pw_async_code_to_head" type="checkbox" value="1" <?php checked(true, $comicpress_options['add_pw_async_code_to_head']); ?> />
@@ -52,7 +58,9 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="over-blog-sidebar-all-posts"><?php _e( 'Allow the sidebar over-blog to appear on all posts?', 'comicpress' ); ?></label>
+							<label for="over-blog-sidebar-all-posts">
+								<?php _e( 'Allow the sidebar over-blog to appear on all posts?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="over-blog-sidebar-all-posts" name="over-blog-sidebar-all-posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['over-blog-sidebar-all-posts']); ?> />
@@ -64,6 +72,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -75,7 +84,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="disable_footer_text"><?php _e( 'Disable the copyright text in the footer?', 'comicpress' ); ?></label>
+							<label for="disable_footer_text">
+								<?php _e( 'Disable the copyright text in the footer?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_footer_text']); ?> />
@@ -86,7 +97,9 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="disable_scroll_to_top"><?php _e( 'Disable the scroll to top link in the footer?', 'comicpress' ); ?></label>
+							<label for="disable_scroll_to_top">
+								<?php _e( 'Disable the scroll to top link in the footer?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="disable_scroll_to_top" name="disable_scroll_to_top" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_scroll_to_top']); ?> />
@@ -97,8 +110,11 @@
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="copyright_name"><?php _e( '&copy; Copyright Name', 'comicpress' ); ?></label>
-							<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo stripcslashes($comicpress_options['copyright_name']); ?>" /><br />
+							<label for="copyright_name">
+								<?php _e( '&copy; Copyright Name', 'comicpress' ); ?>
+							</label>
+							<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo stripcslashes($comicpress_options['copyright_name']); ?>" />
+							<br />
 						</th>
 						<td colspan="2">
 							<?php _e( 'Set the name to which this site is &copy; Copyright to. Leave blank to have the site name.', 'comicpress' ); ?>
@@ -106,8 +122,11 @@
 					</tr>
 					<tr>
 						<th scope="row">
-							<label for="copyright_url"><?php _e( '&copy; Copyright Holder URL', 'comicpress' ); ?></label>
-							<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo stripcslashes($comicpress_options['copyright_url']); ?>" /><br />
+							<label for="copyright_url">
+								<?php _e( '&copy; Copyright Holder URL', 'comicpress' ); ?>
+							</label>
+							<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo stripcslashes($comicpress_options['copyright_url']); ?>" />
+							<br />
 						</th>
 						<td colspan="2">
 							<?php _e( 'Set the URL to the owner of the &copy; Copyright if different then this website. Leave blank for sites link.', 'comicpress' ); ?>
@@ -116,6 +135,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -127,7 +147,9 @@
 				<tbody>
 					<tr class="alternate">
 						<th scope="row">
-							<label for="enable_post_thumbnail_rss"><?php _e( 'Enable the post thumbnails in the RSS feed?', 'comicpress' ); ?></label>
+							<label for="enable_post_thumbnail_rss">
+								<?php _e( 'Enable the post thumbnails in the RSS feed?', 'comicpress' ); ?>
+							</label>
 						</th>
 						<td>
 							<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_thumbnail_rss']); ?> />
@@ -139,6 +161,7 @@
 				</tbody>
 			</table>
 			<br />
+			
 		</div>
 
 		<div class="comicpress-options-save">
