@@ -10,13 +10,12 @@
 add_filter('body_class','comicpress_body_class');
 
 function comicpress_body_class($classes = array()) {
-	global  $current_user, $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
+	global  $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
 	
-	get_currentuserinfo();
-	
-	if (!empty($user_ID)) {
-		$user_login = addslashes($current_user->user_login);
-		if (!empty($user_login)) $classes[] = 'user-'.$user_login;
+	if (is_user_logged_in()) {
+		$current_user = wp_get_current_user();
+		$user_login = $current_user->user_login;
+		if (!empty($user_login)) $classes[] = 'user-'.strtolower($user_login);
 	} else {
 		$classes[] = 'user-guest';
 	}
