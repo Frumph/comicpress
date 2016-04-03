@@ -26,10 +26,14 @@ Please read information and faqs on comiceasel.com for more information regardin
 
 == Requires ==
 
-WordPress: 4.3
+WordPress: 4.5
 PHP:       5.4
 
 == Changelog ==
+= 4.3.2 =
+* Added no column - no l/r sidebars layout option
+* Fixed the featured image thumbnail to only appear on posts - fixes for custom post types that might display
+* replaced deprecated function get_currentuserinfo() with is_user_logged_in and wp_get_current_user
 
 = 4.3.x =
 * added:   missed labels in costumizer
