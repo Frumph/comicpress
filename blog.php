@@ -4,7 +4,7 @@ Template Name: Blog
 */
 get_header();
 
-$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
 $blog_query = array(
 		'paged' => $paged,
