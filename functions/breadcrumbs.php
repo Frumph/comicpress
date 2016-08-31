@@ -50,7 +50,7 @@ function comicpress_breadcrumbs() {
 	$link_in_after  = '</span>';
 	$link           = $link_before . '<a href="%1$s"' . $link_attr . '>' . $link_in_before . '%2$s' . $link_in_after . '</a>' . $link_after;
 	$frontpage_id   = get_option('page_on_front');
-	$parent_id      = $post->post_parent;
+	$parent_id      = (!empty($post)) ? $post->post_parent : false;
 	$sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
 
 	if (is_home() || is_front_page()) {
