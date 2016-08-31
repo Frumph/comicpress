@@ -26,10 +26,13 @@ Please read information and faqs on comiceasel.com for more information regardin
 
 == Requires ==
 
-WordPress: 4.5
+WordPress: 4.6
 PHP:       5.4
 
 == Changelog ==
+= 4.4 =
+* Compliance check for 4.6 of Wordpress
+
 = 4.3.2 =
 * Added no column - no l/r sidebars layout option
 * Fixed the featured image thumbnail to only appear on posts - fixes for custom post types that might display
