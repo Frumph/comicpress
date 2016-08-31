@@ -32,6 +32,8 @@ PHP:       5.4
 == Changelog ==
 = 4.4 =
 * Compliance check for 4.6 of Wordpress
+* Probably breadcrumb fix for property error when trying to retrieve $parent_id
+* options $tab reference fix with strict php implemented
 
 = 4.3.2 =
 * Added no column - no l/r sidebars layout option
