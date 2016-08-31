@@ -226,7 +226,7 @@ function comicpress_admin_options() { ?>
 				'debug' => __( 'Debug', 'comicpress' )
 		  	);
 
-		  	if (empty($tab)) { $tab = array_shift(array_keys($tab_info)); }
+		  	if (empty($tab)) { $tab = 'splash'; }
 
 		  	foreach($tab_info as $tab_id => $label) { ?>
 		  		<div id="comicpress-tab-<?php echo $tab_id ?>" class="comicpress-tab <?php echo ($tab == $tab_id) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
