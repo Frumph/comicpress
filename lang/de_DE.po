@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress 4.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-03 16:20+0200\n"
-"PO-Revision-Date: 2016-04-03 16:20+0200\n"
+"PO-Revision-Date: 2016-04-13 18:45+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -1682,15 +1682,15 @@ msgstr "Zeige Beiträge für %1$s %2$s"
 
 #: widgets/calendar.php:251
 msgid "ComicPress - Posts Calendar"
-msgstr "ComicPress - Posts Kalender"
+msgstr "ComicPress - Beitragskalender"
 
 #: widgets/calendar.php:252
 msgid ""
 "Display a calendar showing this months posts. (this calendar does not drop "
 "lines if there is no title given.)"
 msgstr ""
-"Zeigt einen Kalender mit diesen Monats Beiträgen. (Dieser Kalender gibt "
-"keine Ankerlinien, wenn es keinen Titel gibt.)"
+"Zeigt einen Kalender mit den Beiträgen von diesem Monat. (Dieser Kalender "
+"gibt keine Ankerlinien, wenn es keinen Titel gibt.)"
 
 #: widgets/calendar.php:282
 msgid "DOWNLOAD"
