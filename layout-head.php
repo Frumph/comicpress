@@ -20,7 +20,7 @@ if (!comicpress_is_signup() && !comicpress_sidebars_disabled()) {
 	if (comicpress_is_layout('3crgn')) comicpress_get_sidebar('left');
 }
 			?>
-			<div id="content" class="narrowcolumn">		
+			<div id="content" class="narrowcolumn">	
 				<?php do_action('comicpress-narrowcolumn-area'); ?>
 <?php
 if (!comicpress_sidebars_disabled()) {
