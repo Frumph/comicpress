@@ -1,4 +1,24 @@
-﻿== Developers == 
+﻿Theme Name: ComicPress
+Contributors: Frumph
+Theme URI: http://frumph.net/comicpress
+Description: Publish a WebComic with the ComicPress theme and the Comic Easel plugin.
+Author: Philip M. Hofer (Frumph)
+Author URI: http://frumph.net
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready, flexible-header, featured-images
+Version: 4.5
+Text Domain: comicpress
+License: GNU General Public License, v3 (or newer)
+License URI: http://www.opensource.org/licenses/gpl-3.0.html
+GitHub Theme URI: https://github.com/Frumph/comicpress
+GitHub Branch: master
+Requires WP: 4.6
+ 
+Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+ 
+== Description ==
+
+
+== Developers == 
 
 Tyler Martin @mindfaucet - Creator
 http://mindfaucet.net
