@@ -5,7 +5,7 @@ Description: Publish a WebComic with the ComicPress theme and the Comic Easel pl
 Author: Philip M. Hofer (Frumph)
 Author URI: http://frumph.net
 Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready, flexible-header, featured-images
-Version: 4.5
+Version: 4.6
 Text Domain: comicpress
 License: GNU General Public License, v3 (or newer)
 License URI: http://www.opensource.org/licenses/gpl-3.0.html
