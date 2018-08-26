@@ -63,7 +63,6 @@ function comicpress_admin_options() { ?>
 			'enable_post_thumbnail_rss',  // general
 			'disable_footer_text', // general
 			'disable_blog_on_homepage', // general
-			'add_pw_async_code_to_head',  // general
 			'over-blog-sidebar-all-posts'  // general
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
