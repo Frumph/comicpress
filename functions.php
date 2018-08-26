@@ -274,6 +274,7 @@ function comicpress_load_options() {
 				'home_post_count' => '5',
 				'disable_blog_on_homepage' => false,
 				'add_pw_async_code_to_head' => false,
+				// PW Has shut down this is no longer used
 				'over-blog-sidebar-all-posts' => false,
 				// WordPress Content Width that sets video and image size within posts
 				'content_width' => 500,
