@@ -9,7 +9,7 @@ if (!function_exists('comicpress_copyright_text')) {
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span> ";
-			$output .= "Subscribe: <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
+			$output .= __( 'Subscribe:', 'comicpress' ) . " <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
 		$output .= "</span>\r\n";
 		if (!comicpress_themeinfo('disable_scroll_to_top')) { 
 			$output .= "<span class=\"footer-uptotop\">";
