@@ -126,18 +126,6 @@
 				</tr>
 				<tr>
 					<td>
-						<strong><?php _e( 'Google+', 'comicpress' ); ?></strong>
-					</td>
-					<?php
-					if (!isset($comicpress_options['menubar_social_googleplus']))
-						$comicpress_options['menubar_social_googleplus'] = '';
- 					?>
-					<td>
-						<input type="text" size="60" name="menubar_social_googleplus" id="menubar_social_googleplus" value="<?php echo $comicpress_options['menubar_social_googleplus']; ?>" />
-					</td>
-				</tr>
-				<tr>
-					<td>
 						<strong><?php _e( 'LinkedIn', 'comicpress' ); ?></strong>
 					</td>
 					<?php

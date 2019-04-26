@@ -103,16 +103,6 @@ if(get_query_var('author_name') ) {
 								<a href="<?php echo $curauth->facebook; ?>" target="_blank"><?php echo $curauth->facebook; ?></a>
 							</td>
 						</tr>
-						<?php }
-						if (!empty($curauth->googleplus)) { ?>
-						<tr>
-							<td class="user-contacts-serv">
-								<?php _e( 'Google+', 'comicpress' ); ?>
-							</td>
-							<td class="user-contacts-url">
-								<a href="<?php echo $curauth->googleplus; ?>" target="_blank" rel="me"><?php echo $curauth->googleplus; ?></a>
-							</td>
-						</tr>
 						<?php } ?>
 					</table>
 				</div>

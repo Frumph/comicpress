@@ -14,6 +14,7 @@
  */
 function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
 	if (isset($contactmethods['aim'])) unset($contactmethods['aim']);
+	if (isset($contactmethods['googleplus'])) unset($contactmethods['googleplus']);
 	if (isset($contactmethods['jabber'])) unset($contactmethods['jabber']);
 	if (isset($contactmethods['yim'])) unset($contactmethods['yim']);
 	return $contactmethods;
@@ -33,7 +34,6 @@ function add_new_contactmethods($methods){
 	// default contact methods
 	$methods['twitter'] = 'Twitter (url)';
 	$methods['facebook'] = 'Facebook (url)';
-	$methods['googleplus'] = 'Google+ (url)';
 	// additional contact methods
 	//$methods['myspace'] = 'MySpace (url)';
 	//$methods['linkedin'] = 'LinkedIn (url)';

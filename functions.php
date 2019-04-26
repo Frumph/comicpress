@@ -217,7 +217,6 @@ if (!function_exists('comicpress_display_social_icons')) {
 	function comicpress_display_social_icons() {
 		$twitter = comicpress_themeinfo('menubar_social_twitter');
 		$facebook = comicpress_themeinfo('menubar_social_facebook');
-		$googleplus = comicpress_themeinfo('menubar_social_googleplus');
 		$linkedin = comicpress_themeinfo('menubar_social_linkedin');
 		$pinterest = comicpress_themeinfo('menubar_social_pinterest');
 		$youtube = comicpress_themeinfo('menubar_social_youtube');
@@ -235,7 +234,6 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__( 'Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";		
 		if (!empty($email)) $output .= '<a href="'.$email.'" target="_blank" title="'.__( 'Email me', 'comicpress' ).'" class="menunav-social menunav-email">'.__( 'Email', 'comicpress' ).'</a>'."\r\n";
-		if (!empty($googleplus)) $output .= '<a href="'.$googleplus.'" target="_blank" title="'.__( 'Circle me on Google+', 'comicpress' ).'" class="menunav-social menunav-googleplus">'.__( 'Google+', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($pinterest)) $output .= '<a href="'.$pinterest.'" target="_blank" title="'.__( 'Peruse my Pinterests', 'comicpress' ).'" class="menunav-social menunav-pinterest">'.__( 'pinterest', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($youtube)) $output .= '<a href="'.$youtube.'" target="_blank" title="'.__( 'My Channel on YouTube', 'comicpress' ).'" class="menunav-social menunav-youtube">'.__( 'YouTube', 'comicpress' ).'</a>'."\r\n";
 		if (comicpress_themeinfo('enable_rss_in_menubar')) $output .= '<a href="'.get_bloginfo('rss2_url').'" target="_blank" title="'.__( 'RSS Feed', 'comicpress' ).'" class="menunav-social menunav-rss2">'.__( 'RSS', 'comicpress' ).'</a>'."\r\n";

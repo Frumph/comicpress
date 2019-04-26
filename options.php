@@ -98,7 +98,6 @@ function comicpress_admin_options() { ?>
 			foreach (array(
 				'menubar_social_twitter',
 				'menubar_social_facebook',
-				'menubar_social_googleplus',
 				'menubar_social_linkedin',
 				'menubar_social_pinterest',
 				'menubar_social_youtube',

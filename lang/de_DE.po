@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-03 16:20+0200\n"
-"PO-Revision-Date: 2016-04-13 18:45+0200\n"
+"POT-Creation-Date: 2019-04-26 21:23+0200\n"
+"PO-Revision-Date: 2019-04-26 21:27+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -90,7 +90,7 @@ msgstr "Registriert am"
 msgid "Posts #"
 msgstr "Beiträge #"
 
-#: author.php:70 functions.php:237 options/menubar.php:225
+#: author.php:70 functions.php:236 options/menubar.php:213
 msgid "Email"
 msgstr "Email"
 
@@ -98,19 +98,15 @@ msgstr "Email"
 msgid "Website"
 msgstr "Website"
 
-#: author.php:90 functions.php:235 options/menubar.php:113
+#: author.php:90 functions.php:234 options/menubar.php:113
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:100 functions.php:232 options/menubar.php:121
+#: author.php:100 functions.php:231 options/menubar.php:121
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:110 functions.php:238 options/menubar.php:129
-msgid "Google+"
-msgstr "Google+"
-
-#: author.php:131
+#: author.php:121
 msgid "Posts by"
 msgstr "Beiträge von"
 
@@ -207,7 +203,7 @@ msgstr "Primär"
 
 #: functions.php:54 functions.php:110 functions/customize.php:245
 #: functions/customize.php:257 functions/customize.php:274
-#: options/general.php:80
+#: options/general.php:63
 msgid "Footer"
 msgstr "Footer"
 
@@ -249,7 +245,7 @@ msgid "This sidebar appears inside the #header block."
 msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
 
 #: functions.php:107 functions/customize.php:232 functions/customize.php:265
-#: options.php:222 options/menubar.php:11
+#: options.php:220 options/menubar.php:11
 msgid "Menubar"
 msgstr "Menüleiste"
 
@@ -312,141 +308,127 @@ msgstr "[&hellip;]"
 msgid "&darr; Read the rest of this entry..."
 msgstr "&darr; Lese den Rest dieses Eintrags ..."
 
-#: functions.php:230
+#: functions.php:229
 msgid "my DeviantART"
 msgstr "mein DeviantART"
 
-#: functions.php:230 options/menubar.php:201
+#: functions.php:229 options/menubar.php:189
 msgid "DeviantART"
 msgstr "DeviantART"
 
-#: functions.php:231
+#: functions.php:230
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
-#: functions.php:231 options/menubar.php:189
+#: functions.php:230 options/menubar.php:177
 msgid "Tumblr"
 msgstr "Tumblr"
 
-#: functions.php:232
+#: functions.php:231
 msgid "Friend on Facebook"
 msgstr "Freund auf Facebook"
 
-#: functions.php:233
+#: functions.php:232
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
-#: functions.php:233 options/menubar.php:213
+#: functions.php:232 options/menubar.php:201
 msgid "MySpace"
 msgstr "MySpace"
 
-#: functions.php:234
+#: functions.php:233
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein LinkedIn"
 
-#: functions.php:234 options/menubar.php:141
+#: functions.php:233 options/menubar.php:129
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: functions.php:235
+#: functions.php:234
 msgid "Follow me on Twitter"
 msgstr "Folge mir auf Twitter"
 
-#: functions.php:236
+#: functions.php:235
 msgid "Gaze at my Flickr"
 msgstr "Besuche mich bei Flickr"
 
-#: functions.php:236 options/menubar.php:177
+#: functions.php:235 options/menubar.php:165
 msgid "Flickr"
 msgstr "Flickr"
 
-#: functions.php:237
+#: functions.php:236
 msgid "Email me"
 msgstr "Maile mir"
 
-#: functions.php:238
-msgid "Circle me on Google+"
-msgstr "Circle mich auf Google+"
-
-#: functions.php:239
+#: functions.php:237
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
-#: functions.php:239 options/menubar.php:153
+#: functions.php:237 options/menubar.php:141
 msgid "pinterest"
 msgstr "Pinterest"
 
-#: functions.php:240
+#: functions.php:238
 msgid "My Channel on YouTube"
 msgstr "Mein Channel auf YouTube"
 
-#: functions.php:240 options/menubar.php:165
+#: functions.php:238 options/menubar.php:153
 msgid "YouTube"
 msgstr "YouTube"
 
-#: functions.php:241
+#: functions.php:239
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: functions.php:241 options/general.php:143
+#: functions.php:239 options/general.php:126
 msgid "RSS"
 msgstr "RSS"
 
-#. translators: theme discription for wp-admin
-#: functions.php:370
+#: functions.php:369
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
-#. translators: home link for breadcrumps
 #: functions/breadcrumbs.php:12
 msgid "Home"
 msgstr "Startseite"
 
-#. translators: text for a category page for breadcrumps
 #: functions/breadcrumbs.php:14
 #, php-format
 msgid "Archive by Category \"%s\""
 msgstr "Archiv der Kategorie \"%s\""
 
-#. translators: text for a search results page for breadcrumps
 #: functions/breadcrumbs.php:16
 #, php-format
 msgid "Search Results for \"%s\" Query"
 msgstr "Suchergebnisse für \"%s\" Anfrage"
 
-#. translators: text for a tag page for breadcrumps
 #: functions/breadcrumbs.php:18
 #, php-format
 msgid "Posts Tagged \"%s\""
 msgstr "Beiträge Tagged\"%s\""
 
-#. translators: text for an author page for breadcrumps
 #: functions/breadcrumbs.php:20
 #, php-format
 msgid "Articles Posted by %s"
 msgstr "Beiträge veröffentlicht von %s"
 
-#. translators: text for the 404 page for breadcrumps
 #: functions/breadcrumbs.php:22
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#. translators: text 'Page N' for breadcrumps
 #: functions/breadcrumbs.php:24
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
-#. translators: text 'Comment Page N' for breadcrumps
 #: functions/breadcrumbs.php:26
 #, php-format
 msgid "Comment Page %s"
 msgstr "Kommentarseite %s"
 
-#. translators: date and time in comments
 #: functions/comment-functions.php:131
 #, php-format
 msgid "%1$s, %2$s"
@@ -807,7 +789,7 @@ msgstr "Kommentar&nbsp;"
 msgid "Comment"
 msgstr "Komentar"
 
-#: functions/displaypost.php:176 options.php:224 options/comments.php:11
+#: functions/displaypost.php:176 options.php:222 options/comments.php:11
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -937,39 +919,39 @@ msgstr "ComicPress Einstellungen ZURÜCKGESETZT!"
 msgid "ComicPress Customizer Colors RESET!"
 msgstr "ComicPress angepasste Farben ZURÜCKGESETZT!"
 
-#: options.php:209
+#: options.php:207
 msgid "ComicPress Settings SAVED!"
 msgstr "ComicPress Einstellungen GESPEICHERT!"
 
-#: options.php:220
+#: options.php:218
 msgid "Introduction"
 msgstr "Einführung"
 
-#: options.php:221 options/general.php:11
+#: options.php:219 options/general.php:11
 msgid "General"
 msgstr "Allgemein"
 
-#: options.php:223
+#: options.php:221
 msgid "Posts & Pages"
 msgstr "Beiträge & Seiten"
 
-#: options.php:225 options/archivesearch.php:11
+#: options.php:223 options/archivesearch.php:11
 msgid "Archive & Search"
 msgstr "Archiv & Suche"
 
-#: options.php:226 options/debug.php:11
+#: options.php:224 options/debug.php:11
 msgid "Debug"
 msgstr "Debugger"
 
-#: options.php:268
+#: options.php:266
 msgid "Developed and maintained by"
 msgstr "Entwickelt und gepflegt von"
 
-#: options.php:268
+#: options.php:266
 msgid "Originally created by"
 msgstr "Ursprünglich erstellt von"
 
-#: options.php:269
+#: options.php:267
 msgid ""
 "If you like the ComicPress theme, please donate. It will help in developing "
 "new features and versions."
@@ -977,11 +959,11 @@ msgstr ""
 "Wenn Du das ComicPress Theme magst, spende bitte. Es wird bei der "
 "Entwicklung neuer Funktionen und Versionen helfen."
 
-#: options.php:283
+#: options.php:281
 msgid "Reset All Settings"
 msgstr "Alle Einstellungen zurücksetzen"
 
-#: options.php:290
+#: options.php:288
 msgid "Reset Customizer Colors"
 msgstr "Angepasste Farben zurücksetzen"
 
@@ -1063,7 +1045,7 @@ msgstr ""
 "Benutzt die selbe Optik wie die Menüleiste."
 
 #: options/archivesearch.php:100 options/comments.php:107 options/debug.php:51
-#: options/general.php:170 options/menubar.php:245 options/postspages.php:261
+#: options/general.php:153 options/menubar.php:233 options/postspages.php:261
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
@@ -1183,23 +1165,11 @@ msgstr ""
 "Homepage UND alle Seiten werden als Blogbeitragsseiten eingestellt, in den "
 "Einstellungen &#10132; Lesen."
 
-#: options/general.php:49
-msgid "Enable Project Wonderful Asyncronus code?"
-msgstr "Aktiviere Project Wonderful Asyncronus Code?"
-
-#: options/general.php:56
-msgid ""
-"This option places the Project Wonderful asyncronus code into the header of "
-"the site."
-msgstr ""
-"Diese Option setzt den Project Wonderful Asyncronus Code in den Header von "
-"der Website."
-
-#: options/general.php:62
+#: options/general.php:45
 msgid "Allow the sidebar over-blog to appear on all posts?"
 msgstr "Erlaube der Sidebar Over-Blog über allen Beiträgen zu erscheinen?"
 
-#: options/general.php:69
+#: options/general.php:52
 msgid ""
 "Sidebar Over-Blog appears on all posts not just the front page/blog loop "
 "when enabled."
@@ -1207,11 +1177,11 @@ msgstr ""
 "Sidebar Over-Blog erscheint auf allen Beiträgen, nicht nur auf der "
 "Titelseite / Blog Schleife wenn aktiviert."
 
-#: options/general.php:88
+#: options/general.php:71
 msgid "Disable the copyright text in the footer?"
 msgstr "Deaktiviere den Copyright-Text im Footer?"
 
-#: options/general.php:95
+#: options/general.php:78
 msgid ""
 "Enable this if you do not want any text in the footer. If you wish to add "
 "you own custom content, you may do so via Appearance &#10132; Widgets "
@@ -1221,21 +1191,21 @@ msgstr ""
 "deinen eigenen Footer Text eingeben möchtest, kannst du das via Design "
 "&#10132; Widgets  &#10132; Footer tun."
 
-#: options/general.php:101
+#: options/general.php:84
 msgid "Disable the scroll to top link in the footer?"
 msgstr "Deaktiviere den Nach-Oben-Link im Footer?"
 
-#: options/general.php:108
+#: options/general.php:91
 msgid "When this link is clicked on long pages it will scroll back to the top."
 msgstr ""
 "Wenn dieser Link angeklickt wird kannst Du auf langen Seiten zurück zum "
 "Seitenanfang springen."
 
-#: options/general.php:114
+#: options/general.php:97
 msgid "&copy; Copyright Name"
 msgstr "&copy; Copyright Name"
 
-#: options/general.php:120
+#: options/general.php:103
 msgid ""
 "Set the name to which this site is &copy; Copyright to. Leave blank to have "
 "the site name."
@@ -1243,11 +1213,11 @@ msgstr ""
 "Name festlegen, auf den das &copy; Copyright dieser Seite läuft. Leer "
 "lassen, um den Namen der Website zu verwenden."
 
-#: options/general.php:126
+#: options/general.php:109
 msgid "&copy; Copyright Holder URL"
 msgstr "&copy; Copyright Inhaber URL"
 
-#: options/general.php:132
+#: options/general.php:115
 msgid ""
 "Set the URL to the owner of the &copy; Copyright if different then this "
 "website. Leave blank for sites link."
@@ -1255,11 +1225,11 @@ msgstr ""
 "Setze die URL von dem Besitzer des &copy; Copyrights von dieser Website. "
 "Leer lassen für Webseitenlink."
 
-#: options/general.php:151
+#: options/general.php:134
 msgid "Enable the post thumbnails in the RSS feed?"
 msgstr "Aktiviere die Beitrags Vorschaubilder in dem RSS-Feed?"
 
-#: options/general.php:158
+#: options/general.php:141
 msgid "If enabled will show the post thumbnail of the post in the RSS feed."
 msgstr ""
 "Wenn aktiviert, wird das Beitrags Vorschaubild von dem Beitrag in dem RSS-"
@@ -1338,7 +1308,7 @@ msgstr ""
 "URL inklusive http:// zu dem jeweiligen Profil ein. Wenn du das Feld leer "
 "lässt, wird kein betreffendes Icon angezeigt."
 
-#: options/menubar.php:234
+#: options/menubar.php:222
 msgid "use mailto://your@email.com"
 msgstr "verwende mailto://your@email.com"
 
@@ -1668,7 +1638,6 @@ msgstr "Letzte Szene:"
 msgid "First Scene:"
 msgstr "Erste Szene:"
 
-#. translators: Calendar caption: 1: month name, 2: 4-digit year
 #: widgets/calendar.php:97
 #, php-format
 msgctxt "calendar caption"
@@ -1857,3 +1826,19 @@ msgstr ""
 #: widgets/scheduledposts.php:39
 msgid "Scheduled Posts"
 msgstr "Geplante Beiträge"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Circle me on Google+"
+#~ msgstr "Circle mich auf Google+"
+
+#~ msgid "Enable Project Wonderful Asyncronus code?"
+#~ msgstr "Aktiviere Project Wonderful Asyncronus Code?"
+
+#~ msgid ""
+#~ "This option places the Project Wonderful asyncronus code into the header "
+#~ "of the site."
+#~ msgstr ""
+#~ "Diese Option setzt den Project Wonderful Asyncronus Code in den Header "
+#~ "von der Website."
