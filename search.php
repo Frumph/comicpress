@@ -1,4 +1,4 @@
-<?php 
+<?php
 get_header();
 
 $count = 'No';
@@ -8,7 +8,7 @@ if (have_posts()) :
 	<h2 class="page-title"><?php _e( 'Search for &lsquo;', 'comicpress' ); the_search_query(); _e( '&rsquo;', 'comicpress' ); ?></h2>
 	<div class="searchresults"><?php printf(_n( "%d result.", "%d results.", $count, 'comicpress' ),$count); ?></div>
 	<div class="clear"></div>
-<?php 
+<?php
 	if (comicpress_themeinfo('display_archive_as_links')) { ?>
 	<div <?php post_class(); ?>>
 		<div class="post-head"></div>
@@ -43,6 +43,6 @@ if (have_posts()) :
 		</div>
 <?php
 	endif;
-	
+
 get_footer();
 ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 get_header();
 
 if (comicpress_sidebars_disabled()) $content_width = comicpress_themeinfo('content_width_disabled_sidebars');

@@ -27,7 +27,7 @@ Author URI: http://lesterchan.net
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 if (comicpress_themeinfo('enable_numbered_pagination')) {
-	
+
 	### Function: Page Navigation: Boxed Style Paging
 	function comicpress_wp_pagenavi($before = '', $after = '') {
 		global $wpdb, $wp_query;
@@ -91,14 +91,12 @@ if (comicpress_themeinfo('enable_numbered_pagination')) {
 							} */
 						}
 						$prev_post_link = get_previous_posts_link( $pagenavi_options['prev_text'] );
-						
+
 						if (!empty($prev_post_link)) {
 							echo "<li class=\"paginav-previous\">\r\n";
 							echo $prev_post_link . "\r\n";
 							echo "</li>\r\n";
 						}
-						
-						
 						for($i = $start_page; $i  <= $end_page; $i++) {
 							if($i == $paged) {
 								$current_page_text = str_replace("%PAGE_NUMBER%", number_format_i18n($i), $pagenavi_options['current_text']);
@@ -153,7 +151,7 @@ if (comicpress_themeinfo('enable_numbered_pagination')) {
 			}
 		}
 	}
-	
+
 	function comicpress_pagenavi_init() {
 		// Add Options
 		$pagenavi_options = array();

@@ -12,13 +12,13 @@ License URI: http://www.opensource.org/licenses/gpl-3.0.html
 GitHub Theme URI: https://github.com/Frumph/comicpress
 GitHub Branch: master
 Requires WP: 4.6
- 
+
 Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
- 
+
 == Description ==
 
 
-== Developers == 
+== Developers ==
 
 Tyler Martin @mindfaucet - Creator
 http://mindfaucet.net
@@ -30,7 +30,7 @@ Rene Wolf @ kniebremser - Contributor
 
 Kristi Hansen @kmhcreative - Contributor
 
-== Theme Documentation == 
+== Theme Documentation ==
 
 ComicPress is a configurable theme, layouts to colors.
 
@@ -111,7 +111,7 @@ PHP:       5.4
 * removed tab layout in comicpress options
 * removed all CSS styling for the dropdown selectors
 * removed comicpress_themeinfo('data') calls that overlap standard WordPress ones
-* removed archive-year template for posts 
+* removed archive-year template for posts
 
 = 4.2.2 =
 * translation and typo fixes by Kniebremser
@@ -132,7 +132,7 @@ PHP:       5.4
 = 4.2 =
 * No longer saves data to the database unless you click save in the comicpress options
 * logic change on featured image for non-comics
-* fixed a few localization strings that weren't set properly to 'comicpress' 
+* fixed a few localization strings that weren't set properly to 'comicpress'
 * fixed a few strings that weren't set as translatable localization
 * removed suggested plugins completely
 * removed help panel completely when updating from old version of comicpress (migration help)
@@ -157,11 +157,11 @@ PHP:       5.4
 * Added #footer a, #footer a:hover and footer textcolor entries to the customizer which were missing
 * Boxed scheme w/blue background image is now the default design
 * added sidebar.php as a default to handle plugins that need it
-* added missing .uentry entries for search.php 
+* added missing .uentry entries for search.php
 * Changed the footer widgets to be specific widths instead of percent
 * New browser window/tab when clicking social links in the menubar
 * Titles no longer link on pages, static or otherwise
-* Regenerated .pot/.mo files 
+* Regenerated .pot/.mo files
 * Readded the default height and width for the custom header image in case the auto-sensing one doesn't work
 * The home link .menu-item-home and the downarrows in the menubar can now all be skinned, i.e. replaced with your own images if you want to; I left examples inside the style.css for the home button
 * Calendar widget removed for ComicPress; since Comic Easel has one, will re-add in a newer version when I update it to the new WordPress code; otherwise it's a liability until then

@@ -2,14 +2,14 @@
 	<div class="post-content">
 		<?php if (!comicpress_is_bbpress()) comicpress_display_author_gravatar(); ?>
 		<div class="post-info">
-			<?php 
+			<?php
 				comicpress_display_post_title();
 				if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 				if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
-				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
+				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post();
 			?>
 			<div class="post-text">
-				<?php 
+				<?php
 				comicpress_display_post_author();
 				comicpress_display_post_date();	comicpress_display_post_time(); comicpress_display_modified_date_time();
 				comicpress_display_post_category();
@@ -27,11 +27,11 @@
 			<div class="clear"></div>
 		</div>
 		<div class="post-extras">
-			<?php 
+			<?php
 				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
 				do_action('comic-post-extras');
-				comicpress_display_comment_link(); 
+				comicpress_display_comment_link();
 			?>
 			<div class="clear"></div>
 		</div>

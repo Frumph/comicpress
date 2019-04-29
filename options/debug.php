@@ -3,7 +3,7 @@
 		<?php wp_nonce_field('update-options') ?>
 
 		<div class="comicpress-options">
-	
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -42,7 +42,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">
@@ -54,12 +54,12 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		
+
 		<table class="widefat">
 		<!--
-			<?php 
+			<?php
 			// hidden with <!-- from displaying, but not hidden from view-source
-			$variable_dump = comicpress_themeinfo(); 
+			$variable_dump = comicpress_themeinfo();
 			if (is_array($variable_dump)) {
 			while (list($key, $value) = each($variable_dump)) { ?>
 			<tr>
@@ -75,6 +75,6 @@
 			?>
 		// -->
 		</table>
-		
+
 	</form>
 </div>

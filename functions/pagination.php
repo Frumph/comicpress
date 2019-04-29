@@ -11,5 +11,5 @@ function comicpress_pagination() {
 		<div class="clear"></div>
 		</div>
 	<?php }
-} 
+}
 

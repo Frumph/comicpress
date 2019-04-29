@@ -72,12 +72,12 @@ global $post, $wp_query; ?>
 					}
 					createCookie("bm","",-1);
 				}
-		      
+
 				function gto() {
 					var g = readCookie('bm');
 					if(g) {
 						window.location = g;
-					}	
+					}
 				}
 
 				/* The follow functions have been borrowed from Peter-Paul Koch. Please find them here: http://www.quirksmode.org */
@@ -104,7 +104,7 @@ global $post, $wp_query; ?>
 		</script>
 	</div>
 <?php
-}	
+}
 
 class widget_comicpress_classic_bookmark extends WP_Widget {
 
@@ -118,7 +118,7 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 			array( 'description' => __( 'Creates a set of buttons that let the user return to the page they tagged.', 'comicpress' ), ) // Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -136,7 +136,7 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 		comicpress_classic_bookmark();
 		echo $after_widget;
 	}
-	
+
 	/**
 	 * Sanitize widget form values as they are saved.
 	 *
@@ -152,7 +152,7 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

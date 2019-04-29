@@ -52,7 +52,7 @@
 							<?php _e( 'Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them. This will ONLY work if you have it set to only display 1 post on the home page. The post count and this must be set to work.', 'comicpress' ); ?>
 						</td>
 					</tr>
-					
+
 					<?php
 					$current_avatar_directory = $comicpress_options['avatar_directory'];
 					if (empty($current_avatar_directory))
@@ -68,7 +68,7 @@
 						}
 					}
 					?>
-					
+
 					<tr>
 						<th scope="row" colspan="2">
 							<label for="avatar_directory">
@@ -98,7 +98,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">

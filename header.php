@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>> 
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
@@ -21,7 +21,7 @@
 			<div class="clear"></div>
 		</header>
 
-<?php 
+<?php
 if (!comicpress_themeinfo('disable_default_menubar') && function_exists('comicpress_menubar')) comicpress_menubar();
 if (comicpress_themeinfo('enable_breadcrumbs')) comicpress_breadcrumbs();
 comicpress_get_sidebar('menubar');

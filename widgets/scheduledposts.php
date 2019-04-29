@@ -12,7 +12,7 @@ Version: 1.2
  * Adds Scheduled Posts widget.
  */
 class comicpress_scheduled_posts_widget extends WP_Widget {
-	
+
 	/**
 	 * Register widget with WordPress.
 	 */
@@ -23,7 +23,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 			array( 'classname' => __CLASS__, 'description' => __( 'Display a list of posts that are scheduled to be published.', 'comicpress' ), ) //Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -51,7 +51,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		echo $after_widget;
 		UnProtect();
 	}
-	
+
 	/**
 	* Sanitize widget form values as they are saved.
 	*
@@ -67,7 +67,7 @@ class comicpress_scheduled_posts_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

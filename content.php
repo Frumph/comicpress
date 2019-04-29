@@ -1,6 +1,6 @@
 <?php
 if (!comicpress_is_bbpress()) comicpress_display_blog_navigation();
-if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php } 
+if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
@@ -11,10 +11,10 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 				comicpress_display_post_title();
 				if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 				if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
-				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
+				if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post();
 			?>
 			<div class="post-text">
-				<?php 
+				<?php
 				comicpress_display_post_author();
 				comicpress_display_post_date();
 				comicpress_display_post_time();
@@ -37,7 +37,7 @@ if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumb
 			<?php
 				comicpress_display_post_tags();
 				do_action('comicpress-post-extras');
-				comicpress_display_comment_link(); 
+				comicpress_display_comment_link();
 			?>
 			<div class="clear"></div>
 		</div>

@@ -3,13 +3,13 @@
  * User Profile Options
  * by Philip M. Hofer (Frumph)
  * http://frumph.net/
- * 
+ *
  * Displays more profile options available to end users.
  */
 
 /**
  * Removed outdated contact methods.
- * 
+ *
  * This contact elements are scheduled to be removed from WordPress at some point.
  */
 function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
@@ -24,7 +24,7 @@ add_filter('user_contactmethods','comicpress_remove_unwanted_contactmethods',10,
 
 /**
  * Add contact methods to the user profil page.
- * 
+ *
  * The contact methods are displayed in the frontend in the author page.
  * Additional contact methods are commented out.
  * Sites that you could be on but not exactly the same reference for an author page.

@@ -1,6 +1,6 @@
 <div id="sidebar-left">
     <div class="sidebar">
-    <?php 
+    <?php
         do_action('comicpress-sidebar-left');
         if ( !dynamic_sidebar('sidebar-left-sidebar') ) { ?>
         <div class="sidebar-no-widgets">

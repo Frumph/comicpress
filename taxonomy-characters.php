@@ -38,12 +38,12 @@ if (!empty($character)) {
 				$output .= '<i>'.__( 'Only Appearance:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
 			} else {
 				$output .= '<i>'.__( 'Recent Appearance:', 'comicpress' ).'</i> <a href="'.get_permalink($last_seen_id).'">'.$last_seen_title.'</a><br />';
-				$output .= '<i>'.__( 'First Appearance:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';			
+				$output .= '<i>'.__( 'First Appearance:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
 			}
 			$output .= '</div>';
 			echo apply_filters('comicpress-character-stats', $output);
-		}		
-		
+		}
+
 	}
 	wp_reset_query();
 }

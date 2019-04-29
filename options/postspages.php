@@ -143,7 +143,7 @@
 							<?php _e( 'Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information.', 'comicpress' ); ?>
 						</td>
 					</tr>
-					
+
 					<?php
 					$current_directory = comicpress_themeinfo('moods_directory');
 					if (empty($current_directory)) $current_directory = 'default';
@@ -158,7 +158,7 @@
 						}
 					}
 					?>
-					
+
 					<tr class="alternate">
 						<th scope="row" colspan="2">
 						<label for="moods_directory">
@@ -183,7 +183,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -205,7 +205,7 @@
 				</tr>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -215,11 +215,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>				
+					<tr>
 						<?php
 						if (!isset($comicpress_options['content_width']))
 							$comicpress_options['content_width'] = 500;
-						?>				
+						?>
 						<th scope="row">
 							<label for="content_width">
 								<?php _e( 'Media and images width on posts and pages?', 'comicpress' ); ?>
@@ -249,10 +249,10 @@
 							<?php _e( 'When the sidebars are disabled on pages? Default = 700', 'comicpress' ); ?>
 						</td>
 					</tr>
-				</tbody>	
+				</tbody>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">
@@ -264,6 +264,6 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		
+
 	</form>
 </div>

@@ -9,7 +9,7 @@ $custom_header_args = array(
 			'header-text' => false,
 			'wp-head-callback' => 'comicpress_header_style',
 			'admin-head-callback' => 'comicpress_admin_header_style',
-			'admin-preview-callback' => 'comicpress_admin_header_style'	
+			'admin-preview-callback' => 'comicpress_admin_header_style'
 	);
 
 add_theme_support( 'custom-header', $custom_header_args );
@@ -24,7 +24,7 @@ function comicpress_admin_header_style() { ?>
 	<?php
 }
 
-function comicpress_header_style() { 
+function comicpress_header_style() {
 	if (get_header_image()) {
 		$textcolor = get_header_textcolor()
 ?>

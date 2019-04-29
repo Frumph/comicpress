@@ -3,9 +3,9 @@
  * Author Page
  * by Philip M. Hofer (Frumph)
  * http://frumph.net/
- * 
+ *
  * Content for the author page.
- * 
+ *
  * The table 'user-info' is only visible to admins.
  * For table 'user-contacts' can you find possible contact methods
  * in profile-options.php function add_new_contactmethods.
@@ -106,16 +106,16 @@ if(get_query_var('author_name') ) {
 						<?php } ?>
 					</table>
 				</div>
-				
+
 				<?php if (!empty($curauth->description)) { ?>
 				<div class="userpage-desc">
 					<?php echo $curauth->description; ?>
 				</div>
 				<?php } ?>
-				
+
 			</div>
 			<div class="clear"></div>
-			
+
 			<?php if (have_posts()) { ?>
 			<div class="userpage-posts">
 				<h3><?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;</h3>

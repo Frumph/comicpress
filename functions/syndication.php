@@ -1,8 +1,8 @@
 <?php
 /**
- * Syndication 
+ * Syndication
  * Author: Philip M. Hofer (Frumph)
- * 
+ *
  */
 
 // add_filter( 'pre_get_posts' , 'comicpress_include_custom_post_types_in_rss' );

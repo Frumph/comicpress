@@ -266,7 +266,7 @@ function comicpress_load_options() {
 
 	$comicpress_options = get_option('cp-options');
 	if (empty($comicpress_options)) {
-		
+
 		foreach (array(
 				// General
 				'home_post_count' => '5',
@@ -354,7 +354,7 @@ function comicpress_themeinfo($whichinfo = null) {
 		$comicpress_themeinfo = array_merge($comicpress_themeinfo, $comicpress_options);
 	}
 	if ($whichinfo && $whichinfo !== 'reset')
-		if (isset($comicpress_themeinfo[$whichinfo])) 
+		if (isset($comicpress_themeinfo[$whichinfo]))
 			return $comicpress_themeinfo[$whichinfo];
 		else
 			return false;

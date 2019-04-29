@@ -1,5 +1,5 @@
 <?php
-if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php } 
+if (!is_home() && !is_archive() && !is_search()) { comicpress_display_post_thumbnail('large'); ?><div class="clear"></div><?php }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">

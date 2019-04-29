@@ -31,7 +31,7 @@
 					<div class="imagenav-link">
 						<?php next_image_link() ?>
 					</div>
-				</div>					
+				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -61,5 +61,5 @@
 		<div class="post-foot"></div>
 	</div>
 	<?php endif; ?>
-	
+
 <?php get_footer() ?>

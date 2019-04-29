@@ -7,21 +7,21 @@ function comicpress_latest_blog_post_jump() {
 	$catnum = 0;
 	if (isset($_GET['latestblogpost'])) $catnum = (int)esc_attr($_GET['latestblogpost']);
 	if (!empty($catnum)) {
-		$args = array( 
-				'numberposts' => 1, 
+		$args = array(
+				'numberposts' => 1,
 				'post_type' => 'post',
-				'orderby' => 'post_date', 
-				'order' => 'DESC', 
-				'post_status' => 'publish', 
+				'orderby' => 'post_date',
+				'order' => 'DESC',
+				'post_status' => 'publish',
 				'category__in' => array($catnum)
 				);
 		$qposts = get_posts( $args );
 	} else {
-		$args = array( 
-				'numberposts' => 1, 
-				'post_type' => 'post', 
-				'orderby' => 'post_date', 
-				'order' => 'DESC', 
+		$args = array(
+				'numberposts' => 1,
+				'post_type' => 'post',
+				'orderby' => 'post_date',
+				'order' => 'DESC',
 				'post_status' => 'publish'
 				);
 		$qposts = get_posts( $args );
@@ -95,7 +95,7 @@ if (!function_exists('comicpress_display_post_calendar')) {
 	function comicpress_display_post_calendar() {
 		global $post, $wp_query;
 		if (is_page()) return;
-		if (comicpress_themeinfo('enable_post_calendar')) { 
+		if (comicpress_themeinfo('enable_post_calendar')) {
 			$post_calendar = "<div class=\"post-calendar-date\"><div class=\"calendar-date\"><span>".get_the_time('M')."</span>".get_the_time('d')."</div></div>\r\n";
 			echo apply_filters('comicpress_display_post_calendar', $post_calendar);
 		}
@@ -208,7 +208,7 @@ if (!function_exists('comicpress_display_the_content')) {
 			the_excerpt();
 			do_action('comicpress-display-the-content-after');
 		} else {
-			if (!is_single()) { global $more; $more = 0; } 
+			if (!is_single()) { global $more; $more = 0; }
 			do_action('comicpress-display-the-content-before');
 			the_content(__( '&darr; Read the rest of this entry...', 'comicpress' ));
 			do_action('comicpress-display-the-content-after');
@@ -229,7 +229,7 @@ if (!function_exists('comicpress_display_post')) {
 						if (!comicpress_is_bbpress()) comicpress_display_author_gravatar();
 						if (!comicpress_is_bbpress()) comicpress_display_post_calendar();
 						if (is_sticky()) { ?><div class="sticky-image">Featured Post</div><?php }
-						if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post(); 
+						if (function_exists('comicpress_show_mood_in_post')) comicpress_show_mood_in_post();
 					?>
 					<div class="post-text">
 						<?php
@@ -259,7 +259,7 @@ if (!function_exists('comicpress_display_post')) {
 					<?php 
 						comicpress_display_post_tags();
 						do_action('comicpress-post-extras');
-						comicpress_display_comment_link(); 
+						comicpress_display_comment_link();
 					?>
 					<div class="clear"></div>
 				</div>
@@ -268,7 +268,7 @@ if (!function_exists('comicpress_display_post')) {
 			</div>
 			<div class="post-foot"><?php do_action('comic-post-foot'); ?><?php do_action('comicpress-post-foot'); ?></div>
 		</div>
-		<?php 
+		<?php
 			do_action('comic-post-extras');
 			comments_template('', true);
 	}

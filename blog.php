@@ -10,7 +10,7 @@ $blog_query = array(
 		'paged' => $paged,
 		'post_type' => 'post'
 		);
-		
+
 $wp_query = new WP_Query(); $wp_query->query($blog_query);
 
 if (have_posts()) {

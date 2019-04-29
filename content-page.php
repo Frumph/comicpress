@@ -2,11 +2,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-content">
 		<div class="post-info">
-			<?php 
+			<?php
 				comicpress_display_post_title();
 			?>
 			<div class="post-text">
-			<?php 
+			<?php
 				wp_link_pages(array('before' => '<div class="linkpages"><span class="linkpages-pagetext">Pages:</span> ', 'after' => '</div>', 'next_or_number' => 'number'));
 			?>
 			</div>

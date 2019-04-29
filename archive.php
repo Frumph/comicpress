@@ -9,7 +9,7 @@ if (is_category()) {
 	$theCatID = get_term_by( 'slug', $wp_query->query_vars['category_name'], 'category' );
 	if (!empty($theCatID))
 		$theCatID = $theCatID->term_id;
-	if (isset($wp_query->query_vars['cat'])) $theCatID = (int)$wp_query->query_vars['cat'];	
+	if (isset($wp_query->query_vars['cat'])) $theCatID = (int)$wp_query->query_vars['cat'];
 }
 
 $count = $wp_query->found_posts;
@@ -64,7 +64,7 @@ if (have_posts()) { ?>
 			<div class="archivecomicthumbwrap">
 				<div class="archivecomicthumbdate"><?php echo get_the_time('M jS, Y'); ?></div>
 				<div class="archivecomicframe">
-			<?php 
+			<?php
 			$thumbnail = ceo_display_comic_thumbnail('thumbnail', $post);
 			$thumbnail = (!$thumbnail) ? __( 'No Thumbnail or Featured Image Found', 'comicpress' ) : $thumbnail; ?>
 					<a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo $thumbnail; ?></a><br />
@@ -100,7 +100,7 @@ if (have_posts()) { ?>
 	?>
 	<div class="clear"></div>
 	<?php comicpress_pagination(); ?>
-	
+
 <?php } else { ?>
 	<h2 class="page-title"><?php echo $title_string; ?></h2>
 	<div class="archiveresults"><?php printf(_n( "%d result.", "%d results.", $count, 'comicpress' ),$count); ?></div>

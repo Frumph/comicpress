@@ -42,7 +42,7 @@ class comicpress_random_post_link_widget extends WP_Widget {
 			array( 'classname' => __CLASS__, 'description' => __( 'Displays a link to click that triggers going to a random blog post.', 'comicpress' ), ) // Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -61,7 +61,7 @@ class comicpress_random_post_link_widget extends WP_Widget {
 		<?php
 		echo $after_widget;
 	}
-	
+
 	/**
 	 * Sanitize widget form values as they are saved.
 	 *
@@ -77,7 +77,7 @@ class comicpress_random_post_link_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

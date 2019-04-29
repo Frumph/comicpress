@@ -52,7 +52,7 @@ class comicpress_menubar_widget extends WP_Widget {
 			array( 'classname' => __CLASS__, 'description' => __( 'Displays a menubar.', 'comicpress' ), ) // Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -70,7 +70,7 @@ class comicpress_menubar_widget extends WP_Widget {
 		comicpress_menubar();
 		echo $after_widget;
 	}
-	
+
 	/**
 	 * Sanitize widget form values as they are saved.
 	 *
@@ -86,7 +86,7 @@ class comicpress_menubar_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

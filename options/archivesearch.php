@@ -3,7 +3,7 @@
 		<?php wp_nonce_field('update-options') ?>
 
 		<div class="comicpress-options">
-		
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -65,7 +65,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -91,7 +91,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">

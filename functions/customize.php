@@ -24,7 +24,7 @@ function comicpress_sanitize_checkbox( $input ) {
 	is sync'd to range slider and validated against any min/max
 	set for the range slider.  Except on IE9 or lower, which shows
 	range sliders as text fields and does not obey min/max params.
-	
+
 	CSS is in theme /css/options.css
 	< IE 10 exclusion in /js/no_IE_range.js
 */
@@ -40,7 +40,7 @@ if (class_exists('WP_Customize_Control')) {
 				<input class="custorange" type="range" id="input-<?php echo esc_html( $this->id ); ?>" <?php $this->link(); ?> value="<?php echo esc_html( $this->value() ); ?>" <?php $this->input_attrs(); ?> onmousemove="if(this.focus){this.nextElementSibling.innerHTML=this.value;}" ontouchmove="if(this.focus){this.nextElementSibling.innerHTML=this.value;}">
 				<span class="range-value"><?php echo esc_html( $this->value() ); ?></span>
 			</label>
-			<?php	
+			<?php
 		}
 	}
 	class WP_Customize_RangeAndText_Control extends WP_Customize_Control {
@@ -79,10 +79,10 @@ class comicpress_Customize {
 	/**
 	* This hooks into 'customize_register' (available as of WP 3.4) and allows
  	* you to add new sections and controls to the Theme Customize screen.
- 	* 
+ 	*
  	* Note: To enable instant preview, we have to actually write a bit of custom
  	* javascript. See live_preview() for more.
- 	* 
+ 	*
 	* @see add_action('customize_register',$func)
  	* @param \WP_Customize_Manager $wp_customize
 	* @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
@@ -90,9 +90,9 @@ class comicpress_Customize {
  	*/
 
 	public $css_array = Array();
-	
+
 	public static function register($wp_customize) {
-		
+
 		$wp_customize->remove_section('colors');
 //		$wp_customize->remove_section('title_tagline');
 		$wp_customize->add_section('comicpress-scheme-options' , array('title' => __( 'Layout Options', 'comicpress' ), 'priority' => 10, 'capability' => 'edit_theme_options','description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress' )));
@@ -103,7 +103,7 @@ class comicpress_Customize {
 		$wp_customize->add_section('comicpress-logo-options', array('title' => __( 'Logo', 'comicpress' ), 'priority' => 50, 'capability' => 'edit_theme_options'));
 
 		$wp_customize->add_setting( 'comicpress-customize-select-layout', array('default' => '3c', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
-		
+
 		$choices = array(
 			'3c' => __( '3 Column (default)', 'comicpress' ),
 			'3cl' => __( '3 Column, both sidebars on left', 'comicpress' ),
@@ -112,7 +112,7 @@ class comicpress_Customize {
 			'2cr' => __( '2 Column, sidebar on right', 'comicpress' ),
 			'ncl' => __( 'No Columns, no L/R sidebars', 'comicpress'),
 		);
-		
+
 		if (function_exists('ceo_pluginfo')) {
 			$choices['3clgn'] = __( '3 Column, Graphic Novel style, main sidebar on left', 'comicpress' );
 			$choices['3crgn'] = __( '3 Column, Graphic Novel style, main sidebar on right', 'comicpress' );
@@ -125,7 +125,7 @@ class comicpress_Customize {
 				'type' => 'select',
 				'choices' => $choices
 			));
-		
+
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array('default' => 'none', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control' , array(
 				'label' => __( 'Choose a scheme', 'comicpress' ),
@@ -141,7 +141,7 @@ class comicpress_Customize {
 					'high' => __( 'High Society', 'comicpress' )
 				)
 			));
-			
+
 		$wp_customize->add_setting( 'comicpress-customize-range-site-width', array('default' => '980', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( new WP_Customize_RangeAndText_Control( $wp_customize, 'comicpress-customize-range-site-width', array(
 				'label' => __( 'Site Width Control', 'comicpress' ),
@@ -155,7 +155,7 @@ class comicpress_Customize {
 					'step' => 2,
 				),
 		)));
-		
+
 		$wp_customize->add_setting( 'comicpress-customize-range-left-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-left-sidebar-width-control' , array(
 				'label' => __( 'Left Sidebar Width', 'comicpress' ),
@@ -169,7 +169,7 @@ class comicpress_Customize {
 					'step' => 2,
 				),
 		)));
-		
+
 		$wp_customize->add_setting( 'comicpress-customize-range-right-sidebar-width', array('default' => '200', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'wp_filter_nohtml_kses'));
 		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-right-sidebar-width-control' , array(
 				'label' => __( 'Right Sidebar Width', 'comicpress' ),
@@ -201,7 +201,7 @@ class comicpress_Customize {
 				'section'  => 'comicpress-scheme-options',
 				'type'     => 'checkbox'
 			));
-			
+
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 		$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 					'settings' => 'comicpress-customize-checkbox-header-hotspot',
@@ -213,7 +213,7 @@ class comicpress_Customize {
 
 		$wp_customize->add_setting( 'comicpress-customize[logo]', array('default' => '', 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'transport' => 'refresh', 'sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array('label' => __( 'Logo, 120px height x 160px width', 'comicpress' ), 'section'  => 'comicpress-logo-options', 'settings' => 'comicpress-customize[logo]')));
-		
+
 		if (function_exists('ceo_pluginfo')) {
 			$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array('default' => false, 'type' => 'theme_mod', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'comicpress_sanitize_checkbox'));
 			$wp_customize->add_control( 'comicpress-customize-comic-in-column-control', array(
@@ -224,7 +224,7 @@ class comicpress_Customize {
 						'type'     => 'checkbox'
 						));
 		}
-		
+
 		$css_array = array(
 			// Background Colors
 			array('slug' => 'page_background', 'description' => '#page', 'section' => 'colors', 'label' => __( 'Entire Content Area', 'comicpress' ), 'default' => ''),
@@ -276,7 +276,7 @@ class comicpress_Customize {
 			array('slug' => 'footer_copyright_acolor', 'description' => '.copyright-info a', 'section' => 'comicpress-link-colors', 'label' => __( 'Copyright', 'comicpress' ), 'default' => ''),
 			array('slug' => 'footer_copyright_hcolor', 'description' => '.copyright-info a:hover', 'section' => 'comicpress-link-colors', 'label' => '', 'default' => '')
 		);
-		
+
 		// Additions for CE
 		if (function_exists('ceo_pluginfo')) {
 			$css_array[] = array('slug' => 'comic_wrap_background', 'description' => '#comic-wrap', 'section' => 'colors', 'label' => __( 'Comic Area', 'comicpress' ), 'default' => '');
@@ -286,7 +286,7 @@ class comicpress_Customize {
 			$css_array[] = array('slug' => 'comic_nav_acolor', 'description' => '.comic-nav a:link, .comic-nav a:visited', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Link', 'comicpress' ), 'default' => '');
 			$css_array[] = array('slug' => 'comic_nav_hcolor', 'description' => '.comic-nav a:hover', 'section' => 'comicpress-link-colors', 'label' => __( 'Default Navigation Hover', 'comicpress' ), 'default' => '');
 		}
-		
+
 		$priority_value = 11;
 		foreach ($css_array as $setinfo) {
 			$setinfo_register_name = 'comicpress-customize['.$setinfo['slug'].']';
@@ -302,8 +302,8 @@ class comicpress_Customize {
 			$priority_value++;
 //			$wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
 		}
-      
-	
+
+
       //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
 		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -311,14 +311,14 @@ class comicpress_Customize {
 
 	/**
 	 * This will output the custom WordPress settings to the live theme's WP head.
-	 * 
+	 *
 	 * Used by hook: 'wp_head'
-	 * 
+	 *
 	 * @see add_action('wp_head',$func)
 	 * @since MyTheme 1.0
 	 */
 	public static function header_output() {
-		
+
 		$style_output = '';
 		$settings_array = array(
 			// background colors
@@ -372,7 +372,7 @@ class comicpress_Customize {
 			array('slug' => 'footer_copyright_acolor', 'element' => '.copyright-info a', 'style' => 'color', 'default' => '',  'important' => true),
 			array('slug' => 'footer_copyright_hcolor', 'element' => '.copyright-info a:hover, .blognav a:hover, #paginav a:hover', 'style' => 'color', 'default' => '',  'important' => true),
 			);
-			
+
 		if (function_exists('ceo_pluginfo')) {
 			$settings_array[] = array('slug' => 'comic_wrap_background', 'element' => '#comic-wrap', 'style' => 'background-color', 'default' => '',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_wrap_textcolor', 'element' => '#comic-wrap', 'style' => 'color', 'default' => '',  'important' => true);
@@ -380,7 +380,7 @@ class comicpress_Customize {
 			$settings_array[] = array('slug' => 'comic_nav_textcolor', 'element' => '.comic-nav', 'style' => 'color', 'default' => '',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_nav_acolor', 'element' => '.comic-nav a:link, .comic-nav a:visited', 'style' => 'color', 'default' => '#FFFFFF',  'important' => true);
 			$settings_array[] = array('slug' => 'comic_nav_hcolor', 'element' => '.comic-nav a:hover', 'style' => 'color', 'default' => '#F00',  'important' => true);
-			
+
 		}
       ?>
 <!--Customizer CSS-->
@@ -447,7 +447,7 @@ class comicpress_Customize {
 			break;
 		case '3clgn':
 			$add_width = 6;
-			if ($scheme == 'ceasel') $add_width = $add_width + 4; 
+			if ($scheme == 'ceasel') $add_width = $add_width + 4;
 			$content_width = $page_width - ($left_sidebar_width + $add_width);
 			$add_inside = 4;
 			if ($scheme == 'high') $add_inside = $add_inside + 4;
@@ -464,19 +464,19 @@ class comicpress_Customize {
 		case '3c':
 		case '3cl':
 		case '3cr':
-		default: 
+		default:
 			$add_width = 10;
 			if ($scheme == 'ceasel') $add_width = $add_width +2;
 			$content_width = $page_width - ($left_sidebar_width + $right_sidebar_width + $add_width);
 			break;
-		
+
 	}
 	$style_output .= "\t#add-width { width: ".$add_width."px; }\r\n";
 	$style_output .= "\t#content-column { width: ".$content_width."px; max-width: 100%; }\r\n";
 	if (!empty($inside_content_width)) {
 		if ($scheme == 'high') {
 			$style_output .= "\t#content { width: ".$inside_content_width."px; padding-right: 4px; max-width: 100%; }\r\n";
-		} else 
+		} else
 			$style_output .= "\t#content { width: ".$inside_content_width."px; max-width: 100%; }\r\n";
 	}
 	$style_output .= "\t#sidebar-right { width: ".$right_sidebar_width."px; }\r\n";
@@ -499,15 +499,15 @@ class comicpress_Customize {
 <!--/Customizer CSS-->
       <?php
    }
-   
+
    /**
     * This outputs the javascript needed to automate the live settings preview.
-    * Also keep in mind that this function isn't necessary unless your settings 
+    * Also keep in mind that this function isn't necessary unless your settings
     * are using 'transport'=>'postMessage' instead of the default 'transport'
     * => 'refresh'
-    * 
+    *
     * Used by hook: 'customize_preview_init'
-    * 
+    *
     * @see add_action('customize_preview_init',$func)
     * @since MyTheme 1.0
     */

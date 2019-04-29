@@ -5,13 +5,13 @@ if (!function_exists('comicpress_copyright_text')) {
 		$output = "<p class=\"copyright-info\">\r\n";
 		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
-		$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ). " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
+		$output .= _( _'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ). " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span> ";
-			$output .= __( 'Subscribe:', 'comicpress' ) . " <a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
+			$output .= _( 'Subscribe:', 'comicpress' ) . "<a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
 		$output .= "</span>\r\n";
-		if (!comicpress_themeinfo('disable_scroll_to_top')) { 
+		if (!comicpress_themeinfo('disable_scroll_to_top')) {
 			$output .= "<span class=\"footer-uptotop\">";
 				$output .= "<span class=\"footer-pipe\">|</span> ";
 				$output .= "<a href=\"\" onclick=\"scrollup(); return false;\">".__( 'Back to Top &uarr;', 'comicpress' )."</a>";

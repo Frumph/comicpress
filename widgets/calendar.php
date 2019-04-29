@@ -23,7 +23,7 @@ function comicpress_get_calendar($initial = true, $echo = true, $taxonomy = 'pos
 
 	if (empty($taxonomy)) $taxonomy = 'post';
 	$taxonomy = $wpdb->escape($taxonomy);
-	
+
 	$cache = array();
 	$key = md5( $m . $monthnum . $year );
 	if ( $cache = wp_cache_get( 'get_comicpress_calendar', 'calendar' ) ) {
@@ -252,7 +252,7 @@ class comicpress_calendar_widget extends WP_Widget {
 			array( 'classname' => __CLASS__, 'description' => __( 'Display a calendar showing this months posts. (this calendar does not drop lines if there is no title given.)', 'comicpress' ), ) //Args
 		);
 	}
-	
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -303,7 +303,7 @@ class comicpress_calendar_widget extends WP_Widget {
 
 		echo $after_widget;
 	}
-	
+
 	/**
 	 * Sanitize widget form values as they are saved.
 	 *
@@ -322,7 +322,7 @@ class comicpress_calendar_widget extends WP_Widget {
 
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

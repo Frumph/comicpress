@@ -22,7 +22,7 @@ class comicpress_control_panel_widget extends WP_Widget {
 			array( 'classname' => __CLASS__, 'description' => __( 'Login/Logoff menu with register/lost password links if not logged on. (use only if registrations are enabled).', 'comicpress' ), ) // Args
 		);
 	}
-	
+
 	function comicpress_show_control_panel() {
 		global $user_login;
 		if (!is_user_logged_in()) { ?>
@@ -50,7 +50,7 @@ class comicpress_control_panel_widget extends WP_Widget {
 		<?php } ?>
 		<?php
 	}
-		
+
 	/**
 	 * Front-end display of widget.
 	 *
@@ -69,7 +69,7 @@ class comicpress_control_panel_widget extends WP_Widget {
 		echo $after_widget;
 		UnProtect();
 	}
-	
+
 	/**
 	 * Sanitize widget form values as they are saved.
 	 *
@@ -85,7 +85,7 @@ class comicpress_control_panel_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/**
 	 * Back-end widget form.
 	 *

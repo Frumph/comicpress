@@ -41,12 +41,12 @@ if (!empty($location)) {
 			$output .= '<i>'.__( 'Only Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
 		} else {
 			$output .= '<i>'.__( 'Recent Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($last_seen_id).'">'.$last_seen_title.'</a><br />';
-			$output .= '<i>'.__( 'First Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';			
+			$output .= '<i>'.__( 'First Scene:', 'comicpress' ).'</i> <a href="'.get_permalink($first_seen_id).'">'.$first_seen_title.'</a><br />';
 		}
 		$output .= '</div>';
 		echo $output;
 	}
-	
+
 	wp_reset_query();
 }
 

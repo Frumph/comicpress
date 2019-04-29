@@ -42,7 +42,7 @@ function comicpress_admin_options() { ?>
 		global $comicpress_themeinfo; $comicpress_themeinfo = '';
 	?>
 		<div id="message" class="updated"><p><strong><?php _e( 'ComicPress Settings RESET!', 'comicpress' ); ?></strong></p></div>
-	<?php } 
+	<?php }
 	if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'comicpress_reset_customize') {
 		remove_theme_mod('comicpress-customize');
 		delete_option('theme_mods_comicpress');
@@ -50,12 +50,12 @@ function comicpress_admin_options() { ?>
 	?>
 		<div id="message" class="updated"><p><strong><?php _e( 'ComicPress Customizer Colors RESET!', 'comicpress' ); ?></strong></p></div>
 	<?php }
-	if (empty($comicpress_options)) { 
+	if (empty($comicpress_options)) {
 		comicpress_themeinfo('reset');
 	}
 	$comicpress_options = comicpress_load_options();
 	if ( isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'update-options') ) {
-		
+
 		if ($_REQUEST['action'] == 'comicpress_save_general') {
 
 			foreach (array(
@@ -74,7 +74,7 @@ function comicpress_admin_options() { ?>
 				'copyright_name',  // general
 				'copyright_url'  // general
 						) as $key) {
-							if (isset($_REQUEST[$key])) 
+							if (isset($_REQUEST[$key]))
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'general';
@@ -89,7 +89,7 @@ function comicpress_admin_options() { ?>
 			'enable_search_in_menubar',
 			'enable_rss_in_menubar',
 			'menubar_social_icons',
-			'enable_breadcrumbs'			
+			'enable_breadcrumbs'
 				) as $key) {
 					if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
 					$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
@@ -117,7 +117,7 @@ function comicpress_admin_options() { ?>
 			$tab = 'menubar';
 			update_option('cp-options', $comicpress_options);
 		}
-		
+
 		if ($_REQUEST['action'] == 'comicpress_save_postspages') {
 
 			foreach (array(
@@ -142,13 +142,13 @@ function comicpress_admin_options() { ?>
 				'content_width',  // postspages
 				'content_width_disabled_sidebars'  // postspages
 						) as $key) {
-							if (isset($_REQUEST[$key])) 
+							if (isset($_REQUEST[$key]))
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'postspages';
 			update_option('cp-options', $comicpress_options);
 		}
-		
+
 		if ($_REQUEST['action'] == 'comicpress_save_comments') {
 
 			foreach (array(
@@ -161,15 +161,15 @@ function comicpress_admin_options() { ?>
 			}
 
 			foreach (array(
-				'avatar_directory'  // comments 
+				'avatar_directory'  // comments
 						) as $key) {
-							if (isset($_REQUEST[$key])) 
+							if (isset($_REQUEST[$key]))
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'comments';
 			update_option('cp-options', $comicpress_options);
 		}
-		
+
 		if ($_REQUEST['action'] == 'comicpress_save_archivesearch') {
 
 			foreach (array(
@@ -184,13 +184,13 @@ function comicpress_admin_options() { ?>
 				'archive_display_order',  // archivesearch
 				'excerpt_or_content_in_archive'  // archivesearch
 						) as $key) {
-							if (isset($_REQUEST[$key])) 
+							if (isset($_REQUEST[$key]))
 								$comicpress_options[$key] = wp_filter_nohtml_kses($_REQUEST[$key]);
 			}
 			$tab = 'archivesearch';
 			update_option('cp-options', $comicpress_options);
 		}
-				
+
 		if ($_REQUEST['action'] == 'comicpress_save_debug') {
 			foreach (array(
 				'enable_debug_footer_code',
@@ -202,7 +202,7 @@ function comicpress_admin_options() { ?>
 			$tab = 'debug';
 			update_option('cp-options', $comicpress_options);
 		}
-		
+
 		if ($tab) { ?>
 			<div id="message" class="updated"><p><strong><?php _e( 'ComicPress Settings SAVED!', 'comicpress' ); ?></strong></p></div>
 			<script>function hidemessage() { document.getElementById('message').style.display = 'none'; }</script>

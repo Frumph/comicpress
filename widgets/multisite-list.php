@@ -8,12 +8,12 @@ Author URI: http://frumph.net/
 Version: 1.1
 */
 if (function_exists('is_multisite') && is_multisite()) {
-		
+
 		/**
 		 * Adds Site List widget.
 		 */
 		class comicpress_multisite_sitelist_widget extends WP_Widget {
-			
+
 			/**
 			 * Register widget with WordPress.
 			 */
@@ -24,7 +24,7 @@ if (function_exists('is_multisite') && is_multisite()) {
 					array( 'classname' => __CLASS__, 'description' => __( 'Display Site List of all sites that have recently updated on this Multisite.', 'comicpress' ), ) // Args
 				);
 			}
-			
+
 			/**
 			 * Front-end display of widget.
 			 *
@@ -51,7 +51,7 @@ if (function_exists('is_multisite') && is_multisite()) {
 				echo $after_widget;
 				UnProtect();
 			}
-			
+
 			/**
 			 * Sanitize widget form values as they are saved.
 			 *
@@ -67,7 +67,7 @@ if (function_exists('is_multisite') && is_multisite()) {
 				 $instance['title'] = strip_tags($new_instance['title']);
 				 return $instance;
 			 }
-			
+
 			 /**
 			  * Back-end widget form.
 			  *
@@ -83,11 +83,11 @@ if (function_exists('is_multisite') && is_multisite()) {
 				 <?php
 			  }
 		}
-		
+
 	// register Site List widget
 	function comicpress_multisite_sitelist_widget_init() {
 		register_widget('comicpress_multisite_sitelist_widget');
 	}
-	
+
 	add_action( 'widgets_init', 'comicpress_multisite_sitelist_widget_init');
 }

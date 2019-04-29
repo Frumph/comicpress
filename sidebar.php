@@ -1,6 +1,6 @@
 <div id="sidebar">
 	<div class="sidebar">
-	<?php 
+	<?php
 		do_action('sidebar');
 		dynamic_sidebar();
 	?>

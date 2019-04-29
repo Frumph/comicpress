@@ -81,7 +81,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -106,7 +106,7 @@
 					</tr>
 				</tbody>
 			</table>
-			
+
 			<table class="widefat">
 				<tr>
 					<td>
@@ -224,7 +224,7 @@
 				</tr>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">
@@ -236,6 +236,6 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-		
+
 	</form>
 </div>

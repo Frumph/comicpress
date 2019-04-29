@@ -1,17 +1,17 @@
 <?php
 /**
- * 
+ *
  * Author: Philip M. Hofer (Frumph)
  * Author URI: http://frumph.net/
  * Version: 1.0.8
- * 
+ *
  */
 
 add_filter('body_class','comicpress_body_class');
 
 function comicpress_body_class($classes = array()) {
 	global  $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
-	
+
 	if (is_user_logged_in()) {
 		$current_user = wp_get_current_user();
 		$user_login = $current_user->user_login;
@@ -19,7 +19,7 @@ function comicpress_body_class($classes = array()) {
 	} else {
 		$classes[] = 'user-guest';
 	}
-	
+
 	if (comicpress_is_signup()) $classes[] = 'signup';
 
 	if($is_lynx) $classes[] = 'lynx';
@@ -59,12 +59,12 @@ function comicpress_body_class($classes = array()) {
 //	$classes[] = 'time-'.$rightnow;
 	if ($rightnow > 559 && (int)$rightnow < 1800) $classes[] = 'day';
 	if ($rightnow < 600 || (int)$rightnow > 1759) $classes[] = 'night';
-	
+
 	if ($rightnow > 2329 || $rightnow < 30) $classes[] = 'midnight';
 	if ($rightnow > 459 && $rightnow < 1130) $classes[] = 'morning';
 	if ($rightnow > 1129 && $rightnow < 1230) $classes[] = 'noon';
 	if ($rightnow > 1759 && $rightnow < 2330) $classes[] = 'evening';
-	
+
 	$classes[] = strtolower(date('D', $timestamp));
 
 	if ( is_attachment() ) {
@@ -74,9 +74,9 @@ function comicpress_body_class($classes = array()) {
 			$classes[] = 'attachment-' . $type;
 		endforeach;
 	}
-	
+
 	if (comicpress_sidebars_disabled()) $classes[] = 'wide';
-	
+
 	$layout = get_theme_mod('comicpress-customize-select-layout', '3c');
 	if (empty($layout)) $layout = '3c';
 	$classes[] = 'layout-'.$layout;
@@ -96,23 +96,23 @@ function comicpress_post_class($classes = '') {
 
 	/* Microformats. */
 	$classes[] = 'uentry';
-	
+
 	/* Post alt class. */
 	$classes[] = 'postonpage-' . ++$post_alt;
-	
+
 	if ( $post_alt % 2 )
 		$classes[] = 'odd';
 	else
 		$classes[] = 'even';
-	
+
 	/* Sticky class (only on home/blog page). */
 	if( is_sticky() && is_home() )
 		$classes[] = 'sticky';
-	
+
 	/* Author class. */
 	if ( !is_attachment() )
 		$classes[] = 'post-author-' . sanitize_html_class( get_the_author_meta( 'user_nicename' ), get_the_author_meta( 'ID' ) );
-	
+
 	/* User-created classes. */
 	if ( !empty( $class ) ) :
 		if ( !is_array( $class ) )
@@ -134,7 +134,7 @@ function comicpress_comment_class($classes = '') {
 	/*
 	* http://microid.org
 	*/
-	
+
 	$email = get_comment_author_email();
 	$url = get_comment_author_url();
 	if(!empty($email) && !empty($url)) {

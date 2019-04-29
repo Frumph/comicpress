@@ -1,4 +1,4 @@
-<?php 
+<?php
 get_header();
 
 if (is_active_sidebar('blog')) get_sidebar('blog');
@@ -14,7 +14,7 @@ if (have_posts()) {
 			comments_template('', true);
 		}
 	endwhile;
-	
+
 } else { ?>
 
 	<div <?php post_class(); ?>>
