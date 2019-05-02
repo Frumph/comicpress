@@ -69,7 +69,7 @@ function comicpress_showmood_edit_post() {
 		} else {
 			$moods_uri = get_stylesheet_directory_uri();
 		}
-		echo $count .__( ' moods are available.', 'comicpress' ).'<br />
+		echo $count . ' '. __( 'moods are available.', 'comicpress' ).'<br />
 				'.__( 'Using Moods from directory:', 'comicpress' ).' '.$moods_directory.'<br />
 				'.__( 'Current Mood:', 'comicpress' ).' '.$mood.'<br /><br />';
 		if (!empty($results)) { ?>
