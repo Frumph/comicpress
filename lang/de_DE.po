@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ComicPress 4.3.2\n"
+"Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-26 21:39+0200\n"
-"PO-Revision-Date: 2019-04-26 21:42+0200\n"
+"POT-Creation-Date: 2019-05-02 16:31+0200\n"
+"PO-Revision-Date: 2019-05-02 16:32+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -384,61 +384,51 @@ msgstr "RSS-Feed"
 msgid "RSS"
 msgstr "RSS"
 
-#. translators: theme discription for wp-admin
-#: functions.php:369
+#: functions.php:368
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
-#. translators: home link for breadcrumps
 #: functions/breadcrumbs.php:12
 msgid "Home"
 msgstr "Startseite"
 
-#. translators: text for a category page for breadcrumps
 #: functions/breadcrumbs.php:14
 #, php-format
 msgid "Archive by Category \"%s\""
 msgstr "Archiv der Kategorie \"%s\""
 
-#. translators: text for a search results page for breadcrumps
 #: functions/breadcrumbs.php:16
 #, php-format
 msgid "Search Results for \"%s\" Query"
 msgstr "Suchergebnisse für \"%s\" Anfrage"
 
-#. translators: text for a tag page for breadcrumps
 #: functions/breadcrumbs.php:18
 #, php-format
 msgid "Posts Tagged \"%s\""
 msgstr "Beiträge Tagged\"%s\""
 
-#. translators: text for an author page for breadcrumps
 #: functions/breadcrumbs.php:20
 #, php-format
 msgid "Articles Posted by %s"
 msgstr "Beiträge veröffentlicht von %s"
 
-#. translators: text for the 404 page for breadcrumps
 #: functions/breadcrumbs.php:22
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#. translators: text 'Page N' for breadcrumps
 #: functions/breadcrumbs.php:24
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
-#. translators: text 'Comment Page N' for breadcrumps
 #: functions/breadcrumbs.php:26
 #, php-format
 msgid "Comment Page %s"
 msgstr "Kommentarseite %s"
 
-#. translators: date and time in comments
 #: functions/comment-functions.php:131
 #, php-format
 msgid "%1$s, %2$s"
@@ -832,8 +822,8 @@ msgid "none"
 msgstr "keins"
 
 #: functions/moods.php:72
-msgid " moods are available."
-msgstr " Moods sind verfügbar."
+msgid "moods are available."
+msgstr "Moods sind verfügbar."
 
 #: functions/moods.php:73
 msgid "Using Moods from directory:"
@@ -855,31 +845,31 @@ msgstr "Neuere Einträge &uarr;"
 msgid "&darr; Previous Entries"
 msgstr "&darr;  Vorherige Einträge"
 
-#: functions/wp-pagenavi.php:149
+#: functions/wp-pagenavi.php:147
 msgid "Go"
 msgstr "Gehe Zu"
 
-#: functions/wp-pagenavi.php:160
+#: functions/wp-pagenavi.php:158
 msgid "Page %CURRENT_PAGE% of %TOTAL_PAGES%"
 msgstr "Seite %CURRENT_PAGE% von %TOTAL_PAGES%"
 
-#: functions/wp-pagenavi.php:163
+#: functions/wp-pagenavi.php:161
 msgid "&laquo; First"
 msgstr "&laquo; Erste"
 
-#: functions/wp-pagenavi.php:164
+#: functions/wp-pagenavi.php:162
 msgid "Last &raquo;"
 msgstr "Letzte &raquo;"
 
-#: functions/wp-pagenavi.php:165
+#: functions/wp-pagenavi.php:163
 msgid "&raquo;"
 msgstr "&raquo;"
 
-#: functions/wp-pagenavi.php:166
+#: functions/wp-pagenavi.php:164
 msgid "&laquo;"
 msgstr "&laquo;"
 
-#: functions/wp-pagenavi.php:167 functions/wp-pagenavi.php:168
+#: functions/wp-pagenavi.php:165 functions/wp-pagenavi.php:166
 msgid "..."
 msgstr "..."
 
@@ -1652,7 +1642,6 @@ msgstr "Letzte Szene:"
 msgid "First Scene:"
 msgstr "Erste Szene:"
 
-#. translators: Calendar caption: 1: month name, 2: 4-digit year
 #: widgets/calendar.php:97
 #, php-format
 msgctxt "calendar caption"
