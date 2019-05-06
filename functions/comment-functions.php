@@ -127,7 +127,7 @@ function comicpress_comments_callback($comment, $args, $depth) {
 
 				<span class="comment-time" title="<?php comment_date('l, F jS Y, g:ia'); ?>">
 					<?php
-					/* translators: date and time in comments */
+					/* translators: %1$s: date %2$s: time in comments */
 					printf(__( '%1$s, %2$s', 'comicpress' ), get_comment_date(), get_comment_time()); ?>
 				</span>
 
