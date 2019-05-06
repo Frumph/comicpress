@@ -6,9 +6,9 @@ add_filter('excerpt_length', 'comicpress_excerpt_length');
 if (comicpress_themeinfo('enable_debug_footer_code'))
 	add_action('comicpress-page-foot', 'comicpress_debug_page_foot_code');
 add_filter('excerpt_more', 'comicpress_auto_excerpt_more');
-if (comicpress_themeinfo('force_active_connection_close')) 
+if (comicpress_themeinfo('force_active_connection_close'))
 	add_action('shutdown_action_hook','comicpress_close_up_shop');
-if (comicpress_themeinfo('menubar_social_icons')) 
+if (comicpress_themeinfo('menubar_social_icons'))
 	add_action('comicpress-menubar-menunav', 'comicpress_display_social_icons');
 
 if (!is_admin())
@@ -39,7 +39,7 @@ function comicpress_setup() {
 // 	add_editor_style();
 	add_theme_support('automatic-feed-links');
 	add_theme_support(
-		'post-formats', 
+		'post-formats',
 		array(
 //			'image',
 //			'video',
@@ -111,7 +111,7 @@ if (!function_exists('comicpress_register_sidebars')) {
 			array('id' => 'footer-left', 'name' => __( 'Footer Left', 'comicpress' ), 'description' => __( 'This sidebar is at the bottom of the page, the left one.', 'comicpress' )),
 			array('id' => 'footer-right', 'name' => __( 'Footer Right', 'comicpress' ), 'description' => __( 'This sidebar is at the bottom of the page, the right one.', 'comicpress' )),
 		);
-		if (class_exists('Jetpack') && Jetpack::init()->is_module_active('minileven')) { 
+		if (class_exists('Jetpack') && Jetpack::init()->is_module_active('minileven')) {
 			$widgets_list[] = array('id' => '1', 'name' => __( 'Jetpack Mobile Sidebar', 'comicpress' ), 'description' => __( 'Jetpack Mobile Sidebar', 'comicpress' ));
 		}
 		foreach ($widgets_list as $widget_info) {
@@ -177,7 +177,7 @@ function comicpress_is_bbpress() {
 			(bbp_is_forum()
 				|| bbp_is_forum_archive()
 				|| bbp_is_topic_archive()
-				|| bbp_is_single_forum() 
+				|| bbp_is_single_forum()
 				|| bbp_is_single_topic()
 				|| bbp_is_topic()
 				|| bbp_is_topic_edit()
@@ -232,9 +232,9 @@ if (!function_exists('comicpress_display_social_icons')) {
 		if (!empty($myspace)) $output .= '<a href="'.$myspace.'" target="_blank" title="'.__( 'Make use of MySpace', 'comicpress' ).'" class="menunav-social menunav-myspace">'.__( 'MySpace', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($linkedin)) $output .= '<a href="'.$linkedin.'" target="_blank" title="'.__( 'Look at my LinkedIn', 'comicpress' ).'" class="menunav-social menunav-linkedin">'.__( 'LinkedIn', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($twitter)) $output .= '<a href="'.$twitter.'" target="_blank" title="'.__( 'Follow me on Twitter', 'comicpress' ).'" class="menunav-social menunav-twitter">'.__( 'Twitter', 'comicpress' ).'</a>'."\r\n";
-		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";		
+		if (!empty($flickr)) $output .= '<a href="'.$flickr.'" target="_blank" title="'.__( 'Gaze at my Flickr', 'comicpress' ).'" class="menunav-social menunav-flickr">'.__( 'Flickr', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($email)) $output .= '<a href="'.$email.'" target="_blank" title="'.__( 'Email me', 'comicpress' ).'" class="menunav-social menunav-email">'.__( 'Email', 'comicpress' ).'</a>'."\r\n";
-		if (!empty($pinterest)) $output .= '<a href="'.$pinterest.'" target="_blank" title="'.__( 'Peruse my Pinterests', 'comicpress' ).'" class="menunav-social menunav-pinterest">'.__( 'pinterest', 'comicpress' ).'</a>'."\r\n";
+		if (!empty($pinterest)) $output .= '<a href="'.$pinterest.'" target="_blank" title="'.__( 'Peruse my Pinterests', 'comicpress' ).'" class="menunav-social menunav-pinterest">'.__( 'Pinterest', 'comicpress' ).'</a>'."\r\n";
 		if (!empty($youtube)) $output .= '<a href="'.$youtube.'" target="_blank" title="'.__( 'My Channel on YouTube', 'comicpress' ).'" class="menunav-social menunav-youtube">'.__( 'YouTube', 'comicpress' ).'</a>'."\r\n";
 		if (comicpress_themeinfo('enable_rss_in_menubar')) $output .= '<a href="'.get_bloginfo('rss2_url').'" target="_blank" title="'.__( 'RSS Feed', 'comicpress' ).'" class="menunav-social menunav-rss2">'.__( 'RSS', 'comicpress' ).'</a>'."\r\n";
 		$output .= '<div class="clear"></div>';

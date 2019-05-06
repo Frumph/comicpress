@@ -138,7 +138,7 @@
 				</tr>
 				<tr>
 					 <td>
-					 	<strong><?php _e( 'pinterest', 'comicpress' ); ?></strong>
+					 	<strong><?php _e( 'Pinterest', 'comicpress' ); ?></strong>
 					 </td>
 					<?php
 					if (!isset($comicpress_options['menubar_social_pinterest']))
