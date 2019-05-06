@@ -142,7 +142,7 @@ class comicpress_Customize {
 					'mecha' => __( 'Mecha', 'comicpress' ),
 					/* translators: name of customize scheme CEasel */
 					'ceasel' => __( 'CEasel', 'comicpress' ),
-					/* translators: name of customize scheme High Society*/
+					/* translators: name of customize scheme High Society */
 					'high' => __( 'High Society', 'comicpress' )
 				)
 			));
