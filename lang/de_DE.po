@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-02 16:31+0200\n"
-"PO-Revision-Date: 2019-05-02 16:32+0200\n"
+"POT-Creation-Date: 2019-05-10 18:30+0200\n"
+"PO-Revision-Date: 2019-05-10 18:43+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -17,6 +17,7 @@ msgstr ""
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
+"X-Poedit-Flags-xgettext: --add-comments\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:6
@@ -31,18 +32,20 @@ msgstr "Klicke hier, um die Startseite aufzurufen"
 msgid "or try a search:"
 msgstr "oder probiere eine Suche:"
 
+#. Category
 #: archive.php:22 archive.php:26 archive.php:28 archive.php:30 archive.php:44
 #: archive.php:46 archive.php:49
 msgid "Archive for"
 msgstr "Archiv für"
 
+#. Tag
 #: archive.php:24
 msgid "Posts Tagged"
-msgstr "Beiträge getaggt"
+msgstr "Beiträge Tagged"
 
 #: archive.php:32
 msgid "Author Archive"
-msgstr "Autorenarchiv"
+msgstr "Autoren-Archiv"
 
 #: archive.php:34
 msgid "Archives"
@@ -50,7 +53,7 @@ msgstr "Archive"
 
 #: archive.php:51
 msgid "Archive is unable to be found."
-msgstr "Archiv ist nicht zu finden."
+msgstr "Das Archiv ist nicht zu finden."
 
 #: archive.php:53
 msgid "No Archive Found."
@@ -60,15 +63,15 @@ msgstr "Kein Archiv gefunden."
 #, php-format
 msgid "%d comic."
 msgid_plural "%d comics."
-msgstr[0] "%d comic."
+msgstr[0] "%d Comic."
 msgstr[1] "%d Comics."
 
 #: archive.php:59 archive.php:106 search.php:9
 #, php-format
 msgid "%d result."
 msgid_plural "%d results."
-msgstr[0] "%d Resultat."
-msgstr[1] "%d Resultate."
+msgstr[0] "%d Ergebnis."
+msgstr[1] "%d Ergebnisse."
 
 #: archive.php:69
 msgid "No Thumbnail or Featured Image Found"
@@ -92,7 +95,7 @@ msgstr "Beiträge #"
 
 #: author.php:70 functions.php:236 options/menubar.php:213
 msgid "Email"
-msgstr "Email"
+msgstr "E-Mail-Adresse"
 
 #: author.php:80
 msgid "Website"
@@ -162,7 +165,8 @@ msgstr "Website URL"
 
 #: comments.php:84
 msgid "NOTE &mdash; You can use these HTML tags and attributes:"
-msgstr "HINWEIS &mdash; Du kannst diese HTML-Tags und Attribute verwenden:"
+msgstr ""
+"HINWEIS &mdash; Du kannst diese HTML-Markierungen und Attribute verwenden:"
 
 #: comments.php:84
 msgid "Comment &not;"
@@ -201,27 +205,27 @@ msgstr "Diese Seite bearbeiten."
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:54 functions.php:110 functions/customize.php:245
-#: functions/customize.php:257 functions/customize.php:274
+#: functions.php:54 functions.php:110 functions/customize.php:250
+#: functions/customize.php:262 functions/customize.php:279
 #: options/general.php:63
 msgid "Footer"
 msgstr "Footer"
 
 #: functions.php:103
 msgid "Left Sidebar"
-msgstr "Linke Sidebar"
+msgstr "Linke Seitenliste"
 
 #: functions.php:103
 msgid "The sidebar that appears to the left of the content."
-msgstr "Diese Sidebar erscheint links der Inhalte."
+msgstr "Die Seitenliste erscheint links der Inhalte."
 
 #: functions.php:104
 msgid "Right Sidebar"
-msgstr "Rechte Sidebar"
+msgstr "Rechte Seitenliste"
 
 #: functions.php:104
 msgid "The sidebar that appears to the right of the content."
-msgstr "Diese Sidebar erscheint rechts der Inhalte."
+msgstr "Die Seitenliste erscheint rechts der Inhalte."
 
 #: functions.php:105
 msgid "Above Header"
@@ -229,22 +233,22 @@ msgstr "Über dem Header"
 
 #: functions.php:105
 msgid ""
-"This sidebar appears to above all of the site information.  This sidebar is "
+"This sidebar appears to above all of the site information. This sidebar is "
 "not encased in CSS, you will need to create CSS for it."
 msgstr ""
-"Diese Sidebar erscheint über allem, vor den den Seiteninformationen. Diese "
-"Sidebar ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
+"Diese Seitenliste erscheint über allem, vor den Seiteninformationen. Diese "
+"Seitenliste ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:106 functions/customize.php:231 functions/customize.php:248
-#: functions/customize.php:263
+#: functions.php:106 functions/customize.php:236 functions/customize.php:253
+#: functions/customize.php:268
 msgid "Header"
 msgstr "Header"
 
 #: functions.php:106
 msgid "This sidebar appears inside the #header block."
-msgstr "Diese Sidebar erscheint innerhalb des #header Blocks."
+msgstr "Diese Seitenliste erscheint innerhalb des #header Blocks."
 
-#: functions.php:107 functions/customize.php:232 functions/customize.php:265
+#: functions.php:107 functions/customize.php:237 functions/customize.php:270
 #: options.php:220 options/menubar.php:11
 msgid "Menubar"
 msgstr "Menüleiste"
@@ -252,7 +256,8 @@ msgstr "Menüleiste"
 #: functions.php:107
 msgid "This sidebar is under the header and above the content-wrapper block"
 msgstr ""
-"Diese Sidebar erscheint unter dem Header und über dem content-wrapper Block"
+"Diese Seitenliste erscheint unter dem Header und über dem content-wrapper "
+"Block"
 
 #: functions.php:108
 msgid "Over Blog"
@@ -261,7 +266,7 @@ msgstr "Über dem Blog"
 #: functions.php:108
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
 msgstr ""
-"Diese Sidebar erscheint über dem Blog innerhalb von #column .narrowcolumn"
+"Diese Seitenliste erscheint über dem Blog innerhalb von #column .narrowcolumn"
 
 #: functions.php:109
 msgid "Under Blog"
@@ -270,15 +275,16 @@ msgstr "Unter dem Blog"
 #: functions.php:109
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
 msgstr ""
-"Diese Sidebar erscheint unter dem Blog innerhalb von #column .narrowcolumn"
+"Diese Seitenliste erscheint unter dem Blog innerhalb von #column ."
+"narrowcolumn"
 
 #: functions.php:110
 msgid ""
 "This sidebar is at the bottom of the page and is the center of the 3 footer "
 "sidebars."
 msgstr ""
-"Diese Sidebar ist am unteren Rand von der Seite und ist die Mitte von den 3 "
-"Footer Sidebars."
+"Diese Seitenliste ist am unteren Rand von der Seite und ist die Mitte von "
+"den 3 Footer Seitenlisten."
 
 #: functions.php:111
 msgid "Footer Left"
@@ -286,7 +292,7 @@ msgstr "Footer Links"
 
 #: functions.php:111
 msgid "This sidebar is at the bottom of the page, the left one."
-msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Linke."
+msgstr "Diese Seitenliste ist am unteren Rand von der Seite, die Linke."
 
 #: functions.php:112
 msgid "Footer Right"
@@ -294,11 +300,11 @@ msgstr "Footer Rechts"
 
 #: functions.php:112
 msgid "This sidebar is at the bottom of the page, the right one."
-msgstr "Diese Sidebar ist am unteren Rand von der Seite, die Rechte."
+msgstr "Diese Seitenliste ist am unteren Rand von der Seite, die Rechte."
 
 #: functions.php:115
 msgid "Jetpack Mobile Sidebar"
-msgstr "Jetpack Mobile Sidebar"
+msgstr "Jetpack Mobile Seitenliste"
 
 #: functions.php:159
 msgid "[&hellip;]"
@@ -365,7 +371,7 @@ msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
 #: functions.php:237 options/menubar.php:141
-msgid "pinterest"
+msgid "Pinterest"
 msgstr "Pinterest"
 
 #: functions.php:238
@@ -384,6 +390,7 @@ msgstr "RSS-Feed"
 msgid "RSS"
 msgstr "RSS"
 
+#. translators: theme discription for wp-admin
 #: functions.php:368
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
@@ -391,44 +398,54 @@ msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
+#. === OPTIONS ===
+#. translators: home link for breadcrumps
 #: functions/breadcrumbs.php:12
 msgid "Home"
 msgstr "Startseite"
 
+#. translators: text for a category page for breadcrumps
 #: functions/breadcrumbs.php:14
 #, php-format
 msgid "Archive by Category \"%s\""
 msgstr "Archiv der Kategorie \"%s\""
 
+#. translators: text for a search results page for breadcrumps
 #: functions/breadcrumbs.php:16
 #, php-format
 msgid "Search Results for \"%s\" Query"
 msgstr "Suchergebnisse für \"%s\" Anfrage"
 
+#. translators: text for a tag page for breadcrumps
 #: functions/breadcrumbs.php:18
 #, php-format
 msgid "Posts Tagged \"%s\""
-msgstr "Beiträge Tagged\"%s\""
+msgstr "Markierte Beiträge \"%s\""
 
+#. translators: text for an author page for breadcrumps
 #: functions/breadcrumbs.php:20
 #, php-format
 msgid "Articles Posted by %s"
 msgstr "Beiträge veröffentlicht von %s"
 
+#. translators: text for the 404 page for breadcrumps
 #: functions/breadcrumbs.php:22
 msgid "Error 404"
 msgstr "Fehler 404"
 
+#. translators: text 'Page N' for breadcrumps
 #: functions/breadcrumbs.php:24
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
+#. translators: text 'Comment Page N' for breadcrumps
 #: functions/breadcrumbs.php:26
 #, php-format
 msgid "Comment Page %s"
 msgstr "Kommentarseite %s"
 
+#. translators: %1$s: date %2$s: time in comments
 #: functions/comment-functions.php:131
 #, php-format
 msgid "%1$s, %2$s"
@@ -482,6 +499,7 @@ msgstr "Gehostet auf"
 msgid "&copy;"
 msgstr "&copy;"
 
+#. $wp_customize->remove_section('title_tagline');
 #: functions/customize.php:98
 msgid "Layout Options"
 msgstr "Layout Optionen"
@@ -490,6 +508,7 @@ msgstr "Layout Optionen"
 msgid "Allows you to customize layout settings for ComicPress."
 msgstr "Ermöglicht dir das Anpassen der Layouteinstellungen für ComicPress."
 
+#. $wp_customize->add_section('comicpress-background-colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'capability' => 'edit_theme_options'));
 #: functions/customize.php:100
 msgid "Background Colors"
 msgstr "Hintergrundfarben"
@@ -516,31 +535,31 @@ msgstr "3 Spalten (Standard)"
 
 #: functions/customize.php:109
 msgid "3 Column, both sidebars on left"
-msgstr "3 Spalten, beide Sidebars sind links"
+msgstr "3 Spalten, beide Seitenlisten sind links"
 
 #: functions/customize.php:110
 msgid "3 Column, both sidebars on right"
-msgstr "3 Spalten, beide Sidebars sind rechts"
+msgstr "3 Spalten, beide Seitenlisten sind rechts"
 
 #: functions/customize.php:111
 msgid "2 Column, sidebar on left"
-msgstr "2 Spalten, Sidebar ist links"
+msgstr "2 Spalten, Seitenliste ist links"
 
 #: functions/customize.php:112
 msgid "2 Column, sidebar on right"
-msgstr "2 Spalten, Sidebar ist rechts"
+msgstr "2 Spalten, Seitenliste ist rechts"
 
 #: functions/customize.php:113
 msgid "No Columns, no L/R sidebars"
-msgstr "Keine Spalten, keine L/R Sidebars"
+msgstr "Keine Spalten, keine L/R Seitenlisten"
 
 #: functions/customize.php:117
 msgid "3 Column, Graphic Novel style, main sidebar on left"
-msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist links"
+msgstr "3 Spalten, Graphic Novel Style, Haupt-Seitenliste ist links"
 
 #: functions/customize.php:118
 msgid "3 Column, Graphic Novel style, main sidebar on right"
-msgstr "3 Spalten, Graphic Novel Stil, Haupt Sidebar ist rechts"
+msgstr "3 Spalten, Graphic Novel Style, Haupt-Seitenliste ist rechts"
 
 #: functions/customize.php:122
 msgid "Choose a layout"
@@ -554,53 +573,58 @@ msgstr "Wähle ein Schema"
 msgid "No Scheme"
 msgstr "Kein Schema"
 
-#: functions/customize.php:137
+#. translators: name of customize scheme Boxed
+#: functions/customize.php:138
 msgid "Boxed"
 msgstr "Boxed"
 
-#: functions/customize.php:138
+#. translators: name of customize scheme Sandy
+#: functions/customize.php:140
 msgid "Sandy"
 msgstr "Sandy"
 
-#: functions/customize.php:139
+#. translators: name of customize scheme Mecha
+#: functions/customize.php:142
 msgid "Mecha"
 msgstr "Mecha"
 
-#: functions/customize.php:140
+#. translators: name of customize scheme CEasel
+#: functions/customize.php:144
 msgid "CEasel"
 msgstr "CEasel"
 
-#: functions/customize.php:141
+#. translators: name of customize scheme High Society
+#: functions/customize.php:146
 msgid "High Society"
 msgstr "High Society"
 
-#: functions/customize.php:147
+#: functions/customize.php:152
 msgid "Site Width Control"
 msgstr "Seitenweite Kontrolle"
 
-#: functions/customize.php:148
+#: functions/customize.php:153
 msgid "Minimum value is 780px, maximum is 1600px width - Currently saved at:"
 msgstr ""
 "Minimalwert ist 780px, Maximalwert ist 1600px Breite - Derzeitig gespeichert:"
 
-#: functions/customize.php:161
+#: functions/customize.php:166
 msgid "Left Sidebar Width"
-msgstr "Linke Sidebar Breite"
+msgstr "Linke Seitenliste Breite"
 
-#: functions/customize.php:162 functions/customize.php:176
+#: functions/customize.php:167 functions/customize.php:181
 msgid "Minimum value is 200px, maximum is 400px width - Currently saved at:"
 msgstr ""
 "Minimalwert ist 200px, Maximalwert ist 400px Breite - derzeitig gespeichert:"
 
-#: functions/customize.php:175
+#: functions/customize.php:180
 msgid "Right Sidebar Width"
-msgstr "Rechte Sidebar Breite"
+msgstr "Rechte Seitenliste Breite"
 
-#: functions/customize.php:190
+#: functions/customize.php:195
 msgid "Detach Footer"
 msgstr "Footer Trennen"
 
-#: functions/customize.php:191
+#: functions/customize.php:196
 msgid ""
 "Detach the footer to below the main content? (Already appears detached on "
 "some schemes *but isn't)"
@@ -608,19 +632,19 @@ msgstr ""
 "Trenne den Footer vom Hauptinhalt? (Schon erscheint sie losgelöst bei "
 "einigen Schemas, *ist aber nicht)"
 
-#: functions/customize.php:199
+#: functions/customize.php:204
 msgid "Rounded Corners"
 msgstr "Abgerundete Ecken"
 
-#: functions/customize.php:200
+#: functions/customize.php:205
 msgid "Rounded corners on Post/Page Navigation Sections"
 msgstr "Abgerundete Ecken bei Beitrags/Seiten Navigationsbereichen"
 
-#: functions/customize.php:208
+#: functions/customize.php:213
 msgid "Clickable Header Image"
 msgstr "Anklickbares Header Bild"
 
-#: functions/customize.php:209
+#: functions/customize.php:214
 msgid ""
 "Make the header title and description become a clickable hotspot for the "
 "entire header? (If you do the logo will not display right)"
@@ -628,132 +652,135 @@ msgstr ""
 "Macht den Header Titel und Beschreibung zu einem einen anklickbaren Hotspot "
 "für den gesamten Header? (Wenn das Logo nicht richtig angezeigt wird)"
 
-#: functions/customize.php:215
+#: functions/customize.php:220
 msgid "Logo, 120px height x 160px width"
 msgstr "Logo, 120px Höhe x 160px Breite"
 
-#: functions/customize.php:221
+#: functions/customize.php:226
 msgid "Comic in content column?"
 msgstr "Comic in Inhaltsspalte?"
 
-#: functions/customize.php:222
+#: functions/customize.php:227
 msgid ""
-"Put the comic into the content column?  This must be done for the Graphic "
+"Put the comic into the content column? This must be done for the Graphic "
 "Novel Layouts."
 msgstr ""
 "Setze den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
 "Layouts durchgeführt werden."
 
-#: functions/customize.php:230
+#. Background Colors
+#: functions/customize.php:235
 msgid "Entire Content Area"
 msgstr "Gesamter Inhaltsbereich"
 
-#: functions/customize.php:233
+#: functions/customize.php:238
 msgid "Menubar Dropdown"
 msgstr "Menüleiste Dropdown"
 
-#: functions/customize.php:234
+#: functions/customize.php:239
 msgid "Menubar When Mouseover"
 msgstr "Menüleiste bei Mouseover"
 
-#: functions/customize.php:235 functions/customize.php:250
-#: functions/customize.php:268
+#: functions/customize.php:240 functions/customize.php:255
+#: functions/customize.php:273
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
-#: functions/customize.php:236
+#: functions/customize.php:241
 msgid "Content Area Below Menubar"
 msgstr "Inhaltsbereich unterhalb der Menüleiste"
 
-#: functions/customize.php:237
+#: functions/customize.php:242
 msgid "Content Area Below Comic"
 msgstr "Inhaltsbereich unterhalb vom Comic"
 
-#: functions/customize.php:238
+#: functions/customize.php:243
 msgid "Content Column"
 msgstr "Inhaltsbereich"
 
-#: functions/customize.php:239
+#: functions/customize.php:244
 msgid "Entire Post Area"
 msgstr "Gesamter Beitragsbereich"
 
-#: functions/customize.php:240 functions/customize.php:255
+#: functions/customize.php:245 functions/customize.php:260
 msgid "Top Section of a Post"
 msgstr "Oberer Abschnitt von einem Beitrag"
 
-#: functions/customize.php:241
+#: functions/customize.php:246
 msgid "Comment Section"
 msgstr "Kommentar Abschnitt"
 
-#: functions/customize.php:242
+#: functions/customize.php:247
 msgid "Comment Info. Line"
 msgstr "Kommentar Info. Linie"
 
-#: functions/customize.php:243
+#: functions/customize.php:248
 msgid "Comments Made By Post Author"
 msgstr "Kommentare gemacht vom Beitragsautor"
 
-#: functions/customize.php:244
+#: functions/customize.php:249
 msgid "Info. Line Of Post Author"
 msgstr "Info. Linie von dem Beitragsautor"
 
-#: functions/customize.php:247
+#. Text Colors
+#: functions/customize.php:252
 msgid "Sitewide Textcolor"
 msgstr "Seitenweite Textfarben"
 
-#: functions/customize.php:249
+#: functions/customize.php:254
 msgid "Site Description"
 msgstr "Website Beschreibung"
 
-#: functions/customize.php:251
+#: functions/customize.php:256
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
-#: functions/customize.php:252
+#: functions/customize.php:257
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr "Seitenliste"
 
-#: functions/customize.php:253
+#: functions/customize.php:258
 msgid "Non-Link Post Titles"
 msgstr "Nicht verlinkte Beitragstitel"
 
-#: functions/customize.php:254
+#: functions/customize.php:259
 msgid "Page Titles"
 msgstr "Seitentitel"
 
-#: functions/customize.php:256
+#: functions/customize.php:261
 msgid "Post/Page Comments"
 msgstr "Beitrag/Seiten Kommentare"
 
-#: functions/customize.php:258 functions/customize.php:276
+#: functions/customize.php:263 functions/customize.php:281
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions/customize.php:260
+#. Link Colors
+#: functions/customize.php:265
 msgid "Sitewide Linkcolor"
 msgstr "Seitenweite Linkfarben"
 
-#: functions/customize.php:270
+#: functions/customize.php:275
 msgid "Sidebar Widget"
-msgstr "Sidebar Widget"
+msgstr "Seitenliste Widget"
 
-#: functions/customize.php:282
+#: functions/customize.php:287
 msgid "Comic Area"
 msgstr "Comic Bereich"
 
-#: functions/customize.php:284
+#: functions/customize.php:289
 msgid "Default Comic Navigation"
 msgstr "Standard Comic Navigation"
 
-#: functions/customize.php:285
+#: functions/customize.php:290
 msgid "Default Nav Normal Text Color"
 msgstr "Standard Nav Normal Textfarbe"
 
-#: functions/customize.php:286
+#: functions/customize.php:291
 msgid "Default Navigation Link"
 msgstr "Standard Navigation Link"
 
-#: functions/customize.php:287
+#: functions/customize.php:292
 msgid "Default Navigation Hover"
 msgstr "Standar Navigation Hover"
 
@@ -783,7 +810,7 @@ msgstr "Veröffentlicht in:"
 
 #: functions/displaypost.php:165
 msgid "&#9492; Tags:&nbsp;"
-msgstr "&#9492; Tags:&nbsp;"
+msgstr "&#9492; Schlagwörter::&nbsp;"
 
 #: functions/displaypost.php:176
 msgid "Comment&nbsp;"
@@ -814,7 +841,7 @@ msgid ""
 "Available Moods, you can set which mood images to use in the comicpress "
 "Options."
 msgstr ""
-"Verfügbare Moods, du kannst in ComicPress Optionen einstellen, welche "
+"Verfügbare Moods, du kannst in den ComicPress Optionen einstellen, welche "
 "Stimmungsbilder verwendet sollen."
 
 #: functions/moods.php:58 options/comments.php:79 options/postspages.php:168
@@ -843,7 +870,7 @@ msgstr "Neuere Einträge &uarr;"
 
 #: functions/pagination.php:10
 msgid "&darr; Previous Entries"
-msgstr "&darr;  Vorherige Einträge"
+msgstr "&darr; Vorherige Einträge"
 
 #: functions/wp-pagenavi.php:147
 msgid "Go"
@@ -941,7 +968,7 @@ msgstr "Beiträge & Seiten"
 
 #: options.php:223 options/archivesearch.php:11
 msgid "Archive & Search"
-msgstr "Archiv & Suche"
+msgstr "Archive & Suche"
 
 #: options.php:224 options/debug.php:11
 msgid "Debug"
@@ -993,7 +1020,7 @@ msgstr "Auszug"
 
 #: options/archivesearch.php:39
 msgid "Full Content"
-msgstr "Ganzer Inhalt"
+msgstr "Gesamter Inhalt"
 
 #: options/archivesearch.php:44
 msgid ""
@@ -1001,7 +1028,7 @@ msgid ""
 "the archive display."
 msgstr ""
 "Wenn die Anzeige der Archiv Ergebnisse als Liste deaktiviert ist, "
-"entscheide, wie viele in der Archivanzeige  zu sehen sein sollen."
+"entscheide, wie viele in der Archivanzeige zu sehen sein sollen."
 
 #: options/archivesearch.php:50
 msgid "Archive Display Order"
@@ -1025,7 +1052,7 @@ msgstr ""
 "Hier stellst du die Anzeigen-Reihenfolge der Archive ein. Neueste nach "
 "älteste zeigt den aktuellsten Artikel ganz oben. Älteste nach neueste "
 "beginnt mit dem ersten Eintrag in einer Kategorie, Tag, oder Datumsbereich "
-"(z.B wähle Mai 20XX wird starten mit 1.Mai, nicht 31.Mai.)"
+"(z.B. wähle Mai 20XX wird starten mit 1.Mai, nicht 31.Mai.)"
 
 #: options/archivesearch.php:73
 msgid "Navigation"
@@ -1043,7 +1070,7 @@ msgid ""
 "of comments per page. Uses the same styling as the Menubar."
 msgstr ""
 "Vorherige und nächste Beiträge Buttons werden durch einen Balken mit "
-"nummerierten Seiten ersetzt.  Nummerierte Seitenzahlen erscheinen auf der "
+"nummerierten Seiten ersetzt. Nummerierte Seitenzahlen erscheinen auf der "
 "Startseite, der Autor(en) Seite, der Blog-Vorlage, und Kommentare/Single, "
 "wenn es mehr als die eingestellte Anzahl der Kommentare pro Seite sind. "
 "Benutzt die selbe Optik wie die Menüleiste."
@@ -1109,7 +1136,7 @@ msgstr ""
 "Wähle ein Verzeichnis für die Avatare für Standardavatare aus, wenn jemand "
 "keinen Gravatar hat. Du musst diese Bilder selber erstellen, oder von einem "
 "Avatar Anbieter herunterladen. Dann legst Du ein neues Verzeichnis auf "
-"deinem Websiten Server an, um sie hoch zu laden und wählst das Verzeichnis "
+"deinem Websiten-Server an, um sie hoch zu laden und wählst das Verzeichnis "
 "hier aus. Diese Einstellung auf <strong>keins</strong> deaktiviert die "
 "Verwendung von speziellen Avatar Sets."
 
@@ -1171,14 +1198,14 @@ msgstr ""
 
 #: options/general.php:45
 msgid "Allow the sidebar over-blog to appear on all posts?"
-msgstr "Erlaube der Sidebar Over-Blog über allen Beiträgen zu erscheinen?"
+msgstr "Erlaube der Seitenliste Over-Blog über allen Beiträgen zu erscheinen?"
 
 #: options/general.php:52
 msgid ""
 "Sidebar Over-Blog appears on all posts not just the front page/blog loop "
 "when enabled."
 msgstr ""
-"Sidebar Over-Blog erscheint auf allen Beiträgen, nicht nur auf der "
+"Seitenliste Over-Blog erscheint auf allen Beiträgen, nicht nur auf der "
 "Titelseite / Blog Schleife wenn aktiviert."
 
 #: options/general.php:71
@@ -1193,7 +1220,7 @@ msgid ""
 msgstr ""
 "Aktiviere diese Option, wenn Du keinen Text in dem Footer möchtest. Wenn du "
 "deinen eigenen Footer Text eingeben möchtest, kannst du das via Design "
-"&#10132; Widgets  &#10132; Footer tun."
+"&#10132; Widgets &#10132; Footer tun."
 
 #: options/general.php:84
 msgid "Disable the scroll to top link in the footer?"
@@ -1334,7 +1361,7 @@ msgstr ""
 
 #: options/postspages.php:32
 msgid "Add graphic calendar to blog posts?"
-msgstr "Füge Kalendergrafik zu Blogbeiträgen hinzu?"
+msgstr "Kalendergrafik zu Blogbeiträgen hinzufügen?"
 
 #: options/postspages.php:39
 msgid ""
@@ -1374,11 +1401,13 @@ msgstr ""
 
 #: options/postspages.php:71
 msgid "Disable display of <strong>tags</strong> in posts?"
-msgstr "Deaktiviere Anzeige von <strong>Tags</strong> in Beiträgen?"
+msgstr "Deaktiviere Anzeige von <strong>Schlagwörtern</strong> in Beiträgen?"
 
 #: options/postspages.php:78
 msgid "Checkmarking this will make it so that tags will not appear in posts."
-msgstr "Durch markieren der Checkbox werden keine Tags in Beiträgen angezeigt."
+msgstr ""
+"Durch markieren der Checkbox werden keine Schlagwörter in Beiträgen "
+"angezeigt."
 
 #: options/postspages.php:84
 msgid "Disable display of <strong>categories</strong> in posts?"
@@ -1452,8 +1481,8 @@ msgid ""
 msgstr ""
 "Wähle ein Verzeichnis, wo die Moods für Beiträge sich befinden. Einstellung "
 "<strong>keins</strong> schaltet die Funktion aus. Das Moods Verzeichnis "
-"findest du in deinem Theme Verzeichnis /images/moods/* . Zum Erstellen  "
-"deiner eigenen Moods, erstelle ein Verzeichnis unter Images/moods und füge "
+"findest du in deinem Theme Verzeichnis /images/moods/* . Zum Erstellen "
+"deiner eigenen Moods, erstelle ein Verzeichnis unter images/moods und füge "
 "dort NUR Bilddateien ein. Der Name der Bilddatei repräsentiert den Moods "
 "Namen."
 
@@ -1492,7 +1521,7 @@ msgstr ""
 #: options/postspages.php:242
 msgid "Media and images width when sidebars are disabled on pages?"
 msgstr ""
-"Breite von Medien und Bilder, wenn Sidebars auf Seiten deaktiviert sind?"
+"Breite von Medien und Bilder, wenn Seitenlisten auf Seiten deaktiviert sind?"
 
 #: options/postspages.php:249
 msgid "When the sidebars are disabled on pages? Default = 700"
@@ -1550,7 +1579,7 @@ msgstr "WordPress.ORG Forums:"
 
 #: options/splash.php:68
 msgid "(rarely go here)"
-msgstr "(selten hier zugegen)"
+msgstr "(Selten hier zugegen)"
 
 #: options/splash.php:73
 msgid "On Twitter:"
@@ -1562,7 +1591,7 @@ msgid ""
 "will try to understand you as best I can."
 msgstr ""
 "Bitte beachte, dass ich nur amerikanisches Englisch spreche. Verzeihe meine "
-"Unwissenheit und ich werde versuchen  Dich zu verstehen, so gut ich kann."
+"Ignoranz und ich werde versuchen, dich so gut wie geht zu verstehen."
 
 #: search.php:8
 msgid "Search for &lsquo;"
@@ -1588,15 +1617,15 @@ msgstr "Suche..."
 msgid ""
 "There are currently no widgets assigned to the left-sidebar, place some!"
 msgstr ""
-"Momentan sind für die linke Sidebar keine Widgets festgelegt. Füge welche "
-"hinzu!"
+"Momentan sind keine Widgets für die linke Seitenliste festgelegt. Füge "
+"welche hinzu!"
 
 #: sidebar-left.php:10 sidebar-right.php:10
 msgid ""
 "Once you add widgets to this sidebar, this default information will go away."
 msgstr ""
-"Sobald du in diese Sidebar ein Widget platzierst, verschwindet dieser "
-"Hinweis."
+"Sobald du in diese Seitenliste ein Widget platzierst, verschwindet dieser "
+"Standardhinweis."
 
 #: sidebar-left.php:13 sidebar-right.php:13
 msgid ""
@@ -1605,14 +1634,15 @@ msgid ""
 "appropriate sidebars."
 msgstr ""
 "Widgets können via Dashboard &#10132; Design &#10132; Widgets hinzugefügt "
-"werden. Ziehe ein Widget in die jeweilige Sidebar, wo Du es sehen möchtest."
+"werden. Ziehe ein Widget in die jeweilige Seitenliste, wo Du es sehen "
+"möchtest."
 
 #: sidebar-right.php:7
 msgid ""
 "There are currently no widgets assigned to the right-sidebar, place some!"
 msgstr ""
-"Momentan sind für die rechte Sidebar keine Widgets festgelegt. Füge welche "
-"hinzu!"
+"Momentan sind keine Widgets für die rechte Seitenliste festgelegt. Füge "
+"welche hinzu!"
 
 #: single.php:23
 msgid "Sorry, post is not found."
@@ -1642,6 +1672,7 @@ msgstr "Letzte Szene:"
 msgid "First Scene:"
 msgstr "Erste Szene:"
 
+#. translators: Calendar caption: 1: month name, 2: 4-digit year
 #: widgets/calendar.php:97
 #, php-format
 msgctxt "calendar caption"
@@ -1653,10 +1684,12 @@ msgstr "%1$s %2$s"
 msgid "View posts for %1$s %2$s"
 msgstr "Zeige Beiträge für %1$s %2$s"
 
+#. Base ID
 #: widgets/calendar.php:251
 msgid "ComicPress - Posts Calendar"
 msgstr "ComicPress - Beitragskalender"
 
+#. Name
 #: widgets/calendar.php:252
 msgid ""
 "Display a calendar showing this months posts. (this calendar does not drop "
@@ -1695,11 +1728,11 @@ msgstr "L"
 
 #: widgets/calendar.php:343
 msgid "Thumbnail URL (178px by 130px):"
-msgstr "Vorschaubild URL (178px x 130 px):"
+msgstr "Vorschaubild URL (178px x 130px):"
 
 #: widgets/calendar.php:344
 msgid "Add link on thumbnails:"
-msgstr "Link auf die Vorschaubilder:"
+msgstr "Link zu den Vorschaubildern hinzufügen:"
 
 #: widgets/calendar.php:345
 msgid "Wallpaper URL (Small):"
@@ -1723,19 +1756,21 @@ msgid ""
 "\"Goto Tag\" to continue where you left off."
 msgstr ""
 "Klicke \"Tag Page\" zum bookmarken einer Seite. Wenn Du auf die Website "
-"zurück kehrst, klicke auf \"Goto Tag\", um fortzufahren, wo Du aufgehörst "
+"zurück kehrst, klicke auf \"Goto Tag\", um fortzufahren, wo Du aufgehört "
 "hast."
 
+#. Base ID
 #: widgets/classicbookmark.php:117
 msgid "ComicPress - Classic Bookmark"
 msgstr "ComicPress - Klassisches Lesezeichen"
 
+#. Name
 #: widgets/classicbookmark.php:118
 msgid ""
 "Creates a set of buttons that let the user return to the page they tagged."
 msgstr ""
-"Erstellt ein kleines Button-Set, das die Besucher zu getaggten Seiten "
-"zurückführen kann."
+"Erstellt ein kleines Button-Set, damit der Besucher zu der markierten Seite "
+"zurückkehren kann."
 
 #: widgets/classicbookmark.php:167 widgets/controlpanel.php:100
 #: widgets/menubar.php:101 widgets/randompostlink.php:92
@@ -1743,10 +1778,12 @@ msgstr ""
 msgid "Title:"
 msgstr "Titel:"
 
+#. Base ID
 #: widgets/controlpanel.php:21
 msgid "ComicPress - Control Panel"
 msgstr "ComicPress - Kontrollzentrum"
 
+#. Name
 #: widgets/controlpanel.php:22
 msgid ""
 "Login/Logoff menu with register/lost password links if not logged on. (use "
@@ -1783,18 +1820,22 @@ msgstr "Profil"
 msgid "Control Panel"
 msgstr "Kontrollzentrum"
 
+#. Base ID
 #: widgets/menubar.php:51
 msgid "ComicPress - Menubar"
 msgstr "ComicPress - Menüleiste"
 
+#. Name
 #: widgets/menubar.php:52
 msgid "Displays a menubar."
 msgstr "Zeigt eine Menüleiste."
 
+#. Base ID
 #: widgets/multisite-list.php:23
 msgid "ComicPress - Site List"
 msgstr "ComicPress - Seitenliste"
 
+#. Name
 #: widgets/multisite-list.php:24
 msgid ""
 "Display Site List of all sites that have recently updated on this Multisite."
@@ -1806,10 +1847,12 @@ msgstr ""
 msgid "Hosted Site List"
 msgstr "Liste gehosteter Seiten"
 
+#. Base ID
 #: widgets/randompostlink.php:41
 msgid "ComicPress - Random Post Link"
 msgstr "ComicPress - Zufällige Beitragslinks"
 
+#. Name
 #: widgets/randompostlink.php:42
 msgid "Displays a link to click that triggers going to a random blog post."
 msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
@@ -1818,10 +1861,12 @@ msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
 msgid "Random Post"
 msgstr "Zufälliger Beitrag"
 
+#. Base ID
 #: widgets/scheduledposts.php:22
 msgid "ComicPress - Scheduled Posts"
-msgstr "ComicPress - geplante Beiträge"
+msgstr "ComicPress - Geplante Beiträge"
 
+#. Name
 #: widgets/scheduledposts.php:23
 msgid "Display a list of posts that are scheduled to be published."
 msgstr ""
@@ -1830,19 +1875,3 @@ msgstr ""
 #: widgets/scheduledposts.php:39
 msgid "Scheduled Posts"
 msgstr "Geplante Beiträge"
-
-#~ msgid "Google+"
-#~ msgstr "Google+"
-
-#~ msgid "Circle me on Google+"
-#~ msgstr "Circle mich auf Google+"
-
-#~ msgid "Enable Project Wonderful Asyncronus code?"
-#~ msgstr "Aktiviere Project Wonderful Asyncronus Code?"
-
-#~ msgid ""
-#~ "This option places the Project Wonderful asyncronus code into the header "
-#~ "of the site."
-#~ msgstr ""
-#~ "Diese Option setzt den Project Wonderful Asyncronus Code in den Header "
-#~ "von der Website."

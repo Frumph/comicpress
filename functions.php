@@ -102,7 +102,7 @@ if (!function_exists('comicpress_register_sidebars')) {
 		$widgets_list = array(
 			array('id' => 'left-sidebar', 'name' => __( 'Left Sidebar', 'comicpress' ), 'description' => __( 'The sidebar that appears to the left of the content.', 'comicpress' )),
 			array('id' => 'right-sidebar', 'name' => __( 'Right Sidebar', 'comicpress' ), 'description' => __( 'The sidebar that appears to the right of the content.', 'comicpress' )),
-			array('id' => 'above-header', 'name' => __( 'Above Header', 'comicpress' ), 'description' => __( 'This sidebar appears to above all of the site information.  This sidebar is not encased in CSS, you will need to create CSS for it.', 'comicpress' )),
+			array('id' => 'above-header', 'name' => __( 'Above Header', 'comicpress' ), 'description' => __( 'This sidebar appears to above all of the site information. This sidebar is not encased in CSS, you will need to create CSS for it.', 'comicpress' )),
 			array('id' => 'header', 'name' => __( 'Header', 'comicpress' ), 'description' => __( 'This sidebar appears inside the #header block.', 'comicpress' )),
 			array('id' => 'menubar', 'name' => __( 'Menubar', 'comicpress' ), 'description' => __( 'This sidebar is under the header and above the content-wrapper block', 'comicpress' )),
 			array('id' => 'over-blog', 'name' => __( 'Over Blog', 'comicpress' ), 'description' => __( 'This sidebar appears over the blog within the #column .narrowcolumn', 'comicpress' )),
