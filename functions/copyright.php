@@ -5,16 +5,16 @@ if (!function_exists('comicpress_copyright_text')) {
 		$output = "<p class=\"copyright-info\">\r\n";
 		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
-		$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ). " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
+		$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ) . " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 			$output .= "<span class=\"footer-pipe\">|</span> ";
-			$output .= __( 'Subscribe:', 'comicpress' ) . "<a href=\"" . get_bloginfo('rss2_url') ."\">RSS</a>\r\n";
+			$output .= __( 'Subscribe:', 'comicpress' ) . "<a href=\"" . get_bloginfo('rss2_url') ."\">" . __( 'RSS', 'comicpress' ) . "</a>\r\n";
 		$output .= "</span>\r\n";
 		if (!comicpress_themeinfo('disable_scroll_to_top')) {
 			$output .= "<span class=\"footer-uptotop\">";
 				$output .= "<span class=\"footer-pipe\">|</span> ";
-				$output .= "<a href=\"\" onclick=\"scrollup(); return false;\">".__( 'Back to Top &uarr;', 'comicpress' )."</a>";
+				$output .= "<a href=\"\" onclick=\"scrollup(); return false;\">" . __( 'Back to Top &uarr;', 'comicpress' ) . "</a>";
 			$output .="</span>\r\n";
 		}
 		$output .= "</p>\r\n";
@@ -32,7 +32,7 @@ if (!function_exists('comicpress_hosted_on')) {
 				$site_name = $current_site->site_name;
 			}
 			$output = "<span class=\"copyright-pipe\">|</span> ";
-			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="http://'. $current_site->domain. $current_site->path. '">'. $site_name. '</a> ';
+			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="http://' . $current_site->domain. $current_site->path. '">'. $site_name. '</a> ';
 			return apply_filters('comicpress_hosted_on', $output);
 		}
 	}

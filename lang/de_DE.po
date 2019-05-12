@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-10 18:30+0200\n"
-"PO-Revision-Date: 2019-05-10 18:43+0200\n"
+"PO-Revision-Date: 2019-05-12 10:24+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -914,7 +914,7 @@ msgstr "Diesen Anhang bearbeiten."
 
 #: image.php:58
 msgid "Sorry, no image matched your criteria."
-msgstr "Tut uns leid, kein Bild entsprach deinen Suchkriterien."
+msgstr "Tut uns leid, es entsprach kein Bild deinen Suchkriterien."
 
 #: options.php:6
 msgid "Options"
