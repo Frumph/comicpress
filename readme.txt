@@ -12,6 +12,7 @@ License URI: http://www.opensource.org/licenses/gpl-3.0.html
 GitHub Theme URI: https://github.com/Frumph/comicpress
 GitHub Branch: master
 Requires WP: 4.6
+Tested up to: 5.2
 
 Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
 
