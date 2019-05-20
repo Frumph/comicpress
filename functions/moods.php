@@ -4,7 +4,7 @@
  * Author: Philip M. Hofer (Frumph)
  * Created: 08/22/2009
  * Author Email: philip@frumph.net
- * You may use this and adapt this code to anything you like however keep the author information retained in 
+ * You may use this and adapt this code to anything you like however keep the author information retained in
  * the appropriate files.
  *
  * Lets you set and make moods for your blog posts.
@@ -35,9 +35,13 @@ function comicpress_show_mood_in_post() {
 			$mood = explode(".", $mood_file);
 			$mood = reset($mood);
 			if ( !empty($mood_file) && file_exists(get_stylesheet_directory() . '/images/moods/'.$moods_directory.'/'.$mood_file) ) { ?>
-				<div class="post-mood post-<?php echo $mood; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" /></div>
+				<div class="post-mood post-<?php echo $mood; ?>">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" />
+				</div>
 			<?php } elseif (!empty($mood_file) && file_exists(get_template_directory() . '/images/moods/' .$moods_directory . '/' . $mood_file) ) { ?>
-				<div class="post-mood post-<?php echo $mood; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" /></div>
+				<div class="post-mood post-<?php echo $mood; ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" />
+				</div>
 			<?php }
 		}
 	}
@@ -48,7 +52,8 @@ function comicpress_showmood_edit_post() {
 	$moods_directory = comicpress_themeinfo('moods_directory');
 	if (!empty($moods_directory) && $moods_directory != 'none') { ?>
 		<div class="inside" style="overflow: hidden">
-		<?php _e( 'Available Moods, you can set which mood images to use in the comicpress Options.', 'comicpress' ); ?><br />
+		<?php _e( 'Available Moods, you can set which mood images to use in the comicpress Options.', 'comicpress' ); ?>
+		<br />
 		<br />
 		<?php
 
@@ -69,9 +74,9 @@ function comicpress_showmood_edit_post() {
 		} else {
 			$moods_uri = get_stylesheet_directory_uri();
 		}
-		echo $count . ' '. __( 'moods are available.', 'comicpress' ).'<br />
-				'.__( 'Using Moods from directory:', 'comicpress' ).' '.$moods_directory.'<br />
-				'.__( 'Current Mood:', 'comicpress' ).' '.$mood.'<br /><br />';
+		echo $count . ' ' . __( 'Moods are available.', 'comicpress' ) . '<br />'
+				 . __( 'Using Moods from directory:', 'comicpress' ) . ' '.  $moods_directory . '<br />'
+				 . __( 'Current Mood:', 'comicpress' ) .' '. $mood . ' <br /><br />';
 		if (!empty($results)) { ?>
 			<div style="float:left; margin-top: 70px; text-align: center; width: 68px; overflow: hidden;">
 			<label for="postmood-none" style="cursor:pointer;">
@@ -86,7 +91,8 @@ function comicpress_showmood_edit_post() {
 				$newmood = $newmood[0]; ?>
 				<div style="float:left; margin-top: 10px; text-align: center; width: 68px; overflow: hidden;">
 				<label for="postmood-<?php echo $newmood; ?>" style="cursor:pointer;">
-				<img src="<?php echo $moods_uri; ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo basename($file); ?>" /><br />
+				<img src="<?php echo $moods_uri; ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo basename($file); ?>" />
+				<br />
 				<?php echo $newmood; ?>
 				</label>
 				<br />
