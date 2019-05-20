@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-10 18:30+0200\n"
-"PO-Revision-Date: 2019-05-12 10:24+0200\n"
+"POT-Creation-Date: 2019-05-20 18:06+0200\n"
+"PO-Revision-Date: 2019-05-20 18:14+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
-"X-Poedit-Flags-xgettext: --add-comments\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:6
@@ -153,7 +153,7 @@ msgstr "*NAME"
 
 #: comments.php:83
 msgid "*EMAIL"
-msgstr "*EMAIL"
+msgstr "*E-MAIL"
 
 #: comments.php:83
 msgid "Get a Gravatar"
@@ -386,7 +386,7 @@ msgstr "YouTube"
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: functions.php:239 options/general.php:126
+#: functions.php:239 functions/copyright.php:12 options/general.php:126
 msgid "RSS"
 msgstr "RSS"
 
@@ -836,7 +836,7 @@ msgstr "Nächster &rsaquo;"
 msgid "Moods"
 msgstr "Moods"
 
-#: functions/moods.php:51
+#: functions/moods.php:55
 msgid ""
 "Available Moods, you can set which mood images to use in the comicpress "
 "Options."
@@ -844,19 +844,21 @@ msgstr ""
 "Verfügbare Moods, du kannst in den ComicPress Optionen einstellen, welche "
 "Stimmungsbilder verwendet sollen."
 
-#: functions/moods.php:58 options/comments.php:79 options/postspages.php:168
+#: functions/moods.php:63 options/comments.php:79 options/postspages.php:174
 msgid "none"
 msgstr "keins"
 
-#: functions/moods.php:72
-msgid "moods are available."
+#: functions/moods.php:77
+#, fuzzy
+#| msgid "moods are available."
+msgid "Moods are available."
 msgstr "Moods sind verfügbar."
 
-#: functions/moods.php:73
+#: functions/moods.php:78
 msgid "Using Moods from directory:"
-msgstr "Verwende Moods vom Verzeichnis:"
+msgstr "Moods vom Verzeichnis verwenden:"
 
-#: functions/moods.php:74
+#: functions/moods.php:79
 msgid "Current Mood:"
 msgstr "Derzeitiger Mood:"
 
@@ -1076,7 +1078,7 @@ msgstr ""
 "Benutzt die selbe Optik wie die Menüleiste."
 
 #: options/archivesearch.php:100 options/comments.php:107 options/debug.php:51
-#: options/general.php:153 options/menubar.php:233 options/postspages.php:261
+#: options/general.php:153 options/menubar.php:233 options/postspages.php:267
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 
@@ -1377,21 +1379,24 @@ msgstr ""
 msgid "Enable Author Gravatar?"
 msgstr "Aktiviere Autoren Gravatar?"
 
-#: options/postspages.php:52
+#. translators: 1: Link to gravatar.com 2: Additional link attribute
+#: options/postspages.php:54
+#, php-format
 msgid ""
 "Enabling this option will show a gravatar of the post author based on the "
 "author email address. Gravatars are associated by your email address and you "
-"can create them at"
+"can create them at <a href=\"%1s\" %2s>Gravatar.com</a>."
 msgstr ""
-"Bei Aktivierung dieser Option, wird ein Gravatar vom Beitragsautor "
-"angezeigt, basierend auf der Email Adresse des Autors. Gravatare werden mit "
-"der Email Adresse assoziiert. Du kannst Gravatare erstellen auf"
+"Bei Aktivierung dieser Option, wird ein Gravatar vom Autor des Beitages "
+"angezeigt, basierend auf der E-Mail-Adresse des Autors. Gravatare werden mit "
+"der E-Mail-Adresse assoziiert. Auf <a href=\"%1s\" %2s>Gravatar.com</a> "
+"kannst du dein Gravatar erstellen."
 
-#: options/postspages.php:58
+#: options/postspages.php:64
 msgid "Enable Avatar Mod?"
 msgstr "Aktiviere Avator Modus?"
 
-#: options/postspages.php:65
+#: options/postspages.php:71
 msgid ""
 "With this enabled, the avatar's that are displayed will be jquery modified "
 "to look like polaroids randomly tilted."
@@ -1399,31 +1404,31 @@ msgstr ""
 "Wenn aktiviert, werden die dargestellten Avatare durch jQuery etwas "
 "modifiziert und sehen dann wie zufällig benannte Polaroids aus."
 
-#: options/postspages.php:71
+#: options/postspages.php:77
 msgid "Disable display of <strong>tags</strong> in posts?"
 msgstr "Deaktiviere Anzeige von <strong>Schlagwörtern</strong> in Beiträgen?"
 
-#: options/postspages.php:78
+#: options/postspages.php:84
 msgid "Checkmarking this will make it so that tags will not appear in posts."
 msgstr ""
 "Durch markieren der Checkbox werden keine Schlagwörter in Beiträgen "
 "angezeigt."
 
-#: options/postspages.php:84
+#: options/postspages.php:90
 msgid "Disable display of <strong>categories</strong> in posts?"
 msgstr "Deaktiviere Anzeige von <strong>Kategorien</strong> Beiträgen?"
 
-#: options/postspages.php:91
+#: options/postspages.php:97
 msgid ""
 "Checkmarking this will make it so that categories will not appear in posts."
 msgstr ""
 "Durch markieren der Checkbox werden keine Kategorien in Beiträgen angezeigt."
 
-#: options/postspages.php:97
+#: options/postspages.php:103
 msgid "Disable display of <strong>by Author</strong> in post information?"
 msgstr "Deaktiviere Anzeige von <strong>Autor</strong> in Beitragsinformation?"
 
-#: options/postspages.php:104
+#: options/postspages.php:110
 msgid ""
 "Checkmarking this will make it so that the by Author information will not "
 "appear in posts."
@@ -1431,11 +1436,11 @@ msgstr ""
 "Durch markieren der Checkbox werden keine Autoreninformation in Beiträgen "
 "angezeigt."
 
-#: options/postspages.php:110
+#: options/postspages.php:116
 msgid "Disable display of the posted on date in posts?"
 msgstr "Deaktiviere die Anzeige vom Datum des Postens in Beiträgen?"
 
-#: options/postspages.php:117
+#: options/postspages.php:123
 msgid ""
 "Checkmarking this will make it so that posted on date information will not "
 "appear in posts."
@@ -1443,11 +1448,11 @@ msgstr ""
 "Markieren der Checkbox, führt dazu das keine Informationen über das Datum "
 "des Postens angezeigt werden in den Beiträgen."
 
-#: options/postspages.php:123
+#: options/postspages.php:129
 msgid "Disable the display of the posted at time in posts?"
 msgstr "Deaktiviere die Anzeige der Uhrzeit des Postens in Beiträgen?"
 
-#: options/postspages.php:130
+#: options/postspages.php:136
 msgid ""
 "Checkmarking this will make it so that the information about what time the "
 "post was made will not show."
@@ -1455,11 +1460,11 @@ msgstr ""
 "Markieren der Checkbox, führt dazu das keine Informationen über die Uhrzeit "
 "des Postens angezeigt werden in den Beiträgen."
 
-#: options/postspages.php:136
+#: options/postspages.php:142
 msgid "Enable the display of last modified information in posts?"
 msgstr "Aktiviere die Anzeige der letzten Änderung in Beiträgen?"
 
-#: options/postspages.php:143
+#: options/postspages.php:149
 msgid ""
 "Checkmarking this will make it so that it will show when the last time that "
 "the post was modified in the post date information."
@@ -1467,11 +1472,11 @@ msgstr ""
 "Wenn aktiviert, wird in den Beitrags Datums Informationen angezeigt, wann "
 "ein Artikel noch mal geändert wurde."
 
-#: options/postspages.php:165
+#: options/postspages.php:171
 msgid "Moods Directory"
 msgstr "Moods Verzeichnis"
 
-#: options/postspages.php:180
+#: options/postspages.php:186
 msgid ""
 "Choose a directory to get the post moods from. Set this to <strong>none</"
 "strong> to turn off use. Mood directories are found in your theme directory/"
@@ -1486,15 +1491,15 @@ msgstr ""
 "dort NUR Bilddateien ein. Der Name der Bilddatei repräsentiert den Moods "
 "Namen."
 
-#: options/postspages.php:190
+#: options/postspages.php:196
 msgid "Pages"
 msgstr "Seiten"
 
-#: options/postspages.php:196
+#: options/postspages.php:202
 msgid "Disable the titles on pages?"
 msgstr "Deaktiviere die Titel auf Seiten?"
 
-#: options/postspages.php:203
+#: options/postspages.php:209
 msgid ""
 "Page titles will be turned off. If you disable the titles no pages you can "
 "still add a post-image in the page editor."
@@ -1502,15 +1507,15 @@ msgstr ""
 "Seitentitel werden deaktiviert. Wenn du die Titel auf Seiten deaktivierst, "
 "kannst du im Seiteneditor ein Beitragsbild hinzufügen."
 
-#: options/postspages.php:213
+#: options/postspages.php:219
 msgid "Content Width"
 msgstr "Inhaltsbreite"
 
-#: options/postspages.php:225
+#: options/postspages.php:231
 msgid "Media and images width on posts and pages?"
 msgstr "Breite von Medien und Bilder in Beiträgen und Seiten?"
 
-#: options/postspages.php:232
+#: options/postspages.php:238
 msgid ""
 "This sets a specific width for WordPress to use for media content within "
 "your posts and pages. Default = 500"
@@ -1518,12 +1523,12 @@ msgstr ""
 "Dies legt eine bestimmte Breite für Wordpress fest, bei Verwendung von "
 "Medieninhalten in Deinen Beiträgen und Seiten. Standard = 500"
 
-#: options/postspages.php:242
+#: options/postspages.php:248
 msgid "Media and images width when sidebars are disabled on pages?"
 msgstr ""
 "Breite von Medien und Bilder, wenn Seitenlisten auf Seiten deaktiviert sind?"
 
-#: options/postspages.php:249
+#: options/postspages.php:255
 msgid "When the sidebars are disabled on pages? Default = 700"
 msgstr "Wenn die Seitenleisten auf Seiten deaktiviert sind? Standard = 700"
 
@@ -1559,7 +1564,7 @@ msgstr ""
 
 #: options/splash.php:41
 msgid "Form Email:"
-msgstr "Formular Email:"
+msgstr "E-Mail Formular:"
 
 #: options/splash.php:49
 msgid "Via Facebook:"
@@ -1579,7 +1584,7 @@ msgstr "WordPress.ORG Forums:"
 
 #: options/splash.php:68
 msgid "(rarely go here)"
-msgstr "(Selten hier zugegen)"
+msgstr "(Bin Selten hier zugegen)"
 
 #: options/splash.php:73
 msgid "On Twitter:"
