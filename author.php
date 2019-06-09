@@ -19,11 +19,15 @@ get_header();
 if ( get_query_var( 'author_name' ) ) {
 	$curauth = get_user_by( 'slug', get_query_var( 'author_name' ) );
 } else {
-	$curauth = get_userdata(get_query_var( 'author' ) );
+	$curauth = get_userdata( get_query_var( 'author' ) );
 } if ( empty( $curauth ) ) { ?>
 
-<h2><?php _e( 'No such author.', 'comicpress' ); ?></h2>
-<?php } else { ?>
+<h2>
+	<?php _e( 'No such author.', 'comicpress' ); ?>
+</h2>
+	<?php
+} else {
+	?>
 <div <?php post_class(); ?>>
 	<div class="post-head"></div>
 	<div class="post-content">
@@ -128,11 +132,14 @@ if ( get_query_var( 'author_name' ) ) {
 
 			<?php if ( have_posts() ) { ?>
 			<div class="userpage-posts">
-				<h3><?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;</h3>
+				<h3>
+					<?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;
+				</h3>
 				<br />
 				<table class="author-posts">
 					<?php
-					while ( have_posts() ) : the_post();
+					while ( have_posts() ) :
+						the_post();
 						?>
 					<tr>
 						<td class="author-archive-date" align="right">

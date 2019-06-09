@@ -87,9 +87,12 @@ if ( have_posts() ) { ?>
 		</div>
 	<?php } ?>
 	<div class="clear"></div>
-	<?php if ( function_exists( 'ceo_pluginfo' ) && ( isset( $wp_query->query_vars['chapters'] ) || isset( $wp_query->query_vars['characters'] ) || isset( $wp_query->query_vars['locations'] ) || ( $wp_query->query_vars['post_type'] == 'comic' ) ) && ( comicpress_themeinfo( 'display_archive_as_links' ) && ! comicpress_is_bbpress() ) ) { ?>
+	<?php
+	if ( function_exists( 'ceo_pluginfo' ) && ( isset( $wp_query->query_vars['chapters'] ) || isset( $wp_query->query_vars['characters'] ) || isset( $wp_query->query_vars['locations'] ) || ( $wp_query->query_vars['post_type'] == 'comic' ) ) && ( comicpress_themeinfo( 'display_archive_as_links' ) && ! comicpress_is_bbpress() ) ) {
+		?>
 		<?php
-			while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 			?>
 			<div class="archivecomicthumbwrap">
 				<div class="archivecomicthumbdate">
@@ -109,7 +112,8 @@ if ( have_posts() ) { ?>
 		<div class="entry">
 		<table class="archive-table">
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 				?>
 			<tr>
 				<td class="archive-date">

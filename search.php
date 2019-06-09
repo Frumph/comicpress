@@ -41,7 +41,8 @@ if ( have_posts() ) :
 			<div class="entry">
 			<table class="archive-table">
 				<?php
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) :
+					the_post();
 					?>
 			<tr>
 				<td class="archive-date">
@@ -58,7 +59,8 @@ if ( have_posts() ) :
 	</div>
 			<?php
 		} else {
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 				$post_format = ( $post->post_type !== 'post' ) ? $post->post_type : get_post_format();
 				get_template_part( 'content', $post_format );
 		endwhile;
