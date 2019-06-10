@@ -8,21 +8,21 @@
 function comicpress_breadcrumbs() {
 
 	/* === OPTIONS === */
-	/* translators: home link for breadcrumps */
+	/* translators: Home link for breadcrumps */
 	$text['home']     = __( 'Home', 'comicpress' ) ;
-	/* translators: text for a category page for breadcrumps */
+	/* translators: Text for a category page for breadcrumps */
 	$text['category'] = __( 'Archive by Category "%s"', 'comicpress' ) ;
-	/* translators: text for a search results page for breadcrumps */
+	/* translators: Text for a search results page for breadcrumps */
 	$text['search']   = __( 'Search Results for "%s" Query', 'comicpress' ) ;
-	/* translators: text for a tag page for breadcrumps */
+	/* translators: Text for a tag page for breadcrumps */
 	$text['tag']      = __( 'Posts Tagged "%s"', 'comicpress' ) ;
-	/* translators: text for an author page for breadcrumps */
+	/* translators: Text for an author page for breadcrumps */
 	$text['author']   = __( 'Articles Posted by %s', 'comicpress' ) ;
-	/* translators: text for the 404 page for breadcrumps */
+	/* translators: Text for the 404 page for breadcrumps */
 	$text['404']      = __( 'Error 404', 'comicpress' ) ;
-	/* translators: text 'Page N' for breadcrumps */
+	/* translators: Text 'Page N' for breadcrumps */
 	$text['page']     = __( 'Page %s', 'comicpress' ) ;
-	/* translators: text 'Comment Page N' for breadcrumps */
+	/* translators: Text 'Comment Page N' for breadcrumps */
 	$text['cpage']    = __( 'Comment Page %s', 'comicpress' ) ;
 
 	$wrap_before    = '<div class="breadcrumbs">'; // the opening wrapper tag

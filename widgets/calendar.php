@@ -93,7 +93,7 @@ function comicpress_get_calendar($initial = true, $echo = true, $taxonomy = 'pos
 			ORDER	BY post_date ASC
 			LIMIT 1");
 
-	/* translators: Calendar caption: 1: month name, 2: 4-digit year */
+	/* translators: Calendar caption: 1: Month name, 2: 4-digit year */
 	$calendar_caption = _x('%1$s %2$s', 'calendar caption', 'comicpress');
 	$calendar_output = '<table id="wp-calendar" summary="' . esc_attr__('Calendar', 'comicpress') . '">
 	<caption>' . sprintf($calendar_caption, $wp_locale->get_month($thismonth), date('Y', $unixmonth)) . '</caption>

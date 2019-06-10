@@ -133,7 +133,13 @@ if ( get_query_var( 'author_name' ) ) {
 			<?php if ( have_posts() ) { ?>
 			<div class="userpage-posts">
 				<h3>
-					<?php _e( 'Posts by', 'comicpress' ); ?> <?php echo $authorname; ?> &not;
+					<?php
+					printf(
+						/* translators: Name of the author */
+						__( 'Posts by %1s &not; ', 'comicpress' ),
+						$authorname
+					);
+					?>
 				</h3>
 				<br />
 				<table class="author-posts">

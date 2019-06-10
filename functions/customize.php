@@ -134,15 +134,15 @@ class comicpress_Customize {
 				'type' => 'select',
 				'choices' => array(
 					'none' => __( 'No Scheme', 'comicpress' ),
-					/* translators: name of customize scheme Boxed */
+					/* translators: Name of customize scheme Boxed */
 					'boxed' => __( 'Boxed', 'comicpress' ),
-					/* translators: name of customize scheme Sandy */
+					/* translators: Name of customize scheme Sandy */
 					'sandy' => __( 'Sandy', 'comicpress' ),
-					/* translators: name of customize scheme Mecha */
+					/* translators: Name of customize scheme Mecha */
 					'mecha' => __( 'Mecha', 'comicpress' ),
-					/* translators: name of customize scheme CEasel */
+					/* translators: Name of customize scheme CEasel */
 					'ceasel' => __( 'CEasel', 'comicpress' ),
-					/* translators: name of customize scheme High Society */
+					/* translators: Name of customize scheme High Society */
 					'high' => __( 'High Society', 'comicpress' )
 				)
 			));

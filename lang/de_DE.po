@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 18:06+0200\n"
-"PO-Revision-Date: 2019-05-20 18:14+0200\n"
+"POT-Creation-Date: 2019-06-10 11:13+0200\n"
+"PO-Revision-Date: 2019-06-10 11:13+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -20,98 +20,100 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:6
+#: 404.php:18
 msgid "Page Not Found"
 msgstr "Seite nicht gefunden"
 
-#: 404.php:9
+#: 404.php:23
 msgid "Click here to return to the home page"
 msgstr "Klicke hier, um die Startseite aufzurufen"
 
-#: 404.php:9
+#: 404.php:23
 msgid "or try a search:"
 msgstr "oder probiere eine Suche:"
 
-#. Category
-#: archive.php:22 archive.php:26 archive.php:28 archive.php:30 archive.php:44
-#: archive.php:46 archive.php:49
+#: archive.php:32 archive.php:36 archive.php:38 archive.php:40 archive.php:54
+#: archive.php:56 archive.php:59
 msgid "Archive for"
 msgstr "Archiv für"
 
-#. Tag
-#: archive.php:24
+#: archive.php:34
 msgid "Posts Tagged"
 msgstr "Beiträge Tagged"
 
-#: archive.php:32
+#: archive.php:42
 msgid "Author Archive"
 msgstr "Autoren-Archiv"
 
-#: archive.php:34
+#: archive.php:44
 msgid "Archives"
 msgstr "Archive"
 
-#: archive.php:51
+#: archive.php:61
 msgid "Archive is unable to be found."
 msgstr "Das Archiv ist nicht zu finden."
 
-#: archive.php:53
+#: archive.php:63
 msgid "No Archive Found."
 msgstr "Kein Archiv gefunden."
 
-#: archive.php:57
+#. translators: Number of found comic
+#: archive.php:71
 #, php-format
 msgid "%d comic."
 msgid_plural "%d comics."
 msgstr[0] "%d Comic."
 msgstr[1] "%d Comics."
 
-#: archive.php:59 archive.php:106 search.php:9
+#. translators: Number of found results
+#: archive.php:83 archive.php:150 search.php:30
 #, php-format
 msgid "%d result."
 msgid_plural "%d results."
 msgstr[0] "%d Ergebnis."
 msgstr[1] "%d Ergebnisse."
 
-#: archive.php:69
+#: archive.php:104
 msgid "No Thumbnail or Featured Image Found"
 msgstr "Kein Vorschaubild oder Ausgewähltes Bild gefunden"
 
-#: archive.php:86 search.php:18
+#: archive.php:124 search.php:52
 msgid "Permanent Link:"
 msgstr "Permalink:"
 
-#: author.php:23
+#: author.php:26
 msgid "No such author."
 msgstr "Dieser Autor existiert nicht."
 
-#: author.php:49
+#: author.php:54
 msgid "Registered on"
 msgstr "Registriert am"
 
-#: author.php:57
+#: author.php:62
 msgid "Posts #"
 msgstr "Beiträge #"
 
-#: author.php:70 functions.php:236 options/menubar.php:213
+#: author.php:78 functions.php:295 options/menubar.php:213
 msgid "Email"
 msgstr "E-Mail-Adresse"
 
-#: author.php:80
+#: author.php:90
 msgid "Website"
 msgstr "Website"
 
-#: author.php:90 functions.php:234 options/menubar.php:113
+#: author.php:102 functions.php:293 options/menubar.php:113
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:100 functions.php:231 options/menubar.php:121
+#: author.php:114 functions.php:290 options/menubar.php:121
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:121
-msgid "Posts by"
-msgstr "Beiträge von"
+#. translators: Name of the author
+#: author.php:139
+#, php-format
+msgid "Posts by %1s &not; "
+msgstr "Beiträge von %1s &not; "
 
 #: comments.php:3
 msgid "This post is password protected. Enter the password to view comments."
@@ -119,73 +121,73 @@ msgstr ""
 "Dieser Beitrag ist Passwort geschützt. Bite gebe dein Passwort ein, um die "
 "Kommentare zu sehen."
 
-#: comments.php:14
+#: comments.php:15
 msgid "Comments RSS"
 msgstr "Kommentar-RSS"
 
-#: comments.php:15
+#: comments.php:18
 msgid "Discussion &not;"
 msgstr "Diskussion &not;"
 
-#: comments.php:15
+#: comments.php:18
 msgid "Discussion (%) &not;"
 msgstr "Diskussion (%) &not;"
 
-#: comments.php:44
+#: comments.php:49
 msgid "Reply &not;"
 msgstr "Antwort &not;"
 
-#: comments.php:63
+#: comments.php:69
 msgid "Comment Pages"
 msgstr "Kommentar-Seiten"
 
-#: comments.php:71
+#: comments.php:78
 msgid "Next Comments &uarr;"
 msgstr "Weitere Kommentare &uarr;"
 
-#: comments.php:72
+#: comments.php:81
 msgid "&darr; Previous Comments"
 msgstr "&darr; Vorherige Kommentare"
 
-#: comments.php:83
+#: comments.php:95
 msgid "*NAME"
 msgstr "*NAME"
 
-#: comments.php:83
+#: comments.php:95
 msgid "*EMAIL"
 msgstr "*E-MAIL"
 
-#: comments.php:83
+#: comments.php:95
 msgid "Get a Gravatar"
 msgstr "Hole dir einen Gravatar"
 
-#: comments.php:83
+#: comments.php:95
 msgid "Website URL"
 msgstr "Website URL"
 
-#: comments.php:84
+#: comments.php:100
 msgid "NOTE &mdash; You can use these HTML tags and attributes:"
 msgstr ""
 "HINWEIS &mdash; Du kannst diese HTML-Markierungen und Attribute verwenden:"
 
-#: comments.php:84
+#: comments.php:101
 msgid "Comment &not;"
 msgstr "Kommentar &not;"
 
-#: comments.php:84
+#: comments.php:102
 #, php-format
 msgid "Reply to %s &not;"
 msgstr "Antwort an %s &not;"
 
-#: comments.php:84
+#: comments.php:103
 msgid "Cancel reply"
 msgstr "Verwerfe Antwort"
 
-#: comments.php:84
+#: comments.php:104
 msgid "Post Comment"
 msgstr "Sende Kommentar"
 
-#: comments.php:89
+#: comments.php:111
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
@@ -201,37 +203,37 @@ msgstr "Diesen Comic bearbeiten."
 msgid "Edit this page."
 msgstr "Diese Seite bearbeiten."
 
-#: functions.php:53
+#: functions.php:54
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:54 functions.php:110 functions/customize.php:250
+#: functions.php:55 functions.php:141 functions/customize.php:250
 #: functions/customize.php:262 functions/customize.php:279
 #: options/general.php:63
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:103
+#: functions.php:106
 msgid "Left Sidebar"
 msgstr "Linke Seitenliste"
 
-#: functions.php:103
+#: functions.php:107
 msgid "The sidebar that appears to the left of the content."
 msgstr "Die Seitenliste erscheint links der Inhalte."
 
-#: functions.php:104
+#: functions.php:111
 msgid "Right Sidebar"
 msgstr "Rechte Seitenliste"
 
-#: functions.php:104
+#: functions.php:112
 msgid "The sidebar that appears to the right of the content."
 msgstr "Die Seitenliste erscheint rechts der Inhalte."
 
-#: functions.php:105
+#: functions.php:116
 msgid "Above Header"
 msgstr "Über dem Header"
 
-#: functions.php:105
+#: functions.php:117
 msgid ""
 "This sidebar appears to above all of the site information. This sidebar is "
 "not encased in CSS, you will need to create CSS for it."
@@ -239,46 +241,46 @@ msgstr ""
 "Diese Seitenliste erscheint über allem, vor den Seiteninformationen. Diese "
 "Seitenliste ist nicht im CSS eingeschlossen, Du musst das CSS dafür anlegen."
 
-#: functions.php:106 functions/customize.php:236 functions/customize.php:253
+#: functions.php:121 functions/customize.php:236 functions/customize.php:253
 #: functions/customize.php:268
 msgid "Header"
 msgstr "Header"
 
-#: functions.php:106
+#: functions.php:122
 msgid "This sidebar appears inside the #header block."
 msgstr "Diese Seitenliste erscheint innerhalb des #header Blocks."
 
-#: functions.php:107 functions/customize.php:237 functions/customize.php:270
+#: functions.php:126 functions/customize.php:237 functions/customize.php:270
 #: options.php:220 options/menubar.php:11
 msgid "Menubar"
 msgstr "Menüleiste"
 
-#: functions.php:107
+#: functions.php:127
 msgid "This sidebar is under the header and above the content-wrapper block"
 msgstr ""
 "Diese Seitenliste erscheint unter dem Header und über dem content-wrapper "
 "Block"
 
-#: functions.php:108
+#: functions.php:131
 msgid "Over Blog"
 msgstr "Über dem Blog"
 
-#: functions.php:108
+#: functions.php:132
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
 msgstr ""
 "Diese Seitenliste erscheint über dem Blog innerhalb von #column .narrowcolumn"
 
-#: functions.php:109
+#: functions.php:136
 msgid "Under Blog"
 msgstr "Unter dem Blog"
 
-#: functions.php:109
+#: functions.php:137
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
 msgstr ""
 "Diese Seitenliste erscheint unter dem Blog innerhalb von #column ."
 "narrowcolumn"
 
-#: functions.php:110
+#: functions.php:142
 msgid ""
 "This sidebar is at the bottom of the page and is the center of the 3 footer "
 "sidebars."
@@ -286,166 +288,165 @@ msgstr ""
 "Diese Seitenliste ist am unteren Rand von der Seite und ist die Mitte von "
 "den 3 Footer Seitenlisten."
 
-#: functions.php:111
+#: functions.php:146
 msgid "Footer Left"
 msgstr "Footer Links"
 
-#: functions.php:111
+#: functions.php:147
 msgid "This sidebar is at the bottom of the page, the left one."
 msgstr "Diese Seitenliste ist am unteren Rand von der Seite, die Linke."
 
-#: functions.php:112
+#: functions.php:151
 msgid "Footer Right"
 msgstr "Footer Rechts"
 
-#: functions.php:112
+#: functions.php:152
 msgid "This sidebar is at the bottom of the page, the right one."
 msgstr "Diese Seitenliste ist am unteren Rand von der Seite, die Rechte."
 
-#: functions.php:115
+#: functions.php:158 functions.php:159
 msgid "Jetpack Mobile Sidebar"
 msgstr "Jetpack Mobile Seitenliste"
 
-#: functions.php:159
+#: functions.php:216
 msgid "[&hellip;]"
 msgstr "[&hellip;]"
 
-#: functions.php:159 functions/displaypost.php:213
+#: functions.php:216 functions/displaypost.php:213
 msgid "&darr; Read the rest of this entry..."
 msgstr "&darr; Lese den Rest dieses Eintrags ..."
 
-#: functions.php:229
+#: functions.php:288
 msgid "my DeviantART"
 msgstr "mein DeviantART"
 
-#: functions.php:229 options/menubar.php:189
+#: functions.php:288 options/menubar.php:189
 msgid "DeviantART"
 msgstr "DeviantART"
 
-#: functions.php:230
+#: functions.php:289
 msgid "Examine my Tumblr"
 msgstr "Überprüfe mein Tumblr"
 
-#: functions.php:230 options/menubar.php:177
+#: functions.php:289 options/menubar.php:177
 msgid "Tumblr"
 msgstr "Tumblr"
 
-#: functions.php:231
+#: functions.php:290
 msgid "Friend on Facebook"
 msgstr "Freund auf Facebook"
 
-#: functions.php:232
+#: functions.php:291
 msgid "Make use of MySpace"
 msgstr "Mache Gebrauch von MySpace"
 
-#: functions.php:232 options/menubar.php:201
+#: functions.php:291 options/menubar.php:201
 msgid "MySpace"
 msgstr "MySpace"
 
-#: functions.php:233
+#: functions.php:292
 msgid "Look at my LinkedIn"
 msgstr "Betrachte mein LinkedIn"
 
-#: functions.php:233 options/menubar.php:129
+#: functions.php:292 options/menubar.php:129
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: functions.php:234
+#: functions.php:293
 msgid "Follow me on Twitter"
 msgstr "Folge mir auf Twitter"
 
-#: functions.php:235
+#: functions.php:294
 msgid "Gaze at my Flickr"
 msgstr "Besuche mich bei Flickr"
 
-#: functions.php:235 options/menubar.php:165
+#: functions.php:294 options/menubar.php:165
 msgid "Flickr"
 msgstr "Flickr"
 
-#: functions.php:236
+#: functions.php:295
 msgid "Email me"
 msgstr "Maile mir"
 
-#: functions.php:237
+#: functions.php:296
 msgid "Peruse my Pinterests"
 msgstr "Durchstöbere mein Pinterests"
 
-#: functions.php:237 options/menubar.php:141
+#: functions.php:296 options/menubar.php:141
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: functions.php:238
+#: functions.php:297
 msgid "My Channel on YouTube"
 msgstr "Mein Channel auf YouTube"
 
-#: functions.php:238 options/menubar.php:153
+#: functions.php:297 options/menubar.php:153
 msgid "YouTube"
 msgstr "YouTube"
 
-#: functions.php:239
+#: functions.php:298
 msgid "RSS Feed"
 msgstr "RSS-Feed"
 
-#: functions.php:239 functions/copyright.php:12 options/general.php:126
+#: functions.php:298 functions/copyright.php:12 options/general.php:126
 msgid "RSS"
 msgstr "RSS"
 
 #. translators: theme discription for wp-admin
-#: functions.php:368
+#: functions.php:427
 msgid ""
 "Publish a WebComic with the ComicPress theme and the Comic Easel plugin."
 msgstr ""
 "Veröffentliche ein WebComic mit dem ComicPress Theme und dem Comic Easel "
 "Plugin."
 
-#. === OPTIONS ===
-#. translators: home link for breadcrumps
+#. translators: Home link for breadcrumps
 #: functions/breadcrumbs.php:12
 msgid "Home"
 msgstr "Startseite"
 
-#. translators: text for a category page for breadcrumps
+#. translators: Text for a category page for breadcrumps
 #: functions/breadcrumbs.php:14
 #, php-format
 msgid "Archive by Category \"%s\""
 msgstr "Archiv der Kategorie \"%s\""
 
-#. translators: text for a search results page for breadcrumps
+#. translators: Text for a search results page for breadcrumps
 #: functions/breadcrumbs.php:16
 #, php-format
 msgid "Search Results for \"%s\" Query"
 msgstr "Suchergebnisse für \"%s\" Anfrage"
 
-#. translators: text for a tag page for breadcrumps
+#. translators: Text for a tag page for breadcrumps
 #: functions/breadcrumbs.php:18
 #, php-format
 msgid "Posts Tagged \"%s\""
 msgstr "Markierte Beiträge \"%s\""
 
-#. translators: text for an author page for breadcrumps
+#. translators: Text for an author page for breadcrumps
 #: functions/breadcrumbs.php:20
 #, php-format
 msgid "Articles Posted by %s"
 msgstr "Beiträge veröffentlicht von %s"
 
-#. translators: text for the 404 page for breadcrumps
+#. translators: Text for the 404 page for breadcrumps
 #: functions/breadcrumbs.php:22
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#. translators: text 'Page N' for breadcrumps
+#. translators: Text 'Page N' for breadcrumps
 #: functions/breadcrumbs.php:24
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
-#. translators: text 'Comment Page N' for breadcrumps
+#. translators: Text 'Comment Page N' for breadcrumps
 #: functions/breadcrumbs.php:26
 #, php-format
 msgid "Comment Page %s"
 msgstr "Kommentarseite %s"
 
-#. translators: %1$s: date %2$s: time in comments
+#. translators: 1: Date 2: Time in comments
 #: functions/comment-functions.php:131
 #, php-format
 msgid "%1$s, %2$s"
@@ -499,7 +500,6 @@ msgstr "Gehostet auf"
 msgid "&copy;"
 msgstr "&copy;"
 
-#. $wp_customize->remove_section('title_tagline');
 #: functions/customize.php:98
 msgid "Layout Options"
 msgstr "Layout Optionen"
@@ -508,7 +508,6 @@ msgstr "Layout Optionen"
 msgid "Allows you to customize layout settings for ComicPress."
 msgstr "Ermöglicht dir das Anpassen der Layouteinstellungen für ComicPress."
 
-#. $wp_customize->add_section('comicpress-background-colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'capability' => 'edit_theme_options'));
 #: functions/customize.php:100
 msgid "Background Colors"
 msgstr "Hintergrundfarben"
@@ -573,27 +572,27 @@ msgstr "Wähle ein Schema"
 msgid "No Scheme"
 msgstr "Kein Schema"
 
-#. translators: name of customize scheme Boxed
+#. translators: Name of customize scheme Boxed
 #: functions/customize.php:138
 msgid "Boxed"
 msgstr "Boxed"
 
-#. translators: name of customize scheme Sandy
+#. translators: Name of customize scheme Sandy
 #: functions/customize.php:140
 msgid "Sandy"
 msgstr "Sandy"
 
-#. translators: name of customize scheme Mecha
+#. translators: Name of customize scheme Mecha
 #: functions/customize.php:142
 msgid "Mecha"
 msgstr "Mecha"
 
-#. translators: name of customize scheme CEasel
+#. translators: Name of customize scheme CEasel
 #: functions/customize.php:144
 msgid "CEasel"
 msgstr "CEasel"
 
-#. translators: name of customize scheme High Society
+#. translators: Name of customize scheme High Society
 #: functions/customize.php:146
 msgid "High Society"
 msgstr "High Society"
@@ -668,7 +667,6 @@ msgstr ""
 "Setze den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
 "Layouts durchgeführt werden."
 
-#. Background Colors
 #: functions/customize.php:235
 msgid "Entire Content Area"
 msgstr "Gesamter Inhaltsbereich"
@@ -722,7 +720,6 @@ msgstr "Kommentare gemacht vom Beitragsautor"
 msgid "Info. Line Of Post Author"
 msgstr "Info. Linie von dem Beitragsautor"
 
-#. Text Colors
 #: functions/customize.php:252
 msgid "Sitewide Textcolor"
 msgstr "Seitenweite Textfarben"
@@ -755,7 +752,6 @@ msgstr "Beitrag/Seiten Kommentare"
 msgid "Copyright"
 msgstr "Copyright"
 
-#. Link Colors
 #: functions/customize.php:265
 msgid "Sitewide Linkcolor"
 msgstr "Seitenweite Linkfarben"
@@ -849,8 +845,6 @@ msgid "none"
 msgstr "keins"
 
 #: functions/moods.php:77
-#, fuzzy
-#| msgid "moods are available."
 msgid "Moods are available."
 msgstr "Moods sind verfügbar."
 
@@ -1598,19 +1592,19 @@ msgstr ""
 "Bitte beachte, dass ich nur amerikanisches Englisch spreche. Verzeihe meine "
 "Ignoranz und ich werde versuchen, dich so gut wie geht zu verstehen."
 
-#: search.php:8
+#: search.php:20
 msgid "Search for &lsquo;"
 msgstr "Suche nach &lsquo;"
 
-#: search.php:8
+#: search.php:22
 msgid "&rsquo;"
 msgstr "&rsquo;"
 
-#: search.php:37
+#: search.php:79
 msgid "No results found."
 msgstr "Keine Ergebnisse gefunden."
 
-#: search.php:38
+#: search.php:82
 msgid "Try another search?"
 msgstr "Noch einmal suchen?"
 
@@ -1677,7 +1671,7 @@ msgstr "Letzte Szene:"
 msgid "First Scene:"
 msgstr "Erste Szene:"
 
-#. translators: Calendar caption: 1: month name, 2: 4-digit year
+#. translators: Calendar caption: 1: Month name, 2: 4-digit year
 #: widgets/calendar.php:97
 #, php-format
 msgctxt "calendar caption"
@@ -1689,12 +1683,10 @@ msgstr "%1$s %2$s"
 msgid "View posts for %1$s %2$s"
 msgstr "Zeige Beiträge für %1$s %2$s"
 
-#. Base ID
 #: widgets/calendar.php:251
 msgid "ComicPress - Posts Calendar"
 msgstr "ComicPress - Beitragskalender"
 
-#. Name
 #: widgets/calendar.php:252
 msgid ""
 "Display a calendar showing this months posts. (this calendar does not drop "
@@ -1764,12 +1756,10 @@ msgstr ""
 "zurück kehrst, klicke auf \"Goto Tag\", um fortzufahren, wo Du aufgehört "
 "hast."
 
-#. Base ID
 #: widgets/classicbookmark.php:117
 msgid "ComicPress - Classic Bookmark"
 msgstr "ComicPress - Klassisches Lesezeichen"
 
-#. Name
 #: widgets/classicbookmark.php:118
 msgid ""
 "Creates a set of buttons that let the user return to the page they tagged."
@@ -1783,12 +1773,10 @@ msgstr ""
 msgid "Title:"
 msgstr "Titel:"
 
-#. Base ID
 #: widgets/controlpanel.php:21
 msgid "ComicPress - Control Panel"
 msgstr "ComicPress - Kontrollzentrum"
 
-#. Name
 #: widgets/controlpanel.php:22
 msgid ""
 "Login/Logoff menu with register/lost password links if not logged on. (use "
@@ -1825,22 +1813,18 @@ msgstr "Profil"
 msgid "Control Panel"
 msgstr "Kontrollzentrum"
 
-#. Base ID
 #: widgets/menubar.php:51
 msgid "ComicPress - Menubar"
 msgstr "ComicPress - Menüleiste"
 
-#. Name
 #: widgets/menubar.php:52
 msgid "Displays a menubar."
 msgstr "Zeigt eine Menüleiste."
 
-#. Base ID
 #: widgets/multisite-list.php:23
 msgid "ComicPress - Site List"
 msgstr "ComicPress - Seitenliste"
 
-#. Name
 #: widgets/multisite-list.php:24
 msgid ""
 "Display Site List of all sites that have recently updated on this Multisite."
@@ -1852,12 +1836,10 @@ msgstr ""
 msgid "Hosted Site List"
 msgstr "Liste gehosteter Seiten"
 
-#. Base ID
 #: widgets/randompostlink.php:41
 msgid "ComicPress - Random Post Link"
 msgstr "ComicPress - Zufällige Beitragslinks"
 
-#. Name
 #: widgets/randompostlink.php:42
 msgid "Displays a link to click that triggers going to a random blog post."
 msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
@@ -1866,12 +1848,10 @@ msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
 msgid "Random Post"
 msgstr "Zufälliger Beitrag"
 
-#. Base ID
 #: widgets/scheduledposts.php:22
 msgid "ComicPress - Scheduled Posts"
 msgstr "ComicPress - Geplante Beiträge"
 
-#. Name
 #: widgets/scheduledposts.php:23
 msgid "Display a list of posts that are scheduled to be published."
 msgstr ""
