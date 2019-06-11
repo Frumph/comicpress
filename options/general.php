@@ -1,6 +1,6 @@
 <div id="comicpress-general">
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
-		<?php wp_nonce_field('update-options') ?>
+		<?php wp_nonce_field( 'update-options' ); ?>
 
 		<div class="comicpress-options">
 
@@ -33,7 +33,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_blog_on_homepage']); ?> />
+							<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_blog_on_homepage'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings &#10132; reading.', 'comicpress' ); ?>
@@ -46,7 +46,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="over-blog-sidebar-all-posts" name="over-blog-sidebar-all-posts" type="checkbox" value="1" <?php checked(true, $comicpress_options['over-blog-sidebar-all-posts']); ?> />
+							<input id="over-blog-sidebar-all-posts" name="over-blog-sidebar-all-posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['over-blog-sidebar-all-posts'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'Sidebar Over-Blog appears on all posts not just the front page/blog loop when enabled.', 'comicpress' ); ?>
@@ -55,7 +55,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -72,7 +72,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_footer_text']); ?> />
+							<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_footer_text'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer.', 'comicpress' ); ?>
@@ -85,7 +85,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="disable_scroll_to_top" name="disable_scroll_to_top" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_scroll_to_top']); ?> />
+							<input id="disable_scroll_to_top" name="disable_scroll_to_top" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_scroll_to_top'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'When this link is clicked on long pages it will scroll back to the top.', 'comicpress' ); ?>
@@ -96,7 +96,7 @@
 							<label for="copyright_name">
 								<?php _e( '&copy; Copyright Name', 'comicpress' ); ?>
 							</label>
-							<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo stripcslashes($comicpress_options['copyright_name']); ?>" />
+							<input type="text" size="20" name="copyright_name" id="copyright_name" value="<?php echo stripcslashes( $comicpress_options['copyright_name'] ); ?>" />
 							<br />
 						</th>
 						<td colspan="2">
@@ -108,7 +108,7 @@
 							<label for="copyright_url">
 								<?php _e( '&copy; Copyright Holder URL', 'comicpress' ); ?>
 							</label>
-							<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo stripcslashes($comicpress_options['copyright_url']); ?>" />
+							<input type="text" size="30" name="copyright_url" id="copyright_url" value="<?php echo stripcslashes( $comicpress_options['copyright_url'] ); ?>" />
 							<br />
 						</th>
 						<td colspan="2">
@@ -118,7 +118,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 			<table class="widefat">
 				<thead>
 					<tr>
@@ -135,7 +135,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_post_thumbnail_rss']); ?> />
+							<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_post_thumbnail_rss'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'If enabled will show the post thumbnail of the post in the RSS feed.', 'comicpress' ); ?>
@@ -144,7 +144,7 @@
 				</tbody>
 			</table>
 			<br />
-			
+
 		</div>
 
 		<div class="comicpress-options-save">

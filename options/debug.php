@@ -1,6 +1,6 @@
 <div id="comicpress-debug">
 	<form method="post" id="myForm-debug" enctype="multipart/form-data" action="?page=comicpress-options">
-		<?php wp_nonce_field('update-options') ?>
+		<?php wp_nonce_field( 'update-options' ); ?>
 
 		<div class="comicpress-options">
 
@@ -20,7 +20,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="enable_debug_footer_code" name="enable_debug_footer_code" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_debug_footer_code']); ?> />
+							<input id="enable_debug_footer_code" name="enable_debug_footer_code" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_debug_footer_code'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'If enabled will show information on how many queries, memory is used as well as how fast the page loads.', 'comicpress' ); ?>
@@ -33,7 +33,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked(true, $comicpress_options['force_active_connection_close']); ?> />
+							<input id="force_active_connection_close" name="force_active_connection_close" type="checkbox" value="1" <?php checked( true, $comicpress_options['force_active_connection_close'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'This option forces mysql to close the connection after each page load &mdash; not recommended unless you are requested to enable it.', 'comicpress' ); ?>
@@ -60,17 +60,19 @@
 			<?php
 			// hidden with <!-- from displaying, but not hidden from view-source
 			$variable_dump = comicpress_themeinfo();
-			if (is_array($variable_dump)) {
-			while (list($key, $value) = each($variable_dump)) { ?>
+			if ( is_array( $variable_dump ) ) {
+				while ( list( $key, $value ) = each( $variable_dump ) ) {
+					?>
 			<tr>
 				<td style= "width: 330px;">
-					<?php var_dump($key); ?>
+					<?php var_dump( $key ); ?>
 				</td>
 				<td>
-					<?php var_dump($value); ?>
+					<?php var_dump( $value ); ?>
 				</td>
 			</tr>
-			<?php }
+					<?php
+				}
 			}
 			?>
 		// -->

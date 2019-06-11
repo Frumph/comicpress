@@ -1,13 +1,4 @@
-<?php
-/**
- * Search results Page
- * by Philip M. Hofer (Frumph)
- * http://frumph.net/
- *
- * Content for the Search results Page
- *
- * @package Comicpress
- */
+
 
 get_header();
 
@@ -27,7 +18,7 @@ if ( have_posts() ) :
 	<?php
 	printf(
 		/* translators: Number of found results */
-		_n( '%d result.', '%d results.', $count, 'comicpress' ),
+		_n( '%d result', '%d results', 'comicpress' ),
 		$count
 	);
 	?>
@@ -52,7 +43,9 @@ if ( have_posts() ) :
 					<a href="<?php echo get_permalink( $post->ID ); ?>" rel="bookmark" title="<?php _e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>"><?php the_title(); ?></a>
 				</td>
 			</tr>
-			<?php endwhile; ?>
+					<?php
+				endwhile;
+				?>
 		</table>
 		</div>
 		<div class="post-foot"></div>
@@ -64,8 +57,8 @@ if ( have_posts() ) :
 				$post_format = ( $post->post_type !== 'post' ) ? $post->post_type : get_post_format();
 				get_template_part( 'content', $post_format );
 		endwhile;
-	}
-	?>
+		}
+		?>
 	<div class="clear"></div>
 	<?php
 	comicpress_pagination();

@@ -1,6 +1,6 @@
 <div id="comicpress-archivesearch">
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
-		<?php wp_nonce_field('update-options') ?>
+		<?php wp_nonce_field( 'update-options' ); ?>
 
 		<div class="comicpress-options">
 
@@ -20,7 +20,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="display_archive_as_links" name="display_archive_as_links" type="checkbox" value="1" <?php checked(true, $comicpress_options['display_archive_as_links']); ?> />
+							<input id="display_archive_as_links" name="display_archive_as_links" type="checkbox" value="1" <?php checked( true, $comicpress_options['display_archive_as_links'] ); ?> />
 						</td>
 						<td>
 							<?php _e('Enabling this will make the archive pages by date/category/term display as a list of links instead of full posts.', 'comicpress' ); ?>
@@ -32,10 +32,10 @@
 								<?php _e( 'Excerpt or Full Content in archive and search?', 'comicpress' ); ?>
 							</label>
 							<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
-								<option class="level-0" value="excerpt" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'excerpt'); ?>>
+								<option class="level-0" value="excerpt" <?php selected ( $comicpress_options['excerpt_or_content_in_archive'], 'excerpt' ); ?>>
 									<?php _e( 'Excerpt', 'comicpress' ); ?>
 								</option>
-								<option class="level-0" value="content" <?php selected($comicpress_options['excerpt_or_content_in_archive'], 'content'); ?>>
+								<option class="level-0" value="content" <?php selected( $comicpress_options['excerpt_or_content_in_archive'], 'content' ); ?>>
 									<?php _e( 'Full Content', 'comicpress' ); ?>
 								</option>
 							</select>
@@ -50,10 +50,10 @@
 								<?php _e( 'Archive Display Order', 'comicpress' ); ?>
 							</label>
 							<select name="archive_display_order" id="archive_display_order">
-								<option class="level-0" value="asc" <?php if ($comicpress_options['archive_display_order'] == "asc") { ?>selected="selected"<?php } ?>>
+								<option class="level-0" value="asc" <?php if ( $comicpress_options['archive_display_order'] == "asc" ) { ?>selected="selected"<?php } ?>>
 									<?php _e( 'Oldest to Newest &mdash; Ascending', 'comicpress' ); ?>
 								</option>
-								<option class="level-0" value="desc" <?php if ($comicpress_options['archive_display_order'] == "desc") { ?>selected="selected"<?php } ?>>
+								<option class="level-0" value="desc" <?php if ( $comicpress_options['archive_display_order'] == "desc" ) { ?>selected="selected"<?php } ?>>
 									<?php _e( 'Newest to Oldest &mdash; Descending', 'comicpress' ); ?>
 								</option>
 							</select>
@@ -82,7 +82,7 @@
 							</label>
 						</th>
 						<td>
-							<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked(true, $comicpress_options['enable_numbered_pagination']); ?> />
+							<input id="enable_numbered_pagination" name="enable_numbered_pagination" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_numbered_pagination'] ); ?> />
 						</td>
 						<td>
 							<?php _e( 'Previous Entries and Next Entries buttons are replaced by a bar of numbered pages. Numbered pagination appears on the Home page, the author(s) page, the blog template, and comments/single when there are more then the set number of comments per page. Uses the same styling as the Menubar.', 'comicpress' ); ?>
