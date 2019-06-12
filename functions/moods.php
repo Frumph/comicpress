@@ -74,9 +74,9 @@ function comicpress_showmood_edit_post() {
 		}
 
 		$count = 0;
-		$count = count( $results = glob( get_stylesheet_directory() . '/images/moods/' . $moods_directory . '/*' ) );
+		$count = count( $results = glob( get_stylesheet_directory() . '/images/moods/' . $moods_directory . '/*') );
 		if ( ! $count ) {
-			$count     = count( $results = glob( get_template_directory() . '/images/moods/' . $moods_directory . '/*' ) );
+			$count = count( $results = glob(get_template_directory() . '/images/moods/' . $moods_directory . '/*') );
 			$moods_uri = get_template_directory_uri();
 		} else {
 			$moods_uri = get_stylesheet_directory_uri();

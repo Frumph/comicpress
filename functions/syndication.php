@@ -18,7 +18,7 @@ function comicpress_include_custom_post_types_in_rss( $query ) {
 		$operator   = 'and';
 		$post_types = get_post_types( $args , $output , $operator );
 		// Remove 'pages' from the RSS.
-		$post_types = array_merge( $post_types, array( 'post' ) );
+		$post_types = array_merge( $post_types, array( 'post' ) ) ;
 		$query->set( 'post_type' , $post_types );
 	}
 	return $query;

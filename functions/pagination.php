@@ -8,10 +8,10 @@ function comicpress_pagination() {
 		?>
 		<div id="pagenav">
 		<div class="pagenav-right">
-			<?php previous_posts_link( __( 'Newer Entries &uarr;', 'comicpress' ) ) ?>
+			<?php previous_posts_link(__( 'Newer Entries &uarr;', 'comicpress' )) ?>
 		</div>
 		<div class="pagenav-left">
-			<?php next_posts_link( __( '&darr; Previous Entries', 'comicpress' ) ) ?>
+			<?php next_posts_link(__( '&darr; Previous Entries', 'comicpress' )) ?>
 		</div>
 		<div class="clear"></div>
 		</div>

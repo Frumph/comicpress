@@ -23,16 +23,16 @@ function comicpress_body_class( $classes = array() ) {
 
 	if ( comicpress_is_signup() ) $classes[] = 'signup';
 
-	if ( $is_lynx ) $classes[]       = 'lynx';
-	elseif ( $is_gecko ) $classes[]  = 'gecko';
-	elseif ( $is_opera ) $classes[]  = 'opera';
-	elseif ( $is_NS4 ) $classes[]    = 'ns4';
-	elseif ( $is_safari ) $classes[] = 'safari';
-	elseif ( $is_chrome ) $classes[] = 'chrome';
-	elseif ( $is_IE ) $classes[]     = 'ie';
-	else $classes[]                  = 'unknown';
-	if ( $is_iphone ) $classes[]     = 'iphone';
-	if ( wp_is_mobile() ) $classes[] = 'is-mobile';
+	if ( $is_lynx ) $classes[]        = 'lynx';
+	elseif ( $is_gecko ) $classes[]   = 'gecko';
+	elseif ( $is_opera ) $classes[]   = 'opera';
+	elseif ( $is_NS4 ) $classes[]     = 'ns4';
+	elseif ( $is_safari ) $classes[]  = 'safari';
+	elseif ( $is_chrome ) $classes[]  = 'chrome';
+	elseif ( $is_IE ) $classes[]      = 'ie';
+	else $classes[]                   = 'unknown';
+	if ( $is_iphone ) $classes[]      = 'iphone';
+	if ( wp_is_mobile() ) $classes[]  = 'is-mobile';
 
 
 	// Hijacked from the hybrid theme, http://themehybrid.com/ .
@@ -43,8 +43,8 @@ function comicpress_body_class( $classes = array() ) {
 		$classes[] = 'single-author-' . get_the_author_meta( 'user_nicename', $wp_query->post->post_author );
 	}
 
-	if ( is_page() ) {
-		if ( isset( $wp_query->query_vars['pagename'] ) )
+	if (is_page()) {
+		if ( isset($wp_query->query_vars['pagename']) )
 			$classes[] = 'page-' . $wp_query->query_vars['pagename'];
 	}
 
@@ -54,7 +54,7 @@ function comicpress_body_class( $classes = array() ) {
 
 	// NOT hijacked from anything, doi! people should do this.
 	$timestamp = current_time( 'timestamp' );
-	$rightnow  = (int) date( 'Gi', $timestamp );
+	$rightnow  = (int) date( 'Gi',$timestamp );
 	$ampm      = date( 'a', $timestamp );
 	$classes[] = $ampm;
 	//	$classes[] = 'time-'.$rightnow;
@@ -95,7 +95,7 @@ function comicpress_post_class( $classes = '' ) {
 		'entry_tax' => array(
 			'category',
 			'post_tag',
-		),
+		)
 	);
 
 	/* Microformats. */
@@ -105,7 +105,7 @@ function comicpress_post_class( $classes = '' ) {
 	$classes[] = 'postonpage-' . ++$post_alt;
 
 	if ( $post_alt % 2 )
-		$classes[]  = 'odd';
+		$classes[] = 'odd';
 	else $classes[] = 'even';
 
 	/* Sticky class (only on home/blog page). */

@@ -4,15 +4,15 @@
  * Protect global $post and $wp_query.
  * @param object $use_this_post If provided, after saving the current post, set up this post for template tag use.
  */
-function Protect ( $use_this_post = null )  {
+function Protect ($use_this_post = null)  {
 	global $post, $wp_query, $__post, $__wp_query;
-	if ( ! empty( $post ) ) {
+	if ( ! empty( $post) ) {
 		$__post = $post;
 	}
-	if ( ! empty( $wp_query ) ) {
+	if ( ! empty( $wp_query) ) {
 		$__wp_query = $wp_query;
 	}
-	if ( ! is_null( $use_this_post ) ) {
+	if ( ! is_null( $use_this_post) ) {
 		$post = $use_this_post;
 		setup_postdata( $post );
 	}
@@ -35,7 +35,7 @@ function Unprotect() {
 	if ( ! empty( $__post) ) {
 		$post = $__post;
 	}
-	if ( ! empty( $__wp_query ) ) {
+	if ( ! empty( $__wp_query) ) {
 		$wp_query = $__wp_query;
 	}
 
