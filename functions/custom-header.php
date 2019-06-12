@@ -1,20 +1,21 @@
 <?php
 
 $custom_header_args = array(
-			'default-text-color' => 'B00',
-			'flex-width' => true,
-			'width' => get_theme_mod('comicpress-customize-range-site-width', '980'),
-			'flex-height' => true,
-			'height' => '110',
-			'header-text' => false,
-			'wp-head-callback' => 'comicpress_header_style',
-			'admin-head-callback' => 'comicpress_admin_header_style',
-			'admin-preview-callback' => 'comicpress_admin_header_style'
-	);
+	'default-text-color'     => 'B00',
+	'flex-width'             => true,
+	'width'                  => get_theme_mod('comicpress-customize-range-site-width', '980'),
+	'flex-height'            => true,
+	'height'                 => '110',
+	'header-text'            => false,
+	'wp-head-callback'       => 'comicpress_header_style',
+	'admin-head-callback'    => 'comicpress_admin_header_style',
+	'admin-preview-callback' => 'comicpress_admin_header_style',
+);
 
 add_theme_support( 'custom-header', $custom_header_args );
 
-function comicpress_admin_header_style() { ?>
+function comicpress_admin_header_style() {
+?>
 <style type="text/css">
 	#headimg { width: <?php echo get_custom_header()->width; ?>px; height: <?php echo get_custom_header()->height; ?>px; background: url(<?php header_image(); ?>) top center no-repeat; }
 <?php if (!display_header_text()) { ?>

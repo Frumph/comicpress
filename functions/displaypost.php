@@ -7,17 +7,17 @@ function comicpress_latest_blog_post_jump() {
 	$catnum = 0;
 	if ( isset( $_GET['latestblogpost'] ) ) $catnum = (int) esc_attr( $_GET['latestblogpost'] );
 	if ( ! empty( $catnum ) ) {
-		$args = array(
+		$args   = array(
 			'numberposts'  => 1,
 			'post_type'    => 'post',
 			'orderby'      => 'post_date',
 			'order'        => 'DESC',
 			'post_status'  => 'publish',
-			'category__in' => array($catnum),
+			'category__in' => array( $catnum ),
 		);
 		$qposts = get_posts( $args );
 	} else {
-		$args = array(
+		$args   = array(
 			'numberposts' => 1,
 			'post_type'   => 'post',
 			'orderby'     => 'post_date',
@@ -41,23 +41,23 @@ if ( ! function_exists( 'comicpress_display_post_title' ) ) {
 		global $post, $wp_query;
 		$get_post_title = '';
 		if ( ( $post->post_type == 'page' ) && is_front_page() ) return; // Don't display the title on static home pages.
-		if ( ( comicpress_themeinfo( 'disable_page_titles' ) && is_page() ) || ( comicpress_themeinfo( 'disable_post_titles' ) && ! is_page() ) || (is_page( 'chat' ) || is_page( 'forum' ) ) ) return;
-		if (  is_page() ) {
+		if ( ( comicpress_themeinfo( 'disable_page_titles' ) && is_page() ) || ( comicpress_themeinfo( 'disable_post_titles' ) && ! is_page() ) || ( is_page( 'chat' ) || is_page( 'forum' ) ) ) return;
+		if ( is_page() ) {
 			$post_title = "<h2 class=\"page-title\">";
 		} else {
 			$post_title = "<h2 class=\"post-title\">";
 		}
-		if ( ( is_page_template( 'blog.php' ) || is_home() || is_front_page() || is_archive() || is_search() ) && ( $post->post_type != 'page') )  $post_title .= "<a href=\"".get_permalink()."\">";
+		if ( ( is_page_template( 'blog.php' ) || is_home() || is_front_page() || is_archive() || is_search() ) && ( $post->post_type != 'page' ) )  $post_title .= "<a href=\"" . get_permalink() . "\">";
 		$get_post_title .= get_the_title();
 		if ( ! $get_post_title ) $get_post_title = '( No Title )';
 		$post_title .= $get_post_title;
-		if ( ( is_page_template('blog.php') || is_home() || is_front_page() || is_archive() || is_search() ) && ( $post->post_type != 'page') )  $post_title .= "</a>";
+		if ( ( is_page_template( 'blog.php' ) || is_home() || is_front_page() || is_archive() || is_search() ) && ( $post->post_type != 'page' ) )  $post_title .= "</a>";
 		$post_title .= "</h2>\r\n";
-		echo apply_filters( 'comicpress_display_post_title ', $post_title );
+		echo apply_filters( 'comicpress_display_post_title', $post_title );
 	}
 }
 
-if ( ! function_exists('comicpress_display_post_thumbnail' ) ) {
+if ( ! function_exists( 'comicpress_display_post_thumbnail' ) ) {
 	function comicpress_display_post_thumbnail( $size = 'thumbnail' ) {
 		global $post, $wp_query;
 		if ( $post->post_type == 'post' ) {
@@ -66,11 +66,10 @@ if ( ! function_exists('comicpress_display_post_thumbnail' ) ) {
 			if ( empty( $link ) ) $link = get_permalink();
 			if ( has_post_thumbnail() ) {
 				if ( is_home() ) {
-					$post_thumbnail = '<div class="post-image"><center><a href="'.$link.'" rel="featured-image" title="Link to ' . get_the_title() . '">' . get_the_post_thumbnail( $post->ID, $size ) . '</a></center></div>'."\r\n";
-				} else
-					$post_thumbnail = '<div class="post-image"><center>' . get_the_post_thumbnail( $post->ID, $size ) . '</center></div>'."\r\n";
+					$post_thumbnail = '<div class="post-image"><center><a href="'.$link.'" rel="featured-image" title="Link to ' . get_the_title() . '">' . get_the_post_thumbnail( $post->ID, $size ) . '</a></center></div>' . "\r\n";
+				} else $post_thumbnail = '<div class="post-image"><center>' . get_the_post_thumbnail( $post->ID, $size ) . '</center></div>' . "\r\n";
 			} else {
-				$url_image = get_post_meta($post->ID, 'featured-image', true);
+				$url_image = get_post_meta ($post->ID, 'featured-image', true );
 				if ( ! empty( $url_image ) ) $post_thumbnail = '<div class="post-image"><center><a href="' . $link . '" rel="featured-image" title="Link to "' . get_the_title() . '"><img src="' . $url_image . '" title="' . get_the_title() .'" alt="' . get_the_title() . '"></a></center></div>' . "\r\n";
 			}
 			echo apply_filters( 'comicpress_display_post_thumbnail', $post_thumbnail );
@@ -91,11 +90,11 @@ if ( ! function_exists( 'comicpress_display_author_gravatar' ) ) {
 	}
 }
 
-if ( ! function_exists('comicpress_display_post_calendar' ) ) {
+if ( ! function_exists( 'comicpress_display_post_calendar' ) ) {
 	function comicpress_display_post_calendar() {
 		global $post, $wp_query;
 		if ( is_page() ) return;
-		if ( comicpress_themeinfo( 'enable_post_calendar') ) {
+		if ( comicpress_themeinfo( 'enable_post_calendar' ) ) {
 			$post_calendar = "<div class=\"post-calendar-date\"><div class=\"calendar-date\"><span>" . get_the_time(' M' ) . "</span>" . get_the_time( 'd' ) . "</div></div>\r\n";
 			echo apply_filters( 'comicpress_display_post_calendar', $post_calendar );
 		}
@@ -151,7 +150,7 @@ if ( ! function_exists( 'comicpress_display_post_category' ) ) {
 	function comicpress_display_post_category() {
 		global $post;
 		$post_category = '';
-		if ( ! comicpress_is_bbpress() && ! comicpress_themeinfo( 'disable_categories_in_posts' ) && !is_attachment() && ( $post->post_type == 'post' ) ) {
+		if ( ! comicpress_is_bbpress() && ! comicpress_themeinfo( 'disable_categories_in_posts' ) && ! is_attachment() && ( $post->post_type == 'post' ) ) {
 			$post_category = "<div class=\"post-cat\">" . __( 'Posted In:', 'comicpress' ) . ' ' . get_the_category_list( ', ' ) . "</div>\r\n";
 		}
 		echo apply_filters( 'comicpress_display_post_category', $post_category );
@@ -185,8 +184,8 @@ if ( ! function_exists( 'comicpress_display_blog_navigation' ) ) {
 	function comicpress_display_blog_navigation() {
 		global $post, $wp_query;
 		if ( comicpress_themeinfo( 'enable_comments_on_homepage' ) && ( comicpress_themeinfo( 'home_post_count' ) == '1' ) ) {
-			$temp_single = $wp_query -> is_single;
-			$wp_query -> is_single = true;
+			$temp_single           = $wp_query -> is_single;
+			$wp_query->is_single = true;
 		}
 		if ( is_single() && ! is_page() && ! is_archive() && ! is_search() && ( $post->post_type == 'post' ) ) {
 			?>
@@ -198,7 +197,7 @@ if ( ! function_exists( 'comicpress_display_blog_navigation' ) ) {
 			<?php
 		}
 		if ( comicpress_themeinfo( 'enable_comments_on_homepage' ) && ( comicpress_themeinfo( 'home_post_count' ) == '1') ) {
-			$wp_query -> is_single = $temp_single;
+			$wp_query->is_single = $temp_single;
 		}
 	}
 }
@@ -234,9 +233,9 @@ if ( ! function_exists( 'comicpress_display_post' ) ) {
 			<div class="post-content">
 				<div class="post-info">
 					<?php
-						if ( ! comicpress_is_bbpress() ) comicpress_display_author_gravatar();
-						if ( ! comicpress_is_bbpress() ) comicpress_display_post_calendar();
-						if ( is_sticky() ) {
+					if ( ! comicpress_is_bbpress() ) comicpress_display_author_gravatar();
+					if ( ! comicpress_is_bbpress() ) comicpress_display_post_calendar();
+					if ( is_sticky() ) {
 						?>
 					<div class="sticky-image">Featured Post</div>
 						<?php
@@ -295,7 +294,11 @@ if ( ! function_exists( 'comicpress_display_post' ) ) {
 				?>
 			</div>
 			<div class="post-foot">
-			<?php do_action('comic-post-foot'); ?><?php do_action('comicpress-post-foot'); ?></div>
+				<?php
+				do_action('comic-post-foot');
+				do_action('comicpress-post-foot');
+				?>
+			</div>
 		</div>
 		<?php
 			do_action( 'comic-post-extras' );

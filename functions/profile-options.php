@@ -32,7 +32,7 @@ add_filter( 'user_contactmethods', 'comicpress_remove_unwanted_contactmethods' ,
  * Sites that you could be on but not exactly the same reference for an author page.
  * When activated, this must be integrated into author.php in table 'user-contacts'.
  */
-function add_new_contactmethods( $methods ){
+function add_new_contactmethods( $methods ) {
 	// Default contact methods.
 	$methods['twitter']  = 'Twitter (url)';
 	$methods['facebook'] = 'Facebook (url)';
