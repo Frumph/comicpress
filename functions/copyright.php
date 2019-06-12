@@ -67,7 +67,7 @@ if ( ! function_exists( 'comicpress_copyright_dates' ) ) {
 			if ( $copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate ) {
 				$copyright .= '-' . $copyright_dates[0]->lastdate;
 			}
-			$output =  $copyright;
+			$output = $copyright;
 		}
 		return apply_filters( 'comicpress_copyright_dates', $output );
 	}

@@ -25,7 +25,7 @@ function comicpress_add_page_editor_meta_box() {
 }
 
 function comicpress_save_page_editor_options( $post_id ) {
-	if ( isset( $_POST['comicpress-update-page-options']) && ! wp_verify_nonce( $_POST['comicpress-update-page-options'], 'comicpress_post_options-' . $post_id  ) ) {
+	if ( isset( $_POST['comicpress-update-page-options'] ) && ! wp_verify_nonce( $_POST['comicpress-update-page-options'], 'comicpress_post_options-' . $post_id  ) ) {
 		return $post_id;
 	}
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
