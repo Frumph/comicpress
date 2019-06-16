@@ -101,7 +101,7 @@ if ( ! function_exists( 'comicpress_display_post_calendar' ) ) {
 	}
 }
 
-if ( !function_exists( 'comicpress_display_post_author' ) ) {
+if ( ! function_exists( 'comicpress_display_post_author' ) ) {
 	function comicpress_display_post_author() {
 		global $post, $authordata;
 		if ( ! comicpress_themeinfo( 'disable_author_info_in_posts') ) {
@@ -173,7 +173,9 @@ if ( ! function_exists( 'comicpress_display_comment_link' ) ) {
 		if ( $post->comment_status == 'open' && ! is_singular() ) {
 			?>
 			<div class="comment-link">
-				<?php comments_popup_link( '<span class="comment-balloon comment-balloon-empty">&nbsp;</span>' . __( 'Comment&nbsp;', 'comicpress' ), '<span class="comment-balloon">1</span> '  .__( 'Comment', 'comicpress' ), '<span class="comment-balloon">%</span> ' . __( 'Comments', 'comicpress' ) ); ?>
+				<?php
+				comments_popup_link( '<span class="comment-balloon comment-balloon-empty">&nbsp;</span>' . __( 'Comment&nbsp;', 'comicpress' ), '<span class="comment-balloon">1</span> '  . __( 'Comment', 'comicpress' ), '<span class="comment-balloon">%</span> ' . __( 'Comments', 'comicpress' ) );
+				?>
 			</div>
 			<?php
 		}
@@ -190,8 +192,10 @@ if ( ! function_exists( 'comicpress_display_blog_navigation' ) ) {
 		if ( is_single() && ! is_page() && ! is_archive() && ! is_search() && ( $post->post_type == 'post' ) ) {
 			?>
 			<div class="blognav">
-				<?php previous_post_link( '<span class="blognav-prev">%link</span>',__( '&lsaquo; Prev', 'comicpress' ), false ); ?>
-				<?php next_post_link( '<span class="blognav-next">%link</span>',__( 'Next &rsaquo;', 'comicpress' ), false ); ?>
+				<?php
+				previous_post_link( '<span class="blognav-prev">%link</span>', __( '&lsaquo; Prev', 'comicpress' ), false );
+				next_post_link( '<span class="blognav-next">%link</span>', __( 'Next &rsaquo;', 'comicpress' ), false );
+				?>
 				<div class="clear"></div>
 			</div>
 			<?php

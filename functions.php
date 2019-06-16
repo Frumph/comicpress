@@ -113,7 +113,7 @@ if ( ! function_exists( 'comicpress_register_sidebars' ) ) {
 			),
 			array(
 				'id'          => 'above-header',
-				'name'        => __( 'Above Header', 'comicpress' ),
+				'name'        => __( 'Above the Header', 'comicpress' ),
 				'description' => __( 'This sidebar appears to above all of the site information. This sidebar is not encased in CSS, you will need to create CSS for it.', 'comicpress' ),
 			),
 			array(
@@ -128,12 +128,12 @@ if ( ! function_exists( 'comicpress_register_sidebars' ) ) {
 			),
 			array(
 				'id'          => 'over-blog',
-				'name'        => __( 'Over Blog', 'comicpress' ),
+				'name'        => __( 'Over the Blog', 'comicpress' ),
 				'description' => __( 'This sidebar appears over the blog within the #column .narrowcolumn', 'comicpress' ),
 			),
 			array(
 				'id'          => 'under-blog',
-				'name'        => __( 'Under Blog', 'comicpress' ),
+				'name'        => __( 'Under the Blog', 'comicpress' ),
 				'description' => __( 'This sidebar appears under the blog within the #column .narrowocolumn', 'comicpress' ),
 			),
 			array(
@@ -313,7 +313,7 @@ function comicpress_clean_filename( $filename ) {
 }
 
 function comicpress_infinite_scroll_loop() {
-	while (have_posts() ) : the_post();
+	while ( have_posts() ) : the_post();
 		comicpress_display_post();
 	endwhile;
 }
@@ -400,7 +400,7 @@ function comicpress_load_options() {
 	return $comicpress_options;
 }
 
-function comicpress_themeinfo ($whichinfo = null ) {
+function comicpress_themeinfo( $whichinfo = null ) {
 	global $comicpress_themeinfo;
 	if ( empty( $comicpress_themeinfo ) || $whichinfo == 'reset' ) {
 		$comicpress_themeinfo = array();
@@ -417,14 +417,6 @@ function comicpress_themeinfo ($whichinfo = null ) {
 			return $comicpress_themeinfo[$whichinfo];
 		else return false;
 	return $comicpress_themeinfo;
-}
-/**
- * Dashboard Menu Options - Only run in the wp-admin area
- */
-if ( is_admin() ) {
-	@require_once( get_template_directory() . '/options.php' );
-	/* translators: theme discription for wp-admin */
-	$bogus_translation = __( 'Publish a WebComic with the ComicPress theme and the Comic Easel plugin.', 'comicpress' );
 }
 
 /**
