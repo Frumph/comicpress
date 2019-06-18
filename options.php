@@ -75,13 +75,13 @@ function comicpress_admin_options() {
 				'over-blog-sidebar-all-posts',  // General.
 			) as $key ) {
 				if ( ! isset( $_REQUEST[$key] ) ) $_REQUEST[$key] = 0;
-				$comicpress_options[$key] = (bool)( $_REQUEST[$key] == 1 ? true : false );
+				$comicpress_options[$key]                         = (bool) ( $_REQUEST[$key] == 1 ? true : false );
 			}
 			foreach ( array(
 				'home_post_count',  // General.
 				'copyright_name',  // General.
 				'copyright_url',  // General.
-			) as $key) {
+			) as $key ) {
 				if ( isset( $_REQUEST[$key] ) )
 				$comicpress_options[$key] = wp_filter_nohtml_kses( $_REQUEST[$key] );
 			}
@@ -137,7 +137,7 @@ function comicpress_admin_options() {
 				'disable_date_info_in_posts',  // Posts & Pages.
 				'enable_last_modified_in_posts',  // Posts & Pages.
 				'disable_posted_at_time_in_posts', // Posts & Pages.
-			) as $key) {
+			) as $key ) {
 				if ( ! isset( $_REQUEST[$key] ) ) $_REQUEST[$key] = 0;
 				$comicpress_options[$key]                         = (bool) ( $_REQUEST[$key] == 1 ? true : false );
 			}
@@ -163,7 +163,7 @@ function comicpress_admin_options() {
 				$comicpress_options[$key]                         = (bool) ( $_REQUEST[$key] == 1 ? true : false );
 			}
 			foreach ( array(
-				'avatar_directory'  // Comments.
+				'avatar_directory',  // Comments.
 			) as $key ) {
 				if ( isset( $_REQUEST[$key] ) )
 				$comicpress_options[$key] = wp_filter_nohtml_kses( $_REQUEST[$key] );
@@ -197,7 +197,7 @@ function comicpress_admin_options() {
 				'enable_debug_footer_code',
 				'force_active_connection_close',
 			) as $key ) {
-				if (!isset($_REQUEST[$key])) $_REQUEST[$key] = 0;
+				if ( ! isset( $_REQUEST[$key] ) ) $_REQUEST[$key] = 0;
 				$comicpress_options[$key]                    = (bool) ( $_REQUEST[$key] == 1 ? true : false );
 			}
 			$tab = 'debug';
@@ -233,7 +233,7 @@ function comicpress_admin_options() {
 			if ( empty( $tab ) ) { $tab = 'splash'; }
 			foreach ( $tab_info as $tab_id => $label ) {
 				?>
-			<div id="comicpress-tab-<?php echo $tab_id ?>" class="comicpress-tab <?php echo ( $tab == $tab_id ) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
+			<div id="comicpress-tab-<?php echo $tab_id; ?>" class="comicpress-tab <?php echo ( $tab == $tab_id ) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
 				<?php
 			}
 			?>
@@ -265,7 +265,7 @@ function comicpress_admin_options() {
 				return false;
 			});
 
-			showPage('<?php echo esc_js($tab); ?>');
+			showPage('<?php echo esc_js( $tab ); ?>');
 		}(jQuery));
 	</script>
 </div>
@@ -302,5 +302,5 @@ function comicpress_admin_options() {
 		</table>
 	</div>
 
-<?php
+	<?php
 }

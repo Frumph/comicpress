@@ -105,7 +105,7 @@ if ( ! function_exists( 'comicpress_display_post_author' ) ) {
 	function comicpress_display_post_author() {
 		global $post, $authordata;
 		if ( ! comicpress_themeinfo( 'disable_author_info_in_posts') ) {
-			$post_author = '<span class="post-author">'.__( 'by', 'comicpress' ).' <a href="' . get_author_posts_url( $authordata->ID, $authordata->user_nicename ) .'" rel="author">' . get_the_author().'</a></span>' . "\r\n";
+			$post_author = '<span class="post-author">'.__( 'by', 'comicpress' ) . ' <a href="' . get_author_posts_url( $authordata->ID, $authordata->user_nicename ) . '" rel="author">' . get_the_author().'</a></span>' . "\r\n";
 			echo apply_filters( 'comicpress_display_post_author', $post_author );
 		}
 	}
@@ -115,7 +115,7 @@ if ( ! function_exists( 'comicpress_display_post_date' ) ) {
 	function comicpress_display_post_date() {
 		global $post;
 		if ( ! comicpress_themeinfo( 'disable_date_info_in_posts' ) ) {
-			$post_date = "<span class=\"posted-on\">".__( 'on&nbsp;', 'comicpress' ) . "</span><span class=\"post-date\">" . get_the_date( get_option( 'date_format' ) ) . "</span>\r\n";
+			$post_date = "<span class=\"posted-on\">".__( 'on', 'comicpress' ) . ' ' . "</span><span class=\"post-date\">" . get_the_date( get_option( 'date_format' ) ) . "</span>\r\n";
 			echo apply_filters( 'comicpress_display_post_date', $post_date );
 		}
 	}
@@ -125,7 +125,7 @@ if ( ! function_exists( 'comicpress_display_post_time' ) ) {
 	function comicpress_display_post_time() {
 		global $post;
 		if ( ! comicpress_themeinfo( 'disable_date_info_in_posts') && ! comicpress_themeinfo( 'disable_posted_at_time_in_posts' ) ) {
-			$post_time = "<span class=\"posted-at\">" . __( 'at&nbsp;', 'comicpress' ) . "</span><span class=\"post-time\">" . get_the_time( get_option( 'time_format' ) ) . "</span>\r\n";
+			$post_time = "<span class=\"posted-at\">" . __( 'at', 'comicpress' ) . ' ' . "</span><span class=\"post-time\">" . get_the_time( get_option( 'time_format' ) ) . "</span>\r\n";
 			echo apply_filters( 'comicpress_display_post_time', $post_time );
 		}
 	}
@@ -139,7 +139,7 @@ if ( ! function_exists( 'comicpress_display_modified_date_time' ) ) {
 			$u_modified_time = get_the_modified_time( 'U' );
 			if ( $u_modified_time != $u_time ) {
 				$post_date_time = '<span class="posted-last-modified"> ' . __( 'and modified on', 'comicpress' ) . ' ' . get_the_modified_date( get_option( 'date_format' ) ) . '. ';
-				if ( ! comicpress_themeinfo( 'disable_posted_at_time_in_posts' ) ) $post_date_time .= '<span class="posted-last-modified-time"> ' . __( 'at', 'comicpress' ).' ' . get_the_modified_time( get_option( 'time_format' ) ) . '</span>'."\r\n";
+				if ( ! comicpress_themeinfo( 'disable_posted_at_time_in_posts' ) ) $post_date_time .= '<span class="posted-last-modified-time"> ' . __( 'at', 'comicpress' ) . ' ' . get_the_modified_time( get_option( 'time_format' ) ) . '</span>' . "\r\n";
 				echo apply_filters( 'comicpress_display_modified_date_time', $post_date_time );
 			}
 		}
