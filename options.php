@@ -48,7 +48,11 @@ function comicpress_admin_options() {
 		global $comicpress_themeinfo;
 		$comicpress_themeinfo = '';
 		?>
-		<div id="message" class="updated"><p><strong><?php _e( 'ComicPress Settings RESET!', 'comicpress' ); ?></strong></p></div>
+		<div id="message" class="updated">
+			<p>
+				<strong><?php _e( 'ComicPress Settings RESET!', 'comicpress' ); ?></strong>
+			</p>
+		</div>
 		<?php
 	}
 	if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'comicpress_reset_customize' ) {
@@ -57,14 +61,18 @@ function comicpress_admin_options() {
 		global $comicpress_themeinfo;
 		$comicpress_themeinfo = '';
 		?>
-		<div id="message" class="updated"><p><strong><?php _e( 'ComicPress Customizer Colors RESET!', 'comicpress' ); ?></strong></p></div>
+		<div id="message" class="updated">
+			<p>
+				<strong><?php _e( 'ComicPress Customizer Colors RESET!', 'comicpress' ); ?></strong>
+			</p>
+		</div>
 		<?php
 	}
 	if ( empty( $comicpress_options ) ) {
 		comicpress_themeinfo( 'reset' );
 	}
 	$comicpress_options = comicpress_load_options();
-	if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'update-options') ) {
+	if ( isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'update-options' ) ) {
 
 		if ( $_REQUEST['action'] == 'comicpress_save_general' ) {
 			foreach ( array(
@@ -198,7 +206,7 @@ function comicpress_admin_options() {
 				'force_active_connection_close',
 			) as $key ) {
 				if ( ! isset( $_REQUEST[$key] ) ) $_REQUEST[$key] = 0;
-				$comicpress_options[$key]                    = (bool) ( $_REQUEST[$key] == 1 ? true : false );
+				$comicpress_options[$key]                         = (bool) ( $_REQUEST[$key] == 1 ? true : false );
 			}
 			$tab = 'debug';
 			update_option( 'cp-options', $comicpress_options );
@@ -207,7 +215,9 @@ function comicpress_admin_options() {
 		if ( $tab ) {
 			?>
 			<div id="message" class="updated">
-				<p><strong><?php _e( 'ComicPress Settings SAVED!', 'comicpress' ); ?></strong></p>
+				<p>
+					<strong><?php _e( 'ComicPress Settings SAVED!', 'comicpress' ); ?></strong>
+				</p>
 			</div>
 			<script>
 				function hidemessage() { document.getElementById('message').style.display = 'none'; }
@@ -230,10 +240,15 @@ function comicpress_admin_options() {
 				'archivesearch' => __( 'Archive & Search', 'comicpress' ),
 				'debug'         => __( 'Debug', 'comicpress' ),
 			);
-			if ( empty( $tab ) ) { $tab = 'splash'; }
+			if ( empty( $tab ) ) {
+				$tab = 'splash'; }
 			foreach ( $tab_info as $tab_id => $label ) {
 				?>
-			<div id="comicpress-tab-<?php echo $tab_id; ?>" class="comicpress-tab <?php echo ( $tab == $tab_id ) ? 'on' : 'off'; ?>"><span><?php echo $label; ?></span></div>
+			<div id="comicpress-tab-<?php echo $tab_id; ?>" class="comicpress-tab <?php echo ( $tab == $tab_id ) ? 'on' : 'off'; ?>">
+				<span>
+					<?php echo $label; ?>
+				</span>
+			</div>
 				<?php
 			}
 			?>
@@ -270,7 +285,9 @@ function comicpress_admin_options() {
 	</script>
 </div>
 	<div class="eadmin-footer">
-		<div id="comicpress-version-title"><a href="http://frumph.net/">ComicPress <?php echo comicpress_themeinfo( 'version' ); ?></a></div>
+		<div id="comicpress-version-title">
+			<a href="http://frumph.net/">ComicPress <?php echo comicpress_themeinfo( 'version' ); ?></a>
+		</div>
 		<br />
 		<?php _e( 'Developed and maintained by', 'comicpress' ); ?> <a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Philip M. Hofer</a> <small>(<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Frumph</a>)</small>, <?php _e( 'Originally created by', 'comicpress' ); ?> <a href="http://mindfaucet.com/" target="_blank" rel="noopener noreferrer">Tyler Martin</a><br />
 		<?php _e( 'If you like the ComicPress theme, please donate. It will help in developing new features and versions.', 'comicpress' ); ?>
@@ -304,3 +321,4 @@ function comicpress_admin_options() {
 
 	<?php
 }
+?>
