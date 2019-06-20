@@ -203,7 +203,7 @@ function comicpress_debug_page_foot_code() {
 	<?php
 	if ( function_exists( 'memory_get_usage' ) ) {
 		$unit = array( 'b', 'kb', 'mb', 'gb', 'tb', 'pb' );
-		echo @round( memory_get_usage( true ) / pow( 1024, ( $i = floor( log( memory_get_usage( true ), 1024 ) ) ) ), 2) .' '. $unit[$i]; ?> Memory usage . <?php } timer_stop (1)  ?> seconds . </p>
+		echo @round( memory_get_usage( true ) / pow( 1024, ( $i = floor( log( memory_get_usage( true ), 1024 ) ) ) ), 2) . ' ' . $unit[$i]; ?> Memory usage . <?php } timer_stop (1)  ?> seconds . </p>
 	<?php
 }
 
@@ -267,7 +267,7 @@ function comicpress_sidebars_disabled() {
 }
 
 global $content_width;
-if ( ! isset($content_width) ) {
+if ( ! isset( $content_width ) ) {
 	$content_width                         = comicpress_themeinfo( 'content_width' );
 	if ( ! $content_width ) $content_width = 500;
 }
@@ -391,7 +391,7 @@ function comicpress_load_options() {
 			'force_active_connection_close'     => false,
 			// Jetpack.
 			'enable_jetpack_infinite_scrolling' => false,
-		) as $field => $value) {
+		) as $field => $value ) {
 			$comicpress_options[$field] = $value;
 		}
 		// update_option('cp-options', $comicpress_options);
@@ -415,8 +415,15 @@ function comicpress_themeinfo( $whichinfo = null ) {
 	if ( $whichinfo && $whichinfo !== 'reset' )
 		if ( isset( $comicpress_themeinfo[$whichinfo] ) )
 			return $comicpress_themeinfo[$whichinfo];
-		else return false;
+	else return false;
 	return $comicpress_themeinfo;
+}
+
+// Dashboard Menu Options - Only run in the wp-admin area
+if (is_admin()) {
+	@require_once(get_template_directory().'/options.php');
+	/* translators: theme discription for wp-admin */
+	$bogus_translation = __( 'Publish a WebComic with the ComicPress theme and the Comic Easel plugin.', 'comicpress' );
 }
 
 /**
@@ -424,6 +431,6 @@ function comicpress_themeinfo( $whichinfo = null ) {
  */
 function comicpress_gutenberg_styles() {
 	// Load the theme styles within Gutenberg.
-	 wp_enqueue_style( 'comicpress-gutenberg', get_theme_file_uri( '/gutenberg.css' ), false, '@@pkg.version', 'all' );
+	wp_enqueue_style( 'comicpress-gutenberg', get_theme_file_uri( '/gutenberg.css' ), false, '@@pkg.version', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'comicpress_gutenberg_styles' );
