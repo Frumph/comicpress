@@ -497,7 +497,7 @@ a.post-edit-link {
     color: #777;
     font-family: Georgia , serif;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .post-calendar-date .calendar-date {
@@ -520,7 +520,7 @@ a.post-edit-link {
 	color: #fff;
     font-family: Verdana , sans-serif;
 	font-size: 11px;
-	font-weight: normal;
+	font-weight: 400;
     font-style: normal;
     text-align: center;
 }
@@ -551,7 +551,7 @@ a.post-edit-link {
 .comment-link {
 	padding: 2px;
 	font-size: 11px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: right;
 }
 
@@ -587,7 +587,7 @@ a.post-edit-link {
 
 .comment-author cite {
 	font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -700,7 +700,7 @@ ul.children {
 .trackback .comment-author cite,
 .pingback .comment-author cite {
 	font-size: 13px;
-	font-weight: bold;
+	font-weight: 700;
     font-style: normal;
 
 }
@@ -747,7 +747,7 @@ textarea#comment {
     height: 25px;
 	margin-top: 5px;
     padding: 0 5px 0 5px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 25px;
 }
 
@@ -931,7 +931,7 @@ h2.widget-title a {
 
 #wp-calendar th {
     font-size: 11px;
-    font-weight: normal;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -951,7 +951,7 @@ h2.widget-title a {
 #wp-calendar a {
     display: block;
     color: #b00b00;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -984,7 +984,7 @@ table#wp-calendar td {
     border-left: 1px solid #777;
     color: #fff;
     background: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .wp-calendar-download-links a:hover {
@@ -1113,7 +1113,7 @@ table#wp-calendar td {
     height: 67px;
     color: #fff;
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 67px;
     text-align: center;
 }
@@ -1182,7 +1182,7 @@ table#wp-calendar td {
 
 #paginav .paginav-current, #paginav .current {
     padding: 0 7px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .pagejumper-wrap {
@@ -1211,7 +1211,7 @@ table#wp-calendar td {
     float: right;
     padding: 5px 0;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .nav-first {
@@ -1248,7 +1248,7 @@ table#wp-calendar td {
     margin-top: 5px;
     padding: 0 5px 0 5px;
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 25px;
 }
 
@@ -1347,7 +1347,7 @@ table#wp-calendar td {
     display: inline-block;
     width: 100px;
     margin-right: 5px;
-    font-weight:bold;
+    font-weight:700;
     text-align: right;
 }
 
@@ -1359,7 +1359,7 @@ table#wp-calendar td {
     display: inline-block;
     width: 70px;
     margin-right: 15px;
-    font-weight:bold;
+    font-weight:700;
     text-align: right;
 }
 
@@ -1634,7 +1634,7 @@ table#wp-calendar td {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     font-size: 14px;
     font-size: 0.875rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: normal;
     text-decoration: none;
 }

@@ -101,7 +101,8 @@ div.show img {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	background: #fff;
-	font: 11px verdana, arial, sans-serif;
+	font-size: 11px;
+	font-family: verdana, arial, sans-serif;
 	line-height: 18px;
 }
 
@@ -141,7 +142,6 @@ div.show img {
 }
 
 .comicpress-options table.widefat {
-/*	margin-bottom: 10px; */
 	border-bottom: none;
 }
 
