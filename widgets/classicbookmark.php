@@ -1,16 +1,22 @@
 <?php
-/*
-Widget Name: (classic) Bookmark
-Description: Adds a bookmark set of icons to save the page your own.
-Author: Tyler Martin, Philip M. Hofer (Frumph)
-Author URI: http://frumph.net
-Version: 1.1
-*/
+/**
+ * Widget Name: (classic) Bookmark
+ * Description: Adds a bookmark set of icons to save the page your own.
+ * Author: Tyler Martin, Philip M. Hofer (Frumph)
+ * Author URI: http://frumph.net
+ * Version: 1.2
+ *
+ * @package ComicPress
+ */
 
+/**
+ * Adds Classic Bookmark widget.
+ */
 function comicpress_classic_bookmark() {
-global $post, $wp_query; ?>
-	<div class="classic-bookmark">
-		<script type="text/javascript">
+
+	global $post, $wp_query; ?>
+		<div class="classic-bookmark">
+			<script type="text/javascript">
 			<!--
 
 				/* Bookmark Config Settings */
@@ -20,7 +26,7 @@ global $post, $wp_query; ?>
 				var imgClearOff = '<?php echo get_template_directory_uri(); ?>/images/3a.gif';	//no comic tagged, clear not possible
 				var imgGotoOff = '<?php echo get_template_directory_uri(); ?>/images/2a.gif';	//no comic tagged, goto not possible
 				var imgClearOn = '<?php echo get_template_directory_uri(); ?>/images/3.gif';	//clear a tag, shows when comic previously tagged
-				var imgGotoOn = '<?php echo get_template_directory_uri(); ?>/images/2.gif';		//shows when a comic is tagged  
+				var imgGotoOn = '<?php echo get_template_directory_uri(); ?>/images/2.gif';		//shows when a comic is tagged
 				var imgInfo = '<?php echo get_template_directory_uri(); ?>/images/4.gif';  		//img that displays the help
 				var comicDir = '/'; 		//alter this if you run multiple comics in different directories on your site.
 
@@ -103,19 +109,25 @@ global $post, $wp_query; ?>
 			//-->
 		</script>
 	</div>
-<?php
+	<?php
 }
 
+/**
+ * Adds Classic Bookmark widget.
+ */
 class widget_comicpress_classic_bookmark extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	public function __construct() {
+
 		parent::__construct(
-			__CLASS__, // Base ID
-			__( 'ComicPress - Classic Bookmark', 'comicpress' ), // Name
-			array( 'description' => __( 'Creates a set of buttons that let the user return to the page they tagged.', 'comicpress' ), ) // Args
+			__CLASS__, // Base ID.
+			__( 'ComicPress - Classic Bookmark', 'comicpress' ), // Name.
+			array(
+				'description' => __( 'Creates a set of buttons that let the user return to the page they tagged.', 'comicpress' ), // Args.
+			)
 		);
 	}
 
@@ -127,12 +139,17 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	 * @param array $args     Widget arguments.
 	 * @param array $instance Saved values from database.
 	 */
-	public function widget($args, $instance) {
+	public function widget( $args, $instance ) {
+
 		global $post, $wp_query;
-		extract($args, EXTR_SKIP);
+		extract( $args, EXTR_SKIP );
 		echo $before_widget;
-		$title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']); // Args
-		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
+		$title = empty( $instance['title'] ) ? '' : apply_filters( 'widget_title', $instance['title'] ); // Args.
+		if ( ! empty( $title ) ) {
+			echo $before_title
+			. $title
+			. $after_title;
+		};
 		comicpress_classic_bookmark();
 		echo $after_widget;
 	}
@@ -147,9 +164,9 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	 *
 	 * @return array Updated safe values to be saved.
 	 */
-	public function update($new_instance, $old_instance) {
-		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
+	public function update( $new_instance, $old_instance ) {
+		$instance          = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
 		return $instance;
 	}
 
@@ -160,17 +177,35 @@ class widget_comicpress_classic_bookmark extends WP_Widget {
 	 *
 	 * @param array $instance Previously saved values from database.
 	 */
-	public function form($instance) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
-		$title = strip_tags($instance['title']);
+	public function form( $instance ) {
+
+		$instance = wp_parse_args( (array) $instance, array(
+			'title' => '',
+		) );
+		$title = strip_tags( $instance['title'] );
 		?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'comicpress' ); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+
+				<?php
+				_e( 'Title:', 'comicpress' );
+				?>
+
+				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			</label>
+		</p>
+
 		<?php
 	}
 }
 
+/**
+ * Register Classic Bookmark widget.
+ */
 function widget_comicpress_classic_bookmark_init() {
-	register_widget('widget_comicpress_classic_bookmark');
+
+	register_widget( 'widget_comicpress_classic_bookmark' );
 }
 
-add_action( 'widgets_init', 'widget_comicpress_classic_bookmark_init');
+add_action( 'widgets_init', 'widget_comicpress_classic_bookmark_init' );
