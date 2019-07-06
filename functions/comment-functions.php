@@ -150,7 +150,7 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 				</span>
 
 				<?php
-				if ( (get_option( 'thread_comments' ) ) && ($args['type'] == 'all' || get_comment_type() == 'comment' ) ) :
+				if ( ( get_option( 'thread_comments' ) ) && ( $args['type'] == 'all' || get_comment_type() == 'comment' ) ) :
 					$max_depth = get_option( 'thread_comments_depth' );
 					echo comment_reply_link( array(
 						'reply_text' => __( 'Reply', 'comicpress' ),
@@ -163,9 +163,9 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 					);
 					endif;
 
-					edit_comment_link( '<span class="comment-edit">' . __( 'Edit', 'comicpress' ) . '</span>',' <span class="separator">|</span> ','' );
+					edit_comment_link( '<span class="comment-edit">' . __( 'Edit', 'comicpress' ) . '</span>', ' <span class="separator">|</span> ', '' );
 
-					if ( $comment->comment_approved == '0' ) :
+				if ( $comment->comment_approved == '0' ) :
 					?>
 
 				<div class="comment-moderated">

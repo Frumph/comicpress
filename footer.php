@@ -138,7 +138,7 @@ if ( get_theme_mod( 'comicpress-customize-detach-footer', false ) ) {
 				?>
 				queries.
 				<?php
-				if ( function_exists( 'memory_get_usage') ) {
+				if ( function_exists( 'memory_get_usage' ) ) {
 					$unit = array(
 						'b',
 						'kb',

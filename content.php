@@ -30,7 +30,9 @@ if ( ! is_home() && ! is_archive() && ! is_search() ) {
 				?>
 
 				<div class="sticky-image">
-					Featured Post
+
+					<?php _e( 'Featured Post', 'comicpress' ); ?>
+
 				</div>
 
 				<?php

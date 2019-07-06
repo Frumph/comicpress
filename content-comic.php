@@ -15,7 +15,9 @@
 				?>
 
 				<div class="sticky-image">
-					Featured Post
+
+					<?php _e( 'Featured Post', 'comicpress' ); ?>
+
 				</div>
 
 				<?php

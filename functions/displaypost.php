@@ -289,7 +289,9 @@ if ( ! function_exists( 'comicpress_display_post' ) ) {
 						?>
 
 					<div class="sticky-image">
-						Featured Post
+
+						<?php _e( 'Featured Post', 'comicpress' ); ?>
+
 					</div>
 
 						<?php

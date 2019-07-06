@@ -295,7 +295,9 @@ function comicpress_admin_options() {
 		<div id="comicpress-options-pages">
 
 			<?php
-			foreach ( glob( get_template_directory() . '/options/*.php' ) as $file ) { include( $file ); }
+			foreach ( glob( get_template_directory() . '/options/*.php' ) as $file ) {
+				include( $file );
+			}
 			?>
 
 		</div>
@@ -330,69 +332,70 @@ function comicpress_admin_options() {
 
 <div class="eadmin-footer">
 
-		<div id="comicpress-version-title">
+	<div id="comicpress-version-title">
 
-			<a href="http://frumph.net/">
-				ComicPress
-				<?php
-				echo comicpress_themeinfo( 'version' );
-				?>
-			</a>
-
-		</div>
-
-		<br />
-
-		<?php
-		_e( 'Developed and maintained by', 'comicpress' );
-		?>
-		<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">
-			Philip M. Hofer
+		<a href="http://frumph.net/">
+			ComicPress
+			<?php
+			echo comicpress_themeinfo( 'version' );
+			?>
 		</a>
-		<small>
-			(<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Frumph</a>)
-		</small>
-		,
-		<?php
-		_e( 'Originally created by', 'comicpress' );
-		?>
-		<a href="http://mindfaucet.com/" target="_blank" rel="noopener noreferrer">
-		Tyler Martin
-		</a>
-		<br />
-
-		<?php
-		_e( 'If you like the ComicPress theme, please donate. It will help in developing new features and versions.', 'comicpress' );
-		?>
-
-		<table style="margin:0 auto;">
-			<tr>
-				<td style="width:200px;">
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_s-xclick" />
-						<input type="hidden" name="hosted_button_id" value="46RNWXBE7467Q" />
-						<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-						<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-					</form>
-				</td>
-				<td style="width:200px;">
-					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
-						<?php wp_nonce_field( 'update-options' ); ?>
-						<input name="comicpress_reset" type="submit" class="button" value="<?php _e( 'Reset All Settings', 'comicpress' ); ?>" />
-						<input type="hidden" name="action" value="comicpress_reset" />
-					</form>
-				</td>
-				<td style="width:200px;">
-					<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
-						<?php wp_nonce_field( 'update-options' ); ?>
-						<input name="comicpress_reset_customize" type="submit" class="button" value="<?php _e( 'Reset Customizer Colors', 'comicpress' ); ?>" />
-						<input type="hidden" name="action" value="comicpress_reset_customize" />
-					</form>
-				</td>
-			</tr>
-		</table>
 
 	</div>
+
+	<br />
+
+	<?php
+	printf(
+		/* translators: 1: Link to website 2: Additional link attribute */
+		__( 'Developed and maintained by <a href="%1$1s" %2$2s> Philip M. Hofer alias <small>(Frumph)</small></a>.', 'comicpress' ),
+		esc_url( 'http://frumph.net/' ),
+		'target="_blank" rel="noopener noreferrer"'
+	);
+	?>
+	<?php
+	printf(
+		/* translators: 1: Link to website 2: Additional link attribute */
+		__( 'Originally created by <a href="%1$1s" %2$2s> Tyler Martin</a>.', 'comicpress' ),
+		esc_url( 'http://mindfaucet.com/' ),
+		'target="_blank" rel="noopener noreferrer"'
+	);
+	?>
+	</a>
+	<br />
+
+	<?php
+	_e( 'If you like the ComicPress theme, please donate. It will help in developing new features and versions.', 'comicpress' );
+	?>
+
+	<table style="margin:0 auto;">
+		<tr>
+			<td style="width:200px;">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick" />
+					<input type="hidden" name="hosted_button_id" value="46RNWXBE7467Q" />
+					<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+				</form>
+			</td>
+			<td style="width:200px;">
+				<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
+					<?php wp_nonce_field( 'update-options' ); ?>
+					<input name="comicpress_reset" type="submit" class="button" value="<?php _e( 'Reset All Settings', 'comicpress' ); ?>" />
+					<input type="hidden" name="action" value="comicpress_reset" />
+				</form>
+			</td>
+			<td style="width:200px;">
+				<form method="post" id="myForm" name="template" enctype="multipart/form-data" action="">
+					<?php wp_nonce_field( 'update-options' ); ?>
+					<input name="comicpress_reset_customize" type="submit" class="button" value="<?php _e( 'Reset Customizer Colors', 'comicpress' ); ?>" />
+					<input type="hidden" name="action" value="comicpress_reset_customize" />
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</div>
 
 	<?php
 }
