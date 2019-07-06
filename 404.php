@@ -9,7 +9,8 @@
  * @package Comicpress
  */
 
-get_header(); ?>
+get_header();
+?>
 
 <div class="post uentry type-page">
 
@@ -18,7 +19,7 @@ get_header(); ?>
 		<div class="post-info">
 
 			<h2 class="page-title">
-				<?php _e( 'Page Not Found', 'comicpress' ); ?>
+				<?php esc_html_e( 'Page Not Found', 'comicpress' ); ?>
 			</h2>
 
 		</div>
@@ -26,10 +27,10 @@ get_header(); ?>
 		<div class="entry">
 
 			<p>
-				<a href="<?php echo site_url(); ?>">
-					<?php _e( 'Click here to return to the home page', 'comicpress' ); ?>
+				<a href="<?php echo esc_html( site_url() ); ?>">
+					<?php esc_html_e( 'Click here to return to the home page', 'comicpress' ); ?>
 				</a>
-				<?php _e( 'or try a search:', 'comicpress' ); ?>
+				<?php esc_html_e( 'or try a search:', 'comicpress' ); ?>
 			</p>
 			<p>
 				<?php get_search_form(); ?>
@@ -45,4 +46,6 @@ get_header(); ?>
 
 </div>
 
-<?php get_footer(); ?>
+<?php
+get_footer();
+?>

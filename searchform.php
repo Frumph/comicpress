@@ -1,5 +1,21 @@
-<form method="get" class="searchform" action="<?php echo home_url(); ?>">
-	<input type="text" value="<?php _e( 'Search...', 'comicpress' ); ?>" name="s" class="s-search" onfocus="this.value=(this.value=='<?php _e( 'Search...', 'comicpress' ); ?>') ? '' : this.value;" onblur="this.value=(this.value=='') ? '<?php _e( 'Search...', 'comicpress' ); ?>' : this.value;" />
-	<button type="submit">&raquo;</button>
+<?php
+/**
+ * Search Form
+ * by Philip M. Hofer (Frumph)
+ * http://frumph.net/
+ *
+ * Method for the Search form.
+ *
+ * @package Comicpress
+ */
+
+?>
+
+<form method="get" class="searchform" action="<?php echo esc_html( home_url() ); ?>">
+	<input type="text" value="<?php esc_html_e( 'Search...', 'comicpress' ); ?>" name="s" class="s-search" onfocus="this.value=(this.value=='<?php esc_html_e( 'Search...', 'comicpress' ); ?>') ? '' : this.value;" onblur="this.value=(this.value=='') ? '<?php esc_html_e( 'Search...', 'comicpress' ); ?>' : this.value;" />
+	<button type="submit">
+		<?php esc_html_e( '&raquo;', 'comicpress' ); ?>
+	</button>
 </form>
+
 <div class="clear"></div>

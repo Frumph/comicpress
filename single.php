@@ -19,16 +19,23 @@ if ( have_posts() ) {
 	?>
 
 	<div <?php post_class(); ?>>
+
 		<div class="post-head"></div>
+
 		<div class="post">
+
 			<p>
-				<?php _e( 'Sorry, post is not found.', 'comicpress' ); ?>
+				<?php esc_html_e( 'Sorry, post is not found.', 'comicpress' ); ?>
 			</p>
+
 			<div class="clear"></div>
+
 		</div>
+
 		<div class="post-foot"></div>
+
 	</div>
+
 	<?php
 }
-
 get_footer();
