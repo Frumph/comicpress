@@ -334,12 +334,15 @@ function comicpress_admin_options() {
 
 	<div id="comicpress-version-title">
 
-		<a href="http://frumph.net/">
-			ComicPress
-			<?php
-			echo comicpress_themeinfo( 'version' );
-			?>
-		</a>
+		<?php
+		printf(
+			/* translators: 1: Link to website 2: Additional link attribute 3: Theme versions number*/
+			__( '<a href="%1$1s" %2$2s> ComicPress</a> %3$3s', 'comicpress' ),
+			esc_url( 'http://frumph.net/' ),
+			'target="_blank" rel="noopener noreferrer"',
+			comicpress_themeinfo( 'version' )
+		);
+		?>
 
 	</div>
 
