@@ -1,7 +1,9 @@
 <?php
 
 if ( ! function_exists( 'comicpress_copyright_text' ) ) {
+
 	function comicpress_copyright_text() {
+
 		$output  = "<p class=\"copyright-info\">\r\n";
 		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
@@ -23,7 +25,9 @@ if ( ! function_exists( 'comicpress_copyright_text' ) ) {
 }
 
 if ( ! function_exists( 'comicpress_hosted_on' ) ) {
+
 	function comicpress_hosted_on() {
+
 		if ( is_multisite() ) {
 			$current_site = get_current_site();
 			if ( ! isset( $current_site->site_name ) ) {
@@ -39,7 +43,9 @@ if ( ! function_exists( 'comicpress_hosted_on' ) ) {
 }
 
 if ( ! function_exists( 'comicpress_copyright_info' ) ) {
+
 	function comicpress_copyright_info() {
+
 		$copyright_name                                 = comicpress_themeinfo( 'copyright_name' );
 		if ( empty( $copyright_name ) ) $copyright_name = get_bloginfo( 'name' );
 		$copyright_url                                  = comicpress_themeinfo( 'copyright_url' );
@@ -50,7 +56,9 @@ if ( ! function_exists( 'comicpress_copyright_info' ) ) {
 }
 
 if ( ! function_exists( 'comicpress_copyright_dates' ) ) {
+
 	function comicpress_copyright_dates() {
+
 		global $wpdb;
 		$copyright_dates = $wpdb->get_results("
 					SELECT
@@ -61,7 +69,7 @@ if ( ! function_exists( 'comicpress_copyright_dates' ) ) {
 					WHERE
 					post_status = 'publish'
 					");
-		$output = '';
+		$output          = '';
 		if ( $copyright_dates ) {
 			$copyright = $copyright_dates[0]->firstdate;
 			if ( $copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate ) {
@@ -72,4 +80,3 @@ if ( ! function_exists( 'comicpress_copyright_dates' ) ) {
 		return apply_filters( 'comicpress_copyright_dates', $output );
 	}
 }
-?>

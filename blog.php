@@ -15,7 +15,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 $blog_query = array(
 	'paged'     => $paged,
-	'post_type' => 'post'
+	'post_type' => 'post',
 );
 
 $wp_query = new WP_Query();

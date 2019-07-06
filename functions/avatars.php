@@ -1,7 +1,9 @@
 <?php
 
 if ( ! function_exists( 'comicpress_random_default_avatar') ) {
+
 	function comicpress_random_default_avatar( $id_or_email = '' ) {
+
 		$current_avatar_directory = comicpress_themeinfo( 'avatar_directory' );
 
 		if ( ! empty( $current_avatar_directory ) && ( $current_avatar_directory !== 'none' ) ) {

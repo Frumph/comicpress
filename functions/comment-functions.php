@@ -15,6 +15,7 @@
  * @filter
  */
 function comicpress_avatar() {
+
 	global $comment;
 
 	$url = get_comment_author_url();
@@ -33,10 +34,10 @@ function comicpress_avatar() {
 		if ( ! empty( $current_avatar_directory ) && ( $current_avatar_directory !== 'none' ) ) {
 			$avatar_str = get_avatar( $id_or_email, 64, comicpress_random_default_avatar( $id_or_email ), esc_html( get_comment_author() ) );
 		} else $avatar_str = get_avatar( $id_or_email, 64 );
-		$return_str = str_replace('photo', 'photo instant nocorner itxtalt', $avatar_str);
-		$return_str = str_replace('alt=', 'title="'.esc_html(get_comment_author()).'" alt=', $return_str);
+		$return_str = str_replace( 'photo', 'photo instant nocorner itxtalt', $avatar_str );
+		$return_str = str_replace( 'alt=', 'title="'.esc_html(get_comment_author()).'" alt=', $return_str );
 		echo $return_str;
-		if( $url == true && $url != 'http://' )
+		if ( $url == true && $url != 'http://' )
 			echo '</a>';
 		echo '</div>';
 	}
@@ -52,10 +53,11 @@ function comicpress_avatar() {
  * @since 0.2.2
  */
 function comicpress_comment_author() {
+
 	global $comment;
 
 	$author = get_comment_author();
-	$url = get_comment_author_url();
+	$url    = get_comment_author_url();
 
 	/*
 	* Registered members w/o URL defaults to 'http://'
@@ -84,11 +86,11 @@ function comicpress_comment_author() {
 	* Also properly cites trackbacks/pingbacks
 	*/
 	if( $url ) :
-		$output = '<cite title="' . $url . '">';
+		$output  = '<cite title="' . $url . '">';
 		$output .= '<a href="' . $url . '" title="' . esc_html( $author, 1 ) . '" class="external nofollow">' . $author . '</a>';
 		$output .= '</cite>';
 	else :
-		$output = '<cite>';
+		$output  = '<cite>';
 		$output .= $author;
 		$output .= '</cite>';
 	endif;
@@ -104,13 +106,15 @@ function comicpress_comment_author() {
  * @since 0.2.3
  *
  * @param $comment The comment variable
- * @param $args Array of arguments passed from wp_list_comments
- *  @param $depth What level the particular comment is
+ * @param $args    Array of arguments passed from wp_list_comments
+ * @param $depth   What level the particular comment is
  */
 function comicpress_comments_callback( $comment, $args, $depth ) {
+
 	$GLOBALS['comment']       = $comment;
 	$GLOBALS['comment_depth'] = $depth;
 	?>
+
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 
 		<?php comicpress_avatar(); // Avatar filter ?>
@@ -118,12 +122,15 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 		<div class="comment-content">
 
 			<div class="comment-author vcard">
+
 				<?php comicpress_comment_author(); ?>
+
 			</div>
 
 			<div class="comment-meta-data">
 
 				<span class="comment-time" title="<?php comment_date( 'l, F jS Y, g:ia' ); ?>">
+
 					<?php
 					printf(
 						/* translators: 1: Date 2: Time in comments */
@@ -132,10 +139,14 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 						get_comment_time()
 					);
 					?>
+
 				</span>
 
 				<span class="comment-permalink">
-					<span class="separator">|</span> <a href="#comment-<?php echo str_replace( '&', '&amp;', get_comment_ID() ); ?>" title="<?php _e( 'Permalink to comment', 'comicpress' ); ?>"><?php _e( '#', 'comicpress' ); ?></a>
+					<span class="separator">|</span>
+					<a href="#comment-<?php echo str_replace( '&', '&amp;', get_comment_ID() ); ?>" title="<?php _e( 'Permalink to comment', 'comicpress' ); ?>">
+						<?php _e( '#', 'comicpress' ); ?>
+					</a>
 				</span>
 
 				<?php
@@ -156,9 +167,13 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 
 					if ( $comment->comment_approved == '0' ) :
 					?>
+
 				<div class="comment-moderated">
+
 					<?php _e( 'Your comment is awaiting moderation.', 'comicpress' ); ?>
+
 				</div>
+
 					<?php
 				endif;
 				?>
@@ -168,14 +183,19 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 			<?php
 			if ( get_comment_type() == 'comment' ) {
 				?>
+
 				<div class="comment-text">
+
 					<?php comment_text(); ?>
+
 				</div>
+
 				<?php
 			}
 			?>
 
 		</div>
+
 		<div class="clear"></div>
 
 		<?php
@@ -190,12 +210,19 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
  * @since 0.2.3
  */
 function comicpress_comments_end_callback() {
+
 	echo '</li>';
 }
 
 function list_pings( $comment, $args, $depth ) {
+
 	$GLOBALS['comment'] = $comment;
 	?>
-		<li id="comment-<?php comment_ID(); ?>"><?php comicpress_comment_author(); ?></li>
+		<li id="comment-<?php comment_ID(); ?>">
+
+			<?php comicpress_comment_author(); ?>
+
+		</li>
+
 	<?php
 }

@@ -3,6 +3,7 @@
 add_action( 'admin_menu', 'comicpress_options_setup' );
 
 function comicpress_options_setup() {
+
 	$options_title = __( 'Options', 'comicpress' );
 	$admin_title   = __( 'ComicPress Options', 'comicpress' );
 	$pagehook      = add_theme_page( $admin_title, $admin_title, 'edit_theme_options', 'comicpress-options', 'comicpress_admin_options' );
@@ -12,30 +13,42 @@ function comicpress_options_setup() {
 }
 
 function comicpress_admin_print_scripts() {
+
 	wp_enqueue_script( 'utils' );
 	wp_enqueue_script( 'jquery' );
 }
 
 function comicpress_admin_print_styles() {
+
 	wp_admin_css( 'css/global' );
 	wp_admin_css( 'css/colors' );
 	wp_admin_css( 'css/ie' );
 	wp_enqueue_style( 'comicpress-options-style', get_template_directory_uri() . '/options/options.css' );
 }
 
-function comicpress_admin_page_head() { ?>
+function comicpress_admin_page_head() {
+?>
 	<!--[if lt ie 8]> <style> div.show { position: static; margin-top: 1px; } #eadmin div.off { height: 22px; } </style> <![endif]-->
 	<?php
 }
 
 function comicpress_admin_options() {
-	?>
+?>
+
 <div class="wrap">
+
 	<div id="eadmin-headericon" style="background: url('<?php echo get_template_directory_uri(); ?>/images/comicpress-rascal.png') no-repeat;"></div>
-		<h2><?php _e( 'ComicPress Options', 'comicpress' ); ?></h2>
-		<?php _e( 'ComicPress is a modular theme that has an abundance of hooks and actions placed in it for additional usability. Ref: Comic Easel', 'comicpress' ); ?><br />
-		<?php _e( 'While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize its functionality.', 'comicpress' ); ?><br />
+
+		<h2>
+			<?php _e( 'ComicPress Options', 'comicpress' ); ?>
+		</h2>
+		<?php _e( 'ComicPress is a modular theme that has an abundance of hooks and actions placed in it for additional usability. Ref: Comic Easel', 'comicpress' ); ?>
+		<br />
+		<?php _e( 'While ComicPress is an excellent stand-alone theme, it can be enhanced in usability with the associated plugins that have been built to utilize its functionality.', 'comicpress' ); ?>
+		<br />
+
 	<div class="clear"></div>
+
 	<?php
 	if ( isset( $_GET['tab'] ) ) {
 		$tab = wp_filter_nohtml_kses( $_GET['tab'] );
@@ -48,11 +61,17 @@ function comicpress_admin_options() {
 		global $comicpress_themeinfo;
 		$comicpress_themeinfo = '';
 		?>
+
 		<div id="message" class="updated">
+
 			<p>
-				<strong><?php _e( 'ComicPress Settings RESET!', 'comicpress' ); ?></strong>
+				<strong>
+					<?php _e( 'ComicPress Settings RESET!', 'comicpress' ); ?>
+				</strong>
 			</p>
+
 		</div>
+
 		<?php
 	}
 	if ( isset( $_REQUEST['action'] ) && $_REQUEST['action'] == 'comicpress_reset_customize' ) {
@@ -61,11 +80,17 @@ function comicpress_admin_options() {
 		global $comicpress_themeinfo;
 		$comicpress_themeinfo = '';
 		?>
+
 		<div id="message" class="updated">
+
 			<p>
-				<strong><?php _e( 'ComicPress Customizer Colors RESET!', 'comicpress' ); ?></strong>
+				<strong>
+					<?php _e( 'ComicPress Customizer Colors RESET!', 'comicpress' ); ?>
+				</strong>
 			</p>
+
 		</div>
+
 		<?php
 	}
 	if ( empty( $comicpress_options ) ) {
@@ -121,7 +146,7 @@ function comicpress_admin_options() {
 				'menubar_social_myspace',
 				'menubar_social_email',
 			) as $key ) {
-				if ( isset( $_REQUEST[$key] ) && !empty( $_REQUEST[$key] ) ) {
+				if ( isset( $_REQUEST[$key] ) && ! empty( $_REQUEST[$key] ) ) {
 					$comicpress_options[$key] = esc_url( $_REQUEST[$key] );
 				} else {
 					// Set to empty if it's not set.
@@ -154,7 +179,7 @@ function comicpress_admin_options() {
 				'content_width',  // Posts & Pages.
 				'content_width_disabled_sidebars',  // Posts & Pages.
 			) as $key ) {
-				if ( isset($_REQUEST[$key] ) )
+				if ( isset( $_REQUEST[$key] ) )
 				$comicpress_options[$key] = wp_filter_nohtml_kses( $_REQUEST[$key] );
 			}
 			$tab = 'postspages';
@@ -216,20 +241,28 @@ function comicpress_admin_options() {
 			?>
 			<div id="message" class="updated">
 				<p>
-					<strong><?php _e( 'ComicPress Settings SAVED!', 'comicpress' ); ?></strong>
+					<strong>
+						<?php _e( 'ComicPress Settings SAVED!', 'comicpress' ); ?>
+					</strong>
 				</p>
+
 			</div>
+
 			<script>
 				function hidemessage() { document.getElementById('message').style.display = 'none'; }
 			</script>
+
 			<?php
 		}
 	}
 	$version            = comicpress_themeinfo( 'version' );
 	$comicpress_options = comicpress_load_options();
 	?>
+
 	<div id="poststuff" class="metabox-holder">
+
 		<div id="eadmin">
+
 			<?php
 			$tab_info = array(
 				'splash'        => __( 'Introduction', 'comicpress' ),
@@ -244,22 +277,31 @@ function comicpress_admin_options() {
 				$tab = 'splash'; }
 			foreach ( $tab_info as $tab_id => $label ) {
 				?>
+
 			<div id="comicpress-tab-<?php echo $tab_id; ?>" class="comicpress-tab <?php echo ( $tab == $tab_id ) ? 'on' : 'off'; ?>">
+
 				<span>
 					<?php echo $label; ?>
 				</span>
+
 			</div>
+
 				<?php
 			}
 			?>
+
 		</div>
 
 		<div id="comicpress-options-pages">
+
 			<?php
 			foreach ( glob( get_template_directory() . '/options/*.php' ) as $file ) { include( $file ); }
 			?>
+
 		</div>
+
 	</div>
+
 	<script type="text/javascript">
 		(function($) {
 			var showPage = function(which) {
@@ -283,14 +325,46 @@ function comicpress_admin_options() {
 			showPage('<?php echo esc_js( $tab ); ?>');
 		}(jQuery));
 	</script>
+
 </div>
-	<div class="eadmin-footer">
+
+<div class="eadmin-footer">
+
 		<div id="comicpress-version-title">
-			<a href="http://frumph.net/">ComicPress <?php echo comicpress_themeinfo( 'version' ); ?></a>
+
+			<a href="http://frumph.net/">
+				ComicPress
+				<?php
+				echo comicpress_themeinfo( 'version' );
+				?>
+			</a>
+
 		</div>
+
 		<br />
-		<?php _e( 'Developed and maintained by', 'comicpress' ); ?> <a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Philip M. Hofer</a> <small>(<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Frumph</a>)</small>, <?php _e( 'Originally created by', 'comicpress' ); ?> <a href="http://mindfaucet.com/" target="_blank" rel="noopener noreferrer">Tyler Martin</a><br />
-		<?php _e( 'If you like the ComicPress theme, please donate. It will help in developing new features and versions.', 'comicpress' ); ?>
+
+		<?php
+		_e( 'Developed and maintained by', 'comicpress' );
+		?>
+		<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">
+			Philip M. Hofer
+		</a>
+		<small>
+			(<a href="http://frumph.net/" target="_blank" rel="noopener noreferrer">Frumph</a>)
+		</small>
+		,
+		<?php
+		_e( 'Originally created by', 'comicpress' );
+		?>
+		<a href="http://mindfaucet.com/" target="_blank" rel="noopener noreferrer">
+		Tyler Martin
+		</a>
+		<br />
+
+		<?php
+		_e( 'If you like the ComicPress theme, please donate. It will help in developing new features and versions.', 'comicpress' );
+		?>
+
 		<table style="margin:0 auto;">
 			<tr>
 				<td style="width:200px;">
@@ -317,6 +391,7 @@ function comicpress_admin_options() {
 				</td>
 			</tr>
 		</table>
+
 	</div>
 
 	<?php

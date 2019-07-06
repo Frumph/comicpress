@@ -21,6 +21,7 @@ add_action( 'save_post', 'comicpress_handle_edit_post_mood_save', 5, 1 );
 add_action( 'add_meta_boxes', 'comicpress_add_moods_into_posts' );
 
 function comicpress_add_moods_into_posts() {
+
 	global $post;
 	if ( ! empty( $post ) && ( $post->post_type == 'comic' || $post->post_type == 'post' ) ) {
 		add_meta_box( 'comicpress_showmood_edit_post', __( 'Moods', 'comicpress' ), 'comicpress_showmood_edit_post', 'post', 'normal', 'low' );
@@ -29,24 +30,29 @@ function comicpress_add_moods_into_posts() {
 
 
 function comicpress_show_mood_in_post() {
+
 	global $post;
 	$moods_directory = comicpress_themeinfo( 'moods_directory' );
-	if ( !empty( $moods_directory ) && $moods_directory != 'none' ) {
-		$mood_file = get_post_meta( get_the_ID(), "mood", true );
-		if ( ! empty( $mood_file ) && $mood_file != '') {
+	if ( ! empty( $moods_directory ) && $moods_directory != 'none' ) {
+		$mood_file = get_post_meta( get_the_ID(), 'mood', true );
+		if ( ! empty( $mood_file ) && $mood_file != '' ) {
 			$mood = explode( ".", $mood_file );
 			$mood = reset( $mood );
 			if ( ! empty( $mood_file ) && file_exists( get_stylesheet_directory() . '/images/moods/' . $moods_directory . '/' . $mood_file ) ) {
 				?>
+
 				<div class="post-mood post-<?php echo $mood; ?>">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" />
 				</div>
+
 				<?php
-			} elseif ( !empty( $mood_file ) && file_exists( get_template_directory() . '/images/moods/' .$moods_directory . '/' . $mood_file) ) {
+			} elseif ( ! empty( $mood_file ) && file_exists( get_template_directory() . '/images/moods/' . $moods_directory . '/' . $mood_file ) ) {
 				?>
+
 				<div class="post-mood post-<?php echo $mood; ?>">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo $mood_file; ?>" alt="<?php echo $mood; ?>" title="<?php echo $mood; ?>" />
 				</div>
+
 				<?php
 			}
 		}

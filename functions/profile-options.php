@@ -15,6 +15,7 @@
  * This contact elements are scheduled to be removed from WordPress at some point.
  */
 function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
+
 	if ( isset( $contactmethods['aim'] ) ) unset( $contactmethods['aim'] );
 	if ( isset( $contactmethods['googleplus'] ) ) unset( $contactmethods['googleplus'] );
 	if ( isset( $contactmethods['jabber'] ) ) unset( $contactmethods['jabber'] );
@@ -33,6 +34,7 @@ add_filter( 'user_contactmethods', 'comicpress_remove_unwanted_contactmethods' ,
  * When activated, this must be integrated into author.php in table 'user-contacts'.
  */
 function add_new_contactmethods( $methods ) {
+
 	// Default contact methods.
 	$methods['twitter']  = 'Twitter (url)';
 	$methods['facebook'] = 'Facebook (url)';

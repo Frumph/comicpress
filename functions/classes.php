@@ -11,6 +11,7 @@
 add_filter( 'body_class', 'comicpress_body_class' );
 
 function comicpress_body_class( $classes = array() ) {
+
 	global  $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
 
 	if ( is_user_logged_in() ) {
@@ -88,6 +89,7 @@ function comicpress_body_class( $classes = array() ) {
 add_filter( 'post_class', 'comicpress_post_class' );
 
 function comicpress_post_class( $classes = '' ) {
+
 	global $post;
 	static $post_alt;
 
@@ -133,6 +135,7 @@ function comicpress_post_class( $classes = '' ) {
 add_filter( 'comment_class', 'comicpress_comment_class' );
 
 function comicpress_comment_class( $classes = '' ) {
+
 	global $current_user;
 
 	/* http://microid.org */
@@ -146,4 +149,3 @@ function comicpress_comment_class( $classes = '' ) {
 	if ( $current_user->user_email == $email ) $classes[] = 'ucomment';
 	return $classes;
 }
-?>

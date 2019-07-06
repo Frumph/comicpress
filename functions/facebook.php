@@ -3,6 +3,7 @@
 add_action( 'wp_head', 'opengraph_make_thumbnail_for_youtube' );
 
 function opengraph_make_thumbnail_for_youtube() {
+
 	global $post;
 	if ( $post ) {
 		$pattern = '/(?:youtube\.com\/(?:[^\/]+\/[^\/]+\/|(?:v|e(?:mbed)?)\/|[^#]*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i';

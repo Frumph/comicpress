@@ -5,7 +5,9 @@ if ( ! comicpress_is_signup() && ! comicpress_sidebars_disabled() ) {
 	if ( comicpress_is_layout( '3clgn' ) ) comicpress_get_sidebar( 'right' );
 }
 ?>
+
 		</div>
+
 <?php
 if ( ! comicpress_is_signup() && ! comicpress_sidebars_disabled() ) {
 	if ( comicpress_is_layout( '3cl,3cr' ) ) comicpress_get_sidebar( 'left' );
@@ -13,5 +15,7 @@ if ( ! comicpress_is_signup() && ! comicpress_sidebars_disabled() ) {
 }
 ?>
 		<div class="clear"></div>
+
 	</div>
+
 </div>
