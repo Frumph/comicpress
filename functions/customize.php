@@ -33,6 +33,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/*	Range Slider with READ ONLY output bubble after */
 		public function render_content() {
 			?>
+
 			<label>
 				<span class="customize-control-title">
 					<?php echo esc_html( $this->label ); ?>
@@ -45,19 +46,24 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					<?php echo esc_html( $this->value() ); ?>
 				</span>
 			</label>
+
 			<?php
 		}
 	}
 	class WP_Customize_RangeAndText_Control extends WP_Customize_Control {
 		/* 	Range Slider with Input Bubble */
 		public function render_content() {
-			$min = ''; $max = '';
+			$min   = '';
+			$max   = '';
 			$attrs = $this->input_attrs;
 			foreach ( $attrs as $key=>$val ) {
-				if ( $key=='min' ) { $min = $val;}
-				if ( $key=='max' ) { $max = $val;}
+				if ( $key == 'min' ) {
+					$min = $val;}
+				if ( $key == 'max' ) {
+					$max = $val;}
 			}
 			?>
+
 			<label>
 				<span class="customize-control-title">
 					<?php echo esc_html( $this->label ); ?>
@@ -78,6 +84,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				};
 				"></span>
 			</label>
+
 			<?php
 		}
 	}
@@ -98,7 +105,7 @@ class comicpress_Customize {
 	 * @since ComicPress 4.2
 	 */
 
-	public $css_array = Array();
+	public $css_array = array();
 
 	public static function register( $wp_customize ) {
 
@@ -109,34 +116,33 @@ class comicpress_Customize {
 			'description' => __( 'Allows you to customize layout settings for ComicPress.', 'comicpress' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
-			)
-		);
+		) );
+
 		// $wp_customize->add_section( 'comicpress-background-colors' , array('title' => __( 'Background Colors', 'comicpress' ), 'capability' => 'edit_theme_options'));
 		$wp_customize->add_section( 'colors', array(
 			'title'       => __( 'Background Colors', 'comicpress' ),
 			'description' => __( 'Colors that are in the background of each of the sections.', 'comicpress' ),
 			'priority'    => 20,
 			'capability'  => 'edit_theme_options',
-			)
-		);
+		) );
+
 		$wp_customize->add_section( 'comicpress-text-colors', array(
 			'title'      => __( 'Text Colors', 'comicpress' ),
 			'priority'   => 30,
 			'capability' => 'edit_theme_options',
-			)
-		);
+		) );
+
 		$wp_customize->add_section( 'comicpress-link-colors', array(
 			'title'      => __( 'Link Colors', 'comicpress' ),
 			'priority'   => 40,
 			'capability' => 'edit_theme_options',
-			)
-		);
+		) );
+
 		$wp_customize->add_section( 'comicpress-logo-options', array(
 			'title'      => __( 'Logo', 'comicpress' ),
 			'priority'   => 50,
 			'capability' => 'edit_theme_options',
-			)
-		);
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize-select-layout', array(
 			'default'           => '3c',
@@ -144,8 +150,7 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
+		) );
 
 		$choices = array(
 			'3c'  => __( '3 Column (default)', 'comicpress' ),
@@ -159,7 +164,7 @@ class comicpress_Customize {
 		if ( function_exists( 'ceo_pluginfo' ) ) {
 			$choices['3clgn'] = __( '3 Column, Graphic Novel style, main sidebar on left', 'comicpress' );
 			$choices['3crgn'] = __( '3 Column, Graphic Novel style, main sidebar on right', 'comicpress' );
-		}
+		};
 
 		$wp_customize->add_control( 'comicpress-customize-select-layout-control', array(
 			'label'    => __( 'Choose a layout', 'comicpress' ),
@@ -167,8 +172,7 @@ class comicpress_Customize {
 			'section'  => 'comicpress-scheme-options',
 			'type'     => 'select',
 			'choices'  => $choices,
-			)
-		);
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize-select-scheme', array(
 			'default'           => 'none',
@@ -176,8 +180,7 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
+		) );
 
 		$wp_customize->add_control( 'comicpress-customize-select-scheme-control', array(
 			'label'    => __( 'Choose a scheme', 'comicpress' ),
@@ -185,20 +188,19 @@ class comicpress_Customize {
 			'section'  => 'comicpress-scheme-options',
 			'type'     => 'select',
 			'choices'  => array(
-				'none' => __( 'No Scheme', 'comicpress' ),
+				'none'   => __( 'No Scheme', 'comicpress' ),
 				/* translators: Name of customize scheme Boxed */
-				'boxed' => __( 'Boxed', 'comicpress' ),
+				'boxed'  => __( 'Boxed', 'comicpress' ),
 				/* translators: Name of customize scheme Sandy */
-				'sandy' => __( 'Sandy', 'comicpress' ),
+				'sandy'  => __( 'Sandy', 'comicpress' ),
 				/* translators: Name of customize scheme Mecha */
-				'mecha' => __( 'Mecha', 'comicpress' ),
+				'mecha'  => __( 'Mecha', 'comicpress' ),
 				/* translators: Name of customize scheme CEasel */
 				'ceasel' => __( 'CEasel', 'comicpress' ),
 				/* translators: Name of customize scheme High Society */
-				'high' => __( 'High Society', 'comicpress' ),
-				)
-			)
-		);
+				'high'   => __( 'High Society', 'comicpress' ),
+			),
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize-range-site-width', array(
 			'default'           => '980',
@@ -206,8 +208,8 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
+		) );
+
 		$wp_customize->add_control( new WP_Customize_RangeAndText_Control( $wp_customize, 'comicpress-customize-range-site-width', array(
 			'label'       => __( 'Site Width Control', 'comicpress' ),
 			'description' => __( 'Minimum value is 780px, maximum is 1600px width - Currently saved at:', 'comicpress' ) . ' ' . get_theme_mod( 'comicpress-customize-range-site-width', 980 ) . 'px',
@@ -215,13 +217,11 @@ class comicpress_Customize {
 			'section'     => 'comicpress-scheme-options',
 			'type'        => 'range',
 			'input_attrs' => array(
-				'min'     => 780,
-				'max'     => 1600,
-				'step'    => 2,
+				'min'  => 780,
+				'max'  => 1600,
+				'step' => 2,
 			),
-			)
-		)
-		);
+		) ) );
 
 		$wp_customize->add_setting( 'comicpress-customize-range-left-sidebar-width', array(
 			'default'           => '200',
@@ -229,22 +229,20 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
-		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-left-sidebar-width-control' , array(
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-left-sidebar-width-control', array(
 			'label'       => __( 'Left Sidebar Width', 'comicpress' ),
 			'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at:', 'comicpress' ) . ' ' . get_theme_mod( 'comicpress-customize-range-left-sidebar-width', 200 ) . 'px',
 			'settings'    => 'comicpress-customize-range-left-sidebar-width',
 			'section'     => 'comicpress-scheme-options',
 			'type'        => 'range',
 			'input_attrs' => array(
-				'min'     => 200,
-				'max'     => 400,
-				'step'    => 2,
+				'min'  => 200,
+				'max'  => 400,
+				'step' => 2,
 			),
-			)
-		)
-		);
+		) ) );
 
 		$wp_customize->add_setting( 'comicpress-customize-range-right-sidebar-width', array(
 			'default'           => '200',
@@ -252,22 +250,20 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			)
-	);
-		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-right-sidebar-width-control' , array(
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Range_Control( $wp_customize, 'comicpress-customize-range-right-sidebar-width-control', array(
 			'label'       => __( 'Right Sidebar Width', 'comicpress' ),
-			'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at:', 'comicpress' ) . ' ' . get_theme_mod( 'comicpress-customize-range-right-sidebar-width', 200 ). 'px',
+			'description' => __( 'Minimum value is 200px, maximum is 400px width - Currently saved at:', 'comicpress' ) . ' ' . get_theme_mod( 'comicpress-customize-range-right-sidebar-width', 200 ) . 'px',
 			'settings'    => 'comicpress-customize-range-right-sidebar-width',
 			'section'     => 'comicpress-scheme-options',
 			'type'        => 'range',
 			'input_attrs' => array(
-				'min'     => 200,
-				'max'     => 400,
-				'step'    => 2,
+				'min'  => 200,
+				'max'  => 400,
+				'step' => 2,
 			),
-			)
-		)
-		);
+		) ) );
 
 		$wp_customize->add_setting( 'comicpress-customize-detach-footer', array(
 			'default'           => false,
@@ -275,16 +271,15 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'comicpress_sanitize_checkbox',
-			)
-		);
+		) );
+
 		$wp_customize->add_control( 'comicpress-customize-detach-footer-control', array(
 			'settings'    => 'comicpress-customize-detach-footer',
 			'label'       => __( 'Detach Footer', 'comicpress' ),
 			'description' => __( 'Detach the footer to below the main content? (Already appears detached on some schemes *but isn\'t)', 'comicpress' ),
 			'section'     => 'comicpress-scheme-options',
 			'type'        => 'checkbox',
-			)
-		);
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-rounded', array(
 			'default'           => false,
@@ -292,16 +287,15 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'comicpress_sanitize_checkbox',
-			)
-		);
+		) );
+
 		$wp_customize->add_control( 'comicpress-customize-checkbox-rounded-control', array(
 			'settings'    => 'comicpress-customize-checkbox-rounded',
 			'label'       => __( 'Rounded Corners', 'comicpress' ),
 			'description' => __( 'Rounded corners on Post/Page Navigation Sections', 'comicpress' ),
 			'section'     => 'comicpress-scheme-options',
 			'type'        => 'checkbox',
-			)
-		);
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize-checkbox-header-hotspot', array(
 			'default'           => false,
@@ -309,16 +303,15 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'comicpress_sanitize_checkbox',
-			)
-		);
+		) );
+
 		$wp_customize->add_control( 'comicpress-customize-checkbox-header-hotspot-control', array(
 			'settings'    => 'comicpress-customize-checkbox-header-hotspot',
 			'label'       => __( 'Clickable Header Image', 'comicpress' ),
 			'description' => __( 'Make the header title and description become a clickable hotspot for the entire header? (If you do the logo will not display right)', 'comicpress' ),
 			'section'     => 'header_image',
 			'type'        => 'checkbox',
-			)
-		);
+		) );
 
 		$wp_customize->add_setting( 'comicpress-customize[logo]', array(
 			'default'           => '',
@@ -326,15 +319,13 @@ class comicpress_Customize {
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'esc_url_raw',
-			)
-		);
+		) );
+
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'comicpress-customize-logo-image', array(
 			'label'    => __( 'Logo, 120px height x 160px width', 'comicpress' ),
 			'section'  => 'comicpress-logo-options',
 			'settings' => 'comicpress-customize[logo]',
-			)
-		)
-		);
+		) ) );
 
 		if ( function_exists( 'ceo_pluginfo' ) ) {
 			$wp_customize->add_setting( 'comicpress-customize-comic-in-column', array(
@@ -342,16 +333,15 @@ class comicpress_Customize {
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'comicpress_sanitize_checkbox',
-				)
-			);
+			) );
+
 			$wp_customize->add_control( 'comicpress-customize-comic-in-column-control', array(
 				'settings'    => 'comicpress-customize-comic-in-column',
 				'label'       => __( 'Comic in content column?', 'comicpress' ),
 				'description' => __( 'Put the comic into the content column? This must be done for the Graphic Novel Layouts.', 'comicpress' ),
 				'section'     => 'comicpress-scheme-options',
 				'type'        => 'checkbox',
-				)
-			);
+			) );
 		}
 
 		$css_array = array(
@@ -452,7 +442,8 @@ class comicpress_Customize {
 				'description' => '.bypostauthor',
 				'section'     => 'colors',
 				'label'       => __( 'Comments Made By Post Author', 'comicpress' ),
-				'default'     => '',),
+				'default'     => '',
+			),
 			array(
 				'slug'        => 'bypostauthor_meta_data_background',
 				'description' => '.bypostauthor .comment-meta-data',
@@ -476,7 +467,7 @@ class comicpress_Customize {
 				'default'     => '',
 			),
 			array(
-				'slug' => 'header_textcolor',
+				'slug'        => 'header_textcolor',
 				'description' => '#header',
 				'section'     => 'comicpress-text-colors',
 				'label'       => __( 'Header', 'comicpress' ),
@@ -653,7 +644,8 @@ class comicpress_Customize {
 			),
 			array(
 				'slug'        => 'footer_acolor',
-				'description' => '#footer a', 'section' => 'comicpress-link-colors',
+				'description' => '#footer a',
+				'section'     => 'comicpress-link-colors',
 				'label'       => __( 'Footer', 'comicpress' ),
 				'default'     => '',
 			),
@@ -677,7 +669,7 @@ class comicpress_Customize {
 				'section'     => 'comicpress-link-colors',
 				'label'       => '',
 				'default'     => '',
-			)
+			),
 		);
 
 		// Additions for CE.
@@ -729,15 +721,15 @@ class comicpress_Customize {
 		$priority_value = 11;
 		foreach ( $css_array as $setinfo ) {
 			$setinfo_register_name = 'comicpress-customize[' . $setinfo['slug'] . ']';
-			$default = ( isset( $setinfo['default'] ) ) ? $setinfo['default'] : '';
+			$default               = ( isset( $setinfo['default'] ) ) ? $setinfo['default'] : '';
 			$wp_customize->add_setting( $setinfo_register_name, array(
 				'default'           => $default,
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_hex_color',
-				)
-			);
+			) );
+
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
 					$wp_customize,
@@ -751,12 +743,11 @@ class comicpress_Customize {
 				)
 			);
 			$priority_value++;
-//			$wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
+			// $wp_customize->get_setting($setinfo['slug'])->transport = 'postMessage';
 		}
 
-
-      //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
-		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+      // 4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
+		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	}
 
@@ -770,9 +761,9 @@ class comicpress_Customize {
 	 */
 	public static function header_output() {
 
-		$style_output = '';
+		$style_output   = '';
 		$settings_array = array(
-			// background colors
+			// Background colors.
 			array(
 				'slug'      => 'page_background',
 				'element'   => '#page',
@@ -1104,9 +1095,10 @@ class comicpress_Customize {
 				'default'   => '',
 				'important' => true,
 			),
-			);
+		);
 
 		if ( function_exists( 'ceo_pluginfo' ) ) {
+
 			$settings_array[] = array(
 				'slug'      => 'comic_wrap_background',
 				'element'   => '#comic-wrap',
@@ -1154,168 +1146,250 @@ class comicpress_Customize {
 
 <!--Customizer CSS-->
 <style type="text/css">
-<?php
-	$customize = get_theme_mod('comicpress-customize');
 
-// get defaults here:
-	$default_width = 980;
-	$comicpress_options = comicpress_load_options();
-// if the theme mod returns no value for a selected layout at all but cp_options exists
-	if ( isset($comicpress_options['layout'] ) && ! intval(get_theme_mod( 'comicpress-customize-select-layout', 0))) {
-		switch ($comicpress_options['layout']) {
-			case '2cl':
-			case '2cr':
+		<?php
+		$customize = get_theme_mod( 'comicpress-customize' );
+
+		// Get defaults here.
+		$default_width      = 980;
+		$comicpress_options = comicpress_load_options();
+		// If the theme mod returns no value for a selected layout at all but cp_options exists.
+		if ( isset( $comicpress_options['layout'] ) && ! intval( get_theme_mod( 'comicpress-customize-select-layout', 0 ) ) ) {
+			switch ( $comicpress_options['layout'] ) {
+				case '2cl':
+				case '2cr':
+				case 'ncl':
+					$default_width = 780;
+				break;
+				case '3c':
+				case '3cl':
+				case '3cr':
+				case '3clw':
+				case '3crw':
+				case '3clgn':
+				case '3crgn':
+				default:
+					$default_width = 980;
+					break;
+			}
+		}
+
+		$page_width          = intval( get_theme_mod( 'comicpress-customize-range-site-width', $default_width ) );
+		$layout              = get_theme_mod( 'comicpress-customize-select-layout', '3c' );
+		$comic_width         = intval( $page_width ) + 40;
+		$scheme              = get_theme_mod( 'comicpress-customize-select-scheme', 'none' );
+		$left_sidebar_width  = get_theme_mod( 'comicpress-customize-range-left-sidebar-width', 200 ) + 4;
+		$right_sidebar_width = get_theme_mod( 'comicpress-customize-range-right-sidebar-width', 200 ) + 4;
+		$style_output        = '';
+		if ( ( $scheme !== 'sandy' ) && ( $scheme !== 'high' ) ) {
+			$style_output .= "\t#page {
+				width: " . $page_width . "px;
+				max-width: " . $page_width . "px;
+		}
+		\r\n";
+
+		} else {
+			if ( ( $scheme == 'sandy' ) || ( $scheme == 'high' ) )
+			$style_output .= "\t#page, #page-wide {
+				width: " . $comic_width . "px!important;
+				max-width: 100%!important;
+			}\r\n";
+
+			$style_output .= "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer, #footer-sidebar-wrapper {
+				width: " . $page_width . "px;
+				max-width: " . $page_width . "px;
+			}
+			\r\n";
+
+			$style_output .= "\t#comic-wrap {
+				max-width: 100%;
+			}
+			\r\n";
+		}
+
+		$content       = '';
+		$content_width = '';
+		switch ( $layout ) {
 			case 'ncl':
-				$default_width = 780;
+				$add_width     = 0;
+				$content_width = $page_width + $add_width;
+				break;
+			case '2cl':
+				$add_width                            = 0;
+				if ( $scheme == 'ceasel' ) $add_width = $add_width + 2;
+				if ( $scheme = 'high' ) $add_width    = $add_width + 6;
+				$content_width                        = $page_width - ( $left_sidebar_width + $add_width );
+				break;
+			case '2cr':
+				$add_width                          = 6;
+				if ($scheme == 'ceasel') $add_width = $add_width + 2;
+				$content_width                      = $page_width - ( $right_sidebar_width + $add_width );
+				break;
+			case '3clgn':
+				$add_width                            = 6;
+				if ( $scheme == 'ceasel' ) $add_width = $add_width + 4;
+				$content_width                        = $page_width - ( $left_sidebar_width + $add_width );
+				$add_inside                           = 4;
+				if ($scheme == 'high') $add_inside    = $add_inside + 4;
+				$inside_content_width                 = $content_width - ( $right_sidebar_width + $add_inside );
+				break;
+			case '3crgn':
+				$add_width                            = 6;
+				if ( $scheme == 'ceasel' ) $add_width = $add_width + 2;
+				$content_width                        = $page_width - ( $right_sidebar_width + $add_width );
+				$add_inside                           = 4;
+				if ( $scheme == 'high' ) $add_inside  = $add_inside + 4;
+				$inside_content_width                 = $content_width - ( $left_sidebar_width + $add_inside );
 				break;
 			case '3c':
 			case '3cl':
 			case '3cr':
-			case '3clw':
-			case '3crw':
-			case '3clgn':
-			case '3crgn':
 			default:
-				$default_width = 980;
+				$add_width                            = 10;
+				if ( $scheme == 'ceasel' ) $add_width = $add_width + 2;
+				$content_width                        = $page_width - ( $left_sidebar_width + $right_sidebar_width + $add_width );
 				break;
+
 		}
-	}
 
-	$page_width = intval(get_theme_mod('comicpress-customize-range-site-width', $default_width));
-	$layout = get_theme_mod('comicpress-customize-select-layout', '3c');
-	$comic_width = intval($page_width) + 40;
-	$scheme = get_theme_mod('comicpress-customize-select-scheme', 'none');
-	$left_sidebar_width = get_theme_mod('comicpress-customize-range-left-sidebar-width', 200)+4;
-	$right_sidebar_width = get_theme_mod('comicpress-customize-range-right-sidebar-width', 200)+4;
-	$style_output = '';
-	if (($scheme !== 'sandy') && ($scheme !== 'high')) {
-		$style_output .= "\t#page { width: ".$page_width."px; max-width: ".$page_width."px; }\r\n";
-	} else {
-		if (($scheme == 'sandy') || ($scheme == 'high'))
-			$style_output .= "\t#page, #page-wide { width: ".$comic_width."px!important; max-width: 100%!important; }\r\n";
-		$style_output .= "\t#header, #menubar-wrapper, #breadcrumb-wrapper, #subcontent-wrapper, #footer, #footer-sidebar-wrapper { width: ".$page_width."px; max-width: ".$page_width."px; }\r\n";
-		$style_output .= "\t#comic-wrap { max-width: 100%; }\r\n";
-	}
-	$content = '';
-	$content_width = '';
-	switch ($layout) {
-		case 'ncl':
-			$add_width = 0;
-			$content_width = $page_width + $add_width;
-			break;
-		case '2cl':
-			$add_width = 0;
-			if ($scheme == 'ceasel') $add_width = $add_width + 2;
-			if ($scheme = 'high') $add_width = $add_width + 6;
-			$content_width = $page_width - ($left_sidebar_width + $add_width);
-			break;
-		case '2cr':
-			$add_width = 6;
-			if ($scheme == 'ceasel') $add_width = $add_width + 2;
-			$content_width = $page_width - ($right_sidebar_width + $add_width);
-			break;
-		case '3clgn':
-			$add_width = 6;
-			if ($scheme == 'ceasel') $add_width = $add_width + 4;
-			$content_width = $page_width - ($left_sidebar_width + $add_width);
-			$add_inside = 4;
-			if ($scheme == 'high') $add_inside = $add_inside + 4;
-			$inside_content_width = $content_width - ($right_sidebar_width + $add_inside);
-			break;
-		case '3crgn':
-			$add_width = 6;
-			if ($scheme == 'ceasel') $add_width = $add_width + 2;
-			$content_width = $page_width - ($right_sidebar_width + $add_width);
-			$add_inside = 4;
-			if ($scheme == 'high') $add_inside = $add_inside + 4;
-			$inside_content_width = $content_width - ($left_sidebar_width + $add_inside);
-			break;
-		case '3c':
-		case '3cl':
-		case '3cr':
-		default:
-			$add_width = 10;
-			if ($scheme == 'ceasel') $add_width = $add_width +2;
-			$content_width = $page_width - ($left_sidebar_width + $right_sidebar_width + $add_width);
-			break;
+		$style_output .= "\t#add-width {
+			width: " . $add_width . "px;
+		}
+		\r\n";
 
-	}
-	$style_output .= "\t#add-width { width: ".$add_width."px; }\r\n";
-	$style_output .= "\t#content-column { width: ".$content_width."px; max-width: 100%; }\r\n";
-	if (!empty($inside_content_width)) {
-		if ($scheme == 'high') {
-			$style_output .= "\t#content { width: ".$inside_content_width."px; padding-right: 4px; max-width: 100%; }\r\n";
-		} else
-			$style_output .= "\t#content { width: ".$inside_content_width."px; max-width: 100%; }\r\n";
-	}
-	$style_output .= "\t#sidebar-right { width: ".$right_sidebar_width."px; }\r\n";
-	$style_output .= "\t#sidebar-left { width: ".$left_sidebar_width."px; }\r\n";
-	foreach ($settings_array as $setting) {
-		$content = $setting['default'];
-		if (isset($customize[$setting['slug']])) $content = $customize[$setting['slug']];
-		$important = ($setting['important']) ? '!important' : '';
-		if (!empty($content) && $content) $style_output .= "\t".$setting['element'].' { '.$setting['style'].': '.$content.$important."; }\r\n";
-	}
-	if (isset($customize['logo']) && !empty($customize['logo'])) {
-		$style_output .= "\t.header-info { display: inline-block; float: left; padding: 0; }\r\n";
-		$style_output .= "\t.header-info h1 { margin: 0; padding: 0; background: url(\"".$customize['logo']."\") top left no-repeat; background-size: contain; display: cover; }\r\n";
-		$style_output .= "\t.header-info h1 a { padding: 0; margin: 0; height: 120px; width: 180px; text-indent: -9999px; white-space: nowrap; overflow: hidden; display: block;}\r\n";
-		$style_output .= "\t.header-info .description { display: none!important; }\r\n";
-	}
-	echo $style_output;
-?>
+		$style_output .= "\t#content-column {
+			width: " . $content_width . "px;
+			max-width: 100%;
+		}
+		\r\n";
+
+		if ( ! empty( $inside_content_width ) ) {
+			if ( $scheme == 'high' ) {
+				$style_output .= "\t#content {
+					width: " . $inside_content_width . "px;
+					padding-right: 4px;
+					max-width: 100%;
+				}
+				\r\n";
+			} else $style_output .= "\t#content {
+				width: " . $inside_content_width . "px;
+				max-width: 100%;
+			}
+			\r\n";
+		}
+
+		$style_output .= "\t#sidebar-right {
+			width: " . $right_sidebar_width . "px;
+			}
+			\r\n";
+
+		$style_output .= "\t#sidebar-left {
+			width: " . $left_sidebar_width . "px;
+		}
+		\r\n";
+
+		foreach ( $settings_array as $setting ) {
+			$content = $setting['default'];
+			if ( isset( $customize[$setting['slug']] ) ) $content = $customize[$setting['slug']];
+			$important = ( $setting['important'] ) ? '! important' : '';
+			if ( ! empty( $content ) && $content ) $style_output .= "\t" . $setting['element'] . ' { ' . $setting['style'] . ': ' . $content . $important . "; }\r\n";
+		}
+
+		if ( isset( $customize['logo'] ) && ! empty( $customize['logo'] ) ) {
+			$style_output .= "\t.header-info {
+				display: inline-block;
+				float: left;
+				padding: 0;
+			}
+			\r\n";
+
+			$style_output .= "\t.header-info h1 {
+				margin: 0;
+				padding: 0;
+				background: url(\"" . $customize['logo'] . "\") top left no-repeat;
+				background-size: contain;
+				display: cover;
+			}
+			\r\n";
+
+			$style_output .= "\t.header-info h1 a {
+				padding: 0;
+				margin: 0;
+				height: 120px;
+				width: 180px;
+				text-indent: -9999px;
+				white-space: nowrap;
+				overflow: hidden;
+				display: block;
+			}
+			\r\n";
+
+			$style_output .= "\t.header-info .description {
+				display: none!important;
+			}
+			\r\n";
+		}
+		echo $style_output;
+		?>
+
 </style>
-<!--/Customizer CSS-->
-      <?php
-   }
 
-   /**
-    * This outputs the javascript needed to automate the live settings preview.
-    * Also keep in mind that this function isn't necessary unless your settings
-    * are using 'transport'=>'postMessage' instead of the default 'transport'
-    * => 'refresh'
-    *
-    * Used by hook: 'customize_preview_init'
-    *
-    * @see add_action('customize_preview_init',$func)
-    * @since MyTheme 1.0
-    */
+<!--/Customizer CSS-->
+
+		<?php
+	}
+
+	/**
+	 * This outputs the javascript needed to automate the live settings preview.
+	 * Also keep in mind that this function isn't necessary unless your settings
+	 * are using 'transport'=>'postMessage' instead of the default 'transport'
+	 * => 'refresh'
+	 *
+	 * Used by hook: 'customize_preview_init'
+	 *
+	 * @see add_action('customize_preview_init',$func)
+	 * @since MyTheme 1.0
+	 */
 	public static function live_preview() {
+
 		wp_enqueue_script(
-			'comicpress-themecustomizer', // Give the script a unique ID
-			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
-			array(  'jquery', 'customize-preview' ), // Define dependencies
-			'', // Define a version (optional)
-			true // Specify whether to put in footer (leave this true)
+			'comicpress-themecustomizer', // Give the script a unique ID.
+			get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file.
+			array( 'jquery', 'customize-preview' ), // Define dependencies.
+			'', // Define a version (optional).
+			true // Specify whether to put in footer (leave this true).
 		);
 	}
 
 }
 
 // Setup the Theme Customizer settings and controls...
-add_action( 'customize_register' , array( 'comicpress_Customize' , 'register' ) );
+add_action( 'customize_register', array( 'comicpress_Customize', 'register' ) );
 
-// Output custom CSS to live site
-add_action( 'wp_head' , array( 'comicpress_Customize' , 'header_output' ) );
+// Output custom CSS to live site.
+add_action( 'wp_head', array( 'comicpress_Customize', 'header_output' ) );
 
-// Enqueue live preview javascript in Theme Customizer admin screen
-add_action( 'customize_preview_init' , array( 'comicpress_Customize' , 'live_preview' ) );
+// Enqueue live preview javascript in Theme Customizer admin screen.
+add_action( 'customize_preview_init', array( 'comicpress_Customize', 'live_preview' ) );
 
-add_filter('body_class', 'comicpress_customize_body_class');
+add_filter( 'body_class', 'comicpress_customize_body_class' );
 
-function comicpress_customize_body_class($classes = array()){
-	$classes[] = 'scheme-'.get_theme_mod('comicpress-customize-select-scheme', 'none');
-	if (get_theme_mod('comicpress-customize-checkbox-rounded', false)) $classes[] = 'rounded-posts';
-	if (function_exists('ceo_pluginfo') && get_theme_mod('comicpress-customize-comic-in-column', false)) $classes[] = 'cnc';
+function comicpress_customize_body_class( $classes = array() ) {
+
+	$classes[] = 'scheme-' . get_theme_mod( 'comicpress-customize-select-scheme', 'none' );
+	if ( get_theme_mod( 'comicpress-customize-checkbox-rounded', false ) ) $classes[] = 'rounded-posts';
+	if ( function_exists( 'ceo_pluginfo' ) && get_theme_mod( 'comicpress-customize-comic-in-column', false ) ) $classes[] = 'cnc';
 	return $classes;
 }
 
 function controls_stylesheet() {
-	wp_enqueue_style('comicpress-options-style', get_template_directory_uri() . '/options/options.css');
+
+	wp_enqueue_style( 'comicpress-options-style', get_template_directory_uri() . '/options/options.css' );
 }
 add_action( 'admin_enqueue_scripts', 'controls_stylesheet' );
 
-function no_IE_range(){
-	wp_enqueue_script('no_IE_range', get_template_directory_uri() . '/js/no_IE_range.js');
+function no_IE_range() {
+
+	wp_enqueue_script( 'no_IE_range', get_template_directory_uri() . '/js/no_IE_range.js' );
 }
-add_action( 'admin_enqueue_scripts', 'no_IE_range');
+add_action( 'admin_enqueue_scripts', 'no_IE_range' );

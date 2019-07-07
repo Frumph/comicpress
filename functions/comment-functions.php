@@ -25,7 +25,9 @@ function comicpress_avatar() {
 	if ( $comment_type != 'pingback' && $comment_type != 'trackback' ) {
 
 		echo '<div class="comment-avatar">';
+
 		if ( $url == true && $url != 'http://' )
+
 			echo '<a href="' . $url . '" rel="external nofollow" title="' . esc_html( get_comment_author() ) . '">';
 		$id_or_email = get_comment_author_email();
 		if ( empty( $id_or_email ) ) $id_or_email = get_comment_author();
@@ -34,11 +36,13 @@ function comicpress_avatar() {
 		if ( ! empty( $current_avatar_directory ) && ( $current_avatar_directory !== 'none' ) ) {
 			$avatar_str = get_avatar( $id_or_email, 64, comicpress_random_default_avatar( $id_or_email ), esc_html( get_comment_author() ) );
 		} else $avatar_str = get_avatar( $id_or_email, 64 );
-		$return_str = str_replace( 'photo', 'photo instant nocorner itxtalt', $avatar_str );
-		$return_str = str_replace( 'alt=', 'title="'.esc_html(get_comment_author()).'" alt=', $return_str );
+		$return_str        = str_replace( 'photo', 'photo instant nocorner itxtalt', $avatar_str );
+		$return_str        = str_replace( 'alt=', 'title="' . esc_html( get_comment_author() ) . '" alt=', $return_str );
 		echo $return_str;
 		if ( $url == true && $url != 'http://' )
+
 			echo '</a>';
+
 		echo '</div>';
 	}
 
@@ -85,7 +89,7 @@ function comicpress_comment_author() {
 	* Display link and cite if URL is set
 	* Also properly cites trackbacks/pingbacks
 	*/
-	if( $url ) :
+	if ( $url ) :
 		$output  = '<cite title="' . $url . '">';
 		$output .= '<a href="' . $url . '" title="' . esc_html( $author, 1 ) . '" class="external nofollow">' . $author . '</a>';
 		$output .= '</cite>';
@@ -117,7 +121,7 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 
-		<?php comicpress_avatar(); // Avatar filter ?>
+		<?php comicpress_avatar(); // Avatar filter. ?>
 
 		<div class="comment-content">
 
@@ -144,8 +148,8 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 
 				<span class="comment-permalink">
 					<span class="separator">|</span>
-					<a href="#comment-<?php echo str_replace( '&', '&amp;', get_comment_ID() ); ?>" title="<?php _e( 'Permalink to comment', 'comicpress' ); ?>">
-						<?php _e( '#', 'comicpress' ); ?>
+					<a href="#comment-<?php echo str_replace( '&', '&amp;', get_comment_ID() ); ?>" title="<?php esc_html_e( 'Permalink to comment', 'comicpress' ); ?>">
+						<?php esc_html_e( '#', 'comicpress' ); ?>
 					</a>
 				</span>
 
@@ -170,7 +174,7 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 
 				<div class="comment-moderated">
 
-					<?php _e( 'Your comment is awaiting moderation.', 'comicpress' ); ?>
+					<?php esc_html_e( 'Your comment is awaiting moderation.', 'comicpress' ); ?>
 
 				</div>
 

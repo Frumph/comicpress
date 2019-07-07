@@ -27,7 +27,7 @@ get_header();
 		<div class="entry">
 
 			<p>
-				<a href="<?php echo esc_html( site_url() ); ?>">
+				<a href="<?php echo esc_url( site_url() ); ?>">
 					<?php esc_html_e( 'Click here to return to the home page', 'comicpress' ); ?>
 				</a>
 				<?php esc_html_e( 'or try a search:', 'comicpress' ); ?>

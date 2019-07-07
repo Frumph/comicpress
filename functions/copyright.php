@@ -11,7 +11,7 @@ if ( ! function_exists( 'comicpress_copyright_text' ) ) {
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 		$output .= "<span class=\"footer-pipe\">|</span> ";
-		$output .= __( 'Subscribe:', 'comicpress' ) . "<a href=\"" . get_bloginfo('rss2_url') . "\">" . __( 'RSS', 'comicpress' ) . "</a>\r\n";
+		$output .= __( 'Subscribe:', 'comicpress' ) . "<a href=\"" . get_bloginfo( 'rss2_url' ) . "\">" . __( 'RSS', 'comicpress' ) . "</a>\r\n";
 		$output .= "</span>\r\n";
 		if ( ! comicpress_themeinfo( 'disable_scroll_to_top' ) ) {
 			$output .= "<span class=\"footer-uptotop\">";
@@ -35,8 +35,8 @@ if ( ! function_exists( 'comicpress_hosted_on' ) ) {
 			} else {
 				$site_name = $current_site->site_name;
 			}
-			$output = "<span class=\"copyright-pipe\">|</span> ";
-			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="http://' . $current_site->domain. $current_site->path . '">'. $site_name . '</a> ';
+			$output  = "<span class=\"copyright-pipe\">|</span> ";
+			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="http://' . $current_site->domain . $current_site->path . '">' . $site_name . '</a> ';
 			return apply_filters( 'comicpress_hosted_on', $output );
 		}
 	}
@@ -50,7 +50,7 @@ if ( ! function_exists( 'comicpress_copyright_info' ) ) {
 		if ( empty( $copyright_name ) ) $copyright_name = get_bloginfo( 'name' );
 		$copyright_url                                  = comicpress_themeinfo( 'copyright_url' );
 		if ( empty( $copyright_url ) ) $copyright_url   = home_url();
-		$copyright                                      = __( '&copy;', 'comicpress' ) . comicpress_copyright_dates() . ' ' . apply_filters( 'comicpress_copyright_info_name', '<a href="'.$copyright_url.'">' . $copyright_name . '</a>' ) . ' ';
+		$copyright                                      = __( '&copy;', 'comicpress' ) . comicpress_copyright_dates() . ' ' . apply_filters( 'comicpress_copyright_info_name', '<a href="' . $copyright_url . '">' . $copyright_name . '</a>' ) . ' ';
 		return apply_filters( 'comicpress_copyright_info', $copyright );
 	}
 }

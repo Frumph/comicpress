@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'comicpress_random_default_avatar') ) {
+if ( ! function_exists( 'comicpress_random_default_avatar' ) ) {
 
 	function comicpress_random_default_avatar( $id_or_email = '' ) {
 

@@ -35,7 +35,6 @@ function comicpress_body_class( $classes = array() ) {
 	if ( $is_iphone ) $classes[]     = 'iphone';
 	if ( wp_is_mobile() ) $classes[] = 'is-mobile';
 
-
 	// Hijacked from the hybrid theme, http://themehybrid.com/ .
 	if ( is_single() ) {
 		foreach ( (array) get_the_category( $wp_query->post->ID ) as $cat ) :
@@ -58,9 +57,9 @@ function comicpress_body_class( $classes = array() ) {
 	$rightnow  = (int) date( 'Gi', $timestamp );
 	$ampm      = date( 'a', $timestamp );
 	$classes[] = $ampm;
-	//	$classes[] = 'time-'.$rightnow;
+	// $classes[] = 'time-'.$rightnow;
 	if ( $rightnow > 559 && (int) $rightnow < 1800 ) $classes[] = 'day';
-	if ( $rightnow < 600 || (int )$rightnow > 1759 ) $classes[] = 'night';
+	if ( $rightnow < 600 || (int) $rightnow > 1759 ) $classes[] = 'night';
 
 	if ( $rightnow > 2329 || $rightnow < 30 ) $classes[]   = 'midnight';
 	if ( $rightnow > 459 && $rightnow < 1130 ) $classes[]  = 'morning';
@@ -111,7 +110,7 @@ function comicpress_post_class( $classes = '' ) {
 	else $classes[] = 'even';
 
 	/* Sticky class (only on home/blog page). */
-	if( is_sticky() && is_home() )
+	if ( is_sticky() && is_home() )
 		$classes[] = 'sticky';
 
 	/* Author class. */
@@ -141,9 +140,9 @@ function comicpress_comment_class( $classes = '' ) {
 	/* http://microid.org */
 
 	$email = get_comment_author_email();
-	$url = get_comment_author_url();
+	$url   = get_comment_author_url();
 	if ( ! empty( $email ) && ! empty( $url ) ) {
-		$microid   = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $email) . sha1( $url ) );
+		$microid   = 'microid-mailto+http:sha1:' . sha1( sha1( 'mailto:' . $email ) . sha1( $url ) );
 		$classes[] = $microid;
 	}
 	if ( $current_user->user_email == $email ) $classes[] = 'ucomment';

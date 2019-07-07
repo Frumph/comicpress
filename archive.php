@@ -164,7 +164,7 @@ if ( have_posts() ) {
 						</span>
 					</td>
 					<td class="archive-title">
-						<a href="<?php echo get_permalink( $post->ID ); ?>" rel="bookmark" title="<?php _e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>">
+						<a href="<?php echo esc_html( get_permalink( $post->ID ) ); ?>" rel="bookmark" title="<?php esc_html_e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>">
 							<?php the_title(); ?>
 						</a>
 					</td>
