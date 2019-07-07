@@ -31,7 +31,7 @@ if ( ! is_home() && ! is_archive() && ! is_search() ) {
 
 				<div class="sticky-image">
 
-					<?php _e( 'Featured Post', 'comicpress' ); ?>
+					<?php esc_html_e( 'Featured Post', 'comicpress' ); ?>
 
 				</div>
 

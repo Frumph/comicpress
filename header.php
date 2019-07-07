@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<meta name="ComicPress" content="<?php echo comicpress_themeinfo( 'version' ); ?>" />
+		<meta name="ComicPress" content="<?php echo esc_html( comicpress_themeinfo( 'version' ) ); ?>" />
 
 		<?php
 		wp_head();
@@ -27,7 +27,7 @@
 					<div class="header-info">
 
 						<h1>
-							<a href="<?php echo home_url(); ?>">
+							<a href="<?php echo esc_html( home_url() ); ?>">
 
 								<?php
 								bloginfo( 'name' );

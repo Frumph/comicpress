@@ -21,7 +21,7 @@
 
 			<?php
 			if ( get_theme_mod( 'comicpress-customize-comic-in-column', false ) ) do_action( 'comic-area' );
-			if ( ! comicpress_is_signup() && !comicpress_sidebars_disabled()) {
+			if ( ! comicpress_is_signup() && ! comicpress_sidebars_disabled() ) {
 				if ( comicpress_is_layout( '3crgn' ) ) comicpress_get_sidebar( 'left' );
 			}
 			?>
@@ -32,7 +32,7 @@
 				do_action( 'comicpress-narrowcolumn-area' );
 				if ( ! comicpress_sidebars_disabled() ) {
 					if ( ! is_front_page() && ! comicpress_themeinfo( 'over-blog-sidebar-all-posts' ) ) return;
-				comicpress_get_sidebar( 'over-blog' );
+					comicpress_get_sidebar( 'over-blog' );
 				}
 				do_action( 'comic-blog-area' );
 				?>

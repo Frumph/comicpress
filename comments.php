@@ -3,7 +3,7 @@ if ( post_password_required() ) {
 	?>
 
 	<p class="nocomments">
-		<?php _e( 'This post is password protected. Enter the password to view comments.', 'comicpress' ); ?>
+		<?php esc_html_e( 'This post is password protected. Enter the password to view comments.', 'comicpress' ); ?>
 	</p>
 
 	<?php
@@ -173,7 +173,7 @@ if ( comments_open() ) {
 	?>
 
 	<p class="closed-comments">
-		<?php _e( 'Comments are closed.', 'comicpress' ); ?>
+		<?php esc_html_e( 'Comments are closed.', 'comicpress' ); ?>
 	</p>
 
 	<?php

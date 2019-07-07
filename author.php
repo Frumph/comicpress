@@ -23,7 +23,7 @@ if ( get_query_var( 'author_name' ) ) {
 } if ( empty( $curauth ) ) { ?>
 
 <h2>
-	<?php _e( 'No such author.', 'comicpress' ); ?>
+	<?php esc_html_e( 'No such author.', 'comicpress' ); ?>
 </h2>
 
 	<?php
@@ -71,7 +71,7 @@ if ( get_query_var( 'author_name' ) ) {
 						<table class="user-info">
 							<tr>
 								<td class="user-info-name">
-									<?php _e( 'Registered on', 'comicpress' ); ?>
+									<?php esc_html_e( 'Registered on', 'comicpress' ); ?>
 								</td>
 								<td class="user-info-value">
 									<?php
@@ -81,7 +81,7 @@ if ( get_query_var( 'author_name' ) ) {
 							</tr>
 							<tr>
 								<td class="user-info-name">
-									<?php _e( 'Posts #', 'comicpress' ); ?>
+									<?php esc_html_e( 'Posts #', 'comicpress' ); ?>
 								</td>
 								<td class="user-info-value">
 									<?php
@@ -105,7 +105,7 @@ if ( get_query_var( 'author_name' ) ) {
 
 						<tr>
 							<td class="user-contacts-serv">
-								<?php _e( 'Email', 'comicpress' ); ?>
+								<?php esc_html_e( 'Email', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
 								<a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank">
@@ -116,12 +116,12 @@ if ( get_query_var( 'author_name' ) ) {
 
 							<?php
 						}
-						if ( !empty( $curauth->user_url ) ) {
+						if ( ! empty( $curauth->user_url ) ) {
 							?>
 
 						<tr>
 							<td class="user-contacts-serv">
-								<?php _e( 'Website', 'comicpress' ); ?>
+								<?php esc_html_e( 'Website', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
 								<a href="<?php echo $curauth->user_url; ?>" target="_blank">
@@ -136,7 +136,7 @@ if ( get_query_var( 'author_name' ) ) {
 
 						<tr>
 							<td class="user-contacts-serv">
-								<?php _e( 'Twitter', 'comicpress' ); ?>
+								<?php esc_html_e( 'Twitter', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
 								<a href="<?php echo $curauth->twitter; ?>" target="_blank">
@@ -152,7 +152,7 @@ if ( get_query_var( 'author_name' ) ) {
 
 						<tr>
 							<td class="user-contacts-serv">
-								<?php _e( 'Facebook', 'comicpress' ); ?>
+								<?php esc_html_e( 'Facebook', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
 								<a href="<?php echo $curauth->facebook; ?>" target="_blank">
