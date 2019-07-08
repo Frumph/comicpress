@@ -1,4 +1,5 @@
 <div id="comicpress-general">
+
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -148,14 +149,21 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_general" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_general" />
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 	</form>
+
 </div>

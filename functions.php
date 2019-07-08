@@ -390,7 +390,7 @@ function comicpress_load_options() {
 			'enable_last_modified_in_posts'     => false,
 			'moods_directory'                   => 'none',
 			// Comments.
-			'disable_comment_note' => true,
+			'disable_comment_note'              => true,
 			'disable_comment_javascript'        => false,
 			'enable_comments_on_homepage'       => false,
 			'avatar_directory'                  => 'none',

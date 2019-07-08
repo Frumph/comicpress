@@ -29,16 +29,18 @@ function comicpress_avatar() {
 		if ( $url == true && $url != 'http://' )
 
 			echo '<a href="' . $url . '" rel="external nofollow" title="' . esc_html( get_comment_author() ) . '">';
-		$id_or_email = get_comment_author_email();
-		if ( empty( $id_or_email ) ) $id_or_email = get_comment_author();
 
-		$current_avatar_directory = comicpress_themeinfo( 'avatar_directory' );
-		if ( ! empty( $current_avatar_directory ) && ( $current_avatar_directory !== 'none' ) ) {
-			$avatar_str = get_avatar( $id_or_email, 64, comicpress_random_default_avatar( $id_or_email ), esc_html( get_comment_author() ) );
-		} else $avatar_str = get_avatar( $id_or_email, 64 );
-		$return_str        = str_replace( 'photo', 'photo instant nocorner itxtalt', $avatar_str );
-		$return_str        = str_replace( 'alt=', 'title="' . esc_html( get_comment_author() ) . '" alt=', $return_str );
-		echo $return_str;
+			$id_or_email = get_comment_author_email();
+			if ( empty( $id_or_email ) ) $id_or_email = get_comment_author();
+
+			$current_avatar_directory = comicpress_themeinfo( 'avatar_directory' );
+			if ( ! empty( $current_avatar_directory ) && ( $current_avatar_directory !== 'none' ) ) {
+				$avatar_str = get_avatar( $id_or_email, 64, comicpress_random_default_avatar( $id_or_email ), esc_html( get_comment_author() ) );
+			} else $avatar_str = get_avatar( $id_or_email, 64 );
+			$return_str        = str_replace( 'photo', 'photo instant nocorner itxtalt', $avatar_str );
+			$return_str        = str_replace( 'alt=', 'title="' . esc_html( get_comment_author() ) . '" alt=', $return_str );
+			echo $return_str;
+
 		if ( $url == true && $url != 'http://' )
 
 			echo '</a>';

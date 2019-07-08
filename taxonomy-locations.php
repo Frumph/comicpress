@@ -6,7 +6,7 @@ if ( ! empty( $location ) ) {
 	$args = array(
 		'post_type'  => 'page',
 		'meta_key'   => 'location-overwrite',
-		'meta_value' => $location
+		'meta_value' => $location,
 	);
 
 	$insertPage = new WP_Query();
@@ -36,7 +36,7 @@ if ( ! empty( $location ) ) {
 		$first_seen_object = reset( $qposts );
 		$first_seen_title  = $first_seen_object->post_title;
 		$first_seen_id     = $first_seen_object->ID;
-		$last_seen_object  = end ($qposts );
+		$last_seen_object  = end( $qposts );
 		$last_seen_title   = $last_seen_object->post_title;
 		$last_seen_id      = $last_seen_object->ID;
 		if ( $first_seen_id == $last_seen_id ) {

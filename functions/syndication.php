@@ -17,10 +17,14 @@ function comicpress_include_custom_post_types_in_rss( $query ) {
 		);
 		$output     = 'names';
 		$operator   = 'and';
-		$post_types = get_post_types( $args , $output , $operator );
+		$post_types = get_post_types( $args, $output, $operator );
 		// Remove 'pages' from the RSS.
-		$post_types = array_merge( $post_types, array( 'post' ) );
-		$query->set( 'post_type' , $post_types );
+		$post_types = array_merge(
+			$post_types, array(
+				'post',
+			)
+		);
+		$query->set( 'post_type', $post_types );
 	}
 	return $query;
 }

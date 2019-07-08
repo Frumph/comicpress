@@ -2,11 +2,11 @@
 get_header();
 $character = ( isset( $wp_query->query_vars['characters'] ) ) ? esc_html( $wp_query->query_vars['characters'] ) : '';
 
-if ( ! empty( $character) ) {
+if ( ! empty( $character ) ) {
 	$args = array(
 		'post_type'  => 'page',
 		'meta_key'   => 'location-overwrite',
-		'meta_value' => $character
+		'meta_value' => $character,
 	);
 
 	$insertPage = new WP_Query();

@@ -15,8 +15,8 @@ function comicpress_body_class( $classes = array() ) {
 	global  $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $post, $wp_query, $comicpress_is_signup;
 
 	if ( is_user_logged_in() ) {
-		$current_user = wp_get_current_user();
-		$user_login   = $current_user->user_login;
+		$current_user                            = wp_get_current_user();
+		$user_login                              = $current_user->user_login;
 		if ( ! empty( $user_login ) ) $classes[] = 'user-' . strtolower( $user_login );
 	} else {
 		$classes[] = 'user-guest';
@@ -78,9 +78,9 @@ function comicpress_body_class( $classes = array() ) {
 
 	if ( comicpress_sidebars_disabled() ) $classes[] = 'wide';
 
-	$layout = get_theme_mod( 'comicpress-customize-select-layout', '3c' );
+	$layout                         = get_theme_mod( 'comicpress-customize-select-layout', '3c' );
 	if ( empty( $layout ) ) $layout = '3c';
-	$classes[] = 'layout-' . $layout;
+	$classes[]                      = 'layout-' . $layout;
 
 	return $classes;
 }

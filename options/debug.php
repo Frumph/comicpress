@@ -1,4 +1,5 @@
 <div id="comicpress-debug">
+
 	<form method="post" id="myForm-debug" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -46,13 +47,20 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_debug" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_debug" />
+
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 		<table class="widefat">
@@ -79,4 +87,5 @@
 		</table>
 
 	</form>
+
 </div>

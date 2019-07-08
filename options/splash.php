@@ -1,4 +1,5 @@
 <div id="comicpress-splash">
+
 	<?php wp_nonce_field( 'update-options' ); ?>
 
 	<div class="comicpress-options">

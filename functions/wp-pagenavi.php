@@ -42,10 +42,10 @@ if ( comicpress_themeinfo( 'enable_numbered_pagination' ) ) {
 			/*
 			$numposts = 0;
 			if(strpos(get_query_var('tag'), " ")) {
-			    preg_match('#^(.*)\sLIMIT#siU', $request, $matches);
-			    $fromwhere = $matches[1];
-			    $results = $wpdb->get_results($fromwhere);
-			    $numposts = count($results);
+				preg_match('#^(.*)\sLIMIT#siU', $request, $matches);
+				$fromwhere = $matches[1];
+				$results = $wpdb->get_results($fromwhere);
+				$numposts = count($results);
 			} else {
 				preg_match('#FROM\s*+(.+?)\s+(GROUP BY|ORDER BY)#si', $request, $matches);
 				$fromwhere = $matches[1];
@@ -86,7 +86,7 @@ if ( comicpress_themeinfo( 'enable_numbered_pagination' ) ) {
 						}
 						if ( $start_page >= 2 && $pages_to_show < $max_page ) {
 							$first_page_text = str_replace( "%TOTAL_PAGES%", number_format_i18n( $max_page ), $pagenavi_options['first_text'] );
-							echo '<li><a href="' . esc_url( get_pagenum_link() ) . '" title="' . $first_page_text.'">' . $first_page_text . '</a></li>';
+							echo '<li><a href="' . esc_url( get_pagenum_link() ) . '" title="' . $first_page_text . '">' . $first_page_text . '</a></li>';
 							/* if(!empty($pagenavi_options['dotleft_text'])) {
 								echo '<li class="paginav-extend">'.$pagenavi_options['dotleft_text'].'</li>';
 							} */
@@ -114,17 +114,17 @@ if ( comicpress_themeinfo( 'enable_numbered_pagination' ) ) {
 							echo "</li>\r\n";
 						}
 						if ( $end_page < $max_page ) {
-/*							if(!empty($pagenavi_options['dotright_text'])) {
+							/* if(!empty($pagenavi_options['dotright_text'])) {
 								echo '<li class="paginav-extend">'.$pagenavi_options['dotright_text'].'</li>';
 							} */
 							$last_page_text = str_replace( "%TOTAL_PAGES%", number_format_i18n( $max_page ), $pagenavi_options['last_text'] );
 							echo '<li><a href="' . esc_url( get_pagenum_link( $max_page ) ) . '" title="' . $last_page_text . '">' . $last_page_text . '</a></li>';
 						}
 						break;
-					case 2;
+					case 2:
 						echo '<form action="' . htmlspecialchars( $_SERVER['PHP_SELF'] ) . '" method="get">' . "\n";
 						echo '<select size="1" onchange="document.location.href = this.options[this.selectedIndex].value;">'."\n";
-						for($i = 1; $i <= $max_page; $i++ ) {
+						for ( $i = 1; $i <= $max_page; $i++ ) {
 							$page_num = $i;
 							if ( $page_num == 1 ) {
 								$page_num = 0;
@@ -145,10 +145,10 @@ if ( comicpress_themeinfo( 'enable_numbered_pagination' ) ) {
 				echo '<div class="pagejumper-wrap">';
 				echo '<form id="pagejumper" action="" method="get">';
 				echo '<input type="text" size="2" name="paged" id="paged" />';
-				echo '<input type="submit" value="'.__( 'Go', 'comicpress' ).'" />';
+				echo '<input type="submit" value="' . __( 'Go', 'comicpress' ) . '" />';
 				echo '</form>';
 				echo '</div>';
-				echo $after."\n";
+				echo $after . "\n";
 			}
 		}
 	}
@@ -156,21 +156,19 @@ if ( comicpress_themeinfo( 'enable_numbered_pagination' ) ) {
 	function comicpress_pagenavi_init() {
 
 		// Add Options.
-		$pagenavi_options = array();
-		$pagenavi_options['pages_text'] = __( 'Page %CURRENT_PAGE% of %TOTAL_PAGES%', 'comicpress' );
-		$pagenavi_options['current_text'] = '%PAGE_NUMBER%';
-		$pagenavi_options['page_text'] = '%PAGE_NUMBER%';
-		$pagenavi_options['first_text'] = __( '&laquo; First', 'comicpress' );
-		$pagenavi_options['last_text'] = __( 'Last &raquo;', 'comicpress' );
-		$pagenavi_options['next_text'] = __( '&raquo;', 'comicpress' );
-		$pagenavi_options['prev_text'] = __( '&laquo;', 'comicpress' );
+		$pagenavi_options                  = array();
+		$pagenavi_options['pages_text']    = __( 'Page %CURRENT_PAGE% of %TOTAL_PAGES%', 'comicpress' );
+		$pagenavi_options['current_text']  = '%PAGE_NUMBER%';
+		$pagenavi_options['page_text']     = '%PAGE_NUMBER%';
+		$pagenavi_options['first_text']    = __( '&laquo; First', 'comicpress' );
+		$pagenavi_options['last_text']     = __( 'Last &raquo;', 'comicpress' );
+		$pagenavi_options['next_text']     = __( '&raquo;', 'comicpress' );
+		$pagenavi_options['prev_text']     = __( '&laquo;', 'comicpress' );
 		$pagenavi_options['dotright_text'] = __( '...', 'comicpress' );
-		$pagenavi_options['dotleft_text'] = __( '...', 'comicpress' );
-		$pagenavi_options['style'] = 1;
-		$pagenavi_options['num_pages'] = 5;
-		$pagenavi_options['always_show'] = 0;
+		$pagenavi_options['dotleft_text']  = __( '...', 'comicpress' );
+		$pagenavi_options['style']         = 1;
+		$pagenavi_options['num_pages']     = 5;
+		$pagenavi_options['always_show']   = 0;
 		return $pagenavi_options;
 	}
-
 }
-?>

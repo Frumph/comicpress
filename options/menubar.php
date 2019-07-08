@@ -1,4 +1,5 @@
 <div id="comicpress-menubar">
+
 	<form method="post" id="myForm-menubar" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -228,14 +229,22 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_menubar" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_menubar" />
+
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 	</form>
+
 </div>

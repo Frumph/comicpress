@@ -23,7 +23,7 @@ function comicpress_remove_unwanted_contactmethods( $contactmethods ) {
 	return $contactmethods;
 }
 
-add_filter( 'user_contactmethods', 'comicpress_remove_unwanted_contactmethods' ,10 ,1 );
+add_filter( 'user_contactmethods', 'comicpress_remove_unwanted_contactmethods', 10, 1 );
 
 /**
  * Add contact methods to the user profil page.

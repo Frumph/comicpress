@@ -1,4 +1,5 @@
 <div id="comicpress-archivesearch">
+
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -32,7 +33,7 @@
 								<?php _e( 'Excerpt or Full Content in archive and search?', 'comicpress' ); ?>
 							</label>
 							<select name="excerpt_or_content_in_archive" id="excerpt_or_content_in_archive">
-								<option class="level-0" value="excerpt" <?php selected ( $comicpress_options['excerpt_or_content_in_archive'], 'excerpt' ); ?>>
+								<option class="level-0" value="excerpt" <?php selected( $comicpress_options['excerpt_or_content_in_archive'], 'excerpt' ); ?>>
 									<?php _e( 'Excerpt', 'comicpress' ); ?>
 								</option>
 								<option class="level-0" value="content" <?php selected( $comicpress_options['excerpt_or_content_in_archive'], 'content' ); ?>>
@@ -95,14 +96,22 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_general" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_archivesearch" />
+
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 	</form>
+
 </div>

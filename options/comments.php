@@ -1,4 +1,5 @@
 <div id="comicpress-comments">
+
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -83,10 +84,11 @@
 									if ( is_dir( $avatar_dirs ) ) {
 										$avatar_dir_name = basename( $avatar_dirs );
 										?>
-								<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ( $current_avatar_directory == $avatar_dir_name ) { ?>selected="selected"<?php } ?>>
-										<?php echo $avatar_dir_name; ?>
-								</option>
-								<?php }
+										<option class="level-0" value="<?php echo $avatar_dir_name; ?>" <?php if ( $current_avatar_directory == $avatar_dir_name ) { ?>selected="selected"<?php } ?>>
+											<?php echo $avatar_dir_name; ?>
+										</option>
+										<?php
+									}
 								}
 								?>
 							</select>
@@ -103,14 +105,22 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_general" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_comments" />
+
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 	</form>
+
 </div>

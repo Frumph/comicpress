@@ -1,4 +1,5 @@
 <div id="comicpress-postspages">
+
 	<form method="post" id="myForm-general" enctype="multipart/form-data" action="?page=comicpress-options">
 		<?php wp_nonce_field( 'update-options' ); ?>
 
@@ -172,13 +173,17 @@
 							<?php _e( 'Moods Directory', 'comicpress' ); ?>
 						</label>
 							<select name="moods_directory" id="moods_directory">
-								<option class="level-0" value="none" <?php if ($current_directory == "none") { ?>selected="selected"<?php } ?>><?php _e( 'none', 'comicpress' ); ?></option>
+								<option class="level-0" value="none" <?php if ( $current_directory == "none" ) { ?>selected="selected"<?php } ?>>
+									<?php _e( 'none', 'comicpress' ); ?>
+								</option>
 								<?php
 								foreach ( $mood_directories as $mood_dirs ) {
 									if ( is_dir( $mood_dirs) ) {
 										$mood_dir_name = basename( $mood_dirs );
 										?>
-										<option class="level-0" value="<?php echo $mood_dir_name; ?>" <?php if ($current_directory == $mood_dir_name) { ?>selected="selected"<?php } ?>><?php echo $mood_dir_name; ?></option>
+										<option class="level-0" value="<?php echo $mood_dir_name; ?>" <?php if ( $current_directory == $mood_dir_name ) { ?>selected="selected"<?php } ?>>
+											<?php echo $mood_dir_name; ?>
+										</option>
 										<?php
 									}
 								}
@@ -265,14 +270,22 @@
 		</div>
 
 		<div class="comicpress-options-save">
+
 			<div class="comicpress-major-publishing-actions">
+
 				<div class="comicpress-publishing-action">
+
 					<input name="comicpress_save_general" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'comicpress' ); ?>" />
 					<input type="hidden" name="action" value="comicpress_save_postspages" />
+
 				</div>
+
 				<div class="clear"></div>
+
 			</div>
+
 		</div>
 
 	</form>
+
 </div>

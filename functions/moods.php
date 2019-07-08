@@ -64,12 +64,14 @@ function comicpress_showmood_edit_post() {
 	$moods_directory = comicpress_themeinfo( 'moods_directory' );
 	if ( ! empty( $moods_directory ) && $moods_directory != 'none' ) {
 		?>
-		<div class="inside" style="overflow: hidden">
-		<?php _e( 'Available Moods, you can set which mood images to use in the comicpress Options.', 'comicpress' ); ?>
-		<br />
-		<br />
-		<?php
 
+		<div class="inside" style="overflow: hidden">
+
+			<?php esc_html_e( 'Available Moods, you can set which mood images to use in the comicpress Options.', 'comicpress' ); ?>
+			<br />
+			<br />
+
+		<?php
 		$currentmood = get_post_meta( $post->ID, "mood", true );
 
 		if ( empty( $currentmood ) || $currentmood == '' || $currentmood == null ) {
@@ -92,20 +94,25 @@ function comicpress_showmood_edit_post() {
 			. __( 'Current Mood:', 'comicpress' ) . ' ' . $mood . ' <br /><br />';
 		if ( ! empty( $results ) ) {
 			?>
+
 			<div style="float:left; margin-top: 70px; text-align: center; width: 68px; overflow: hidden;">
-			<label for="postmood-none" style="cursor:pointer;">
-			none
-			</label>
-			<br />
-			<input name="postmood" style="margin-top: 3px;" id="postmood-anger" type="radio" value="none" <?php if ( $mood == 'none' ) { echo " checked"; } ?> />
+
+				<label for="postmood-none" style="cursor:pointer;">
+				none
+				</label>
+				<br />
+				<input name="postmood" style="margin-top: 3px;" id="postmood-anger" type="radio" value="none" <?php if ( $mood == 'none' ) { echo " checked"; } ?> />
 			</div>
+
 			<?php
 			foreach ( $results as $file ) {
 				$newmood_file = basename( $file );
 				$newmood      = explode( ".", $newmood_file );
 				$newmood      = $newmood[0];
 				?>
+
 				<div style="float:left; margin-top: 10px; text-align: center; width: 68px; overflow: hidden;">
+
 					<label for="postmood-<?php echo $newmood; ?>" style="cursor:pointer;">
 						<img src="<?php echo $moods_uri; ?>/images/moods/<?php echo $moods_directory; ?>/<?php echo basename($file); ?>" />
 						<br />
@@ -114,19 +121,23 @@ function comicpress_showmood_edit_post() {
 					<br />
 					<input  name="postmood" style="margin-top: 3px;" id="postmood-<?php echo $newmood; ?>" type="radio" value="<?php echo $newmood_file; ?>"<?php if ( $mood == $newmood ) { echo " checked"; } ?> />
 				</div>
+
 				<?php
 			}
 		}
 		?>
+
 		</div>
+
 		<?php
 	}
 }
 
 function comicpress_handle_edit_post_mood_save( $post_id ) {
+
 	$moods_directory = comicpress_themeinfo( 'moods_directory' );
 	if ( ! empty( $moods_directory ) && $moods_directory != 'none' ) {
-		$currentmood = get_post_meta( $post_id, "mood", true );
+		$currentmood = get_post_meta( $post_id, 'mood', true );
 		if ( isset( $_POST['postmood'] ) && $_POST['postmood'] !== $currentmood ) {
 			$postmood = $_POST['postmood'];
 			update_post_meta( $post_id, 'mood', $postmood );
