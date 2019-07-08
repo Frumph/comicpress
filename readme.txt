@@ -51,6 +51,12 @@ WordPress: 4.6
 PHP:       5.4
 
 == Changelog ==
+
+= 4.X =
+* changed: Symbols for search button (&raquo;) and image area (&lsaquo; and &rsaquo; are now customizable via language file
+* removed Google+ Service was discontinued
+* under the hood: Code optimizations according to WPCS
+
 = 4.4 =
 * Compliance check for 4.6 of Wordpress
 * Probably breadcrumb fix for property error when trying to retrieve $parent_id
@@ -89,7 +95,7 @@ PHP:       5.4
 * adjustable site width & sidebars in the customizer
 * zappbar support for responsive, mobile friendly comicpress
 * added layout options to the costumizer
-* added locations taxonomy template, for comic easel, for custom location pages 
+* added locations taxonomy template, for comic easel, for custom location pages
 * added new CSS requirements for theme review team for screen readers
 * added theme_support('title_tag') per requirements of theme review team
 * re-added Post/Comic "Moods" for github version

@@ -99,7 +99,7 @@ if ( ! empty( $comments_by_type['comment'] ) ) {
 				<div id="paginav">
 
 					<?phP
-					echo '<ul><li class="paginav-extend">' . __( 'Comment Pages', 'comicpress' ) . '</li>' . $pagelinks . '</ul>';
+					echo '<ul><li class="paginav-extend">' . esc_html__( 'Comment Pages', 'comicpress' ) . '</li>' . $pagelinks . '</ul>';
 					?>
 
 				</div>
@@ -152,7 +152,7 @@ if ( comments_open() ) {
 	$fields = array(
 		'author' => '<p class="comment-form-author">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" />' . ' <label for="author"><small>' . __( '*NAME', 'comicpress' ) . '</small></label></p>',
 		'email'  => '<p class="comment-form-email">' . '<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" /> <label for="email">' . __( '*EMAIL', 'comicpress' ) . '<small> &mdash; <a href="https://gravatar.com" target="_blank" rel="noopener noreferrer">' . __( 'Get a Gravatar', 'comicpress' ) . '</a></small></label></p>',
-		'url'    => '<p class="comment-form-url">' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /> <label for="url">' . __( 'Website URL', 'comicpress' ) . '</label></p>'
+		'url'    => '<p class="comment-form-url">' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /> <label for="url">' . __( 'Website URL', 'comicpress' ) . '</label></p>',
 	);
 	$args   = array(
 		'fields'              => apply_filters( 'comment_form_default_fields', $fields ),
