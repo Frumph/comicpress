@@ -49,7 +49,7 @@ if ( ! get_theme_mod( 'comicpress-customize-detach-footer', false ) ) {
 			<p>
 				<?php
 				echo get_num_queries();
-				_e( 'queries.', 'comicpress' );
+				esc_html_e( 'queries.', 'comicpress' );
 				if ( function_exists( 'memory_get_usage' ) ) {
 					$unit = array(
 						'b',
@@ -60,10 +60,10 @@ if ( ! get_theme_mod( 'comicpress-customize-detach-footer', false ) ) {
 						'pb',
 					);
 					echo @round( memory_get_usage( true ) / pow( 1024, ( $i = floor( log( memory_get_usage( true ), 1024 ) ) ) ), 2 ) . ' ' . $unit[$i];
-					_e( 'Memory usage.', 'comicpress' );
+					esc_html_e( 'Memory usage.', 'comicpress' );
 				}
 				timer_stop( 1 );
-				_e( 'seconds.', 'comicpress' );
+				esc_html_e( 'seconds.', 'comicpress' );
 				?>
 			</p>
 
@@ -129,7 +129,7 @@ if ( get_theme_mod( 'comicpress-customize-detach-footer', false ) ) {
 			<p>
 				<?php
 				echo get_num_queries();
-				_e( 'queries.', 'comicpress' );
+				esc_html_e( 'queries.', 'comicpress' );
 				if ( function_exists( 'memory_get_usage' ) ) {
 					$unit = array(
 						'b',
@@ -140,10 +140,10 @@ if ( get_theme_mod( 'comicpress-customize-detach-footer', false ) ) {
 						'pb',
 					);
 					echo @round( memory_get_usage( true ) / pow( 1024, ( $i = floor( log( memory_get_usage( true ), 1024 ) ) ) ), 2 ) . ' ' . $unit[$i];
-					_e( 'Memory usage.', 'comicpress' );
+					esc_html_e( 'Memory usage.', 'comicpress' );
 				}
 				timer_stop( 1 );
-				_e( 'seconds.', 'comicpress' );
+				esc_html_e( 'seconds.', 'comicpress' );
 				?>
 			</p>
 
