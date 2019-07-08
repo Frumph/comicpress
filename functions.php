@@ -212,7 +212,7 @@ function comicpress_debug_page_foot_code() {
 	<p>
 		<?php
 		echo get_num_queries();
-		_e( 'queries.', 'comicpress' );
+		esc_html_e( 'queries.', 'comicpress' );
 		if ( function_exists( 'memory_get_usage' ) ) {
 			$unit = array(
 				'b',
@@ -223,10 +223,10 @@ function comicpress_debug_page_foot_code() {
 				'pb',
 			);
 			echo @round( memory_get_usage( true ) / pow( 1024, ( $i = floor( log( memory_get_usage( true ), 1024 ) ) ) ), 2 ) . ' ' . $unit[$i];
-			_e( 'Memory usage.', 'comicpress' );
+			esc_html_e( 'Memory usage.', 'comicpress' );
 		}
 		timer_stop( 1 );
-		_e( 'seconds.', 'comicpress' );
+		esc_html_e( 'seconds.', 'comicpress' );
 		?>
 	</p>
 
@@ -462,8 +462,6 @@ function comicpress_themeinfo( $whichinfo = null ) {
 // Dashboard Menu Options - Only run in the wp-admin area.
 if ( is_admin() ) {
 	@require_once( get_template_directory() . '/options.php' );
-	/* translators: theme discription for wp-admin */
-	$bogus_translation = __( 'Publish a WebComic with the ComicPress theme and the Comic Easel plugin.', 'comicpress' );
 }
 
 /**
