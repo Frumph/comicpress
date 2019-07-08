@@ -31,8 +31,8 @@ if ( have_posts() ) :
 	<?php
 	printf(
 		/* translators: Number of found results */
-		_n( '%d result', '%d results', 'comicpress' ),
-		$count
+		esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
+		esc_html( $count )
 	);
 	?>
 

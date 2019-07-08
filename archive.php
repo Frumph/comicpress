@@ -65,7 +65,7 @@ if ( have_posts() ) {
 	?>
 
 	<h2 class="page-title">
-		<?php echo $title_string; ?>
+		<?php echo esc_html( $title_string ); ?>
 	</h2>
 
 	<?php
@@ -77,8 +77,8 @@ if ( have_posts() ) {
 			<?php
 			printf(
 				/* translators: Number of found comic */
-				_n( '%d comic', '%d comics', 'comicpress' ),
-				$count
+				esc_html( _n( '%d comic', '%d comics', $count, 'comicpress' ) ),
+				esc_html( $count )
 			);
 			?>
 
@@ -93,8 +93,8 @@ if ( have_posts() ) {
 			<?php
 			printf(
 				/* translators: Number of found results */
-				_n( '%d result', '%d results', 'comicpress' ),
-				$count
+				esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
+				esc_html( $count )
 			);
 			?>
 
@@ -183,7 +183,8 @@ if ( have_posts() ) {
 
 		<?php
 	} else {
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 			$post_format = ( $post->post_type !== 'post' ) ? $post->post_type : get_post_format();
 			get_template_part( 'content', $post_format );
 		endwhile;
@@ -198,7 +199,7 @@ if ( have_posts() ) {
 	?>
 
 	<h2 class="page-title">
-		<?php echo $title_string; ?>
+		<?php echo esc_html( $title_string ); ?>
 	</h2>
 
 	<div class="archiveresults">
@@ -206,8 +207,8 @@ if ( have_posts() ) {
 		<?php
 		printf(
 			/* translators: Number of found results */
-			_n( '%d result', '%d results', 'comicpress' ),
-			$count
+			esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
+			esc_html( $count )
 		);
 		?>
 
