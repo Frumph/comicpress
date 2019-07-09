@@ -20,10 +20,13 @@ if ( get_query_var( 'author_name' ) ) {
 	$curauth = get_user_by( 'slug', get_query_var( 'author_name' ) );
 } else {
 	$curauth = get_userdata( get_query_var( 'author' ) );
-} if ( empty( $curauth ) ) { ?>
+} if ( empty( $curauth ) ) {
+	?>
 
 <h2>
+
 	<?php esc_html_e( 'No such author.', 'comicpress' ); ?>
+
 </h2>
 
 	<?php
@@ -61,7 +64,7 @@ if ( get_query_var( 'author_name' ) ) {
 					?>
 
 					<h2>
-						<?php echo $authorname; ?>
+						<?php echo esc_html( $authorname ); ?>
 					</h2>
 
 					<?php
@@ -74,9 +77,7 @@ if ( get_query_var( 'author_name' ) ) {
 									<?php esc_html_e( 'Registered on', 'comicpress' ); ?>
 								</td>
 								<td class="user-info-value">
-									<?php
-									echo date_i18n( get_option( 'date_format' ), strtotime( $curauth->user_registered ) );
-									?>
+									<?php echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $curauth->user_registered ) ) ); ?>
 								</td>
 							</tr>
 							<tr>
@@ -86,7 +87,7 @@ if ( get_query_var( 'author_name' ) ) {
 								<td class="user-info-value">
 									<?php
 									$author_id = get_the_author_meta( 'ID' );
-									echo count_user_posts( $author_id );
+									echo esc_html( count_user_posts( $author_id ) );
 									?>
 								</td>
 							</tr>
@@ -108,8 +109,8 @@ if ( get_query_var( 'author_name' ) ) {
 								<?php esc_html_e( 'Email', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
-								<a href="mailto://<?php echo $curauth->user_email; ?>" target="_blank">
-									<?php echo $curauth->user_email; ?>
+								<a href="mailto://<?php echo esc_html( $curauth->user_email ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php echo esc_html( $curauth->user_email ); ?>
 								</a>
 							</td>
 						</tr>
@@ -124,8 +125,8 @@ if ( get_query_var( 'author_name' ) ) {
 								<?php esc_html_e( 'Website', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
-								<a href="<?php echo $curauth->user_url; ?>" target="_blank">
-									<?php echo $curauth->user_url; ?>
+								<a href="<?php echo esc_html( $curauth->user_url ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php echo esc_html( $curauth->user_url ); ?>
 								</a>
 							</td>
 						</tr>
@@ -139,8 +140,8 @@ if ( get_query_var( 'author_name' ) ) {
 								<?php esc_html_e( 'Twitter', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
-								<a href="<?php echo $curauth->twitter; ?>" target="_blank">
-									<?php echo $curauth->twitter; ?>
+								<a href="<?php echo esc_html( $curauth->twitter ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php echo esc_html( $curauth->twitter ); ?>
 								</a>
 							</td>
 						</tr>
@@ -155,8 +156,8 @@ if ( get_query_var( 'author_name' ) ) {
 								<?php esc_html_e( 'Facebook', 'comicpress' ); ?>
 							</td>
 							<td class="user-contacts-url">
-								<a href="<?php echo $curauth->facebook; ?>" target="_blank">
-									<?php echo $curauth->facebook; ?>
+								<a href="<?php echo esc_html( $curauth->facebook ); ?>" target="_blank" rel="noopener noreferrer">
+									<?php echo esc_html( $curauth->facebook ); ?>
 								</a>
 							</td>
 						</tr>
@@ -175,9 +176,7 @@ if ( get_query_var( 'author_name' ) ) {
 
 				<div class="userpage-desc">
 
-					<?php
-					echo $curauth->description;
-					?>
+					<?php echo esc_html( $curauth->description ); ?>
 
 				</div>
 
@@ -199,18 +198,20 @@ if ( get_query_var( 'author_name' ) ) {
 					<?php
 					printf(
 						/* translators: Name of the author */
-						__( 'Posts by %1s &not; ', 'comicpress' ),
-						$authorname
+						esc_html__( 'Posts by %1s &not; ', 'comicpress' ),
+						esc_html( $authorname )
 					);
 					?>
 				</h3>
 				<br />
 
 				<table class="author-posts">
-					<?php
-					while ( have_posts() ) :
-						the_post();
-						?>
+
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
+
 					<tr>
 						<td class="author-archive-date" align="right">
 							<?php the_time( 'M j, Y' ); ?>
@@ -222,9 +223,9 @@ if ( get_query_var( 'author_name' ) ) {
 						</td>
 					</tr>
 
-						<?php
+					<?php
 				endwhile;
-					?>
+				?>
 
 				</table>
 

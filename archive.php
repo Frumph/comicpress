@@ -47,7 +47,7 @@ if ( $count > 0 ) {
 		if ( isset( $wp_query->query_vars['chapters'] ) ) {
 			$taxonomy_name = get_term_by( 'slug', $wp_query->query_vars['chapters'], 'chapters' );
 			if ( ! is_wp_error( $taxonomy_name ) && ! empty( $taxonomy_name ) ) $title_string = $taxonomy_name->name;
-		} elseif (isset($wp_query->query_vars['locations'])) {
+		} elseif ( isset( $wp_query->query_vars['locations'] ) ) {
 			$taxonomy_name = get_term_by( 'slug', $wp_query->query_vars['locations'], 'locations' );
 			if ( ! is_wp_error( $taxonomy_name ) && ! empty( $taxonomy_name ) ) $title_string = $taxonomy_name->name;
 		} elseif ( term_exists( $wp_query->query_vars['term'] ) ) {
@@ -64,47 +64,47 @@ if ( $count > 0 ) {
 if ( have_posts() ) {
 	?>
 
-	<h2 class="page-title">
-		<?php echo esc_html( $title_string ); ?>
-	</h2>
+<h2 class="page-title">
+	<?php echo esc_html( $title_string ); ?>
+</h2>
 
 	<?php
 	if ( isset( $wp_query->query_vars['chapters'] ) || ( $wp_query->query_vars['post_type'] == 'comic' ) ) {
 		?>
 
-		<div class="archiveresults">
+<div class="archiveresults">
 
-			<?php
-			printf(
-				/* translators: Number of found comic */
-				esc_html( _n( '%d comic', '%d comics', $count, 'comicpress' ) ),
-				esc_html( $count )
-			);
-			?>
+		<?php
+		printf(
+			/* translators: Number of found comic */
+			esc_html( _n( '%d comic', '%d comics', $count, 'comicpress' ) ),
+			esc_html( $count )
+		);
+		?>
 
-		</div>
+</div>
 
 		<?php
 	} else {
 		?>
 
-		<div class="archiveresults">
+<div class="archiveresults">
 
-			<?php
-			printf(
-				/* translators: Number of found results */
-				esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
-				esc_html( $count )
-			);
-			?>
+		<?php
+		printf(
+			/* translators: Number of found results */
+			esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
+			esc_html( $count )
+		);
+		?>
 
-		</div>
+</div>
 
 		<?php
 	}
 	?>
 
-	<div class="clear"></div>
+<div class="clear"></div>
 
 	<?php
 	if ( function_exists( 'ceo_pluginfo' ) && ( isset( $wp_query->query_vars['chapters'] ) || isset( $wp_query->query_vars['characters'] ) || isset( $wp_query->query_vars['locations'] ) || ( $wp_query->query_vars['post_type'] == 'comic' ) ) && ( comicpress_themeinfo( 'display_archive_as_links' ) && ! comicpress_is_bbpress() ) ) {
@@ -112,74 +112,76 @@ if ( have_posts() ) {
 			the_post();
 			?>
 
-			<div class="archivecomicthumbwrap">
+<div class="archivecomicthumbwrap">
 
-				<div class="archivecomicthumbdate">
+	<div class="archivecomicthumbdate">
 
-					<?php echo get_the_time( 'M jS, Y' ); ?>
+		<?php echo get_the_time( 'M jS, Y' ); ?>
 
-				</div>
+	</div>
 
-				<div class="archivecomicframe">
+	<div class="archivecomicframe">
 
 			<?php
 			$thumbnail = ceo_display_comic_thumbnail( 'thumbnail', $post );
 			$thumbnail = ( ! $thumbnail ) ? __( 'No Thumbnail or Featured Image Found.', 'comicpress' ) : $thumbnail;
 			?>
 
-					<a href="<?php the_permalink(); ?>" title="<?php echo the_title(); ?>">
-						<?php echo $thumbnail; ?>
-					</a>
-					<br />
+		<a href="<?php the_permalink(); ?>" title="<?php echo the_title(); ?>">
+			<?php echo $thumbnail; ?>
+		</a>
 
-				</div>
+		<br />
 
-			</div>
+	</div>
+
+</div>
 
 			<?php
 		endwhile;
 	} elseif ( comicpress_themeinfo( 'display_archive_as_links' ) || comicpress_is_bbpress() ) {
 		?>
 
-	<div <?php post_class(); ?>>
+<div <?php post_class(); ?>>
 
-		<div class="post-head"></div>
+	<div class="post-head"></div>
 
-		<div class="entry">
+	<div class="entry">
 
-			<table class="archive-table">
+		<table class="archive-table">
 
-				<?php
-				while ( have_posts() ) :
-					the_post();
-					?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
-				<tr>
-					<td class="archive-date">
-						<span class="archive-date-month-day">
-							<?php the_time( 'M d, ' ); ?>
-						</span>
-						<span class="archive-date-year">
-							<?php the_time( 'Y' ); ?>
-						</span>
-					</td>
-					<td class="archive-title">
-						<a href="<?php echo esc_html( get_permalink( $post->ID ) ); ?>" rel="bookmark" title="<?php esc_html_e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>">
-							<?php the_title(); ?>
-						</a>
-					</td>
-				</tr>
+			<tr>
+				<td class="archive-date">
+					<span class="archive-date-month-day">
+						<?php the_time( 'M d, ' ); ?>
+					</span>
+					<span class="archive-date-year">
+						<?php the_time( 'Y' ); ?>
+					</span>
+				</td>
+				<td class="archive-title">
+					<a href="<?php echo esc_html( get_permalink( $post->ID ) ); ?>" rel="bookmark" title="<?php esc_html_e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>">
+						<?php the_title(); ?>
+					</a>
+				</td>
+			</tr>
 
 					<?php
 		endwhile;
-				?>
+			?>
 
-			</table>
+		</table>
 
-		</div>
-
-		<div class="post-foot"></div>
 	</div>
+
+	<div class="post-foot"></div>
+
+</div>
 
 		<?php
 	} else {
@@ -198,25 +200,26 @@ if ( have_posts() ) {
 } else {
 	?>
 
-	<h2 class="page-title">
-		<?php echo esc_html( $title_string ); ?>
-	</h2>
+<h2 class="page-title">
+	<?php echo esc_html( $title_string ); ?>
+</h2>
 
-	<div class="archiveresults">
+<div class="archiveresults">
 
-		<?php
-		printf(
-			/* translators: Number of found results */
-			esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
-			esc_html( $count )
-		);
-		?>
+	<?php
+	printf(
+		/* translators: Number of found results */
+		esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
+		esc_html( $count )
+	);
+	?>
 
-	</div>
+</div>
 
-	<div class="clear"></div>
+<div class="clear"></div>
 
 	<?php
 }
+
 get_footer();
 ?>
