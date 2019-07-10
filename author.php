@@ -214,7 +214,7 @@ if ( get_query_var( 'author_name' ) ) {
 
 					<tr>
 						<td class="author-archive-date" align="right">
-							<?php the_time( 'M j, Y' ); ?>
+							<?php the_time( _x( 'M j, Y', 'author page table date format', 'comicpress' ) ); ?>
 						</td>
 						<td class="author-archive-title">
 							<a href="<?php the_permalink(); ?>">

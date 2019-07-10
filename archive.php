@@ -76,7 +76,7 @@ if ( have_posts() ) {
 
 		<?php
 		printf(
-			/* translators: Number of found comic */
+			/* translators: %d: Number of found comic */
 			esc_html( _n( '%d comic', '%d comics', $count, 'comicpress' ) ),
 			esc_html( $count )
 		);
@@ -92,7 +92,7 @@ if ( have_posts() ) {
 
 		<?php
 		printf(
-			/* translators: Number of found results */
+			/* translators: %d: Number of found results */
 			esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
 			esc_html( $count )
 		);
@@ -208,7 +208,7 @@ if ( have_posts() ) {
 
 	<?php
 	printf(
-		/* translators: Number of found results */
+		/* translators: %d: Number of found results */
 		esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
 		esc_html( $count )
 	);

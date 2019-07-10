@@ -53,7 +53,8 @@ PHP:       5.4
 == Changelog ==
 
 = 4.X =
-* changed: Symbols for search button (&raquo;) and image area (&lsaquo; and &rsaquo; are now customizable via language file
+* added: Date format in search.php "display_archive_as_links" and author.phpp  "author-archive-date" are now customizable via language file
+* added: Symbols for search button (&raquo;) and image area (&lsaquo; and &rsaquo; are now customizable via language file
 * removed Google+ Service was discontinued
 * under the hood: Code optimizations according to WPCS
 

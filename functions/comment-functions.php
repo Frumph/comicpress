@@ -139,7 +139,7 @@ function comicpress_comments_callback( $comment, $args, $depth ) {
 
 					<?php
 					printf(
-						/* translators: 1: Date 2: Time in comments */
+						/* translators: %1$s: Date %2$s: Time in comments */
 						__( '%1$s, %2$s', 'comicpress' ),
 						get_comment_date(),
 						get_comment_time()

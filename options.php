@@ -336,7 +336,7 @@ function comicpress_admin_options() {
 
 		<?php
 		printf(
-			/* translators: 1: Link to website 2: Additional link attribute 3: Theme versions number*/
+			/* translators: %1$1s: Link to website %2$2s: Additional link attribute %3$3s: Theme versions number*/
 			__( '<a href="%1$1s" %2$2s>ComicPress</a> %3$3s', 'comicpress' ),
 			esc_url( 'http://frumph.net/' ),
 			'target="_blank" rel="noopener noreferrer"',
@@ -350,7 +350,7 @@ function comicpress_admin_options() {
 
 	<?php
 	printf(
-		/* translators: 1: Link to website 2: Additional link attribute */
+		/* translators: %1$1s: Link to website %2$2s: Additional link attribute */
 		__( 'Developed and maintained by <a href="%1$1s" %2$2s>Philip M. Hofer alias <small>(Frumph)</small></a>.', 'comicpress' ),
 		esc_url( 'http://frumph.net/' ),
 		'target="_blank" rel="noopener noreferrer"'
@@ -358,7 +358,7 @@ function comicpress_admin_options() {
 	?>
 	<?php
 	printf(
-		/* translators: 1: Link to website 2: Additional link attribute */
+		/* translators: %1$1s: Link to website %2$2s: Additional link attribute */
 		__( 'Originally created by<a href="%1$1s" %2$2s> Tyler Martin</a>.', 'comicpress' ),
 		esc_url( 'http://mindfaucet.com/' ),
 		'target="_blank" rel="noopener noreferrer"'

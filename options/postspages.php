@@ -52,7 +52,7 @@
 						<td>
 							<?php
 							printf(
-								/* translators: 1: Link to website 2: Additional link attribute */
+								/* translators: %1$1s: Link to website %2$2s: Additional link attribute */
 								__( 'Enabling this option will show a gravatar of the post author based on the author email address. Gravatars are associated by your email address and you can create them at <a href="%1$1s" %2$2s>Gravatar.com</a>.', 'comicpress' ),
 								esc_url( 'https://gravatar.com/' ),
 								'target="_blank" rel="noopener noreferrer"'

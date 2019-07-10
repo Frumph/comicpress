@@ -30,7 +30,7 @@ if ( have_posts() ) :
 
 	<?php
 	printf(
-		/* translators: Number of found results */
+		/* translators: %d: Number of found results */
 		esc_html( _n( '%d result', '%d results', $count, 'comicpress' ) ),
 		esc_html( $count )
 	);
@@ -59,7 +59,7 @@ if ( have_posts() ) :
 
 			<tr>
 				<td class="archive-date">
-					<?php the_time( 'M d, Y' ); ?>
+					<?php the_time( _x( 'M d, Y', 'search page table date format', 'comicpress' ) ); ?>
 				</td>
 				<td class="archive-title">
 					<a href="<?php echo esc_html( get_permalink( $post->ID ) ); ?>" rel="bookmark" title="<?php esc_html_e( 'Permanent Link:', 'comicpress' ); ?> <?php the_title(); ?>">
