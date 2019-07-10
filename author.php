@@ -82,6 +82,25 @@ if ( get_query_var( 'author_name' ) ) {
 							</tr>
 							<tr>
 								<td class="user-info-name">
+									<?php
+									esc_html_e( 'User Role', 'comicpress' );
+									?>
+								</td>
+								<td class="user-info-value">
+									<?php
+									global $wp_roles;
+									$user_id  = get_the_author_meta( 'ID' );
+									$user_obj = get_userdata( $user_id );
+									if ( ! empty( $user_obj->roles ) ) {
+										foreach ( $user_obj->roles as $user_role ) {
+											echo esc_html( translate_user_role( $wp_roles->roles[ $user_role ]['name'] ) );
+										}
+									}
+									?>
+								</td>
+							</tr>
+							<tr>
+								<td class="user-info-name">
 									<?php esc_html_e( 'Posts #', 'comicpress' ); ?>
 								</td>
 								<td class="user-info-value">
