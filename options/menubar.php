@@ -17,7 +17,7 @@
 					<tr class="alternate">
 						<th scope="row">
 							<label for="disable_default_menubar">
-								<?php _e( 'Disable default Menubar?', 'comicpress' ); ?>
+								<?php _e( 'Disable the default Menubar?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
@@ -30,7 +30,7 @@
 					<tr>
 						<th scope="row">
 							<label for="enable_search_in_menubar">
-								<?php _e( 'Enable Search Form?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Search Form?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
@@ -43,7 +43,7 @@
 					<tr class="alternate">
 						<th scope="row">
 							<label for="enable_rss_in_menubar">
-								<?php _e( 'Enable RSS Link?', 'comicpress' ); ?>
+								<?php _e( 'Enable the RSS Link?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
@@ -69,14 +69,14 @@
 					<tr class="alternate">
 						<th scope="row">
 							<label for="enable_breadcrumbs">
-								<?php _e( 'Enable Breadcrumbs?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Breadcrumbs?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="enable_breadcrumbs" name="enable_breadcrumbs" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_breadcrumbs'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'This will create a pathable breathcrumbs beneith the menubar underneith the default menubar location.', 'comicpress' ); ?>
+							<?php _e( 'This will create a pathable Breadcrumbs beneith the menubar underneith the default menubar location.', 'comicpress' ); ?>
 						</td>
 					</tr>
 				</tbody>
@@ -95,7 +95,7 @@
 					<tr class="alternate">
 						<th scope="row">
 							<label for="menubar_social_icons">
-								<?php _e( 'Enable Social Icons in Menubar?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Social Icons in Menubar?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>

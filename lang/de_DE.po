@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-09 21:24+0200\n"
-"PO-Revision-Date: 2019-07-09 21:27+0200\n"
+"POT-Creation-Date: 2019-07-12 11:19+0200\n"
+"PO-Revision-Date: 2019-07-12 11:21+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"esc_html_e\n"
+"esc_html_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -67,18 +67,28 @@ msgstr[0] "%d Comic"
 msgstr[1] "%d Comics"
 
 #. translators: %d: Number of found results
-#: archive.php:96 archive.php:212 search.php:34
+#: archive.php:96 archive.php:209 search.php:34
 #, php-format
 msgid "%d result"
 msgid_plural "%d results"
 msgstr[0] "%d Ergebnis"
 msgstr[1] "%d Ergebnisse"
 
+#: archive.php:119
+msgctxt "comic archives date format"
+msgid "M jS, Y"
+msgstr "d.m.Y"
+
 #: archive.php:127
 msgid "No Thumbnail or Featured Image Found."
 msgstr "Kein Vorschaubild oder Ausgewähltes Bild gefunden."
 
-#: archive.php:168 search.php:65
+#: archive.php:161
+msgctxt "archives table date format"
+msgid "M d, Y"
+msgstr "d.m.Y"
+
+#: archive.php:165 search.php:65
 msgid "Permanent Link:"
 msgstr "Pemanent-Link:"
 
@@ -90,27 +100,37 @@ msgstr "Dieser Autor existiert nicht."
 msgid "Registered on"
 msgstr "Registriert am"
 
-#: author.php:85
+#: author.php:86
+msgid "User Role"
+msgstr "Benutzerrolle"
+
+#: author.php:104
 msgid "Posts #"
 msgstr "Beiträge #"
 
-#: author.php:109 functions.php:331 options/menubar.php:214
+#: author.php:128 functions.php:331 options/menubar.php:214
 msgid "Email"
 msgstr "E-Mail-Adresse"
 
-#: author.php:125
+#: author.php:144
 msgid "Website"
 msgstr "Website"
 
-#: author.php:140 functions.php:329 options/menubar.php:114
+#: author.php:159 functions.php:329 options/menubar.php:114
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author.php:156 functions.php:326 options/menubar.php:122
+#: author.php:175 functions.php:326 options/menubar.php:122
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author.php:217
+#. translators: Name of the author
+#: author.php:220
+#, php-format
+msgid "Posts by %1s &not; "
+msgstr "Beiträge von %1s &not; "
+
+#: author.php:236
 msgctxt "author page table date format"
 msgid "M j, Y"
 msgstr "d.m.Y"
@@ -136,6 +156,10 @@ msgstr "Diskussion (%) &not;"
 #: comments.php:76
 msgid "Reply &not;"
 msgstr "Antwort &not;"
+
+#: comments.php:102
+msgid "Comment Pages"
+msgstr "Kommentar-Seiten"
 
 #: comments.php:124
 msgid "Next Comments &uarr;"
@@ -274,8 +298,8 @@ msgstr ""
 "Block"
 
 #: functions.php:137
-msgid "Over the Blog"
-msgstr "Über dem Blog"
+msgid "Over-Blog"
+msgstr "Über-Blog"
 
 #: functions.php:138
 msgid "This sidebar appears over the blog within the #column .narrowcolumn"
@@ -283,8 +307,8 @@ msgstr ""
 "Diese Seitenliste erscheint über dem Blog innerhalb von #column .narrowcolumn"
 
 #: functions.php:142
-msgid "Under the Blog"
-msgstr "Unter dem Blog"
+msgid "Under-Blog"
+msgstr "Unter-Blog"
 
 #: functions.php:143
 msgid "This sidebar appears under the blog within the #column .narrowocolumn"
@@ -1029,11 +1053,12 @@ msgstr "Archivergebnisse als Linkliste anzeigen?"
 
 #: options/archivesearch.php:27
 msgid ""
-"Enabling this will make the archive pages by date/category/term display as a "
-"list of links instead of full posts."
+"Enable this option if you want to display a list of links instead of full "
+"posts in archive pages by date / category / term."
 msgstr ""
-"Wenn aktiviert, werden keine Artikel angezeigt, sondern nur die Titel "
-"derselben aufgelistet."
+"Aktiviere diese Option, wenn du eine Liste von Links anstelle von "
+"vollständigen Beiträgen auf Archivseiten nach Datum / Kategorie / Begriff "
+"anzeigen möchtest."
 
 #: options/archivesearch.php:33
 msgid "Excerpt or Full Content in archive and search?"
@@ -1052,8 +1077,8 @@ msgid ""
 "If Display archives results as list is disabled, decide how much is seen in "
 "the archive display."
 msgstr ""
-"Wenn die Anzeige der Archiv Ergebnisse als Liste deaktiviert ist, "
-"entscheide, wie viele in der Archivanzeige zu sehen sein sollen."
+"Wenn Archivergebnisse als Liste anzeigen deaktiviert ist, lege fest, wie "
+"viel in der Archivanzeige angezeigt werden soll."
 
 #: options/archivesearch.php:51
 msgid "Archive Display Order"
@@ -1061,11 +1086,11 @@ msgstr "Archiv Darstellungsreihenfolge"
 
 #: options/archivesearch.php:55
 msgid "Oldest to Newest &mdash; Ascending"
-msgstr "Alt nach Neu &mdash; Aufsteigend"
+msgstr "Älteste zu Neueste &mdash; Aufsteigend"
 
 #: options/archivesearch.php:58
 msgid "Newest to Oldest &mdash; Descending"
-msgstr "Neueste nach Altästete &mdash; Absteigend"
+msgstr "Neueste zu Älteste &mdash; Absteigend"
 
 #: options/archivesearch.php:63
 msgid ""
@@ -1075,16 +1100,17 @@ msgid ""
 "will start with May 1, not May 31st.)"
 msgstr ""
 "Hier stellst du die Anzeigen-Reihenfolge der Archive ein. Neueste nach "
-"älteste zeigt den aktuellsten Artikel ganz oben. Älteste nach neueste "
-"beginnt mit dem ersten Eintrag in einer Kategorie, Tag, oder Datumsbereich "
-"(z.B. wähle Mai 20XX wird starten mit 1.Mai, nicht 31.Mai.)"
+"Älteste zeigt den aktuellsten Beitrag ganz oben. Älteste nach Neueste "
+"beginnt mit dem ersten Eintrag in der Kategorie, Schlagwort, oder "
+"Datumsbereich (z.B. Auswahl Mai 20XX wird starten mit 1.Mai, nicht mit 31."
+"Mai.)"
 
 #: options/archivesearch.php:74
 msgid "Navigation"
 msgstr "Navigation"
 
 #: options/archivesearch.php:82
-msgid "Enable numbered pagination?"
+msgid "Enable the numbered pagination?"
 msgstr "Seitennummerierung aktivieren?"
 
 #: options/archivesearch.php:89
@@ -1094,9 +1120,9 @@ msgid ""
 "blog template, and comments/single when there are more then the set number "
 "of comments per page. Uses the same styling as the Menubar."
 msgstr ""
-"Vorherige und nächste Beiträge Buttons werden durch einen Balken mit "
+"Buttons für vorherige und nächste Beiträge werden durch einen Balken mit "
 "nummerierten Seiten ersetzt. Nummerierte Seitenzahlen erscheinen auf der "
-"Startseite, der Autor(en) Seite, der Blog-Vorlage, und Kommentare/Single, "
+"Startseite, der Autor(en)-Seite, dem Blog-Template, und Kommentare/Single, "
 "wenn es mehr als die eingestellte Anzahl der Kommentare pro Seite sind. "
 "Benutzt die selbe Optik wie die Menüleiste."
 
@@ -1107,15 +1133,15 @@ msgstr "Einstellungen speichern"
 
 #: options/comments.php:20
 msgid "Disable the comment notes?"
-msgstr "Deaktiviere die Kommentar Notizen?"
+msgstr "Kommentar-Notizen deaktivieren?"
 
 #: options/comments.php:27
 msgid ""
-"Disabling this will remove the note text that displays with more options for "
-"adding to comments (html)."
+"Enable this option if you do not want to display the note text. The note "
+"text includes additional options for adding comments (HTML)."
 msgstr ""
-"Durch Deaktivieren dieser Option wird der Notizentext entfernt, der mit "
-"weiteren Optionen zum Hinzufügen zu Kommentaren (HTML) angezeigt wird."
+"Aktiviere diese Option, wenn du den Notizentext nicht anzeigen möchtest. Der "
+"Notizentext enthält weitere Optionen zum Hinzufügen zu Kommentaren (HTML)."
 
 #: options/comments.php:33
 msgid "Disable Comment Javascript?"
@@ -1123,28 +1149,28 @@ msgstr "Kommentar-Javascript deaktivieren?"
 
 #: options/comments.php:40
 msgid ""
-"Checkmark this if you want the comment form to not use javascript to appear "
-"directly under who is being replied to. (increases pageviews/hits)"
+"Enable this option if you want the comment form to not use javascript to be "
+"displayed directly below the person being responded to. (increases pageviews/"
+"hits)"
 msgstr ""
-"Markiere die Checkbox, wenn Du das Kommentarformular dazu zwingen möchtest, "
-"kein Javascript direkt unter dem Antwortenden zu nutzen (erhöht Pageviews "
-"und Hits)"
+"Aktiviere die Option, wenn du möchtest, dass das Kommentarformular kein "
+"Javascript verwendet, um direkt unter der Person anzuzeigen, das geantwortet "
+"wird. (erhöht Pageviews und Hits)"
 
 #: options/comments.php:46
-msgid "Enable Comments on Home Page?"
+msgid "Enable the Comments on Home Page?"
 msgstr "Kommentare auf der Startseite aktivieren?"
 
 #: options/comments.php:53
 msgid ""
-"Checkmarking this option will make it so that the post(s) on the home page "
-"will also display the comments under them. This will ONLY work if you have "
-"it set to only display 1 post on the home page. The post count and this must "
-"be set to work."
+"Enable this option if you want to show comments on your home page in the "
+"posts. This will ONLY work if you have set: to show only 1 post on the home "
+"page. The number of posts and that must work."
 msgstr ""
-"Markieren der Checkbox führt dazu, das in den Beiträgen auf deiner Homepage "
-"die Kommentare unter diesen angezeigt werden. Dies wird NUR funktionieren, "
-"wenn Du eingestellt hast, zeige nur 1 Beitrag auf der Homepage. Die Anzahl "
-"der Beiträge und dies muss arbeiten."
+"Aktiviere diese Option, wenn du auf deiner Startseite in den Beiträgen "
+"Kommentare anzeigen möchtest. Dies wird NUR funktionieren, wenn du "
+"eingestellt hast: nur 1 Beitrag auf der Startseite anzeigen. Die Anzahl der "
+"Beiträge und das muss funktionieren."
 
 #: options/comments.php:76
 msgid "Avatar Directory"
@@ -1175,8 +1201,9 @@ msgid ""
 "If enabled will show information on how many queries, memory is used as well "
 "as how fast the page loads."
 msgstr ""
-"Wenn diese Option aktiviert ist, werden Informationen gezeigt, wie viele "
-"Abfragen, Speichernuzung und auch wie schnell die Seite geladen wird."
+"Wenn es aktiviert ist, werden Informationen dazu angezeigt, wie viele "
+"Abfragen, wie viel Speicher verwendet wird und wie schnell die Seite geladen "
+"wird."
 
 #: options/debug.php:33
 msgid "Force MySQL to close the current active connection after page load?"
@@ -1194,44 +1221,46 @@ msgstr ""
 "danach gefragt wirst."
 
 #: options/general.php:20
-msgid "How many blog posts would you like to display on the home page?"
-msgstr "Wie viele Blog Beiträge sollen auf der Hauptseite angezeigt werden?"
+msgid "How many blog posts should be displayed on the homepage?"
+msgstr "Wie viele Blog-Beiträge sollen auf der Startseite angezeigt werden?"
 
 #: options/general.php:27
 msgid ""
-"How many blog posts you would like displayed on the index page at one time. "
-"This is different then the one in the wp-admin &#10132; settings, the one in "
-"the settings will control how many show up on search and archive pages."
+"Specify the number of blog posts to display on the index page at one time. "
+"This is different then the one in the wp-admin &#10132; settings &#10132; "
+"reading, the one in the settings will control how many show up on search and "
+"archive pages."
 msgstr ""
-"Wie viele Blog Beiträge sollen auf der Hauptseite angezeigt werden? Dies ist "
-"eine andere, als diejenige in den wp-admin &#10132; Einstellungen, wo man in "
-"den Einstellungen festlegt, wie viele angezeigt werden, bis auf Such- und "
-"Archivseiten."
+"Gebe die Anzahl der Blog-Beiträge an, die gleichzeitig auf der Indexseite "
+"angezeigt werden sollen. Diese unterscheidet sich von der in WP-Admin "
+"&#10132; Einstellungen &#10132; Lesen , wo du festlegen kannst, wie viele "
+"bei der Suche und in Archivseiten angezeigt werden sollen."
 
 #: options/general.php:33
 msgid "Disable Blog Loop?"
-msgstr "Deaktiviere Blog Schleife?"
+msgstr "Blog-Schleife deaktivieren?"
 
 #: options/general.php:40
 msgid ""
-"Enabling this option, will DISABLE the blog from appearing on the home page "
-"AND any pages set as the blog posts page in the settings &#10132; reading."
+"Enable this option, will DISABLE the blog from appearing on the home page "
+"AND any pages set as the blog posts page in the wp-admin &#10132; settings "
+"&#10132; reading."
 msgstr ""
-"Aktivierung dieser Option, deaktiviert das Erscheinen als Blog auf der "
-"Homepage UND alle Seiten werden als Blogbeitragsseiten eingestellt, in den "
-"Einstellungen &#10132; Lesen."
+"Aktivieren dieser Option, wird das Anzeigen des Blogs auf der Startseite UND "
+"auf allen Seiten, die in WP-Admin &#10132; Einstellungen &#10132; Lesen als "
+"Blog-Beitragsseiten festgelegt wurden, DEAKTIVIEREN."
 
 #: options/general.php:46
 msgid "Allow the sidebar over-blog to appear on all posts?"
-msgstr "Erlaube der Seitenliste Over-Blog über allen Beiträgen zu erscheinen?"
+msgstr "Erlaube der Seitenliste Über-Blog zu allen Beiträgen zu erscheinen?"
 
 #: options/general.php:53
 msgid ""
 "Sidebar Over-Blog appears on all posts not just the front page/blog loop "
 "when enabled."
 msgstr ""
-"Seitenliste Over-Blog erscheint auf allen Beiträgen, nicht nur auf der "
-"Titelseite / Blog Schleife wenn aktiviert."
+"Die Seitenliste Über-Blog wird zu allen Beiträgen angezeigt, nicht nur auf "
+"der Startseite / Blog-Schleife, wenn es aktiviert ist."
 
 #: options/general.php:72
 msgid "Disable the copyright text in the footer?"
@@ -1239,23 +1268,25 @@ msgstr "Copyright-Text im Footer deaktivieren?"
 
 #: options/general.php:79
 msgid ""
-"Enable this if you do not want any text in the footer. If you wish to add "
-"you own custom content, you may do so via Appearance &#10132; Widgets "
-"&#10132; Footer."
+"Enable this option if you do not want text in the footer. If you wish to add "
+"you own custom content, you may do so via wp-admin &#10132; Appearance "
+"&#10132; Widgets &#10132; Footer."
 msgstr ""
-"Aktiviere diese Option, wenn Du keinen Text in dem Footer möchtest. Wenn du "
-"deinen individuellen Footer Text eingeben möchtest, kannst du das via Design "
-"&#10132; Widgets &#10132; Footer tun."
+"Aktiviere diese Option, wenn du keinen Text in dem Footer möchtest. Wenn du "
+"deinen individuellen Inhalt hinzufügen möchtest, kannst du es via WP-Admin "
+"&#10132; Design &#10132; Widgets &#10132; Footer tun."
 
 #: options/general.php:85
 msgid "Disable the scroll to top link in the footer?"
-msgstr "Deaktiviere den Nach-Oben-Link im Footer?"
+msgstr "Nach-Oben-Link in dem Footer deaktivieren?"
 
 #: options/general.php:92
-msgid "When this link is clicked on long pages it will scroll back to the top."
+msgid ""
+"Enable this option if you want to disable the scroll to top link. Remember, "
+"this link can be very helpful on long pages."
 msgstr ""
-"Wenn dieser Link angeklickt wird kannst Du auf langen Seiten zurück zum "
-"Seitenanfang springen."
+"Aktiviere diese Option, wenn du den Nach-Oben-Link deaktivieren möchtest. "
+"Denke daran, dieser Link kann bei langen Seiten sehr hilfreich sein."
 
 #: options/general.php:98
 msgid "&copy; Copyright Name"
@@ -1266,7 +1297,7 @@ msgid ""
 "Set the name to which this site is &copy; Copyright to. Leave blank to have "
 "the site name."
 msgstr ""
-"Name festlegen, auf den das &copy; Copyright dieser Seite läuft. Leer "
+"Lege den Namen auf den das &copy; Copyright dieser Website läuft fest. Leer "
 "lassen, um den Namen der Website zu verwenden."
 
 #: options/general.php:110
@@ -1278,21 +1309,23 @@ msgid ""
 "Set the URL to the owner of the &copy; Copyright if different then this "
 "website. Leave blank for sites link."
 msgstr ""
-"Setze die URL von dem Besitzer des &copy; Copyrights von dieser Website. "
-"Leer lassen für Webseitenlink."
+"Lege die URL von dem Eigentümer des &copy; Copyright fest, wenn sie sich von "
+"dieser Website unterscheidet. Leer lassen für Websiten-Link."
 
 #: options/general.php:135
 msgid "Enable the post thumbnails in the RSS feed?"
-msgstr "Aktiviere die Beitrags Vorschaubilder in dem RSS-Feed?"
+msgstr "Beitrags-Vorschaubild im RSS-Feed aktivieren?"
 
 #: options/general.php:142
-msgid "If enabled will show the post thumbnail of the post in the RSS feed."
+msgid ""
+"Enable this option if you want to show a post thumbnail of the post in the "
+"RSS feed."
 msgstr ""
-"Wenn aktiviert, wird das Beitrags Vorschaubild von dem Beitrag in dem RSS-"
-"Feed gezeigt."
+"Aktiviere diese Option, wenn du das Beitrags-Vorschaubild von dem Beitrag im "
+"RSS-Feed angezeigt haben möchtest."
 
 #: options/menubar.php:20
-msgid "Disable default Menubar?"
+msgid "Disable the default Menubar?"
 msgstr "Standard-Menüleiste deaktivieren?"
 
 #: options/menubar.php:27
@@ -1300,11 +1333,11 @@ msgid ""
 "Allows you to customize the location of the Menubar via Widgets or, just not "
 "have it."
 msgstr ""
-"Erlaubt dir, die Position der Menüleiste via Widgets anzupassen oder sie "
+"Ermöglicht dir, die Position der Menüleiste via Widgets anzupassen oder sie "
 "ganz wegzulassen."
 
 #: options/menubar.php:33
-msgid "Enable Search Form?"
+msgid "Enable the Search Form?"
 msgstr "Suchformular aktivieren?"
 
 #: options/menubar.php:40
@@ -1312,7 +1345,7 @@ msgid "Searchforms can be fun when you have something to search for."
 msgstr "Suchformulare können Spaß machen, wenn du etwas zu suchen hast."
 
 #: options/menubar.php:46
-msgid "Enable RSS Link?"
+msgid "Enable the RSS Link?"
 msgstr "RSS-Link aktivieren?"
 
 #: options/menubar.php:53
@@ -1322,35 +1355,35 @@ msgstr ""
 
 #: options/menubar.php:59
 msgid "Disable the menubar jQuery?"
-msgstr "Deaktiviere Menüleisten jQuery?"
+msgstr "jQuery für die Menüleiste deaktivieren?"
 
 #: options/menubar.php:66
 msgid ""
 "Disable the loading of the menubar jQuery. If you do not want the ddsmoother "
 "menu code to load. (Will not do drop downs without it.)"
 msgstr ""
-"Verhindert das Laden der jQuery für die Menüleiste. Wenn du nicht den "
-"ddsmoother Menücode laden möchtest. (Ohne diesen Code kannst du allerdings "
-"auch keine Dropdowns erzeugen.)"
+"Deaktiviere das Laden von jQuery für die Menüleiste. Wenn du nicht möchtest, "
+"dass der ddsmoother-Menücode geladen wird. (Ohne diesen Code können "
+"allerdings auch keine Dropdowns funktionieren.)"
 
 #: options/menubar.php:72
-msgid "Enable Breadcrumbs?"
+msgid "Enable the Breadcrumbs?"
 msgstr "Breadcrumbs aktivieren?"
 
 #: options/menubar.php:79
 msgid ""
-"This will create a pathable breathcrumbs beneith the menubar underneith the "
+"This will create a pathable Breadcrumbs beneith the menubar underneith the "
 "default menubar location."
 msgstr ""
-"Erstellt nachvollziehbare Breadcrumbs in Nähe der Menüleiste, direkt unter "
-"der Standardmenübar Position."
+"Dies wird nachvollziehbare Breadcrumbs unter der Menüleiste unterhalb der "
+"Standardposition der Menüleiste erstellen."
 
 #: options/menubar.php:90
 msgid "Menubar &mdash; Social Icons"
 msgstr "Menüleiste &mdash; Social Icons"
 
 #: options/menubar.php:98
-msgid "Enable Social Icons in Menubar?"
+msgid "Enable the Social Icons in Menubar?"
 msgstr "Social Icons in der Menüleiste aktivieren?"
 
 #: options/menubar.php:105
@@ -1359,7 +1392,7 @@ msgid ""
 "entire http:// url in the input box that leads to your account on those "
 "sites. Leave field empty if you do not have one and it will not show."
 msgstr ""
-"Fügt ein paar kleine Social Icons in die Menüleiste ein, wo auch die "
+"Fügt der Menüleiste ein paar kleine Social Icons hinzu, wo auch die "
 "Navigation zu finden ist. Bitte füge in die jeweiligen Fenster die komplette "
 "URL inklusive http:// zu dem jeweiligen Profil ein. Wenn du das Feld leer "
 "lässt, wird kein betreffendes Icon angezeigt."
@@ -1378,123 +1411,126 @@ msgstr "Titel für Beiträge deaktivieren?"
 
 #: options/postspages.php:27
 msgid ""
-"Post titles will be turned off. If you disable the titles on posts can still "
-"add a post-image in the post editor."
+"Enable this option if you do not want to show post titles. If you deactivate "
+"the title for posts, you can still insert a post picture in the post editor."
 msgstr ""
-"Beitragstitel werden deaktiviert. Wenn du die Titel in Beiträgen "
-"deaktivierst, kannst du im Beitragseditor ein Beitragsbild hinzufügen."
+"Aktiviere diese Option, wenn du keine Beitragstitel anzeigen möchtest. Wenn "
+"du die Titel für Beiträge deaktivierst, kannst du dennoch ein Beitragsbild "
+"in dem Beitragseditor einfügen."
 
 #: options/postspages.php:33
 msgid "Add graphic calendar to blog posts?"
-msgstr "Kalendergrafik zu Blogbeiträgen hinzufügen?"
+msgstr "Kalendergrafik zu Blog-Beiträgen hinzufügen?"
 
 #: options/postspages.php:40
 msgid ""
-"Enabling this option will display a calendar image on your blog posts. The "
-"graphic calendar is an image that has the date of the blog post overlayed on "
-"top of it."
+"Enable this option if you want to display a calendar image on your blog "
+"post. The graphic calendar is an image that has the date of the blog post "
+"overlayed on top of it."
 msgstr ""
-"Bei Aktivierung dieser Option, wird ein Kalenderbild bei deinen Blogbeitägen "
-"angezeigt. Die Kalendergrafik ist ein Bild, welches durch das Datum des "
-"Blogbeitrages überlagert wird."
+"Aktiviere diese Option, wenn du ein Kalenderbild in deinem Blog-Beitrag "
+"anzeigen möchtest. Die Kalendergrafik ist ein Bild, welches durch das Datum "
+"der Veröffentlichung des Blog-Beitrages überlagert wird."
 
 #: options/postspages.php:46
-msgid "Enable Author Gravatar?"
-msgstr "Aktiviere Autoren Gravatar?"
+msgid "Enable the Author Gravatar?"
+msgstr "Autoren-Gravatar aktivieren?"
 
 #. translators: %1$1s: Link to website %2$2s: Additional link attribute
 #: options/postspages.php:56
 #, php-format
 msgid ""
-"Enabling this option will show a gravatar of the post author based on the "
-"author email address. Gravatars are associated by your email address and you "
-"can create them at <a href=\"%1$1s\" %2$2s>Gravatar.com</a>."
+"Enable this option if you want to display a gravatar from the author of the "
+"post, based on the author email address. Gravatars are associated by your "
+"email address and you can create them at <a href=\"%1$1s\" %2$2s>Gravatar."
+"com</a>."
 msgstr ""
-"Bei Aktivierung dieser Option, wird ein Gravatar vom Autor des Beitrages "
-"angezeigt, basierend auf der E-Mail-Adresse des Autors. Gravatare werden mit "
-"der E-Mail-Adresse assoziiert. Auf <a href=\"%1s\" %2s>Gravatar.com</a> "
-"kannst du dein Gravatar erstellen."
+"Aktiviere diese Option, wenn du ein Gravatar vom Autor des Beitrages "
+"anzeigen möchtest, basierend auf der E-Mail-Adresse des Autors. Gravatare "
+"werden mit der E-Mail-Adresse assoziiert. Auf <a href=\"%1s\" %2s>Gravatar."
+"com</a> kannst du dein Gravatar erstellen."
 
 #: options/postspages.php:66
-msgid "Enable Avatar Mod?"
-msgstr "Aktiviere Avator Modus?"
+msgid "Enable the Avatar Mod?"
+msgstr "Avatar-Modus aktivieren?"
 
 #: options/postspages.php:73
 msgid ""
-"With this enabled, the avatar's that are displayed will be jquery modified "
-"to look like polaroids randomly tilted."
+"Enable this option if you want the avatars displayed to look like randomly "
+"named Polaroids. The avatars are slightly modified with jQuery."
 msgstr ""
-"Wenn aktiviert, werden die dargestellten Avatare durch jQuery etwas "
-"modifiziert und sehen dann wie zufällig benannte Polaroids aus."
+"Aktiviere diese Option, wenn die angezeigten Avatare wie zufällig benannte "
+"Polaroids aussehen sollen. Die Avatare sind mit jQuery leicht modifiziert."
 
 #: options/postspages.php:79
-msgid "Disable display of <strong>tags</strong> in posts?"
-msgstr "Deaktiviere Anzeige von <strong>Schlagwörtern</strong> in Beiträgen?"
+msgid "Disable the display of <strong>tags</strong> in posts?"
+msgstr "Anzeige von <strong>Schlagwörtern</strong> in Beiträgen deaktivieren?"
 
 #: options/postspages.php:86
-msgid "Checkmarking this will make it so that tags will not appear in posts."
+msgid "Enable this option if you do not want to display tags in the posts."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Schlagwörter in den Beiträgen "
-"angezeigt werden."
+"Aktiviere diese Option, wenn du keine Schlagwörter in den Beiträgen anzeigen "
+"möchtest."
 
 #: options/postspages.php:92
-msgid "Disable display of <strong>categories</strong> in posts?"
-msgstr "Deaktiviere Anzeige von <strong>Kategorien</strong> Beiträgen?"
+msgid "Disable the display of <strong>categories</strong> in posts?"
+msgstr "Anzeige von <strong>Kategorien</strong> in Beiträgen deaktivieren?"
 
 #: options/postspages.php:99
 msgid ""
-"Checkmarking this will make it so that categories will not appear in posts."
+"Enable this option if you do not want to display categories in the posts."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Kategorien in den Beiträgen "
-"angezeigt werden."
+"Aktiviere diese Option, wenn du keine Kategorien in den Beiträgen anzeigen "
+"möchtest."
 
 #: options/postspages.php:105
-msgid "Disable display of <strong>by Author</strong> in post information?"
-msgstr "Deaktiviere Anzeige von <strong>Autor</strong> in Beitragsinformation?"
+msgid "Disable the display of <strong>by Author</strong> in posts?"
+msgstr "Anzeige von <strong>Schlagwörtern</strong> in Beiträgen deaktivieren?"
 
 #: options/postspages.php:112
 msgid ""
-"Checkmarking this will make it so that the by Author information will not "
-"appear in posts."
+"Enable this option if you do not want to display by Author information in "
+"the posts."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Information über den Autor in "
-"den Beiträgen angezeigt wird."
+"Aktiviere diese Option, wenn du keine Information über den Autor in den "
+"Beiträgen anzeigen möchtest."
 
 #: options/postspages.php:118
-msgid "Disable display of the posted on date in posts?"
-msgstr "Deaktiviere die Anzeige vom Datum des Postens in Beiträgen?"
+msgid "Disable the display of the posted on date in posts?"
+msgstr "Anzeige des Datums der Veröffentlichung der Beiträge deaktivieren?"
 
 #: options/postspages.php:125
 msgid ""
-"Checkmarking this will make it so that posted on date information will not "
-"appear in posts."
+"Enable this option if you do not want to display the information that posted "
+"date of posts."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Information über das Datum der "
-"Veröffentlichung des Beitrages angezeigt wird."
+"Aktiviere diese Option, wenn du die Informationen zum Veröffentlichungsdatum "
+"der Beiträge nicht anzeigen möchtest."
 
 #: options/postspages.php:131
 msgid "Disable the display of the posted at time in posts?"
-msgstr "Deaktiviere die Anzeige der Uhrzeit des Postens in Beiträgen?"
+msgstr "Anzeige der Uhrzeit der Veröffentlichung der Beiträge deaktivieren?"
 
 #: options/postspages.php:138
 msgid ""
-"Checkmarking this will make it so that the information about what time the "
-"post was made will not show."
+"Enable this option if you do not want to display the information that posted "
+"time of posts."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Information über die Uhrzeit "
-"der Veröffentlichung des Beitrages angezeigt wird."
+"Aktiviere diese Option, wenn du die Informationen zur Veröffentlichungszeit "
+"der Beiträge nicht anzeigen möchtest."
 
 #: options/postspages.php:144
 msgid "Enable the display of last modified information in posts?"
-msgstr "Aktiviere die Anzeige der letzten Änderung in Beiträgen?"
+msgstr "Anzeige der letzten Änderung in Beiträgen aktivieren?"
 
 #: options/postspages.php:151
 msgid ""
-"Checkmarking this will make it so that it will show when the last time that "
-"the post was modified in the post date information."
+"Enable this option if you want to show in the posted date information when "
+"the post was last modified."
 msgstr ""
-"Markieren der Checkbox führt dazu, das keine Information über den Zeitpunkt "
-"der letzten Bearbeitung des Beitrages angezeigt wird."
+"Aktiviere diese Option, wenn du in den Informationen zum "
+"Veröffentlichungsdatum angezeigt bekommen möchtest, wann der Beitrag zuletzt "
+"geändert wurde."
 
 #: options/postspages.php:173
 msgid "Moods Directory"
@@ -1525,11 +1561,12 @@ msgstr "Titel für Seiten deaktivieren?"
 
 #: options/postspages.php:217
 msgid ""
-"Page titles will be turned off. If you disable the titles no pages you can "
-"still add a post-image in the page editor."
+"Enable this option if you do not want to show page titles. If you deactivate "
+"the title for pages, you can still insert a page picture in the page editor."
 msgstr ""
-"Seitentitel werden deaktiviert. Wenn du die Titel auf Seiten deaktivierst, "
-"kannst du im Seiteneditor ein Beitragsbild hinzufügen."
+"Aktiviere diese Option, wenn du keine Seitentitel anzeigen möchtest. Wenn du "
+"die Titel für Seiten deaktivierst, kannst du dennoch ein Seitenbild in dem "
+"Seiteneditor einfügen."
 
 #: options/postspages.php:227
 msgid "Content Width"
@@ -1544,16 +1581,19 @@ msgid ""
 "This sets a specific width for WordPress to use for media content within "
 "your posts and pages. Default = 500"
 msgstr ""
-"Dies legt eine bestimmte Breite für Wordpress fest, bei Verwendung von "
-"Medieninhalten in Deinen Beiträgen und Seiten. Standard = 500"
+"Dies legt eine bestimmte Breite fest, die WordPress für Medieninhalte in "
+"deinen Beiträgen und Seiten verwendet. Standard = 500"
 
 #: options/postspages.php:256
 msgid "Media and images width when sidebars are disabled on pages?"
-msgstr "Medien- und Bildbreite, wenn Seitenlisten auf Seiten deaktiviert sind?"
+msgstr "Medien- und Bildbreite, wenn Seitenlisten bei Seiten deaktiviert sind?"
 
 #: options/postspages.php:263
-msgid "When the sidebars are disabled on pages? Default = 700"
-msgstr "Wenn die Seitenleisten auf Seiten deaktiviert sind? Standard = 700"
+msgid ""
+"Width for media and images when sidebars on pages are disabled. Default = 700"
+msgstr ""
+"Breite für Medien und Bilder, wenn Seitenleisten bei Seiten deaktiviert "
+"sind. Standard = 700"
 
 #: options/splash.php:11
 msgid "Notices"
@@ -1867,7 +1907,7 @@ msgstr ""
 
 #: widgets/multisite-list.php:49
 msgid "Hosted Site List"
-msgstr "Liste gehosteter Seiten"
+msgstr "Liste gehosteter Websiten"
 
 #: widgets/randompostlink.php:48
 msgid "ComicPress - Random Post Link"

@@ -134,12 +134,12 @@ if ( ! function_exists( 'comicpress_register_sidebars' ) ) {
 			),
 			array(
 				'id'          => 'over-blog',
-				'name'        => __( 'Over the Blog', 'comicpress' ),
+				'name'        => __( 'Over-Blog', 'comicpress' ),
 				'description' => __( 'This sidebar appears over the blog within the #column .narrowcolumn', 'comicpress' ),
 			),
 			array(
 				'id'          => 'under-blog',
-				'name'        => __( 'Under the Blog', 'comicpress' ),
+				'name'        => __( 'Under-Blog', 'comicpress' ),
 				'description' => __( 'This sidebar appears under the blog within the #column .narrowocolumn', 'comicpress' ),
 			),
 			array(

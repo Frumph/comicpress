@@ -17,14 +17,14 @@
 					<tr>
 						<th scope="row">
 							<label for="home_post_count">
-								<?php _e( 'How many blog posts would you like to display on the home page?', 'comicpress' ); ?>
+								<?php _e( 'How many blog posts should be displayed on the homepage?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input type="text" size="2" name="home_post_count" id="home_post_count" value="<?php echo $comicpress_options['home_post_count']; ?>" />
 						</td>
 						<td>
-							<?php _e( 'How many blog posts you would like displayed on the index page at one time. This is different then the one in the wp-admin &#10132; settings, the one in the settings will control how many show up on search and archive pages.', 'comicpress' ); ?>
+							<?php _e( 'Specify the number of blog posts to display on the index page at one time. This is different then the one in the wp-admin &#10132; settings &#10132; reading, the one in the settings will control how many show up on search and archive pages.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
@@ -37,7 +37,7 @@
 							<input id="disable_blog_on_homepage" name="disable_blog_on_homepage" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_blog_on_homepage'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Enabling this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the settings &#10132; reading.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option, will DISABLE the blog from appearing on the home page AND any pages set as the blog posts page in the wp-admin &#10132; settings &#10132; reading.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -76,7 +76,7 @@
 							<input id="disable_footer_text" name="disable_footer_text" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_footer_text'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Enable this if you do not want any text in the footer. If you wish to add you own custom content, you may do so via Appearance &#10132; Widgets &#10132; Footer.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want text in the footer. If you wish to add you own custom content, you may do so via wp-admin &#10132; Appearance &#10132; Widgets &#10132; Footer.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -89,7 +89,7 @@
 							<input id="disable_scroll_to_top" name="disable_scroll_to_top" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_scroll_to_top'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'When this link is clicked on long pages it will scroll back to the top.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want to disable the scroll to top link. Remember, this link can be very helpful on long pages.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
@@ -139,7 +139,7 @@
 							<input id="enable_post_thumbnail_rss" name="enable_post_thumbnail_rss" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_post_thumbnail_rss'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'If enabled will show the post thumbnail of the post in the RSS feed.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want to show a post thumbnail of the post in the RSS feed.', 'comicpress' ); ?>
 						</td>
 					</tr>
 				</tbody>

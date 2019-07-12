@@ -24,7 +24,7 @@
 							<input id="display_archive_as_links" name="display_archive_as_links" type="checkbox" value="1" <?php checked( true, $comicpress_options['display_archive_as_links'] ); ?> />
 						</td>
 						<td>
-							<?php _e('Enabling this will make the archive pages by date/category/term display as a list of links instead of full posts.', 'comicpress' ); ?>
+							<?php _e('Enable this option if you want to display a list of links instead of full posts in archive pages by date / category / term.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -79,7 +79,7 @@
 					<tr class="alternate">
 						<th scope="row">
 							<label for="enable_numbered_pagination">
-								<?php _e( 'Enable numbered pagination?', 'comicpress' ); ?>
+								<?php _e( 'Enable the numbered pagination?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>

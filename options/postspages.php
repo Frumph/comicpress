@@ -24,7 +24,7 @@
 							<input id="disable_post_titles" name="disable_post_titles" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_post_titles'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Post titles will be turned off. If you disable the titles on posts can still add a post-image in the post editor.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to show post titles. If you deactivate the title for posts, you can still insert a post picture in the post editor.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -37,13 +37,13 @@
 							<input id="enable_post_calendar" name="enable_post_calendar" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_post_calendar'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Enabling this option will display a calendar image on your blog posts. The graphic calendar is an image that has the date of the blog post overlayed on top of it.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want to display a calendar image on your blog post. The graphic calendar is an image that has the date of the blog post overlayed on top of it.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
 							<label for="enable_post_author_gravatar">
-								<?php _e( 'Enable Author Gravatar?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Author Gravatar?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
@@ -53,7 +53,7 @@
 							<?php
 							printf(
 								/* translators: %1$1s: Link to website %2$2s: Additional link attribute */
-								__( 'Enabling this option will show a gravatar of the post author based on the author email address. Gravatars are associated by your email address and you can create them at <a href="%1$1s" %2$2s>Gravatar.com</a>.', 'comicpress' ),
+								__( 'Enable this option if you want to display a gravatar from the author of the post, based on the author email address. Gravatars are associated by your email address and you can create them at <a href="%1$1s" %2$2s>Gravatar.com</a>.', 'comicpress' ),
 								esc_url( 'https://gravatar.com/' ),
 								'target="_blank" rel="noopener noreferrer"'
 							);
@@ -63,66 +63,66 @@
 					<tr>
 						<th scope="row">
 							<label for="enable_avatar_trick">
-								<?php _e( 'Enable Avatar Mod?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Avatar Mod?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="enable_avatar_trick" name="enable_avatar_trick" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_avatar_trick'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'With this enabled, the avatar\'s that are displayed will be jquery modified to look like polaroids randomly tilted.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want the avatars displayed to look like randomly named Polaroids. The avatars are slightly modified with jQuery.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
 							<label for="disable_tags_in_posts">
-								<?php _e( 'Disable display of <strong>tags</strong> in posts?', 'comicpress' ); ?>
+								<?php _e( 'Disable the display of <strong>tags</strong> in posts?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="disable_tags_in_posts" name="disable_tags_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_tags_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that tags will not appear in posts.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display tags in the posts.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">
 							<label for="disable_categories_in_posts">
-								<?php _e( 'Disable display of <strong>categories</strong> in posts?', 'comicpress' ); ?>
+								<?php _e( 'Disable the display of <strong>categories</strong> in posts?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="disable_categories_in_posts" name="disable_categories_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_categories_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that categories will not appear in posts.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display categories in the posts.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
 							<label for="disable_author_info_in_posts">
-								<?php _e( 'Disable display of <strong>by Author</strong> in post information?', 'comicpress' ); ?>
+								<?php _e( 'Disable the display of <strong>by Author</strong> in posts?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="disable_author_info_in_posts" name="disable_author_info_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_author_info_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that the by Author information will not appear in posts.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display by Author information in the posts.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">
 							<label for="disable_date_info_in_posts">
-								<?php _e( 'Disable display of the posted on date in posts?', 'comicpress' ); ?>
+								<?php _e( 'Disable the display of the posted on date in posts?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="disable_date_info_in_posts" name="disable_date_info_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_date_info_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that posted on date information will not appear in posts.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display the information that posted date of posts.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
@@ -135,7 +135,7 @@
 							<input id="disable_posted_at_time_in_posts" name="disable_posted_at_time_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_posted_at_time_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that the information about what time the post was made will not show.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display the information that posted time of posts.', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -148,7 +148,7 @@
 							<input id="enable_last_modified_in_posts" name="enable_last_modified_in_posts" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_last_modified_in_posts'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this will make it so that it will show when the last time that the post was modified in the post date information.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want to show in the posted date information when the post was last modified.', 'comicpress' ); ?>
 						</td>
 					</tr>
 
@@ -214,7 +214,7 @@
 						<input id="disable_page_titles" name="disable_page_titles" type="checkbox" value="1" <?php checked(true, $comicpress_options['disable_page_titles']); ?> />
 					</td>
 					<td>
-						<?php _e( 'Page titles will be turned off. If you disable the titles no pages you can still add a post-image in the page editor.', 'comicpress' ); ?>
+						<?php _e( 'Enable this option if you do not want to show page titles. If you deactivate the title for pages, you can still insert a page picture in the page editor.', 'comicpress' ); ?>
 					</td>
 				</tr>
 			</table>
@@ -260,7 +260,7 @@
 							<input type="text" size="4" name="content_width_disabled_sidebars" id="content_width" value="<?php echo $comicpress_options['content_width_disabled_sidebars']; ?>" /> px
 						</td>
 						<td>
-							<?php _e( 'When the sidebars are disabled on pages? Default = 700', 'comicpress' ); ?>
+							<?php _e( 'Width for media and images when sidebars on pages are disabled. Default = 700', 'comicpress' ); ?>
 						</td>
 					</tr>
 				</tbody>

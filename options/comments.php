@@ -24,7 +24,7 @@
 							<input id="disable_comment_note" name="disable_comment_note" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_comment_note'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Disabling this will remove the note text that displays with more options for adding to comments (html).', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you do not want to display the note text. The note text includes additional options for adding comments (HTML).', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr>
@@ -37,20 +37,20 @@
 							<input id="disable_comment_javascript" name="disable_comment_javascript" type="checkbox" value="1" <?php checked( true, $comicpress_options['disable_comment_javascript'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmark this if you want the comment form to not use javascript to appear directly under who is being replied to. (increases pageviews/hits)', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want the comment form to not use javascript to be displayed directly below the person being responded to. (increases pageviews/hits)', 'comicpress' ); ?>
 						</td>
 					</tr>
 					<tr class="alternate">
 						<th scope="row">
 							<label for="enable_comments_on_homepage">
-								<?php _e( 'Enable Comments on Home Page?', 'comicpress' ); ?>
+								<?php _e( 'Enable the Comments on Home Page?', 'comicpress' ); ?>
 							</label>
 						</th>
 						<td>
 							<input id="enable_comments_on_homepage" name="enable_comments_on_homepage" type="checkbox" value="1" <?php checked( true, $comicpress_options['enable_comments_on_homepage'] ); ?> />
 						</td>
 						<td>
-							<?php _e( 'Checkmarking this option will make it so that the post(s) on the home page will also display the comments under them. This will ONLY work if you have it set to only display 1 post on the home page. The post count and this must be set to work.', 'comicpress' ); ?>
+							<?php _e( 'Enable this option if you want to show comments on your home page in the posts. This will ONLY work if you have set: to show only 1 post on the home page. The number of posts and that must work.', 'comicpress' ); ?>
 						</td>
 					</tr>
 

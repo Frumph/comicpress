@@ -59,7 +59,7 @@ PHP:       5.4
 * added: Date format in search page "display_archive_as_links" are now customizable via language file
 * added: Symbols for search button (&raquo;) and image area (&lsaquo; and &rsaquo;) are now customizable via language file
 * added: Admin can see in author page the user role
-* removed Google+ Service was discontinued
+* removed: Google+ Service was discontinued
 * under the hood: Code optimizations according to WPCS
 
 = 4.4 =
