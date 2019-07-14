@@ -74,7 +74,7 @@ function comicpress_enqueue_theme_scripts() {
 		if ( ! comicpress_themeinfo( 'disable_scroll_to_top' ) ) {
 			wp_enqueue_script( 'comicpress_scroll', get_template_directory_uri() . '/js/scroll.js', null, null, true );
 		}
-		if ( comicpress_themeinfo( 'enable_avatar_trick' ) && ! $is_IE) {
+		if ( comicpress_themeinfo( 'enable_avatar_trick' ) && ! $is_IE ) {
 			wp_enqueue_script( 'themetricks_historic1', get_template_directory_uri() . '/js/cvi_text_lib.js', null, null, true );
 			wp_enqueue_script( 'themetricks_historic2', get_template_directory_uri() . '/js/instant.js', null, null, true );
 		}

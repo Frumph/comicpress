@@ -712,7 +712,6 @@ ul.children {
 	font-size: 13px;
 	font-weight: 700;
     font-style: normal;
-
 }
 
 textarea#comment {
@@ -1467,7 +1466,8 @@ table#wp-calendar td {
     float: left;
 }
 
-.ie .searchform button, .ie #submit {
+.ie .searchform button,
+.ie #submit {
     display: inline-block;
     float: left;
     border: 1px solid #888;

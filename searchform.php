@@ -19,6 +19,7 @@
 		/* translators: Content for search button */
 		esc_html_e( '&raquo;', 'comicpress' );
 		?>
+
 	</button>
 </form>
 
