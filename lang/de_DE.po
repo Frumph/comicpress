@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ComicPress 4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-12 11:19+0200\n"
-"PO-Revision-Date: 2019-07-12 11:21+0200\n"
+"PO-Revision-Date: 2019-07-14 13:11+0200\n"
 "Last-Translator: Kniebremser <kniebremser@fluchtsportler.de>\n"
 "Language-Team: Fluchtsportler.de <kniebremser@fluchtsportler.de>\n"
 "Language: de_DE\n"
@@ -685,15 +685,15 @@ msgstr "Logo, 120px Höhe x 160px Breite"
 
 #: functions/customize.php:340
 msgid "Comic in content column?"
-msgstr "Comic in Inhaltsspalte?"
+msgstr "Comic in der Inhaltsspalte?"
 
 #: functions/customize.php:341
 msgid ""
 "Put the comic into the content column? This must be done for the Graphic "
 "Novel Layouts."
 msgstr ""
-"Setze den Comic in die Inhaltsspalte? Dies muss für die Graphic Novel "
-"Layouts durchgeführt werden."
+"Den Comic in die Inhaltsspalte setzen? Dies muss für den Graphic Novel Style "
+"durchgeführt werden."
 
 #: functions/customize.php:353
 msgid "Entire Content Area"
@@ -701,7 +701,7 @@ msgstr "Gesamter Inhaltsbereich"
 
 #: functions/customize.php:374
 msgid "Menubar Dropdown"
-msgstr "Menüleiste Dropdown"
+msgstr "Dropdown-Menüleiste"
 
 #: functions/customize.php:381
 msgid "Menubar When Mouseover"
@@ -722,7 +722,7 @@ msgstr "Inhaltsbereich unterhalb vom Comic"
 
 #: functions/customize.php:409
 msgid "Content Column"
-msgstr "Inhaltsbereich"
+msgstr "Inhaltsspalte"
 
 #: functions/customize.php:416
 msgid "Entire Post Area"
@@ -742,7 +742,7 @@ msgstr "Kommentar Info. Zeile"
 
 #: functions/customize.php:444
 msgid "Comments Made By Post Author"
-msgstr "Kommentare gemacht vom Beitragsautor"
+msgstr "Kommentare vom Beitragsautor"
 
 #: functions/customize.php:451
 msgid "Info. Line Of Post Author"
@@ -750,7 +750,7 @@ msgstr "Info. Zeile des Beitragsautors"
 
 #: functions/customize.php:466
 msgid "Sitewide Textcolor"
-msgstr "Seitenweite Textfarben"
+msgstr "Websitenweite Textfarbe"
 
 #: functions/customize.php:480
 msgid "Site Description"
@@ -782,7 +782,7 @@ msgstr "Copyright"
 
 #: functions/customize.php:551
 msgid "Sitewide Linkcolor"
-msgstr "Seitenweite Linkfarben"
+msgstr "Websitenweite Linkfarbe"
 
 #: functions/customize.php:621
 msgid "Sidebar Widget"
@@ -802,7 +802,7 @@ msgstr "Standard Nav Normal Textfarbe"
 
 #: functions/customize.php:709
 msgid "Default Navigation Link"
-msgstr "Standard Navigation Link"
+msgstr "Standard-Navigationslink"
 
 #: functions/customize.php:716
 msgid "Default Navigation Hover"
@@ -1248,7 +1248,7 @@ msgid ""
 msgstr ""
 "Aktivieren dieser Option, wird das Anzeigen des Blogs auf der Startseite UND "
 "auf allen Seiten, die in WP-Admin &#10132; Einstellungen &#10132; Lesen als "
-"Blog-Beitragsseiten festgelegt wurden, DEAKTIVIEREN."
+"Blog-Beiträge festgelegt wurden, DEAKTIVIEREN."
 
 #: options/general.php:46
 msgid "Allow the sidebar over-blog to appear on all posts?"
@@ -1896,13 +1896,13 @@ msgstr "Zeigt eine Menüleiste an."
 
 #: widgets/multisite-list.php:27
 msgid "ComicPress - Site List"
-msgstr "ComicPress - Seitenliste"
+msgstr "ComicPress - Websitenliste"
 
 #: widgets/multisite-list.php:30
 msgid ""
 "Display Site List of all sites that have recently updated on this Multisite."
 msgstr ""
-"Zeigt eine Seitenliste aller Seiten, die auf dieser Multisite zuetzt "
+"Zeigt eine Seitenliste aller Websiten, die auf dieser Multisite zuletzt "
 "aktualisiert wurden."
 
 #: widgets/multisite-list.php:49
@@ -1911,11 +1911,13 @@ msgstr "Liste gehosteter Websiten"
 
 #: widgets/randompostlink.php:48
 msgid "ComicPress - Random Post Link"
-msgstr "ComicPress - Zufällige Beitragslinks"
+msgstr "ComicPress - Zufälliger Beitragslink"
 
 #: widgets/randompostlink.php:51
 msgid "Displays a link to click that triggers going to a random blog post."
-msgstr "Erstellt einen Link, der einen zufälligen Blogbeitrag anzeigt."
+msgstr ""
+"Zeigt einen Link zum Anklicken an, der das Aufrufen eines zufälligen Blog-"
+"Beitrags auslöst."
 
 #: widgets/randompostlink.php:81
 msgid "Random Post"

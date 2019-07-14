@@ -337,8 +337,8 @@ class comicpress_Customize {
 
 			$wp_customize->add_control( 'comicpress-customize-comic-in-column-control', array(
 				'settings'    => 'comicpress-customize-comic-in-column',
-				'label'       => __( 'Comic in content column?', 'comicpress' ),
-				'description' => __( 'Put the comic into the content column? This must be done for the Graphic Novel Layouts.', 'comicpress' ),
+				'label'       => __( 'Comic in the content column?', 'comicpress' ),
+				'description' => __( 'Put the comic into the content column? This must be done for the Graphic Novel style.', 'comicpress' ),
 				'section'     => 'comicpress-scheme-options',
 				'type'        => 'checkbox',
 			) );
