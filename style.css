@@ -274,7 +274,8 @@ a.menunav-rss {
     float: left;
 }
 
-.menu ul, .footmenu ul {
+.menu ul,
+.footmenu ul {
     z-index: 100;
     margin: 0;
     padding: 0;
@@ -282,27 +283,35 @@ a.menunav-rss {
 }
 
 /*Top level list items*/
-.menu ul li, .footmenu ul li {
+.menu ul li,
+.footmenu ul li {
 	display: inline;
     float: left;
     position: relative;
 }
 
 /*Top level menu link items style*/
-.menu ul li a, .footmenu ul li a {
+.menu ul li a,
+.footmenu ul li a {
     display: block;
     padding: 0 7px;
     text-decoration: none;
 }
 
-.menu ul li ul li a {
-	background: #555; /* background of menu items (default state) */
-	text-align: left;
+* html .menu ul li a {
+    display: inline-block;  /* IE6 hack to get sub menu links to behave correctly */
 }
 
-* html .menu ul li a {
-    /* IE6 hack to get sub menu links to behave correctly */
-    display: inline-block;
+/* Sub level menu links style */
+.menu ul li ul li a {
+	width: 160px; /*width of sub menus*/
+	margin: 0;
+	padding: 5px;
+	background: #555; /* background of menu items (default state) */
+	font-family: Verdana , sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: left;
 }
 
 .menu ul li a:hover {
@@ -310,11 +319,13 @@ a.menunav-rss {
     background: #414141; /* background of menu items during onmouseover (hover state) */
 }
 
-.menu ul li a:link, .menu ul li a:visited {
+.menu ul li a:link,
+.menu ul li a:visited {
     color: #fff;
 }
 
-.menu ul li ul li a:link, .menu ul li ul li a:visited {
+.menu ul li ul li a:link,
+.menu ul li ul li a:visited {
     color: #fff;
     font-size: 12px;
 }
@@ -344,18 +355,12 @@ a.menunav-rss {
     top: 0;
 }
 
-/* Sub level menu links style */
-.menu ul li ul li a {
-	width: 160px; /*width of sub menus*/
-	margin: 0;
-	padding: 5px;
-    font: normal 13px Verdana;
-}
-
 /* Holly Hack for IE \*/
-* html .menu, * html .footmenu {
+* html .menu,
+* html .footmenu {
     height: 1%;
 }
+
 /* Holly Hack for IE7 and below */
 
 
@@ -367,7 +372,7 @@ a.menunav-rss {
     font-size: 11px;
 }
 
-/* classes that can be used to override the down/right arrows with images of your own */
+/* Classes that can be used to override the down/right arrows with images of your own */
 .menubar-down-arrow {}
 
 .menubar-right-arrow {}
@@ -406,10 +411,6 @@ a.menunav-rss {
 	float: left;
 }
 
-body.wide #content-column, body.wide #content {
-	width: 100% !important;
-}
-
 #content {
 	display: inline-block;
 	float: left;
@@ -417,11 +418,18 @@ body.wide #content-column, body.wide #content {
     width: 100%;
 }
 
+body.wide #content-column, body.wide #content {
+	width: 100% !important;
+}
+
 article {
 	display: block;
 }
 
-.uentry, #comment-wrapper, #wp-paginav, #pagenav {
+.uentry,
+#comment-wrapper,
+#wp-paginav,
+#pagenav {
     border: 1px solid Transparent;
 }
 
@@ -438,7 +446,8 @@ article {
     line-height: 18px;
 }
 
-.post-cat, .post-author {
+.post-cat,
+.post-author {
     text-transform: capitalize;
 }
 
@@ -674,7 +683,8 @@ ul.children {
     padding: 0;
 }
 
-.nocomments, .closed-comments {
+.nocomments,
+.closed-comments {
     text-align: center;
 }
 
@@ -742,7 +752,8 @@ textarea#comment {
 
 /* Pagenav / Comment Nav */
 
-.pagenav, .commentnav {
+.pagenav,
+.commentnav {
 	clear: both;
     height: 25px;
 	margin-top: 5px;
@@ -751,15 +762,19 @@ textarea#comment {
 	line-height: 25px;
 }
 
-.pagenav-left, .commentnav-left {
+.pagenav-left,
+.commentnav-left {
     float: left;
 }
 
-.pagenav-right, .commentnav-right {
+.pagenav-right,
+.commentnav-right {
     float: right;
 }
 
-.nav a, .pagenav a, .nav-blog a {
+.nav a,
+.pagenav a,
+.nav-blog a {
     display: block;
     float: left;
 }
@@ -1260,7 +1275,9 @@ table#wp-calendar td {
     float: right;
 }
 
-.nav a, .pagenav a, .nav-blog a {
+.nav a,
+.nav-blog a
+.pagenav a {
     display: block;
     float: left;
 }
@@ -1282,7 +1299,7 @@ table#wp-calendar td {
 }
 
 .archive-title {
-    padding: 2px 5px; /*	line-height: 11px; */
+    padding: 2px 5px; /* line-height: 11px; */
     border-left: 1px dashed #aaa;
 }
 
@@ -1291,7 +1308,12 @@ table#wp-calendar td {
     border-collapse: collapse;
 }
 
-#linkspage, #linkspage ul, #linkspage li, #archivepage, #archivepage url, #archivepage li {
+#linkspage,
+#linkspage ul,
+#linkspage li,
+#archivepage,
+#archivepage url,
+#archivepage li {
     list-style: none;
 }
 
@@ -1473,25 +1495,34 @@ table#wp-calendar td {
     text-align: center;
 }
 
-#default-nav-wrapper, #casts-nav-wrapper {
+#default-nav-wrapper,
+#casts-nav-wrapper {
     width: 100%;
 }
 
-.default-nav, .casts-nav {
+.default-nav,
+.casts-nav {
 	width: 260px;
     margin: 0 auto;
 }
 
-.default-nav-base, .casts-nav-base {
+.default-nav-base,
+.casts-nav-base {
     display: inline-block;
     padding: 0 10px;
 }
 
-.casts-nav-first, .casts-nav-prev, .default-nav-first, .default-nav-prev {
+.casts-nav-first,
+.casts-nav-prev,
+.default-nav-first,
+.default-nav-prev {
     float: left;
 }
 
-.casts-nav-next, .casts-nav-last, .default-nav-next, .default-nav-last {
+.casts-nav-next,
+.casts-nav-last,
+.default-nav-next,
+.default-nav-last {
     float: right;
 }
 
@@ -1584,12 +1615,12 @@ table#wp-calendar td {
 }
 
 .sticky-image {
-    display: inline-block;
+	display: inline-block;
+	float: left;
     width: 16px;
     height: 16px;
     margin-top: 20px;
     background: url('images/pushpin-small.png') top center no-repeat;
-    float: left;
     text-indent: -9999px;
 }
 
@@ -1879,24 +1910,24 @@ body.scheme-mecha h2.widget-title {
 	color: #000;
 }
 
+body.scheme-mecha .footmenu a:link ,
 body.scheme-mecha #sidebar-left a:link,
 body.scheme-mecha #sidebar-right a:link,
-body.scheme-mecha #footer-sidebar-wrapper a:link,
-body.scheme-mecha .footmenu a:link {
+body.scheme-mecha #footer-sidebar-wrapper a:link {
     color: #fcff00;
 }
 
+body.scheme-mecha .footmenu a:visited,
 body.scheme-mecha #sidebar-left a:visited,
 body.scheme-mecha #sidebar-right a:visited,
-body.scheme-mecha #footer-sidebar-wrapper a:visited,
-body.scheme-mecha .footmenu a:visited {
+body.scheme-mecha #footer-sidebar-wrapper a:visited {
     color: #fcff00;
 }
 
+body.scheme-mecha.footmenu a:hover,
 body.scheme-mecha #sidebar-left a:hover,
 body.scheme-mecha #sidebar-right a:hover,
-body.scheme-mecha #footer-sidebar-wrapper a:hover,
-body.scheme-mecha .footmenu a:hover {
+body.scheme-mecha #footer-sidebar-wrapper a:hover {
     color: #f00f00;
 }
 
