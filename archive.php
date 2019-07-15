@@ -158,7 +158,10 @@ if ( have_posts() ) {
 			<tr>
 				<td class="archive-date">
 					<span class="archive-date-month-day">
-						<?php the_time( _x( 'M d, Y', 'archives table date format', 'comicpress' ) ); ?>
+						<?php the_time( _x( 'M d, ', 'archive table monthly date format', 'comicpress' ) ); ?>
+					</span>
+					<span class="archive-date-year">
+						<?php the_time( _x( 'Y', 'archive table yearly date format', 'comicpress' ) ); ?>
 					</span>
 				</td>
 				<td class="archive-title">

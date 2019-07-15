@@ -15,7 +15,7 @@ GitHub Branch: master
 Requires WP: 4.6
 */
 
-/* STANDARD TAGS */
+/* Standard Tags */
 
 html {
     overflow-y: scroll;
@@ -150,7 +150,7 @@ input, textarea {
     text-align: center;
 }
 
-/* HEADINGS */
+/* Headings */
 
 h1, h1 a {
     margin: 0;
@@ -222,7 +222,7 @@ h4, h4 a {
     padding: 10px;
 }
 
-/* THE MENU */
+/* Menu */
 
 #menubar-wrapper {
 	clear: both;
@@ -373,11 +373,11 @@ a.menunav-rss {
 }
 
 /* Classes that can be used to override the down/right arrows with images of your own */
-.menubar-down-arrow {}
+.menubar-down-arrow
 
-.menubar-right-arrow {}
+.menubar-right-arrow
 
-/* home icon */
+/* Home Icon */
 
 /*
 .menu-item-home {
@@ -396,7 +396,7 @@ a.menunav-rss {
 
 /* Content-Wrapper */
 
-#content-wrapper {}
+#content-wrapper
 
 /* Subcontent-Wrapper */
 
@@ -439,7 +439,7 @@ article {
     margin-bottom: 10px;
 }
 
-.sticky {}
+.sticky
 
 .entry {
 	padding: 10px;
@@ -549,7 +549,7 @@ a.post-edit-link {
     font-size: 12px;
 }
 
-.linkpages {}
+.linkpages
 
 /* Comments */
 
@@ -578,7 +578,7 @@ a.post-edit-link {
     margin-left: 20px;
 }
 
-.bypostauthor {}
+.bypostauthor
 
 .comment-avatar {
 	display: inline-block;
@@ -873,7 +873,7 @@ h2.widget-title a {
 
 /* Footer */
 
-#footer {}
+#footer
 
 #footer-menubar-wrapper {
 
@@ -924,7 +924,7 @@ h2.widget-title a {
     padding: 0 2px;
 }
 
-/* CALENDAR */
+/* Calendar */
 
 #wp-calendar-wrap {
 	width: 180px;
@@ -1030,7 +1030,7 @@ table#wp-calendar td {
     max-height: 200px;
 }
 
-/* SEARCH */
+/* Search */
 
 .s-search {
     float: left;
@@ -1048,7 +1048,7 @@ table#wp-calendar td {
     font-style: italic;
 }
 
-/* GALLERY */
+/* Gallery */
 
 .gallery-image {
     overflow: hidden;
@@ -1205,7 +1205,7 @@ table#wp-calendar td {
     line-height: 25px;
 }
 
-/* NAVIGATION */
+/* Navigation */
 
 .blognav {
     width: 80%;
@@ -1394,7 +1394,7 @@ table#wp-calendar td {
     opacity: 0.1;
 }
 
-/* comment form */
+/* Comment Form */
 
 #comment,
 #author,
@@ -1527,7 +1527,7 @@ table#wp-calendar td {
     float: right;
 }
 
-/* menunav social icons */
+/* Menunav Social Icons */
 
 .menunav-social-wrapper {
 	display: inline-block;
@@ -1594,13 +1594,14 @@ table#wp-calendar td {
     background-position: 0 -25px;
 }
 
-/* CLEAR FLOATS */
+/* Clear Floats */
 
 .clear {
     clear: both;
 }
 
-/* CLEAR MARGINS */
+/* Clear MAargins */
+
 /* Used with BR for clearing paragraph margins for Safari, Chrome - avoid background gaps */
 
 .clear-margins {
@@ -1610,10 +1611,13 @@ table#wp-calendar td {
     line-height: 0;
 }
 
-/* breadcrumbs */
+/* Breadcrumbs */
+
 .breadcrumbs {
     padding: 3px 0 3px 20px;
 }
+
+/* Sticky Image */
 
 .sticky-image {
 	display: inline-block;
@@ -1896,7 +1900,7 @@ body.scheme-mecha .copyright-info a:visited {
 }
 
 body.scheme-mecha .copyright-info a:hover {
-    color: #f00f00	;
+    color: #f00f00;
 }
 
 body.scheme-mecha #sidebar-left,
