@@ -45,7 +45,6 @@ if ( ! empty( $character ) ) {
 			$output .= '</div>';
 			echo apply_filters( 'comicpress-character-stats', $output );
 		}
-
 	}
 	wp_reset_query();
 }
