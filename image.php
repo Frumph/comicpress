@@ -37,7 +37,7 @@ if ( have_posts() ) :
 
 						<?php
 						/* translators: Symbol for link previous image */
-						esc_html_e( '&lsaquo;', 'comicpress' );
+						esc_attr_e( '&lsaquo;', 'comicpress' );
 						?>
 
 					</div>
@@ -52,12 +52,12 @@ if ( have_posts() ) :
 
 				<div class="imagenav-center">
 
-					<a href="<?php echo esc_html( wp_get_attachment_url( $post->ID ) ); ?>" target="_blank" title="<?php esc_html_e( 'Click for full size', 'comicpress' ); ?>" class="imagetitle">
+					<a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Click for full size', 'comicpress' ); ?>" class="imagetitle">
 						<?php the_title(); ?>
 					</a>
 					<br />
-					<a href="<?php echo esc_html( get_permalink( $post->post_parent ) ); ?>" rel="attachment">
-						<?php esc_html_e( '&larr; Back to Gallery', 'comicpress' ); ?>
+					<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rel="attachment">
+						<?php esc_attr_e( '&larr; Back to Gallery', 'comicpress' ); ?>
 					</a>
 
 				</div>
@@ -74,7 +74,7 @@ if ( have_posts() ) :
 
 						<?php
 						/* translators: Symbol for link next image */
-						esc_html_e( '&rsaquo;', 'comicpress' );
+						esc_attr_e( '&rsaquo;', 'comicpress' );
 						?>
 
 					</div>
@@ -95,8 +95,8 @@ if ( have_posts() ) :
 
 			<div class="gallery-image">
 
-				<a href="<?php echo esc_html( wp_get_attachment_url( $post->ID ) ); ?>" target="_blank" title="<?php esc_html_e( 'Click for full size', 'comicpress' ); ?>" >
-					<img src="<?php echo esc_html( wp_get_attachment_url( $post->ID ) ); ?>" alt="<?php the_title(); ?>" />
+				<a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" target="_blank" title="<?php esc_attr_e( 'Click for full size', 'comicpress' ); ?>" >
+					<img src="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" alt="<?php the_title(); ?>" />
 				</a>
 			</div>
 
@@ -138,7 +138,7 @@ if ( have_posts() ) :
 		<div class="post-content">
 
 			<p>
-				<?php esc_html_e( 'Sorry, no image matched your criteria.', 'comicpress' ); ?>
+				<?php esc_attr_e( 'Sorry, no image matched your criteria.', 'comicpress' ); ?>
 			</p>
 
 			<div class="clear"></div>
